@@ -1,0 +1,534 @@
+{
+  "id": "ConnectApi.actionlinkdefinitioninput",
+  "type": "class",
+  "name": "ActionLinkDefinitionInput",
+  "namespace": "ConnectApi",
+  "startToken": {
+    "type": "declaration.entity.name.class",
+    "text": "ActionLinkDefinitionInput",
+    "textToLower": "actionlinkdefinitioninput",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "declaration.entity.name.class_ActionLinkDefinitionInput_-1:0"
+  },
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.access_global_-1:0"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.sharing_without sharing_-1:0"
+  },
+  "description": "The definition of an action link. An action link is a button on a feed element. Clicking an action link can take a user to a Web page, initiate a file download, or invoke an API call to Salesforce or to an external server. An action link includes a URL and an HTTP method, and can include a request body and header information, such as an OAuth token for authentication. Use action links to integrate Salesforce and third-party services into the feed so that users can take action to drive productivity and accelerate innovation.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_connectapi_input_action_link_definition.htm",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "variables": {
+    "actiontype": {
+      "id": "ConnectApi.actionlinkdefinitioninput.actiontype",
+      "type": "var",
+      "name": "actionType",
+      "startToken": {
+        "type": "declaration.entity.name.variable",
+        "text": "actionType",
+        "textToLower": "actiontype",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.variable_actionType_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public ConnectApi.​ActionLinkType actionType",
+      "simplifiedSignature": "ConnectApi.​ActionLinkType actionType",
+      "datatype": {
+        "id": "ConnectApi.actionlinkdefinitioninput.actiontype.connectapi.​actionlinktype",
+        "type": "datatype",
+        "name": "ConnectApi.​ActionLinkType"
+      },
+      "description": "Defines the type of action link. Values are: Api—The action link calls a synchronous API at the action URL. Salesforce sets the status to SuccessfulStatus or FailedStatus based on the HTTP status code returned by your server. ApiAsync—The action link calls an asynchronous API at the action URL. The action remains in a PendingStatus state until a third party makes a request to /connect/action-links/actionLinkId to set the status to SuccessfulStatus or FailedStatus when the asynchronous operation is complete. Download—The action link downloads a file from the action URL. Ui—The action link takes the user to a web page at the action URL. Use Ui if you need to load a page before the user performs an action, for example, to have the user provide input or view something before the action happens. Note Invoking ApiAsync action links from an app requires a call to set the status. However, there isn’t currently a way to set the status of an action link using Apex. To set the status, use Chatter REST API. See the Action Link resource in the Chatter REST API Developer Guide for more information."
+    },
+    "actionurl": {
+      "id": "ConnectApi.actionlinkdefinitioninput.actionurl",
+      "type": "var",
+      "name": "actionUrl",
+      "startToken": {
+        "type": "declaration.entity.name.variable",
+        "text": "actionUrl",
+        "textToLower": "actionurl",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.variable_actionUrl_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public String actionUrl",
+      "simplifiedSignature": "String actionUrl",
+      "datatype": {
+        "id": "ConnectApi.actionlinkdefinitioninput.actionurl.string",
+        "type": "datatype",
+        "name": "String"
+      },
+      "description": "The action link URL. For example, a Ui action link URL is a Web page. A Download action link URL is a link to the file to download. Ui and Download action link URLs are provided to clients. An Api or ApiAsync action link URL is a REST resource. Api and ApiAsync action link URLs aren’t provided to clients. Links to Salesforce can be relative. All other links must be absolute and start with https://. Tip To avoid issues due to upgrades or changing functionality in your API, we recommend using a versioned API for actionUrl, for example, https://www.example.com/​api/v1/exampleResource. If your API isn’t versioned, you can use the expirationDate property of the ConnectApi.ActionLinkGroup​DefinitionInput class to avoid issues due to upgrades or changing functionality in your API."
+    },
+    "excludeduserid": {
+      "id": "ConnectApi.actionlinkdefinitioninput.excludeduserid",
+      "type": "var",
+      "name": "excludedUserId",
+      "startToken": {
+        "type": "declaration.entity.name.variable",
+        "text": "excludedUserId",
+        "textToLower": "excludeduserid",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.variable_excludedUserId_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public String excludedUserId",
+      "simplifiedSignature": "String excludedUserId",
+      "datatype": {
+        "id": "ConnectApi.actionlinkdefinitioninput.excludeduserid.string",
+        "type": "datatype",
+        "name": "String"
+      },
+      "description": "ID of a single user to exclude from performing the action. If you specify an excludedUserId, you can’t specify a userId."
+    },
+    "groupdefault": {
+      "id": "ConnectApi.actionlinkdefinitioninput.groupdefault",
+      "type": "var",
+      "name": "groupDefault",
+      "startToken": {
+        "type": "declaration.entity.name.variable",
+        "text": "groupDefault",
+        "textToLower": "groupdefault",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.variable_groupDefault_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public Boolean groupDefault",
+      "simplifiedSignature": "Boolean groupDefault",
+      "datatype": {
+        "id": "ConnectApi.actionlinkdefinitioninput.groupdefault.boolean",
+        "type": "datatype",
+        "name": "Boolean"
+      },
+      "description": "true if this action is the default action link in the action link group; false otherwise. There can be only one default action link per action link group. The default action link gets distinct styling in the Salesforce UI."
+    },
+    "labelkey": {
+      "id": "ConnectApi.actionlinkdefinitioninput.labelkey",
+      "type": "var",
+      "name": "labelKey",
+      "startToken": {
+        "type": "declaration.entity.name.variable",
+        "text": "labelKey",
+        "textToLower": "labelkey",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.variable_labelKey_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public String labelKey",
+      "simplifiedSignature": "String labelKey",
+      "datatype": {
+        "id": "ConnectApi.actionlinkdefinitioninput.labelkey.string",
+        "type": "datatype",
+        "name": "String"
+      },
+      "description": "Key for the set of labels to show in the user interface. A set includes labels for these states: NewStatus, PendingStatus, SuccessStatus, FailedStatus. For example, if you use the Approve key, you get these labels: Approve, Pending, Approved, Failed. For a complete list of keys and labels, see Action Links Labels. If none of the predefined labels work for your action link, use a custom label. To use a custom label, create an action link template. See Create Action Link Templates."
+    },
+    "method": {
+      "id": "ConnectApi.actionlinkdefinitioninput.method",
+      "type": "var",
+      "name": "method",
+      "startToken": {
+        "type": "declaration.entity.name.variable",
+        "text": "method",
+        "textToLower": "method",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.variable_method_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public ConnectApi.​HttpRequest​Method method",
+      "simplifiedSignature": "ConnectApi.​HttpRequest​Method method",
+      "datatype": {
+        "id": "ConnectApi.actionlinkdefinitioninput.method.connectapi.​httprequest​method",
+        "type": "datatype",
+        "name": "ConnectApi.​HttpRequest​Method"
+      },
+      "description": "One of these HTTP methods: HttpDelete—Returns HTTP 204 on success. Response body or output class is empty. HttpGet—Returns HTTP 200 on success. HttpHead—Returns HTTP 200 on success. Response body or output class is empty. HttpPatch—Returns HTTP 200 on success or HTTP 204 if the response body or output class is empty. HttpPost—Returns HTTP 201 on success or HTTP 204 if the response body or output class is empty. Exceptions are the batch posting resources and methods, which return HTTP 200 on success. HttpPut—Return HTTP 200 on success or HTTP 204 if the response body or output class is empty."
+    },
+    "requestbody": {
+      "id": "ConnectApi.actionlinkdefinitioninput.requestbody",
+      "type": "var",
+      "name": "requestBody",
+      "startToken": {
+        "type": "declaration.entity.name.variable",
+        "text": "requestBody",
+        "textToLower": "requestbody",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.variable_requestBody_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public String requestBody",
+      "simplifiedSignature": "String requestBody",
+      "datatype": {
+        "id": "ConnectApi.actionlinkdefinitioninput.requestbody.string",
+        "type": "datatype",
+        "name": "String"
+      },
+      "description": "The request body for Api action links. Note Escape quotation mark characters in the requestBody value."
+    },
+    "requires​confirmation": {
+      "id": "ConnectApi.actionlinkdefinitioninput.requires​confirmation",
+      "type": "var",
+      "name": "requires​Confirmation",
+      "startToken": {
+        "type": "declaration.entity.name.variable",
+        "text": "requires​Confirmation",
+        "textToLower": "requires​confirmation",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.variable_requires​Confirmation_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public Boolean requires​Confirmation",
+      "simplifiedSignature": "Boolean requires​Confirmation",
+      "datatype": {
+        "id": "ConnectApi.actionlinkdefinitioninput.requires​confirmation.boolean",
+        "type": "datatype",
+        "name": "Boolean"
+      },
+      "description": "true to require the user to confirm the action; false otherwise."
+    },
+    "userid": {
+      "id": "ConnectApi.actionlinkdefinitioninput.userid",
+      "type": "var",
+      "name": "userId",
+      "startToken": {
+        "type": "declaration.entity.name.variable",
+        "text": "userId",
+        "textToLower": "userid",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.variable_userId_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public String userId",
+      "simplifiedSignature": "String userId",
+      "datatype": {
+        "id": "ConnectApi.actionlinkdefinitioninput.userid.string",
+        "type": "datatype",
+        "name": "String"
+      },
+      "description": "The ID of the user who can execute the action. If not specified or null, any user can execute the action. If you specify a userId, you can’t specify an excludedUserId."
+    }
+  },
+  "methods": {},
+  "constructors": {},
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}

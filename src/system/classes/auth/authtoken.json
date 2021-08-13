@@ -1,0 +1,693 @@
+{
+  "id": "Auth.authtoken",
+  "type": "class",
+  "name": "AuthToken",
+  "namespace": "Auth",
+  "startToken": {
+    "type": "declaration.entity.name.class",
+    "text": "AuthToken",
+    "textToLower": "authtoken",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "declaration.entity.name.class_AuthToken_-1:0"
+  },
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.access_global_-1:0"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.sharing_without sharing_-1:0"
+  },
+  "description": "Contains methods for providing the access token associated with an authentication provider for an authenticated user, except for the Janrain provider.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_class_Auth_AuthToken.htm",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "variables": {},
+  "methods": {
+    "getaccesstoken(string,string)": {
+      "id": "Auth.authtoken.getaccesstoken",
+      "type": "method",
+      "name": "getAccessToken",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getAccessToken",
+        "textToLower": "getaccesstoken",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getAccessToken_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static String getAccessToken(String authProviderId, String providerName)",
+      "simplifiedSignature": "getAccessToken(String,String)",
+      "datatype": {
+        "id": "Auth.authtoken.getaccesstoken.String",
+        "type": "datatype",
+        "name": "String"
+      },
+      "description": "Returns an access token for the current user using the specified 18-character identifier of an AuthProvider definition in your org and the proper name of the third party, such as Salesforce or Facebook. Note that querying the ProviderType field on the AuthProvider object sometimes returns a value that differs from the expected provider name value. For example, for Open ID Connect providers, OpenIdConnect is the ProviderType value for the AuthProvider object, but the expected providerName is Open ID Connect.",
+      "variables": {
+        "authProviderId": {
+          "id": "Auth.authtoken.getaccesstoken.authproviderid",
+          "type": "var",
+          "name": "authProviderId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "authProviderId",
+            "textToLower": "authproviderid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_authProviderId_-1:0"
+          },
+          "signature": "String authProviderId",
+          "datatype": {
+            "id": "Auth.authtoken.getaccesstoken.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "providerName": {
+          "id": "Auth.authtoken.getaccesstoken.providername",
+          "type": "var",
+          "name": "providerName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "providerName",
+            "textToLower": "providername",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_providerName_-1:0"
+          },
+          "signature": "String providerName",
+          "datatype": {
+            "id": "Auth.authtoken.getaccesstoken.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        }
+      }
+    },
+    "getaccesstokenmap(string,string)": {
+      "id": "Auth.authtoken.getaccesstokenmap",
+      "type": "method",
+      "name": "getAccessTokenMap",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getAccessTokenMap",
+        "textToLower": "getaccesstokenmap",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getAccessTokenMap_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Map<String,  String> getAccessTokenMap(String authProviderId, String providerName)",
+      "simplifiedSignature": "getAccessTokenMap(String,String)",
+      "datatype": {
+        "id": "Auth.authtoken.getaccesstokenmap.Map<String,  String>",
+        "type": "datatype",
+        "name": "Map<String,  String>"
+      },
+      "description": "Returns a map from the third-party identifier to the access token for the currently logged-in Salesforce user. The identifier value depends on the third party. For example, for Salesforce it would be the user ID, while for Facebook it would be the user number. Note that querying the ProviderType field on the AuthProvider object sometimes returns a value that differs from the expected provider name value. For example, for Open ID Connect providers, OpenIdConnect is the ProviderType value for the AuthProvider object, but the expected providerName is Open ID Connect.",
+      "variables": {
+        "authProviderId": {
+          "id": "Auth.authtoken.getaccesstokenmap.authproviderid",
+          "type": "var",
+          "name": "authProviderId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "authProviderId",
+            "textToLower": "authproviderid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_authProviderId_-1:0"
+          },
+          "signature": "String authProviderId",
+          "datatype": {
+            "id": "Auth.authtoken.getaccesstokenmap.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "providerName": {
+          "id": "Auth.authtoken.getaccesstokenmap.providername",
+          "type": "var",
+          "name": "providerName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "providerName",
+            "textToLower": "providername",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_providerName_-1:0"
+          },
+          "signature": "String providerName",
+          "datatype": {
+            "id": "Auth.authtoken.getaccesstokenmap.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        }
+      }
+    },
+    "refreshaccesstoken(string,string,string)": {
+      "id": "Auth.authtoken.refreshaccesstoken",
+      "type": "method",
+      "name": "refreshAccessToken",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "refreshAccessToken",
+        "textToLower": "refreshaccesstoken",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_refreshAccessToken_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Map<String,  String> refreshAccessToken(String authProviderId, String providerName, String oldAccessToken)",
+      "simplifiedSignature": "refreshAccessToken(String,String,String)",
+      "datatype": {
+        "id": "Auth.authtoken.refreshaccesstoken.Map<String,  String>",
+        "type": "datatype",
+        "name": "Map<String,  String>"
+      },
+      "description": "Returns a map from the third-party identifier containing a refreshed access token for the currently logged-in Salesforce user. Note that querying the ProviderType field on the AuthProvider object sometimes returns a value that differs from the expected provider name value. For example, for Open ID Connect providers, OpenIdConnect is the ProviderType value for the AuthProvider object, but the expected providerName is Open ID Connect.",
+      "variables": {
+        "authProviderId": {
+          "id": "Auth.authtoken.refreshaccesstoken.authproviderid",
+          "type": "var",
+          "name": "authProviderId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "authProviderId",
+            "textToLower": "authproviderid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_authProviderId_-1:0"
+          },
+          "signature": "String authProviderId",
+          "datatype": {
+            "id": "Auth.authtoken.refreshaccesstoken.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "providerName": {
+          "id": "Auth.authtoken.refreshaccesstoken.providername",
+          "type": "var",
+          "name": "providerName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "providerName",
+            "textToLower": "providername",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_providerName_-1:0"
+          },
+          "signature": "String providerName",
+          "datatype": {
+            "id": "Auth.authtoken.refreshaccesstoken.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "oldAccessToken": {
+          "id": "Auth.authtoken.refreshaccesstoken.oldaccesstoken",
+          "type": "var",
+          "name": "oldAccessToken",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "oldAccessToken",
+            "textToLower": "oldaccesstoken",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_oldAccessToken_-1:0"
+          },
+          "signature": "String oldAccessToken",
+          "datatype": {
+            "id": "Auth.authtoken.refreshaccesstoken.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        }
+      }
+    },
+    "revokeaccess(string,string,string,string)": {
+      "id": "Auth.authtoken.revokeaccess",
+      "type": "method",
+      "name": "revokeAccess",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "revokeAccess",
+        "textToLower": "revokeaccess",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_revokeAccess_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Boolean revokeAccess(String authProviderId, String providerName, String userId, String remoteIdentifier)",
+      "simplifiedSignature": "revokeAccess(String,String,String,String)",
+      "datatype": {
+        "id": "Auth.authtoken.revokeaccess.Boolean",
+        "type": "datatype",
+        "name": "Boolean"
+      },
+      "description": "Revokes the access token for a specified social sign-on user from a third-party service such as Facebook©. Note that querying the ProviderType field on the AuthProvider object sometimes returns a value that differs from the expected provider name value. For example, for Open ID Connect providers, OpenIdConnect is the ProviderType value for the AuthProvider object, but the expected providerName is Open ID Connect.",
+      "variables": {
+        "authProviderId": {
+          "id": "Auth.authtoken.revokeaccess.authproviderid",
+          "type": "var",
+          "name": "authProviderId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "authProviderId",
+            "textToLower": "authproviderid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_authProviderId_-1:0"
+          },
+          "signature": "String authProviderId",
+          "datatype": {
+            "id": "Auth.authtoken.revokeaccess.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "providerName": {
+          "id": "Auth.authtoken.revokeaccess.providername",
+          "type": "var",
+          "name": "providerName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "providerName",
+            "textToLower": "providername",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_providerName_-1:0"
+          },
+          "signature": "String providerName",
+          "datatype": {
+            "id": "Auth.authtoken.revokeaccess.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "userId": {
+          "id": "Auth.authtoken.revokeaccess.userid",
+          "type": "var",
+          "name": "userId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_userId_-1:0"
+          },
+          "signature": "String userId",
+          "datatype": {
+            "id": "Auth.authtoken.revokeaccess.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "remoteIdentifier": {
+          "id": "Auth.authtoken.revokeaccess.remoteidentifier",
+          "type": "var",
+          "name": "remoteIdentifier",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "remoteIdentifier",
+            "textToLower": "remoteidentifier",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_remoteIdentifier_-1:0"
+          },
+          "signature": "String remoteIdentifier",
+          "datatype": {
+            "id": "Auth.authtoken.revokeaccess.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        }
+      }
+    }
+  },
+  "constructors": {},
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}

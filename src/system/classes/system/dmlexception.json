@@ -1,0 +1,708 @@
+{
+  "id": "System.dmlexception",
+  "type": "class",
+  "name": "DmlException",
+  "namespace": "System",
+  "startToken": {
+    "type": "declaration.entity.name.class",
+    "text": "DmlException",
+    "textToLower": "dmlexception",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "declaration.entity.name.class_DmlException_-1:0"
+  },
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.access_global_-1:0"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.sharing_without sharing_-1:0"
+  },
+  "description": "Any problem with a DML statement, such as an insert statement missing a required field on a record.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_exception_methods.htm",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "variables": {},
+  "methods": {
+    "getdmlfieldnames(integer)": {
+      "id": "System.dmlexception.getdmlfieldnames",
+      "type": "method",
+      "name": "getDmlFieldNames",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getDmlFieldNames",
+        "textToLower": "getdmlfieldnames",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getDmlFieldNames_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public String[] getDmlFieldNames(Integer index)",
+      "simplifiedSignature": "getDmlFieldNames(Integer)",
+      "datatype": {
+        "id": "System.dmlexception.getdmlfieldnames.String[]",
+        "type": "datatype",
+        "name": "String[]"
+      },
+      "description": "Returns the names of the field or fields that caused the error described by the ith failed row.",
+      "variables": {
+        "index": {
+          "id": "System.dmlexception.getdmlfieldnames.index",
+          "type": "var",
+          "name": "index",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "index",
+            "textToLower": "index",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_index_-1:0"
+          },
+          "signature": "Integer index",
+          "datatype": {
+            "id": "System.dmlexception.getdmlfieldnames.integer",
+            "type": "datatype",
+            "name": "Integer"
+          }
+        }
+      }
+    },
+    "getdmlfields(integer)": {
+      "id": "System.dmlexception.getdmlfields",
+      "type": "method",
+      "name": "getDmlFields",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getDmlFields",
+        "textToLower": "getdmlfields",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getDmlFields_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public Schema.sObjectField[] getDmlFields(Integer index)",
+      "simplifiedSignature": "getDmlFields(Integer)",
+      "datatype": {
+        "id": "System.dmlexception.getdmlfields.Schema.sObjectField[]",
+        "type": "datatype",
+        "name": "Schema.sObjectField[]"
+      },
+      "description": "Returns the field token or tokens for the field or fields that caused the error described by the ith failed row. For more information on field tokens, see Dynamic Apex.",
+      "variables": {
+        "index": {
+          "id": "System.dmlexception.getdmlfields.index",
+          "type": "var",
+          "name": "index",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "index",
+            "textToLower": "index",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_index_-1:0"
+          },
+          "signature": "Integer index",
+          "datatype": {
+            "id": "System.dmlexception.getdmlfields.integer",
+            "type": "datatype",
+            "name": "Integer"
+          }
+        }
+      }
+    },
+    "getdmlid(integer)": {
+      "id": "System.dmlexception.getdmlid",
+      "type": "method",
+      "name": "getDmlId",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getDmlId",
+        "textToLower": "getdmlid",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getDmlId_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public String getDmlId(Integer index)",
+      "simplifiedSignature": "getDmlId(Integer)",
+      "datatype": {
+        "id": "System.dmlexception.getdmlid.String",
+        "type": "datatype",
+        "name": "String"
+      },
+      "description": "Returns the ID of the failed record that caused the error described by the ith failed row.",
+      "variables": {
+        "index": {
+          "id": "System.dmlexception.getdmlid.index",
+          "type": "var",
+          "name": "index",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "index",
+            "textToLower": "index",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_index_-1:0"
+          },
+          "signature": "Integer index",
+          "datatype": {
+            "id": "System.dmlexception.getdmlid.integer",
+            "type": "datatype",
+            "name": "Integer"
+          }
+        }
+      }
+    },
+    "getdmlindex(integer)": {
+      "id": "System.dmlexception.getdmlindex",
+      "type": "method",
+      "name": "getDmlIndex",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getDmlIndex",
+        "textToLower": "getdmlindex",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getDmlIndex_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public Integer getDmlIndex(Integer index)",
+      "simplifiedSignature": "getDmlIndex(Integer)",
+      "datatype": {
+        "id": "System.dmlexception.getdmlindex.Integer",
+        "type": "datatype",
+        "name": "Integer"
+      },
+      "description": "Returns the original row position of the ith failed row.",
+      "variables": {
+        "index": {
+          "id": "System.dmlexception.getdmlindex.index",
+          "type": "var",
+          "name": "index",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "index",
+            "textToLower": "index",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_index_-1:0"
+          },
+          "signature": "Integer index",
+          "datatype": {
+            "id": "System.dmlexception.getdmlindex.integer",
+            "type": "datatype",
+            "name": "Integer"
+          }
+        }
+      }
+    },
+    "getdmlmessage(integer)": {
+      "id": "System.dmlexception.getdmlmessage",
+      "type": "method",
+      "name": "getDmlMessage",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getDmlMessage",
+        "textToLower": "getdmlmessage",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getDmlMessage_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public String getDmlMessage(Integer index)",
+      "simplifiedSignature": "getDmlMessage(Integer)",
+      "datatype": {
+        "id": "System.dmlexception.getdmlmessage.String",
+        "type": "datatype",
+        "name": "String"
+      },
+      "description": "Returns the user message for the ith failed row.",
+      "variables": {
+        "index": {
+          "id": "System.dmlexception.getdmlmessage.index",
+          "type": "var",
+          "name": "index",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "index",
+            "textToLower": "index",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_index_-1:0"
+          },
+          "signature": "Integer index",
+          "datatype": {
+            "id": "System.dmlexception.getdmlmessage.integer",
+            "type": "datatype",
+            "name": "Integer"
+          }
+        }
+      }
+    },
+    "getdmlstatuscode(integer)": {
+      "id": "System.dmlexception.getdmlstatuscode",
+      "type": "method",
+      "name": "getDmlStatusCode",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getDmlStatusCode",
+        "textToLower": "getdmlstatuscode",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getDmlStatusCode_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public String getDmlStatusCode(Integer index)",
+      "simplifiedSignature": "getDmlStatusCode(Integer)",
+      "datatype": {
+        "id": "System.dmlexception.getdmlstatuscode.String",
+        "type": "datatype",
+        "name": "String"
+      },
+      "description": "Deprecated. Use getDmlType instead. Returns the Apex failure code for the ith failed row.",
+      "variables": {
+        "index": {
+          "id": "System.dmlexception.getdmlstatuscode.index",
+          "type": "var",
+          "name": "index",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "index",
+            "textToLower": "index",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_index_-1:0"
+          },
+          "signature": "Integer index",
+          "datatype": {
+            "id": "System.dmlexception.getdmlstatuscode.integer",
+            "type": "datatype",
+            "name": "Integer"
+          }
+        }
+      }
+    },
+    "getdmltype(integer)": {
+      "id": "System.dmlexception.getdmltype",
+      "type": "method",
+      "name": "getDmlType",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getDmlType",
+        "textToLower": "getdmltype",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getDmlType_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public System.StatusCode getDmlType(Integer index)",
+      "simplifiedSignature": "getDmlType(Integer)",
+      "datatype": {
+        "id": "System.dmlexception.getdmltype.System.StatusCode",
+        "type": "datatype",
+        "name": "System.StatusCode"
+      },
+      "description": "Returns the value of the System.StatusCode enum.",
+      "variables": {
+        "index": {
+          "id": "System.dmlexception.getdmltype.index",
+          "type": "var",
+          "name": "index",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "index",
+            "textToLower": "index",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_index_-1:0"
+          },
+          "signature": "Integer index",
+          "datatype": {
+            "id": "System.dmlexception.getdmltype.integer",
+            "type": "datatype",
+            "name": "Integer"
+          }
+        }
+      }
+    },
+    "getnumdml()": {
+      "id": "System.dmlexception.getnumdml",
+      "type": "method",
+      "name": "getNumDml",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getNumDml",
+        "textToLower": "getnumdml",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getNumDml_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public Integer getNumDml()",
+      "simplifiedSignature": "getNumDml()",
+      "datatype": {
+        "id": "System.dmlexception.getnumdml.Integer",
+        "type": "datatype",
+        "name": "Integer"
+      },
+      "description": "Returns the number of failed rows for DML exceptions.",
+      "variables": {}
+    }
+  },
+  "constructors": {},
+  "extendsType": "Exception",
+  "implementTypes": [],
+  "implements": {}
+}

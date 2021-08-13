@@ -1,0 +1,1989 @@
+{
+  "id": "System.approval",
+  "type": "class",
+  "name": "Approval",
+  "namespace": "System",
+  "startToken": {
+    "type": "declaration.entity.name.class",
+    "text": "Approval",
+    "textToLower": "approval",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "declaration.entity.name.class_Approval_-1:0"
+  },
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.access_global_-1:0"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.sharing_without sharing_-1:0"
+  },
+  "description": "Contains methods for processing approval requests and setting approval-process locks and unlocks on records.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_methods_system_approval.htm",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "variables": {},
+  "methods": {
+    "islocked(id)": {
+      "id": "System.approval.islocked",
+      "type": "method",
+      "name": "isLocked",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "isLocked",
+        "textToLower": "islocked",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_isLocked_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Boolean isLocked(Id id)",
+      "simplifiedSignature": "isLocked(Id)",
+      "datatype": {
+        "id": "System.approval.islocked.Boolean",
+        "type": "datatype",
+        "name": "Boolean"
+      },
+      "description": "Returns true if the record with the ID id is locked, or false if it’s not.",
+      "variables": {
+        "id": {
+          "id": "System.approval.islocked.id",
+          "type": "var",
+          "name": "id",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "id",
+            "textToLower": "id",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_id_-1:0"
+          },
+          "signature": "Id id",
+          "datatype": {
+            "id": "System.approval.islocked.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        }
+      }
+    },
+    "islocked(list)": {
+      "id": "System.approval.islocked",
+      "type": "method",
+      "name": "isLocked",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "isLocked",
+        "textToLower": "islocked",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_isLocked_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Map<Id, Boolean> isLocked(List <SObject>)",
+      "simplifiedSignature": "isLocked(List)",
+      "datatype": {
+        "id": "System.approval.islocked.Map<Id, Boolean>",
+        "type": "datatype",
+        "name": "Map<Id, Boolean>"
+      },
+      "description": "Returns a map of record IDs to lock statuses. If the record is locked the status is true. If the record is not locked the status is false.",
+      "variables": {
+        "<SObject>": {
+          "id": "System.approval.islocked.<sobject>",
+          "type": "var",
+          "name": "<SObject>",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "<SObject>",
+            "textToLower": "<sobject>",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_<SObject>_-1:0"
+          },
+          "signature": "List <SObject>",
+          "datatype": {
+            "id": "System.approval.islocked.list",
+            "type": "datatype",
+            "name": "List"
+          }
+        }
+      }
+    },
+    "islocked(sobject)": {
+      "id": "System.approval.islocked",
+      "type": "method",
+      "name": "isLocked",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "isLocked",
+        "textToLower": "islocked",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_isLocked_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Boolean isLocked(SObject sobject)",
+      "simplifiedSignature": "isLocked(SObject)",
+      "datatype": {
+        "id": "System.approval.islocked.Boolean",
+        "type": "datatype",
+        "name": "Boolean"
+      },
+      "description": "Returns true if the sobject record is locked, or false if it’s not.",
+      "variables": {
+        "sobject": {
+          "id": "System.approval.islocked.sobject",
+          "type": "var",
+          "name": "sobject",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sobject",
+            "textToLower": "sobject",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_sobject_-1:0"
+          },
+          "signature": "SObject sobject",
+          "datatype": {
+            "id": "System.approval.islocked.sobject",
+            "type": "datatype",
+            "name": "SObject"
+          }
+        }
+      }
+    },
+    "lock(id)": {
+      "id": "System.approval.lock",
+      "type": "method",
+      "name": "lock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "lock",
+        "textToLower": "lock",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_lock_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Approval.LockResult lock(Id recordId)",
+      "simplifiedSignature": "lock(Id)",
+      "datatype": {
+        "id": "System.approval.lock.Approval.LockResult",
+        "type": "datatype",
+        "name": "Approval.LockResult"
+      },
+      "description": "Locks an object, and returns the lock results.",
+      "variables": {
+        "recordId": {
+          "id": "System.approval.lock.recordid",
+          "type": "var",
+          "name": "recordId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordId",
+            "textToLower": "recordid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_recordId_-1:0"
+          },
+          "signature": "Id recordId",
+          "datatype": {
+            "id": "System.approval.lock.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        }
+      }
+    },
+    "lock(list)": {
+      "id": "System.approval.lock",
+      "type": "method",
+      "name": "lock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "lock",
+        "textToLower": "lock",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_lock_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static List<Approval.LockResult> lock(List <SObject>)",
+      "simplifiedSignature": "lock(List)",
+      "datatype": {
+        "id": "System.approval.lock.List<Approval.LockResult>",
+        "type": "datatype",
+        "name": "List<Approval.LockResult>"
+      },
+      "description": "Locks a set of objects, with the option for partial success. It returns the lock results, including failures.",
+      "variables": {
+        "<SObject>": {
+          "id": "System.approval.lock.<sobject>",
+          "type": "var",
+          "name": "<SObject>",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "<SObject>",
+            "textToLower": "<sobject>",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_<SObject>_-1:0"
+          },
+          "signature": "List <SObject>",
+          "datatype": {
+            "id": "System.approval.lock.list",
+            "type": "datatype",
+            "name": "List"
+          }
+        }
+      }
+    },
+    "lock(sobject)": {
+      "id": "System.approval.lock",
+      "type": "method",
+      "name": "lock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "lock",
+        "textToLower": "lock",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_lock_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Approval.LockResult lock(SObject recordToLock)",
+      "simplifiedSignature": "lock(SObject)",
+      "datatype": {
+        "id": "System.approval.lock.Approval.LockResult",
+        "type": "datatype",
+        "name": "Approval.LockResult"
+      },
+      "description": "Locks an object, and returns the lock results.",
+      "variables": {
+        "recordToLock": {
+          "id": "System.approval.lock.recordtolock",
+          "type": "var",
+          "name": "recordToLock",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordToLock",
+            "textToLower": "recordtolock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_recordToLock_-1:0"
+          },
+          "signature": "SObject recordToLock",
+          "datatype": {
+            "id": "System.approval.lock.sobject",
+            "type": "datatype",
+            "name": "SObject"
+          }
+        }
+      }
+    },
+    "lock(id,boolean)": {
+      "id": "System.approval.lock",
+      "type": "method",
+      "name": "lock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "lock",
+        "textToLower": "lock",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_lock_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Approval.LockResult lock(Id recordId, Boolean allOrNothing)",
+      "simplifiedSignature": "lock(Id,Boolean)",
+      "datatype": {
+        "id": "System.approval.lock.Approval.LockResult",
+        "type": "datatype",
+        "name": "Approval.LockResult"
+      },
+      "description": "Locks an object, with the option for partial success, and returns the lock result.",
+      "variables": {
+        "recordId": {
+          "id": "System.approval.lock.recordid",
+          "type": "var",
+          "name": "recordId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordId",
+            "textToLower": "recordid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_recordId_-1:0"
+          },
+          "signature": "Id recordId",
+          "datatype": {
+            "id": "System.approval.lock.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        },
+        "allOrNothing": {
+          "id": "System.approval.lock.allornothing",
+          "type": "var",
+          "name": "allOrNothing",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_allOrNothing_-1:0"
+          },
+          "signature": "Boolean allOrNothing",
+          "datatype": {
+            "id": "System.approval.lock.boolean",
+            "type": "datatype",
+            "name": "Boolean"
+          }
+        }
+      }
+    },
+    "lock(sobject,boolean)": {
+      "id": "System.approval.lock",
+      "type": "method",
+      "name": "lock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "lock",
+        "textToLower": "lock",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_lock_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Approval.LockResult lock(SObject recordToLock, Boolean allOrNothing)",
+      "simplifiedSignature": "lock(SObject,Boolean)",
+      "datatype": {
+        "id": "System.approval.lock.Approval.LockResult",
+        "type": "datatype",
+        "name": "Approval.LockResult"
+      },
+      "description": "Locks an object, with the option for partial success, and returns the lock result.",
+      "variables": {
+        "recordToLock": {
+          "id": "System.approval.lock.recordtolock",
+          "type": "var",
+          "name": "recordToLock",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordToLock",
+            "textToLower": "recordtolock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_recordToLock_-1:0"
+          },
+          "signature": "SObject recordToLock",
+          "datatype": {
+            "id": "System.approval.lock.sobject",
+            "type": "datatype",
+            "name": "SObject"
+          }
+        },
+        "allOrNothing": {
+          "id": "System.approval.lock.allornothing",
+          "type": "var",
+          "name": "allOrNothing",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_allOrNothing_-1:0"
+          },
+          "signature": "Boolean allOrNothing",
+          "datatype": {
+            "id": "System.approval.lock.boolean",
+            "type": "datatype",
+            "name": "Boolean"
+          }
+        }
+      }
+    },
+    "process(approval.processrequest)": {
+      "id": "System.approval.process",
+      "type": "method",
+      "name": "process",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "process",
+        "textToLower": "process",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_process_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Approval.ProcessResult process(Approval.ProcessRequest approvalRequest)",
+      "simplifiedSignature": "process(Approval.ProcessRequest)",
+      "datatype": {
+        "id": "System.approval.process.Approval.ProcessResult",
+        "type": "datatype",
+        "name": "Approval.ProcessResult"
+      },
+      "description": "Submits a new approval request and approves or rejects existing approval requests.",
+      "variables": {
+        "approvalRequest": {
+          "id": "System.approval.process.approvalrequest",
+          "type": "var",
+          "name": "approvalRequest",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "approvalRequest",
+            "textToLower": "approvalrequest",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_approvalRequest_-1:0"
+          },
+          "signature": "Approval.ProcessRequest approvalRequest",
+          "datatype": {
+            "id": "System.approval.process.approval.processrequest",
+            "type": "datatype",
+            "name": "Approval.ProcessRequest"
+          }
+        }
+      }
+    },
+    "process(approval.processrequest,boolean)": {
+      "id": "System.approval.process",
+      "type": "method",
+      "name": "process",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "process",
+        "textToLower": "process",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_process_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static void process(Approval.ProcessRequest approvalRequest, Boolean allOrNone)",
+      "simplifiedSignature": "process(Approval.ProcessRequest,Boolean)",
+      "datatype": {
+        "id": "System.approval.process.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Submits a new approval request and approves or rejects existing approval requests.",
+      "variables": {
+        "approvalRequest": {
+          "id": "System.approval.process.approvalrequest",
+          "type": "var",
+          "name": "approvalRequest",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "approvalRequest",
+            "textToLower": "approvalrequest",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_approvalRequest_-1:0"
+          },
+          "signature": "Approval.ProcessRequest approvalRequest",
+          "datatype": {
+            "id": "System.approval.process.approval.processrequest",
+            "type": "datatype",
+            "name": "Approval.ProcessRequest"
+          }
+        },
+        "allOrNone": {
+          "id": "System.approval.process.allornone",
+          "type": "var",
+          "name": "allOrNone",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNone",
+            "textToLower": "allornone",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_allOrNone_-1:0"
+          },
+          "signature": "Boolean allOrNone",
+          "datatype": {
+            "id": "System.approval.process.boolean",
+            "type": "datatype",
+            "name": "Boolean"
+          }
+        }
+      }
+    },
+    "process(approval.processrequest[])": {
+      "id": "System.approval.process",
+      "type": "method",
+      "name": "process",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "process",
+        "textToLower": "process",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_process_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static void process(Approval.ProcessRequest[] approvalRequests)",
+      "simplifiedSignature": "process(Approval.ProcessRequest[])",
+      "datatype": {
+        "id": "System.approval.process.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Submits a list of new approval requests, and approves or rejects existing approval requests.",
+      "variables": {
+        "approvalRequests": {
+          "id": "System.approval.process.approvalrequests",
+          "type": "var",
+          "name": "approvalRequests",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "approvalRequests",
+            "textToLower": "approvalrequests",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_approvalRequests_-1:0"
+          },
+          "signature": "Approval.ProcessRequest[] approvalRequests",
+          "datatype": {
+            "id": "System.approval.process.approval.processrequest[]",
+            "type": "datatype",
+            "name": "Approval.ProcessRequest[]"
+          }
+        }
+      }
+    },
+    "process(approval.processrequest[],boolean)": {
+      "id": "System.approval.process",
+      "type": "method",
+      "name": "process",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "process",
+        "textToLower": "process",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_process_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static void process(Approval.ProcessRequest[] approvalRequests, Boolean allOrNone)",
+      "simplifiedSignature": "process(Approval.ProcessRequest[],Boolean)",
+      "datatype": {
+        "id": "System.approval.process.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Submits a list of new approval requests, and approves or rejects existing approval requests.",
+      "variables": {
+        "approvalRequests": {
+          "id": "System.approval.process.approvalrequests",
+          "type": "var",
+          "name": "approvalRequests",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "approvalRequests",
+            "textToLower": "approvalrequests",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_approvalRequests_-1:0"
+          },
+          "signature": "Approval.ProcessRequest[] approvalRequests",
+          "datatype": {
+            "id": "System.approval.process.approval.processrequest[]",
+            "type": "datatype",
+            "name": "Approval.ProcessRequest[]"
+          }
+        },
+        "allOrNone": {
+          "id": "System.approval.process.allornone",
+          "type": "var",
+          "name": "allOrNone",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNone",
+            "textToLower": "allornone",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_allOrNone_-1:0"
+          },
+          "signature": "Boolean allOrNone",
+          "datatype": {
+            "id": "System.approval.process.boolean",
+            "type": "datatype",
+            "name": "Boolean"
+          }
+        }
+      }
+    },
+    "unlock(id)": {
+      "id": "System.approval.unlock",
+      "type": "method",
+      "name": "unlock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "unlock",
+        "textToLower": "unlock",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_unlock_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Approval.UnlockResult unlock(Id recordId)",
+      "simplifiedSignature": "unlock(Id)",
+      "datatype": {
+        "id": "System.approval.unlock.Approval.UnlockResult",
+        "type": "datatype",
+        "name": "Approval.UnlockResult"
+      },
+      "description": "Unlocks an object, and returns the unlock results.",
+      "variables": {
+        "recordId": {
+          "id": "System.approval.unlock.recordid",
+          "type": "var",
+          "name": "recordId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordId",
+            "textToLower": "recordid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_recordId_-1:0"
+          },
+          "signature": "Id recordId",
+          "datatype": {
+            "id": "System.approval.unlock.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        }
+      }
+    },
+    "unlock(list)": {
+      "id": "System.approval.unlock",
+      "type": "method",
+      "name": "unlock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "unlock",
+        "textToLower": "unlock",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_unlock_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static List<Approval.UnlockResult> unlock(List <SObject>)",
+      "simplifiedSignature": "unlock(List)",
+      "datatype": {
+        "id": "System.approval.unlock.List<Approval.UnlockResult>",
+        "type": "datatype",
+        "name": "List<Approval.UnlockResult>"
+      },
+      "description": "Unlocks a set of objects, with the option for partial success. It returns the unlock results, including failures.",
+      "variables": {
+        "<SObject>": {
+          "id": "System.approval.unlock.<sobject>",
+          "type": "var",
+          "name": "<SObject>",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "<SObject>",
+            "textToLower": "<sobject>",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_<SObject>_-1:0"
+          },
+          "signature": "List <SObject>",
+          "datatype": {
+            "id": "System.approval.unlock.list",
+            "type": "datatype",
+            "name": "List"
+          }
+        }
+      }
+    },
+    "unlock(sobject)": {
+      "id": "System.approval.unlock",
+      "type": "method",
+      "name": "unlock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "unlock",
+        "textToLower": "unlock",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_unlock_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Approval.UnlockResult unlock(SObject recordToUnlock)",
+      "simplifiedSignature": "unlock(SObject)",
+      "datatype": {
+        "id": "System.approval.unlock.Approval.UnlockResult",
+        "type": "datatype",
+        "name": "Approval.UnlockResult"
+      },
+      "description": "Unlocks an object, and returns the unlock results.",
+      "variables": {
+        "recordToUnlock": {
+          "id": "System.approval.unlock.recordtounlock",
+          "type": "var",
+          "name": "recordToUnlock",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordToUnlock",
+            "textToLower": "recordtounlock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_recordToUnlock_-1:0"
+          },
+          "signature": "SObject recordToUnlock",
+          "datatype": {
+            "id": "System.approval.unlock.sobject",
+            "type": "datatype",
+            "name": "SObject"
+          }
+        }
+      }
+    },
+    "unlock(id,boolean)": {
+      "id": "System.approval.unlock",
+      "type": "method",
+      "name": "unlock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "unlock",
+        "textToLower": "unlock",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_unlock_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Approval.UnlockResult unlock(Id recordId, Boolean allOrNothing)",
+      "simplifiedSignature": "unlock(Id,Boolean)",
+      "datatype": {
+        "id": "System.approval.unlock.Approval.UnlockResult",
+        "type": "datatype",
+        "name": "Approval.UnlockResult"
+      },
+      "description": "Unlocks an object, with the option for partial success, and returns the unlock result.",
+      "variables": {
+        "recordId": {
+          "id": "System.approval.unlock.recordid",
+          "type": "var",
+          "name": "recordId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordId",
+            "textToLower": "recordid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_recordId_-1:0"
+          },
+          "signature": "Id recordId",
+          "datatype": {
+            "id": "System.approval.unlock.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        },
+        "allOrNothing": {
+          "id": "System.approval.unlock.allornothing",
+          "type": "var",
+          "name": "allOrNothing",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_allOrNothing_-1:0"
+          },
+          "signature": "Boolean allOrNothing",
+          "datatype": {
+            "id": "System.approval.unlock.boolean",
+            "type": "datatype",
+            "name": "Boolean"
+          }
+        }
+      }
+    },
+    "unlock(sobject,boolean)": {
+      "id": "System.approval.unlock",
+      "type": "method",
+      "name": "unlock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "unlock",
+        "textToLower": "unlock",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_unlock_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Approval.UnlockResult unlock(SObject recordToUnlock, Boolean allOrNothing)",
+      "simplifiedSignature": "unlock(SObject,Boolean)",
+      "datatype": {
+        "id": "System.approval.unlock.Approval.UnlockResult",
+        "type": "datatype",
+        "name": "Approval.UnlockResult"
+      },
+      "description": "Unlocks an object, with the option for partial success, and returns the unlock result.",
+      "variables": {
+        "recordToUnlock": {
+          "id": "System.approval.unlock.recordtounlock",
+          "type": "var",
+          "name": "recordToUnlock",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordToUnlock",
+            "textToLower": "recordtounlock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_recordToUnlock_-1:0"
+          },
+          "signature": "SObject recordToUnlock",
+          "datatype": {
+            "id": "System.approval.unlock.sobject",
+            "type": "datatype",
+            "name": "SObject"
+          }
+        },
+        "allOrNothing": {
+          "id": "System.approval.unlock.allornothing",
+          "type": "var",
+          "name": "allOrNothing",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_allOrNothing_-1:0"
+          },
+          "signature": "Boolean allOrNothing",
+          "datatype": {
+            "id": "System.approval.unlock.boolean",
+            "type": "datatype",
+            "name": "Boolean"
+          }
+        }
+      }
+    }
+  },
+  "constructors": {},
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}

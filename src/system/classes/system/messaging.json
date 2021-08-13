@@ -1,0 +1,1307 @@
+{
+  "id": "System.messaging",
+  "type": "class",
+  "name": "Messaging",
+  "namespace": "System",
+  "startToken": {
+    "type": "declaration.entity.name.class",
+    "text": "Messaging",
+    "textToLower": "messaging",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "declaration.entity.name.class_Messaging_-1:0"
+  },
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.access_global_-1:0"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.sharing_without sharing_-1:0"
+  },
+  "description": "Contains messaging methods used when sending a single or mass email.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_email_outbound_messaging.htm",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "variables": {},
+  "methods": {
+    "extractinboundemail(object,boolean)": {
+      "id": "System.messaging.extractinboundemail",
+      "type": "method",
+      "name": "extractInboundEmail",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "extractInboundEmail",
+        "textToLower": "extractinboundemail",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_extractInboundEmail_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Messaging.InboundEmail extractInboundEmail(Object source, Boolean includeForwardedAttachments)",
+      "simplifiedSignature": "extractInboundEmail(Object,Boolean)",
+      "datatype": {
+        "id": "System.messaging.extractinboundemail.Messaging.InboundEmail",
+        "type": "datatype",
+        "name": "Messaging.InboundEmail"
+      },
+      "description": "Use this method in your email service code to control how to parse and process forwarded or attached emails. Returns an instance of Messaging.InboundEmail from a stream of data that is in RFC822 format. The data stream can be a forwarded email in an attachment to an existing InboundEmail, or a stream from another source.",
+      "variables": {
+        "source": {
+          "id": "System.messaging.extractinboundemail.source",
+          "type": "var",
+          "name": "source",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "source",
+            "textToLower": "source",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_source_-1:0"
+          },
+          "signature": "Object source",
+          "datatype": {
+            "id": "System.messaging.extractinboundemail.object",
+            "type": "datatype",
+            "name": "Object"
+          }
+        },
+        "includeForwardedAttachments": {
+          "id": "System.messaging.extractinboundemail.includeforwardedattachments",
+          "type": "var",
+          "name": "includeForwardedAttachments",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "includeForwardedAttachments",
+            "textToLower": "includeforwardedattachments",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_includeForwardedAttachments_-1:0"
+          },
+          "signature": "Boolean includeForwardedAttachments",
+          "datatype": {
+            "id": "System.messaging.extractinboundemail.boolean",
+            "type": "datatype",
+            "name": "Boolean"
+          }
+        }
+      }
+    },
+    "reservemassemailcapacity(integer)": {
+      "id": "System.messaging.reservemassemailcapacity",
+      "type": "method",
+      "name": "reserveMassEmailCapacity",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "reserveMassEmailCapacity",
+        "textToLower": "reservemassemailcapacity",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_reserveMassEmailCapacity_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public void reserveMassEmailCapacity(Integer amountReserved)",
+      "simplifiedSignature": "reserveMassEmailCapacity(Integer)",
+      "datatype": {
+        "id": "System.messaging.reservemassemailcapacity.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Reserves email capacity to send mass email to the specified number of email addresses, after the current transaction commits.",
+      "variables": {
+        "amountReserved": {
+          "id": "System.messaging.reservemassemailcapacity.amountreserved",
+          "type": "var",
+          "name": "amountReserved",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "amountReserved",
+            "textToLower": "amountreserved",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_amountReserved_-1:0"
+          },
+          "signature": "Integer amountReserved",
+          "datatype": {
+            "id": "System.messaging.reservemassemailcapacity.integer",
+            "type": "datatype",
+            "name": "Integer"
+          }
+        }
+      }
+    },
+    "reservesingleemailcapacity(integer)": {
+      "id": "System.messaging.reservesingleemailcapacity",
+      "type": "method",
+      "name": "reserveSingleEmailCapacity",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "reserveSingleEmailCapacity",
+        "textToLower": "reservesingleemailcapacity",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_reserveSingleEmailCapacity_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public void reserveSingleEmailCapacity(Integer amountReserved)",
+      "simplifiedSignature": "reserveSingleEmailCapacity(Integer)",
+      "datatype": {
+        "id": "System.messaging.reservesingleemailcapacity.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Reserves email capacity to send single email to the specified number of email addresses, after the current transaction commits.",
+      "variables": {
+        "amountReserved": {
+          "id": "System.messaging.reservesingleemailcapacity.amountreserved",
+          "type": "var",
+          "name": "amountReserved",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "amountReserved",
+            "textToLower": "amountreserved",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_amountReserved_-1:0"
+          },
+          "signature": "Integer amountReserved",
+          "datatype": {
+            "id": "System.messaging.reservesingleemailcapacity.integer",
+            "type": "datatype",
+            "name": "Integer"
+          }
+        }
+      }
+    },
+    "sendemail(messaging.email[],boolean)": {
+      "id": "System.messaging.sendemail",
+      "type": "method",
+      "name": "sendEmail",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "sendEmail",
+        "textToLower": "sendemail",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_sendEmail_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public Messaging.SendEmailResult[] sendEmail(Messaging.Email[] emails, Boolean allOrNothing)",
+      "simplifiedSignature": "sendEmail(Messaging.Email[],Boolean)",
+      "datatype": {
+        "id": "System.messaging.sendemail.Messaging.SendEmailResult[]",
+        "type": "datatype",
+        "name": "Messaging.SendEmailResult[]"
+      },
+      "description": "Sends the list of up to 10 emails instantiated with either SingleEmailMessage or MassEmailMessage and returns a list of SendEmailResult objects. When org preferences are set to save EmailMessage objects and a trigger is defined for EmailMessage objects, the trigger is fired for each SingleEmailMessage individually.",
+      "variables": {
+        "emails": {
+          "id": "System.messaging.sendemail.emails",
+          "type": "var",
+          "name": "emails",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "emails",
+            "textToLower": "emails",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_emails_-1:0"
+          },
+          "signature": "Messaging.Email[] emails",
+          "datatype": {
+            "id": "System.messaging.sendemail.messaging.email[]",
+            "type": "datatype",
+            "name": "Messaging.Email[]"
+          }
+        },
+        "allOrNothing": {
+          "id": "System.messaging.sendemail.allornothing",
+          "type": "var",
+          "name": "allOrNothing",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_allOrNothing_-1:0"
+          },
+          "signature": "Boolean allOrNothing",
+          "datatype": {
+            "id": "System.messaging.sendemail.boolean",
+            "type": "datatype",
+            "name": "Boolean"
+          }
+        }
+      }
+    },
+    "sendemailmessage(list)": {
+      "id": "System.messaging.sendemailmessage",
+      "type": "method",
+      "name": "sendEmailMessage",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "sendEmailMessage",
+        "textToLower": "sendemailmessage",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_sendEmailMessage_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public Messaging.SendEmailResult[] sendEmailMessage(List <ID>)",
+      "simplifiedSignature": "sendEmailMessage(List)",
+      "datatype": {
+        "id": "System.messaging.sendemailmessage.Messaging.SendEmailResult[]",
+        "type": "datatype",
+        "name": "Messaging.SendEmailResult[]"
+      },
+      "description": "Sends up to 10 draft email messages as defined by the specified email message IDs and returns a list of SendEmailResult objects.",
+      "variables": {
+        "<ID>": {
+          "id": "System.messaging.sendemailmessage.<id>",
+          "type": "var",
+          "name": "<ID>",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "<ID>",
+            "textToLower": "<id>",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_<ID>_-1:0"
+          },
+          "signature": "List <ID>",
+          "datatype": {
+            "id": "System.messaging.sendemailmessage.list",
+            "type": "datatype",
+            "name": "List"
+          }
+        }
+      }
+    },
+    "renderemailtemplate(string,string,list)": {
+      "id": "System.messaging.renderemailtemplate",
+      "type": "method",
+      "name": "renderEmailTemplate",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "renderEmailTemplate",
+        "textToLower": "renderemailtemplate",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_renderEmailTemplate_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static List<Messaging.RenderEmailTemplateBodyResult> renderEmailTemplate(String whoId, String whatId, List <String>)",
+      "simplifiedSignature": "renderEmailTemplate(String,String,List)",
+      "datatype": {
+        "id": "System.messaging.renderemailtemplate.List<Messaging.RenderEmailTemplateBodyResult>",
+        "type": "datatype",
+        "name": "List<Messaging.RenderEmailTemplateBodyResult>"
+      },
+      "description": "Replaces merge fields in text bodies of email templates with values from Salesforce records. Returns an array of RenderEmailTemplateBodyResult objects, each of which corresponds to an element in the supplied array of text bodies. Each RenderEmailTemplateBodyResult provides a success or failure indication, along with either an error code or the rendered text.",
+      "variables": {
+        "whoId": {
+          "id": "System.messaging.renderemailtemplate.whoid",
+          "type": "var",
+          "name": "whoId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "whoId",
+            "textToLower": "whoid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_whoId_-1:0"
+          },
+          "signature": "String whoId",
+          "datatype": {
+            "id": "System.messaging.renderemailtemplate.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "whatId": {
+          "id": "System.messaging.renderemailtemplate.whatid",
+          "type": "var",
+          "name": "whatId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "whatId",
+            "textToLower": "whatid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_whatId_-1:0"
+          },
+          "signature": "String whatId",
+          "datatype": {
+            "id": "System.messaging.renderemailtemplate.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "<String>": {
+          "id": "System.messaging.renderemailtemplate.<string>",
+          "type": "var",
+          "name": "<String>",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "<String>",
+            "textToLower": "<string>",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_<String>_-1:0"
+          },
+          "signature": "List <String>",
+          "datatype": {
+            "id": "System.messaging.renderemailtemplate.list",
+            "type": "datatype",
+            "name": "List"
+          }
+        }
+      }
+    },
+    "renderstoredemailtemplate(string,string,string)": {
+      "id": "System.messaging.renderstoredemailtemplate",
+      "type": "method",
+      "name": "renderStoredEmailTemplate",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "renderStoredEmailTemplate",
+        "textToLower": "renderstoredemailtemplate",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_renderStoredEmailTemplate_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Messaging.SingleEmailMessage renderStoredEmailTemplate(String templateId, String whoId, String whatId)",
+      "simplifiedSignature": "renderStoredEmailTemplate(String,String,String)",
+      "datatype": {
+        "id": "System.messaging.renderstoredemailtemplate.Messaging.SingleEmailMessage",
+        "type": "datatype",
+        "name": "Messaging.SingleEmailMessage"
+      },
+      "description": "Renders a text, custom, HTML, or Visualforce email template that exists in the database into an instance of Messaging.SingleEmailMessage. Includes all attachment content in the returned email message.",
+      "variables": {
+        "templateId": {
+          "id": "System.messaging.renderstoredemailtemplate.templateid",
+          "type": "var",
+          "name": "templateId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "templateId",
+            "textToLower": "templateid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_templateId_-1:0"
+          },
+          "signature": "String templateId",
+          "datatype": {
+            "id": "System.messaging.renderstoredemailtemplate.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "whoId": {
+          "id": "System.messaging.renderstoredemailtemplate.whoid",
+          "type": "var",
+          "name": "whoId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "whoId",
+            "textToLower": "whoid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_whoId_-1:0"
+          },
+          "signature": "String whoId",
+          "datatype": {
+            "id": "System.messaging.renderstoredemailtemplate.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "whatId": {
+          "id": "System.messaging.renderstoredemailtemplate.whatid",
+          "type": "var",
+          "name": "whatId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "whatId",
+            "textToLower": "whatid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_whatId_-1:0"
+          },
+          "signature": "String whatId",
+          "datatype": {
+            "id": "System.messaging.renderstoredemailtemplate.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        }
+      }
+    },
+    "renderstoredemailtemplate(string,string,string,messaging.attachmentretrievaloption)": {
+      "id": "System.messaging.renderstoredemailtemplate",
+      "type": "method",
+      "name": "renderStoredEmailTemplate",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "renderStoredEmailTemplate",
+        "textToLower": "renderstoredemailtemplate",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_renderStoredEmailTemplate_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Messaging.SingleEmailMessage renderStoredEmailTemplate(String templateId, String whoId, String whatId, Messaging.AttachmentRetrievalOption attachmentRetrievalOption)",
+      "simplifiedSignature": "renderStoredEmailTemplate(String,String,String,Messaging.AttachmentRetrievalOption)",
+      "datatype": {
+        "id": "System.messaging.renderstoredemailtemplate.Messaging.SingleEmailMessage",
+        "type": "datatype",
+        "name": "Messaging.SingleEmailMessage"
+      },
+      "description": "Renders a text, custom, HTML, or Visualforce email template that exists in the database into an instance of Messaging.SingleEmailMessage. Provides options for including attachment metadata only, attachment metadata and content, or excluding attachments.",
+      "variables": {
+        "templateId": {
+          "id": "System.messaging.renderstoredemailtemplate.templateid",
+          "type": "var",
+          "name": "templateId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "templateId",
+            "textToLower": "templateid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_templateId_-1:0"
+          },
+          "signature": "String templateId",
+          "datatype": {
+            "id": "System.messaging.renderstoredemailtemplate.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "whoId": {
+          "id": "System.messaging.renderstoredemailtemplate.whoid",
+          "type": "var",
+          "name": "whoId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "whoId",
+            "textToLower": "whoid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_whoId_-1:0"
+          },
+          "signature": "String whoId",
+          "datatype": {
+            "id": "System.messaging.renderstoredemailtemplate.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "whatId": {
+          "id": "System.messaging.renderstoredemailtemplate.whatid",
+          "type": "var",
+          "name": "whatId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "whatId",
+            "textToLower": "whatid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_whatId_-1:0"
+          },
+          "signature": "String whatId",
+          "datatype": {
+            "id": "System.messaging.renderstoredemailtemplate.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "attachmentRetrievalOption": {
+          "id": "System.messaging.renderstoredemailtemplate.attachmentretrievaloption",
+          "type": "var",
+          "name": "attachmentRetrievalOption",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "attachmentRetrievalOption",
+            "textToLower": "attachmentretrievaloption",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_attachmentRetrievalOption_-1:0"
+          },
+          "signature": "Messaging.AttachmentRetrievalOption attachmentRetrievalOption",
+          "datatype": {
+            "id": "System.messaging.renderstoredemailtemplate.messaging.attachmentretrievaloption",
+            "type": "datatype",
+            "name": "Messaging.AttachmentRetrievalOption"
+          }
+        }
+      }
+    },
+    "renderstoredemailtemplate(string,string,string,messaging.attachmentretrievaloption,boolean)": {
+      "id": "System.messaging.renderstoredemailtemplate",
+      "type": "method",
+      "name": "renderStoredEmailTemplate",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "renderStoredEmailTemplate",
+        "textToLower": "renderstoredemailtemplate",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_renderStoredEmailTemplate_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Messaging.SingleEmailMessage renderStoredEmailTemplate(String templateId, String whoId, String whatId, Messaging.AttachmentRetrievalOption attachmentRetrievalOption, Boolean updateEmailTemplateUsage)",
+      "simplifiedSignature": "renderStoredEmailTemplate(String,String,String,Messaging.AttachmentRetrievalOption,Boolean)",
+      "datatype": {
+        "id": "System.messaging.renderstoredemailtemplate.Messaging.SingleEmailMessage",
+        "type": "datatype",
+        "name": "Messaging.SingleEmailMessage"
+      },
+      "description": "Renders a text, custom, HTML, or Visualforce email template that exists in the database into an instance of Messaging.SingleEmailMessage. Provides options for including attachment metadata only, attachment metadata and content, or excluding attachments.",
+      "variables": {
+        "templateId": {
+          "id": "System.messaging.renderstoredemailtemplate.templateid",
+          "type": "var",
+          "name": "templateId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "templateId",
+            "textToLower": "templateid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_templateId_-1:0"
+          },
+          "signature": "String templateId",
+          "datatype": {
+            "id": "System.messaging.renderstoredemailtemplate.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "whoId": {
+          "id": "System.messaging.renderstoredemailtemplate.whoid",
+          "type": "var",
+          "name": "whoId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "whoId",
+            "textToLower": "whoid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_whoId_-1:0"
+          },
+          "signature": "String whoId",
+          "datatype": {
+            "id": "System.messaging.renderstoredemailtemplate.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "whatId": {
+          "id": "System.messaging.renderstoredemailtemplate.whatid",
+          "type": "var",
+          "name": "whatId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "whatId",
+            "textToLower": "whatid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_whatId_-1:0"
+          },
+          "signature": "String whatId",
+          "datatype": {
+            "id": "System.messaging.renderstoredemailtemplate.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "attachmentRetrievalOption": {
+          "id": "System.messaging.renderstoredemailtemplate.attachmentretrievaloption",
+          "type": "var",
+          "name": "attachmentRetrievalOption",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "attachmentRetrievalOption",
+            "textToLower": "attachmentretrievaloption",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_attachmentRetrievalOption_-1:0"
+          },
+          "signature": "Messaging.AttachmentRetrievalOption attachmentRetrievalOption",
+          "datatype": {
+            "id": "System.messaging.renderstoredemailtemplate.messaging.attachmentretrievaloption",
+            "type": "datatype",
+            "name": "Messaging.AttachmentRetrievalOption"
+          }
+        },
+        "updateEmailTemplateUsage": {
+          "id": "System.messaging.renderstoredemailtemplate.updateemailtemplateusage",
+          "type": "var",
+          "name": "updateEmailTemplateUsage",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "updateEmailTemplateUsage",
+            "textToLower": "updateemailtemplateusage",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_updateEmailTemplateUsage_-1:0"
+          },
+          "signature": "Boolean updateEmailTemplateUsage",
+          "datatype": {
+            "id": "System.messaging.renderstoredemailtemplate.boolean",
+            "type": "datatype",
+            "name": "Boolean"
+          }
+        }
+      }
+    }
+  },
+  "constructors": {},
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}

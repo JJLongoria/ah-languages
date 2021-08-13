@@ -1,0 +1,85 @@
+{
+  "id": "Cache.cachebuilder",
+  "type": "class",
+  "name": "interface",
+  "namespace": "Cache",
+  "startToken": "CacheBuilder",
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {},
+    "id": "keyword.modifier.access_global"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {},
+    "id": "keyword.modifier.sharing_without sharing"
+  },
+  "description": "An interface for safely retrieving and removing values from a session or org cache. Use the interface to generate a value that you want to store in the cache. The interface checks for cache misses, which means you no longer need to check for null cache values yourself.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_interface_cache_CacheBuilder.htm",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "fields": {},
+  "methods": {
+    "doload(string)": {
+      "id": "Cache.cachebuilder.doload",
+      "type": "method",
+      "name": "doLoad",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "doLoad",
+        "textToLower": "doload",
+        "isAux": false,
+        "range": {},
+        "id": "declaration.entity.name.function_doLoad"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {},
+        "id": "keyword.modifier.access_public"
+      },
+      "signature": "public Object doLoad(String var)",
+      "simplifiedSignature": "doLoad(String)",
+      "datatype": {
+        "id": "Cache.cachebuilder.doload.Object",
+        "type": "datatype",
+        "name": "Object"
+      },
+      "description": "Contains the logic that builds a cached value. You don’t call this method directly. Instead, it’s called indirectly when you reference the class that implements the CacheBuilder interface.",
+      "variables": {
+        "var": {
+          "id": "Cache.cachebuilder.doload.var",
+          "type": "var",
+          "name": "var",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "var",
+            "textToLower": "var",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_var"
+          },
+          "signature": "String var",
+          "datatype": {
+            "id": "Cache.cachebuilder.doload.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        }
+      }
+    }
+  },
+  "constructors": {},
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}

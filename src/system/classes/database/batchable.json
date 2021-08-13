@@ -1,0 +1,354 @@
+{
+  "id": "Database.batchable",
+  "type": "interface",
+  "name": "Batchable",
+  "namespace": "Database",
+  "startToken": {
+    "type": "declaration.entity.name.class",
+    "text": "Batchable",
+    "textToLower": "batchable",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "declaration.entity.name.class_Batchable_-1:0"
+  },
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.access_global_-1:0"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.sharing_without sharing_-1:0"
+  },
+  "description": "The class that implements this interface can be executed as a batch Apex job.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_interface_database_batchable.htm",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "variables": {},
+  "methods": {
+    "execute(database.batchablecontext,list)": {
+      "id": "Database.batchable.execute",
+      "type": "method",
+      "name": "execute",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "execute",
+        "textToLower": "execute",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_execute_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public void execute(Database.BatchableContext jobId, List <sObject>)",
+      "simplifiedSignature": "execute(Database.BatchableContext,List)",
+      "datatype": {
+        "id": "Database.batchable.execute.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Gets invoked when the batch job executes and operates on one batch of records. Contains or calls the main execution logic for the batch job.",
+      "variables": {
+        "jobId": {
+          "id": "Database.batchable.execute.jobid",
+          "type": "var",
+          "name": "jobId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobId",
+            "textToLower": "jobid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_jobId_-1:0"
+          },
+          "signature": "Database.BatchableContext jobId",
+          "datatype": {
+            "id": "Database.batchable.execute.database.batchablecontext",
+            "type": "datatype",
+            "name": "Database.BatchableContext"
+          }
+        },
+        "<sObject>": {
+          "id": "Database.batchable.execute.<sobject>",
+          "type": "var",
+          "name": "<sObject>",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "<sObject>",
+            "textToLower": "<sobject>",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_<sObject>_-1:0"
+          },
+          "signature": "List <sObject>",
+          "datatype": {
+            "id": "Database.batchable.execute.list",
+            "type": "datatype",
+            "name": "List"
+          }
+        }
+      }
+    },
+    "finish(database.batchablecontext)": {
+      "id": "Database.batchable.finish",
+      "type": "method",
+      "name": "finish",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "finish",
+        "textToLower": "finish",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_finish_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public void finish(Database.BatchableContext jobId)",
+      "simplifiedSignature": "finish(Database.BatchableContext)",
+      "datatype": {
+        "id": "Database.batchable.finish.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Gets invoked when the batch job finishes. Place any clean up code in this method.",
+      "variables": {
+        "jobId": {
+          "id": "Database.batchable.finish.jobid",
+          "type": "var",
+          "name": "jobId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobId",
+            "textToLower": "jobid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_jobId_-1:0"
+          },
+          "signature": "Database.BatchableContext jobId",
+          "datatype": {
+            "id": "Database.batchable.finish.database.batchablecontext",
+            "type": "datatype",
+            "name": "Database.BatchableContext"
+          }
+        }
+      }
+    },
+    "start(database.batchablecontext)": {
+      "id": "Database.batchable.start",
+      "type": "method",
+      "name": "start",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "start",
+        "textToLower": "start",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_start_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public Database.QueryLocator start(Database.BatchableContext jobId)",
+      "simplifiedSignature": "start(Database.BatchableContext)",
+      "datatype": {
+        "id": "Database.batchable.start.Database.QueryLocator",
+        "type": "datatype",
+        "name": "Database.QueryLocator"
+      },
+      "description": "Gets invoked when the batch job starts. Returns the record set as a QueryLocator object that will be batched for execution.",
+      "variables": {
+        "jobId": {
+          "id": "Database.batchable.start.jobid",
+          "type": "var",
+          "name": "jobId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobId",
+            "textToLower": "jobid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_jobId_-1:0"
+          },
+          "signature": "Database.BatchableContext jobId",
+          "datatype": {
+            "id": "Database.batchable.start.database.batchablecontext",
+            "type": "datatype",
+            "name": "Database.BatchableContext"
+          }
+        }
+      }
+    }
+  },
+  "constructors": {},
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}

@@ -1,0 +1,543 @@
+{
+  "id": "System.flexqueue",
+  "type": "class",
+  "name": "FlexQueue",
+  "namespace": "System",
+  "startToken": {
+    "type": "declaration.entity.name.class",
+    "text": "FlexQueue",
+    "textToLower": "flexqueue",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "declaration.entity.name.class_FlexQueue_-1:0"
+  },
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.access_global_-1:0"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.sharing_without sharing_-1:0"
+  },
+  "description": "Contains methods that reorder batch jobs in the Apex flex queue.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_class_System_FlexQueue.htm",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "variables": {},
+  "methods": {
+    "moveafterjob(id,id)": {
+      "id": "System.flexqueue.moveafterjob",
+      "type": "method",
+      "name": "moveAfterJob",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "moveAfterJob",
+        "textToLower": "moveafterjob",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_moveAfterJob_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Boolean moveAfterJob(Id jobToMoveId, Id jobInQueueId)",
+      "simplifiedSignature": "moveAfterJob(Id,Id)",
+      "datatype": {
+        "id": "System.flexqueue.moveafterjob.Boolean",
+        "type": "datatype",
+        "name": "Boolean"
+      },
+      "description": "Moves the job with the ID jobToMoveId immediately after the job with the ID jobInQueueId in the flex queue. You can move jobToMoveId forward or backward in the queue. If either job isn’t in the queue, it throws an element-not-found exception. Returns true if the job is moved, or false if jobToMoveId is already immediately after jobInQueueId, so no change is made.",
+      "variables": {
+        "jobToMoveId": {
+          "id": "System.flexqueue.moveafterjob.jobtomoveid",
+          "type": "var",
+          "name": "jobToMoveId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobToMoveId",
+            "textToLower": "jobtomoveid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_jobToMoveId_-1:0"
+          },
+          "signature": "Id jobToMoveId",
+          "datatype": {
+            "id": "System.flexqueue.moveafterjob.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        },
+        "jobInQueueId": {
+          "id": "System.flexqueue.moveafterjob.jobinqueueid",
+          "type": "var",
+          "name": "jobInQueueId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobInQueueId",
+            "textToLower": "jobinqueueid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_jobInQueueId_-1:0"
+          },
+          "signature": "Id jobInQueueId",
+          "datatype": {
+            "id": "System.flexqueue.moveafterjob.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        }
+      }
+    },
+    "movebeforejob(id,id)": {
+      "id": "System.flexqueue.movebeforejob",
+      "type": "method",
+      "name": "moveBeforeJob",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "moveBeforeJob",
+        "textToLower": "movebeforejob",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_moveBeforeJob_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Boolean moveBeforeJob(Id jobToMoveId, Id jobInQueueId)",
+      "simplifiedSignature": "moveBeforeJob(Id,Id)",
+      "datatype": {
+        "id": "System.flexqueue.movebeforejob.Boolean",
+        "type": "datatype",
+        "name": "Boolean"
+      },
+      "description": "Moves the job with the ID jobToMoveId immediately before the job with the ID jobInQueueId in the flex queue. You can move jobToMoveId forward or backward in the queue. If either job isn’t in the queue, it throws an element-not-found exception. Returns true if the job is moved, or false if jobToMoveId is already immediately before jobInQueueId, so no change is made.",
+      "variables": {
+        "jobToMoveId": {
+          "id": "System.flexqueue.movebeforejob.jobtomoveid",
+          "type": "var",
+          "name": "jobToMoveId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobToMoveId",
+            "textToLower": "jobtomoveid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_jobToMoveId_-1:0"
+          },
+          "signature": "Id jobToMoveId",
+          "datatype": {
+            "id": "System.flexqueue.movebeforejob.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        },
+        "jobInQueueId": {
+          "id": "System.flexqueue.movebeforejob.jobinqueueid",
+          "type": "var",
+          "name": "jobInQueueId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobInQueueId",
+            "textToLower": "jobinqueueid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_jobInQueueId_-1:0"
+          },
+          "signature": "Id jobInQueueId",
+          "datatype": {
+            "id": "System.flexqueue.movebeforejob.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        }
+      }
+    },
+    "movejobtoend(id)": {
+      "id": "System.flexqueue.movejobtoend",
+      "type": "method",
+      "name": "moveJobToEnd",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "moveJobToEnd",
+        "textToLower": "movejobtoend",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_moveJobToEnd_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Boolean moveJobToEnd(Id jobId)",
+      "simplifiedSignature": "moveJobToEnd(Id)",
+      "datatype": {
+        "id": "System.flexqueue.movejobtoend.Boolean",
+        "type": "datatype",
+        "name": "Boolean"
+      },
+      "description": "Moves the specified job the end of the flex queue, to index position (size - 1). All jobs after the job’s starting position move one spot forward. If the job isn’t in the queue, it throws an element-not-found exception. Returns true if the job is moved, or false if the job is already at the end of the queue, so no change is made.",
+      "variables": {
+        "jobId": {
+          "id": "System.flexqueue.movejobtoend.jobid",
+          "type": "var",
+          "name": "jobId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobId",
+            "textToLower": "jobid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_jobId_-1:0"
+          },
+          "signature": "Id jobId",
+          "datatype": {
+            "id": "System.flexqueue.movejobtoend.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        }
+      }
+    },
+    "movejobtofront(id)": {
+      "id": "System.flexqueue.movejobtofront",
+      "type": "method",
+      "name": "moveJobToFront",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "moveJobToFront",
+        "textToLower": "movejobtofront",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_moveJobToFront_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Boolean moveJobToFront(Id jobId)",
+      "simplifiedSignature": "moveJobToFront(Id)",
+      "datatype": {
+        "id": "System.flexqueue.movejobtofront.Boolean",
+        "type": "datatype",
+        "name": "Boolean"
+      },
+      "description": "Moves the specified job to the front of the flex queue, to index position 0. All other jobs move back one spot. If the job isn’t in the queue, it throws an element-not-found exception. Returns true if the job is moved, or false if the job is already at the front of the queue, so no change is made.",
+      "variables": {
+        "jobId": {
+          "id": "System.flexqueue.movejobtofront.jobid",
+          "type": "var",
+          "name": "jobId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobId",
+            "textToLower": "jobid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_jobId_-1:0"
+          },
+          "signature": "Id jobId",
+          "datatype": {
+            "id": "System.flexqueue.movejobtofront.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        }
+      }
+    }
+  },
+  "constructors": {},
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}
