@@ -1,0 +1,344 @@
+{
+  "id": "Auth.samljithandler",
+  "type": "class",
+  "name": "interface",
+  "namespace": "Auth",
+  "startToken": "SamlJitHandler",
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {},
+    "id": "keyword.modifier.access_global"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {},
+    "id": "keyword.modifier.sharing_without sharing"
+  },
+  "description": "Use this interface to control and customize Just-in-Time user provisioning logic during SAML single sign-on.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_interface_Auth_SamlJitHandler.htm",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "fields": {},
+  "methods": {
+    "createuser(id,id,id,string,map,string>)": {
+      "id": "Auth.samljithandler.createuser",
+      "type": "method",
+      "name": "createUser",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "createUser",
+        "textToLower": "createuser",
+        "isAux": false,
+        "range": {},
+        "id": "declaration.entity.name.function_createUser"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {},
+        "id": "keyword.modifier.access_public"
+      },
+      "signature": "public User createUser(Id samlSsoProviderId, Id communityId, Id portalId, String federationId, Map <String, String> attributes,)",
+      "simplifiedSignature": "createUser(Id,Id,Id,String,Map,String>)",
+      "datatype": {
+        "id": "Auth.samljithandler.createuser.User",
+        "type": "datatype",
+        "name": "User"
+      },
+      "description": "Returns a User object using the specified Federation ID. The User object corresponds to the user information and may be a new user that hasn’t t been inserted in the database or may represent an existing user record in the database.",
+      "variables": {
+        "samlSsoProviderId": {
+          "id": "Auth.samljithandler.createuser.samlssoproviderid",
+          "type": "var",
+          "name": "samlSsoProviderId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "samlSsoProviderId",
+            "textToLower": "samlssoproviderid",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_samlSsoProviderId"
+          },
+          "signature": "Id samlSsoProviderId",
+          "datatype": {
+            "id": "Auth.samljithandler.createuser.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        },
+        "communityId": {
+          "id": "Auth.samljithandler.createuser.communityid",
+          "type": "var",
+          "name": "communityId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_communityId"
+          },
+          "signature": "Id communityId",
+          "datatype": {
+            "id": "Auth.samljithandler.createuser.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        },
+        "portalId": {
+          "id": "Auth.samljithandler.createuser.portalid",
+          "type": "var",
+          "name": "portalId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "portalId",
+            "textToLower": "portalid",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_portalId"
+          },
+          "signature": "Id portalId",
+          "datatype": {
+            "id": "Auth.samljithandler.createuser.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        },
+        "federationId": {
+          "id": "Auth.samljithandler.createuser.federationid",
+          "type": "var",
+          "name": "federationId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "federationId",
+            "textToLower": "federationid",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_federationId"
+          },
+          "signature": "String federationId",
+          "datatype": {
+            "id": "Auth.samljithandler.createuser.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "<String": {
+          "id": "Auth.samljithandler.createuser.<string",
+          "type": "var",
+          "name": "<String",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "<String",
+            "textToLower": "<string",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_<String"
+          },
+          "signature": "Map <String",
+          "datatype": {
+            "id": "Auth.samljithandler.createuser.map",
+            "type": "datatype",
+            "name": "Map"
+          }
+        },
+        "attributes,": {
+          "id": "Auth.samljithandler.createuser.attributes,",
+          "type": "var",
+          "name": "attributes,",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "attributes,",
+            "textToLower": "attributes,",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_attributes,"
+          },
+          "signature": "String> attributes,",
+          "datatype": {
+            "id": "Auth.samljithandler.createuser.string>",
+            "type": "datatype",
+            "name": "String>"
+          }
+        }
+      }
+    },
+    "updateuser(id,id,id,id,string,map,string>)": {
+      "id": "Auth.samljithandler.updateuser",
+      "type": "method",
+      "name": "updateUser",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "updateUser",
+        "textToLower": "updateuser",
+        "isAux": false,
+        "range": {},
+        "id": "declaration.entity.name.function_updateUser"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {},
+        "id": "keyword.modifier.access_public"
+      },
+      "signature": "public void updateUser(Id userId, Id samlSsoProviderId, Id communityId, Id portalId, String federationId, Map <String, String> attributes,)",
+      "simplifiedSignature": "updateUser(Id,Id,Id,Id,String,Map,String>)",
+      "datatype": {
+        "id": "Auth.samljithandler.updateuser.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Updates the specified user’s information. This method is called if the user has logged in before with SAML single sign-on and then logs in again, or if your application is using the Existing User Linking URL.",
+      "variables": {
+        "userId": {
+          "id": "Auth.samljithandler.updateuser.userid",
+          "type": "var",
+          "name": "userId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_userId"
+          },
+          "signature": "Id userId",
+          "datatype": {
+            "id": "Auth.samljithandler.updateuser.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        },
+        "samlSsoProviderId": {
+          "id": "Auth.samljithandler.updateuser.samlssoproviderid",
+          "type": "var",
+          "name": "samlSsoProviderId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "samlSsoProviderId",
+            "textToLower": "samlssoproviderid",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_samlSsoProviderId"
+          },
+          "signature": "Id samlSsoProviderId",
+          "datatype": {
+            "id": "Auth.samljithandler.updateuser.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        },
+        "communityId": {
+          "id": "Auth.samljithandler.updateuser.communityid",
+          "type": "var",
+          "name": "communityId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_communityId"
+          },
+          "signature": "Id communityId",
+          "datatype": {
+            "id": "Auth.samljithandler.updateuser.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        },
+        "portalId": {
+          "id": "Auth.samljithandler.updateuser.portalid",
+          "type": "var",
+          "name": "portalId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "portalId",
+            "textToLower": "portalid",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_portalId"
+          },
+          "signature": "Id portalId",
+          "datatype": {
+            "id": "Auth.samljithandler.updateuser.id",
+            "type": "datatype",
+            "name": "Id"
+          }
+        },
+        "federationId": {
+          "id": "Auth.samljithandler.updateuser.federationid",
+          "type": "var",
+          "name": "federationId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "federationId",
+            "textToLower": "federationid",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_federationId"
+          },
+          "signature": "String federationId",
+          "datatype": {
+            "id": "Auth.samljithandler.updateuser.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "<String": {
+          "id": "Auth.samljithandler.updateuser.<string",
+          "type": "var",
+          "name": "<String",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "<String",
+            "textToLower": "<string",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_<String"
+          },
+          "signature": "Map <String",
+          "datatype": {
+            "id": "Auth.samljithandler.updateuser.map",
+            "type": "datatype",
+            "name": "Map"
+          }
+        },
+        "attributes,": {
+          "id": "Auth.samljithandler.updateuser.attributes,",
+          "type": "var",
+          "name": "attributes,",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "attributes,",
+            "textToLower": "attributes,",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_attributes,"
+          },
+          "signature": "String> attributes,",
+          "datatype": {
+            "id": "Auth.samljithandler.updateuser.string>",
+            "type": "datatype",
+            "name": "String>"
+          }
+        }
+      }
+    }
+  },
+  "constructors": {},
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}

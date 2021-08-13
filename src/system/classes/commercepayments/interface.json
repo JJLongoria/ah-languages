@@ -1,0 +1,85 @@
+{
+  "id": "commercepayments.paymentgatewayadapter",
+  "type": "class",
+  "name": "interface",
+  "namespace": "commercepayments",
+  "startToken": "PaymentGatewayAdapter",
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {},
+    "id": "keyword.modifier.access_global"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {},
+    "id": "keyword.modifier.sharing_without sharing"
+  },
+  "description": "PaymentGatewayAdapters can implement this interface in order to process requests.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_interface_commercepayments_PaymentGatewayAdapter.htm#apex_interface_commerce_payments_PaymentGatewayAdapter",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "fields": {},
+  "methods": {
+    "processrequest(commercepayments.paymentgatewaycontext)": {
+      "id": "commercepayments.paymentgatewayadapter.processrequest",
+      "type": "method",
+      "name": "processRequest",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "processRequest",
+        "textToLower": "processrequest",
+        "isAux": false,
+        "range": {},
+        "id": "declaration.entity.name.function_processRequest"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "global",
+        "textToLower": "global",
+        "isAux": false,
+        "range": {},
+        "id": "keyword.modifier.access_global"
+      },
+      "signature": "global commercepayments.GatewayResponse processRequest(commercepayments.PaymentGatewayContext var1)",
+      "simplifiedSignature": "processRequest(commercepayments.PaymentGatewayContext)",
+      "datatype": {
+        "id": "commercepayments.paymentgatewayadapter.processrequest.commercepayments.GatewayResponse",
+        "type": "datatype",
+        "name": "commercepayments.GatewayResponse"
+      },
+      "description": "The entry point for processing payment requests. Returns the response from the payment gateway.",
+      "variables": {
+        "var1": {
+          "id": "commercepayments.paymentgatewayadapter.processrequest.var1",
+          "type": "var",
+          "name": "var1",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "var1",
+            "textToLower": "var1",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_var1"
+          },
+          "signature": "commercepayments.PaymentGatewayContext var1",
+          "datatype": {
+            "id": "commercepayments.paymentgatewayadapter.processrequest.commercepayments.paymentgatewaycontext",
+            "type": "datatype",
+            "name": "commercepayments.PaymentGatewayContext"
+          }
+        }
+      }
+    }
+  },
+  "constructors": {},
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}

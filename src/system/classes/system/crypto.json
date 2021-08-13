@@ -1,0 +1,2355 @@
+{
+  "id": "System.crypto",
+  "type": "class",
+  "name": "Crypto",
+  "namespace": "System",
+  "startToken": {
+    "type": "declaration.entity.name.class",
+    "text": "Crypto",
+    "textToLower": "crypto",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "declaration.entity.name.class_Crypto_-1:0"
+  },
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.access_global_-1:0"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.sharing_without sharing_-1:0"
+  },
+  "description": "Provides methods for creating digests, message authentication codes, and signatures, as well as encrypting and decrypting information.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_restful_crypto.htm",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "variables": {},
+  "methods": {
+    "decrypt(string,blob,blob,blob)": {
+      "id": "System.crypto.decrypt",
+      "type": "method",
+      "name": "decrypt",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "decrypt",
+        "textToLower": "decrypt",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_decrypt_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Blob decrypt(String algorithmName, Blob privateKey, Blob initializationVector, Blob cipherText)",
+      "simplifiedSignature": "decrypt(String,Blob,Blob,Blob)",
+      "datatype": {
+        "id": "System.crypto.decrypt.Blob",
+        "type": "datatype",
+        "name": "Blob"
+      },
+      "description": "Decrypts the Blob cipherText using the specified algorithm, private key, and initialization vector. Use this method to decrypt blobs encrypted using a third party application or the encrypt method.",
+      "variables": {
+        "algorithmName": {
+          "id": "System.crypto.decrypt.algorithmname",
+          "type": "var",
+          "name": "algorithmName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+          },
+          "signature": "String algorithmName",
+          "datatype": {
+            "id": "System.crypto.decrypt.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "privateKey": {
+          "id": "System.crypto.decrypt.privatekey",
+          "type": "var",
+          "name": "privateKey",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_privateKey_-1:0"
+          },
+          "signature": "Blob privateKey",
+          "datatype": {
+            "id": "System.crypto.decrypt.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        },
+        "initializationVector": {
+          "id": "System.crypto.decrypt.initializationvector",
+          "type": "var",
+          "name": "initializationVector",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "initializationVector",
+            "textToLower": "initializationvector",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_initializationVector_-1:0"
+          },
+          "signature": "Blob initializationVector",
+          "datatype": {
+            "id": "System.crypto.decrypt.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        },
+        "cipherText": {
+          "id": "System.crypto.decrypt.ciphertext",
+          "type": "var",
+          "name": "cipherText",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "cipherText",
+            "textToLower": "ciphertext",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_cipherText_-1:0"
+          },
+          "signature": "Blob cipherText",
+          "datatype": {
+            "id": "System.crypto.decrypt.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        }
+      }
+    },
+    "decryptwithmanagediv(string,blob,blob)": {
+      "id": "System.crypto.decryptwithmanagediv",
+      "type": "method",
+      "name": "decryptWithManagedIV",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "decryptWithManagedIV",
+        "textToLower": "decryptwithmanagediv",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_decryptWithManagedIV_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Blob decryptWithManagedIV(String algorithmName, Blob privateKey, Blob IVAndCipherText)",
+      "simplifiedSignature": "decryptWithManagedIV(String,Blob,Blob)",
+      "datatype": {
+        "id": "System.crypto.decryptwithmanagediv.Blob",
+        "type": "datatype",
+        "name": "Blob"
+      },
+      "description": "Decrypts the Blob IVAndCipherText using the specified algorithm and private key. Use this method to decrypt blobs encrypted using a third party application or the encryptWithManagedIV method.",
+      "variables": {
+        "algorithmName": {
+          "id": "System.crypto.decryptwithmanagediv.algorithmname",
+          "type": "var",
+          "name": "algorithmName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+          },
+          "signature": "String algorithmName",
+          "datatype": {
+            "id": "System.crypto.decryptwithmanagediv.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "privateKey": {
+          "id": "System.crypto.decryptwithmanagediv.privatekey",
+          "type": "var",
+          "name": "privateKey",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_privateKey_-1:0"
+          },
+          "signature": "Blob privateKey",
+          "datatype": {
+            "id": "System.crypto.decryptwithmanagediv.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        },
+        "IVAndCipherText": {
+          "id": "System.crypto.decryptwithmanagediv.ivandciphertext",
+          "type": "var",
+          "name": "IVAndCipherText",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "IVAndCipherText",
+            "textToLower": "ivandciphertext",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_IVAndCipherText_-1:0"
+          },
+          "signature": "Blob IVAndCipherText",
+          "datatype": {
+            "id": "System.crypto.decryptwithmanagediv.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        }
+      }
+    },
+    "encrypt(string,blob,blob,blob)": {
+      "id": "System.crypto.encrypt",
+      "type": "method",
+      "name": "encrypt",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "encrypt",
+        "textToLower": "encrypt",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_encrypt_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Blob encrypt(String algorithmName, Blob privateKey, Blob initializationVector, Blob clearText)",
+      "simplifiedSignature": "encrypt(String,Blob,Blob,Blob)",
+      "datatype": {
+        "id": "System.crypto.encrypt.Blob",
+        "type": "datatype",
+        "name": "Blob"
+      },
+      "description": "Encrypts the Blob clearText using the specified algorithm, private key and initialization vector. Use this method when you want to specify your own initialization vector.",
+      "variables": {
+        "algorithmName": {
+          "id": "System.crypto.encrypt.algorithmname",
+          "type": "var",
+          "name": "algorithmName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+          },
+          "signature": "String algorithmName",
+          "datatype": {
+            "id": "System.crypto.encrypt.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "privateKey": {
+          "id": "System.crypto.encrypt.privatekey",
+          "type": "var",
+          "name": "privateKey",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_privateKey_-1:0"
+          },
+          "signature": "Blob privateKey",
+          "datatype": {
+            "id": "System.crypto.encrypt.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        },
+        "initializationVector": {
+          "id": "System.crypto.encrypt.initializationvector",
+          "type": "var",
+          "name": "initializationVector",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "initializationVector",
+            "textToLower": "initializationvector",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_initializationVector_-1:0"
+          },
+          "signature": "Blob initializationVector",
+          "datatype": {
+            "id": "System.crypto.encrypt.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        },
+        "clearText": {
+          "id": "System.crypto.encrypt.cleartext",
+          "type": "var",
+          "name": "clearText",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "clearText",
+            "textToLower": "cleartext",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_clearText_-1:0"
+          },
+          "signature": "Blob clearText",
+          "datatype": {
+            "id": "System.crypto.encrypt.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        }
+      }
+    },
+    "encryptwithmanagediv(string,blob,blob)": {
+      "id": "System.crypto.encryptwithmanagediv",
+      "type": "method",
+      "name": "encryptWithManagedIV",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "encryptWithManagedIV",
+        "textToLower": "encryptwithmanagediv",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_encryptWithManagedIV_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Blob encryptWithManagedIV(String algorithmName, Blob privateKey, Blob clearText)",
+      "simplifiedSignature": "encryptWithManagedIV(String,Blob,Blob)",
+      "datatype": {
+        "id": "System.crypto.encryptwithmanagediv.Blob",
+        "type": "datatype",
+        "name": "Blob"
+      },
+      "description": "Encrypts the Blob clearText using the specified algorithm and private key. Use this method when you want Salesforce to generate the initialization vector for you.",
+      "variables": {
+        "algorithmName": {
+          "id": "System.crypto.encryptwithmanagediv.algorithmname",
+          "type": "var",
+          "name": "algorithmName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+          },
+          "signature": "String algorithmName",
+          "datatype": {
+            "id": "System.crypto.encryptwithmanagediv.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "privateKey": {
+          "id": "System.crypto.encryptwithmanagediv.privatekey",
+          "type": "var",
+          "name": "privateKey",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_privateKey_-1:0"
+          },
+          "signature": "Blob privateKey",
+          "datatype": {
+            "id": "System.crypto.encryptwithmanagediv.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        },
+        "clearText": {
+          "id": "System.crypto.encryptwithmanagediv.cleartext",
+          "type": "var",
+          "name": "clearText",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "clearText",
+            "textToLower": "cleartext",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_clearText_-1:0"
+          },
+          "signature": "Blob clearText",
+          "datatype": {
+            "id": "System.crypto.encryptwithmanagediv.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        }
+      }
+    },
+    "generateaeskey()": {
+      "id": "System.crypto.generateaeskey",
+      "type": "method",
+      "name": "generateAesKey",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "generateAesKey",
+        "textToLower": "generateaeskey",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_generateAesKey_-1:0"
+      },
+      "signature": "Blob generateAesKey()",
+      "simplifiedSignature": "generateAesKey()",
+      "datatype": {
+        "id": "System.crypto.generateaeskey.Blob",
+        "type": "datatype",
+        "name": "Blob"
+      },
+      "description": "Generates an Advanced Encryption Standard (AES) key.",
+      "variables": {}
+    },
+    "generatedigest(string,blob)": {
+      "id": "System.crypto.generatedigest",
+      "type": "method",
+      "name": "generateDigest",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "generateDigest",
+        "textToLower": "generatedigest",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_generateDigest_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Blob generateDigest(String algorithmName, Blob input)",
+      "simplifiedSignature": "generateDigest(String,Blob)",
+      "datatype": {
+        "id": "System.crypto.generatedigest.Blob",
+        "type": "datatype",
+        "name": "Blob"
+      },
+      "description": "Computes a secure, one-way hash digest based on the supplied input string and algorithm name.",
+      "variables": {
+        "algorithmName": {
+          "id": "System.crypto.generatedigest.algorithmname",
+          "type": "var",
+          "name": "algorithmName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+          },
+          "signature": "String algorithmName",
+          "datatype": {
+            "id": "System.crypto.generatedigest.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "input": {
+          "id": "System.crypto.generatedigest.input",
+          "type": "var",
+          "name": "input",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "input",
+            "textToLower": "input",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_input_-1:0"
+          },
+          "signature": "Blob input",
+          "datatype": {
+            "id": "System.crypto.generatedigest.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        }
+      }
+    },
+    "generatemac(string,blob,blob)": {
+      "id": "System.crypto.generatemac",
+      "type": "method",
+      "name": "generateMac",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "generateMac",
+        "textToLower": "generatemac",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_generateMac_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Blob generateMac(String algorithmName, Blob input, Blob privateKey)",
+      "simplifiedSignature": "generateMac(String,Blob,Blob)",
+      "datatype": {
+        "id": "System.crypto.generatemac.Blob",
+        "type": "datatype",
+        "name": "Blob"
+      },
+      "description": "Computes a message authentication code (MAC) for the input string, using the private key and the specified algorithm.",
+      "variables": {
+        "algorithmName": {
+          "id": "System.crypto.generatemac.algorithmname",
+          "type": "var",
+          "name": "algorithmName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+          },
+          "signature": "String algorithmName",
+          "datatype": {
+            "id": "System.crypto.generatemac.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "input": {
+          "id": "System.crypto.generatemac.input",
+          "type": "var",
+          "name": "input",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "input",
+            "textToLower": "input",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_input_-1:0"
+          },
+          "signature": "Blob input",
+          "datatype": {
+            "id": "System.crypto.generatemac.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        },
+        "privateKey": {
+          "id": "System.crypto.generatemac.privatekey",
+          "type": "var",
+          "name": "privateKey",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_privateKey_-1:0"
+          },
+          "signature": "Blob privateKey",
+          "datatype": {
+            "id": "System.crypto.generatemac.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        }
+      }
+    },
+    "getrandominteger()": {
+      "id": "System.crypto.getrandominteger",
+      "type": "method",
+      "name": "getRandomInteger",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getRandomInteger",
+        "textToLower": "getrandominteger",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getRandomInteger_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Integer getRandomInteger()",
+      "simplifiedSignature": "getRandomInteger()",
+      "datatype": {
+        "id": "System.crypto.getrandominteger.Integer",
+        "type": "datatype",
+        "name": "Integer"
+      },
+      "description": "Returns a random Integer.",
+      "variables": {}
+    },
+    "getrandomlong()": {
+      "id": "System.crypto.getrandomlong",
+      "type": "method",
+      "name": "getRandomLong",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getRandomLong",
+        "textToLower": "getrandomlong",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getRandomLong_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Long getRandomLong()",
+      "simplifiedSignature": "getRandomLong()",
+      "datatype": {
+        "id": "System.crypto.getrandomlong.Long",
+        "type": "datatype",
+        "name": "Long"
+      },
+      "description": "Returns a random Long.",
+      "variables": {}
+    },
+    "sign(string,blob,blob)": {
+      "id": "System.crypto.sign",
+      "type": "method",
+      "name": "sign",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "sign",
+        "textToLower": "sign",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_sign_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Blob sign(String algorithmName, Blob input, Blob privateKey)",
+      "simplifiedSignature": "sign(String,Blob,Blob)",
+      "datatype": {
+        "id": "System.crypto.sign.Blob",
+        "type": "datatype",
+        "name": "Blob"
+      },
+      "description": "Computes a unique digital signature for the input string, using the specified algorithm and the supplied private key.",
+      "variables": {
+        "algorithmName": {
+          "id": "System.crypto.sign.algorithmname",
+          "type": "var",
+          "name": "algorithmName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+          },
+          "signature": "String algorithmName",
+          "datatype": {
+            "id": "System.crypto.sign.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "input": {
+          "id": "System.crypto.sign.input",
+          "type": "var",
+          "name": "input",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "input",
+            "textToLower": "input",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_input_-1:0"
+          },
+          "signature": "Blob input",
+          "datatype": {
+            "id": "System.crypto.sign.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        },
+        "privateKey": {
+          "id": "System.crypto.sign.privatekey",
+          "type": "var",
+          "name": "privateKey",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_privateKey_-1:0"
+          },
+          "signature": "Blob privateKey",
+          "datatype": {
+            "id": "System.crypto.sign.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        }
+      }
+    },
+    "signwithcertificate(string,blob,string)": {
+      "id": "System.crypto.signwithcertificate",
+      "type": "method",
+      "name": "signWithCertificate",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "signWithCertificate",
+        "textToLower": "signwithcertificate",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_signWithCertificate_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Blob signWithCertificate(String algorithmName, Blob input, String certDevName)",
+      "simplifiedSignature": "signWithCertificate(String,Blob,String)",
+      "datatype": {
+        "id": "System.crypto.signwithcertificate.Blob",
+        "type": "datatype",
+        "name": "Blob"
+      },
+      "description": "Computes a unique digital signature for the input string, using the specified algorithm and the supplied certificate and key pair.",
+      "variables": {
+        "algorithmName": {
+          "id": "System.crypto.signwithcertificate.algorithmname",
+          "type": "var",
+          "name": "algorithmName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+          },
+          "signature": "String algorithmName",
+          "datatype": {
+            "id": "System.crypto.signwithcertificate.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "input": {
+          "id": "System.crypto.signwithcertificate.input",
+          "type": "var",
+          "name": "input",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "input",
+            "textToLower": "input",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_input_-1:0"
+          },
+          "signature": "Blob input",
+          "datatype": {
+            "id": "System.crypto.signwithcertificate.blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        },
+        "certDevName": {
+          "id": "System.crypto.signwithcertificate.certdevname",
+          "type": "var",
+          "name": "certDevName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "certDevName",
+            "textToLower": "certdevname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_certDevName_-1:0"
+          },
+          "signature": "String certDevName",
+          "datatype": {
+            "id": "System.crypto.signwithcertificate.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        }
+      }
+    },
+    "signxml(string,dom.xmlnode,string,string)": {
+      "id": "System.crypto.signxml",
+      "type": "method",
+      "name": "signXML",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "signXML",
+        "textToLower": "signxml",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_signXML_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public void signXML(String algorithmName, Dom.XmlNode node, String idAttributeName, String certDevName)",
+      "simplifiedSignature": "signXML(String,Dom.XmlNode,String,String)",
+      "datatype": {
+        "id": "System.crypto.signxml.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Envelops the signature into an XML document.",
+      "variables": {
+        "algorithmName": {
+          "id": "System.crypto.signxml.algorithmname",
+          "type": "var",
+          "name": "algorithmName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+          },
+          "signature": "String algorithmName",
+          "datatype": {
+            "id": "System.crypto.signxml.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "node": {
+          "id": "System.crypto.signxml.node",
+          "type": "var",
+          "name": "node",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "node",
+            "textToLower": "node",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_node_-1:0"
+          },
+          "signature": "Dom.XmlNode node",
+          "datatype": {
+            "id": "System.crypto.signxml.dom.xmlnode",
+            "type": "datatype",
+            "name": "Dom.XmlNode"
+          }
+        },
+        "idAttributeName": {
+          "id": "System.crypto.signxml.idattributename",
+          "type": "var",
+          "name": "idAttributeName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "idAttributeName",
+            "textToLower": "idattributename",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_idAttributeName_-1:0"
+          },
+          "signature": "String idAttributeName",
+          "datatype": {
+            "id": "System.crypto.signxml.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "certDevName": {
+          "id": "System.crypto.signxml.certdevname",
+          "type": "var",
+          "name": "certDevName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "certDevName",
+            "textToLower": "certdevname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_certDevName_-1:0"
+          },
+          "signature": "String certDevName",
+          "datatype": {
+            "id": "System.crypto.signxml.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        }
+      }
+    },
+    "signxml(string,dom.xmlnode,string,string,dom.xmlnode)": {
+      "id": "System.crypto.signxml",
+      "type": "method",
+      "name": "signXML",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "signXML",
+        "textToLower": "signxml",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_signXML_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static void signXML(String algorithmName, Dom.XmlNode node, String idAttributeName, String certDevName, Dom.XmlNode refChild)",
+      "simplifiedSignature": "signXML(String,Dom.XmlNode,String,String,Dom.XmlNode)",
+      "datatype": {
+        "id": "System.crypto.signxml.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Inserts the signature envelope before the specified child node.",
+      "variables": {
+        "algorithmName": {
+          "id": "System.crypto.signxml.algorithmname",
+          "type": "var",
+          "name": "algorithmName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+          },
+          "signature": "String algorithmName",
+          "datatype": {
+            "id": "System.crypto.signxml.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "node": {
+          "id": "System.crypto.signxml.node",
+          "type": "var",
+          "name": "node",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "node",
+            "textToLower": "node",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_node_-1:0"
+          },
+          "signature": "Dom.XmlNode node",
+          "datatype": {
+            "id": "System.crypto.signxml.dom.xmlnode",
+            "type": "datatype",
+            "name": "Dom.XmlNode"
+          }
+        },
+        "idAttributeName": {
+          "id": "System.crypto.signxml.idattributename",
+          "type": "var",
+          "name": "idAttributeName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "idAttributeName",
+            "textToLower": "idattributename",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_idAttributeName_-1:0"
+          },
+          "signature": "String idAttributeName",
+          "datatype": {
+            "id": "System.crypto.signxml.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "certDevName": {
+          "id": "System.crypto.signxml.certdevname",
+          "type": "var",
+          "name": "certDevName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "certDevName",
+            "textToLower": "certdevname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_certDevName_-1:0"
+          },
+          "signature": "String certDevName",
+          "datatype": {
+            "id": "System.crypto.signxml.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "refChild": {
+          "id": "System.crypto.signxml.refchild",
+          "type": "var",
+          "name": "refChild",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "refChild",
+            "textToLower": "refchild",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_refChild_-1:0"
+          },
+          "signature": "Dom.XmlNode refChild",
+          "datatype": {
+            "id": "System.crypto.signxml.dom.xmlnode",
+            "type": "datatype",
+            "name": "Dom.XmlNode"
+          }
+        }
+      }
+    },
+    "(string,blob,blob,blob)": {
+      "id": "System.crypto.",
+      "type": "method",
+      "name": "",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "",
+        "textToLower": "",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function__-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Boolean (String algorithmName, Blob input, Blob privateKey, Blob macToVerify)",
+      "simplifiedSignature": "(String,Blob,Blob,Blob)",
+      "datatype": {
+        "id": "System.crypto..Boolean",
+        "type": "datatype",
+        "name": "Boolean"
+      },
+      "description": "Verifies the HMAC signature for Blob data using the specified algorithm, input data, privateKey, and the mac. Use this method to verify a Blob signed by a digital signature created using a third-party application or the sign method.",
+      "variables": {
+        "algorithmName": {
+          "id": "System.crypto..algorithmname",
+          "type": "var",
+          "name": "algorithmName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+          },
+          "signature": "String algorithmName",
+          "datatype": {
+            "id": "System.crypto..string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "input": {
+          "id": "System.crypto..input",
+          "type": "var",
+          "name": "input",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "input",
+            "textToLower": "input",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_input_-1:0"
+          },
+          "signature": "Blob input",
+          "datatype": {
+            "id": "System.crypto..blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        },
+        "privateKey": {
+          "id": "System.crypto..privatekey",
+          "type": "var",
+          "name": "privateKey",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_privateKey_-1:0"
+          },
+          "signature": "Blob privateKey",
+          "datatype": {
+            "id": "System.crypto..blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        },
+        "macToVerify": {
+          "id": "System.crypto..mactoverify",
+          "type": "var",
+          "name": "macToVerify",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "macToVerify",
+            "textToLower": "mactoverify",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_macToVerify_-1:0"
+          },
+          "signature": "Blob macToVerify",
+          "datatype": {
+            "id": "System.crypto..blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        }
+      }
+    },
+    "(string,blob,blob,string)": {
+      "id": "System.crypto.",
+      "type": "method",
+      "name": "",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "",
+        "textToLower": "",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function__-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.static_static_-1:0"
+      },
+      "signature": "public static Blob (String algorithmName, Blob data, Blob signature, String certDevName)",
+      "simplifiedSignature": "(String,Blob,Blob,String)",
+      "datatype": {
+        "id": "System.crypto..Blob",
+        "type": "datatype",
+        "name": "Blob"
+      },
+      "description": "Verifies the digital signature for the Blob data using the specified algorithm and the public key associated with the certDevName. Use this method to verify a Blob signed by a digital signature created using a third-party application or the sign method.",
+      "variables": {
+        "algorithmName": {
+          "id": "System.crypto..algorithmname",
+          "type": "var",
+          "name": "algorithmName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+          },
+          "signature": "String algorithmName",
+          "datatype": {
+            "id": "System.crypto..string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "data": {
+          "id": "System.crypto..data",
+          "type": "var",
+          "name": "data",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "data",
+            "textToLower": "data",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_data_-1:0"
+          },
+          "signature": "Blob data",
+          "datatype": {
+            "id": "System.crypto..blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        },
+        "signature": {
+          "id": "System.crypto..signature",
+          "type": "var",
+          "name": "signature",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "signature",
+            "textToLower": "signature",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_signature_-1:0"
+          },
+          "signature": "Blob signature",
+          "datatype": {
+            "id": "System.crypto..blob",
+            "type": "datatype",
+            "name": "Blob"
+          }
+        },
+        "certDevName": {
+          "id": "System.crypto..certdevname",
+          "type": "var",
+          "name": "certDevName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "certDevName",
+            "textToLower": "certdevname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_certDevName_-1:0"
+          },
+          "signature": "String certDevName",
+          "datatype": {
+            "id": "System.crypto..string",
+            "type": "datatype",
+            "name": "String"
+          }
+        }
+      }
+    }
+  },
+  "constructors": {},
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}

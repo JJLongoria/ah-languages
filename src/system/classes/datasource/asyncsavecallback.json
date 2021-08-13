@@ -1,0 +1,158 @@
+{
+  "id": "Datasource.asyncsavecallback",
+  "type": "class",
+  "name": "AsyncSaveCallback",
+  "namespace": "Datasource",
+  "startToken": {
+    "type": "declaration.entity.name.class",
+    "text": "AsyncSaveCallback",
+    "textToLower": "asyncsavecallback",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "declaration.entity.name.class_AsyncSaveCallback_-1:0"
+  },
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.access_global_-1:0"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.sharing_without sharing_-1:0"
+  },
+  "description": "A callback class that the Database.insertAsync or Database.updateAsync method references. Salesforce calls this class after the remote operation is completed. This class provides the compensating transaction in the completion context of the insert or update operation. Extend this class to define the actions to execute after the remote insert or update operation finishes execution.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_class_DataSource_AsyncSaveCallback.htm",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "variables": {},
+  "methods": {
+    "processsave(database.saveresult)": {
+      "id": "Datasource.asyncsavecallback.processsave",
+      "type": "method",
+      "name": "processSave",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "processSave",
+        "textToLower": "processsave",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_processSave_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public void processSave(Database.SaveResult saveResult)",
+      "simplifiedSignature": "processSave(Database.SaveResult)",
+      "datatype": {
+        "id": "Datasource.asyncsavecallback.processsave.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Override this method to define actions that Salesforce executes after the remote Database.insertAsync or Database.updateAsync operation is completed. For example, based on the results of the remote operation, you can update custom object data or other data that's stored in the Salesforce org.",
+      "variables": {
+        "saveResult": {
+          "id": "Datasource.asyncsavecallback.processsave.saveresult",
+          "type": "var",
+          "name": "saveResult",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "saveResult",
+            "textToLower": "saveresult",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_saveResult_-1:0"
+          },
+          "signature": "Database.SaveResult saveResult",
+          "datatype": {
+            "id": "Datasource.asyncsavecallback.processsave.database.saveresult",
+            "type": "datatype",
+            "name": "Database.SaveResult"
+          }
+        }
+      }
+    }
+  },
+  "constructors": {},
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}

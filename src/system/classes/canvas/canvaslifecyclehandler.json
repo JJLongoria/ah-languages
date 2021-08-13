@@ -1,0 +1,210 @@
+{
+  "id": "Canvas.canvaslifecyclehandler",
+  "type": "interface",
+  "name": "CanvasLifecycleHandler",
+  "namespace": "Canvas",
+  "startToken": {
+    "type": "declaration.entity.name.class",
+    "text": "CanvasLifecycleHandler",
+    "textToLower": "canvaslifecyclehandler",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "declaration.entity.name.class_CanvasLifecycleHandler_-1:0"
+  },
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.access_global_-1:0"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.sharing_without sharing_-1:0"
+  },
+  "description": "Implement this interface to control context information and add custom behavior during the application render phase.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_interface_canvas_CanvasLifecycleHandler.htm",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "variables": {},
+  "methods": {
+    "excludecontexttypes()": {
+      "id": "Canvas.canvaslifecyclehandler.excludecontexttypes",
+      "type": "method",
+      "name": "excludeContextTypes",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "excludeContextTypes",
+        "textToLower": "excludecontexttypes",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_excludeContextTypes_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public Set<Canvas.ContextTypeEnum> excludeContextTypes()",
+      "simplifiedSignature": "excludeContextTypes()",
+      "datatype": {
+        "id": "Canvas.canvaslifecyclehandler.excludecontexttypes.Set<Canvas.ContextTypeEnum>",
+        "type": "datatype",
+        "name": "Set<Canvas.ContextTypeEnum>"
+      },
+      "description": "Lets the implementation exclude parts of the CanvasRequest context, if the application does not need it.",
+      "variables": {}
+    },
+    "onrender(canvas.rendercontext)": {
+      "id": "Canvas.canvaslifecyclehandler.onrender",
+      "type": "method",
+      "name": "onRender",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "onRender",
+        "textToLower": "onrender",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_onRender_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public void onRender(Canvas.RenderContext renderContext)",
+      "simplifiedSignature": "onRender(Canvas.RenderContext)",
+      "datatype": {
+        "id": "Canvas.canvaslifecyclehandler.onrender.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Invoked when a canvas app is rendered. Provides the ability to set and retrieve canvas application and environment context information during the application render phase.",
+      "variables": {
+        "renderContext": {
+          "id": "Canvas.canvaslifecyclehandler.onrender.rendercontext",
+          "type": "var",
+          "name": "renderContext",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "renderContext",
+            "textToLower": "rendercontext",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_renderContext_-1:0"
+          },
+          "signature": "Canvas.RenderContext renderContext",
+          "datatype": {
+            "id": "Canvas.canvaslifecyclehandler.onrender.canvas.rendercontext",
+            "type": "datatype",
+            "name": "Canvas.RenderContext"
+          }
+        }
+      }
+    }
+  },
+  "constructors": {},
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}

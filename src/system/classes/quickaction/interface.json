@@ -1,0 +1,85 @@
+{
+  "id": "QuickAction.quickactiondefaultshandler",
+  "type": "class",
+  "name": "interface",
+  "namespace": "QuickAction",
+  "startToken": "QuickActionDefaultsHandler",
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {},
+    "id": "keyword.modifier.access_global"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {},
+    "id": "keyword.modifier.sharing_without sharing"
+  },
+  "description": "The QuickAction.QuickActionDefaultsHandler interface lets you specify the default values for the standard Email and Send Email actions in the case feed. You can use this interface to specify the From address, CC address, BCC address, subject, and email body for the Email action in the case feed. You can use the interface to pre-populate these fields based on the context where the action is displayed, such as the case origin (for example, country) and subject.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_interface_QuickAction_QuickActionDefaultsHandler.htm",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "fields": {},
+  "methods": {
+    "oninitdefaults(quickaction.quickactiondefaults[])": {
+      "id": "QuickAction.quickactiondefaultshandler.oninitdefaults",
+      "type": "method",
+      "name": "onInitDefaults",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "onInitDefaults",
+        "textToLower": "oninitdefaults",
+        "isAux": false,
+        "range": {},
+        "id": "declaration.entity.name.function_onInitDefaults"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {},
+        "id": "keyword.modifier.access_public"
+      },
+      "signature": "public void onInitDefaults(QuickAction.QuickActionDefaults[] actionDefaults)",
+      "simplifiedSignature": "onInitDefaults(QuickAction.QuickActionDefaults[])",
+      "datatype": {
+        "id": "QuickAction.quickactiondefaultshandler.oninitdefaults.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Implement this method to provide default values for the standard Email action in the case feed.",
+      "variables": {
+        "actionDefaults": {
+          "id": "QuickAction.quickactiondefaultshandler.oninitdefaults.actiondefaults",
+          "type": "var",
+          "name": "actionDefaults",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "actionDefaults",
+            "textToLower": "actiondefaults",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_actionDefaults"
+          },
+          "signature": "QuickAction.QuickActionDefaults[] actionDefaults",
+          "datatype": {
+            "id": "QuickAction.quickactiondefaultshandler.oninitdefaults.quickaction.quickactiondefaults[]",
+            "type": "datatype",
+            "name": "QuickAction.QuickActionDefaults[]"
+          }
+        }
+      }
+    }
+  },
+  "constructors": {},
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}

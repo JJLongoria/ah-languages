@@ -1,0 +1,877 @@
+{
+  "id": "Auth.jwtbearertokenexchange",
+  "type": "class",
+  "name": "JWTBearerTokenExchange",
+  "namespace": "Auth",
+  "startToken": {
+    "type": "declaration.entity.name.class",
+    "text": "JWTBearerTokenExchange",
+    "textToLower": "jwtbearertokenexchange",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "declaration.entity.name.class_JWTBearerTokenExchange_-1:0"
+  },
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.access_global_-1:0"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {
+      "start": {
+        "line": -1,
+        "character": 0
+      },
+      "end": {
+        "line": -1,
+        "character": 0
+      },
+      "isEmpty": true,
+      "isSingleLine": true
+    },
+    "id": "keyword.modifier.sharing_without sharing_-1:0"
+  },
+  "description": "Contains methods that POST the signed JWT bearer token to a token endpoint to request an access token, in the OAuth 2.0 JWT bearer token flow.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_class_Auth_JWTBearerTokenExchange.htm",
+  "classes": {
+    "jwtbearertokenexchangeexception​": {
+      "id": "System.jwtbearertokenexchange.jwtbearertokenexchangeexception​",
+      "type": "class",
+      "name": "JWTBearerTokenExchangeException​",
+      "namespace": "System",
+      "startToken": {
+        "type": "declaration.entity.name.class",
+        "text": "JWTBearerTokenExchangeException​",
+        "textToLower": "jwtbearertokenexchangeexception​",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.class_JWTBearerTokenExchangeException​_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "global",
+        "textToLower": "global",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_global_-1:0"
+      },
+      "sharingModifier": {
+        "type": "keyword.modifier.sharing",
+        "text": "without sharing",
+        "textToLower": "without sharing",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.sharing_without sharing_-1:0"
+      },
+      "description": "Throw this exception to indicate a problem with the response from the token endpoint in the JWTBearerTokenExchange class. This exception occurs during the OAuth 2.0 JWT bearer token flow when the HTTP response.",
+      "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_Auth_exceptions.htm",
+      "classes": {},
+      "interfaces": {},
+      "enums": {},
+      "variables": {},
+      "methods": {},
+      "constructors": {},
+      "extendsType": "Exception",
+      "implementTypes": [],
+      "implements": {}
+    }
+  },
+  "interfaces": {},
+  "enums": {},
+  "variables": {},
+  "methods": {
+    "clone()": {
+      "id": "Auth.jwtbearertokenexchange.clone",
+      "type": "method",
+      "name": "clone",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "clone",
+        "textToLower": "clone",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_clone_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public JWTBearerTokenExchange clone()",
+      "simplifiedSignature": "clone()",
+      "datatype": {
+        "id": "Auth.jwtbearertokenexchange.clone.JWTBearerTokenExchange",
+        "type": "datatype",
+        "name": "JWTBearerTokenExchange"
+      },
+      "description": "Makes a duplicate copy of the JWTBearerTokenExchange object.",
+      "variables": {}
+    },
+    "getaccesstoken()": {
+      "id": "Auth.jwtbearertokenexchange.getaccesstoken",
+      "type": "method",
+      "name": "getAccessToken",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getAccessToken",
+        "textToLower": "getaccesstoken",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getAccessToken_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public String getAccessToken()",
+      "simplifiedSignature": "getAccessToken()",
+      "datatype": {
+        "id": "Auth.jwtbearertokenexchange.getaccesstoken.String",
+        "type": "datatype",
+        "name": "String"
+      },
+      "description": "Returns the access_token in the token response to the JWT bearer token request.",
+      "variables": {}
+    },
+    "getgranttype()": {
+      "id": "Auth.jwtbearertokenexchange.getgranttype",
+      "type": "method",
+      "name": "getGrantType",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getGrantType",
+        "textToLower": "getgranttype",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getGrantType_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public String getGrantType()",
+      "simplifiedSignature": "getGrantType()",
+      "datatype": {
+        "id": "Auth.jwtbearertokenexchange.getgranttype.String",
+        "type": "datatype",
+        "name": "String"
+      },
+      "description": "Returns the grant type specified in the JWT bearer token request. The grant type value defaults to urn:ietf:params:oauth:grant-type:jwt-bearer.",
+      "variables": {}
+    },
+    "gethttpresponse()": {
+      "id": "Auth.jwtbearertokenexchange.gethttpresponse",
+      "type": "method",
+      "name": "getHttpResponse",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getHttpResponse",
+        "textToLower": "gethttpresponse",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getHttpResponse_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public System.HttpResponse getHttpResponse()",
+      "simplifiedSignature": "getHttpResponse()",
+      "datatype": {
+        "id": "Auth.jwtbearertokenexchange.gethttpresponse.System.HttpResponse",
+        "type": "datatype",
+        "name": "System.HttpResponse"
+      },
+      "description": "Returns the full System.HttpResponse token response to the JWT bearer token request.",
+      "variables": {}
+    },
+    "getjws()": {
+      "id": "Auth.jwtbearertokenexchange.getjws",
+      "type": "method",
+      "name": "getJWS",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getJWS",
+        "textToLower": "getjws",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getJWS_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public Auth.JWS getJWS()",
+      "simplifiedSignature": "getJWS()",
+      "datatype": {
+        "id": "Auth.jwtbearertokenexchange.getjws.Auth.JWS",
+        "type": "datatype",
+        "name": "Auth.JWS"
+      },
+      "description": "Returns the JWS specified in the JWT bearer token request.",
+      "variables": {}
+    },
+    "gettokenendpoint()": {
+      "id": "Auth.jwtbearertokenexchange.gettokenendpoint",
+      "type": "method",
+      "name": "getTokenEndpoint",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "getTokenEndpoint",
+        "textToLower": "gettokenendpoint",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_getTokenEndpoint_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public String getTokenEndpoint()",
+      "simplifiedSignature": "getTokenEndpoint()",
+      "datatype": {
+        "id": "Auth.jwtbearertokenexchange.gettokenendpoint.String",
+        "type": "datatype",
+        "name": "String"
+      },
+      "description": "Returns the token endpoint that the JWT bearer token request is POSTed to.",
+      "variables": {}
+    },
+    "setgranttype(string)": {
+      "id": "Auth.jwtbearertokenexchange.setgranttype",
+      "type": "method",
+      "name": "setGrantType",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "setGrantType",
+        "textToLower": "setgranttype",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_setGrantType_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public void setGrantType(String grantType)",
+      "simplifiedSignature": "setGrantType(String)",
+      "datatype": {
+        "id": "Auth.jwtbearertokenexchange.setgranttype.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Sets the grant type in the JWT bearer token request. Returned by the getGrantType() method.",
+      "variables": {
+        "grantType": {
+          "id": "Auth.jwtbearertokenexchange.setgranttype.granttype",
+          "type": "var",
+          "name": "grantType",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "grantType",
+            "textToLower": "granttype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_grantType_-1:0"
+          },
+          "signature": "String grantType",
+          "datatype": {
+            "id": "Auth.jwtbearertokenexchange.setgranttype.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        }
+      }
+    },
+    "setjws(auth.jws)": {
+      "id": "Auth.jwtbearertokenexchange.setjws",
+      "type": "method",
+      "name": "setJWS",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "setJWS",
+        "textToLower": "setjws",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_setJWS_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public void setJWS(Auth.JWS jws)",
+      "simplifiedSignature": "setJWS(Auth.JWS)",
+      "datatype": {
+        "id": "Auth.jwtbearertokenexchange.setjws.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Sets the JWS in the JWT bearer token request. Returned by the getJWS() method.",
+      "variables": {
+        "jws": {
+          "id": "Auth.jwtbearertokenexchange.setjws.jws",
+          "type": "var",
+          "name": "jws",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jws",
+            "textToLower": "jws",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_jws_-1:0"
+          },
+          "signature": "Auth.JWS jws",
+          "datatype": {
+            "id": "Auth.jwtbearertokenexchange.setjws.auth.jws",
+            "type": "datatype",
+            "name": "Auth.JWS"
+          }
+        }
+      }
+    },
+    "settokenendpoint(string)": {
+      "id": "Auth.jwtbearertokenexchange.settokenendpoint",
+      "type": "method",
+      "name": "setTokenEndpoint",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "setTokenEndpoint",
+        "textToLower": "settokenendpoint",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_setTokenEndpoint_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public void setTokenEndpoint(String tokenEndpoint)",
+      "simplifiedSignature": "setTokenEndpoint(String)",
+      "datatype": {
+        "id": "Auth.jwtbearertokenexchange.settokenendpoint.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Sets the token endpoint that the JWT bearer token request is POSTed to. Returned by the getTokenEndpoint() method.",
+      "variables": {
+        "tokenEndpoint": {
+          "id": "Auth.jwtbearertokenexchange.settokenendpoint.tokenendpoint",
+          "type": "var",
+          "name": "tokenEndpoint",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "tokenEndpoint",
+            "textToLower": "tokenendpoint",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_tokenEndpoint_-1:0"
+          },
+          "signature": "String tokenEndpoint",
+          "datatype": {
+            "id": "Auth.jwtbearertokenexchange.settokenendpoint.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        }
+      }
+    }
+  },
+  "constructors": {
+    "jwtbearertokenexchange(string,auth.jws)": {
+      "id": "Auth.jwtbearertokenexchange.jwtbearertokenexchange",
+      "type": "constructor",
+      "name": "JWTBearerTokenExchange",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "JWTBearerTokenExchange",
+        "textToLower": "jwtbearertokenexchange",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_JWTBearerTokenExchange_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public JWTBearerTokenExchange(String tokenEndpoint, Auth.JWS jws)",
+      "simplifiedSignature": "JWTBearerTokenExchange(String,Auth.JWS)",
+      "datatype": {
+        "id": "Auth.jwtbearertokenexchange.jwtbearertokenexchange.constructor",
+        "type": "datatype",
+        "name": "JWTBearerTokenExchange"
+      },
+      "description": "Creates an instance of the JWTBearerTokenExchange class using the specified token endpoint and the signed JWT bearer token.",
+      "variables": {
+        "tokenEndpoint": {
+          "id": "Auth.jwtbearertokenexchange.jwtbearertokenexchange.tokenendpoint",
+          "type": "var",
+          "name": "tokenEndpoint",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "tokenEndpoint",
+            "textToLower": "tokenendpoint",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_tokenEndpoint_-1:0"
+          },
+          "signature": "String tokenEndpoint",
+          "datatype": {
+            "id": "Auth.jwtbearertokenexchange.jwtbearertokenexchange.string",
+            "type": "datatype",
+            "name": "String"
+          }
+        },
+        "jws": {
+          "id": "Auth.jwtbearertokenexchange.jwtbearertokenexchange.jws",
+          "type": "var",
+          "name": "jws",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jws",
+            "textToLower": "jws",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": -1,
+                "character": 0
+              },
+              "end": {
+                "line": -1,
+                "character": 0
+              },
+              "isEmpty": true,
+              "isSingleLine": true
+            },
+            "id": "declaration.entity.name.variable_jws_-1:0"
+          },
+          "signature": "Auth.JWS jws",
+          "datatype": {
+            "id": "Auth.jwtbearertokenexchange.jwtbearertokenexchange.auth.jws",
+            "type": "datatype",
+            "name": "Auth.JWS"
+          }
+        }
+      }
+    },
+    "jwtbearertokenexchange()": {
+      "id": "Auth.jwtbearertokenexchange.jwtbearertokenexchange",
+      "type": "constructor",
+      "name": "JWTBearerTokenExchange",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "JWTBearerTokenExchange",
+        "textToLower": "jwtbearertokenexchange",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_JWTBearerTokenExchange_-1:0"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "keyword.modifier.access_public_-1:0"
+      },
+      "signature": "public JWTBearerTokenExchange()",
+      "simplifiedSignature": "JWTBearerTokenExchange()",
+      "datatype": {
+        "id": "Auth.jwtbearertokenexchange.jwtbearertokenexchange.constructor",
+        "type": "datatype",
+        "name": "JWTBearerTokenExchange"
+      },
+      "description": "Creates an instance of the Auth.JWTBearerTokenExchange class.",
+      "variables": {}
+    }
+  },
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}

@@ -1,0 +1,85 @@
+{
+  "id": "Reports.notificationaction",
+  "type": "class",
+  "name": "interface",
+  "namespace": "Reports",
+  "startToken": "NotificationAction",
+  "accessModifier": {
+    "type": "keyword.modifier.access",
+    "text": "global",
+    "textToLower": "global",
+    "isAux": false,
+    "range": {},
+    "id": "keyword.modifier.access_global"
+  },
+  "sharingModifier": {
+    "type": "keyword.modifier.sharing",
+    "text": "without sharing",
+    "textToLower": "without sharing",
+    "isAux": false,
+    "range": {},
+    "id": "keyword.modifier.sharing_without sharing"
+  },
+  "description": "Implement this interface to trigger a custom Apex class when the conditions for a report notification are met.",
+  "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_interface_reports_NotificationAction.htm",
+  "classes": {},
+  "interfaces": {},
+  "enums": {},
+  "fields": {},
+  "methods": {
+    "execute(reports.notificationactioncontext)": {
+      "id": "Reports.notificationaction.execute",
+      "type": "method",
+      "name": "execute",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "execute",
+        "textToLower": "execute",
+        "isAux": false,
+        "range": {},
+        "id": "declaration.entity.name.function_execute"
+      },
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {},
+        "id": "keyword.modifier.access_public"
+      },
+      "signature": "public void execute(Reports.NotificationActionContext context)",
+      "simplifiedSignature": "execute(Reports.NotificationActionContext)",
+      "datatype": {
+        "id": "Reports.notificationaction.execute.void",
+        "type": "datatype",
+        "name": "void"
+      },
+      "description": "Executes the custom Apex action specified in the context parameter of the context object, NotificationActionContext. The object contains information about the report instance and the conditions that must be met for a notification to be triggered. The method executes whenever the specified conditions are met.",
+      "variables": {
+        "context": {
+          "id": "Reports.notificationaction.execute.context",
+          "type": "var",
+          "name": "context",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "context",
+            "textToLower": "context",
+            "isAux": false,
+            "range": {},
+            "id": "declaration.entity.name.variable_context"
+          },
+          "signature": "Reports.NotificationActionContext context",
+          "datatype": {
+            "id": "Reports.notificationaction.execute.reports.notificationactioncontext",
+            "type": "datatype",
+            "name": "Reports.NotificationActionContext"
+          }
+        }
+      }
+    }
+  },
+  "constructors": {},
+  "extendsType": "",
+  "implementTypes": [],
+  "implements": {}
+}
