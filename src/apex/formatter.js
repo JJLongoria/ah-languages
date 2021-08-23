@@ -1,58 +1,55 @@
 const TokenType = require('./tokenTypes');
-const { StrUtils } = require('@ah/core').CoreUtils;
+const { StrUtils, Utils, Validator } = require('@ah/core').CoreUtils;
+const { WrongDatatypeException } = require('@ah/core').Exceptions;
+const { ApexFormatterConfig } = require('@ah/core').Types;
+const { PathUtils, FileReader } = require('@ah/core').FileSystem;
 const LangUtils = require('../utils/languageUtils');
+const Lexer = require('./tokenizer');
 
-const defaultConfig = {
-    apexFormat: {
-        punctuation: {
-            maxBlankLines: 2,
-            openCurlyBracketOnNewLine: false,
-            addNewLineAfterCloseCurlyBracket: false,
-            addWhitespaceAfterCloseCurlyBracket: true,
-            addWhitespaceBeforeOpenCurlyBracket: false,
-            addWhitespaceBeforeOpenGuardParenthesis: true,
-            addWhitespaceAfterOpenGuardParenthesis: false,
-            addWhitespaceBeforeCloseGuardParenthesis: false,
-            addWhiteSpaceAfterComma: true,
-            addWhitespaceBeforeOpenTriggerEvents: true,
-            
-        },
-        operator: {
-            addWhitespaceBeforeOperator: true,
-            addWhitespaceAfterOperator: true,
-            addWhitespaceAfterOpenParenthesisOperator: false,
-            addWhitespaceBeforeCloseParenthesisOperator: false,
-        },
-        classMembers: {
-            newLinesBetweenCodeBlockMembers: 1,
-            newLinesBetweenGetterAndSetterAccessor: 1,
-            singleLineProperties: true,
-            newLinesBetweenClassFields: 0,
-        },
-        comment: {
-            holdBeforeWhitespacesOnLineComment: true,
-            holdAfterWhitespacesOnLineComment: true,
-            newLinesBewteenComments: 0
-        },
-        query: {
-            oneClausePerLine: true,
-            oneProjectionFieldPerLine: false,
-            maxProjectionFieldPerLine: 0
-        }
+/**
+ * Class to format any Apex Class with a selected configuration to format code as you want
+ */
+class ApexFormatter {
+
+    /**
+     * Method to get a default formatter config object
+     * 
+     * @returns {ApexFormatterConfig} Returns a default formatter config object
+     */
+    static config(){
+        return new ApexFormatterConfig();
     }
-};
 
-class Formatter {
-
-    static format(tokens, config) {
+    /**
+     * Method to format an Apex Class with the selected options
+     * @param {String | Array<Token>} pathContentOrTokens Class file path or String file content or Apex Class Tokens (Use ApexTokenizer)
+     * @param {(ApexFormatterConfig | Object)} [config] Apex formatter config object or VSCode Config JSON object
+     * @param {Object} [systemData] System data like System Apex Classes or Namespaces to tokenize apex class if pathContentOrTokens is a class content or file path. Can get it with System Class from System Module
+     * 
+     * @returns {String} Returns the Apex Class content formatted 
+     * 
+     * @throws {WrongDatatypeException} If pathContentOrTokens datatype is not an String, path or file tokens
+     * @throws {WrongFilePathException} If the file Path is not a String or can't convert to absolute path
+     * @throws {FileNotFoundException} If the file not exists or not have access to it
+     * @throws {InvalidFilePathException} If the path is not a file
+     */
+    static format(pathContentOrTokens, config, systemData) {
+        let tokens;
+        if (Utils.isArray(pathContentOrTokens)) {
+            tokens = pathContentOrTokens;
+        } else if (Utils.isString(pathContentOrTokens)) {
+            const content = PathUtils.isURI(pathContentOrTokens) ? FileReader.readFileSync(Validator.validateFilePath(pathContentOrTokens)) : pathContentOrTokens;
+            tokens = Lexer.tokenize(content, systemData.sObject, systemData.userClasses, systemData.namespaceSummary);
+        } else {
+            throw new WrongDatatypeException('You must to select a file path, file content or file tokens');
+        }
+        config = new ApexFormatterConfig(config); 
         return formatApex(tokens, config);
     }
 }
-module.exports = Formatter;
+module.exports = ApexFormatter;
 
 function formatApex(tokens, config) {
-    if(!config)
-        config = defaultConfig;
     let indent = 0;
     let indentOffset = 0;
     let strIndex;
@@ -91,8 +88,8 @@ function formatApex(tokens, config) {
             projectionFieldsOnLine.push(0);
         }
         if (token.type === TokenType.BRACKET.INNER_QUERY_START) {
-            if (config && config.apexFormat.query.maxProjectionFieldPerLine > 0) {
-                if (projectionFieldsOnLine[projectionFieldsOnLine.length - 1] === config.apexFormat.query.maxProjectionFieldPerLine) {
+            if (config && config.query.maxProjectionFieldPerLine > 0) {
+                if (projectionFieldsOnLine[projectionFieldsOnLine.length - 1] === config.query.maxProjectionFieldPerLine) {
                     newLines = 1;
                     beforeWhitespaces = querySelectIndex[querySelectIndex.length - 1];
                     projectionFieldsOnLine[projectionFieldsOnLine.length - 1] = 1;
@@ -116,12 +113,12 @@ function formatApex(tokens, config) {
             newLines = (lastToken) ? token.line - lastToken.line : 0;
         if (lastToken && isCommentToken(lastToken) && !isCommentToken(token) && !isOnSameLine(token, lastToken))
             newLines = 1;
-        if (lastToken && !isCommentToken(lastToken) && isCommentToken(token) && isOnSameLine(token, lastToken) && config && config.apexFormat.comment.holdBeforeWhitespacesOnLineComment)
+        if (lastToken && !isCommentToken(lastToken) && isCommentToken(token) && isOnSameLine(token, lastToken) && config && config.comment.holdBeforeWhitespacesOnLineComment)
             beforeWhitespaces = token.startIndex - lastToken.endIndex;
-        if (lastToken && isCommentToken(lastToken) && !isCommentToken(token) && isOnSameLine(token, lastToken) && config && config.apexFormat.comment.holdAfterWhitespacesOnLineComment)
+        if (lastToken && isCommentToken(lastToken) && !isCommentToken(token) && isOnSameLine(token, lastToken) && config && config.comment.holdAfterWhitespacesOnLineComment)
             afterWhitespaces = token.startIndex - lastToken.endIndex;
         if (lastToken && isCommentToken(lastToken) && (token.type === TokenType.COMMENT.BLOCK_START || token.type === TokenType.COMMENT.LINE || token.type === TokenType.COMMENT.LINE_DOC) && !isOnSameLine(token, lastToken))
-            newLines = (config) ? config.apexFormat.comment.newLinesBewteenComments + 1 : 1;
+            newLines = (config) ? config.comment.newLinesBewteenComments + 1 : 1;
         if (isStringToken(token) && nextToken && isStringToken(nextToken) && isOnSameLine(token, nextToken)) {
             afterWhitespaces = nextToken.startIndex - token.endIndex;
             if (!strIndex)
@@ -135,16 +132,16 @@ function formatApex(tokens, config) {
             newLines = 0;
         else if (token.type === TokenType.BRACKET.CURLY_CLOSE && !token.isAux)
             newLines = 1;
-        if (!token.isAux && token.type === TokenType.BRACKET.CURLY_OPEN && config && config.apexFormat.punctuation.addWhitespaceBeforeOpenCurlyBracket && !config.apexFormat.punctuation.openCurlyBracketOnNewLine)
+        if (!token.isAux && token.type === TokenType.BRACKET.CURLY_OPEN && config && config.punctuation.addWhitespaceBeforeOpenCurlyBracket && !config.punctuation.openCurlyBracketOnNewLine)
             beforeWhitespaces = 1;
-        if (!token.isAux && token.type === TokenType.BRACKET.CURLY_OPEN && config && config.apexFormat.punctuation.openCurlyBracketOnNewLine) {
+        if (!token.isAux && token.type === TokenType.BRACKET.CURLY_OPEN && config && config.punctuation.openCurlyBracketOnNewLine) {
             newLines = 1;
             indentOffset = -1;
         }
         if (lastToken && lastToken.type === TokenType.PUNCTUATION.SEMICOLON && !guardOpen && token.type !== TokenType.BRACKET.CURLY_CLOSE) {
             strIndex = undefined;
             if (isCommentToken(token) && isOnSameLine(token, lastToken)) {
-                if (config && config.apexFormat.comment.holdAfterWhitespacesOnLineComment)
+                if (config && config.comment.holdAfterWhitespacesOnLineComment)
                     beforeWhitespaces = token.startIndex - lastToken.endIndex;
                 else
                     beforeWhitespaces = 1;
@@ -154,28 +151,28 @@ function formatApex(tokens, config) {
         }
         else if (lastToken && lastToken.type === TokenType.PUNCTUATION.SEMICOLON && guardOpen)
             beforeWhitespaces = 1;
-        if (lastToken && lastToken.type === TokenType.BRACKET.CURLY_CLOSE && lastToken.parentToken && config && config.apexFormat.punctuation.addNewLineAfterCloseCurlyBracket)
+        if (lastToken && lastToken.type === TokenType.BRACKET.CURLY_CLOSE && lastToken.parentToken && config && config.punctuation.addNewLineAfterCloseCurlyBracket)
             newLines = 1;
-        else if (lastToken && lastToken.type === TokenType.BRACKET.CURLY_CLOSE && lastToken.parentToken && config && !config.apexFormat.punctuation.addNewLineAfterCloseCurlyBracket && isDependentFlowStructure(token)) {
+        else if (lastToken && lastToken.type === TokenType.BRACKET.CURLY_CLOSE && lastToken.parentToken && config && !config.punctuation.addNewLineAfterCloseCurlyBracket && isDependentFlowStructure(token)) {
             newLines = 0;
-            if (config && config.apexFormat.punctuation.addWhitespaceAfterCloseCurlyBracket)
+            if (config && config.punctuation.addWhitespaceAfterCloseCurlyBracket)
                 beforeWhitespaces = 1;
         }
-        if (token.type === TokenType.BRACKET.TRIGGER_GUARD_OPEN && config && config.apexFormat.punctuation.addWhitespaceBeforeOpenTriggerEvents)
+        if (token.type === TokenType.BRACKET.TRIGGER_GUARD_OPEN && config && config.punctuation.addWhitespaceBeforeOpenTriggerEvents)
             beforeWhitespaces = 1;
-        if (token.type === TokenType.PUNCTUATION.COMMA && config && config.apexFormat.punctuation.addWhiteSpaceAfterComma)
+        if (token.type === TokenType.PUNCTUATION.COMMA && config && config.punctuation.addWhiteSpaceAfterComma)
             afterWhitespaces = 1;
-        if (mainBodyIndent === indent && lastToken && ((lastToken.type === TokenType.BRACKET.CURLY_CLOSE && !lastToken.isAux && (!lastToken.parentToken || !lastToken.parentToken.parentToken)) || (lastToken.type === TokenType.PUNCTUATION.SEMICOLON && twoLastToken && twoLastToken.type === TokenType.BRACKET.PARENTHESIS_PARAM_CLOSE)) && config && config.apexFormat.classMembers.newLinesBetweenCodeBlockMembers > 0 && token.type !== TokenType.BRACKET.CURLY_CLOSE && token.type !== TokenType.KEYWORD.DECLARATION.PROPERTY_GETTER && token.type !== TokenType.KEYWORD.DECLARATION.PROPERTY_SETTER) {
-            newLines = (config) ? config.apexFormat.classMembers.newLinesBetweenCodeBlockMembers + 1 : 1;
+        if (mainBodyIndent === indent && lastToken && ((lastToken.type === TokenType.BRACKET.CURLY_CLOSE && !lastToken.isAux && (!lastToken.parentToken || !lastToken.parentToken.parentToken)) || (lastToken.type === TokenType.PUNCTUATION.SEMICOLON && twoLastToken && twoLastToken.type === TokenType.BRACKET.PARENTHESIS_PARAM_CLOSE)) && config && config.classMembers.newLinesBetweenCodeBlockMembers > 0 && token.type !== TokenType.BRACKET.CURLY_CLOSE && token.type !== TokenType.KEYWORD.DECLARATION.PROPERTY_GETTER && token.type !== TokenType.KEYWORD.DECLARATION.PROPERTY_SETTER) {
+            newLines = (config) ? config.classMembers.newLinesBetweenCodeBlockMembers + 1 : 1;
             if (isFieldInstructionDeclaration(tokens, index)) {
                 if (isNextInstructionFieldDeclaration(tokens, index))
-                    newLines = (config) ? config.apexFormat.classMembers.newLinesBetweenClassFields + 1 : 1;
+                    newLines = (config) ? config.classMembers.newLinesBetweenClassFields + 1 : 1;
                 else
-                    newLines = (config) ? config.apexFormat.classMembers.newLinesBetweenCodeBlockMembers + 1 : 1;
+                    newLines = (config) ? config.classMembers.newLinesBetweenCodeBlockMembers + 1 : 1;
             }
         }
-        if (lastToken && (lastToken.type === TokenType.BRACKET.CURLY_CLOSE || lastToken.type === TokenType.PUNCTUATION.SEMICOLON) && !lastToken.isAux && (token.type === TokenType.KEYWORD.DECLARATION.PROPERTY_GETTER || token.type === TokenType.KEYWORD.DECLARATION.PROPERTY_SETTER) && config && config.apexFormat.classMembers.newLinesBetweenGetterAndSetterAccessor > 0)
-            newLines = (config) ? config.apexFormat.classMembers.newLinesBetweenGetterAndSetterAccessor + 1 : 1;
+        if (lastToken && (lastToken.type === TokenType.BRACKET.CURLY_CLOSE || lastToken.type === TokenType.PUNCTUATION.SEMICOLON) && !lastToken.isAux && (token.type === TokenType.KEYWORD.DECLARATION.PROPERTY_GETTER || token.type === TokenType.KEYWORD.DECLARATION.PROPERTY_SETTER) && config && config.classMembers.newLinesBetweenGetterAndSetterAccessor > 0)
+            newLines = (config) ? config.classMembers.newLinesBetweenGetterAndSetterAccessor + 1 : 1;
         if (isKeyword(token) && nextToken && nextToken.type !== TokenType.BRACKET.CURLY_OPEN && nextToken.type !== TokenType.PUNCTUATION.COMMA && nextToken.type !== TokenType.BRACKET.TRIGGER_GUARD_CLOSE && nextToken.type !== TokenType.PUNCTUATION.SEMICOLON) {
             afterWhitespaces = 1;
             if (lastToken && lastToken.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE)
@@ -183,15 +180,15 @@ function formatApex(tokens, config) {
         }
         if (isMemberDeclaration(token) && lastToken && lastToken.type !== TokenType.PUNCTUATION.COMMA)
             beforeWhitespaces = 1;
-        if (twoLastToken && isFieldDeclaration(twoLastToken) && lastToken && lastToken.type === TokenType.PUNCTUATION.SEMICOLON && isNextInstructionFieldDeclaration(tokens, index) && config && config.apexFormat.classMembers.newLinesBetweenClassFields > 0 && mainBodyIndent === indent)
-            newLines = (config) ? config.apexFormat.classMembers.newLinesBetweenClassFields + 1 : 1;
+        if (twoLastToken && isFieldDeclaration(twoLastToken) && lastToken && lastToken.type === TokenType.PUNCTUATION.SEMICOLON && isNextInstructionFieldDeclaration(tokens, index) && config && config.classMembers.newLinesBetweenClassFields > 0 && mainBodyIndent === indent)
+            newLines = (config) ? config.classMembers.newLinesBetweenClassFields + 1 : 1;
         else if (twoLastToken && isFieldDeclaration(twoLastToken) && lastToken && lastToken.type === TokenType.PUNCTUATION.SEMICOLON && !isNextInstructionFieldDeclaration(tokens, index) && mainBodyIndent === indent)
-            newLines = (config) ? config.apexFormat.classMembers.newLinesBetweenCodeBlockMembers + 1 : 1;
+            newLines = (config) ? config.classMembers.newLinesBetweenCodeBlockMembers + 1 : 1;
         if (lastToken && lastToken.type === TokenType.PUNCTUATION.COMMA && twoLastToken && twoLastToken.type === TokenType.ENTITY.ENUM_VALUE && token.type !== TokenType.COMMENT.LINE && token.type !== TokenType.COMMENT.LINE_DOC)
             newLines = 1;
         if (isKeyword(token) && lastToken && lastToken.type === TokenType.DECLARATION.ENTITY.VARIABLE)
             beforeWhitespaces = 1;
-        if (isQueryClause(token) && config && config.apexFormat.query.oneClausePerLine && lastToken && lastToken.type !== TokenType.BRACKET.QUERY_START && lastToken.type !== TokenType.BRACKET.INNER_QUERY_START) {
+        if (isQueryClause(token) && config && config.query.oneClausePerLine && lastToken && lastToken.type !== TokenType.BRACKET.QUERY_START && lastToken.type !== TokenType.BRACKET.INNER_QUERY_START) {
             newLines = 1;
             beforeWhitespaces = queryOpenIndex[queryOpenIndex.length - 1];
         }
@@ -210,8 +207,8 @@ function formatApex(tokens, config) {
             beforeWhitespaces = 1;
         if (lastToken && (isLiteral(lastToken) || lastToken.type === TokenType.ENTITY.SOBJECT_FIELD || lastToken.type === TokenType.ENTITY.SOBJECT_PROJECTION_FIELD || lastToken.type === TokenType.PUNCTUATION.QUOTTES_END || lastToken.type === TokenType.OPERATOR.PRIORITY.PARENTHESIS_CLOSE || lastToken.type === TokenType.ENTITY.VARIABLE) && isQueryClause(token) && newLines === 0)
             beforeWhitespaces = 1;
-        if (lastToken && lastToken.type === TokenType.QUERY.CLAUSE.SELECT && config && config.apexFormat.query.maxProjectionFieldPerLine > 0) {
-            if (config && projectionFieldsOnLine[projectionFieldsOnLine.length - 1] === config.apexFormat.query.maxProjectionFieldPerLine) {
+        if (lastToken && lastToken.type === TokenType.QUERY.CLAUSE.SELECT && config && config.query.maxProjectionFieldPerLine > 0) {
+            if (config && projectionFieldsOnLine[projectionFieldsOnLine.length - 1] === config.query.maxProjectionFieldPerLine) {
                 newLines = 1;
                 beforeWhitespaces = querySelectIndex[querySelectIndex.length - 1];
                 projectionFieldsOnLine[projectionFieldsOnLine.length - 1] = 1;
@@ -219,8 +216,8 @@ function formatApex(tokens, config) {
                 projectionFieldsOnLine[projectionFieldsOnLine.length - 1] = projectionFieldsOnLine[projectionFieldsOnLine.length - 1] + 1;
             }
         }
-        if (twoLastToken && twoLastToken.type === TokenType.ENTITY.SOBJECT_PROJECTION_FIELD && lastToken && (lastToken.type === TokenType.PUNCTUATION.COMMA) && config && config.apexFormat.query.maxProjectionFieldPerLine > 0) {
-            if (config && projectionFieldsOnLine[projectionFieldsOnLine.length - 1] === config.apexFormat.query.maxProjectionFieldPerLine) {
+        if (twoLastToken && twoLastToken.type === TokenType.ENTITY.SOBJECT_PROJECTION_FIELD && lastToken && (lastToken.type === TokenType.PUNCTUATION.COMMA) && config && config.query.maxProjectionFieldPerLine > 0) {
+            if (config && projectionFieldsOnLine[projectionFieldsOnLine.length - 1] === config.query.maxProjectionFieldPerLine) {
                 newLines = 1;
                 beforeWhitespaces = querySelectIndex[querySelectIndex.length - 1];
                 projectionFieldsOnLine[projectionFieldsOnLine.length - 1] = 1;
@@ -231,9 +228,9 @@ function formatApex(tokens, config) {
         if (token.type === TokenType.QUERY.VALUE_BIND && lastToken && lastToken !== TokenType.QUERY.OPERATOR && !isOperator(lastToken) && !isKeyword(lastToken) && !isQueryClause(lastToken)) {
             beforeWhitespaces = 1;
         }
-        if ((isOperator(token) || (token.type === TokenType.ANNOTATION.CONTENT && token.text === '=')) && config && config.apexFormat.operator.addWhitespaceBeforeOperator)
+        if ((isOperator(token) || (token.type === TokenType.ANNOTATION.CONTENT && token.text === '=')) && config && config.operator.addWhitespaceBeforeOperator)
             beforeWhitespaces = 1;
-        if ((isOperator(token) || (token.type === TokenType.ANNOTATION.CONTENT && token.text === '=')) && config && config.apexFormat.operator.addWhitespaceAfterOperator)
+        if ((isOperator(token) || (token.type === TokenType.ANNOTATION.CONTENT && token.text === '=')) && config && config.operator.addWhitespaceAfterOperator)
             afterWhitespaces = 1;
         if (token.type === TokenType.OPERATOR.ARITHMETIC.INCREMENT && nextToken && (nextToken.type === TokenType.ENTITY.VARIABLE)) {
             afterWhitespaces = 0;
@@ -249,17 +246,17 @@ function formatApex(tokens, config) {
         if (token.type === TokenType.OPERATOR.ARITHMETIC.DECREMENT && lastToken && (lastToken.type === TokenType.ENTITY.VARIABLE)) {
             beforeWhitespaces = 0;
         }
-        if (token.type === TokenType.OPERATOR.PRIORITY.PARENTHESIS_OPEN && config && config.apexFormat.operator.addWhitespaceAfterOpenParenthesisOperator)
+        if (token.type === TokenType.OPERATOR.PRIORITY.PARENTHESIS_OPEN && config && config.operator.addWhitespaceAfterOpenParenthesisOperator)
             afterWhitespaces = 1;
-        if (token.type === TokenType.OPERATOR.PRIORITY.PARENTHESIS_CLOSE && config && config.apexFormat.operator.addWhitespaceBeforeCloseParenthesisOperator)
+        if (token.type === TokenType.OPERATOR.PRIORITY.PARENTHESIS_CLOSE && config && config.operator.addWhitespaceBeforeCloseParenthesisOperator)
             beforeWhitespaces = 1;
-        if (token.type === TokenType.BRACKET.PARENTHESIS_GUARD_OPEN && config && config.apexFormat.punctuation.addWhitespaceBeforeOpenGuardParenthesis)
+        if (token.type === TokenType.BRACKET.PARENTHESIS_GUARD_OPEN && config && config.punctuation.addWhitespaceBeforeOpenGuardParenthesis)
             beforeWhitespaces = 1;
-        if (token.type === TokenType.BRACKET.PARENTHESIS_GUARD_CLOSE && config && config.apexFormat.punctuation.addWhitespaceBeforeCloseGuardParenthesis)
+        if (token.type === TokenType.BRACKET.PARENTHESIS_GUARD_CLOSE && config && config.punctuation.addWhitespaceBeforeCloseGuardParenthesis)
             beforeWhitespaces = 1;
-        if (token.type === TokenType.BRACKET.PARENTHESIS_GUARD_OPEN && config && config.apexFormat.punctuation.addWhitespaceAfterOpenGuardParenthesis)
+        if (token.type === TokenType.BRACKET.PARENTHESIS_GUARD_OPEN && config && config.punctuation.addWhitespaceAfterOpenGuardParenthesis)
             afterWhitespaces = 1;
-        if (token.type === TokenType.BRACKET.PARENTHESIS_GUARD_CLOSE && config && config.apexFormat.punctuation.addWhitespaceBeforeCloseGuardParenthesis)
+        if (token.type === TokenType.BRACKET.PARENTHESIS_GUARD_CLOSE && config && config.punctuation.addWhitespaceBeforeCloseGuardParenthesis)
             beforeWhitespaces = 1;
         if (token.type === TokenType.ENTITY.SOBJECT_PROJECTION_FIELD && nextToken && nextToken.type === TokenType.ENTITY.SOBJECT_PROJECTION_FIELD)
             afterWhitespaces = 1;
@@ -279,12 +276,12 @@ function formatApex(tokens, config) {
             afterWhitespaces = 1;
             beforeWhitespaces = 1;
         }
-        if(token.type === TokenType.BRACKET.CASTING_OPEN){
+        if (token.type === TokenType.BRACKET.CASTING_OPEN) {
             afterWhitespaces = 0;
-        } else if(isDatatype(token) && lastToken && lastToken.type === TokenType.BRACKET.CASTING_OPEN && nextToken && nextToken.type === TokenType.BRACKET.CASTING_CLOSE){
+        } else if (isDatatype(token) && lastToken && lastToken.type === TokenType.BRACKET.CASTING_OPEN && nextToken && nextToken.type === TokenType.BRACKET.CASTING_CLOSE) {
             afterWhitespaces = 0;
             beforeWhitespaces = 0;
-        }else if(token.type === TokenType.BRACKET.CASTING_CLOSE){
+        } else if (token.type === TokenType.BRACKET.CASTING_CLOSE) {
             beforeWhitespaces = 0;
             afterWhitespaces = 1;
         }
@@ -314,13 +311,13 @@ function formatApex(tokens, config) {
         }
         if (indent > 0 && indent !== mainBodyIndent && token.type !== TokenType.KEYWORD.DECLARATION.PROPERTY_GETTER && token.type !== TokenType.KEYWORD.DECLARATION.PROPERTY_SETTER) {
             if (newLines > 0 && originalNewLines > 1) {
-                if (config && config.apexFormat.punctuation.maxBlankLines === -1)
+                if (config && config.punctuation.maxBlankLines === -1)
                     newLines = originalNewLines;
-                else if (config && config.apexFormat.punctuation.maxBlankLines === 0)
+                else if (config && config.punctuation.maxBlankLines === 0)
                     newLines = 1;
-                else if (config && config.apexFormat.punctuation.maxBlankLines > 0 && originalNewLines > config.apexFormat.punctuation.maxBlankLines) {
-                    newLines = config.apexFormat.punctuation.maxBlankLines + 1;
-                } else if (config && config.apexFormat.punctuation.maxBlankLines > 0 && originalNewLines <= config.apexFormat.punctuation.maxBlankLines) {
+                else if (config && config.punctuation.maxBlankLines > 0 && originalNewLines > config.punctuation.maxBlankLines) {
+                    newLines = config.punctuation.maxBlankLines + 1;
+                } else if (config && config.punctuation.maxBlankLines > 0 && originalNewLines <= config.punctuation.maxBlankLines) {
                     newLines = originalNewLines;
                 }
             }
@@ -329,13 +326,13 @@ function formatApex(tokens, config) {
             onProperty = true;
             emptyProperty = isEmptyProperty(tokens, index);
         }
-        if (token.type === TokenType.BRACKET.CURLY_CLOSE && onProperty && emptyProperty && config && config.apexFormat.classMembers.singleLineProperties) {
+        if (token.type === TokenType.BRACKET.CURLY_CLOSE && onProperty && emptyProperty && config && config.classMembers.singleLineProperties) {
             onProperty = false;
             emptyProperty = false;
             newLines = 0;
             beforeWhitespaces = 1;
         }
-        if (onProperty && emptyProperty && config && config.apexFormat.classMembers.singleLineProperties) {
+        if (onProperty && emptyProperty && config && config.classMembers.singleLineProperties) {
             newLines = 0;
             if (token.type === TokenType.KEYWORD.DECLARATION.PROPERTY_GETTER || token.type === TokenType.KEYWORD.DECLARATION.PROPERTY_SETTER) {
                 beforeWhitespaces = 1;

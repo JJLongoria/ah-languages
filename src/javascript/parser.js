@@ -1,7 +1,7 @@
 
 const { CoreUtils, FileSystem, Types } = require('@ah/core');
 const TokenType = require('./tokenTypes');
-const Lexer = require('./lexer');
+const Lexer = require('./tokenizer');
 const LangUtils = require('../utils/languageUtils');
 const FileReader = FileSystem.FileReader;
 const FileChecker = FileSystem.FileChecker;
@@ -13,7 +13,7 @@ const AuraJSComment = Types.AuraJSComment;
 const AuraJSCommentBlock = Types.AuraJSCommentBlock;
 const Utils = CoreUtils.Utils;
 
-class Parser {
+class JSParser {
 
     static parse(pathContentOrTokens) {
         let tokens;
@@ -123,7 +123,7 @@ class Parser {
         return data;
     }
 }
-module.exports = Parser;
+module.exports = JSParser;
 
 function processFunction(newNode, tokens, index) {
     const len = tokens.length;

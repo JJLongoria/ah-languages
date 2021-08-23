@@ -248,7 +248,7 @@ const predefinedObjects = [
     'onsubmit'
 ];
 
-class Lexer {
+class JSTokenizer {
 
     static tokenize(filePathOrContent) {
         let content;
@@ -530,4 +530,4 @@ class Lexer {
         return tokens;
     }
 }
-module.exports = Lexer;
+module.exports = JSTokenizer;

@@ -319,7 +319,7 @@ const annotations = {
 
 let nsSummary;
 
-class Lexer {
+class ApexTokenizer {
 
     static tokenize(filePathOrContent, sObjects, userClasses, namespacesSummary) {
         let content;
@@ -877,7 +877,7 @@ class Lexer {
         return tokens;
     }
 }
-module.exports = Lexer;
+module.exports = ApexTokenizer;
 
 function isOperator(token) {
     switch (token.type) {

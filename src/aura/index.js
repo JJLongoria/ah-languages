@@ -1,3 +1,2 @@
-exports.AuraTokenizer = require('./lexer');
+exports.AuraTokenizer = require('./tokenizer');
 exports.AuraParser = require('./parser');
-exports.ApexTokenType = require('./tokenTypes');
