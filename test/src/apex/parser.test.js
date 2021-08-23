@@ -16,7 +16,7 @@ const ApexConstructor = Types.ApexConstructor;
 const Token = Types.Token;
 const StrUtils = CoreUtils.StrUtils;
 const TokenType = require('../../../src/apex/tokenTypes')
-const ApexLexer = require('../../../src/apex/lexer');
+const ApexLexer = require('../../../src/apex/tokenizer');
 const ApexParser = require('../../../src/apex/parser');
 const System = require('../../../src/system/system');
 

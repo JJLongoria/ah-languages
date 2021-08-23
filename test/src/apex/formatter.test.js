@@ -1,7 +1,7 @@
 const { FileSystem, CoreUtils } = require('@ah/core');
 const TypesFactory = require('@ah/metadata-factory');
 const FileReader = FileSystem.FileReader;
-const ApexLexer = require('../../../src/apex/lexer');
+const ApexLexer = require('../../../src/apex/tokenizer');
 const ApexFormatter = require('../../../src/apex/formatter');
 const System = require('../../../src/system/system');
 

@@ -19,7 +19,7 @@ const ApexAnnotation = Types.ApexAnnotation;
 const PositionData = Types.PositionData;
 const Token = Types.Token;
 const TokenType = require('./tokenTypes');
-const Lexer = require('./lexer');
+const Lexer = require('./tokenizer');
 const LangUtils = require('../utils/languageUtils');
 const ApexNodeType = Values.ApexNodeTypes;
 const Utils = CoreUtils.Utils;
@@ -46,7 +46,10 @@ let nodesMap = {};
 let percentage = 0;
 let increment = 0;
 
-class Parser {
+/**
+ * Class to parse an Apex Class file, content or tokens to extract the class information like fields, methods, variables, constructors, inner classes... and much more.
+ */
+class ApexParser {
 
     static parse(pathContentOrTokens, position, systemData) {
         let tokens;
@@ -735,7 +738,7 @@ class Parser {
             apexClass = classFileOrContent;
         } else if (Utils.isString(pathContentOrTokens)) {
             const content = PathUtils.isURI(pathContentOrTokens) ? FileReader.readFileSync(Validator.validateFilePath(pathContentOrTokens)) : pathContentOrTokens;
-            apexNode = Parser.parse(content, systemData.sObject, systemData.userClasses, systemData.namespaceSummary);
+            apexNode = ApexParser.parse(content, systemData.sObject, systemData.userClasses, systemData.namespaceSummary);
         } else {
             throw new Error('You must to select a file path, file content or file tokens');
         }
@@ -749,7 +752,7 @@ class Parser {
     static saveClassData(classFileOrContent, targetFolder, systemData) {
         if (!FileChecker.isExists(targetFolder))
             FileWriter.createFolderSync(targetFolder);
-        const node = Parser.resolveReferences(classFileOrContent, systemData);
+        const node = ApexParser.resolveReferences(classFileOrContent, systemData);
         FileWriter.createFileSync(targetFolder + '/' + node.name + '.json', JSON.stringify(node, null, 2));
         return node;
     }
@@ -759,7 +762,7 @@ class Parser {
             try {
                 if (!FileChecker.isExists(targetFolder))
                     FileWriter.createFolderSync(targetFolder);
-                const node = Parser.resolveReferences(classFileOrContent, systemData);
+                const node = ApexParser.resolveReferences(classFileOrContent, systemData);
                 FileWriter.createFile(targetFolder + '/' + node.name + '.json', JSON.stringify(node, null, 2), function (path, errorWrite) {
                     if (errorWrite)
                         reject(errorWrite);
@@ -770,7 +773,7 @@ class Parser {
                 reject(error);
             }
         });
-        const node = Parser.resolveReferences(classFileOrContent, systemData);
+        const node = ApexParser.resolveReferences(classFileOrContent, systemData);
     }
 
     static saveClassesData(classFiles, targetFolder, systemData, progressCallback) {
@@ -813,7 +816,7 @@ class Parser {
                     callProgressCalback(progressCallback, 'prepare');
                     const batchesToProcess = getBatches(files, multithread);
                     for (const batch of batchesToProcess) {
-                        Parser.saveClassesData(batch.records, targetFolder, systemData, progressCallback).then(() => {
+                        ApexParser.saveClassesData(batch.records, targetFolder, systemData, progressCallback).then(() => {
                             batch.completed = true;
                             let nCompleted = 0;
                             for (const resultBatch of batchesToProcess) {
@@ -868,7 +871,7 @@ class Parser {
     }
 
 }
-module.exports = Parser;
+module.exports = ApexParser;
 
 function cleanDatatype(datatype) {
     if (StrUtils.contains(datatype, '<'))

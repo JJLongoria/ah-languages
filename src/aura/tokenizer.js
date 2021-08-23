@@ -27,7 +27,7 @@ const symbolTokens = {
     "?.": TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR,
 }
 
-class Lexer {
+class AuraTokenizer {
 
     static tokenize(filePathOrContent) {
         let content;
@@ -249,7 +249,7 @@ class Lexer {
     }
 
 }
-module.exports = Lexer;
+module.exports = AuraTokenizer;
 
 function getWhitespaces(number) {
     let ws = '';
