@@ -1,4 +1,5 @@
 const { DataTypes } = require('@ah/core').Values;
+const { Utils } = require('@ah/core').CoreUtils;
 
 class XMLUtils {
 
@@ -8,7 +9,7 @@ class XMLUtils {
             result = {};
             if (xmlData) {
                 result = XMLUtils.createXMLFile(xmlDefinition);
-                result = prepareXML(xmlData, result);
+                result = prepareXML(xmlData, result, xmlDefinition);
             } else {
                 result = XMLUtils.createXMLFile(xmlDefinition);
             }
@@ -44,7 +45,7 @@ class XMLUtils {
 
     static sort(elements, fields) {
         if (Array.isArray(elements)) {
-            elements.sort(function (a, b) {
+            elements.sort((a, b) => {
                 if (fields && fields.length > 0) {
                     let nameA = '';
                     let nameB = '';
@@ -97,18 +98,23 @@ class XMLUtils {
 }
 module.exports = XMLUtils;
 
-function prepareXML(source, target) {
+function prepareXML(source, target, definition) {
     Object.keys(target).forEach(function (key) {
         if (source[key] !== undefined) {
             if (Array.isArray(target[key]) && source[key].length > 0) {
                 target[key] = XMLUtils.forceArray(source[key]);
-            } else if(typeof source[key] === 'object' && Object.keys(source[key])){
+            } else if (typeof source[key] === 'object' && Object.keys(source[key])) {
                 target[key] = source[key];
-            } else if(source[key] !== undefined){
+            } else if (source[key] !== undefined) {
                 target[key] = source[key];
             }
+            if(definition[key].datatype === DataTypes.OBJECT && !Utils.isObject(target[key])){
+                target[key] = {};
+            } else if(definition[key].datatype === DataTypes.ARRAY && !Utils.isArray(target[key]) && target[key]){
+                target[key] = Utils.forceArray(target[key]);
+            }
         }
-        if(target[key] === undefined)
+        if (target[key] === undefined)
             delete target[key];
     });
     if (source['@attrs'])

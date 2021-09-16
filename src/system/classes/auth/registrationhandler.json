@@ -1,6 +1,6 @@
 {
   "id": "Auth.registrationhandler",
-  "type": "interface",
+  "nodeType": "interface",
   "name": "RegistrationHandler",
   "namespace": "Auth",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "createuser(id,auth.userdata)": {
       "id": "Auth.registrationhandler.createuser",
-      "type": "method",
+      "nodeType": "method",
       "name": "createUser",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -113,11 +113,11 @@
       "simplifiedSignature": "createUser(ID,Auth.UserData)",
       "datatype": {
         "id": "Auth.registrationhandler.createuser.User",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "User"
       },
       "description": "Returns a User object using the specified portal ID and user information from the third party, such as the username and email address. The User object corresponds to the third party’s user information and may be a new user that hasn’t been inserted in the database or may represent an existing user record in the database.",
-      "variables": {
+      "params": {
         "portalId": {
           "id": "Auth.registrationhandler.createuser.portalid",
           "type": "var",
@@ -144,7 +144,7 @@
           "signature": "ID portalId",
           "datatype": {
             "id": "Auth.registrationhandler.createuser.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "ID"
           }
         },
@@ -174,7 +174,7 @@
           "signature": "Auth.UserData userData",
           "datatype": {
             "id": "Auth.registrationhandler.createuser.auth.userdata",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Auth.UserData"
           }
         }
@@ -182,7 +182,7 @@
     },
     "updateuser(id,id,auth.userdata)": {
       "id": "Auth.registrationhandler.updateuser",
-      "type": "method",
+      "nodeType": "method",
       "name": "updateUser",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -226,11 +226,11 @@
       "simplifiedSignature": "updateUser(ID,ID,Auth.UserData)",
       "datatype": {
         "id": "Auth.registrationhandler.updateuser.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Updates the specified user’s information. This method is called if the user has logged in before with the authorization provider and then logs in again.",
-      "variables": {
+      "params": {
         "userId": {
           "id": "Auth.registrationhandler.updateuser.userid",
           "type": "var",
@@ -257,7 +257,7 @@
           "signature": "ID userId",
           "datatype": {
             "id": "Auth.registrationhandler.updateuser.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "ID"
           }
         },
@@ -287,7 +287,7 @@
           "signature": "ID portalId",
           "datatype": {
             "id": "Auth.registrationhandler.updateuser.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "ID"
           }
         },
@@ -317,7 +317,7 @@
           "signature": "Auth.UserData userData",
           "datatype": {
             "id": "Auth.registrationhandler.updateuser.auth.userdata",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Auth.UserData"
           }
         }

@@ -1,6 +1,6 @@
 {
   "id": "Wave.querynode",
-  "type": "class",
+  "nodeType": "class",
   "name": "QueryNode",
   "namespace": "Wave",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "build(string)": {
       "id": "Wave.querynode.build",
-      "type": "method",
+      "nodeType": "method",
       "name": "build",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -113,11 +113,11 @@
       "simplifiedSignature": "build(String)",
       "datatype": {
         "id": "Wave.querynode.build.String",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "String"
       },
       "description": "Build the query string represented by this QueryNode and assign it to a stream name.",
-      "variables": {
+      "params": {
         "streamName": {
           "id": "Wave.querynode.build.streamname",
           "type": "var",
@@ -144,7 +144,7 @@
           "signature": "String streamName",
           "datatype": {
             "id": "Wave.querynode.build.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -152,7 +152,7 @@
     },
     "foreach(list)": {
       "id": "Wave.querynode.foreach",
-      "type": "method",
+      "nodeType": "method",
       "name": "foreach",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -196,11 +196,11 @@
       "simplifiedSignature": "foreach(List)",
       "datatype": {
         "id": "Wave.querynode.foreach.wave.QueryNode",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "wave.QueryNode"
       },
       "description": "Applies a set of expressions to every row in a dataset. This action is often referred to as projection.",
-      "variables": {
+      "params": {
         "<wave.ProjectionNode>": {
           "id": "Wave.querynode.foreach.<wave.projectionnode>",
           "type": "var",
@@ -227,7 +227,7 @@
           "signature": "List <wave.ProjectionNode>",
           "datatype": {
             "id": "Wave.querynode.foreach.list",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "List"
           }
         }
@@ -235,7 +235,7 @@
     },
     "group(list)": {
       "id": "Wave.querynode.group",
-      "type": "method",
+      "nodeType": "method",
       "name": "group",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -279,11 +279,11 @@
       "simplifiedSignature": "group(List)",
       "datatype": {
         "id": "Wave.querynode.group.wave.QueryNode",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "wave.QueryNode"
       },
       "description": "Groups matched records (group by specific dataset attributes).",
-      "variables": {
+      "params": {
         "<String>": {
           "id": "Wave.querynode.group.<string>",
           "type": "var",
@@ -310,7 +310,7 @@
           "signature": "List <String>",
           "datatype": {
             "id": "Wave.querynode.group.list",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "List"
           }
         }
@@ -318,7 +318,7 @@
     },
     "group()": {
       "id": "Wave.querynode.group",
-      "type": "method",
+      "nodeType": "method",
       "name": "group",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -362,15 +362,15 @@
       "simplifiedSignature": "group()",
       "datatype": {
         "id": "Wave.querynode.group.wave.QueryNode",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "wave.QueryNode"
       },
       "description": "Groups matched records (group by all).",
-      "variables": {}
+      "params": {}
     },
     "order(list)": {
       "id": "Wave.querynode.order",
-      "type": "method",
+      "nodeType": "method",
       "name": "order",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -414,11 +414,11 @@
       "simplifiedSignature": "order(List)",
       "datatype": {
         "id": "Wave.querynode.order.wave.QueryNode",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "wave.QueryNode"
       },
       "description": "Sorts in ascending or descending order on one or more fields.",
-      "variables": {
+      "params": {
         "<String>": {
           "id": "Wave.querynode.order.<string>",
           "type": "var",
@@ -445,7 +445,7 @@
           "signature": "List <String>",
           "datatype": {
             "id": "Wave.querynode.order.list",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "List"
           }
         }
@@ -453,7 +453,7 @@
     },
     "cap(integer)": {
       "id": "Wave.querynode.cap",
-      "type": "method",
+      "nodeType": "method",
       "name": "cap",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -497,11 +497,11 @@
       "simplifiedSignature": "cap(Integer)",
       "datatype": {
         "id": "Wave.querynode.cap.wave.QueryNode",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "wave.QueryNode"
       },
       "description": "Limits the number of results that are returned.",
-      "variables": {
+      "params": {
         "cap": {
           "id": "Wave.querynode.cap.cap",
           "type": "var",
@@ -528,7 +528,7 @@
           "signature": "Integer cap",
           "datatype": {
             "id": "Wave.querynode.cap.integer",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Integer"
           }
         }
@@ -536,7 +536,7 @@
     },
     "filter(string)": {
       "id": "Wave.querynode.filter",
-      "type": "method",
+      "nodeType": "method",
       "name": "filter",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -580,11 +580,11 @@
       "simplifiedSignature": "filter(String)",
       "datatype": {
         "id": "Wave.querynode.filter.wave.QueryNode",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "wave.QueryNode"
       },
       "description": "Selects rows from a dataset based on a filter condition (a predicate).",
-      "variables": {
+      "params": {
         "filterCondition": {
           "id": "Wave.querynode.filter.filtercondition",
           "type": "var",
@@ -611,7 +611,7 @@
           "signature": "String filterCondition",
           "datatype": {
             "id": "Wave.querynode.filter.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -619,7 +619,7 @@
     },
     "filter(list)": {
       "id": "Wave.querynode.filter",
-      "type": "method",
+      "nodeType": "method",
       "name": "filter",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -663,11 +663,11 @@
       "simplifiedSignature": "filter(List)",
       "datatype": {
         "id": "Wave.querynode.filter.wave.QueryNode",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "wave.QueryNode"
       },
       "description": "Selects rows from a dataset based on multiple filter conditions (predicates).",
-      "variables": {
+      "params": {
         "<String>": {
           "id": "Wave.querynode.filter.<string>",
           "type": "var",
@@ -694,7 +694,7 @@
           "signature": "List <String>",
           "datatype": {
             "id": "Wave.querynode.filter.list",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "List"
           }
         }
@@ -702,7 +702,7 @@
     },
     "execute(string)": {
       "id": "Wave.querynode.execute",
-      "type": "method",
+      "nodeType": "method",
       "name": "execute",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -746,11 +746,11 @@
       "simplifiedSignature": "execute(String)",
       "datatype": {
         "id": "Wave.querynode.execute.ConnectApi.LiteralJson",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "ConnectApi.LiteralJson"
       },
       "description": "Execute the query and return rows as JSON.",
-      "variables": {
+      "params": {
         "streamName": {
           "id": "Wave.querynode.execute.streamname",
           "type": "var",
@@ -777,7 +777,7 @@
           "signature": "String streamName",
           "datatype": {
             "id": "Wave.querynode.execute.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }

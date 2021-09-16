@@ -252,10 +252,10 @@ class JSTokenizer {
 
     static tokenize(filePathOrContent) {
         let content;
-        if(Utils.isString(filePathOrContent)){
-            try{
-                content = PathUtils.isURI(filePathOrContent) ? FileReader.readFileSync(Validator.validateFilePath(filePathOrContent)) : filePathOrContent;
-            } catch(error){
+        if (Utils.isString(filePathOrContent)) {
+            try {
+                content = FileReader.readFileSync(Validator.validateFilePath(filePathOrContent));
+            } catch (error) {
                 content = filePathOrContent;
             }
         } else {
@@ -288,17 +288,18 @@ class JSTokenizer {
             if (fourChars.length === 4 && symbolTokens[fourChars]) {
                 token = new Token(symbolTokens[fourChars], fourChars, lineNumber, column);
                 charIndex += 3;
-                column += 3;
+                column += 4;
             } else if (threeChars.length === 3 && symbolTokens[threeChars]) {
                 token = new Token(symbolTokens[threeChars], threeChars, lineNumber, column);
                 charIndex += 2;
-                column += 2;
+                column += 3;
             } else if (twoChars.length === 2 && symbolTokens[twoChars]) {
                 token = new Token(symbolTokens[twoChars], twoChars, lineNumber, column);
                 charIndex += 1;
-                column += 1;
+                column += 2;
             } else if (symbolTokens[char]) {
                 token = new Token(symbolTokens[char], char, lineNumber, column);
+                column++;
             } else if (NUM_FORMAT.test(char)) {
                 var numContent = '';
                 while (NUM_FORMAT.test(char) || char === '.' || char === ':' || char === '+' || char === '-' || char.toLowerCase() === 't' || char.toLowerCase() === 'z') {
@@ -318,7 +319,7 @@ class JSTokenizer {
                     token = new Token(TokenType.LITERAL.INTEGER, numContent, lineNumber, column);
                 }
                 charIndex--;
-                column += numContent.length - 1;
+                column += numContent.length;
             } else if (ID_FORMAT.test(char)) {
                 var idContent = '';
                 while (ID_FORMAT.test(char)) {
@@ -327,7 +328,7 @@ class JSTokenizer {
                 }
                 charIndex--;
                 token = new Token(TokenType.IDENTIFIER, idContent, lineNumber, column);
-                column += idContent.length - 1;
+                column += idContent.length;
             } else if (char === "\n") {
                 if (onCommentLine)
                     onCommentLine = false;
@@ -335,8 +336,11 @@ class JSTokenizer {
                 column = 0;
             } else if (char !== "\t" && char !== " " && char.trim().length != 0) {
                 token = new Token(TokenType.UNKNOWN, char, lineNumber, column);
+                column++;
             } else if (char === "\t") {
-                column += 3;
+                column += 4;
+            } else {
+                column++;
             }
             if (token !== undefined) {
                 if (!onText && !onCommentBlock && !onCommentLine && token.type === TokenType.PUNCTUATION.QUOTTES && (!lastToken || lastToken.text !== '\\')) {
@@ -379,7 +383,7 @@ class JSTokenizer {
                         tokens[index].pairToken = tokens.length;
                         token.parentToken = tokens[index].parentToken;
                     }
-                } else if (!onCommentLine && (token.type === TokenType.COMMENT.LINE || token.type === TokenType.COMMENT.LINE_DOC)) {
+                } else if (!onText && !onCommentBlock && !onCommentLine && (token.type === TokenType.COMMENT.LINE || token.type === TokenType.COMMENT.LINE_DOC)) {
                     token.parentToken = tokens.length - 1;
                     onCommentLine = true;
                 } else if (onText) {
@@ -472,16 +476,16 @@ class JSTokenizer {
                     } else if (lastToken && lastToken.type === TokenType.KEYWORD.DECLARATION.INTERFACE) {
                         token.type = TokenType.DECLARATION.ENTITY.INTERFACE;
                         classDeclarationIndex.push(tokens.length);
-                    } else if(lastToken && lastToken.type === TokenType.KEYWORD.DECLARATION.VARIABLE){
+                    } else if (lastToken && lastToken.type === TokenType.KEYWORD.DECLARATION.VARIABLE) {
                         token.type = TokenType.DECLARATION.ENTITY.VARIABLE;
-                    } else if(lastToken && lastToken.type === TokenType.KEYWORD.DECLARATION.CONSTANT){
+                    } else if (lastToken && lastToken.type === TokenType.KEYWORD.DECLARATION.CONSTANT) {
                         token.type = TokenType.DECLARATION.ENTITY.CONSTANT;
-                    } else if(lastToken && lastToken.type === TokenType.KEYWORD.DECLARATION.FUNCTION){
+                    } else if (lastToken && lastToken.type === TokenType.KEYWORD.DECLARATION.FUNCTION) {
                         token.type = TokenType.DECLARATION.ENTITY.FUNCTION;
                     } else {
                         token.type = TokenType.ENTITY.VARIABLE;
                     }
-                } 
+                }
                 if (lastToken && (lastToken.type === TokenType.BRACKET.PARENTHESIS_GUARD_CLOSE || lastToken.type === TokenType.KEYWORD.FLOW_CONTROL.ELSE)) {
                     if (token.type !== TokenType.BRACKET.CURLY_OPEN && token.type !== TokenType.PUNCTUATION.SEMICOLON) {
                         let newToken = new Token(TokenType.BRACKET.CURLY_OPEN, '{', lastToken.range.start.line, lastToken.range.start.character + 1);
@@ -525,7 +529,6 @@ class JSTokenizer {
                     }
                 }
             }
-            column++;
         }
         return tokens;
     }

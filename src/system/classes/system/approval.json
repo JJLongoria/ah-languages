@@ -1,6 +1,6 @@
 {
   "id": "System.approval",
-  "type": "class",
+  "nodeType": "class",
   "name": "Approval",
   "namespace": "System",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "islocked(id)": {
       "id": "System.approval.islocked",
-      "type": "method",
+      "nodeType": "method",
       "name": "isLocked",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -132,11 +132,11 @@
       "simplifiedSignature": "isLocked(Id)",
       "datatype": {
         "id": "System.approval.islocked.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Returns true if the record with the ID id is locked, or false if it’s not.",
-      "variables": {
+      "params": {
         "id": {
           "id": "System.approval.islocked.id",
           "type": "var",
@@ -163,7 +163,7 @@
           "signature": "Id id",
           "datatype": {
             "id": "System.approval.islocked.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         }
@@ -171,7 +171,7 @@
     },
     "islocked(list)": {
       "id": "System.approval.islocked",
-      "type": "method",
+      "nodeType": "method",
       "name": "isLocked",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -234,11 +234,11 @@
       "simplifiedSignature": "isLocked(List)",
       "datatype": {
         "id": "System.approval.islocked.Map<Id, Boolean>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Map<Id, Boolean>"
       },
       "description": "Returns a map of record IDs to lock statuses. If the record is locked the status is true. If the record is not locked the status is false.",
-      "variables": {
+      "params": {
         "<SObject>": {
           "id": "System.approval.islocked.<sobject>",
           "type": "var",
@@ -265,7 +265,7 @@
           "signature": "List <SObject>",
           "datatype": {
             "id": "System.approval.islocked.list",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "List"
           }
         }
@@ -273,7 +273,7 @@
     },
     "islocked(sobject)": {
       "id": "System.approval.islocked",
-      "type": "method",
+      "nodeType": "method",
       "name": "isLocked",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -336,11 +336,11 @@
       "simplifiedSignature": "isLocked(SObject)",
       "datatype": {
         "id": "System.approval.islocked.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Returns true if the sobject record is locked, or false if it’s not.",
-      "variables": {
+      "params": {
         "sobject": {
           "id": "System.approval.islocked.sobject",
           "type": "var",
@@ -367,7 +367,7 @@
           "signature": "SObject sobject",
           "datatype": {
             "id": "System.approval.islocked.sobject",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "SObject"
           }
         }
@@ -375,7 +375,7 @@
     },
     "lock(id)": {
       "id": "System.approval.lock",
-      "type": "method",
+      "nodeType": "method",
       "name": "lock",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -438,11 +438,11 @@
       "simplifiedSignature": "lock(Id)",
       "datatype": {
         "id": "System.approval.lock.Approval.LockResult",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Approval.LockResult"
       },
       "description": "Locks an object, and returns the lock results.",
-      "variables": {
+      "params": {
         "recordId": {
           "id": "System.approval.lock.recordid",
           "type": "var",
@@ -469,7 +469,7 @@
           "signature": "Id recordId",
           "datatype": {
             "id": "System.approval.lock.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         }
@@ -477,7 +477,7 @@
     },
     "lock(list)": {
       "id": "System.approval.lock",
-      "type": "method",
+      "nodeType": "method",
       "name": "lock",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -540,11 +540,11 @@
       "simplifiedSignature": "lock(List)",
       "datatype": {
         "id": "System.approval.lock.List<Approval.LockResult>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "List<Approval.LockResult>"
       },
       "description": "Locks a set of objects, with the option for partial success. It returns the lock results, including failures.",
-      "variables": {
+      "params": {
         "<SObject>": {
           "id": "System.approval.lock.<sobject>",
           "type": "var",
@@ -571,7 +571,7 @@
           "signature": "List <SObject>",
           "datatype": {
             "id": "System.approval.lock.list",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "List"
           }
         }
@@ -579,7 +579,7 @@
     },
     "lock(sobject)": {
       "id": "System.approval.lock",
-      "type": "method",
+      "nodeType": "method",
       "name": "lock",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -642,11 +642,11 @@
       "simplifiedSignature": "lock(SObject)",
       "datatype": {
         "id": "System.approval.lock.Approval.LockResult",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Approval.LockResult"
       },
       "description": "Locks an object, and returns the lock results.",
-      "variables": {
+      "params": {
         "recordToLock": {
           "id": "System.approval.lock.recordtolock",
           "type": "var",
@@ -673,7 +673,7 @@
           "signature": "SObject recordToLock",
           "datatype": {
             "id": "System.approval.lock.sobject",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "SObject"
           }
         }
@@ -681,7 +681,7 @@
     },
     "lock(id,boolean)": {
       "id": "System.approval.lock",
-      "type": "method",
+      "nodeType": "method",
       "name": "lock",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -744,11 +744,11 @@
       "simplifiedSignature": "lock(Id,Boolean)",
       "datatype": {
         "id": "System.approval.lock.Approval.LockResult",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Approval.LockResult"
       },
       "description": "Locks an object, with the option for partial success, and returns the lock result.",
-      "variables": {
+      "params": {
         "recordId": {
           "id": "System.approval.lock.recordid",
           "type": "var",
@@ -775,7 +775,7 @@
           "signature": "Id recordId",
           "datatype": {
             "id": "System.approval.lock.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         },
@@ -805,7 +805,7 @@
           "signature": "Boolean allOrNothing",
           "datatype": {
             "id": "System.approval.lock.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -813,7 +813,7 @@
     },
     "lock(sobject,boolean)": {
       "id": "System.approval.lock",
-      "type": "method",
+      "nodeType": "method",
       "name": "lock",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -876,11 +876,11 @@
       "simplifiedSignature": "lock(SObject,Boolean)",
       "datatype": {
         "id": "System.approval.lock.Approval.LockResult",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Approval.LockResult"
       },
       "description": "Locks an object, with the option for partial success, and returns the lock result.",
-      "variables": {
+      "params": {
         "recordToLock": {
           "id": "System.approval.lock.recordtolock",
           "type": "var",
@@ -907,7 +907,7 @@
           "signature": "SObject recordToLock",
           "datatype": {
             "id": "System.approval.lock.sobject",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "SObject"
           }
         },
@@ -937,7 +937,7 @@
           "signature": "Boolean allOrNothing",
           "datatype": {
             "id": "System.approval.lock.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -945,7 +945,7 @@
     },
     "process(approval.processrequest)": {
       "id": "System.approval.process",
-      "type": "method",
+      "nodeType": "method",
       "name": "process",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1008,11 +1008,11 @@
       "simplifiedSignature": "process(Approval.ProcessRequest)",
       "datatype": {
         "id": "System.approval.process.Approval.ProcessResult",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Approval.ProcessResult"
       },
       "description": "Submits a new approval request and approves or rejects existing approval requests.",
-      "variables": {
+      "params": {
         "approvalRequest": {
           "id": "System.approval.process.approvalrequest",
           "type": "var",
@@ -1039,7 +1039,7 @@
           "signature": "Approval.ProcessRequest approvalRequest",
           "datatype": {
             "id": "System.approval.process.approval.processrequest",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Approval.ProcessRequest"
           }
         }
@@ -1047,7 +1047,7 @@
     },
     "process(approval.processrequest,boolean)": {
       "id": "System.approval.process",
-      "type": "method",
+      "nodeType": "method",
       "name": "process",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1110,11 +1110,11 @@
       "simplifiedSignature": "process(Approval.ProcessRequest,Boolean)",
       "datatype": {
         "id": "System.approval.process.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Submits a new approval request and approves or rejects existing approval requests.",
-      "variables": {
+      "params": {
         "approvalRequest": {
           "id": "System.approval.process.approvalrequest",
           "type": "var",
@@ -1141,7 +1141,7 @@
           "signature": "Approval.ProcessRequest approvalRequest",
           "datatype": {
             "id": "System.approval.process.approval.processrequest",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Approval.ProcessRequest"
           }
         },
@@ -1171,7 +1171,7 @@
           "signature": "Boolean allOrNone",
           "datatype": {
             "id": "System.approval.process.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -1179,7 +1179,7 @@
     },
     "process(approval.processrequest[])": {
       "id": "System.approval.process",
-      "type": "method",
+      "nodeType": "method",
       "name": "process",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1242,11 +1242,11 @@
       "simplifiedSignature": "process(Approval.ProcessRequest[])",
       "datatype": {
         "id": "System.approval.process.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Submits a list of new approval requests, and approves or rejects existing approval requests.",
-      "variables": {
+      "params": {
         "approvalRequests": {
           "id": "System.approval.process.approvalrequests",
           "type": "var",
@@ -1273,7 +1273,7 @@
           "signature": "Approval.ProcessRequest[] approvalRequests",
           "datatype": {
             "id": "System.approval.process.approval.processrequest[]",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Approval.ProcessRequest[]"
           }
         }
@@ -1281,7 +1281,7 @@
     },
     "process(approval.processrequest[],boolean)": {
       "id": "System.approval.process",
-      "type": "method",
+      "nodeType": "method",
       "name": "process",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1344,11 +1344,11 @@
       "simplifiedSignature": "process(Approval.ProcessRequest[],Boolean)",
       "datatype": {
         "id": "System.approval.process.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Submits a list of new approval requests, and approves or rejects existing approval requests.",
-      "variables": {
+      "params": {
         "approvalRequests": {
           "id": "System.approval.process.approvalrequests",
           "type": "var",
@@ -1375,7 +1375,7 @@
           "signature": "Approval.ProcessRequest[] approvalRequests",
           "datatype": {
             "id": "System.approval.process.approval.processrequest[]",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Approval.ProcessRequest[]"
           }
         },
@@ -1405,7 +1405,7 @@
           "signature": "Boolean allOrNone",
           "datatype": {
             "id": "System.approval.process.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -1413,7 +1413,7 @@
     },
     "unlock(id)": {
       "id": "System.approval.unlock",
-      "type": "method",
+      "nodeType": "method",
       "name": "unlock",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1476,11 +1476,11 @@
       "simplifiedSignature": "unlock(Id)",
       "datatype": {
         "id": "System.approval.unlock.Approval.UnlockResult",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Approval.UnlockResult"
       },
       "description": "Unlocks an object, and returns the unlock results.",
-      "variables": {
+      "params": {
         "recordId": {
           "id": "System.approval.unlock.recordid",
           "type": "var",
@@ -1507,7 +1507,7 @@
           "signature": "Id recordId",
           "datatype": {
             "id": "System.approval.unlock.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         }
@@ -1515,7 +1515,7 @@
     },
     "unlock(list)": {
       "id": "System.approval.unlock",
-      "type": "method",
+      "nodeType": "method",
       "name": "unlock",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1578,11 +1578,11 @@
       "simplifiedSignature": "unlock(List)",
       "datatype": {
         "id": "System.approval.unlock.List<Approval.UnlockResult>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "List<Approval.UnlockResult>"
       },
       "description": "Unlocks a set of objects, with the option for partial success. It returns the unlock results, including failures.",
-      "variables": {
+      "params": {
         "<SObject>": {
           "id": "System.approval.unlock.<sobject>",
           "type": "var",
@@ -1609,7 +1609,7 @@
           "signature": "List <SObject>",
           "datatype": {
             "id": "System.approval.unlock.list",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "List"
           }
         }
@@ -1617,7 +1617,7 @@
     },
     "unlock(sobject)": {
       "id": "System.approval.unlock",
-      "type": "method",
+      "nodeType": "method",
       "name": "unlock",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1680,11 +1680,11 @@
       "simplifiedSignature": "unlock(SObject)",
       "datatype": {
         "id": "System.approval.unlock.Approval.UnlockResult",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Approval.UnlockResult"
       },
       "description": "Unlocks an object, and returns the unlock results.",
-      "variables": {
+      "params": {
         "recordToUnlock": {
           "id": "System.approval.unlock.recordtounlock",
           "type": "var",
@@ -1711,7 +1711,7 @@
           "signature": "SObject recordToUnlock",
           "datatype": {
             "id": "System.approval.unlock.sobject",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "SObject"
           }
         }
@@ -1719,7 +1719,7 @@
     },
     "unlock(id,boolean)": {
       "id": "System.approval.unlock",
-      "type": "method",
+      "nodeType": "method",
       "name": "unlock",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1782,11 +1782,11 @@
       "simplifiedSignature": "unlock(Id,Boolean)",
       "datatype": {
         "id": "System.approval.unlock.Approval.UnlockResult",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Approval.UnlockResult"
       },
       "description": "Unlocks an object, with the option for partial success, and returns the unlock result.",
-      "variables": {
+      "params": {
         "recordId": {
           "id": "System.approval.unlock.recordid",
           "type": "var",
@@ -1813,7 +1813,7 @@
           "signature": "Id recordId",
           "datatype": {
             "id": "System.approval.unlock.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         },
@@ -1843,7 +1843,7 @@
           "signature": "Boolean allOrNothing",
           "datatype": {
             "id": "System.approval.unlock.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -1851,7 +1851,7 @@
     },
     "unlock(sobject,boolean)": {
       "id": "System.approval.unlock",
-      "type": "method",
+      "nodeType": "method",
       "name": "unlock",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1914,11 +1914,11 @@
       "simplifiedSignature": "unlock(SObject,Boolean)",
       "datatype": {
         "id": "System.approval.unlock.Approval.UnlockResult",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Approval.UnlockResult"
       },
       "description": "Unlocks an object, with the option for partial success, and returns the unlock result.",
-      "variables": {
+      "params": {
         "recordToUnlock": {
           "id": "System.approval.unlock.recordtounlock",
           "type": "var",
@@ -1945,7 +1945,7 @@
           "signature": "SObject recordToUnlock",
           "datatype": {
             "id": "System.approval.unlock.sobject",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "SObject"
           }
         },
@@ -1975,7 +1975,7 @@
           "signature": "Boolean allOrNothing",
           "datatype": {
             "id": "System.approval.unlock.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }

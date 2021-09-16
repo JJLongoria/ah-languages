@@ -1,6 +1,6 @@
 {
   "id": "Messaging.email",
-  "type": "class",
+  "nodeType": "class",
   "name": "Email",
   "namespace": "Messaging",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "setbccsender(boolean)": {
       "id": "Messaging.email.setbccsender",
-      "type": "method",
+      "nodeType": "method",
       "name": "setBccSender",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -113,11 +113,11 @@
       "simplifiedSignature": "setBccSender(Boolean)",
       "datatype": {
         "id": "Messaging.email.setbccsender.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Indicates whether the email sender receives a copy of the email that is sent. For a mass mail, the sender is only copied on the first email sent.",
-      "variables": {
+      "params": {
         "bcc": {
           "id": "Messaging.email.setbccsender.bcc",
           "type": "var",
@@ -144,7 +144,7 @@
           "signature": "Boolean bcc",
           "datatype": {
             "id": "Messaging.email.setbccsender.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -152,7 +152,7 @@
     },
     "setreplyto(string)": {
       "id": "Messaging.email.setreplyto",
-      "type": "method",
+      "nodeType": "method",
       "name": "setReplyTo",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -196,11 +196,11 @@
       "simplifiedSignature": "setReplyTo(String)",
       "datatype": {
         "id": "Messaging.email.setreplyto.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Optional. The email address that receives the message when a recipient replies.",
-      "variables": {
+      "params": {
         "replyAddress": {
           "id": "Messaging.email.setreplyto.replyaddress",
           "type": "var",
@@ -227,7 +227,7 @@
           "signature": "String replyAddress",
           "datatype": {
             "id": "Messaging.email.setreplyto.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -235,7 +235,7 @@
     },
     "settemplateid(id)": {
       "id": "Messaging.email.settemplateid",
-      "type": "method",
+      "nodeType": "method",
       "name": "setTemplateID",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -279,11 +279,11 @@
       "simplifiedSignature": "setTemplateID(ID)",
       "datatype": {
         "id": "Messaging.email.settemplateid.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "The ID of the template to be merged to create this email. Specify a value for setTemplateId, setHtmlBody, or setPlainTextBody. Or, you can define both setHtmlBody and setPlainTextBody.",
-      "variables": {
+      "params": {
         "templateId": {
           "id": "Messaging.email.settemplateid.templateid",
           "type": "var",
@@ -310,7 +310,7 @@
           "signature": "ID templateId",
           "datatype": {
             "id": "Messaging.email.settemplateid.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "ID"
           }
         }
@@ -318,7 +318,7 @@
     },
     "setsaveasactivity(boolean)": {
       "id": "Messaging.email.setsaveasactivity",
-      "type": "method",
+      "nodeType": "method",
       "name": "setSaveAsActivity",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -362,11 +362,11 @@
       "simplifiedSignature": "setSaveAsActivity(Boolean)",
       "datatype": {
         "id": "Messaging.email.setsaveasactivity.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Optional. The default value is true, meaning the email is saved as an activity. This argument only applies if the recipient list is based on targetObjectId or targetObjectIds. If HTML email tracking is enabled for the organization, you will be able to track open rates.",
-      "variables": {
+      "params": {
         "saveAsActivity": {
           "id": "Messaging.email.setsaveasactivity.saveasactivity",
           "type": "var",
@@ -393,7 +393,7 @@
           "signature": "Boolean saveAsActivity",
           "datatype": {
             "id": "Messaging.email.setsaveasactivity.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -401,7 +401,7 @@
     },
     "setsenderdisplayname(string)": {
       "id": "Messaging.email.setsenderdisplayname",
-      "type": "method",
+      "nodeType": "method",
       "name": "setSenderDisplayName",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -445,11 +445,11 @@
       "simplifiedSignature": "setSenderDisplayName(String)",
       "datatype": {
         "id": "Messaging.email.setsenderdisplayname.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Optional. The name that appears on the From line of the email. This cannot be set if the object associated with a setOrgWideEmailAddressId for a SingleEmailMessage has defined its DisplayName field.",
-      "variables": {
+      "params": {
         "displayName": {
           "id": "Messaging.email.setsenderdisplayname.displayname",
           "type": "var",
@@ -476,7 +476,7 @@
           "signature": "String displayName",
           "datatype": {
             "id": "Messaging.email.setsenderdisplayname.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -484,7 +484,7 @@
     },
     "setusesignature(boolean)": {
       "id": "Messaging.email.setusesignature",
-      "type": "method",
+      "nodeType": "method",
       "name": "setUseSignature",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -528,11 +528,11 @@
       "simplifiedSignature": "setUseSignature(Boolean)",
       "datatype": {
         "id": "Messaging.email.setusesignature.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Indicates whether the email includes an email signature if the user has one configured. The default is true, meaning if the user has a signature it is included in the email unless you specify false.",
-      "variables": {
+      "params": {
         "useSignature": {
           "id": "Messaging.email.setusesignature.usesignature",
           "type": "var",
@@ -559,7 +559,7 @@
           "signature": "Boolean useSignature",
           "datatype": {
             "id": "Messaging.email.setusesignature.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }

@@ -1,6 +1,6 @@
 {
   "id": "Wave.querybuilder",
-  "type": "class",
+  "nodeType": "class",
   "name": "QueryBuilder",
   "namespace": "Wave",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "load(string,string)": {
       "id": "Wave.querybuilder.load",
-      "type": "method",
+      "nodeType": "method",
       "name": "load",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -132,11 +132,11 @@
       "simplifiedSignature": "load(String,String)",
       "datatype": {
         "id": "Wave.querybuilder.load.wave.QueryNode",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "wave.QueryNode"
       },
       "description": "Load a stream from a dataset.",
-      "variables": {
+      "params": {
         "datasetID": {
           "id": "Wave.querybuilder.load.datasetid",
           "type": "var",
@@ -163,7 +163,7 @@
           "signature": "String datasetID",
           "datatype": {
             "id": "Wave.querybuilder.load.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -193,7 +193,7 @@
           "signature": "String datasetVersionID",
           "datatype": {
             "id": "Wave.querybuilder.load.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -201,7 +201,7 @@
     },
     "count()": {
       "id": "Wave.querybuilder.count",
-      "type": "method",
+      "nodeType": "method",
       "name": "count",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -264,15 +264,15 @@
       "simplifiedSignature": "count()",
       "datatype": {
         "id": "Wave.querybuilder.count.wave.ProjectionNode",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "wave.ProjectionNode"
       },
       "description": "Calculate the number of rows that match the query criteria.",
-      "variables": {}
+      "params": {}
     },
     "get(string)": {
       "id": "Wave.querybuilder.get",
-      "type": "method",
+      "nodeType": "method",
       "name": "get",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -335,11 +335,11 @@
       "simplifiedSignature": "get(String)",
       "datatype": {
         "id": "Wave.querybuilder.get.wave.ProjectionNode",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "wave.ProjectionNode"
       },
       "description": "Query by selecting specific attributes.",
-      "variables": {
+      "params": {
         "proj": {
           "id": "Wave.querybuilder.get.proj",
           "type": "var",
@@ -366,7 +366,7 @@
           "signature": "String proj",
           "datatype": {
             "id": "Wave.querybuilder.get.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -374,7 +374,7 @@
     },
     "union(list)": {
       "id": "Wave.querybuilder.union",
-      "type": "method",
+      "nodeType": "method",
       "name": "union",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -437,11 +437,11 @@
       "simplifiedSignature": "union(List)",
       "datatype": {
         "id": "Wave.querybuilder.union.wave.QueryNode",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "wave.QueryNode"
       },
       "description": "Combine multiple result sets into one result set.",
-      "variables": {
+      "params": {
         "<Wave.QueryNode>": {
           "id": "Wave.querybuilder.union.<wave.querynode>",
           "type": "var",
@@ -468,7 +468,7 @@
           "signature": "List <Wave.QueryNode>",
           "datatype": {
             "id": "Wave.querybuilder.union.list",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "List"
           }
         }
@@ -476,7 +476,7 @@
     },
     "cogroup(list)": {
       "id": "Wave.querybuilder.cogroup",
-      "type": "method",
+      "nodeType": "method",
       "name": "cogroup",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -539,11 +539,11 @@
       "simplifiedSignature": "cogroup(List)",
       "datatype": {
         "id": "Wave.querybuilder.cogroup.wave.QueryNode",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "wave.QueryNode"
       },
       "description": "Cogrouping means that two input streams are grouped independently and arranged side by side. Only data that exists in both groups appears in the results.",
-      "variables": {
+      "params": {
         "<Wave.QueryNode>": {
           "id": "Wave.querybuilder.cogroup.<wave.querynode>",
           "type": "var",
@@ -570,7 +570,7 @@
           "signature": "List <Wave.QueryNode>",
           "datatype": {
             "id": "Wave.querybuilder.cogroup.list",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "List"
           }
         }

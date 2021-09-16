@@ -22,7 +22,7 @@ class ApexFormatter {
 
     /**
      * Method to format an Apex Class with the selected options
-     * @param {String | Array<Token>} pathContentOrTokens Class file path or String file content or Apex Class Tokens (Use ApexTokenizer)
+     * @param {String | Array<Token>} tokensOrContent Class file path or String file content or Apex Class Tokens (Use ApexTokenizer)
      * @param {(ApexFormatterConfig | Object)} [config] Apex formatter config object or VSCode Config JSON object
      * @param {Object} [systemData] System data like System Apex Classes or Namespaces to tokenize apex class if pathContentOrTokens is a class content or file path. Can get it with System Class from System Module
      * 
@@ -33,13 +33,13 @@ class ApexFormatter {
      * @throws {FileNotFoundException} If the file not exists or not have access to it
      * @throws {InvalidFilePathException} If the path is not a file
      */
-    static format(pathContentOrTokens, config, systemData) {
+    static format(tokensOrContent, config, systemData) {
         let tokens;
-        if (Utils.isArray(pathContentOrTokens)) {
-            tokens = pathContentOrTokens;
-        } else if (Utils.isString(pathContentOrTokens)) {
-            const content = PathUtils.isURI(pathContentOrTokens) ? FileReader.readFileSync(Validator.validateFilePath(pathContentOrTokens)) : pathContentOrTokens;
-            tokens = Lexer.tokenize(content, systemData.sObject, systemData.userClasses, systemData.namespaceSummary);
+        if (Utils.isArray(tokensOrContent)) {
+            tokens = tokensOrContent;
+        } else if (Utils.isString(tokensOrContent)) {
+            const content = tokensOrContent;
+            tokens = Lexer.tokenize(content, systemData);
         } else {
             throw new WrongDatatypeException('You must to select a file path, file content or file tokens');
         }
@@ -71,7 +71,7 @@ function formatApex(tokens, config) {
         let twoLastToken = LangUtils.getTwoLastToken(tokens, index);
         let nextToken = LangUtils.getNextToken(tokens, index);
         let newLines = 0;
-        let originalNewLines = (lastToken && !token.isAux && !lastToken.isAux) ? token.line - lastToken.line : 0;
+        let originalNewLines = (lastToken && !token.isAux && !lastToken.isAux) ? token.range.start.line - lastToken.range.start.line : 0;
         if (token.type === TokenType.BRACKET.CURLY_OPEN || token.type === TokenType.BRACKET.INITIALIZER_OPEN) {
             indent++;
         } else if (token.type === TokenType.BRACKET.CURLY_CLOSE || token.type === TokenType.BRACKET.INITIALIZER_CLOSE) {
@@ -108,21 +108,21 @@ function formatApex(tokens, config) {
         if (lastToken && isAnnotationToken(lastToken) && !isAnnotationToken(token))
             newLines = 1;
         if (isCommentToken(token) && nextToken && isCommentToken(nextToken) && isOnSameLine(token, nextToken))
-            afterWhitespaces = nextToken.startIndex - token.endIndex;
+            afterWhitespaces = nextToken.range.start.character - token.range.end.character;
         if (isCommentToken(token) && lastToken && isCommentToken(lastToken) && !isOnSameLine(token, lastToken))
-            newLines = (lastToken) ? token.line - lastToken.line : 0;
+            newLines = (lastToken) ? token.range.start.line - lastToken.range.start.line : 0;
         if (lastToken && isCommentToken(lastToken) && !isCommentToken(token) && !isOnSameLine(token, lastToken))
             newLines = 1;
         if (lastToken && !isCommentToken(lastToken) && isCommentToken(token) && isOnSameLine(token, lastToken) && config && config.comment.holdBeforeWhitespacesOnLineComment)
-            beforeWhitespaces = token.startIndex - lastToken.endIndex;
+            beforeWhitespaces = token.range.start.character - lastToken.range.end.character;
         if (lastToken && isCommentToken(lastToken) && !isCommentToken(token) && isOnSameLine(token, lastToken) && config && config.comment.holdAfterWhitespacesOnLineComment)
-            afterWhitespaces = token.startIndex - lastToken.endIndex;
+            afterWhitespaces = token.range.start.character - lastToken.range.end.character;
         if (lastToken && isCommentToken(lastToken) && (token.type === TokenType.COMMENT.BLOCK_START || token.type === TokenType.COMMENT.LINE || token.type === TokenType.COMMENT.LINE_DOC) && !isOnSameLine(token, lastToken))
             newLines = (config) ? config.comment.newLinesBewteenComments + 1 : 1;
         if (isStringToken(token) && nextToken && isStringToken(nextToken) && isOnSameLine(token, nextToken)) {
-            afterWhitespaces = nextToken.startIndex - token.endIndex;
+            afterWhitespaces = nextToken.range.start.character - token.range.end.character;
             if (!strIndex)
-                strIndex = token.startIndex;
+                strIndex = token.range.start.character;
         }
         if (lastToken && (lastToken.type === TokenType.BRACKET.CURLY_OPEN || lastToken.type === TokenType.BRACKET.INITIALIZER_OPEN))
             newLines = 1;
@@ -142,7 +142,7 @@ function formatApex(tokens, config) {
             strIndex = undefined;
             if (isCommentToken(token) && isOnSameLine(token, lastToken)) {
                 if (config && config.comment.holdAfterWhitespacesOnLineComment)
-                    beforeWhitespaces = token.startIndex - lastToken.endIndex;
+                    beforeWhitespaces = token.range.start.character - lastToken.range.end.character;
                 else
                     beforeWhitespaces = 1;
             } else {
@@ -497,7 +497,7 @@ function isInitializer(token) {
 }
 
 function isOnSameLine(tokenA, tokenB) {
-    return tokenA && tokenB && tokenA.line === tokenB.line;
+    return tokenA && tokenB && tokenA.range.start.line === tokenB.range.start.line;
 }
 
 function isFieldInstructionDeclaration(tokens, index) {

@@ -1,6 +1,6 @@
 {
   "id": "System.test",
-  "type": "class",
+  "nodeType": "class",
   "name": "Test",
   "namespace": "System",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "clearapexpagemessages()": {
       "id": "System.test.clearapexpagemessages",
-      "type": "method",
+      "nodeType": "method",
       "name": "clearApexPageMessages",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -132,15 +132,15 @@
       "simplifiedSignature": "clearApexPageMessages()",
       "datatype": {
         "id": "System.test.clearapexpagemessages.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Clear the messages on a Visualforce page while executing Apex test methods.",
-      "variables": {}
+      "params": {}
     },
     "createstub(system.type,system.stubprovider)": {
       "id": "System.test.createstub",
-      "type": "method",
+      "nodeType": "method",
       "name": "createStub",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -203,11 +203,11 @@
       "simplifiedSignature": "createStub(System.Type,System.StubProvider)",
       "datatype": {
         "id": "System.test.createstub.Object",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Object"
       },
       "description": "Creates a stubbed version of an Apex class that you can use for testing. This method is part of the Apex stub API. You can use it with the System.StubProvider interface to create a mocking framework.",
-      "variables": {
+      "params": {
         "parentType": {
           "id": "System.test.createstub.parenttype",
           "type": "var",
@@ -234,7 +234,7 @@
           "signature": "System.Type parentType",
           "datatype": {
             "id": "System.test.createstub.system.type",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "System.Type"
           }
         },
@@ -264,7 +264,7 @@
           "signature": "System.StubProvider stubProvider",
           "datatype": {
             "id": "System.test.createstub.system.stubprovider",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "System.StubProvider"
           }
         }
@@ -272,7 +272,7 @@
     },
     "enablechangedatacapture()": {
       "id": "System.test.enablechangedatacapture",
-      "type": "method",
+      "nodeType": "method",
       "name": "enableChangeDataCapture",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -335,15 +335,15 @@
       "simplifiedSignature": "enableChangeDataCapture()",
       "datatype": {
         "id": "System.test.enablechangedatacapture.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Use this method in an Apex test so that change event notifications are generated for all supported Change Data Capture entities. Call this method at the beginning of your test before performing DML operations and calling Test.getEventBus().deliver();.",
-      "variables": {}
+      "params": {}
     },
     "enqueuebatchjobs(integer)": {
       "id": "System.test.enqueuebatchjobs",
-      "type": "method",
+      "nodeType": "method",
       "name": "enqueueBatchJobs",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -406,11 +406,11 @@
       "simplifiedSignature": "enqueueBatchJobs(Integer)",
       "datatype": {
         "id": "System.test.enqueuebatchjobs.List<Id>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "List<Id>"
       },
       "description": "Adds the specified number of jobs with no-operation contents to the test-context queue. It first fills the test batch queue, up to the maximum 5 jobs, and then places jobs in the test flex queue. It throws a limit exception when the number of jobs in the test flex queue exceeds the allowed limit of 100 jobs.",
-      "variables": {
+      "params": {
         "numberOfJobs": {
           "id": "System.test.enqueuebatchjobs.numberofjobs",
           "type": "var",
@@ -437,7 +437,7 @@
           "signature": "Integer numberOfJobs",
           "datatype": {
             "id": "System.test.enqueuebatchjobs.integer",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Integer"
           }
         }
@@ -445,7 +445,7 @@
     },
     "geteventbus()": {
       "id": "System.test.geteventbus",
-      "type": "method",
+      "nodeType": "method",
       "name": "getEventBus",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -508,15 +508,15 @@
       "simplifiedSignature": "getEventBus()",
       "datatype": {
         "id": "System.test.geteventbus.EventBus.TestBroker",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "EventBus.TestBroker"
       },
       "description": "Returns an instance of the test event bus broker, which lets you operate on platform event or change event messages in an Apex test. For example, you can call Test.getEventBus().deliver() to deliver event messages.",
-      "variables": {}
+      "params": {}
     },
     "getflexqueueorder()": {
       "id": "System.test.getflexqueueorder",
-      "type": "method",
+      "nodeType": "method",
       "name": "getFlexQueueOrder",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -579,15 +579,15 @@
       "simplifiedSignature": "getFlexQueueOrder()",
       "datatype": {
         "id": "System.test.getflexqueueorder.List<Id>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "List<Id>"
       },
       "description": "Returns an ordered list of job IDs for jobs in the test-context flex queue. The job at index 0 is the next job slated to run. This method returns only test-context results, even if it’s annotated with @IsTest(SeeAllData=true).",
-      "variables": {}
+      "params": {}
     },
     "getstandardpricebookid()": {
       "id": "System.test.getstandardpricebookid",
-      "type": "method",
+      "nodeType": "method",
       "name": "getStandardPricebookId",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -650,15 +650,15 @@
       "simplifiedSignature": "getStandardPricebookId()",
       "datatype": {
         "id": "System.test.getstandardpricebookid.Id",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Id"
       },
       "description": "Returns the ID of the standard price book in the organization.",
-      "variables": {}
+      "params": {}
     },
     "invokecontinuationmethod(object,continuation)": {
       "id": "System.test.invokecontinuationmethod",
-      "type": "method",
+      "nodeType": "method",
       "name": "invokeContinuationMethod",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -721,11 +721,11 @@
       "simplifiedSignature": "invokeContinuationMethod(Object,Continuation)",
       "datatype": {
         "id": "System.test.invokecontinuationmethod.Object",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Object"
       },
       "description": "Invokes the callback method for the specified controller and continuation in a test method.",
-      "variables": {
+      "params": {
         "controller": {
           "id": "System.test.invokecontinuationmethod.controller",
           "type": "var",
@@ -752,7 +752,7 @@
           "signature": "Object controller",
           "datatype": {
             "id": "System.test.invokecontinuationmethod.object",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Object"
           }
         },
@@ -782,7 +782,7 @@
           "signature": "Continuation request",
           "datatype": {
             "id": "System.test.invokecontinuationmethod.continuation",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Continuation"
           }
         }
@@ -790,7 +790,7 @@
     },
     "isrunningtest()": {
       "id": "System.test.isrunningtest",
-      "type": "method",
+      "nodeType": "method",
       "name": "isRunningTest",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -853,15 +853,15 @@
       "simplifiedSignature": "isRunningTest()",
       "datatype": {
         "id": "System.test.isrunningtest.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Returns true if the currently executing code was called by code contained in a test method, false otherwise. Use this method if you need to run different code depending on whether it was being called  from a test.",
-      "variables": {}
+      "params": {}
     },
     "loaddata(schema.sobjecttype,string)": {
       "id": "System.test.loaddata",
-      "type": "method",
+      "nodeType": "method",
       "name": "loadData",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -924,11 +924,11 @@
       "simplifiedSignature": "loadData(Schema.SObjectType,String)",
       "datatype": {
         "id": "System.test.loaddata.List<sObject>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "List<sObject>"
       },
       "description": "Inserts test records from the specified static resource .csv file and for the specified sObject type, and returns a list of the inserted sObjects.",
-      "variables": {
+      "params": {
         "sObjectToken": {
           "id": "System.test.loaddata.sobjecttoken",
           "type": "var",
@@ -955,7 +955,7 @@
           "signature": "Schema.SObjectType sObjectToken",
           "datatype": {
             "id": "System.test.loaddata.schema.sobjecttype",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Schema.SObjectType"
           }
         },
@@ -985,7 +985,7 @@
           "signature": "String resourceName",
           "datatype": {
             "id": "System.test.loaddata.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -993,7 +993,7 @@
     },
     "newsendemailquickactiondefaults(id,id)": {
       "id": "System.test.newsendemailquickactiondefaults",
-      "type": "method",
+      "nodeType": "method",
       "name": "newSendEmailQuickActionDefaults",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1056,11 +1056,11 @@
       "simplifiedSignature": "newSendEmailQuickActionDefaults(ID,ID)",
       "datatype": {
         "id": "System.test.newsendemailquickactiondefaults.SendEmailQuickActionDefaults Class",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "SendEmailQuickActionDefaults Class"
       },
       "description": "Creates a new QuickAction.SendEmailQuickActionDefaults instance for testing a class implementing the QuickAction.QuickActionDefaultsHandler interface.",
-      "variables": {
+      "params": {
         "contextId": {
           "id": "System.test.newsendemailquickactiondefaults.contextid",
           "type": "var",
@@ -1087,7 +1087,7 @@
           "signature": "ID contextId",
           "datatype": {
             "id": "System.test.newsendemailquickactiondefaults.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "ID"
           }
         },
@@ -1117,7 +1117,7 @@
           "signature": "ID replyToId",
           "datatype": {
             "id": "System.test.newsendemailquickactiondefaults.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "ID"
           }
         }
@@ -1125,7 +1125,7 @@
     },
     "setcontinuationresponse(string,system.httpresponse)": {
       "id": "System.test.setcontinuationresponse",
-      "type": "method",
+      "nodeType": "method",
       "name": "setContinuationResponse",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1188,11 +1188,11 @@
       "simplifiedSignature": "setContinuationResponse(String,System.HttpResponse)",
       "datatype": {
         "id": "System.test.setcontinuationresponse.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Sets a mock response for a continuation HTTP request in a test method.",
-      "variables": {
+      "params": {
         "requestLabel": {
           "id": "System.test.setcontinuationresponse.requestlabel",
           "type": "var",
@@ -1219,7 +1219,7 @@
           "signature": "String requestLabel",
           "datatype": {
             "id": "System.test.setcontinuationresponse.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1249,7 +1249,7 @@
           "signature": "System.HttpResponse mockResponse",
           "datatype": {
             "id": "System.test.setcontinuationresponse.system.httpresponse",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "System.HttpResponse"
           }
         }
@@ -1257,7 +1257,7 @@
     },
     "setcreateddate(id,datetime)": {
       "id": "System.test.setcreateddate",
-      "type": "method",
+      "nodeType": "method",
       "name": "setCreatedDate",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1320,11 +1320,11 @@
       "simplifiedSignature": "setCreatedDate(Id,Datetime)",
       "datatype": {
         "id": "System.test.setcreateddate.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Sets CreatedDate for a test-context sObject.",
-      "variables": {
+      "params": {
         "recordId": {
           "id": "System.test.setcreateddate.recordid",
           "type": "var",
@@ -1351,7 +1351,7 @@
           "signature": "Id recordId",
           "datatype": {
             "id": "System.test.setcreateddate.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         },
@@ -1381,7 +1381,7 @@
           "signature": "Datetime createdDatetime",
           "datatype": {
             "id": "System.test.setcreateddate.datetime",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Datetime"
           }
         }
@@ -1389,7 +1389,7 @@
     },
     "setcurrentpage(pagereference)": {
       "id": "System.test.setcurrentpage",
-      "type": "method",
+      "nodeType": "method",
       "name": "setCurrentPage",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1452,11 +1452,11 @@
       "simplifiedSignature": "setCurrentPage(PageReference)",
       "datatype": {
         "id": "System.test.setcurrentpage.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "A Visualforce test method that sets the current PageReference for the controller.",
-      "variables": {
+      "params": {
         "page": {
           "id": "System.test.setcurrentpage.page",
           "type": "var",
@@ -1483,7 +1483,7 @@
           "signature": "PageReference page",
           "datatype": {
             "id": "System.test.setcurrentpage.pagereference",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "PageReference"
           }
         }
@@ -1491,7 +1491,7 @@
     },
     "setcurrentpagereference(pagereference)": {
       "id": "System.test.setcurrentpagereference",
-      "type": "method",
+      "nodeType": "method",
       "name": "setCurrentPageReference",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1554,11 +1554,11 @@
       "simplifiedSignature": "setCurrentPageReference(PageReference)",
       "datatype": {
         "id": "System.test.setcurrentpagereference.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "A Visualforce test method that sets the current PageReference for the controller.",
-      "variables": {
+      "params": {
         "page": {
           "id": "System.test.setcurrentpagereference.page",
           "type": "var",
@@ -1585,7 +1585,7 @@
           "signature": "PageReference page",
           "datatype": {
             "id": "System.test.setcurrentpagereference.pagereference",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "PageReference"
           }
         }
@@ -1593,7 +1593,7 @@
     },
     "setfixedsearchresults(id[])": {
       "id": "System.test.setfixedsearchresults",
-      "type": "method",
+      "nodeType": "method",
       "name": "setFixedSearchResults",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1656,11 +1656,11 @@
       "simplifiedSignature": "setFixedSearchResults(ID[])",
       "datatype": {
         "id": "System.test.setfixedsearchresults.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Defines a list of fixed search results to be returned by all subsequent SOSL statements in a test method.",
-      "variables": {
+      "params": {
         "fixedSearchResults": {
           "id": "System.test.setfixedsearchresults.fixedsearchresults",
           "type": "var",
@@ -1687,7 +1687,7 @@
           "signature": "ID[] fixedSearchResults",
           "datatype": {
             "id": "System.test.setfixedsearchresults.id[]",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "ID[]"
           }
         }
@@ -1695,7 +1695,7 @@
     },
     "setmock(type,object)": {
       "id": "System.test.setmock",
-      "type": "method",
+      "nodeType": "method",
       "name": "setMock",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1758,11 +1758,11 @@
       "simplifiedSignature": "setMock(Type,Object)",
       "datatype": {
         "id": "System.test.setmock.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Sets the response mock mode and instructs the Apex runtime to send a mock response whenever a callout is made through the HTTP classes or the auto-generated code from WSDLs.",
-      "variables": {
+      "params": {
         "interfaceType": {
           "id": "System.test.setmock.interfacetype",
           "type": "var",
@@ -1789,7 +1789,7 @@
           "signature": "Type interfaceType",
           "datatype": {
             "id": "System.test.setmock.type",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Type"
           }
         },
@@ -1819,7 +1819,7 @@
           "signature": "Object instance",
           "datatype": {
             "id": "System.test.setmock.object",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Object"
           }
         }
@@ -1827,7 +1827,7 @@
     },
     "setreadonlyapplicationmode(boolean)": {
       "id": "System.test.setreadonlyapplicationmode",
-      "type": "method",
+      "nodeType": "method",
       "name": "setReadOnlyApplicationMode",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1890,11 +1890,11 @@
       "simplifiedSignature": "setReadOnlyApplicationMode(Boolean)",
       "datatype": {
         "id": "System.test.setreadonlyapplicationmode.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Sets the application mode for an organization to read-only in an Apex test to simulate read-only mode during Salesforce upgrades and downtimes. The application mode is reset to the default mode at the end of each Apex test run.",
-      "variables": {
+      "params": {
         "applicationMode": {
           "id": "System.test.setreadonlyapplicationmode.applicationmode",
           "type": "var",
@@ -1921,7 +1921,7 @@
           "signature": "Boolean applicationMode",
           "datatype": {
             "id": "System.test.setreadonlyapplicationmode.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -1929,7 +1929,7 @@
     },
     "starttest()": {
       "id": "System.test.starttest",
-      "type": "method",
+      "nodeType": "method",
       "name": "startTest",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1992,15 +1992,15 @@
       "simplifiedSignature": "startTest()",
       "datatype": {
         "id": "System.test.starttest.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Marks the point in your test code when your test actually begins.  Use this method when you are testing governor limits.",
-      "variables": {}
+      "params": {}
     },
     "stoptest()": {
       "id": "System.test.stoptest",
-      "type": "method",
+      "nodeType": "method",
       "name": "stopTest",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -2063,15 +2063,15 @@
       "simplifiedSignature": "stopTest()",
       "datatype": {
         "id": "System.test.stoptest.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Marks the point in your test code when your test ends. Use this method in conjunction with the startTest method.",
-      "variables": {}
+      "params": {}
     },
     "testinstall(installhandler,version,boolean)": {
       "id": "System.test.testinstall",
-      "type": "method",
+      "nodeType": "method",
       "name": "testInstall",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -2134,11 +2134,11 @@
       "simplifiedSignature": "testInstall(InstallHandler,Version,Boolean)",
       "datatype": {
         "id": "System.test.testinstall.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Tests the implementation of the InstallHandler interface, which is used for specifying a post install script in packages. Tests run as the test initiator in the development environment.",
-      "variables": {
+      "params": {
         "installImplementation": {
           "id": "System.test.testinstall.installimplementation",
           "type": "var",
@@ -2165,7 +2165,7 @@
           "signature": "InstallHandler installImplementation",
           "datatype": {
             "id": "System.test.testinstall.installhandler",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "InstallHandler"
           }
         },
@@ -2195,7 +2195,7 @@
           "signature": "Version version",
           "datatype": {
             "id": "System.test.testinstall.version",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Version"
           }
         },
@@ -2225,7 +2225,7 @@
           "signature": "Boolean isPush",
           "datatype": {
             "id": "System.test.testinstall.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -2233,7 +2233,7 @@
     },
     "testuninstall(uninstallhandler)": {
       "id": "System.test.testuninstall",
-      "type": "method",
+      "nodeType": "method",
       "name": "testUninstall",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -2296,11 +2296,11 @@
       "simplifiedSignature": "testUninstall(UninstallHandler)",
       "datatype": {
         "id": "System.test.testuninstall.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Tests the implementation of the UninstallHandler interface, which is used for specifying an uninstall script in packages. Tests run as the test initiator in the development environment.",
-      "variables": {
+      "params": {
         "uninstallImplementation": {
           "id": "System.test.testuninstall.uninstallimplementation",
           "type": "var",
@@ -2327,7 +2327,7 @@
           "signature": "UninstallHandler uninstallImplementation",
           "datatype": {
             "id": "System.test.testuninstall.uninstallhandler",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "UninstallHandler"
           }
         }

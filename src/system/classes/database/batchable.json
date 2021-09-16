@@ -1,6 +1,6 @@
 {
   "id": "Database.batchable",
-  "type": "interface",
+  "nodeType": "interface",
   "name": "Batchable",
   "namespace": "Database",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "execute(database.batchablecontext,list)": {
       "id": "Database.batchable.execute",
-      "type": "method",
+      "nodeType": "method",
       "name": "execute",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -113,11 +113,11 @@
       "simplifiedSignature": "execute(Database.BatchableContext,List)",
       "datatype": {
         "id": "Database.batchable.execute.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Gets invoked when the batch job executes and operates on one batch of records. Contains or calls the main execution logic for the batch job.",
-      "variables": {
+      "params": {
         "jobId": {
           "id": "Database.batchable.execute.jobid",
           "type": "var",
@@ -144,7 +144,7 @@
           "signature": "Database.BatchableContext jobId",
           "datatype": {
             "id": "Database.batchable.execute.database.batchablecontext",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Database.BatchableContext"
           }
         },
@@ -174,7 +174,7 @@
           "signature": "List <sObject>",
           "datatype": {
             "id": "Database.batchable.execute.list",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "List"
           }
         }
@@ -182,7 +182,7 @@
     },
     "finish(database.batchablecontext)": {
       "id": "Database.batchable.finish",
-      "type": "method",
+      "nodeType": "method",
       "name": "finish",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -226,11 +226,11 @@
       "simplifiedSignature": "finish(Database.BatchableContext)",
       "datatype": {
         "id": "Database.batchable.finish.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Gets invoked when the batch job finishes. Place any clean up code in this method.",
-      "variables": {
+      "params": {
         "jobId": {
           "id": "Database.batchable.finish.jobid",
           "type": "var",
@@ -257,7 +257,7 @@
           "signature": "Database.BatchableContext jobId",
           "datatype": {
             "id": "Database.batchable.finish.database.batchablecontext",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Database.BatchableContext"
           }
         }
@@ -265,7 +265,7 @@
     },
     "start(database.batchablecontext)": {
       "id": "Database.batchable.start",
-      "type": "method",
+      "nodeType": "method",
       "name": "start",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -309,11 +309,11 @@
       "simplifiedSignature": "start(Database.BatchableContext)",
       "datatype": {
         "id": "Database.batchable.start.Database.QueryLocator",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Database.QueryLocator"
       },
       "description": "Gets invoked when the batch job starts. Returns the record set as a QueryLocator object that will be batched for execution.",
-      "variables": {
+      "params": {
         "jobId": {
           "id": "Database.batchable.start.jobid",
           "type": "var",
@@ -340,7 +340,7 @@
           "signature": "Database.BatchableContext jobId",
           "datatype": {
             "id": "Database.batchable.start.database.batchablecontext",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Database.BatchableContext"
           }
         }

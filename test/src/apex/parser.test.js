@@ -1,8 +1,9 @@
-const { Types, FileSystem, CoreUtils } = require('@ah/core');
+const { Types, FileSystem, CoreUtils, Values } = require('@ah/core');
 const TypesFactory = require('@ah/metadata-factory');
 const FileReader = FileSystem.FileReader;
 const FileWriter = FileSystem.FileWriter;
 const FileChecker = FileSystem.FileChecker;
+const PathUtils = FileSystem.PathUtils;
 const ApexClass = Types.ApexClass;
 const ApexInterface = Types.ApexInterface;
 const ApexEnum = Types.ApexEnum;
@@ -15,10 +16,12 @@ const ApexMethod = Types.ApexMethod;
 const ApexConstructor = Types.ApexConstructor;
 const Token = Types.Token;
 const StrUtils = CoreUtils.StrUtils;
+const Utils = CoreUtils.Utils;
 const TokenType = require('../../../src/apex/tokenTypes')
 const ApexLexer = require('../../../src/apex/tokenizer');
 const ApexParser = require('../../../src/apex/parser');
 const System = require('../../../src/system/system');
+const ApexNodeTypes = Values.ApexNodeTypes;
 
 function createApexClass(JSONData, parent) {
     const apexClass = new ApexClass(JSONData.namespace + '.' + ((parent !== undefined) ? parent.name.toLowerCase() + '.' : '') + JSONData.name.toLowerCase(), JSONData.name, new Token(TokenType.DECLARATION.ENTITY.CLASS, JSONData.name, -1));
@@ -494,42 +497,52 @@ describe('Testing ./src/apex/parser.js', () => {
                 }
             }
         }
-        const oneFile = false;
-        const fileToProcess = 'a_DML_Utils.cls';
+        const oneFile = true;
+        const fileToProcess = 'a_BaseComponentController.cls';
         console.time('nsSummary');
         const nsSummary = System.getAllNamespacesSummary();
         console.timeEnd('nsSummary');
         const folderPath = './test/assets/SFDXProject/force-app/main/default/classes';
         console.time('compilationTime');
         const nodes = {};
-        if(oneFile){
-            //console.time(fileToProcess + ' compilationTime');
+        const systemData = {
+            sObjects: sObjects,
+            userClasses: userClasses,
+            namespaceSummary: nsSummary
+        };
+        if (oneFile) {
             const filPath = folderPath + '/' + fileToProcess;
-            const fileContent = FileReader.readFileSync(filPath);
+            //console.time(fileToProcess + ' compilationTime');
             //console.time(fileToProcess + ' lexer');
-            const tokens = ApexLexer.tokenize(fileContent, sObjects, userClasses, nsSummary);
+            //const tokens = ApexLexer.tokenize(fileContent, systemData);
             /*console.timeEnd(fileToProcess + ' lexer');
             console.time(fileToProcess + ' parser');*/
-            ApexParser.parse(tokens);
+            const node = new ApexParser(filPath, systemData).parse();
+            if (node.nodeType === ApexNodeTypes.CLASS || node.nodeType === ApexNodeTypes.INTERFACE || node.nodeType === ApexNodeTypes.TRIGGER) {
+                validateNode(node);
+            }
             /*console.timeEnd(fileToProcess + ' parser');
             console.timeEnd(fileToProcess + 'compilationTime');*/
         } else {
             for (const file of FileReader.readDirSync(folderPath)) {
-                if(!file.endsWith('.cls'))
+                if (!file.endsWith('.cls'))
                     continue;
                 try {
                     //console.time(file + ' compilationTime');
                     const filPath = folderPath + '/' + file;
-                    const fileContent = FileReader.readFileSync(filPath);
+                    //const fileContent = FileReader.readFileSync(filPath);
                     //console.time(file + ' lexer');
-                    const tokens = ApexLexer.tokenize(fileContent, sObjects, userClasses, nsSummary);
+                    //const tokens = ApexLexer.tokenize(fileContent, sObjects, userClasses, nsSummary);
                     /*console.timeEnd(file + ' lexer');
                     console.time(file + ' parser');*/
-                    const node = ApexParser.parse(tokens);
+                    const node = new ApexParser(filPath, systemData).parse();
+                    if (node.nodeType === ApexNodeTypes.CLASS || node.nodeType === ApexNodeTypes.INTERFACE || node.nodeType === ApexNodeTypes.TRIGGER) {
+                        validateNode(node);
+                    }
                     nodes[node.name.toLowerCase()] = node;
                     /*console.timeEnd(file + ' parser');
                     console.timeEnd(file + 'compilationTime');*/
-                } catch(error){
+                } catch (error) {
                     console.log('Error en el archivo: ' + file);
                     console.log(JSON.stringify(error));
                     throw error;
@@ -538,4 +551,165 @@ describe('Testing ./src/apex/parser.js', () => {
         }
         console.timeEnd('compilationTime');
     });
+    test('Testing saveAllClasesData()', async (done) => {
+        const metadataTypes = TypesFactory.createMetadataTypesFromPackageXML('./test/assets/SFDXProject/manifest/package.xml');
+        const sObjects = [];
+        const userClasses = [];
+        for (const metadataTypeName of Object.keys(metadataTypes)) {
+            const metadataType = metadataTypes[metadataTypeName];
+            for (const metadataObjectName of metadataType.getChildKeys()) {
+                if (metadataTypeName === 'ApexClass') {
+                    userClasses.push(metadataObjectName.toLowerCase());
+                } else if (metadataTypeName === 'CustomObject') {
+                    sObjects.push(metadataObjectName.toLowerCase());
+                }
+            }
+        }
+        const oneFile = false;
+        const fileToProcess = 'a_DML_Utils.cls';
+        console.time('nsSummary');
+        const nsSummary = System.getAllNamespacesSummary();
+        console.timeEnd('nsSummary');
+        const folderPath = './test/assets/SFDXProject/force-app/main/default/classes';
+        const nodes = {};
+        const systemData = {
+            sObjects: sObjects,
+            userClasses: userClasses,
+            namespaceSummary: nsSummary
+        };
+        let compiledClassesFolder = PathUtils.getAbsolutePath('./test/assets/compiledClasses');
+        if (FileChecker.isExists(compiledClassesFolder))
+            FileWriter.delete(compiledClassesFolder);
+        FileWriter.createFolderSync(compiledClassesFolder);
+        console.time('compilationTime');
+        if (oneFile) {
+            //console.time(fileToProcess + ' compilationTime');
+            //const filPath = folderPath + '/' + fileToProcess;
+            //const fileContent = FileReader.readFileSync(filPath);
+            //console.time(fileToProcess + ' lexer');
+            //const tokens = ApexLexer.tokenize(fileContent, sObjects, userClasses, nsSummary);
+            // console.timeEnd(fileToProcess + ' lexer');
+            // console.time(fileToProcess + ' parser');
+            //ApexParser.parse(tokens);
+            // console.timeEnd(fileToProcess + ' parser');
+            // console.timeEnd(fileToProcess + 'compilationTime');
+        } else {
+            await ApexParser.saveAllClassesData(folderPath, compiledClassesFolder, systemData, true);
+        }
+        console.timeEnd('compilationTime');
+        done();
+    }, 3000000);
 });
+
+function validateNode(node) {
+    try {
+        if (node.initializer && !Utils.isNull(node.initializer)) {
+            validateInitOrStaticConst(node.initializer);
+        }
+        if (node.staticConstructor && !Utils.isNull(node.staticConstructor)) {
+            validateInitOrStaticConst(node.staticConstructor);
+        }
+        if (node.classes && Utils.hasKeys(node.classes)) {
+            for (const key of Object.keys(node.classes)) {
+                const nodeTmp = node.classes[key];
+                validateNode(nodeTmp);
+            }
+        }
+        if (node.interfaces && Utils.hasKeys(node.interfaces)) {
+            for (const key of Object.keys(node.interfaces)) {
+                const nodeTmp = node.interfaces[key];
+                validateNode(nodeTmp);
+            }
+        }
+        if (node.enums && Utils.hasKeys(node.enums)) {
+            for (const key of Object.keys(node.enums)) {
+                const nodeTmp = node.enums[key];
+                validateNode(nodeTmp);
+            }
+        }
+        if (node.variables && Utils.hasKeys(node.variables)) {
+            for (const key of Object.keys(node.variables)) {
+                const nodeTmp = node.variables[key];
+                validateVariable(nodeTmp);
+            }
+        }
+        if (node.methods && Utils.hasKeys(node.methods)) {
+            for (const key of Object.keys(node.methods)) {
+                const nodeTmp = node.methods[key];
+                validateMethod(nodeTmp);
+            }
+        }
+        if (node.constructors && Utils.hasKeys(node.constructors)) {
+            for (const key of Object.keys(node.constructors)) {
+                const nodeTmp = node.constructors[key];
+                validateConstructor(nodeTmp);
+            }
+        }
+    } catch (error) {
+        throw new Error(node.name + ' => ' + error.message);
+    }
+}
+
+function validateVariable(node) {
+    if (!node.name)
+        throw new Error(node.nodeType + ' => ' + node.id + ' => Missing name');
+    if (!node.datatype)
+        throw new Error(node.nodeType + ' => ' + node.name + ' => Missing datatype');
+}
+
+function validateMethod(node) {
+    if (!node.name)
+        throw new Error(node.nodeType + ' => ' + node.id + ' => Missing name');
+    if (!node.datatype)
+        throw new Error(node.nodeType + ' => ' + node.name + ' => Missing datatype');
+    try {
+        if (node.variables && Utils.hasKeys(node.variables)) {
+            for (const key of Object.keys(node.variables)) {
+                const nodeTmp = node.variables[key];
+                validateVariable(nodeTmp);
+            }
+        }
+        if (node.params && Utils.hasKeys(node.params)) {
+            for (const key of Object.keys(node.params)) {
+                const nodeTmp = node.params[key];
+                validateVariable(nodeTmp);
+            }
+        }
+    } catch (error) {
+        throw new Error(node.nodeType + ' => ' + node.name + ' => ' + error.message);
+    }
+}
+
+function validateConstructor(node) {
+    if (!node.name)
+        throw new Error(node.nodeType + ' => ' + node.id + ' => Missing name');
+    try {
+        if (node.variables && Utils.hasKeys(node.variables)) {
+            for (const key of Object.keys(node.variables)) {
+                const nodeTmp = node.variables[key];
+                validateVariable(nodeTmp);
+            }
+        }
+        if (node.params && Utils.hasKeys(node.params)) {
+            for (const key of Object.keys(node.params)) {
+                const nodeTmp = node.params[key];
+                validateVariable(nodeTmp);
+            }
+        }
+    } catch (error) {
+        throw new Error(node.nodeType + ' => ' + node.name + ' => ' + error.message);
+    }
+}
+
+function validateInitOrStaticConst(node) {
+    try {
+        if (node.variables && Utils.hasKeys(node.variables)) {
+            for (const key of Object.keys(node.variables)) {
+                const nodeTmp = node.variables[key];
+                validateVariable(nodeTmp);
+            }
+        }
+    } catch (error) {
+        throw new Error(node.nodeType + ' => ' + node.name + ' => ' + error.message);
+    }
+}

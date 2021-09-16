@@ -1,6 +1,6 @@
 {
   "id": "Auth.jwt",
-  "type": "class",
+  "nodeType": "class",
   "name": "JWT",
   "namespace": "Auth",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "clone()": {
       "id": "Auth.jwt.clone",
-      "type": "method",
+      "nodeType": "method",
       "name": "clone",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -113,15 +113,15 @@
       "simplifiedSignature": "clone()",
       "datatype": {
         "id": "Auth.jwt.clone.JWT",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "JWT"
       },
       "description": "Makes a duplicate copy of the JWT object.",
-      "variables": {}
+      "params": {}
     },
     "getadditionalclaims()": {
       "id": "Auth.jwt.getadditionalclaims",
-      "type": "method",
+      "nodeType": "method",
       "name": "getAdditionalClaims",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -165,15 +165,15 @@
       "simplifiedSignature": "getAdditionalClaims()",
       "datatype": {
         "id": "Auth.jwt.getadditionalclaims.Map<String, ANY>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Map<String, ANY>"
       },
       "description": "Returns a map of additional claims in the JWT, where the key string contains the name of the claim, and the value contains the value of the claim.",
-      "variables": {}
+      "params": {}
     },
     "getaud()": {
       "id": "Auth.jwt.getaud",
-      "type": "method",
+      "nodeType": "method",
       "name": "getAud",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -217,15 +217,15 @@
       "simplifiedSignature": "getAud()",
       "datatype": {
         "id": "Auth.jwt.getaud.String",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "String"
       },
       "description": "Returns the audience claim that identifies the intended recipients of the JWT.",
-      "variables": {}
+      "params": {}
     },
     "getiss()": {
       "id": "Auth.jwt.getiss",
-      "type": "method",
+      "nodeType": "method",
       "name": "getIss",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -269,15 +269,15 @@
       "simplifiedSignature": "getIss()",
       "datatype": {
         "id": "Auth.jwt.getiss.String",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "String"
       },
       "description": "Returns the issuer claim that identifies the issuer of the JWT.",
-      "variables": {}
+      "params": {}
     },
     "getnbfclockskew()": {
       "id": "Auth.jwt.getnbfclockskew",
-      "type": "method",
+      "nodeType": "method",
       "name": "getNbfClockSkew",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -321,15 +321,15 @@
       "simplifiedSignature": "getNbfClockSkew()",
       "datatype": {
         "id": "Auth.jwt.getnbfclockskew.Integer",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Integer"
       },
       "description": "Returns the not before claim that identifies the time before which the JWT must not be accepted for processing, while allowing some leeway for clock skew.",
-      "variables": {}
+      "params": {}
     },
     "getsub()": {
       "id": "Auth.jwt.getsub",
-      "type": "method",
+      "nodeType": "method",
       "name": "getSub",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -373,15 +373,15 @@
       "simplifiedSignature": "getSub()",
       "datatype": {
         "id": "Auth.jwt.getsub.String",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "String"
       },
       "description": "Returns the subject claim that identifies the current user of the JWT.",
-      "variables": {}
+      "params": {}
     },
     "getvaliditylength()": {
       "id": "Auth.jwt.getvaliditylength",
-      "type": "method",
+      "nodeType": "method",
       "name": "getValidityLength",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -425,15 +425,15 @@
       "simplifiedSignature": "getValidityLength()",
       "datatype": {
         "id": "Auth.jwt.getvaliditylength.Integer",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Integer"
       },
       "description": "Returns the length of time that the JWT is valid, which affects the expiration claim.",
-      "variables": {}
+      "params": {}
     },
     "setadditionalclaims(map,any>)": {
       "id": "Auth.jwt.setadditionalclaims",
-      "type": "method",
+      "nodeType": "method",
       "name": "setAdditionalClaims",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -477,11 +477,11 @@
       "simplifiedSignature": "setAdditionalClaims(Map,ANY>)",
       "datatype": {
         "id": "Auth.jwt.setadditionalclaims.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Sets the additional claims in the JWT. Returned by the getAdditionalClaims() method.",
-      "variables": {
+      "params": {
         "<String": {
           "id": "Auth.jwt.setadditionalclaims.<string",
           "type": "var",
@@ -508,7 +508,7 @@
           "signature": "Map <String",
           "datatype": {
             "id": "Auth.jwt.setadditionalclaims.map",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Map"
           }
         },
@@ -538,7 +538,7 @@
           "signature": "ANY> additionalClaims",
           "datatype": {
             "id": "Auth.jwt.setadditionalclaims.any>",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "ANY>"
           }
         }
@@ -546,7 +546,7 @@
     },
     "setaud(string)": {
       "id": "Auth.jwt.setaud",
-      "type": "method",
+      "nodeType": "method",
       "name": "setAud",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -590,11 +590,11 @@
       "simplifiedSignature": "setAud(String)",
       "datatype": {
         "id": "Auth.jwt.setaud.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Sets the audience claim in the JWT. Returned by the getAud() method.",
-      "variables": {
+      "params": {
         "aud": {
           "id": "Auth.jwt.setaud.aud",
           "type": "var",
@@ -621,7 +621,7 @@
           "signature": "String aud",
           "datatype": {
             "id": "Auth.jwt.setaud.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -629,7 +629,7 @@
     },
     "setiss(string)": {
       "id": "Auth.jwt.setiss",
-      "type": "method",
+      "nodeType": "method",
       "name": "setIss",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -673,11 +673,11 @@
       "simplifiedSignature": "setIss(String)",
       "datatype": {
         "id": "Auth.jwt.setiss.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Sets the issuer claim in the JWT. Returned by the getIss() method.",
-      "variables": {
+      "params": {
         "iss": {
           "id": "Auth.jwt.setiss.iss",
           "type": "var",
@@ -704,7 +704,7 @@
           "signature": "String iss",
           "datatype": {
             "id": "Auth.jwt.setiss.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -712,7 +712,7 @@
     },
     "setnbfclockskew(integer)": {
       "id": "Auth.jwt.setnbfclockskew",
-      "type": "method",
+      "nodeType": "method",
       "name": "setNbfClockSkew",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -756,11 +756,11 @@
       "simplifiedSignature": "setNbfClockSkew(Integer)",
       "datatype": {
         "id": "Auth.jwt.setnbfclockskew.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Sets the not before claim in the JWT. Returned by the getNbfClockSkew() method.",
-      "variables": {
+      "params": {
         "nbfClockSkew": {
           "id": "Auth.jwt.setnbfclockskew.nbfclockskew",
           "type": "var",
@@ -787,7 +787,7 @@
           "signature": "Integer nbfClockSkew",
           "datatype": {
             "id": "Auth.jwt.setnbfclockskew.integer",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Integer"
           }
         }
@@ -795,7 +795,7 @@
     },
     "setsub(string)": {
       "id": "Auth.jwt.setsub",
-      "type": "method",
+      "nodeType": "method",
       "name": "setSub",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -839,11 +839,11 @@
       "simplifiedSignature": "setSub(String)",
       "datatype": {
         "id": "Auth.jwt.setsub.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Sets the subject claim in the JWT. Returned by the getSub() method.",
-      "variables": {
+      "params": {
         "sub": {
           "id": "Auth.jwt.setsub.sub",
           "type": "var",
@@ -870,7 +870,7 @@
           "signature": "String sub",
           "datatype": {
             "id": "Auth.jwt.setsub.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -878,7 +878,7 @@
     },
     "setvaliditylength(integer)": {
       "id": "Auth.jwt.setvaliditylength",
-      "type": "method",
+      "nodeType": "method",
       "name": "setValidityLength",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -922,11 +922,11 @@
       "simplifiedSignature": "setValidityLength(Integer)",
       "datatype": {
         "id": "Auth.jwt.setvaliditylength.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Sets the length of time that the JWT is valid, which affects the expiration claim. Returned by the getValidityLength() method.",
-      "variables": {
+      "params": {
         "validityLength": {
           "id": "Auth.jwt.setvaliditylength.validitylength",
           "type": "var",
@@ -953,7 +953,7 @@
           "signature": "Integer validityLength",
           "datatype": {
             "id": "Auth.jwt.setvaliditylength.integer",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Integer"
           }
         }
@@ -961,7 +961,7 @@
     },
     "tojsonstring()": {
       "id": "Auth.jwt.tojsonstring",
-      "type": "method",
+      "nodeType": "method",
       "name": "toJSONString",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1005,11 +1005,11 @@
       "simplifiedSignature": "toJSONString()",
       "datatype": {
         "id": "Auth.jwt.tojsonstring.String",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "String"
       },
       "description": "Generates the JSON object representation of the Claims Set as an encoded JWT payload.",
-      "variables": {}
+      "params": {}
     }
   },
   "constructors": {},

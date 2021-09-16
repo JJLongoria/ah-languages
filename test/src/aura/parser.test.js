@@ -15,7 +15,7 @@ describe('Testing ./src/aura/parser.js', () => {
             const filePath = folderPath + '/' + fileToProcess;
             /*console.time(fileToProcess + ' compilationTime');
             console.time(fileToProcess + ' parser');*/
-            const node = AuraParser.parse(filePath);
+            const node = new AuraParser(filePath).parse();
             /*console.timeEnd(fileToProcess + ' parser');
             console.timeEnd(fileToProcess + 'compilationTime');*/
         } else {
@@ -28,10 +28,10 @@ describe('Testing ./src/aura/parser.js', () => {
                             continue;
                         /*console.time(folder + ' compilationTime');
                         console.time(fileToProcess + ' parser');*/
-                        const node = AuraParser.parse(filePath);
+                        const node = new AuraParser(filePath).parse();
                         /*console.timeEnd(fileToProcess + ' parser');
                         console.timeEnd(folder + 'compilationTime');*/
-                        nodes[node.name.toLowerCase()] = node;
+                        nodes[node.fileName.toLowerCase()] = node;
                     } catch(error){
                         console.log('Error en el archivo: ' + folder);
                         console.log(JSON.stringify(error));

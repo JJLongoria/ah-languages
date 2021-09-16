@@ -1,6 +1,6 @@
 {
   "id": "Cache.org",
-  "type": "class",
+  "nodeType": "class",
   "name": "Org",
   "namespace": "Cache",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "contains(string)": {
       "id": "Cache.org.contains",
-      "type": "method",
+      "nodeType": "method",
       "name": "contains",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -132,11 +132,11 @@
       "simplifiedSignature": "contains(String)",
       "datatype": {
         "id": "Cache.org.contains.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Returns true if the org cache contains a cached value corresponding to the specified key.",
-      "variables": {
+      "params": {
         "key": {
           "id": "Cache.org.contains.key",
           "type": "var",
@@ -163,7 +163,7 @@
           "signature": "String key",
           "datatype": {
             "id": "Cache.org.contains.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -171,7 +171,7 @@
     },
     "contains(set)": {
       "id": "Cache.org.contains",
-      "type": "method",
+      "nodeType": "method",
       "name": "contains",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -234,11 +234,11 @@
       "simplifiedSignature": "contains(Set)",
       "datatype": {
         "id": "Cache.org.contains.List<Boolean>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "List<Boolean>"
       },
       "description": "Returns true if the org cache contains the specified key entries.",
-      "variables": {
+      "params": {
         "<String>": {
           "id": "Cache.org.contains.<string>",
           "type": "var",
@@ -265,7 +265,7 @@
           "signature": "Set <String>",
           "datatype": {
             "id": "Cache.org.contains.set",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Set"
           }
         }
@@ -273,7 +273,7 @@
     },
     "get(string)": {
       "id": "Cache.org.get",
-      "type": "method",
+      "nodeType": "method",
       "name": "get",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -336,11 +336,11 @@
       "simplifiedSignature": "get(String)",
       "datatype": {
         "id": "Cache.org.get.Object",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Object"
       },
       "description": "Returns the cached value corresponding to the specified key from the org cache.",
-      "variables": {
+      "params": {
         "key": {
           "id": "Cache.org.get.key",
           "type": "var",
@@ -367,7 +367,7 @@
           "signature": "String key",
           "datatype": {
             "id": "Cache.org.get.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -375,7 +375,7 @@
     },
     "get(system.type,string)": {
       "id": "Cache.org.get",
-      "type": "method",
+      "nodeType": "method",
       "name": "get",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -438,11 +438,11 @@
       "simplifiedSignature": "get(System.Type,String)",
       "datatype": {
         "id": "Cache.org.get.Object",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Object"
       },
       "description": "Returns the cached value corresponding to the specified key from the org cache. Use this method if your cached value is a class that implements the CacheBuilder interface.",
-      "variables": {
+      "params": {
         "cacheBuilder": {
           "id": "Cache.org.get.cachebuilder",
           "type": "var",
@@ -469,7 +469,7 @@
           "signature": "System.Type cacheBuilder",
           "datatype": {
             "id": "Cache.org.get.system.type",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "System.Type"
           }
         },
@@ -499,7 +499,7 @@
           "signature": "String key",
           "datatype": {
             "id": "Cache.org.get.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -507,7 +507,7 @@
     },
     "getavggettime()": {
       "id": "Cache.org.getavggettime",
-      "type": "method",
+      "nodeType": "method",
       "name": "getAvgGetTime",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -570,15 +570,15 @@
       "simplifiedSignature": "getAvgGetTime()",
       "datatype": {
         "id": "Cache.org.getavggettime.Long",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Long"
       },
       "description": "Returns the average time taken to get a key from the org cache, in nanoseconds.",
-      "variables": {}
+      "params": {}
     },
     "getavgvaluesize()": {
       "id": "Cache.org.getavgvaluesize",
-      "type": "method",
+      "nodeType": "method",
       "name": "getAvgValueSize",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -641,15 +641,15 @@
       "simplifiedSignature": "getAvgValueSize()",
       "datatype": {
         "id": "Cache.org.getavgvaluesize.Long",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Long"
       },
       "description": "Returns the average item size for keys in the org cache, in bytes.",
-      "variables": {}
+      "params": {}
     },
     "getcapacity()": {
       "id": "Cache.org.getcapacity",
-      "type": "method",
+      "nodeType": "method",
       "name": "getCapacity",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -712,15 +712,15 @@
       "simplifiedSignature": "getCapacity()",
       "datatype": {
         "id": "Cache.org.getcapacity.Double",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Double"
       },
       "description": "Returns the percentage of org cache capacity that has been used.",
-      "variables": {}
+      "params": {}
     },
     "getkeys()": {
       "id": "Cache.org.getkeys",
-      "type": "method",
+      "nodeType": "method",
       "name": "getKeys",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -783,15 +783,15 @@
       "simplifiedSignature": "getKeys()",
       "datatype": {
         "id": "Cache.org.getkeys.Set<String>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Set<String>"
       },
       "description": "Returns a set of all keys that are stored in the org cache and visible to the invoking namespace.",
-      "variables": {}
+      "params": {}
     },
     "getmaxgettime()": {
       "id": "Cache.org.getmaxgettime",
-      "type": "method",
+      "nodeType": "method",
       "name": "getMaxGetTime",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -854,15 +854,15 @@
       "simplifiedSignature": "getMaxGetTime()",
       "datatype": {
         "id": "Cache.org.getmaxgettime.Long",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Long"
       },
       "description": "Returns the maximum time taken to get a key from the org cache, in nanoseconds.",
-      "variables": {}
+      "params": {}
     },
     "getmaxvaluesize()": {
       "id": "Cache.org.getmaxvaluesize",
-      "type": "method",
+      "nodeType": "method",
       "name": "getMaxValueSize",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -925,15 +925,15 @@
       "simplifiedSignature": "getMaxValueSize()",
       "datatype": {
         "id": "Cache.org.getmaxvaluesize.Long",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Long"
       },
       "description": "Returns the maximum item size for keys in the org cache, in bytes.",
-      "variables": {}
+      "params": {}
     },
     "getmissrate()": {
       "id": "Cache.org.getmissrate",
-      "type": "method",
+      "nodeType": "method",
       "name": "getMissRate",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -996,15 +996,15 @@
       "simplifiedSignature": "getMissRate()",
       "datatype": {
         "id": "Cache.org.getmissrate.Double",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Double"
       },
       "description": "Returns the miss rate in the org cache.",
-      "variables": {}
+      "params": {}
     },
     "getname()": {
       "id": "Cache.org.getname",
-      "type": "method",
+      "nodeType": "method",
       "name": "getName",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1048,15 +1048,15 @@
       "simplifiedSignature": "getName()",
       "datatype": {
         "id": "Cache.org.getname.String",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "String"
       },
       "description": "Returns the name of the default cache partition.",
-      "variables": {}
+      "params": {}
     },
     "getnumkeys()": {
       "id": "Cache.org.getnumkeys",
-      "type": "method",
+      "nodeType": "method",
       "name": "getNumKeys",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1119,15 +1119,15 @@
       "simplifiedSignature": "getNumKeys()",
       "datatype": {
         "id": "Cache.org.getnumkeys.Long",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Long"
       },
       "description": "Returns the total number of keys in the org cache.",
-      "variables": {}
+      "params": {}
     },
     "getpartition(string)": {
       "id": "Cache.org.getpartition",
-      "type": "method",
+      "nodeType": "method",
       "name": "getPartition",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1190,11 +1190,11 @@
       "simplifiedSignature": "getPartition(String)",
       "datatype": {
         "id": "Cache.org.getpartition.Cache.OrgPartition",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Cache.OrgPartition"
       },
       "description": "Returns a partition from the org cache that corresponds to the specified partition name.",
-      "variables": {
+      "params": {
         "partitionName": {
           "id": "Cache.org.getpartition.partitionname",
           "type": "var",
@@ -1221,7 +1221,7 @@
           "signature": "String partitionName",
           "datatype": {
             "id": "Cache.org.getpartition.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -1229,7 +1229,7 @@
     },
     "put(string,object)": {
       "id": "Cache.org.put",
-      "type": "method",
+      "nodeType": "method",
       "name": "put",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1292,11 +1292,11 @@
       "simplifiedSignature": "put(String,Object)",
       "datatype": {
         "id": "Cache.org.put.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Stores the specified key/value pair as a cached entry in the org cache. The put method can write only to the cache in your org’s namespace.",
-      "variables": {
+      "params": {
         "key": {
           "id": "Cache.org.put.key",
           "type": "var",
@@ -1323,7 +1323,7 @@
           "signature": "String key",
           "datatype": {
             "id": "Cache.org.put.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1353,7 +1353,7 @@
           "signature": "Object value",
           "datatype": {
             "id": "Cache.org.put.object",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Object"
           }
         }
@@ -1361,7 +1361,7 @@
     },
     "put(string,object,cache.visibility)": {
       "id": "Cache.org.put",
-      "type": "method",
+      "nodeType": "method",
       "name": "put",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1424,11 +1424,11 @@
       "simplifiedSignature": "put(String,Object,Cache.Visibility)",
       "datatype": {
         "id": "Cache.org.put.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Stores the specified key/value pair as a cached entry in the org cache and sets the cached value’s visibility.",
-      "variables": {
+      "params": {
         "key": {
           "id": "Cache.org.put.key",
           "type": "var",
@@ -1455,7 +1455,7 @@
           "signature": "String key",
           "datatype": {
             "id": "Cache.org.put.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1485,7 +1485,7 @@
           "signature": "Object value",
           "datatype": {
             "id": "Cache.org.put.object",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Object"
           }
         },
@@ -1515,7 +1515,7 @@
           "signature": "Cache.Visibility visibility",
           "datatype": {
             "id": "Cache.org.put.cache.visibility",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Cache.Visibility"
           }
         }
@@ -1523,7 +1523,7 @@
     },
     "put(string,object,integer)": {
       "id": "Cache.org.put",
-      "type": "method",
+      "nodeType": "method",
       "name": "put",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1586,11 +1586,11 @@
       "simplifiedSignature": "put(String,Object,Integer)",
       "datatype": {
         "id": "Cache.org.put.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Stores the specified key/value pair as a cached entry in the org cache and sets the cached value’s lifetime.",
-      "variables": {
+      "params": {
         "key": {
           "id": "Cache.org.put.key",
           "type": "var",
@@ -1617,7 +1617,7 @@
           "signature": "String key",
           "datatype": {
             "id": "Cache.org.put.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1647,7 +1647,7 @@
           "signature": "Object value",
           "datatype": {
             "id": "Cache.org.put.object",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Object"
           }
         },
@@ -1677,7 +1677,7 @@
           "signature": "Integer ttlSecs",
           "datatype": {
             "id": "Cache.org.put.integer",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Integer"
           }
         }
@@ -1685,7 +1685,7 @@
     },
     "put(string,object,integer,cache.visibility,boolean)": {
       "id": "Cache.org.put",
-      "type": "method",
+      "nodeType": "method",
       "name": "put",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1748,11 +1748,11 @@
       "simplifiedSignature": "put(String,Object,Integer,cache.Visibility,Boolean)",
       "datatype": {
         "id": "Cache.org.put.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Stores the specified key/value pair as a cached entry in the org cache. This method also sets the cached value’s lifetime, visibility, and whether it can be overwritten by another namespace.",
-      "variables": {
+      "params": {
         "key": {
           "id": "Cache.org.put.key",
           "type": "var",
@@ -1779,7 +1779,7 @@
           "signature": "String key",
           "datatype": {
             "id": "Cache.org.put.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1809,7 +1809,7 @@
           "signature": "Object value",
           "datatype": {
             "id": "Cache.org.put.object",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Object"
           }
         },
@@ -1839,7 +1839,7 @@
           "signature": "Integer ttlSecs",
           "datatype": {
             "id": "Cache.org.put.integer",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Integer"
           }
         },
@@ -1869,7 +1869,7 @@
           "signature": "cache.Visibility visibility",
           "datatype": {
             "id": "Cache.org.put.cache.visibility",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "cache.Visibility"
           }
         },
@@ -1899,7 +1899,7 @@
           "signature": "Boolean immutable",
           "datatype": {
             "id": "Cache.org.put.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -1907,7 +1907,7 @@
     },
     "remove(string)": {
       "id": "Cache.org.remove",
-      "type": "method",
+      "nodeType": "method",
       "name": "remove",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1970,11 +1970,11 @@
       "simplifiedSignature": "remove(String)",
       "datatype": {
         "id": "Cache.org.remove.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Deletes the cached value corresponding to the specified key from the org cache.",
-      "variables": {
+      "params": {
         "key": {
           "id": "Cache.org.remove.key",
           "type": "var",
@@ -2001,7 +2001,7 @@
           "signature": "String key",
           "datatype": {
             "id": "Cache.org.remove.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -2009,7 +2009,7 @@
     },
     "remove(system.type,string)": {
       "id": "Cache.org.remove",
-      "type": "method",
+      "nodeType": "method",
       "name": "remove",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -2072,11 +2072,11 @@
       "simplifiedSignature": "remove(System.Type,String)",
       "datatype": {
         "id": "Cache.org.remove.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Deletes the cached value corresponding to the specified key from the org cache. Use this method if your cached value is a class that implements the CacheBuilder interface.",
-      "variables": {
+      "params": {
         "cacheBuilder": {
           "id": "Cache.org.remove.cachebuilder",
           "type": "var",
@@ -2103,7 +2103,7 @@
           "signature": "System.Type cacheBuilder",
           "datatype": {
             "id": "Cache.org.remove.system.type",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "System.Type"
           }
         },
@@ -2133,7 +2133,7 @@
           "signature": "String key",
           "datatype": {
             "id": "Cache.org.remove.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }

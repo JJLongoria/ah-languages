@@ -15,7 +15,7 @@ describe('Testing ./src/javascript/parser.js', () => {
             const filePath = folderPath + '/' + fileToProcess;
             /*console.time(fileToProcess + ' compilationTime');
             console.time(fileToProcess + ' parser');*/
-            const node = JSParser.parse(filePath);
+            const node = new JSParser(filePath).parse();
             /*console.timeEnd(fileToProcess + ' parser');
             console.timeEnd(fileToProcess + 'compilationTime');*/
         } else {
@@ -28,7 +28,7 @@ describe('Testing ./src/javascript/parser.js', () => {
                             continue;
                         /*console.time(folder + ' compilationTime');
                         console.time(fileToProcess + ' parser');*/
-                        const node = JSParser.parse(filePath);
+                        const node = new JSParser(filePath).parse();
                         /*console.timeEnd(fileToProcess + ' parser');
                         console.timeEnd(folder + 'compilationTime');*/
                     } catch(error){

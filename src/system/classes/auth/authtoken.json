@@ -1,6 +1,6 @@
 {
   "id": "Auth.authtoken",
-  "type": "class",
+  "nodeType": "class",
   "name": "AuthToken",
   "namespace": "Auth",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "getaccesstoken(string,string)": {
       "id": "Auth.authtoken.getaccesstoken",
-      "type": "method",
+      "nodeType": "method",
       "name": "getAccessToken",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -132,11 +132,11 @@
       "simplifiedSignature": "getAccessToken(String,String)",
       "datatype": {
         "id": "Auth.authtoken.getaccesstoken.String",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "String"
       },
       "description": "Returns an access token for the current user using the specified 18-character identifier of an AuthProvider definition in your org and the proper name of the third party, such as Salesforce or Facebook. Note that querying the ProviderType field on the AuthProvider object sometimes returns a value that differs from the expected provider name value. For example, for Open ID Connect providers, OpenIdConnect is the ProviderType value for the AuthProvider object, but the expected providerName is Open ID Connect.",
-      "variables": {
+      "params": {
         "authProviderId": {
           "id": "Auth.authtoken.getaccesstoken.authproviderid",
           "type": "var",
@@ -163,7 +163,7 @@
           "signature": "String authProviderId",
           "datatype": {
             "id": "Auth.authtoken.getaccesstoken.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -193,7 +193,7 @@
           "signature": "String providerName",
           "datatype": {
             "id": "Auth.authtoken.getaccesstoken.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -201,7 +201,7 @@
     },
     "getaccesstokenmap(string,string)": {
       "id": "Auth.authtoken.getaccesstokenmap",
-      "type": "method",
+      "nodeType": "method",
       "name": "getAccessTokenMap",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -264,11 +264,11 @@
       "simplifiedSignature": "getAccessTokenMap(String,String)",
       "datatype": {
         "id": "Auth.authtoken.getaccesstokenmap.Map<String,  String>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Map<String,  String>"
       },
       "description": "Returns a map from the third-party identifier to the access token for the currently logged-in Salesforce user. The identifier value depends on the third party. For example, for Salesforce it would be the user ID, while for Facebook it would be the user number. Note that querying the ProviderType field on the AuthProvider object sometimes returns a value that differs from the expected provider name value. For example, for Open ID Connect providers, OpenIdConnect is the ProviderType value for the AuthProvider object, but the expected providerName is Open ID Connect.",
-      "variables": {
+      "params": {
         "authProviderId": {
           "id": "Auth.authtoken.getaccesstokenmap.authproviderid",
           "type": "var",
@@ -295,7 +295,7 @@
           "signature": "String authProviderId",
           "datatype": {
             "id": "Auth.authtoken.getaccesstokenmap.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -325,7 +325,7 @@
           "signature": "String providerName",
           "datatype": {
             "id": "Auth.authtoken.getaccesstokenmap.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -333,7 +333,7 @@
     },
     "refreshaccesstoken(string,string,string)": {
       "id": "Auth.authtoken.refreshaccesstoken",
-      "type": "method",
+      "nodeType": "method",
       "name": "refreshAccessToken",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -396,11 +396,11 @@
       "simplifiedSignature": "refreshAccessToken(String,String,String)",
       "datatype": {
         "id": "Auth.authtoken.refreshaccesstoken.Map<String,  String>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Map<String,  String>"
       },
       "description": "Returns a map from the third-party identifier containing a refreshed access token for the currently logged-in Salesforce user. Note that querying the ProviderType field on the AuthProvider object sometimes returns a value that differs from the expected provider name value. For example, for Open ID Connect providers, OpenIdConnect is the ProviderType value for the AuthProvider object, but the expected providerName is Open ID Connect.",
-      "variables": {
+      "params": {
         "authProviderId": {
           "id": "Auth.authtoken.refreshaccesstoken.authproviderid",
           "type": "var",
@@ -427,7 +427,7 @@
           "signature": "String authProviderId",
           "datatype": {
             "id": "Auth.authtoken.refreshaccesstoken.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -457,7 +457,7 @@
           "signature": "String providerName",
           "datatype": {
             "id": "Auth.authtoken.refreshaccesstoken.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -487,7 +487,7 @@
           "signature": "String oldAccessToken",
           "datatype": {
             "id": "Auth.authtoken.refreshaccesstoken.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -495,7 +495,7 @@
     },
     "revokeaccess(string,string,string,string)": {
       "id": "Auth.authtoken.revokeaccess",
-      "type": "method",
+      "nodeType": "method",
       "name": "revokeAccess",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -558,11 +558,11 @@
       "simplifiedSignature": "revokeAccess(String,String,String,String)",
       "datatype": {
         "id": "Auth.authtoken.revokeaccess.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Revokes the access token for a specified social sign-on user from a third-party service such as Facebook©. Note that querying the ProviderType field on the AuthProvider object sometimes returns a value that differs from the expected provider name value. For example, for Open ID Connect providers, OpenIdConnect is the ProviderType value for the AuthProvider object, but the expected providerName is Open ID Connect.",
-      "variables": {
+      "params": {
         "authProviderId": {
           "id": "Auth.authtoken.revokeaccess.authproviderid",
           "type": "var",
@@ -589,7 +589,7 @@
           "signature": "String authProviderId",
           "datatype": {
             "id": "Auth.authtoken.revokeaccess.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -619,7 +619,7 @@
           "signature": "String providerName",
           "datatype": {
             "id": "Auth.authtoken.revokeaccess.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -649,7 +649,7 @@
           "signature": "String userId",
           "datatype": {
             "id": "Auth.authtoken.revokeaccess.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -679,7 +679,7 @@
           "signature": "String remoteIdentifier",
           "datatype": {
             "id": "Auth.authtoken.revokeaccess.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }

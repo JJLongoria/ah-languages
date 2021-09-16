@@ -1,6 +1,6 @@
 {
   "id": "System.continuation",
-  "type": "class",
+  "nodeType": "class",
   "name": "Continuation",
   "namespace": "System",
   "startToken": {
@@ -68,7 +68,7 @@
   "variables": {
     "continuationmethod": {
       "id": "System.continuation.continuationmethod",
-      "type": "property",
+      "nodeType": "property",
       "name": "continuationMethod",
       "startToken": {
         "type": "declaration.entity.name.property",
@@ -112,13 +112,13 @@
       "simplifiedSignature": "String continuationMethod { get; set; }",
       "datatype": {
         "id": "System.continuation.continuationmethod.string",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "String"
       },
       "description": "The name of the callback method that is called after the callout response returns.",
       "getter": {
         "id": "System.continuation.continuationmethod.get",
-        "type": "getter",
+        "nodeType": "getter",
         "name": "get",
         "startToken": {
           "type": "keyword.declaration.property.getter",
@@ -142,7 +142,7 @@
       },
       "setter": {
         "id": "System.continuation.continuationmethod.set",
-        "type": "setter",
+        "nodeType": "setter",
         "name": "set",
         "startToken": {
           "type": "keyword.declaration.property.setter",
@@ -167,7 +167,7 @@
     },
     "timeout": {
       "id": "System.continuation.timeout",
-      "type": "property",
+      "nodeType": "property",
       "name": "timeout",
       "startToken": {
         "type": "declaration.entity.name.property",
@@ -211,13 +211,13 @@
       "simplifiedSignature": "Integer timeout { get; set; }",
       "datatype": {
         "id": "System.continuation.timeout.integer",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Integer"
       },
       "description": "The timeout of the continuation in seconds. Maximum: 120 seconds seconds.",
       "getter": {
         "id": "System.continuation.timeout.get",
-        "type": "getter",
+        "nodeType": "getter",
         "name": "get",
         "startToken": {
           "type": "keyword.declaration.property.getter",
@@ -241,7 +241,7 @@
       },
       "setter": {
         "id": "System.continuation.timeout.set",
-        "type": "setter",
+        "nodeType": "setter",
         "name": "set",
         "startToken": {
           "type": "keyword.declaration.property.setter",
@@ -266,7 +266,7 @@
     },
     "state": {
       "id": "System.continuation.state",
-      "type": "property",
+      "nodeType": "property",
       "name": "state",
       "startToken": {
         "type": "declaration.entity.name.property",
@@ -310,13 +310,13 @@
       "simplifiedSignature": "Object state { get; set; }",
       "datatype": {
         "id": "System.continuation.state.object",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Object"
       },
       "description": "Data that is stored in this continuation and that can be retrieved after the callout is finished and the callback method is invoked.",
       "getter": {
         "id": "System.continuation.state.get",
-        "type": "getter",
+        "nodeType": "getter",
         "name": "get",
         "startToken": {
           "type": "keyword.declaration.property.getter",
@@ -340,7 +340,7 @@
       },
       "setter": {
         "id": "System.continuation.state.set",
-        "type": "setter",
+        "nodeType": "setter",
         "name": "set",
         "startToken": {
           "type": "keyword.declaration.property.setter",
@@ -367,7 +367,7 @@
   "methods": {
     "addhttprequest(system.httprequest)": {
       "id": "System.continuation.addhttprequest",
-      "type": "method",
+      "nodeType": "method",
       "name": "addHttpRequest",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -411,11 +411,11 @@
       "simplifiedSignature": "addHttpRequest(System.HttpRequest)",
       "datatype": {
         "id": "System.continuation.addhttprequest.String",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "String"
       },
       "description": "Adds the HTTP request for the callout that is associated with this continuation.",
-      "variables": {
+      "params": {
         "request": {
           "id": "System.continuation.addhttprequest.request",
           "type": "var",
@@ -442,7 +442,7 @@
           "signature": "System.HttpRequest request",
           "datatype": {
             "id": "System.continuation.addhttprequest.system.httprequest",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "System.HttpRequest"
           }
         }
@@ -450,7 +450,7 @@
     },
     "getrequests()": {
       "id": "System.continuation.getrequests",
-      "type": "method",
+      "nodeType": "method",
       "name": "getRequests",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -494,15 +494,15 @@
       "simplifiedSignature": "getRequests()",
       "datatype": {
         "id": "System.continuation.getrequests.Map<String, HttpRequest>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Map<String, HttpRequest>"
       },
       "description": "Returns all labels and requests that are associated with this continuation as key-value pairs.",
-      "variables": {}
+      "params": {}
     },
     "getresponse(string)": {
       "id": "System.continuation.getresponse",
-      "type": "method",
+      "nodeType": "method",
       "name": "getResponse",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -565,11 +565,11 @@
       "simplifiedSignature": "getResponse(String)",
       "datatype": {
         "id": "System.continuation.getresponse.HttpResponse",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "HttpResponse"
       },
       "description": "Returns the response for the request that corresponds to the specified label.",
-      "variables": {
+      "params": {
         "requestLabel": {
           "id": "System.continuation.getresponse.requestlabel",
           "type": "var",
@@ -596,7 +596,7 @@
           "signature": "String requestLabel",
           "datatype": {
             "id": "System.continuation.getresponse.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -606,7 +606,7 @@
   "constructors": {
     "continuation(integer)": {
       "id": "System.continuation.continuation",
-      "type": "constructor",
+      "nodeType": "constructor",
       "name": "Continuation",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -650,11 +650,11 @@
       "simplifiedSignature": "Continuation(Integer)",
       "datatype": {
         "id": "System.continuation.continuation.constructor",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Continuation"
       },
       "description": "Creates an instance of the Continuation class by using the specified timeout in seconds. The timeout maximum is 120 seconds.",
-      "variables": {
+      "params": {
         "timeout": {
           "id": "System.continuation.continuation.timeout",
           "type": "var",
@@ -681,7 +681,7 @@
           "signature": "Integer timeout",
           "datatype": {
             "id": "System.continuation.continuation.integer",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Integer"
           }
         }

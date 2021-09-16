@@ -1,6 +1,6 @@
 {
   "id": "System.sobject",
-  "type": "class",
+  "nodeType": "class",
   "name": "SObject",
   "namespace": "System",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "adderror(string)": {
       "id": "System.sobject.adderror",
-      "type": "method",
+      "nodeType": "method",
       "name": "addError",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -113,11 +113,11 @@
       "simplifiedSignature": "addError(String)",
       "datatype": {
         "id": "System.sobject.adderror.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Places the specified error message on a trigger record field in the Salesforce user interface and prevents any DML operation from occurring.",
-      "variables": {
+      "params": {
         "errorMsg": {
           "id": "System.sobject.adderror.errormsg",
           "type": "var",
@@ -144,7 +144,7 @@
           "signature": "String errorMsg",
           "datatype": {
             "id": "System.sobject.adderror.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -152,7 +152,7 @@
     },
     "adderror(string,boolean)": {
       "id": "System.sobject.adderror",
-      "type": "method",
+      "nodeType": "method",
       "name": "addError",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -196,11 +196,11 @@
       "simplifiedSignature": "addError(String,Boolean)",
       "datatype": {
         "id": "System.sobject.adderror.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Places the specified error message, which can be escaped or unescaped, on a trigger record field in the Salesforce user interface, and prevents any DML operation from occurring.",
-      "variables": {
+      "params": {
         "errorMsg": {
           "id": "System.sobject.adderror.errormsg",
           "type": "var",
@@ -227,7 +227,7 @@
           "signature": "String errorMsg",
           "datatype": {
             "id": "System.sobject.adderror.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -257,7 +257,7 @@
           "signature": "Boolean escape",
           "datatype": {
             "id": "System.sobject.adderror.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -265,7 +265,7 @@
     },
     "adderror(exception)": {
       "id": "System.sobject.adderror",
-      "type": "method",
+      "nodeType": "method",
       "name": "addError",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -309,11 +309,11 @@
       "simplifiedSignature": "addError(Exception)",
       "datatype": {
         "id": "System.sobject.adderror.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Marks a trigger record with a custom error message and prevents any DML operation from occurring.",
-      "variables": {
+      "params": {
         "exceptionError": {
           "id": "System.sobject.adderror.exceptionerror",
           "type": "var",
@@ -340,7 +340,7 @@
           "signature": "Exception exceptionError",
           "datatype": {
             "id": "System.sobject.adderror.exception",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Exception"
           }
         }
@@ -348,7 +348,7 @@
     },
     "adderror(exception,boolean)": {
       "id": "System.sobject.adderror",
-      "type": "method",
+      "nodeType": "method",
       "name": "addError",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -392,11 +392,11 @@
       "simplifiedSignature": "addError(Exception,Boolean)",
       "datatype": {
         "id": "System.sobject.adderror.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Marks a trigger record with a custom exception error message, specifies whether or not the exception error message should be escaped, and prevents any DML operation from occurring.",
-      "variables": {
+      "params": {
         "exceptionError": {
           "id": "System.sobject.adderror.exceptionerror",
           "type": "var",
@@ -423,7 +423,7 @@
           "signature": "Exception exceptionError",
           "datatype": {
             "id": "System.sobject.adderror.exception",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Exception"
           }
         },
@@ -453,7 +453,7 @@
           "signature": "Boolean escape",
           "datatype": {
             "id": "System.sobject.adderror.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -461,7 +461,7 @@
     },
     "clear()": {
       "id": "System.sobject.clear",
-      "type": "method",
+      "nodeType": "method",
       "name": "clear",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -505,15 +505,15 @@
       "simplifiedSignature": "clear()",
       "datatype": {
         "id": "System.sobject.clear.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Clears all field values",
-      "variables": {}
+      "params": {}
     },
     "clone(boolean,boolean,boolean,boolean)": {
       "id": "System.sobject.clone",
-      "type": "method",
+      "nodeType": "method",
       "name": "clone",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -557,11 +557,11 @@
       "simplifiedSignature": "clone(Boolean,Boolean,Boolean,Boolean)",
       "datatype": {
         "id": "System.sobject.clone.SObject (of same type)",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "SObject (of same type)"
       },
       "description": "Creates a copy of the SObject record.",
-      "variables": {
+      "params": {
         "preserveId": {
           "id": "System.sobject.clone.preserveid",
           "type": "var",
@@ -588,7 +588,7 @@
           "signature": "Boolean preserveId",
           "datatype": {
             "id": "System.sobject.clone.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         },
@@ -618,7 +618,7 @@
           "signature": "Boolean isDeepClone",
           "datatype": {
             "id": "System.sobject.clone.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         },
@@ -648,7 +648,7 @@
           "signature": "Boolean preserveReadonlyTimestamps",
           "datatype": {
             "id": "System.sobject.clone.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         },
@@ -678,7 +678,7 @@
           "signature": "Boolean preserveAutonumber",
           "datatype": {
             "id": "System.sobject.clone.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -686,7 +686,7 @@
     },
     "get(string)": {
       "id": "System.sobject.get",
-      "type": "method",
+      "nodeType": "method",
       "name": "get",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -730,11 +730,11 @@
       "simplifiedSignature": "get(String)",
       "datatype": {
         "id": "System.sobject.get.Object",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Object"
       },
       "description": "Returns the value for the field specified by fieldName, such as AccountNumber.",
-      "variables": {
+      "params": {
         "fieldName": {
           "id": "System.sobject.get.fieldname",
           "type": "var",
@@ -761,7 +761,7 @@
           "signature": "String fieldName",
           "datatype": {
             "id": "System.sobject.get.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -769,7 +769,7 @@
     },
     "get(schema.sobjectfield)": {
       "id": "System.sobject.get",
-      "type": "method",
+      "nodeType": "method",
       "name": "get",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -813,11 +813,11 @@
       "simplifiedSignature": "get(Schema.sObjectField)",
       "datatype": {
         "id": "System.sobject.get.Object",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Object"
       },
       "description": "Returns the value for the field specified by the field token Schema.sObjectField, such as, Schema.Account.AccountNumber.",
-      "variables": {
+      "params": {
         "field": {
           "id": "System.sobject.get.field",
           "type": "var",
@@ -844,7 +844,7 @@
           "signature": "Schema.sObjectField field",
           "datatype": {
             "id": "System.sobject.get.schema.sobjectfield",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Schema.sObjectField"
           }
         }
@@ -852,7 +852,7 @@
     },
     "getclonesourceid()": {
       "id": "System.sobject.getclonesourceid",
-      "type": "method",
+      "nodeType": "method",
       "name": "getCloneSourceId",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -896,15 +896,15 @@
       "simplifiedSignature": "getCloneSourceId()",
       "datatype": {
         "id": "System.sobject.getclonesourceid.Id",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Id"
       },
       "description": "Returns the ID of the entity from which an object was cloned. You can use it for objects cloned through the Salesforce user interface. If you don’t use a preserveId parameter, of if you use a preserveId value of false, you can also used it  for objects created using the System.SObject.clone(preserveId, isDeepClone, preserveReadonlyTimestamps, preserveAutonumber) method.",
-      "variables": {}
+      "params": {}
     },
     "getoptions()": {
       "id": "System.sobject.getoptions",
-      "type": "method",
+      "nodeType": "method",
       "name": "getOptions",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -948,15 +948,15 @@
       "simplifiedSignature": "getOptions()",
       "datatype": {
         "id": "System.sobject.getoptions.Database.DMLOptions",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Database.DMLOptions"
       },
       "description": "Returns the database.DMLOptions object for the SObject.",
-      "variables": {}
+      "params": {}
     },
     "getpopulatedfieldsasmap()": {
       "id": "System.sobject.getpopulatedfieldsasmap",
-      "type": "method",
+      "nodeType": "method",
       "name": "getPopulatedFieldsAsMap",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1000,15 +1000,15 @@
       "simplifiedSignature": "getPopulatedFieldsAsMap()",
       "datatype": {
         "id": "System.sobject.getpopulatedfieldsasmap.Map<String, Object>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Map<String, Object>"
       },
       "description": "Returns a map of populated field names and their corresponding values. The map contains only the fields that have been populated in memory for the SObject instance.",
-      "variables": {}
+      "params": {}
     },
     "getsobject(string)": {
       "id": "System.sobject.getsobject",
-      "type": "method",
+      "nodeType": "method",
       "name": "getSObject",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1052,11 +1052,11 @@
       "simplifiedSignature": "getSObject(String)",
       "datatype": {
         "id": "System.sobject.getsobject.SObject",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "SObject"
       },
       "description": "Returns the value for the specified field. This method is primarily used with dynamic DML to access values for external IDs.",
-      "variables": {
+      "params": {
         "fieldName": {
           "id": "System.sobject.getsobject.fieldname",
           "type": "var",
@@ -1083,7 +1083,7 @@
           "signature": "String fieldName",
           "datatype": {
             "id": "System.sobject.getsobject.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -1091,7 +1091,7 @@
     },
     "getsobject(schema.sobjectfield)": {
       "id": "System.sobject.getsobject",
-      "type": "method",
+      "nodeType": "method",
       "name": "getSObject",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1135,11 +1135,11 @@
       "simplifiedSignature": "getSObject(Schema.SObjectField)",
       "datatype": {
         "id": "System.sobject.getsobject.SObject",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "SObject"
       },
       "description": "Returns the value for the field specified by the field token Schema.fieldName, such as, Schema.MyObj.MyExternalId. This method is primarily used with dynamic DML to access values for external IDs.",
-      "variables": {
+      "params": {
         "fieldName": {
           "id": "System.sobject.getsobject.fieldname",
           "type": "var",
@@ -1166,7 +1166,7 @@
           "signature": "Schema.SObjectField fieldName",
           "datatype": {
             "id": "System.sobject.getsobject.schema.sobjectfield",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Schema.SObjectField"
           }
         }
@@ -1174,7 +1174,7 @@
     },
     "getsobjects(string)": {
       "id": "System.sobject.getsobjects",
-      "type": "method",
+      "nodeType": "method",
       "name": "getSObjects",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1218,11 +1218,11 @@
       "simplifiedSignature": "getSObjects(String)",
       "datatype": {
         "id": "System.sobject.getsobjects.SObject[]",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "SObject[]"
       },
       "description": "Returns the values for the specified field. This method is primarily used with dynamic DML to access values  for associated objects, such as child relationships.",
-      "variables": {
+      "params": {
         "fieldName": {
           "id": "System.sobject.getsobjects.fieldname",
           "type": "var",
@@ -1249,7 +1249,7 @@
           "signature": "String fieldName",
           "datatype": {
             "id": "System.sobject.getsobjects.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -1257,7 +1257,7 @@
     },
     "getsobjects(schema.sobjecttype)": {
       "id": "System.sobject.getsobjects",
-      "type": "method",
+      "nodeType": "method",
       "name": "getSObjects",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1301,11 +1301,11 @@
       "simplifiedSignature": "getSObjects(Schema.SObjectType)",
       "datatype": {
         "id": "System.sobject.getsobjects.SObject[]",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "SObject[]"
       },
       "description": "Returns the value for the field specified by the field token Schema.fieldName, such as, Schema.Account.Contact. This method is primarily used with dynamic DML to access values for associated objects, such as child relationships.",
-      "variables": {
+      "params": {
         "fieldName": {
           "id": "System.sobject.getsobjects.fieldname",
           "type": "var",
@@ -1332,7 +1332,7 @@
           "signature": "Schema.SObjectType fieldName",
           "datatype": {
             "id": "System.sobject.getsobjects.schema.sobjecttype",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Schema.SObjectType"
           }
         }
@@ -1340,7 +1340,7 @@
     },
     "getsobjecttype()": {
       "id": "System.sobject.getsobjecttype",
-      "type": "method",
+      "nodeType": "method",
       "name": "getSObjectType",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1384,15 +1384,15 @@
       "simplifiedSignature": "getSObjectType()",
       "datatype": {
         "id": "System.sobject.getsobjecttype.Schema.SObjectType",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Schema.SObjectType"
       },
       "description": "Returns the token for this SObject. This method is primarily used with describe information.",
-      "variables": {}
+      "params": {}
     },
     "getquickactionname()": {
       "id": "System.sobject.getquickactionname",
-      "type": "method",
+      "nodeType": "method",
       "name": "getQuickActionName",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1436,15 +1436,15 @@
       "simplifiedSignature": "getQuickActionName()",
       "datatype": {
         "id": "System.sobject.getquickactionname.String",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "String"
       },
       "description": "Retrieves the name of a quick action associated with this SObject. Typically used in triggers.",
-      "variables": {}
+      "params": {}
     },
     "isclone()": {
       "id": "System.sobject.isclone",
-      "type": "method",
+      "nodeType": "method",
       "name": "isClone",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1488,15 +1488,15 @@
       "simplifiedSignature": "isClone()",
       "datatype": {
         "id": "System.sobject.isclone.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Returns true if an entity is cloned from something, even if the entity hasn’t been saved.",
-      "variables": {}
+      "params": {}
     },
     "isset(string)": {
       "id": "System.sobject.isset",
-      "type": "method",
+      "nodeType": "method",
       "name": "isSet",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1540,11 +1540,11 @@
       "simplifiedSignature": "isSet(String)",
       "datatype": {
         "id": "System.sobject.isset.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Returns information about the queried sObject field. Returns true if the sObject field is populated, either by direct assignment or by inclusion in a SOQL query. Returns false if the sObject field is not set. If an invalid field is specified, an SObjectException is thrown.",
-      "variables": {
+      "params": {
         "fieldName": {
           "id": "System.sobject.isset.fieldname",
           "type": "var",
@@ -1571,7 +1571,7 @@
           "signature": "String fieldName",
           "datatype": {
             "id": "System.sobject.isset.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -1579,7 +1579,7 @@
     },
     "isset(schema.sobjectfield)": {
       "id": "System.sobject.isset",
-      "type": "method",
+      "nodeType": "method",
       "name": "isSet",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1623,11 +1623,11 @@
       "simplifiedSignature": "isSet(Schema.SObjectField)",
       "datatype": {
         "id": "System.sobject.isset.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Returns information about the queried sObject field. Returns true if the sObject field is populated, either by direct assignment or by inclusion in a SOQL query. Returns false if the sObject field is not set. If an invalid field is specified, an SObjectException is thrown.",
-      "variables": {
+      "params": {
         "field": {
           "id": "System.sobject.isset.field",
           "type": "var",
@@ -1654,7 +1654,7 @@
           "signature": "Schema.SObjectField field",
           "datatype": {
             "id": "System.sobject.isset.schema.sobjectfield",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Schema.SObjectField"
           }
         }
@@ -1662,7 +1662,7 @@
     },
     "put(string,object)": {
       "id": "System.sobject.put",
-      "type": "method",
+      "nodeType": "method",
       "name": "put",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1706,11 +1706,11 @@
       "simplifiedSignature": "put(String,Object)",
       "datatype": {
         "id": "System.sobject.put.Object",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Object"
       },
       "description": "Sets the value for the specified field and returns the previous value for the field.",
-      "variables": {
+      "params": {
         "fieldName": {
           "id": "System.sobject.put.fieldname",
           "type": "var",
@@ -1737,7 +1737,7 @@
           "signature": "String fieldName",
           "datatype": {
             "id": "System.sobject.put.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1767,7 +1767,7 @@
           "signature": "Object value",
           "datatype": {
             "id": "System.sobject.put.object",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Object"
           }
         }
@@ -1775,7 +1775,7 @@
     },
     "put(schema.sobjectfield,object)": {
       "id": "System.sobject.put",
-      "type": "method",
+      "nodeType": "method",
       "name": "put",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1819,11 +1819,11 @@
       "simplifiedSignature": "put(Schema.SObjectField,Object)",
       "datatype": {
         "id": "System.sobject.put.Object",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Object"
       },
       "description": "Sets the value for the field specified by the field token Schema.sObjectField, such as, Schema.Account.AccountNumber and returns the previous value for the field.",
-      "variables": {
+      "params": {
         "fieldName": {
           "id": "System.sobject.put.fieldname",
           "type": "var",
@@ -1850,7 +1850,7 @@
           "signature": "Schema.SObjectField fieldName",
           "datatype": {
             "id": "System.sobject.put.schema.sobjectfield",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Schema.SObjectField"
           }
         },
@@ -1880,7 +1880,7 @@
           "signature": "Object value",
           "datatype": {
             "id": "System.sobject.put.object",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Object"
           }
         }
@@ -1888,7 +1888,7 @@
     },
     "putsobject(string,sobject)": {
       "id": "System.sobject.putsobject",
-      "type": "method",
+      "nodeType": "method",
       "name": "putSObject",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1932,11 +1932,11 @@
       "simplifiedSignature": "putSObject(String,SObject)",
       "datatype": {
         "id": "System.sobject.putsobject.SObject",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "SObject"
       },
       "description": "Sets the value for the specified field. This method is primarily used with dynamic DML for setting external IDs. The method returns the previous value of the field.",
-      "variables": {
+      "params": {
         "fieldName": {
           "id": "System.sobject.putsobject.fieldname",
           "type": "var",
@@ -1963,7 +1963,7 @@
           "signature": "String fieldName",
           "datatype": {
             "id": "System.sobject.putsobject.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1993,7 +1993,7 @@
           "signature": "SObject value",
           "datatype": {
             "id": "System.sobject.putsobject.sobject",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "SObject"
           }
         }
@@ -2001,7 +2001,7 @@
     },
     "putsobject(schema.sobjecttype,sobject)": {
       "id": "System.sobject.putsobject",
-      "type": "method",
+      "nodeType": "method",
       "name": "putSObject",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -2045,11 +2045,11 @@
       "simplifiedSignature": "putSObject(Schema.SObjectType,SObject)",
       "datatype": {
         "id": "System.sobject.putsobject.SObject",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "SObject"
       },
       "description": "Sets the value for the field specified by the token Schema.SObjectType. This method is primarily used with dynamic DML for setting external IDs. The method returns the previous value of the field.",
-      "variables": {
+      "params": {
         "fieldName": {
           "id": "System.sobject.putsobject.fieldname",
           "type": "var",
@@ -2076,7 +2076,7 @@
           "signature": "Schema.SObjectType fieldName",
           "datatype": {
             "id": "System.sobject.putsobject.schema.sobjecttype",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Schema.SObjectType"
           }
         },
@@ -2106,7 +2106,7 @@
           "signature": "SObject value",
           "datatype": {
             "id": "System.sobject.putsobject.sobject",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "SObject"
           }
         }
@@ -2114,7 +2114,7 @@
     },
     "recalculateformulas()": {
       "id": "System.sobject.recalculateformulas",
-      "type": "method",
+      "nodeType": "method",
       "name": "recalculateFormulas",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -2158,15 +2158,15 @@
       "simplifiedSignature": "recalculateFormulas()",
       "datatype": {
         "id": "System.sobject.recalculateformulas.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Recalculates all formula fields on an SObject, and sets updated field values. Rather than inserting or updating objects each time you want to test changes to your formula logic, call this method and inspect your new field values. Then make further logic changes as needed.",
-      "variables": {}
+      "params": {}
     },
     "setoptions(database.dmloptions)": {
       "id": "System.sobject.setoptions",
-      "type": "method",
+      "nodeType": "method",
       "name": "setOptions",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -2210,11 +2210,11 @@
       "simplifiedSignature": "setOptions(database.DMLOptions)",
       "datatype": {
         "id": "System.sobject.setoptions.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Sets the DMLOptions object for the SObject.",
-      "variables": {
+      "params": {
         "DMLOptions": {
           "id": "System.sobject.setoptions.dmloptions",
           "type": "var",
@@ -2241,7 +2241,7 @@
           "signature": "database.DMLOptions DMLOptions",
           "datatype": {
             "id": "System.sobject.setoptions.database.dmloptions",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "database.DMLOptions"
           }
         }

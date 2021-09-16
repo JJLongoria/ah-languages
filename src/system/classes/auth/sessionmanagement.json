@@ -1,6 +1,6 @@
 {
   "id": "Auth.sessionmanagement",
-  "type": "class",
+  "nodeType": "class",
   "name": "SessionManagement",
   "namespace": "Auth",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "finishlogindiscovery(auth.logindiscoverymethod,id)": {
       "id": "Auth.sessionmanagement.finishlogindiscovery",
-      "type": "method",
+      "nodeType": "method",
       "name": "finishLoginDiscovery",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -132,11 +132,11 @@
       "simplifiedSignature": "finishLoginDiscovery(Auth.LoginDiscoveryMethod,Id)",
       "datatype": {
         "id": "Auth.sessionmanagement.finishlogindiscovery.System.PageReference",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "System.PageReference"
       },
       "description": "Finishes the My Domain Login Discovery login process.",
-      "variables": {
+      "params": {
         "method": {
           "id": "Auth.sessionmanagement.finishlogindiscovery.method",
           "type": "var",
@@ -163,7 +163,7 @@
           "signature": "Auth.LoginDiscoveryMethod method",
           "datatype": {
             "id": "Auth.sessionmanagement.finishlogindiscovery.auth.logindiscoverymethod",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Auth.LoginDiscoveryMethod"
           }
         },
@@ -193,7 +193,7 @@
           "signature": "Id userId",
           "datatype": {
             "id": "Auth.sessionmanagement.finishlogindiscovery.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         }
@@ -201,7 +201,7 @@
     },
     "finishloginflow()": {
       "id": "Auth.sessionmanagement.finishloginflow",
-      "type": "method",
+      "nodeType": "method",
       "name": "finishLoginFlow",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -264,15 +264,15 @@
       "simplifiedSignature": "finishLoginFlow()",
       "datatype": {
         "id": "Auth.sessionmanagement.finishloginflow.System.PageReference",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "System.PageReference"
       },
       "description": "Finish the Visualforce Page login flow process, and redirect the user to the default home page.",
-      "variables": {}
+      "params": {}
     },
     "finishloginflow(string)": {
       "id": "Auth.sessionmanagement.finishloginflow",
-      "type": "method",
+      "nodeType": "method",
       "name": "finishLoginFlow",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -335,11 +335,11 @@
       "simplifiedSignature": "finishLoginFlow(String)",
       "datatype": {
         "id": "Auth.sessionmanagement.finishloginflow.System.PageReference",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "System.PageReference"
       },
       "description": "Finish the Visualforce Page login flow process, and redirect the user to the specified start URL.",
-      "variables": {
+      "params": {
         "startUrl": {
           "id": "Auth.sessionmanagement.finishloginflow.starturl",
           "type": "var",
@@ -366,7 +366,7 @@
           "signature": "String startUrl",
           "datatype": {
             "id": "Auth.sessionmanagement.finishloginflow.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -374,7 +374,7 @@
     },
     "generateverificationurl(auth.verificationpolicy,string,string)": {
       "id": "Auth.sessionmanagement.generateverificationurl",
-      "type": "method",
+      "nodeType": "method",
       "name": "generateVerificationUrl",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -437,11 +437,11 @@
       "simplifiedSignature": "generateVerificationUrl(Auth.VerificationPolicy,String,String)",
       "datatype": {
         "id": "Auth.sessionmanagement.generateverificationurl.String",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "String"
       },
       "description": "Initiates a user identity verification flow with the verification method that the user registered with, and returns a URL to the identity verification screen. For example, if you have a custom Visualforce page that displays sensitive account details, you can prompt the user to verify identity before viewing it.",
-      "variables": {
+      "params": {
         "policy": {
           "id": "Auth.sessionmanagement.generateverificationurl.policy",
           "type": "var",
@@ -468,7 +468,7 @@
           "signature": "Auth.VerificationPolicy policy",
           "datatype": {
             "id": "Auth.sessionmanagement.generateverificationurl.auth.verificationpolicy",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Auth.VerificationPolicy"
           }
         },
@@ -498,7 +498,7 @@
           "signature": "String description",
           "datatype": {
             "id": "Auth.sessionmanagement.generateverificationurl.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -528,7 +528,7 @@
           "signature": "String destinationUrl",
           "datatype": {
             "id": "Auth.sessionmanagement.generateverificationurl.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -536,7 +536,7 @@
     },
     "getcurrentsession()": {
       "id": "Auth.sessionmanagement.getcurrentsession",
-      "type": "method",
+      "nodeType": "method",
       "name": "getCurrentSession",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -599,15 +599,15 @@
       "simplifiedSignature": "getCurrentSession()",
       "datatype": {
         "id": "Auth.sessionmanagement.getcurrentsession.Map<String,  String>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Map<String,  String>"
       },
       "description": "Returns a map of attributes for the current session.",
-      "variables": {}
+      "params": {}
     },
     "getlightninglogineligibility(id)": {
       "id": "Auth.sessionmanagement.getlightninglogineligibility",
-      "type": "method",
+      "nodeType": "method",
       "name": "getLightningLoginEligibility",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -670,11 +670,11 @@
       "simplifiedSignature": "getLightningLoginEligibility(Id)",
       "datatype": {
         "id": "Auth.sessionmanagement.getlightninglogineligibility.Auth.LightningLoginEligibility",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Auth.LightningLoginEligibility"
       },
       "description": "Returns the eligibility status for a user who’s logging in with Lightning Login when you set up your org with My Domain and use the Login Discovery page type. Use this method to redirect the user to a custom login flow. For example, use after a login attempt to redirect the user to password flow if the user is ineligible for Lightning Login.",
-      "variables": {
+      "params": {
         "userId": {
           "id": "Auth.sessionmanagement.getlightninglogineligibility.userid",
           "type": "var",
@@ -701,7 +701,7 @@
           "signature": "Id userId",
           "datatype": {
             "id": "Auth.sessionmanagement.getlightninglogineligibility.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         }
@@ -709,7 +709,7 @@
     },
     "getqrcode()": {
       "id": "Auth.sessionmanagement.getqrcode",
-      "type": "method",
+      "nodeType": "method",
       "name": "getQrCode",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -772,15 +772,15 @@
       "simplifiedSignature": "getQrCode()",
       "datatype": {
         "id": "Auth.sessionmanagement.getqrcode.Map<String,  String>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Map<String,  String>"
       },
       "description": "Returns a map containing a URL to a quick response (QR) code and a time-based one-time password (TOTP) shared secret to configure two-factor authentication apps or devices.",
-      "variables": {}
+      "params": {}
     },
     "getrequiredsessionlevelforprofile(string)": {
       "id": "Auth.sessionmanagement.getrequiredsessionlevelforprofile",
-      "type": "method",
+      "nodeType": "method",
       "name": "getRequiredSessionLevelForProfile",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -843,11 +843,11 @@
       "simplifiedSignature": "getRequiredSessionLevelForProfile(String)",
       "datatype": {
         "id": "Auth.sessionmanagement.getrequiredsessionlevelforprofile.Auth.SessionLevel",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Auth.SessionLevel"
       },
       "description": "Indicates the required login security session level for the given profile.",
-      "variables": {
+      "params": {
         "profileId": {
           "id": "Auth.sessionmanagement.getrequiredsessionlevelforprofile.profileid",
           "type": "var",
@@ -874,7 +874,7 @@
           "signature": "String profileId",
           "datatype": {
             "id": "Auth.sessionmanagement.getrequiredsessionlevelforprofile.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -882,7 +882,7 @@
     },
     "ignoreforconcurrentsessionlimit(object)": {
       "id": "Auth.sessionmanagement.ignoreforconcurrentsessionlimit",
-      "type": "method",
+      "nodeType": "method",
       "name": "ignoreForConcurrentSessionLimit",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -945,11 +945,11 @@
       "simplifiedSignature": "ignoreForConcurrentSessionLimit(Object)",
       "datatype": {
         "id": "Auth.sessionmanagement.ignoreforconcurrentsessionlimit.Map<String,  String>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Map<String,  String>"
       },
       "description": "This method is reserved for internal Salesforce use.",
-      "variables": {
+      "params": {
         "sessions": {
           "id": "Auth.sessionmanagement.ignoreforconcurrentsessionlimit.sessions",
           "type": "var",
@@ -976,7 +976,7 @@
           "signature": "Object sessions",
           "datatype": {
             "id": "Auth.sessionmanagement.ignoreforconcurrentsessionlimit.object",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Object"
           }
         }
@@ -984,7 +984,7 @@
     },
     "inorgnetworkrange(string)": {
       "id": "Auth.sessionmanagement.inorgnetworkrange",
-      "type": "method",
+      "nodeType": "method",
       "name": "inOrgNetworkRange",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1047,11 +1047,11 @@
       "simplifiedSignature": "inOrgNetworkRange(String)",
       "datatype": {
         "id": "Auth.sessionmanagement.inorgnetworkrange.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Indicates whether the given IP address is within the organization's trusted IP range according to the organization's Network Access settings.",
-      "variables": {
+      "params": {
         "ipAddress": {
           "id": "Auth.sessionmanagement.inorgnetworkrange.ipaddress",
           "type": "var",
@@ -1078,7 +1078,7 @@
           "signature": "String ipAddress",
           "datatype": {
             "id": "Auth.sessionmanagement.inorgnetworkrange.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -1086,7 +1086,7 @@
     },
     "isipallowedforprofile(string,string)": {
       "id": "Auth.sessionmanagement.isipallowedforprofile",
-      "type": "method",
+      "nodeType": "method",
       "name": "isIpAllowedForProfile",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1149,11 +1149,11 @@
       "simplifiedSignature": "isIpAllowedForProfile(String,String)",
       "datatype": {
         "id": "Auth.sessionmanagement.isipallowedforprofile.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Indicates whether the given IP address is within the trusted IP range for the given profile.",
-      "variables": {
+      "params": {
         "profileId": {
           "id": "Auth.sessionmanagement.isipallowedforprofile.profileid",
           "type": "var",
@@ -1180,7 +1180,7 @@
           "signature": "String profileId",
           "datatype": {
             "id": "Auth.sessionmanagement.isipallowedforprofile.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1210,7 +1210,7 @@
           "signature": "String ipAddress",
           "datatype": {
             "id": "Auth.sessionmanagement.isipallowedforprofile.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -1218,7 +1218,7 @@
     },
     "setsessionlevel(auth.sessionlevel)": {
       "id": "Auth.sessionmanagement.setsessionlevel",
-      "type": "method",
+      "nodeType": "method",
       "name": "setSessionLevel",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1281,11 +1281,11 @@
       "simplifiedSignature": "setSessionLevel(Auth.SessionLevel)",
       "datatype": {
         "id": "Auth.sessionmanagement.setsessionlevel.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Sets the user's current session security level.",
-      "variables": {
+      "params": {
         "level": {
           "id": "Auth.sessionmanagement.setsessionlevel.level",
           "type": "var",
@@ -1312,7 +1312,7 @@
           "signature": "Auth.SessionLevel level",
           "datatype": {
             "id": "Auth.sessionmanagement.setsessionlevel.auth.sessionlevel",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Auth.SessionLevel"
           }
         }
@@ -1320,7 +1320,7 @@
     },
     "validatetotptokenforkey(string,string)": {
       "id": "Auth.sessionmanagement.validatetotptokenforkey",
-      "type": "method",
+      "nodeType": "method",
       "name": "validateTotpTokenForKey",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1383,11 +1383,11 @@
       "simplifiedSignature": "validateTotpTokenForKey(String,String)",
       "datatype": {
         "id": "Auth.sessionmanagement.validatetotptokenforkey.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Deprecated. Use validateTotpTokenForKey(totpSharedKey, totpCode, description) instead.",
-      "variables": {
+      "params": {
         "sharedKey": {
           "id": "Auth.sessionmanagement.validatetotptokenforkey.sharedkey",
           "type": "var",
@@ -1414,7 +1414,7 @@
           "signature": "String sharedKey",
           "datatype": {
             "id": "Auth.sessionmanagement.validatetotptokenforkey.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1444,7 +1444,7 @@
           "signature": "String totpCode",
           "datatype": {
             "id": "Auth.sessionmanagement.validatetotptokenforkey.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -1452,7 +1452,7 @@
     },
     "validatetotptokenforkey(string,string,string)": {
       "id": "Auth.sessionmanagement.validatetotptokenforkey",
-      "type": "method",
+      "nodeType": "method",
       "name": "validateTotpTokenForKey",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1515,11 +1515,11 @@
       "simplifiedSignature": "validateTotpTokenForKey(String,String,String)",
       "datatype": {
         "id": "Auth.sessionmanagement.validatetotptokenforkey.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Indicates whether a time-based one-time password (TOTP) code (token) is valid for the given shared key.",
-      "variables": {
+      "params": {
         "totpSharedKey": {
           "id": "Auth.sessionmanagement.validatetotptokenforkey.totpsharedkey",
           "type": "var",
@@ -1546,7 +1546,7 @@
           "signature": "String totpSharedKey",
           "datatype": {
             "id": "Auth.sessionmanagement.validatetotptokenforkey.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1576,7 +1576,7 @@
           "signature": "String totpCode",
           "datatype": {
             "id": "Auth.sessionmanagement.validatetotptokenforkey.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1606,7 +1606,7 @@
           "signature": "String description",
           "datatype": {
             "id": "Auth.sessionmanagement.validatetotptokenforkey.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -1614,7 +1614,7 @@
     },
     "validatetotptokenforuser(string)": {
       "id": "Auth.sessionmanagement.validatetotptokenforuser",
-      "type": "method",
+      "nodeType": "method",
       "name": "validateTotpTokenForUser",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1677,11 +1677,11 @@
       "simplifiedSignature": "validateTotpTokenForUser(String)",
       "datatype": {
         "id": "Auth.sessionmanagement.validatetotptokenforuser.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Deprecated. Use validateTotpTokenForUser(totpCode, description) instead.",
-      "variables": {
+      "params": {
         "totpCode": {
           "id": "Auth.sessionmanagement.validatetotptokenforuser.totpcode",
           "type": "var",
@@ -1708,7 +1708,7 @@
           "signature": "String totpCode",
           "datatype": {
             "id": "Auth.sessionmanagement.validatetotptokenforuser.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -1716,7 +1716,7 @@
     },
     "validatetotptokenforuser(string,string)": {
       "id": "Auth.sessionmanagement.validatetotptokenforuser",
-      "type": "method",
+      "nodeType": "method",
       "name": "validateTotpTokenForUser",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1779,11 +1779,11 @@
       "simplifiedSignature": "validateTotpTokenForUser(String,String)",
       "datatype": {
         "id": "Auth.sessionmanagement.validatetotptokenforuser.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Indicates whether a time-based one-time password (TOTP) code (token) is valid for the current user.",
-      "variables": {
+      "params": {
         "totpCode": {
           "id": "Auth.sessionmanagement.validatetotptokenforuser.totpcode",
           "type": "var",
@@ -1810,7 +1810,7 @@
           "signature": "String totpCode",
           "datatype": {
             "id": "Auth.sessionmanagement.validatetotptokenforuser.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1840,7 +1840,7 @@
           "signature": "String description",
           "datatype": {
             "id": "Auth.sessionmanagement.validatetotptokenforuser.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }

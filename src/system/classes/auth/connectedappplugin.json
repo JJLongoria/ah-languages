@@ -1,6 +1,6 @@
 {
   "id": "Auth.connectedappplugin",
-  "type": "class",
+  "nodeType": "class",
   "name": "ConnectedAppPlugin",
   "namespace": "Auth",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "authorize(id,id,boolean)": {
       "id": "Auth.connectedappplugin.authorize",
-      "type": "method",
+      "nodeType": "method",
       "name": "authorize",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -113,11 +113,11 @@
       "simplifiedSignature": "authorize(Id,Id,Boolean)",
       "datatype": {
         "id": "Auth.connectedappplugin.authorize.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Deprecated and available only in API versions 35.0 and 36.0. As of version 37.0, use authorize(userId, connectedAppId, isAdminApproved, context) instead.",
-      "variables": {
+      "params": {
         "userId": {
           "id": "Auth.connectedappplugin.authorize.userid",
           "type": "var",
@@ -144,7 +144,7 @@
           "signature": "Id userId",
           "datatype": {
             "id": "Auth.connectedappplugin.authorize.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         },
@@ -174,7 +174,7 @@
           "signature": "Id connectedAppId",
           "datatype": {
             "id": "Auth.connectedappplugin.authorize.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         },
@@ -204,7 +204,7 @@
           "signature": "Boolean isAdminApproved",
           "datatype": {
             "id": "Auth.connectedappplugin.authorize.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -212,7 +212,7 @@
     },
     "authorize(id,id,boolean,auth.invocationcontext)": {
       "id": "Auth.connectedappplugin.authorize",
-      "type": "method",
+      "nodeType": "method",
       "name": "authorize",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -256,11 +256,11 @@
       "simplifiedSignature": "authorize(Id,Id,Boolean,Auth.InvocationContext)",
       "datatype": {
         "id": "Auth.connectedappplugin.authorize.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Authorizes the specified user to access the connected app. If the connected app is set for users to self-authorize, this method isn’t invoked.",
-      "variables": {
+      "params": {
         "userId": {
           "id": "Auth.connectedappplugin.authorize.userid",
           "type": "var",
@@ -287,7 +287,7 @@
           "signature": "Id userId",
           "datatype": {
             "id": "Auth.connectedappplugin.authorize.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         },
@@ -317,7 +317,7 @@
           "signature": "Id connectedAppId",
           "datatype": {
             "id": "Auth.connectedappplugin.authorize.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         },
@@ -347,7 +347,7 @@
           "signature": "Boolean isAdminApproved",
           "datatype": {
             "id": "Auth.connectedappplugin.authorize.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         },
@@ -377,7 +377,7 @@
           "signature": "Auth.InvocationContext context",
           "datatype": {
             "id": "Auth.connectedappplugin.authorize.auth.invocationcontext",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Auth.InvocationContext"
           }
         }
@@ -385,7 +385,7 @@
     },
     "customattributes(id,id,map,string>)": {
       "id": "Auth.connectedappplugin.customattributes",
-      "type": "method",
+      "nodeType": "method",
       "name": "customAttributes",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -429,11 +429,11 @@
       "simplifiedSignature": "customAttributes(Id,Id,Map,String>)",
       "datatype": {
         "id": "Auth.connectedappplugin.customattributes.Map<String, String>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Map<String, String>"
       },
       "description": "Sets new attributes for the specified user. When the connected app gets the user’s attributes from the UserInfo endpoint or through a SAML assertion, use this method to update the attribute values.",
-      "variables": {
+      "params": {
         "userId": {
           "id": "Auth.connectedappplugin.customattributes.userid",
           "type": "var",
@@ -460,7 +460,7 @@
           "signature": "Id userId",
           "datatype": {
             "id": "Auth.connectedappplugin.customattributes.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         },
@@ -490,7 +490,7 @@
           "signature": "Id connectedAppId",
           "datatype": {
             "id": "Auth.connectedappplugin.customattributes.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         },
@@ -520,7 +520,7 @@
           "signature": "Map <String",
           "datatype": {
             "id": "Auth.connectedappplugin.customattributes.map",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Map"
           }
         },
@@ -550,7 +550,7 @@
           "signature": "String> formulaDefinedAttributes,",
           "datatype": {
             "id": "Auth.connectedappplugin.customattributes.string>",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String>"
           }
         }
@@ -558,7 +558,7 @@
     },
     "modifysamlresponse(map,string>)": {
       "id": "Auth.connectedappplugin.modifysamlresponse",
-      "type": "method",
+      "nodeType": "method",
       "name": "modifySAMLResponse",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -602,11 +602,11 @@
       "simplifiedSignature": "modifySAMLResponse(Map,String>)",
       "datatype": {
         "id": "Auth.connectedappplugin.modifysamlresponse.Dom.XmlNode",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Dom.XmlNode"
       },
       "description": "Modifies the XML generated by the Salesforce SAML Identity Provider (IDP) before it’s sent to the service provider.",
-      "variables": {
+      "params": {
         "<String": {
           "id": "Auth.connectedappplugin.modifysamlresponse.<string",
           "type": "var",
@@ -633,7 +633,7 @@
           "signature": "Map <String",
           "datatype": {
             "id": "Auth.connectedappplugin.modifysamlresponse.map",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Map"
           }
         },
@@ -663,7 +663,7 @@
           "signature": "String> authSession,",
           "datatype": {
             "id": "Auth.connectedappplugin.modifysamlresponse.string>",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String>"
           }
         }
@@ -671,7 +671,7 @@
     },
     "refresh(id,id)": {
       "id": "Auth.connectedappplugin.refresh",
-      "type": "method",
+      "nodeType": "method",
       "name": "refresh",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -715,11 +715,11 @@
       "simplifiedSignature": "refresh(Id,Id)",
       "datatype": {
         "id": "Auth.connectedappplugin.refresh.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Deprecated and available only in API versions 35.0 and 36.0. As of version 37.0, use refresh(userId, connectedAppId, context) instead.",
-      "variables": {
+      "params": {
         "userId": {
           "id": "Auth.connectedappplugin.refresh.userid",
           "type": "var",
@@ -746,7 +746,7 @@
           "signature": "Id userId",
           "datatype": {
             "id": "Auth.connectedappplugin.refresh.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         },
@@ -776,7 +776,7 @@
           "signature": "Id connectedAppId",
           "datatype": {
             "id": "Auth.connectedappplugin.refresh.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         }
@@ -784,7 +784,7 @@
     },
     "refresh(id,id,auth.invocationcontext)": {
       "id": "Auth.connectedappplugin.refresh",
-      "type": "method",
+      "nodeType": "method",
       "name": "refresh",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -828,11 +828,11 @@
       "simplifiedSignature": "refresh(Id,Id,Auth.InvocationContext)",
       "datatype": {
         "id": "Auth.connectedappplugin.refresh.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Salesforce calls this method during a refresh token exchange.",
-      "variables": {
+      "params": {
         "userId": {
           "id": "Auth.connectedappplugin.refresh.userid",
           "type": "var",
@@ -859,7 +859,7 @@
           "signature": "Id userId",
           "datatype": {
             "id": "Auth.connectedappplugin.refresh.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         },
@@ -889,7 +889,7 @@
           "signature": "Id connectedAppId",
           "datatype": {
             "id": "Auth.connectedappplugin.refresh.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         },
@@ -919,7 +919,7 @@
           "signature": "Auth.InvocationContext context",
           "datatype": {
             "id": "Auth.connectedappplugin.refresh.auth.invocationcontext",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Auth.InvocationContext"
           }
         }

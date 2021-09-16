@@ -1,6 +1,6 @@
 {
   "id": "System.eventbus",
-  "type": "class",
+  "nodeType": "class",
   "name": "EventBus",
   "namespace": "System",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "getoperationid(object)": {
       "id": "System.eventbus.getoperationid",
-      "type": "method",
+      "nodeType": "method",
       "name": "getOperationId",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -132,11 +132,11 @@
       "simplifiedSignature": "getOperationId(Object)",
       "datatype": {
         "id": "System.eventbus.getoperationid.String",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "String"
       },
       "description": "Returns the ID of the asynchronous event publishing operation based on the passed-in SaveResult. Use this ID to correlate the asynchronous publishing result sent on the /event/AsyncOperationEvent channel.",
-      "variables": {
+      "params": {
         "result": {
           "id": "System.eventbus.getoperationid.result",
           "type": "var",
@@ -163,7 +163,7 @@
           "signature": "Object result",
           "datatype": {
             "id": "System.eventbus.getoperationid.object",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Object"
           }
         }
@@ -171,7 +171,7 @@
     },
     "publish(sobject)": {
       "id": "System.eventbus.publish",
-      "type": "method",
+      "nodeType": "method",
       "name": "publish",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -234,11 +234,11 @@
       "simplifiedSignature": "publish(SObject)",
       "datatype": {
         "id": "System.eventbus.publish.Database.SaveResult",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Database.SaveResult"
       },
       "description": "Publishes the given platform event.",
-      "variables": {
+      "params": {
         "event": {
           "id": "System.eventbus.publish.event",
           "type": "var",
@@ -265,7 +265,7 @@
           "signature": "SObject event",
           "datatype": {
             "id": "System.eventbus.publish.sobject",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "SObject"
           }
         }
@@ -273,7 +273,7 @@
     },
     "publish(list)": {
       "id": "System.eventbus.publish",
-      "type": "method",
+      "nodeType": "method",
       "name": "publish",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -336,11 +336,11 @@
       "simplifiedSignature": "publish(List)",
       "datatype": {
         "id": "System.eventbus.publish.List<Database.SaveResult>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "List<Database.SaveResult>"
       },
       "description": "Publishes the given list of platform events.",
-      "variables": {
+      "params": {
         "<SObject>": {
           "id": "System.eventbus.publish.<sobject>",
           "type": "var",
@@ -367,7 +367,7 @@
           "signature": "List <SObject>",
           "datatype": {
             "id": "System.eventbus.publish.list",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "List"
           }
         }

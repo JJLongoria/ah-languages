@@ -1,15 +1,15 @@
-const { FileReader, FileChecker } = require('@ah/core').FileSystem;
+const { FileReader, FileChecker, PathUtils } = require('@ah/core').FileSystem;
 const { StrUtils, Utils } = require('@ah/core').CoreUtils;
 
-const systemClassPath = './src/system/classes';
-const auraClassPath = './src/system/aura';
-const nsData = {}; 
+const systemClassPath = __dirname + '/classes';
+const auraDataPath = __dirname + '/aura';
+const nsData = {};
 
 class System {
 
     static getAllNamespacesData() {
         const nsData = {};
-        const nsFiles = FileReader.readDirSync(systemClassPath);
+        const nsFiles = FileReader.readDirSync(PathUtils.getAbsolutePath(systemClassPath));
         for (const nsFile of nsFiles) {
             const nsName = StrUtils.replace(nsFile, '.json', '');
             nsData[nsName] = System.getNamespaceData(nsName);
@@ -18,7 +18,7 @@ class System {
     }
 
     static getNamespaceData(nsName) {
-        const nsFolder = systemClassPath + '/' + nsName.toLowerCase();
+        const nsFolder = PathUtils.getAbsolutePath(systemClassPath) + '/' + nsName.toLowerCase();
         if (FileChecker.isExists(nsFolder)) {
             const nsData = {};
             const nsFiles = FileReader.readDirSync(nsFolder);
@@ -34,7 +34,7 @@ class System {
 
     static getAllNamespacesSummary() {
         const nsData = {};
-        const nsFiles = FileReader.readDirSync(systemClassPath);
+        const nsFiles = FileReader.readDirSync(PathUtils.getAbsolutePath(systemClassPath));
         for (const nsFile of nsFiles) {
             const nsName = StrUtils.replace(nsFile, '.json', '');
             nsData[nsName] = System.getNamespaceSummary(nsName);
@@ -43,7 +43,7 @@ class System {
     }
 
     static getNamespaceSummary(nsName) {
-        const nsFolder = systemClassPath + '/' + nsName.toLowerCase();
+        const nsFolder = PathUtils.getAbsolutePath(systemClassPath) + '/' + nsName.toLowerCase();
         if (FileChecker.isExists(nsFolder)) {
             const nsData = {};
             const nsFiles = FileReader.readDirSync(nsFolder);
@@ -63,8 +63,18 @@ class System {
         }
     }
 
+    static getAllNamespaces() {
+        const nsData = [];
+        const nsFiles = FileReader.readDirSync(PathUtils.getAbsolutePath(systemClassPath));
+        for (const nsFile of nsFiles) {
+            const nsName = StrUtils.replace(nsFile, '.json', '');
+            nsData.push(getNamespaceName(nsName));
+        }
+        return nsData;
+    }
+
     static getClass(nsName, className) {
-        const nsFolder = systemClassPath + '/' + nsName.toLowerCase();
+        const nsFolder = PathUtils.getAbsolutePath(systemClassPath) + '/' + nsName.toLowerCase();
         if (FileChecker.isExists(nsFolder)) {
             const classFile = nsFolder + '/' + className.toLowerCase() + '.json';
             if (FileChecker.isExists(classFile)) {
@@ -77,8 +87,20 @@ class System {
         }
     }
 
-    static getAuraComponentDetails(){
-        return JSON.parse(FileReader.readFileSync(auraClassPath + '/baseComponentsDetail.json'));
+    static getAuraComponentDetails() {
+        return JSON.parse(FileReader.readFileSync(PathUtils.getAbsolutePath(auraDataPath) + '/baseComponentsDetail.json'));
     }
 }
 module.exports = System;
+
+function getNamespaceName(nsName) {
+    const nsFolder = PathUtils.getAbsolutePath(systemClassPath) + '/' + nsName.toLowerCase();
+    if (FileChecker.isExists(nsFolder)) {
+        const nsFiles = FileReader.readDirSync(nsFolder);
+        for (const classFile of nsFiles) {
+            const data = JSON.parse(FileReader.readFileSync(nsFolder + '/' + classFile));
+            return data["namespace"];
+        }
+    }
+    return undefined;
+}
