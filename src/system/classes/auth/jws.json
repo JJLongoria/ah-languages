@@ -1,6 +1,6 @@
 {
   "id": "Auth.jws",
-  "type": "class",
+  "nodeType": "class",
   "name": "JWS",
   "namespace": "Auth",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "clone()": {
       "id": "Auth.jws.clone",
-      "type": "method",
+      "nodeType": "method",
       "name": "clone",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -113,15 +113,15 @@
       "simplifiedSignature": "clone()",
       "datatype": {
         "id": "Auth.jws.clone.JWS",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "JWS"
       },
       "description": "Makes a duplicate copy of the JWS object.",
-      "variables": {}
+      "params": {}
     },
     "getcompactserialization()": {
       "id": "Auth.jws.getcompactserialization",
-      "type": "method",
+      "nodeType": "method",
       "name": "getCompactSerialization",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -165,17 +165,17 @@
       "simplifiedSignature": "getCompactSerialization()",
       "datatype": {
         "id": "Auth.jws.getcompactserialization.String",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "String"
       },
       "description": "Returns the compact serialization representation of the JWS as a concatenated string, with the encoded JWS header, encoded JWS payload, and encoded JWS signature strings separated by period ('.') characters.",
-      "variables": {}
+      "params": {}
     }
   },
   "constructors": {
     "jws(auth.jwt,string)": {
       "id": "Auth.jws.jws",
-      "type": "constructor",
+      "nodeType": "constructor",
       "name": "JWS",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -219,11 +219,11 @@
       "simplifiedSignature": "JWS(Auth.JWT,String)",
       "datatype": {
         "id": "Auth.jws.jws.constructor",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "JWS"
       },
       "description": "Creates an instance of the JWS class using the specified Auth.JWT payload and the certificate used for signing the JWT bearer token.",
-      "variables": {
+      "params": {
         "jwt": {
           "id": "Auth.jws.jws.jwt",
           "type": "var",
@@ -250,7 +250,7 @@
           "signature": "Auth.JWT jwt",
           "datatype": {
             "id": "Auth.jws.jws.auth.jwt",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Auth.JWT"
           }
         },
@@ -280,7 +280,7 @@
           "signature": "String certDevName",
           "datatype": {
             "id": "Auth.jws.jws.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -288,7 +288,7 @@
     },
     "jws(string,string)": {
       "id": "Auth.jws.jws",
-      "type": "constructor",
+      "nodeType": "constructor",
       "name": "JWS",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -332,11 +332,11 @@
       "simplifiedSignature": "JWS(String,String)",
       "datatype": {
         "id": "Auth.jws.jws.constructor",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "JWS"
       },
       "description": "Creates an instance of the JWS class using the specified payload and certificate used for signing the JWT bearer token.",
-      "variables": {
+      "params": {
         "payload": {
           "id": "Auth.jws.jws.payload",
           "type": "var",
@@ -363,7 +363,7 @@
           "signature": "String payload",
           "datatype": {
             "id": "Auth.jws.jws.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -393,7 +393,7 @@
           "signature": "String certDevName",
           "datatype": {
             "id": "Auth.jws.jws.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }

@@ -1,6 +1,6 @@
 {
   "id": "System.messaging",
-  "type": "class",
+  "nodeType": "class",
   "name": "Messaging",
   "namespace": "System",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "extractinboundemail(object,boolean)": {
       "id": "System.messaging.extractinboundemail",
-      "type": "method",
+      "nodeType": "method",
       "name": "extractInboundEmail",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -132,11 +132,11 @@
       "simplifiedSignature": "extractInboundEmail(Object,Boolean)",
       "datatype": {
         "id": "System.messaging.extractinboundemail.Messaging.InboundEmail",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Messaging.InboundEmail"
       },
       "description": "Use this method in your email service code to control how to parse and process forwarded or attached emails. Returns an instance of Messaging.InboundEmail from a stream of data that is in RFC822 format. The data stream can be a forwarded email in an attachment to an existing InboundEmail, or a stream from another source.",
-      "variables": {
+      "params": {
         "source": {
           "id": "System.messaging.extractinboundemail.source",
           "type": "var",
@@ -163,7 +163,7 @@
           "signature": "Object source",
           "datatype": {
             "id": "System.messaging.extractinboundemail.object",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Object"
           }
         },
@@ -193,7 +193,7 @@
           "signature": "Boolean includeForwardedAttachments",
           "datatype": {
             "id": "System.messaging.extractinboundemail.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -201,7 +201,7 @@
     },
     "reservemassemailcapacity(integer)": {
       "id": "System.messaging.reservemassemailcapacity",
-      "type": "method",
+      "nodeType": "method",
       "name": "reserveMassEmailCapacity",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -245,11 +245,11 @@
       "simplifiedSignature": "reserveMassEmailCapacity(Integer)",
       "datatype": {
         "id": "System.messaging.reservemassemailcapacity.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Reserves email capacity to send mass email to the specified number of email addresses, after the current transaction commits.",
-      "variables": {
+      "params": {
         "amountReserved": {
           "id": "System.messaging.reservemassemailcapacity.amountreserved",
           "type": "var",
@@ -276,7 +276,7 @@
           "signature": "Integer amountReserved",
           "datatype": {
             "id": "System.messaging.reservemassemailcapacity.integer",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Integer"
           }
         }
@@ -284,7 +284,7 @@
     },
     "reservesingleemailcapacity(integer)": {
       "id": "System.messaging.reservesingleemailcapacity",
-      "type": "method",
+      "nodeType": "method",
       "name": "reserveSingleEmailCapacity",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -328,11 +328,11 @@
       "simplifiedSignature": "reserveSingleEmailCapacity(Integer)",
       "datatype": {
         "id": "System.messaging.reservesingleemailcapacity.void",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "void"
       },
       "description": "Reserves email capacity to send single email to the specified number of email addresses, after the current transaction commits.",
-      "variables": {
+      "params": {
         "amountReserved": {
           "id": "System.messaging.reservesingleemailcapacity.amountreserved",
           "type": "var",
@@ -359,7 +359,7 @@
           "signature": "Integer amountReserved",
           "datatype": {
             "id": "System.messaging.reservesingleemailcapacity.integer",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Integer"
           }
         }
@@ -367,7 +367,7 @@
     },
     "sendemail(messaging.email[],boolean)": {
       "id": "System.messaging.sendemail",
-      "type": "method",
+      "nodeType": "method",
       "name": "sendEmail",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -411,11 +411,11 @@
       "simplifiedSignature": "sendEmail(Messaging.Email[],Boolean)",
       "datatype": {
         "id": "System.messaging.sendemail.Messaging.SendEmailResult[]",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Messaging.SendEmailResult[]"
       },
       "description": "Sends the list of up to 10 emails instantiated with either SingleEmailMessage or MassEmailMessage and returns a list of SendEmailResult objects. When org preferences are set to save EmailMessage objects and a trigger is defined for EmailMessage objects, the trigger is fired for each SingleEmailMessage individually.",
-      "variables": {
+      "params": {
         "emails": {
           "id": "System.messaging.sendemail.emails",
           "type": "var",
@@ -442,7 +442,7 @@
           "signature": "Messaging.Email[] emails",
           "datatype": {
             "id": "System.messaging.sendemail.messaging.email[]",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Messaging.Email[]"
           }
         },
@@ -472,7 +472,7 @@
           "signature": "Boolean allOrNothing",
           "datatype": {
             "id": "System.messaging.sendemail.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }
@@ -480,7 +480,7 @@
     },
     "sendemailmessage(list)": {
       "id": "System.messaging.sendemailmessage",
-      "type": "method",
+      "nodeType": "method",
       "name": "sendEmailMessage",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -524,11 +524,11 @@
       "simplifiedSignature": "sendEmailMessage(List)",
       "datatype": {
         "id": "System.messaging.sendemailmessage.Messaging.SendEmailResult[]",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Messaging.SendEmailResult[]"
       },
       "description": "Sends up to 10 draft email messages as defined by the specified email message IDs and returns a list of SendEmailResult objects.",
-      "variables": {
+      "params": {
         "<ID>": {
           "id": "System.messaging.sendemailmessage.<id>",
           "type": "var",
@@ -555,7 +555,7 @@
           "signature": "List <ID>",
           "datatype": {
             "id": "System.messaging.sendemailmessage.list",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "List"
           }
         }
@@ -563,7 +563,7 @@
     },
     "renderemailtemplate(string,string,list)": {
       "id": "System.messaging.renderemailtemplate",
-      "type": "method",
+      "nodeType": "method",
       "name": "renderEmailTemplate",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -626,11 +626,11 @@
       "simplifiedSignature": "renderEmailTemplate(String,String,List)",
       "datatype": {
         "id": "System.messaging.renderemailtemplate.List<Messaging.RenderEmailTemplateBodyResult>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "List<Messaging.RenderEmailTemplateBodyResult>"
       },
       "description": "Replaces merge fields in text bodies of email templates with values from Salesforce records. Returns an array of RenderEmailTemplateBodyResult objects, each of which corresponds to an element in the supplied array of text bodies. Each RenderEmailTemplateBodyResult provides a success or failure indication, along with either an error code or the rendered text.",
-      "variables": {
+      "params": {
         "whoId": {
           "id": "System.messaging.renderemailtemplate.whoid",
           "type": "var",
@@ -657,7 +657,7 @@
           "signature": "String whoId",
           "datatype": {
             "id": "System.messaging.renderemailtemplate.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -687,7 +687,7 @@
           "signature": "String whatId",
           "datatype": {
             "id": "System.messaging.renderemailtemplate.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -717,7 +717,7 @@
           "signature": "List <String>",
           "datatype": {
             "id": "System.messaging.renderemailtemplate.list",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "List"
           }
         }
@@ -725,7 +725,7 @@
     },
     "renderstoredemailtemplate(string,string,string)": {
       "id": "System.messaging.renderstoredemailtemplate",
-      "type": "method",
+      "nodeType": "method",
       "name": "renderStoredEmailTemplate",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -788,11 +788,11 @@
       "simplifiedSignature": "renderStoredEmailTemplate(String,String,String)",
       "datatype": {
         "id": "System.messaging.renderstoredemailtemplate.Messaging.SingleEmailMessage",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Messaging.SingleEmailMessage"
       },
       "description": "Renders a text, custom, HTML, or Visualforce email template that exists in the database into an instance of Messaging.SingleEmailMessage. Includes all attachment content in the returned email message.",
-      "variables": {
+      "params": {
         "templateId": {
           "id": "System.messaging.renderstoredemailtemplate.templateid",
           "type": "var",
@@ -819,7 +819,7 @@
           "signature": "String templateId",
           "datatype": {
             "id": "System.messaging.renderstoredemailtemplate.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -849,7 +849,7 @@
           "signature": "String whoId",
           "datatype": {
             "id": "System.messaging.renderstoredemailtemplate.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -879,7 +879,7 @@
           "signature": "String whatId",
           "datatype": {
             "id": "System.messaging.renderstoredemailtemplate.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         }
@@ -887,7 +887,7 @@
     },
     "renderstoredemailtemplate(string,string,string,messaging.attachmentretrievaloption)": {
       "id": "System.messaging.renderstoredemailtemplate",
-      "type": "method",
+      "nodeType": "method",
       "name": "renderStoredEmailTemplate",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -950,11 +950,11 @@
       "simplifiedSignature": "renderStoredEmailTemplate(String,String,String,Messaging.AttachmentRetrievalOption)",
       "datatype": {
         "id": "System.messaging.renderstoredemailtemplate.Messaging.SingleEmailMessage",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Messaging.SingleEmailMessage"
       },
       "description": "Renders a text, custom, HTML, or Visualforce email template that exists in the database into an instance of Messaging.SingleEmailMessage. Provides options for including attachment metadata only, attachment metadata and content, or excluding attachments.",
-      "variables": {
+      "params": {
         "templateId": {
           "id": "System.messaging.renderstoredemailtemplate.templateid",
           "type": "var",
@@ -981,7 +981,7 @@
           "signature": "String templateId",
           "datatype": {
             "id": "System.messaging.renderstoredemailtemplate.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1011,7 +1011,7 @@
           "signature": "String whoId",
           "datatype": {
             "id": "System.messaging.renderstoredemailtemplate.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1041,7 +1041,7 @@
           "signature": "String whatId",
           "datatype": {
             "id": "System.messaging.renderstoredemailtemplate.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1071,7 +1071,7 @@
           "signature": "Messaging.AttachmentRetrievalOption attachmentRetrievalOption",
           "datatype": {
             "id": "System.messaging.renderstoredemailtemplate.messaging.attachmentretrievaloption",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Messaging.AttachmentRetrievalOption"
           }
         }
@@ -1079,7 +1079,7 @@
     },
     "renderstoredemailtemplate(string,string,string,messaging.attachmentretrievaloption,boolean)": {
       "id": "System.messaging.renderstoredemailtemplate",
-      "type": "method",
+      "nodeType": "method",
       "name": "renderStoredEmailTemplate",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -1142,11 +1142,11 @@
       "simplifiedSignature": "renderStoredEmailTemplate(String,String,String,Messaging.AttachmentRetrievalOption,Boolean)",
       "datatype": {
         "id": "System.messaging.renderstoredemailtemplate.Messaging.SingleEmailMessage",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Messaging.SingleEmailMessage"
       },
       "description": "Renders a text, custom, HTML, or Visualforce email template that exists in the database into an instance of Messaging.SingleEmailMessage. Provides options for including attachment metadata only, attachment metadata and content, or excluding attachments.",
-      "variables": {
+      "params": {
         "templateId": {
           "id": "System.messaging.renderstoredemailtemplate.templateid",
           "type": "var",
@@ -1173,7 +1173,7 @@
           "signature": "String templateId",
           "datatype": {
             "id": "System.messaging.renderstoredemailtemplate.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1203,7 +1203,7 @@
           "signature": "String whoId",
           "datatype": {
             "id": "System.messaging.renderstoredemailtemplate.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1233,7 +1233,7 @@
           "signature": "String whatId",
           "datatype": {
             "id": "System.messaging.renderstoredemailtemplate.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -1263,7 +1263,7 @@
           "signature": "Messaging.AttachmentRetrievalOption attachmentRetrievalOption",
           "datatype": {
             "id": "System.messaging.renderstoredemailtemplate.messaging.attachmentretrievaloption",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Messaging.AttachmentRetrievalOption"
           }
         },
@@ -1293,7 +1293,7 @@
           "signature": "Boolean updateEmailTemplateUsage",
           "datatype": {
             "id": "System.messaging.renderstoredemailtemplate.boolean",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Boolean"
           }
         }

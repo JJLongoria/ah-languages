@@ -1,6 +1,6 @@
 {
   "id": "Datasource.connection",
-  "type": "class",
+  "nodeType": "class",
   "name": "Connection",
   "namespace": "Datasource",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "deleterows(datasource.deletecontext)": {
       "id": "Datasource.connection.deleterows",
-      "type": "method",
+      "nodeType": "method",
       "name": "deleteRows",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -113,11 +113,11 @@
       "simplifiedSignature": "deleteRows(DataSource.DeleteContext)",
       "datatype": {
         "id": "Datasource.connection.deleterows.List<DataSource.DeleteResult>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "List<DataSource.DeleteResult>"
       },
       "description": "Invoked when external object records are deleted via the Salesforce user interface, APIs, or Apex.",
-      "variables": {
+      "params": {
         "deleteContext": {
           "id": "Datasource.connection.deleterows.deletecontext",
           "type": "var",
@@ -144,7 +144,7 @@
           "signature": "DataSource.DeleteContext deleteContext",
           "datatype": {
             "id": "Datasource.connection.deleterows.datasource.deletecontext",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "DataSource.DeleteContext"
           }
         }
@@ -152,7 +152,7 @@
     },
     "query(datasource.querycontext)": {
       "id": "Datasource.connection.query",
-      "type": "method",
+      "nodeType": "method",
       "name": "query",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -196,11 +196,11 @@
       "simplifiedSignature": "query(DataSource.QueryContext)",
       "datatype": {
         "id": "Datasource.connection.query.DataSource.TableResult",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "DataSource.TableResult"
       },
       "description": "Invoked by a SOQL query of an external object. A SOQL query is generated and executed when a user visits an external object’s list view or record detail page in Salesforce. Returns the results of the query.",
-      "variables": {
+      "params": {
         "queryContext": {
           "id": "Datasource.connection.query.querycontext",
           "type": "var",
@@ -227,7 +227,7 @@
           "signature": "DataSource.QueryContext queryContext",
           "datatype": {
             "id": "Datasource.connection.query.datasource.querycontext",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "DataSource.QueryContext"
           }
         }
@@ -235,7 +235,7 @@
     },
     "search(datasource.searchcontext)": {
       "id": "Datasource.connection.search",
-      "type": "method",
+      "nodeType": "method",
       "name": "search",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -279,11 +279,11 @@
       "simplifiedSignature": "search(DataSource.SearchContext)",
       "datatype": {
         "id": "Datasource.connection.search.List<DataSource.TableResult>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "List<DataSource.TableResult>"
       },
       "description": "Invoked by a SOSL query of an external object or when a user performs a Salesforce global search that also searches external objects. Returns the results of the query.",
-      "variables": {
+      "params": {
         "searchContext": {
           "id": "Datasource.connection.search.searchcontext",
           "type": "var",
@@ -310,7 +310,7 @@
           "signature": "DataSource.SearchContext searchContext",
           "datatype": {
             "id": "Datasource.connection.search.datasource.searchcontext",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "DataSource.SearchContext"
           }
         }
@@ -318,7 +318,7 @@
     },
     "sync()": {
       "id": "Datasource.connection.sync",
-      "type": "method",
+      "nodeType": "method",
       "name": "sync",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -362,15 +362,15 @@
       "simplifiedSignature": "sync()",
       "datatype": {
         "id": "Datasource.connection.sync.List<DataSource.Table>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "List<DataSource.Table>"
       },
       "description": "Invoked when an administrator clicks Validate and Sync on the external data source detail page. Returns a list of tables that describe the external system’s schema.",
-      "variables": {}
+      "params": {}
     },
     "upsertrows(datasource.upsertcontext)": {
       "id": "Datasource.connection.upsertrows",
-      "type": "method",
+      "nodeType": "method",
       "name": "upsertRows",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -414,11 +414,11 @@
       "simplifiedSignature": "upsertRows(DataSource.UpsertContext)",
       "datatype": {
         "id": "Datasource.connection.upsertrows.List<DataSource.UpsertResult>",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "List<DataSource.UpsertResult>"
       },
       "description": "Invoked when external object records are created or updated via the Salesforce user interface, APIs, or Apex.",
-      "variables": {
+      "params": {
         "upsertContext": {
           "id": "Datasource.connection.upsertrows.upsertcontext",
           "type": "var",
@@ -445,7 +445,7 @@
           "signature": "DataSource.UpsertContext upsertContext",
           "datatype": {
             "id": "Datasource.connection.upsertrows.datasource.upsertcontext",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "DataSource.UpsertContext"
           }
         }

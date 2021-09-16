@@ -3,6 +3,8 @@ const { CoreUtils, FileSystem, Types } = require('@ah/core');
 const TokenType = require('./tokenTypes');
 const Lexer = require('./tokenizer');
 const LangUtils = require('../utils/languageUtils');
+const { StrUtils } = require('@ah/core').CoreUtils;
+const { InvalidFilePathException } = require('@ah/core').Exceptions;
 const FileReader = FileSystem.FileReader;
 const FileChecker = FileSystem.FileChecker;
 const PathUtils = FileSystem.PathUtils;
@@ -11,37 +13,98 @@ const Validator = CoreUtils.Validator;
 const AuraJSFunction = Types.AuraJSFunction;
 const AuraJSComment = Types.AuraJSComment;
 const AuraJSCommentBlock = Types.AuraJSCommentBlock;
+const PositionData = Types.PositionData;
 const Utils = CoreUtils.Utils;
 
 class JSParser {
 
-    static parse(pathContentOrTokens) {
-        let tokens;
-        if (Utils.isArray(pathContentOrTokens)) {
-            tokens = pathContentOrTokens;
-        } else if (Utils.isString(pathContentOrTokens)) {
-            let content;
-            if (PathUtils.isURI(pathContentOrTokens)) {
-                pathContentOrTokens = Validator.validateFilePath(pathContentOrTokens);
-                if (!FileChecker.isAuraHelperJS(pathContentOrTokens) && !FileChecker.isAuraControllerJS(pathContentOrTokens))
-                    throw new Error('Wrong file to parse. You must to select an Aura Javascript file (Controller or Helper)');
-                content = FileReader.readFileSync(pathContentOrTokens);
-            } else {
-                content = pathContentOrTokens;
-            }
-            tokens = Lexer.tokenize(content);
+    constructor(filePathOrTokens, fileName) {
+        if (Utils.isArray(filePathOrTokens)) {
+            this.tokens = filePathOrTokens;
+            this.tokensLength = this.tokens.length;
+            this.fileName = fileName;
         } else {
-            throw new Error('You must to select a file path, file content or file tokens');
+            this.tokens = [];
+            this.tokensLength = 0;
+            this.filePath = filePathOrTokens;
+            this.fileName = this.fileName || (this.filePath ? PathUtils.removeFileExtension(PathUtils.getBasename(this.filePath)) : undefined);
         }
-        const len = tokens.length;
+        this.content = undefined;
+        this.cursorPosition = undefined;
+        this.node = undefined;
+    }
+
+    setTokens(tokens) {
+        this.tokens = tokens;
+        this.tokensLength = this.tokens.length;
+        return this;
+    }
+
+    setFilePath(filePath) {
+        this.filePath = filePath;
+        return this;
+    }
+
+    setFileName(fileName) {
+        this.fileName = fileName;
+        return this;
+    }
+
+    setContent(content) {
+        this.content = content;
+        return this;
+    }
+
+    setCursorPosition(position) {
+        this.cursorPosition = position;
+        return this;
+    }
+
+    parse() {
+        if (this.node)
+            return this.node;
+        if (this.filePath && !this.content && (!this.tokens || this.tokens.length === 0)) {
+            this.filePath = Validator.validateFilePath(this.filePath);
+            this.content = FileReader.readFileSync(this.filePath);
+            if (!FileChecker.isJavaScript(this.filePath))
+                throw new InvalidFilePathException(this.filePath, this.fileName);
+            this.tokens = Lexer.tokenize(this.content);
+            this.tokensLength = this.tokens.length;
+        } else if (this.content && (!this.tokens || this.tokens.length === 0)) {
+            this.tokens = Lexer.tokenize(this.content);
+            this.tokensLength = this.tokens.length;
+        }
         const methods = [];
         let bracketIndent = 0;
         let parenthesisIndent = 0;
         let comment;
-        for (let index = 0; index < len; index++) {
-            const lastToken = LangUtils.getLastToken(tokens, index);
-            const token = new Token(tokens[index]);
-            const nextToken = LangUtils.getNextToken(tokens, index);
+        let positionData;
+        let strQueryStartIndex = -1;
+        let strQueryEndIndex = -1;
+        let strQueryFrom = false;
+        this.node = {
+            name: this.fileName,
+            methods: [],
+        }
+        for (let index = 0; index < this.tokensLength; index++) {
+            const lastToken = LangUtils.getLastToken(this.tokens, index);
+            const token = new Token(this.tokens[index]);
+            const nextToken = LangUtils.getNextToken(this.tokens, index);
+            if (this.cursorPosition && this.node && !positionData) {
+                if (LangUtils.isOnPosition(token, this.cursorPosition)) {
+                    const startIndex = this.cursorPosition.character - token.range.start.character;
+                    const startPart = token.text.substring(0, startIndex + 1);
+                    const endPart = token.text.substring(startIndex + 1);
+                    positionData = new PositionData(startPart, endPart, this.node.nodeType, undefined, 'JS');
+                    positionData.onText = token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_START || token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+                    if (strQueryStartIndex !== -1 && strQueryEndIndex !== -1 && strQueryFrom) {
+                        positionData.strQueryStartIndex = strQueryStartIndex;
+                        positionData.strQueryEndIndex = strQueryEndIndex;
+                    }
+                }
+                strQueryStartIndex = -1;
+                strQueryEndIndex = -1;
+            }
             if (openBracket(token)) {
                 bracketIndent++;
             } else if (closeBracket(token)) {
@@ -51,17 +114,23 @@ class JSParser {
             } else if (closeParenthesis(token)) {
                 parenthesisIndent--;
             } else if (isCommentLine(token)) {
-                const newNode = new AuraJSComment(token);
-                index = processCommentLine(newNode, tokens, index);
+                const newNode = new AuraJSComment();
+                index = processCommentLine(newNode, this.tokens, index);
                 comment = newNode;
             } else if (openCommentBlock(token)) {
-                const newNode = new AuraJSCommentBlock(token);
-                index = processCommentBlock(newNode, tokens, index);
+                const newNode = new AuraJSCommentBlock();
+                index = processCommentBlock(newNode, this.tokens, index);
                 comment = newNode;
+            } else if (isQuery(token, lastToken)) {
+                const data = processQuery(this.tokens, index, this.cursorPosition, node);
+                index = data.index;
+                if (data.positionData && !positionData) {
+                    positionData = data.positionData;
+                }
             } else if (bracketIndent === 1 && parenthesisIndent === 1) {
                 if (isFunction(lastToken, token, nextToken)) {
                     const newNode = new AuraJSFunction(lastToken.text, lastToken, comment);
-                    index = processFunction(newNode, tokens, index);
+                    index = processFunction(newNode, this.tokens, index);
                     if (comment) {
                         comment = undefined;
                     }
@@ -69,58 +138,10 @@ class JSParser {
                 }
             }
         }
-        return methods;
-    }
-
-    static isPositionOnText(content, position) {
-        const tokens = Lexer.tokenize(content);
-        const len = tokens.length;
-        for (let index = 0; index < len; index++) {
-            let token = new Token(tokens[index]);
-            if (token.range.start.isBeforeOrEqual(position) && token.range.end.isAfterOrEqual(position) && (token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_START || token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_END || token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING))
-                return true;
-
-        }
-        return false;
-    }
-
-    static getPositionRange(content, tokenText, ignoreCase) {
-        if (ignoreCase)
-            tokenText = tokenText.toLowerCase();
-        const tokens = Lexer.tokenize(content);
-        const len = tokens.length;
-        for (let index = 0; index < len; index++) {
-            let token = new Token(tokens[index]);
-            const sameText = (ignoreCase) ? token.textToLower === tokenText : token.text === tokenText;
-            if (sameText && token.range.start.isBeforeOrEqual(position) && token.range.end.isAfterOrEqual(position))
-                return token.range;
-
-        }
-        return 0;
-    }
-
-    static getDataToPutApexParams(content) {
-        const data = {
-            startIndex: 0,
-            endsWithSemicolon: true,
-            completeBody: true
-        };
-        const tokens = Lexer.tokenize(content);
-        const len = tokens.length;
-        for (let index = 0; index < len; index++) {
-            const token = new Token(tokens[index]);
-            const lastToken = LangUtils.getLastToken(tokens, index);
-            const nextToken = LangUtils.getNextToken(tokens, index);
-            if (token.text === 'c' && nextToken && (nextToken.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || nextToken.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR)) {
-                data.startIndex = token.range.start.character;
-                if (lastToken && (lastToken.type === TokenType.PUNCTUATION.COMMA || lastToken.type === TokenType.OPERATOR.ASSIGN.ASSIGN)) {
-                    data.completeBody = false;
-                    if (lastToken.tokenType !== TokenType.OPERATOR.ASSIGN.ASSIGN)
-                        data.endsWithSemicolon = false
-                }
-            }
-        }
-        return data;
+        this.node.methods = methods;
+        if (positionData)
+            this.node.positionData = positionData;
+        return this.node;
     }
 }
 module.exports = JSParser;
@@ -135,7 +156,7 @@ function processFunction(newNode, tokens, index) {
             break;
         if (token.type === TokenType.ENTITY.VARIABLE) {
             varNames.push(token.text);
-            newNode.variables.push(token);
+            newNode.params.push(token);
         }
     }
     newNode.signature = newNode.name + '(' + varNames.join(', ') + ')';
@@ -201,4 +222,85 @@ function processCommentLine(node, tokens, index) {
     }
     index--;
     return index;
+}
+
+function isQuery(token, lastToken) {
+    if (lastToken && (token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_START) && token.textToLower === 'select')
+        return true;
+    return false;
+}
+
+function processQuery(tokens, index, position, node, startColumn) {
+    const len = tokens.length;
+    let token = tokens[index];
+    let lastToken = LangUtils.getLastToken(tokens, index);
+    let isDynamic = (lastToken && lastToken.type === TokenType.PUNCTUATION.QUOTTES_START && token.textToLower === 'select');
+    let nodeId;
+    let nodeName;
+    let positionData;
+    if (node.type === AuraNodeTypes.SOQL) {
+        nodeId = node.id + '.subquery.' + node.projection.length;
+        nodeName = 'subquery.' + node.queries.length;
+    } else {
+        nodeId = node.id + '.query.' + node.queries.length;
+        nodeName = 'query.' + node.queries.length;
+    }
+    const query = new SOQLQuery(nodeId, nodeName, (isDynamic) ? lastToken : token);
+    if (!isDynamic)
+        index++;
+    let onProjection = false;
+    let field = '';
+    let fieldStartToken;
+    for (; index < len; index++) {
+        lastToken = LangUtils.getLastToken(tokens, index);
+        token = tokens[index];
+        const nextToken = LangUtils.getNextToken(tokens, index);
+        if (position && query && !positionData) {
+            if (LangUtils.isOnPosition(token, lastToken, nextToken, position)) {
+                const startIndex = position.character - token.range.start.character;
+                const startPart = token.text.substring(0, startIndex + 1);
+                const endPart = token.text.substring(startIndex + 1);
+                positionData = new PositionData(startPart, endPart, query.nodeType, query.id, 'JS');
+                positionData.onText = token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_START || token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+            }
+        }
+        if (token.textToLower === 'from') {
+            if (field) {
+                query.projection.push(new SOQLField(query.id + 'field_' + field, field, fieldStartToken));
+                field = '';
+                fieldStartToken = undefined;
+            }
+            onProjection = false;
+            query.from = nextToken;
+        } else if (token.textToLower === 'select') {
+            onProjection = true;
+        } else if (token.type === TokenType.PUNCTUATION.QUOTTES_END) {
+            query.endToken = token;
+            break;
+        } else if (onProjection) {
+            if (token.textToLower === ',') {
+                query.projection.push(new SOQLField(query.id + 'field_' + field, field, fieldStartToken));
+                field = '';
+                fieldStartToken = undefined;
+            } else if (isQuery(token, lastToken)) {
+                const data = processQuery(tokens, index, position, query);
+                index = data.index;
+                query.projection.push(data.query);
+                if (data.positionData && !positionData) {
+                    positionData = data.positionData;
+                }
+            } else {
+                field += token.text;
+                if (!fieldStartToken)
+                    fieldStartToken = token;
+            }
+        }
+    }
+    if (positionData)
+        positionData.query = query;
+    return {
+        query: query,
+        positionData: positionData,
+        index: index
+    };
 }

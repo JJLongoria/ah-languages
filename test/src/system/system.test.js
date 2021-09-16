@@ -9,6 +9,9 @@ describe('Testing ./src/system/system.js', () => {
         const nsData = System.getNamespaceData('System');
     });
 
+    test('Testing getAllNamespaces()', () => {
+        const nsData = System.getAllNamespaces();
+    });
     test('Testing getAllNamespacesSummary()', () => {
         const nsSummary = System.getAllNamespacesSummary();
     });

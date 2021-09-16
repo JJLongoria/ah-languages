@@ -1,6 +1,6 @@
 {
   "id": "System.flexqueue",
-  "type": "class",
+  "nodeType": "class",
   "name": "FlexQueue",
   "namespace": "System",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "moveafterjob(id,id)": {
       "id": "System.flexqueue.moveafterjob",
-      "type": "method",
+      "nodeType": "method",
       "name": "moveAfterJob",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -132,11 +132,11 @@
       "simplifiedSignature": "moveAfterJob(Id,Id)",
       "datatype": {
         "id": "System.flexqueue.moveafterjob.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Moves the job with the ID jobToMoveId immediately after the job with the ID jobInQueueId in the flex queue. You can move jobToMoveId forward or backward in the queue. If either job isn’t in the queue, it throws an element-not-found exception. Returns true if the job is moved, or false if jobToMoveId is already immediately after jobInQueueId, so no change is made.",
-      "variables": {
+      "params": {
         "jobToMoveId": {
           "id": "System.flexqueue.moveafterjob.jobtomoveid",
           "type": "var",
@@ -163,7 +163,7 @@
           "signature": "Id jobToMoveId",
           "datatype": {
             "id": "System.flexqueue.moveafterjob.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         },
@@ -193,7 +193,7 @@
           "signature": "Id jobInQueueId",
           "datatype": {
             "id": "System.flexqueue.moveafterjob.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         }
@@ -201,7 +201,7 @@
     },
     "movebeforejob(id,id)": {
       "id": "System.flexqueue.movebeforejob",
-      "type": "method",
+      "nodeType": "method",
       "name": "moveBeforeJob",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -264,11 +264,11 @@
       "simplifiedSignature": "moveBeforeJob(Id,Id)",
       "datatype": {
         "id": "System.flexqueue.movebeforejob.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Moves the job with the ID jobToMoveId immediately before the job with the ID jobInQueueId in the flex queue. You can move jobToMoveId forward or backward in the queue. If either job isn’t in the queue, it throws an element-not-found exception. Returns true if the job is moved, or false if jobToMoveId is already immediately before jobInQueueId, so no change is made.",
-      "variables": {
+      "params": {
         "jobToMoveId": {
           "id": "System.flexqueue.movebeforejob.jobtomoveid",
           "type": "var",
@@ -295,7 +295,7 @@
           "signature": "Id jobToMoveId",
           "datatype": {
             "id": "System.flexqueue.movebeforejob.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         },
@@ -325,7 +325,7 @@
           "signature": "Id jobInQueueId",
           "datatype": {
             "id": "System.flexqueue.movebeforejob.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         }
@@ -333,7 +333,7 @@
     },
     "movejobtoend(id)": {
       "id": "System.flexqueue.movejobtoend",
-      "type": "method",
+      "nodeType": "method",
       "name": "moveJobToEnd",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -396,11 +396,11 @@
       "simplifiedSignature": "moveJobToEnd(Id)",
       "datatype": {
         "id": "System.flexqueue.movejobtoend.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Moves the specified job the end of the flex queue, to index position (size - 1). All jobs after the job’s starting position move one spot forward. If the job isn’t in the queue, it throws an element-not-found exception. Returns true if the job is moved, or false if the job is already at the end of the queue, so no change is made.",
-      "variables": {
+      "params": {
         "jobId": {
           "id": "System.flexqueue.movejobtoend.jobid",
           "type": "var",
@@ -427,7 +427,7 @@
           "signature": "Id jobId",
           "datatype": {
             "id": "System.flexqueue.movejobtoend.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         }
@@ -435,7 +435,7 @@
     },
     "movejobtofront(id)": {
       "id": "System.flexqueue.movejobtofront",
-      "type": "method",
+      "nodeType": "method",
       "name": "moveJobToFront",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -498,11 +498,11 @@
       "simplifiedSignature": "moveJobToFront(Id)",
       "datatype": {
         "id": "System.flexqueue.movejobtofront.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Moves the specified job to the front of the flex queue, to index position 0. All other jobs move back one spot. If the job isn’t in the queue, it throws an element-not-found exception. Returns true if the job is moved, or false if the job is already at the front of the queue, so no change is made.",
-      "variables": {
+      "params": {
         "jobId": {
           "id": "System.flexqueue.movejobtofront.jobid",
           "type": "var",
@@ -529,7 +529,7 @@
           "signature": "Id jobId",
           "datatype": {
             "id": "System.flexqueue.movejobtofront.id",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Id"
           }
         }

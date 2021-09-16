@@ -1,4 +1,5 @@
 const { Token } = require('@ah/core').Types;
+const ApexTokenType = require('../apex/tokenTypes');
 
 class LanguageUtils {
 
@@ -37,58 +38,20 @@ class LanguageUtils {
         if (index - 2 >= 0)
             return new Token(tokens[index - 2]);
     }
-/*
-    static getPositionData(position, token, nextToken) {
-        let positionData;
-        if (token.startIndex <= position.character && position.character <= token.endIndex) {
-            if (positionData === undefined)
-                positionData = {
-                    startPart: undefined,
-                    endPart: undefined,
-                    isOnClass: undefined,
-                    isOnMethod: undefined,
-                    isOnMethodParams: undefined,
-                    isOnEnum: undefined,
-                    methodSignature: undefined
-                };
-            let startIndex = position.character - token.startIndex;
-            positionData.startPart = token.content.substring(0, startIndex + 1);
-            positionData.endPart = token.content.substring(startIndex + 1, token.content.length - 1);
-        } else if (token.endIndex <= position.character && position.character <= nextToken.startIndex) {
-            if (positionData === undefined)
-                positionData = {
-                    startPart: undefined,
-                    endPart: undefined,
-                    isOnClass: undefined,
-                    isOnMethod: undefined,
-                    isOnMethodParams: undefined,
-                    isOnEnum: undefined,
-                    methodSignature: undefined
-                };
-            positionData.startPart = token.content;
-        } else {
-            if (positionData === undefined)
-                positionData = {
-                    startPart: undefined,
-                    endPart: undefined,
-                    isOnClass: undefined,
-                    isOnMethod: undefined,
-                    isOnMethodParams: undefined,
-                    isOnEnum: undefined,
-                    methodSignature: undefined
-                };
-        }
-        return positionData;
-    }
 
-    static isOnPosition(position, lastToken, token, nextToken) {
-        if (position && token && token.line == position.line) {
-            if (token.startIndex <= position.character && nextToken && position.character <= nextToken.startIndex)
+    static isOnPosition(token, lastToken, nextToken, cursorPosition) {
+        if (cursorPosition) {
+            if (token && token.range.start.line == cursorPosition.line) {
+                if (token.range.start.character <= cursorPosition.character && cursorPosition.character <= token.range.end.character) {
+                    return true;
+                } else if (token.range.start.character <= cursorPosition.character && nextToken && nextToken.range.start.line === token.range.start.line && cursorPosition.character <= nextToken.range.start.character) {
+                    return true;
+                }
+            } else if (cursorPosition && lastToken && lastToken.range.start.line < cursorPosition.line && nextToken && cursorPosition.line < nextToken.range.start.line) {
                 return true;
-        } else if (position && lastToken && lastToken.line < position.line && nextToken && position.line < nextToken.line) {
-            return true;
+            }
         }
         return false;
-    }*/
+    }
 }
 module.exports = LanguageUtils;

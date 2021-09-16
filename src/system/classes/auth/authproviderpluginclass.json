@@ -1,6 +1,6 @@
 {
   "id": "Auth.authproviderpluginclass",
-  "type": "class",
+  "nodeType": "class",
   "name": "AuthProviderPluginClass",
   "namespace": "Auth",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "getcustommetadatatype()": {
       "id": "Auth.authproviderpluginclass.getcustommetadatatype",
-      "type": "method",
+      "nodeType": "method",
       "name": "getCustomMetadataType",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -113,15 +113,15 @@
       "simplifiedSignature": "getCustomMetadataType()",
       "datatype": {
         "id": "Auth.authproviderpluginclass.getcustommetadatatype.String",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "String"
       },
       "description": "Returns the custom metadata type API name for a custom OAuth-based authentication provider for single sign-on to Salesforce.",
-      "variables": {}
+      "params": {}
     },
     "getuserinfo(map,string>)": {
       "id": "Auth.authproviderpluginclass.getuserinfo",
-      "type": "method",
+      "nodeType": "method",
       "name": "getUserInfo",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -165,11 +165,11 @@
       "simplifiedSignature": "getUserInfo(Map,String>)",
       "datatype": {
         "id": "Auth.authproviderpluginclass.getuserinfo.Auth.UserData",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Auth.UserData"
       },
       "description": "Returns information from the custom authentication provider about the current user. This information is used by the registration handler and in other authentication provider flows.",
-      "variables": {
+      "params": {
         "<String": {
           "id": "Auth.authproviderpluginclass.getuserinfo.<string",
           "type": "var",
@@ -196,7 +196,7 @@
           "signature": "Map <String",
           "datatype": {
             "id": "Auth.authproviderpluginclass.getuserinfo.map",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Map"
           }
         },
@@ -226,7 +226,7 @@
           "signature": "String> authProviderConfiguration,",
           "datatype": {
             "id": "Auth.authproviderpluginclass.getuserinfo.string>",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String>"
           }
         }
@@ -234,7 +234,7 @@
     },
     "handlecallback(map,string>)": {
       "id": "Auth.authproviderpluginclass.handlecallback",
-      "type": "method",
+      "nodeType": "method",
       "name": "handleCallback",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -278,11 +278,11 @@
       "simplifiedSignature": "handleCallback(Map,String>)",
       "datatype": {
         "id": "Auth.authproviderpluginclass.handlecallback.Auth.AuthProviderTokenResponse",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Auth.AuthProviderTokenResponse"
       },
       "description": "Uses the authentication provider’s supported authentication protocol to return an OAuth access token, OAuth secret or refresh token, and the state passed in when the request for the current user was initiated.",
-      "variables": {
+      "params": {
         "<String": {
           "id": "Auth.authproviderpluginclass.handlecallback.<string",
           "type": "var",
@@ -309,7 +309,7 @@
           "signature": "Map <String",
           "datatype": {
             "id": "Auth.authproviderpluginclass.handlecallback.map",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Map"
           }
         },
@@ -339,7 +339,7 @@
           "signature": "String> authProviderConfiguration,",
           "datatype": {
             "id": "Auth.authproviderpluginclass.handlecallback.string>",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String>"
           }
         }
@@ -347,7 +347,7 @@
     },
     "initiate(map,string>)": {
       "id": "Auth.authproviderpluginclass.initiate",
-      "type": "method",
+      "nodeType": "method",
       "name": "initiate",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -391,11 +391,11 @@
       "simplifiedSignature": "initiate(Map,String>)",
       "datatype": {
         "id": "Auth.authproviderpluginclass.initiate.System.PageReference",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "System.PageReference"
       },
       "description": "Returns the URL where the user is redirected for authentication.",
-      "variables": {
+      "params": {
         "<String": {
           "id": "Auth.authproviderpluginclass.initiate.<string",
           "type": "var",
@@ -422,7 +422,7 @@
           "signature": "Map <String",
           "datatype": {
             "id": "Auth.authproviderpluginclass.initiate.map",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Map"
           }
         },
@@ -452,7 +452,7 @@
           "signature": "String> authProviderConfiguration,",
           "datatype": {
             "id": "Auth.authproviderpluginclass.initiate.string>",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String>"
           }
         }
@@ -460,7 +460,7 @@
     },
     "refresh(map,string>)": {
       "id": "Auth.authproviderpluginclass.refresh",
-      "type": "method",
+      "nodeType": "method",
       "name": "refresh",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -504,11 +504,11 @@
       "simplifiedSignature": "refresh(Map,String>)",
       "datatype": {
         "id": "Auth.authproviderpluginclass.refresh.Auth.OAuthRefreshResult",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Auth.OAuthRefreshResult"
       },
       "description": "Returns a new access token, which is used to update an expired access token.",
-      "variables": {
+      "params": {
         "<String": {
           "id": "Auth.authproviderpluginclass.refresh.<string",
           "type": "var",
@@ -535,7 +535,7 @@
           "signature": "Map <String",
           "datatype": {
             "id": "Auth.authproviderpluginclass.refresh.map",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Map"
           }
         },
@@ -565,7 +565,7 @@
           "signature": "String> authProviderConfiguration,",
           "datatype": {
             "id": "Auth.authproviderpluginclass.refresh.string>",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String>"
           }
         }

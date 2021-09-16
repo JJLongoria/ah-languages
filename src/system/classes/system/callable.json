@@ -1,6 +1,6 @@
 {
   "id": "System.callable",
-  "type": "interface",
+  "nodeType": "interface",
   "name": "Callable",
   "namespace": "System",
   "startToken": {
@@ -69,7 +69,7 @@
   "methods": {
     "add(string,datetime,long)": {
       "id": "System.callable.add",
-      "type": "method",
+      "nodeType": "method",
       "name": "add",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -132,11 +132,11 @@
       "simplifiedSignature": "add(String,Datetime,Long)",
       "datatype": {
         "id": "System.callable.add.Datetime",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Datetime"
       },
       "description": "Adds an interval of time from a start Datetime traversing business hours only. Returns the result Datetime in the local time zone.",
-      "variables": {
+      "params": {
         "businessHoursId": {
           "id": "System.callable.add.businesshoursid",
           "type": "var",
@@ -163,7 +163,7 @@
           "signature": "String businessHoursId",
           "datatype": {
             "id": "System.callable.add.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -193,7 +193,7 @@
           "signature": "Datetime startDate",
           "datatype": {
             "id": "System.callable.add.datetime",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Datetime"
           }
         },
@@ -223,7 +223,7 @@
           "signature": "Long intervalMilliseconds",
           "datatype": {
             "id": "System.callable.add.long",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Long"
           }
         }
@@ -231,7 +231,7 @@
     },
     "addgmt(string,datetime,long)": {
       "id": "System.callable.addgmt",
-      "type": "method",
+      "nodeType": "method",
       "name": "addGmt",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -294,11 +294,11 @@
       "simplifiedSignature": "addGmt(String,Datetime,Long)",
       "datatype": {
         "id": "System.callable.addgmt.Datetime",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Datetime"
       },
       "description": "Adds an interval of milliseconds from a start Datetime traversing business hours only. Returns the result Datetime in GMT.",
-      "variables": {
+      "params": {
         "businessHoursId": {
           "id": "System.callable.addgmt.businesshoursid",
           "type": "var",
@@ -325,7 +325,7 @@
           "signature": "String businessHoursId",
           "datatype": {
             "id": "System.callable.addgmt.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -355,7 +355,7 @@
           "signature": "Datetime startDate",
           "datatype": {
             "id": "System.callable.addgmt.datetime",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Datetime"
           }
         },
@@ -385,7 +385,7 @@
           "signature": "Long intervalMilliseconds",
           "datatype": {
             "id": "System.callable.addgmt.long",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Long"
           }
         }
@@ -393,7 +393,7 @@
     },
     "diff(string,datetime,datetime)": {
       "id": "System.callable.diff",
-      "type": "method",
+      "nodeType": "method",
       "name": "diff",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -456,11 +456,11 @@
       "simplifiedSignature": "diff(String,Datetime,Datetime)",
       "datatype": {
         "id": "System.callable.diff.Long",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Long"
       },
       "description": "Returns the difference in milliseconds between a start and end Datetime based on a specific set of business hours.",
-      "variables": {
+      "params": {
         "businessHoursId": {
           "id": "System.callable.diff.businesshoursid",
           "type": "var",
@@ -487,7 +487,7 @@
           "signature": "String businessHoursId",
           "datatype": {
             "id": "System.callable.diff.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -517,7 +517,7 @@
           "signature": "Datetime startDate",
           "datatype": {
             "id": "System.callable.diff.datetime",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Datetime"
           }
         },
@@ -547,7 +547,7 @@
           "signature": "Datetime endDate",
           "datatype": {
             "id": "System.callable.diff.datetime",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Datetime"
           }
         }
@@ -555,7 +555,7 @@
     },
     "iswithin(string,datetime)": {
       "id": "System.callable.iswithin",
-      "type": "method",
+      "nodeType": "method",
       "name": "isWithin",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -618,11 +618,11 @@
       "simplifiedSignature": "isWithin(String,Datetime)",
       "datatype": {
         "id": "System.callable.iswithin.Boolean",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Boolean"
       },
       "description": "Returns true if the specified target date occurs within business hours. Holidays are included in the calculation.",
-      "variables": {
+      "params": {
         "businessHoursId": {
           "id": "System.callable.iswithin.businesshoursid",
           "type": "var",
@@ -649,7 +649,7 @@
           "signature": "String businessHoursId",
           "datatype": {
             "id": "System.callable.iswithin.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -679,7 +679,7 @@
           "signature": "Datetime targetDate",
           "datatype": {
             "id": "System.callable.iswithin.datetime",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Datetime"
           }
         }
@@ -687,7 +687,7 @@
     },
     "nextstartdate(string,datetime)": {
       "id": "System.callable.nextstartdate",
-      "type": "method",
+      "nodeType": "method",
       "name": "nextStartDate",
       "startToken": {
         "type": "declaration.entity.name.function",
@@ -750,11 +750,11 @@
       "simplifiedSignature": "nextStartDate(String,Datetime)",
       "datatype": {
         "id": "System.callable.nextstartdate.Datetime",
-        "type": "datatype",
+        "nodeType": "datatype",
         "name": "Datetime"
       },
       "description": "Starting from the specified target date, returns the next date when business hours are open. If the specified target date falls within business hours, this target date is returned.",
-      "variables": {
+      "params": {
         "businessHoursId": {
           "id": "System.callable.nextstartdate.businesshoursid",
           "type": "var",
@@ -781,7 +781,7 @@
           "signature": "String businessHoursId",
           "datatype": {
             "id": "System.callable.nextstartdate.string",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "String"
           }
         },
@@ -811,7 +811,7 @@
           "signature": "Datetime targetDate",
           "datatype": {
             "id": "System.callable.nextstartdate.datetime",
-            "type": "datatype",
+            "nodeType": "datatype",
             "name": "Datetime"
           }
         }
