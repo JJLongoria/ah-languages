@@ -50,6 +50,35 @@ Module with classes to tokenize Apex Classes or Parse Apex Classes to extract cl
 
 # [**Methods**](#apex-module-tokenizer-class-methods)
 
+- [**tokenize(filePathOrContent, systemData)**](#tokenizefilepathorcontent-systemdata)
+
+    Method to tokenize an Apex file
+
+---
+## [**tokenize(filePathOrContent, systemData)**](#tokenizefilepathorcontent-systemdata)
+Method to tokenize an Apex file
+
+### **Parameters:**
+  - **filePathOrContent**: File path or file content to tokenize
+    - String
+  - **systemData**: Object with the system data to identify tokens with more precission 
+    - Object
+
+### **Return:**
+Returns an array with all file tokens
+- String
+
+### **Examples:**
+**Tokenize an Apex Class**
+
+    const { Apex } = require('@ah/languages');
+    const ApexTokenizer = Apex.ApexTokenizer;
+
+    const tokens = ApexTokenizer.tokenize('./path/to/apex/class.cls');
+
+    console.log(tokens);
+
+
 ---
 # [**ApexParser Class**](#apex-module-parser-class)
 
