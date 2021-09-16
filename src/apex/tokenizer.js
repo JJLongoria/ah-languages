@@ -319,8 +319,17 @@ const annotations = {
 
 let nsSummary;
 
+/**
+ * Class to Tokenize any apex node to extract all tokens
+ */
 class ApexTokenizer {
 
+    /**
+     * Method to tokenize an Apex file
+     * @param {String} filePathOrContent File path or file content to tokenize
+     * @param {Object} [systemData] Object with the system data to identify tokens with more precission 
+     * @returns {Array<Token>} Returns an array with all file tokens
+     */
     static tokenize(filePathOrContent, systemData) {
         let content;
         if (Utils.isString(filePathOrContent)) {
