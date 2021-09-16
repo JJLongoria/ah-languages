@@ -313,6 +313,23 @@ class ApexParser {
                     node.addChild(newNode);
                 node = newNode;
                 resetModifiers(this);
+            } else if (isOnTrigger(token)) {
+                const newNode = new ApexTrigger(((node) ? node.id : 'InitialNode') + '.trigger.');
+                index = processTrigger(tokens, index, newNode);
+                if (this.comment) {
+                    this.comment.parentId = newNode.id;
+                    this.comment.id = newNode.id + '.' + this.comment.id;
+                    this.nodesMap[this.comment.id] = this.comment;
+                    newNode.comment = this.comment;
+                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
+                        newNode.comment.processComment(this.systemData.template);
+                    this.comment = undefined;
+                }
+                this.nodesMap[newNode.id] = newNode;
+                if (node)
+                    node.addChild(newNode);
+                node = newNode;
+                resetModifiers(this);
             } else if (isOnImplements(token)) {
                 const data = getInterfaces(this.tokens, index);
                 index = data.index;
@@ -949,6 +966,10 @@ function isOnExtends(token) {
     return token.type === TokenType.KEYWORD.DECLARATION.EXTENDS;
 }
 
+function isOnTrigger(token) {
+    return token.type === TokenType.KEYWORD.DECLARATION.TRIGGER;
+}
+
 function isQuery(token, lastToken) {
     if (token.type === TokenType.BRACKET.QUERY_START)
         return true;
@@ -1129,6 +1150,40 @@ function getExtends(tokens, index) {
 
 function isEnumValue(token) {
     return token && token.type === TokenType.ENTITY.ENUM_VALUE;
+}
+
+function processTrigger(tokens, index, node) {
+    const len = tokens.length;
+    for (; index < len; index++) {
+        const lastToken = LangUtils.getLastToken(tokens, index);
+        const token = parser.tokens[index];
+        if (token.type === TokenType.BRACKET.TRIGGER_GUARD_CLOSE) {
+            break;
+        }
+        if (lastToken && lastToken.type === TokenType.DATABASE.TRIGGER_EXEC) {
+            if (lastToken.textToLower === 'before') {
+                if (token.textToLower === 'insert')
+                    node.beforeInsert = true;
+                if (token.textToLower === 'update')
+                    node.beforeUpdate = true;
+                if (token.textToLower === 'delete')
+                    node.beforeDelete = true;
+                if (token.textToLower === 'undelete')
+                    node.beforeUndelete = true;
+
+            } else if (lastToken.textToLower === 'after') {
+                if (token.textToLower === 'insert')
+                    node.afterInsert = true;
+                if (token.textToLower === 'update')
+                    node.afterUpdate = true;
+                if (token.textToLower === 'delete')
+                    node.afterDelete = true;
+                if (token.textToLower === 'undelete')
+                    node.afterUndelete = true;
+            }
+        }
+    }
+    return index;
 }
 
 function processMethodSignature(node, parser, index) {

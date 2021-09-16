@@ -502,7 +502,8 @@ describe('Testing ./src/apex/parser.js', () => {
         console.time('nsSummary');
         const nsSummary = System.getAllNamespacesSummary();
         console.timeEnd('nsSummary');
-        const folderPath = './test/assets/SFDXProject/force-app/main/default/classes';
+        const classesPath = './test/assets/SFDXProject/force-app/main/default/classes';
+        const triggersPath = './test/assets/SFDXProject/force-app/main/default/triggers';
         console.time('compilationTime');
         const nodes = {};
         const systemData = {
@@ -511,7 +512,7 @@ describe('Testing ./src/apex/parser.js', () => {
             namespaceSummary: nsSummary
         };
         if (oneFile) {
-            const filPath = folderPath + '/' + fileToProcess;
+            const filPath = classesPath + '/' + fileToProcess;
             //console.time(fileToProcess + ' compilationTime');
             //console.time(fileToProcess + ' lexer');
             //const tokens = ApexLexer.tokenize(fileContent, systemData);
@@ -524,12 +525,12 @@ describe('Testing ./src/apex/parser.js', () => {
             /*console.timeEnd(fileToProcess + ' parser');
             console.timeEnd(fileToProcess + 'compilationTime');*/
         } else {
-            for (const file of FileReader.readDirSync(folderPath)) {
+            for (const file of FileReader.readDirSync(classesPath)) {
                 if (!file.endsWith('.cls'))
                     continue;
                 try {
                     //console.time(file + ' compilationTime');
-                    const filPath = folderPath + '/' + file;
+                    const filPath = classesPath + '/' + file;
                     //const fileContent = FileReader.readFileSync(filPath);
                     //console.time(file + ' lexer');
                     //const tokens = ApexLexer.tokenize(fileContent, sObjects, userClasses, nsSummary);
@@ -539,6 +540,27 @@ describe('Testing ./src/apex/parser.js', () => {
                     if (node.nodeType === ApexNodeTypes.CLASS || node.nodeType === ApexNodeTypes.INTERFACE || node.nodeType === ApexNodeTypes.TRIGGER) {
                         validateNode(node);
                     }
+                    nodes[node.name.toLowerCase()] = node;
+                    /*console.timeEnd(file + ' parser');
+                    console.timeEnd(file + 'compilationTime');*/
+                } catch (error) {
+                    console.log('Error en el archivo: ' + file);
+                    console.log(JSON.stringify(error));
+                    throw error;
+                }
+            }
+            for (const file of FileReader.readDirSync(triggersPath)) {
+                if (!file.endsWith('.trigger'))
+                    continue;
+                try {
+                    //console.time(file + ' compilationTime');
+                    const filPath = triggersPath + '/' + file;
+                    //const fileContent = FileReader.readFileSync(filPath);
+                    //console.time(file + ' lexer');
+                    //const tokens = ApexLexer.tokenize(fileContent, sObjects, userClasses, nsSummary);
+                    /*console.timeEnd(file + ' lexer');
+                    console.time(file + ' parser');*/
+                    const node = new ApexParser(filPath, systemData).parse();
                     nodes[node.name.toLowerCase()] = node;
                     /*console.timeEnd(file + ' parser');
                     console.timeEnd(file + 'compilationTime');*/

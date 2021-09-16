@@ -601,11 +601,11 @@ class ApexTokenizer {
                     } else if (lastToken && lastToken.textToLower === 'set') {
                         tokens[tokens.length - 1].type = TokenType.KEYWORD.DECLARATION.PROPERTY_SETTER;
                     }
-                } else if (token.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR) {
+                } else if (isObjectAccessor(token)) {
                     if (lastToken && lastToken.type === TokenType.KEYWORD.DECLARATION.TRIGGER)
                         tokens[tokens.length - 1].type = TokenType.DATATYPE.SUPPORT_CLASS;
                 } else if (token.type === TokenType.IDENTIFIER) {
-                    if (token.textToLower != 'constructor' && reservedKeywords[token.textToLower] && reservedKeywords[token.textToLower] !== TokenType.KEYWORD.FOR_FUTURE && (!lastToken || (lastToken && lastToken.type !== TokenType.PUNCTUATION.OBJECT_ACCESSOR))) {
+                    if (token.textToLower != 'constructor' && reservedKeywords[token.textToLower] && reservedKeywords[token.textToLower] !== TokenType.KEYWORD.FOR_FUTURE && (!lastToken || (lastToken && !isObjectAccessor(lastToken)))) {
                         if (!onQuery || (onQuery && lastToken.type !== TokenType.QUERY.VALUE_BIND)) {
                             token.type = reservedKeywords[token.textToLower];
                             if (lastToken && isDatatypeToken(lastToken) && token.type !== TokenType.KEYWORD.DECLARATION.IMPLEMENTS) {
@@ -627,11 +627,11 @@ class ApexTokenizer {
                         tokens[tokens.length - 1].type = TokenType.BRACKET.QUERY_START;
                     } else if (onQuery && token.type === TokenType.QUERY.CLAUSE.SELECT && lastToken && lastToken.type === TokenType.OPERATOR.PRIORITY.PARENTHESIS_OPEN) {
                         tokens[tokens.length - 1].type = TokenType.BRACKET.INNER_QUERY_START;
-                    } else if (onQuery && token.textToLower != 'constructor' && soqlFunctions[token.textToLower] && lastToken && lastToken.type !== TokenType.QUERY.VALUE_BIND && lastToken.type !== TokenType.PUNCTUATION.OBJECT_ACCESSOR) {
+                    } else if (onQuery && token.textToLower != 'constructor' && soqlFunctions[token.textToLower] && lastToken && lastToken.type !== TokenType.QUERY.VALUE_BIND && !isObjectAccessor(lastToken)) {
                         token.type = soqlFunctions[token.textToLower];
-                    } else if (onQuery && token.textToLower != 'constructor' && soqlOperators[token.textToLower] && lastToken && lastToken.type !== TokenType.QUERY.VALUE_BIND && lastToken.type !== TokenType.PUNCTUATION.OBJECT_ACCESSOR) {
+                    } else if (onQuery && token.textToLower != 'constructor' && soqlOperators[token.textToLower] && lastToken && lastToken.type !== TokenType.QUERY.VALUE_BIND && !isObjectAccessor(lastToken)) {
                         token.type = soqlOperators[token.textToLower];
-                    } else if (onQuery && token.textToLower != 'constructor' && queryClauses[token.textToLower] && lastToken && lastToken.type !== TokenType.QUERY.VALUE_BIND && lastToken.type !== TokenType.PUNCTUATION.OBJECT_ACCESSOR) {
+                    } else if (onQuery && token.textToLower != 'constructor' && queryClauses[token.textToLower] && lastToken && lastToken.type !== TokenType.QUERY.VALUE_BIND && !isObjectAccessor(lastToken)) {
                         token.type = queryClauses[token.textToLower];
                     } else if (onQuery && token.textToLower === 'scope' && lastToken && lastToken.textToLower === 'using') {
                         token = new Token(queryClauses['using scope'], lastToken.text + ' ' + token.text, lastToken.range.start.line, lastToken.range.start.character);
@@ -680,7 +680,7 @@ class ApexTokenizer {
                             token.type = primitiveDatatypes[token.textToLower];
                             if (lastToken && (isDatatypeToken(lastToken) || lastToken.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE || lastToken.type === TokenType.BRACKET.SQUARE_CLOSE || lastToken.type === TokenType.ENTITY.ENUM_VALUE) && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE))
                                 token.type = TokenType.DECLARATION.ENTITY.VARIABLE;
-                            else if (lastToken && (lastToken.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || lastToken.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR))
+                            else if (lastToken && isObjectAccessor(lastToken))
                                 token.type = TokenType.ENTITY.CLASS_MEMBER;
                         }
                         else
@@ -719,7 +719,7 @@ class ApexTokenizer {
                             token.type = TokenType.DECLARATION.ENTITY.VARIABLE;
                     } else if (token.textToLower === 'system') {
                         token.type = TokenType.DATATYPE.SUPPORT_CLASS;
-                        if (lastToken && (lastToken.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || lastToken.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR) && twoLastToken && twoLastToken.type === TokenType.DATATYPE.SUPPORT_CLASS) {
+                        if (lastToken && isObjectAccessor(lastToken) && twoLastToken && twoLastToken.type === TokenType.DATATYPE.SUPPORT_CLASS) {
                             tokens[tokens.length - 2].type = TokenType.DATATYPE.SUPPORT_NAMESPACE;
                         }
                         if (lastToken && (isDatatypeToken(lastToken) || lastToken.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE || lastToken.type === TokenType.BRACKET.SQUARE_CLOSE) && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE))
@@ -732,20 +732,20 @@ class ApexTokenizer {
                         token.type = TokenType.DATATYPE.SUPPORT_NAMESPACE;
                         if (lastToken && (isDatatypeToken(lastToken) || lastToken.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE || lastToken.type === TokenType.BRACKET.SQUARE_CLOSE) && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE))
                             token.type = TokenType.DECLARATION.ENTITY.VARIABLE;
-                    } else if (lastToken && (lastToken.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || lastToken.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR) && twoLastToken && nsSummary[twoLastToken.textToLower] && nsSummary[twoLastToken.textToLower][token.textToLower] && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
+                    } else if (lastToken && isObjectAccessor(lastToken) && twoLastToken && nsSummary[twoLastToken.textToLower] && nsSummary[twoLastToken.textToLower][token.textToLower] && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
                         token.type = TokenType.DATATYPE.SUPPORT_CLASS;
                         tokens[tokens.length - 2].type = TokenType.DATATYPE.SUPPORT_NAMESPACE;
-                    } else if (lastToken && (lastToken.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || lastToken.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR) && twoLastToken && twoLastToken.type === TokenType.DATATYPE.SUPPORT_CLASS && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
+                    } else if (lastToken && isObjectAccessor(lastToken) && twoLastToken && twoLastToken.type === TokenType.DATATYPE.SUPPORT_CLASS && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
                         token.type = TokenType.ENTITY.SUPPORT_CLASS_MEMBER;
-                    } else if (lastToken && (lastToken.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || lastToken.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR) && twoLastToken && twoLastToken.type === TokenType.DATATYPE.SOBJECT && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
+                    } else if (lastToken && isObjectAccessor(lastToken) && twoLastToken && twoLastToken.type === TokenType.DATATYPE.SOBJECT && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
                         token.type = TokenType.ENTITY.SOBJECT_FIELD;
-                    } else if (lastToken && (lastToken.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || lastToken.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR) && twoLastToken && twoLastToken.type === TokenType.ENTITY.SOBJECT_FIELD && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
+                    } else if (lastToken && isObjectAccessor(lastToken) && twoLastToken && twoLastToken.type === TokenType.ENTITY.SOBJECT_FIELD && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
                         token.type = TokenType.ENTITY.SOBJECT_FIELD;
-                    } else if (lastToken && (lastToken.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || lastToken.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR) && twoLastToken && twoLastToken.type === TokenType.ENTITY.SOBJECT_PROJECTION_FIELD && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
+                    } else if (lastToken && isObjectAccessor(lastToken) && twoLastToken && twoLastToken.type === TokenType.ENTITY.SOBJECT_PROJECTION_FIELD && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
                         token.type = TokenType.ENTITY.SOBJECT_PROJECTION_FIELD;
-                    } else if (lastToken && (lastToken.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || lastToken.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR) && twoLastToken && twoLastToken.type === TokenType.DATATYPE.CUSTOM_CLASS && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
+                    } else if (lastToken && isObjectAccessor(lastToken) && twoLastToken && twoLastToken.type === TokenType.DATATYPE.CUSTOM_CLASS && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
                         token.type = TokenType.ENTITY.CLASS_MEMBER;
-                    } else if (lastToken && (lastToken.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || lastToken.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR) && twoLastToken && twoLastToken.type === TokenType.ENTITY.CLASS_MEMBER && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
+                    } else if (lastToken && isObjectAccessor(lastToken) && twoLastToken && twoLastToken.type === TokenType.ENTITY.CLASS_MEMBER && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
                         token.type = TokenType.ENTITY.CLASS_MEMBER;
                     } else if (lastToken && (isDatatypeToken(lastToken) || lastToken.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE || lastToken.type === TokenType.BRACKET.SQUARE_CLOSE) && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
                         token.type = TokenType.DECLARATION.ENTITY.VARIABLE;
@@ -764,11 +764,11 @@ class ApexTokenizer {
                         else {
                             if (lastToken && lastToken.type === TokenType.ENTITY.CLASS_MEMBER)
                                 tokens[tokens.length - 1].type = TokenType.DATATYPE.CUSTOM_CLASS;
-                            if (lastToken && (lastToken.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || lastToken.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR) && twoLastToken && isDatatypeToken(twoLastToken)) {
+                            if (lastToken && isObjectAccessor(lastToken) && twoLastToken && isDatatypeToken(twoLastToken)) {
                                 token.type = TokenType.ENTITY.CLASS_MEMBER;
                             } else if (token.type !== TokenType.KEYWORD.FLOW_CONTROL.ELSE_IF) {
                                 if (!lastToken || (lastToken.type !== TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN && lastToken.type !== TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE)) {
-                                    if (lastToken.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || lastToken.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR) {
+                                    if (isObjectAccessor(lastToken)) {
                                         token.type = TokenType.ENTITY.VARIABLE;
                                     } else if (lastToken.type === TokenType.KEYWORD.DECLARATION.IMPLEMENTS || lastToken.type === TokenType.KEYWORD.DECLARATION.EXTENDS) {
                                         token.type = TokenType.DATATYPE.CUSTOM_CLASS;
@@ -786,7 +786,7 @@ class ApexTokenizer {
                             }
                         }
                     } else {
-                        if (lastToken && (lastToken.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || lastToken.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR)) {
+                        if (lastToken && isObjectAccessor(lastToken)) {
                             token.type = TokenType.ENTITY.VARIABLE;
                         }
                     }
@@ -1012,11 +1012,15 @@ function isDatatypeToken(token) {
     return token.type === TokenType.DATATYPE.SUPPORT_CLASS || token.type === TokenType.DATATYPE.SUPPORT_NAMESPACE || token.type === TokenType.DATATYPE.CUSTOM_CLASS || token.type === TokenType.DATATYPE.PRIMITIVE || token.type === TokenType.DATATYPE.COLLECTION || token.type === TokenType.DATATYPE.SOBJECT || token.type === TokenType.ENTITY.CLASS_MEMBER || token.type === TokenType.ENTITY.SUPPORT_CLASS_MEMBER;
 }
 
+function isObjectAccessor(token){
+    return token.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || token.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR;
+}
+
 function isQueryField(token, lastToken, twoLastToken) {
     let isQueryField = true;
     if (lastToken && lastToken.type === TokenType.QUERY.VALUE_BIND) {
         isQueryField = false;
-    } else if (lastToken && (lastToken.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || lastToken.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR) && twoLastToken && twoLastToken.type !== TokenType.ENTITY.SOBJECT_FIELD) {
+    } else if (lastToken && isObjectAccessor(lastToken) && twoLastToken && twoLastToken.type !== TokenType.ENTITY.SOBJECT_FIELD) {
         isQueryField = false;
     } else if (lastToken && lastToken.type === TokenType.QUERY.CLAUSE.USING_SCOPE) {
         isQueryField = false;
