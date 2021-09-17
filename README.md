@@ -71,7 +71,7 @@ Returns an array with all file tokens
 ### **Examples:**
 **Tokenize an Apex Class**
 
-    const { Apex } = require('@ah/languages');
+    const { Apex } = require('@aurahelper/languages');
     const ApexTokenizer = Apex.ApexTokenizer;
 
     const tokens = ApexTokenizer.tokenize('./path/to/apex/class.cls');
@@ -108,7 +108,7 @@ Returns a default formatter config object
 ### **Examples:**
 **Get default apex formatter config**
 
-    const { Apex } = require('@ah/languages');
+    const { Apex } = require('@aurahelper/languages');
     const ApexFormatter = Apex.ApexFormatter;
 
     const config = ApexFormatter.config();
@@ -142,7 +142,7 @@ This method can throw the next exceptions:
 ### **Examples:**
 **Format apex class from file**
 
-    const { Apex, System } = require('@ah/languages');
+    const { Apex, System } = require('@aurahelper/languages');
     const ApexFormatter = Apex.ApexFormatter;
 
     const filePath = 'path/to/apexClass.cls';
@@ -152,7 +152,7 @@ This method can throw the next exceptions:
 
 **Format apex class from file content**
 
-    const { Apex } = require('@ah/languages');
+    const { Apex } = require('@aurahelper/languages');
     const ApexFormatter = Apex.ApexFormatter;
 
     const fileContent = 'public class ApexclassName {' + 
@@ -170,7 +170,7 @@ This method can throw the next exceptions:
 
 **Format apex class from file tokens**
 
-    const { Apex } = require('@ah/languages');
+    const { Apex } = require('@aurahelper/languages');
     const ApexFormatter = Apex.ApexFormatter;
     const ApexTokenizer = Apex.ApexTokenizer;
 
