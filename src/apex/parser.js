@@ -315,7 +315,7 @@ class ApexParser {
                 resetModifiers(this);
             } else if (isOnTrigger(token)) {
                 const newNode = new ApexTrigger(((node) ? node.id : 'InitialNode') + '.trigger.');
-                index = processTrigger(tokens, index, newNode);
+                index = processTrigger(this.tokens, index, newNode);
                 if (this.comment) {
                     this.comment.parentId = newNode.id;
                     this.comment.id = newNode.id + '.' + this.comment.id;
@@ -644,7 +644,7 @@ class ApexParser {
 
     resolveDatatype(datatype) {
         let resolved = resolveDatatypeReference(datatype, this.systemData.userClassesData, this.systemData.namespacesData);
-        if (!resolved)
+        if (!resolved && this.systemData && this.systemData.sObjectsData)
             resolved = this.systemData.sObjectsData[datatype.toLowerCase()];
         return resolved;
     }
@@ -774,42 +774,42 @@ function cleanDatatype(datatype) {
 function resolveDatatypeReference(datatype, classes, namespacesData) {
     let extendsObject;
     let className;
-    const systemMetadata = namespacesData['system'];
+    const systemMetadata = namespacesData ? namespacesData['system'] : undefined;
     datatype = cleanDatatype(datatype);
     if (StrUtils.contains(datatype, '.')) {
         let splits = datatype.split('.');
         if (splits.length === 2) {
             let parentClassOrNs = splits[0];
             className = splits[1];
-            if (classes[parentClassOrNs]) {
+            if (classes && classes[parentClassOrNs]) {
                 extendsObject = classes[parentClassOrNs]
-            } else if (namespacesData[parentClassOrNs]) {
+            } else if (namespacesData && namespacesData[parentClassOrNs]) {
                 let namespaceData = namespacesData[parentClassOrNs];
                 if (namespaceData[className])
                     extendsObject = namespaceData[className];
             }
-            if (!extendsObject && systemMetadata[parentClassOrNs]) {
+            if (!extendsObject && systemMetadata && systemMetadata[parentClassOrNs]) {
                 extendsObject = systemMetadata[parentClassOrNs];
             }
         } else if (splits.length > 2) {
             let nsName = splits[0];
             let parentClassName = splits[1];
             className = splits[2];
-            if (classes[parentClassName]) {
+            if (classes && classes[parentClassName]) {
                 extendsObject = classes[parentClassName];
-            } else if (namespacesData[nsName]) {
+            } else if (namespacesData && namespacesData[nsName]) {
                 let namespaceData = namespacesData[nsName];
                 if (namespaceData[parentClassName])
                     extendsObject = namespaceData[parentClassName];
             }
-            if (!extendsObject && systemMetadata[className]) {
+            if (!extendsObject && systemMetadata && systemMetadata[className]) {
                 extendsObject = systemMetadata[className];
             }
         }
     } else {
-        if (classes[datatype]) {
+        if (classes && classes[datatype]) {
             extendsObject = classes[datatype];
-        } else if (systemMetadata[datatype]) {
+        } else if (systemMetadata && systemMetadata[datatype]) {
             extendsObject = systemMetadata[datatype];
         }
     }
@@ -1156,7 +1156,7 @@ function processTrigger(tokens, index, node) {
     const len = tokens.length;
     for (; index < len; index++) {
         const lastToken = LangUtils.getLastToken(tokens, index);
-        const token = parser.tokens[index];
+        const token = tokens[index];
         if (token.type === TokenType.BRACKET.TRIGGER_GUARD_CLOSE) {
             break;
         }
