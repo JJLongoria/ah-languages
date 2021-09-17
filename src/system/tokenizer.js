@@ -1,5 +1,5 @@
 const TokenType = require('./tokenTypes');
-const { Token } = require('@ah/core').Types;
+const { Token } = require('@aurahelper/core').Types;
 
 
 const symbolTokens = {

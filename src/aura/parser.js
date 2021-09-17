@@ -1,5 +1,5 @@
 
-const { CoreUtils, FileSystem, Types, Exceptions, Values } = require('@ah/core');
+const { CoreUtils, FileSystem, Types, Exceptions, Values } = require('@aurahelper/core');
 const TokenType = require('./tokenTypes');
 const Lexer = require('./tokenizer');
 const LangUtils = require('../utils/languageUtils');

@@ -1,4 +1,4 @@
-const { FileSystem, CoreUtils } = require('@ah/core');
+const { FileSystem, CoreUtils } = require('@aurahelper/core');
 const FileReader = FileSystem.FileReader;
 const ApexLexer = require('../../../src/apex/tokenizer');
 const ApexFormatter = require('../../../src/apex/formatter');

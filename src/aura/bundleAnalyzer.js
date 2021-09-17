@@ -1,5 +1,5 @@
-const { FileReader, FileChecker, PathUtils } = require('@ah/core').FileSystem;
-const { AuraAttribute, Token, Position } = require('@ah/core').Types;
+const { FileReader, FileChecker, PathUtils } = require('@aurahelper/core').FileSystem;
+const { AuraAttribute, Token, Position } = require('@aurahelper/core').Types;
 const JSParser = require('../javascript/parser');
 const AuraParser = require('./parser');
 const AuraTokenTypes = require('./tokenTypes');

@@ -1,5 +1,5 @@
-const { FileReader, FileChecker, PathUtils } = require('@ah/core').FileSystem;
-const { StrUtils, Utils } = require('@ah/core').CoreUtils;
+const { FileReader, FileChecker, PathUtils } = require('@aurahelper/core').FileSystem;
+const { StrUtils, Utils } = require('@aurahelper/core').CoreUtils;
 
 const systemClassPath = __dirname + '/classes';
 const auraDataPath = __dirname + '/aura';

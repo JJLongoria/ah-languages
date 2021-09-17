@@ -1,4 +1,4 @@
-const { Token } = require('@ah/core').Types;
+const { Token } = require('@aurahelper/core').Types;
 const ApexTokenType = require('../apex/tokenTypes');
 
 class LanguageUtils {

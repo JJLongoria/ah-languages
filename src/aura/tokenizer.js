@@ -1,7 +1,7 @@
-const { StrUtils, Validator, Utils } = require('@ah/core').CoreUtils;
+const { StrUtils, Validator, Utils } = require('@aurahelper/core').CoreUtils;
 const TokenType = require('./tokenTypes');
-const { Token } = require('@ah/core').Types;
-const { PathUtils, FileReader } = require('@ah/core').FileSystem;
+const { Token } = require('@aurahelper/core').Types;
+const { PathUtils, FileReader } = require('@aurahelper/core').FileSystem;
 
 const symbolTokens = {
     '{': TokenType.BRACKET.CURLY_OPEN,

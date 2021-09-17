@@ -1,4 +1,4 @@
-const { Types } = require('@ah/core');
+const { Types } = require('@aurahelper/core');
 const LangUtils = require('../../../src/utils/languageUtils');
 const Token = Types.Token;
 

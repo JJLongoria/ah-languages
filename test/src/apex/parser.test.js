@@ -1,4 +1,4 @@
-const { Types, FileSystem, CoreUtils, Values } = require('@ah/core');
+const { Types, FileSystem, CoreUtils, Values } = require('@aurahelper/core');
 const FileReader = FileSystem.FileReader;
 const FileWriter = FileSystem.FileWriter;
 const FileChecker = FileSystem.FileChecker;

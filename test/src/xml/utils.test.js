@@ -1,5 +1,5 @@
 const XMLUtils = require('../../../src/xml/utils');
-const { DataTypes } = require('@ah/core').Values;
+const { DataTypes } = require('@aurahelper/core').Values;
 
 describe('Testing ./src/utils/utils.js', () => {
     test('Testing createXMLFile()', () => {
