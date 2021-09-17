@@ -140,6 +140,8 @@ class ApexParser {
                 if (this.declarationOnly && node.nodeType !== ApexNodeType.PROPERTY) {
                     break;
                 }
+                if (!node.startToken)
+                    node.startToken = token;
                 bracketIndent++;
                 if (isInitializer(token)) {
                     const newNode = new ApexInitializer(((node) ? node.id : 'InitialNode') + '.initializer', 'Initializer', token);
@@ -191,8 +193,16 @@ class ApexParser {
             } else if (token.type === TokenType.PUNCTUATION.SEMICOLON) {
                 if (node && node.parentId) {
                     if ((node.nodeType === ApexNodeType.GETTER || node.nodeType === ApexNodeType.SETTER) && lastToken && (lastToken.type === TokenType.KEYWORD.DECLARATION.PROPERTY_GETTER || lastToken.type === TokenType.KEYWORD.DECLARATION.PROPERTY_SETTER)) {
+                        if (!node.startToken)
+                            node.startToken = token;
+                        if (!node.endToken)
+                            node.endToken = token;
                         node = this.nodesMap[node.parentId];
                     } else if ((node.nodeType === ApexNodeType.CONSTRUCTOR || node.nodeType === ApexNodeType.METHOD) && lastToken && lastToken.type === TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE) {
+                        if (!node.startToken)
+                            node.startToken = token;
+                        if (!node.endToken)
+                            node.endToken = token;
                         node = this.nodesMap[node.parentId];
                     }
                 }
@@ -230,7 +240,7 @@ class ApexParser {
                 this.annotation = newNode;
                 this.nAnnotations++;
             } else if (isClass(token)) {
-                const newNode = new ApexClass(((node) ? node.id : 'InitialNode') + '.class.' + token.textToLower, token.text, token);
+                const newNode = new ApexClass(((node) ? node.id : 'InitialNode') + '.class.' + token.textToLower, token.text);
                 newNode.accessModifier = this.accessModifier;
                 newNode.definitionModifier = this.definitionModifier;
                 newNode.parentId = (node) ? node.id : undefined;
@@ -258,7 +268,7 @@ class ApexParser {
                 node = newNode;
                 resetModifiers(this);
             } else if (isInterface(token)) {
-                const newNode = new ApexInterface(((node) ? node.id : 'InitialNode') + '.interface.' + token.textToLower, token.text, token);
+                const newNode = new ApexInterface(((node) ? node.id : 'InitialNode') + '.interface.' + token.textToLower, token.text);
                 newNode.accessModifier = this.accessModifier;
                 newNode.definitionModifier = this.definitionModifier;
                 newNode.parentId = (node) ? node.id : undefined;
@@ -286,7 +296,7 @@ class ApexParser {
                 node = newNode;
                 resetModifiers(this);
             } else if (isEnum(token)) {
-                const newNode = new ApexEnum(((node) ? node.id : 'InitialNode') + '.enum.' + token.textToLower, token.text, token);
+                const newNode = new ApexEnum(((node) ? node.id : 'InitialNode') + '.enum.' + token.textToLower, token.text);
                 newNode.accessModifier = this.accessModifier;
                 newNode.definitionModifier = this.definitionModifier;
                 newNode.parentId = (node) ? node.id : undefined;
@@ -350,7 +360,7 @@ class ApexParser {
                 if (node && data.query)
                     node.addChild(data.query);
             } else if (isProperty(token)) {
-                const newNode = new ApexProperty(((node) ? node.id : 'InitialNode') + '.property.' + token.textToLower, token.text, token);
+                const newNode = new ApexProperty(((node) ? node.id : 'InitialNode') + '.property.' + token.textToLower, token.text);
                 newNode.accessModifier = this.accessModifier;
                 newNode.definitionModifier = this.definitionModifier;
                 newNode.parentId = (node) ? node.id : undefined;
@@ -386,7 +396,7 @@ class ApexParser {
                 node = newNode;
                 resetModifiers(this);
             } else if (isGetterAccessor(token)) {
-                const newNode = new ApexGetter(((node) ? node.id : 'InitialNode') + '.getter.' + token.textToLower, token.text, token);
+                const newNode = new ApexGetter(((node) ? node.id : 'InitialNode') + '.getter.' + token.textToLower, token.text);
                 newNode.parentId = (node) ? node.id : undefined;
                 if (this.comment) {
                     this.comment.parentId = newNode.id;
@@ -401,7 +411,7 @@ class ApexParser {
                 node = newNode
                 resetModifiers(this);
             } else if (isSetterAccessor(token)) {
-                const newNode = new ApexSetter(((node) ? node.id : 'InitialNode') + '.setter.' + token.textToLower, token.text, token);
+                const newNode = new ApexSetter(((node) ? node.id : 'InitialNode') + '.setter.' + token.textToLower, token.text);
                 newNode.parentId = (node) ? node.id : undefined;
                 if (this.comment) {
                     this.comment.parentId = newNode.id;
@@ -420,7 +430,7 @@ class ApexParser {
                 index = processDatatype(newNode, this, index);
                 this.datatype = newNode;
             } else if (isStaticConstructorDeclaration(token)) {
-                const newNode = new ApexStaticConstructor(((node) ? node.id : 'InitialNode') + '.staticConstructor.' + token.textToLower, token.text, token);
+                const newNode = new ApexStaticConstructor(((node) ? node.id : 'InitialNode') + '.staticConstructor.' + token.textToLower, token.text);
                 newNode.parentId = (node) ? node.id : undefined;
                 newNode.scope = bracketIndent;
                 if (this.annotation) {
@@ -445,7 +455,7 @@ class ApexParser {
                 node = newNode;
                 resetModifiers(this);
             } else if (isConstructorDeclaration(token)) {
-                const newNode = new ApexConstructor(((node) ? node.id : 'InitialNode') + '.constructor.' + token.textToLower, token.text, token);
+                const newNode = new ApexConstructor(((node) ? node.id : 'InitialNode') + '.constructor.' + token.textToLower, token.text);
                 newNode.accessModifier = this.accessModifier;
                 newNode.definitionModifier = this.definitionModifier;
                 newNode.parentId = (node) ? node.id : undefined;;
@@ -475,7 +485,7 @@ class ApexParser {
                 node = newNode;
                 resetModifiers(this);
             } else if (isMethodDeclaration(token)) {
-                const newNode = new ApexMethod(((node) ? node.id : 'InitialNode') + '.method.' + token.textToLower, token.text, token);
+                const newNode = new ApexMethod(((node) ? node.id : 'InitialNode') + '.method.' + token.textToLower, token.text);
                 newNode.accessModifier = this.accessModifier;
                 newNode.definitionModifier = this.definitionModifier;
                 newNode.parentId = (node) ? node.id : undefined;;
@@ -1093,7 +1103,7 @@ function getInterfaces(tokens, index) {
     let interfaces = [];
     const len = tokens.length;
     for (; index < len; index++) {
-        const token = tokens[index];
+        token = tokens[index];
         if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN) {
             aBracketIndent++;
         }
