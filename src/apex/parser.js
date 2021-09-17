@@ -1,5 +1,5 @@
-const { Types, Values, CoreUtils } = require('@ah/core');
-const { PathUtils, FileReader, FileWriter, FileChecker } = require('@ah/core').FileSystem;
+const { Types, Values, CoreUtils } = require('@aurahelper/core');
+const { PathUtils, FileReader, FileWriter, FileChecker } = require('@aurahelper/core').FileSystem;
 const ApexGetter = Types.ApexGetter;
 const ApexSetter = Types.ApexSetter;
 const ApexProperty = Types.ApexProperty;

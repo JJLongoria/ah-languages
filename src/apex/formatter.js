@@ -1,8 +1,8 @@
 const TokenType = require('./tokenTypes');
-const { StrUtils, Utils, Validator } = require('@ah/core').CoreUtils;
-const { WrongDatatypeException } = require('@ah/core').Exceptions;
-const { ApexFormatterConfig } = require('@ah/core').Types;
-const { PathUtils, FileReader } = require('@ah/core').FileSystem;
+const { StrUtils, Utils, Validator } = require('@aurahelper/core').CoreUtils;
+const { WrongDatatypeException } = require('@aurahelper/core').Exceptions;
+const { ApexFormatterConfig } = require('@aurahelper/core').Types;
+const { PathUtils, FileReader } = require('@aurahelper/core').FileSystem;
 const LangUtils = require('../utils/languageUtils');
 const Lexer = require('./tokenizer');
 

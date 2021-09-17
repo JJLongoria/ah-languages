@@ -1,5 +1,5 @@
-const { DataTypes } = require('@ah/core').Values;
-const { Utils } = require('@ah/core').CoreUtils;
+const { DataTypes } = require('@aurahelper/core').Values;
+const { Utils } = require('@aurahelper/core').CoreUtils;
 
 class XMLUtils {
 

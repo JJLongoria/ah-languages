@@ -1,1 +1,1 @@
-module.exports = require('@ah/core').Values.AuraTokenTypes;
+module.exports = require('@aurahelper/core').Values.AuraTokenTypes;

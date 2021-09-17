@@ -1,7 +1,7 @@
-const { StrUtils, Validator, Utils } = require('@ah/core').CoreUtils;
-const { Token } = require('@ah/core').Types;
+const { StrUtils, Validator, Utils } = require('@aurahelper/core').CoreUtils;
+const { Token } = require('@aurahelper/core').Types;
 const TokenType = require('./tokenTypes');
-const { PathUtils, FileReader } = require('@ah/core').FileSystem;
+const { PathUtils, FileReader } = require('@aurahelper/core').FileSystem;
 
 const symbolTokens = {
     ">>>=": TokenType.OPERATOR.BITWISE.UNSIGNED_RIGHT_ASSIGN,

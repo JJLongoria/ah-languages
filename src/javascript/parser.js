@@ -1,10 +1,10 @@
 
-const { CoreUtils, FileSystem, Types } = require('@ah/core');
+const { CoreUtils, FileSystem, Types } = require('@aurahelper/core');
 const TokenType = require('./tokenTypes');
 const Lexer = require('./tokenizer');
 const LangUtils = require('../utils/languageUtils');
-const { StrUtils } = require('@ah/core').CoreUtils;
-const { InvalidFilePathException } = require('@ah/core').Exceptions;
+const { StrUtils } = require('@aurahelper/core').CoreUtils;
+const { InvalidFilePathException } = require('@aurahelper/core').Exceptions;
 const FileReader = FileSystem.FileReader;
 const FileChecker = FileSystem.FileChecker;
 const PathUtils = FileSystem.PathUtils;
