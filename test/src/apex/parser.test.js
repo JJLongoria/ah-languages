@@ -1,5 +1,4 @@
 const { Types, FileSystem, CoreUtils, Values } = require('@ah/core');
-const TypesFactory = require('@ah/metadata-factory');
 const FileReader = FileSystem.FileReader;
 const FileWriter = FileSystem.FileWriter;
 const FileChecker = FileSystem.FileChecker;
@@ -484,12 +483,13 @@ describe('Testing ./src/apex/parser.js', () => {
                 }
             }
         }*/
-        const metadataTypes = TypesFactory.createMetadataTypesFromPackageXML('./test/assets/SFDXProject/manifest/package.xml');
+        const metadataTypes = JSON.parse(FileReader.readFileSync('./test/assets/types/metadataTypes.json'));
+        const sObjectsData = JSON.parse(FileReader.readFileSync('./test/assets/types/sObjects.json'));
         const sObjects = [];
         const userClasses = [];
         for (const metadataTypeName of Object.keys(metadataTypes)) {
             const metadataType = metadataTypes[metadataTypeName];
-            for (const metadataObjectName of metadataType.getChildKeys()) {
+            for (const metadataObjectName of Object.keys(metadataType.childs)) {
                 if (metadataTypeName === 'ApexClass') {
                     userClasses.push(metadataObjectName.toLowerCase());
                 } else if (metadataTypeName === 'CustomObject') {
@@ -508,6 +508,7 @@ describe('Testing ./src/apex/parser.js', () => {
         const nodes = {};
         const systemData = {
             sObjects: sObjects,
+            sObjectsData: sObjectsData,
             userClasses: userClasses,
             namespaceSummary: nsSummary
         };
@@ -574,12 +575,13 @@ describe('Testing ./src/apex/parser.js', () => {
         console.timeEnd('compilationTime');
     });
     test('Testing saveAllClasesData()', async (done) => {
-        const metadataTypes = TypesFactory.createMetadataTypesFromPackageXML('./test/assets/SFDXProject/manifest/package.xml');
+        const metadataTypes = JSON.parse(FileReader.readFileSync('./test/assets/types/metadataTypes.json'));
+        const sObjectsData = JSON.parse(FileReader.readFileSync('./test/assets/types/sObjects.json'));
         const sObjects = [];
         const userClasses = [];
         for (const metadataTypeName of Object.keys(metadataTypes)) {
             const metadataType = metadataTypes[metadataTypeName];
-            for (const metadataObjectName of metadataType.getChildKeys()) {
+            for (const metadataObjectName of Object.keys(metadataType.childs)) {
                 if (metadataTypeName === 'ApexClass') {
                     userClasses.push(metadataObjectName.toLowerCase());
                 } else if (metadataTypeName === 'CustomObject') {
@@ -597,7 +599,8 @@ describe('Testing ./src/apex/parser.js', () => {
         const systemData = {
             sObjects: sObjects,
             userClasses: userClasses,
-            namespaceSummary: nsSummary
+            namespaceSummary: nsSummary,
+            sObjectsData: sObjectsData
         };
         let compiledClassesFolder = PathUtils.getAbsolutePath('./test/assets/compiledClasses');
         if (FileChecker.isExists(compiledClassesFolder))

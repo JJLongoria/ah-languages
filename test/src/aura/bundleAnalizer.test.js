@@ -1,6 +1,5 @@
 const { Types, FileSystem, CoreUtils } = require('@ah/core');
 const System = require('../../../src/system/system');
-const TypesFactory = require('@ah/metadata-factory');
 const FileReader = FileSystem.FileReader;
 const FileWriter = FileSystem.FileWriter;
 const FileChecker = FileSystem.FileChecker;
@@ -8,14 +7,14 @@ const BundleAnalyzer = require('../../../src/aura/bundleAnalyzer');
 
 describe('Testing ./src/aura/parser.js', () => {
     test('Testing parse()', () => {
-        const metadataTypes = TypesFactory.createMetadataTypesFromPackageXML('./test/assets/SFDXProject/manifest/package.xml');
-        const sObjectsData = TypesFactory.createSObjectsFromFileSystem('./test/assets/SFDXProject/force-app/main/default/objects');
+        const metadataTypes = JSON.parse(FileReader.readFileSync('./test/assets/types/metadataTypes.json'));
+        const sObjectsData = JSON.parse(FileReader.readFileSync('./test/assets/types/sObjects.json'));
         const sObjects = [];
         const userClasses = [];
         const nsSummary = System.getAllNamespacesData();
         for (const metadataTypeName of Object.keys(metadataTypes)) {
             const metadataType = metadataTypes[metadataTypeName];
-            for (const metadataObjectName of metadataType.getChildKeys()) {
+            for (const metadataObjectName of Object.keys(metadataType.childs)) {
                 if (metadataTypeName === 'ApexClass') {
                     userClasses.push(metadataObjectName.toLowerCase());
                 } else if (metadataTypeName === 'CustomObject') {
