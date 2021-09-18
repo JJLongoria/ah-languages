@@ -324,7 +324,7 @@ class ApexParser {
                 node = newNode;
                 resetModifiers(this);
             } else if (isOnTrigger(token)) {
-                const newNode = new ApexTrigger(((node) ? node.id : 'InitialNode') + '.trigger.');
+                const newNode = new ApexTrigger(((node) ? node.id : 'InitialNode') + '.trigger.', nextToken.text);
                 index = processTrigger(this.tokens, index, newNode);
                 if (this.comment) {
                     this.comment.parentId = newNode.id;
@@ -1169,6 +1169,9 @@ function processTrigger(tokens, index, node) {
         const token = tokens[index];
         if (token.type === TokenType.BRACKET.TRIGGER_GUARD_CLOSE) {
             break;
+        }
+        if (lastToken && lastToken.textToLower === 'on') {
+            node.sObject = token.text;
         }
         if (lastToken && lastToken.type === TokenType.DATABASE.TRIGGER_EXEC) {
             if (lastToken.textToLower === 'before') {
