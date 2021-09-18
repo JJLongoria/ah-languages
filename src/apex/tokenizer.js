@@ -516,7 +516,7 @@ class ApexTokenizer {
                         tokens[index].pairToken = tokens.length;
                     }
                 } else if (token.type === TokenType.BRACKET.CURLY_OPEN && lastToken) {
-                    if ((lastToken.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE || lastToken.type === TokenType.BRACKET.SQUARE_CLOSE) && bracketIndex.length > 0) {
+                    if ((lastToken.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE || lastToken.type === TokenType.BRACKET.SQUARE_CLOSE) && bracketIndex.length > 1) {
                         token.type = TokenType.BRACKET.INIT_VALUES_OPEN;
                     } else if (lastToken.type === TokenType.KEYWORD.MODIFIER.STATIC) {
                         tokens[tokens.length - 1].type = TokenType.KEYWORD.DECLARATION.STATIC_CONSTRUCTOR;
@@ -726,6 +726,8 @@ class ApexTokenizer {
                             token.type = TokenType.DECLARATION.ENTITY.VARIABLE;
                     } else if (token.textToLower != 'constructor' && systemNamespace && systemNamespace[token.textToLower] && (lastToken && lastToken.type !== TokenType.KEYWORD.MODIFIER.ACCESS)) {
                         token.type = TokenType.DATATYPE.SUPPORT_CLASS;
+                        if (token.textToLower === 'trigger')
+                            token.type = TokenType.KEYWORD.DECLARATION.TRIGGER;
                         if (lastToken && (isDatatypeToken(lastToken) || lastToken.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE || lastToken.type === TokenType.BRACKET.SQUARE_CLOSE) && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE))
                             token.type = TokenType.DECLARATION.ENTITY.VARIABLE;
                     } else if (token.textToLower != 'constructor' && nsSummary[token.textToLower] && token.textToLower !== 'system') {
@@ -1012,7 +1014,7 @@ function isDatatypeToken(token) {
     return token.type === TokenType.DATATYPE.SUPPORT_CLASS || token.type === TokenType.DATATYPE.SUPPORT_NAMESPACE || token.type === TokenType.DATATYPE.CUSTOM_CLASS || token.type === TokenType.DATATYPE.PRIMITIVE || token.type === TokenType.DATATYPE.COLLECTION || token.type === TokenType.DATATYPE.SOBJECT || token.type === TokenType.ENTITY.CLASS_MEMBER || token.type === TokenType.ENTITY.SUPPORT_CLASS_MEMBER;
 }
 
-function isObjectAccessor(token){
+function isObjectAccessor(token) {
     return token.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR || token.type === TokenType.PUNCTUATION.SAFE_OBJECT_ACCESSOR;
 }
 

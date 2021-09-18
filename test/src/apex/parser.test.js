@@ -497,8 +497,8 @@ describe('Testing ./src/apex/parser.js', () => {
                 }
             }
         }
-        const oneFile = true;
-        const fileToProcess = 'a_BaseComponentController.cls';
+        const oneFile = false;
+        const fileToProcess = 't_AccountTeamMemberTrigger.trigger';
         console.time('nsSummary');
         const nsSummary = System.getAllNamespacesSummary();
         console.timeEnd('nsSummary');
@@ -513,7 +513,12 @@ describe('Testing ./src/apex/parser.js', () => {
             namespaceSummary: nsSummary
         };
         if (oneFile) {
-            const filPath = classesPath + '/' + fileToProcess;
+            let filPath;
+            if(fileToProcess.endsWith('.trigger')){
+                filPath = triggersPath + '/' + fileToProcess;
+            } else {
+                filPath = classesPath + '/' + fileToProcess;
+            }
             //console.time(fileToProcess + ' compilationTime');
             //console.time(fileToProcess + ' lexer');
             //const tokens = ApexLexer.tokenize(fileContent, systemData);
@@ -535,15 +540,15 @@ describe('Testing ./src/apex/parser.js', () => {
                     //const fileContent = FileReader.readFileSync(filPath);
                     //console.time(file + ' lexer');
                     //const tokens = ApexLexer.tokenize(fileContent, sObjects, userClasses, nsSummary);
-                    /*console.timeEnd(file + ' lexer');
-                    console.time(file + ' parser');*/
+                    //console.timeEnd(file + ' lexer');
+                    //console.time(file + ' parser');
                     const node = new ApexParser(filPath, systemData).parse();
                     if (node.nodeType === ApexNodeTypes.CLASS || node.nodeType === ApexNodeTypes.INTERFACE || node.nodeType === ApexNodeTypes.TRIGGER) {
                         validateNode(node);
                     }
                     nodes[node.name.toLowerCase()] = node;
-                    /*console.timeEnd(file + ' parser');
-                    console.timeEnd(file + 'compilationTime');*/
+                    //console.timeEnd(file + ' parser');
+                    //console.timeEnd(file + 'compilationTime');
                 } catch (error) {
                     console.log('Error en el archivo: ' + file);
                     console.log(JSON.stringify(error));
