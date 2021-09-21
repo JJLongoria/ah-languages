@@ -91,21 +91,21 @@ class AuraParser {
         for (let index = 0; index < this.tokensLength; index++) {
             const lastToken = LangUtils.getLastToken(this.tokens, index);
             const token = new Token(this.tokens[index]);
+            if (this.cursorPosition && !positionData) {
+                if (LangUtils.isOnPosition(token, lastToken, nextToken, this.cursorPosition)) {
+                    const startIndex = this.cursorPosition.character - token.range.start.character;
+                    const startPart = token.text.substring(0, startIndex + 1);
+                    const endPart = token.text.substring(startIndex + 1);
+                    positionData = new PositionData(startPart, endPart, (node) ? node.nodeType : undefined, undefined, 'Aura');
+                    positionData.onText = token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_START || token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+                }
+            }
             if (lastToken) {
                 if ((lastToken.type === TokenType.BRACKET.START_TAG_OPEN || lastToken.type === TokenType.BRACKET.TAG_EMPTY_OPEN) && token.type === TokenType.ENTITY.TAG.NAME) {
-                    if (this.cursorPosition && node && !positionData) {
-                        if (LangUtils.isOnPosition(token, this.cursorPosition)) {
-                            const startIndex = this.cursorPosition.character - token.range.start.character;
-                            const startPart = token.text.substring(0, startIndex + 1);
-                            const endPart = token.text.substring(startIndex + 1);
-                            positionData = new PositionData(startPart, endPart, node.nodeType, undefined, 'Aura');
-                            positionData.onText = token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_START || token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_END || token.type === TokenType.LITERAL.STRING;
-                        }
-                    }
                     const result = getTagData(this.tokens, index, this.cursorPosition);
                     if (result.positionData && !positionData) {
                         positionData = result.positionData;
-                        positionData.nodeType = node.nodeType;
+                        positionData.nodeType = (node) ? node.nodeType : undefined;
                         delete result.positionData;
                         positionData.tagData = result.tagData;
                     }
@@ -198,8 +198,11 @@ class AuraParser {
                 }
             }
         }
-        if (positionData)
+        if (positionData) {
+            if (!positionData.nodeType)
+                positionData.nodeType = node.nodeType;
             node.positionData = positionData;
+        }
         this.node = node;
         return node;
     }
