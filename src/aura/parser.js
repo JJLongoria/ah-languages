@@ -90,6 +90,7 @@ class AuraParser {
         let positionData;
         for (let index = 0; index < this.tokensLength; index++) {
             const lastToken = LangUtils.getLastToken(this.tokens, index);
+            const nextToken = LangUtils.getNextToken(this.tokens, index);
             const token = new Token(this.tokens[index]);
             if (this.cursorPosition && !positionData) {
                 if (LangUtils.isOnPosition(token, lastToken, nextToken, this.cursorPosition)) {
