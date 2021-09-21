@@ -91,7 +91,7 @@ class JSParser {
             const token = new Token(this.tokens[index]);
             const nextToken = LangUtils.getNextToken(this.tokens, index);
             if (this.cursorPosition && this.node && !positionData) {
-                if (LangUtils.isOnPosition(token, this.cursorPosition)) {
+                if (LangUtils.isOnPosition(token, lastToken, nextToken, this.cursorPosition)) {
                     const startIndex = this.cursorPosition.character - token.range.start.character;
                     const startPart = token.text.substring(0, startIndex + 1);
                     const endPart = token.text.substring(startIndex + 1);

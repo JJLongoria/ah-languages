@@ -65,8 +65,8 @@ class BundleAnalyzer {
             }
             this._component.attributes.push(newAttribute);
         }
-        const jsController = BundleAnalyzer.getController(this._file);
-        const helperController = BundleAnalyzer.getHelper(this._file);
+        const jsController = BundleAnalyzer.getController(this._file, position);
+        const helperController = BundleAnalyzer.getHelper(this._file, position);
         if (jsController && jsController.positionData)
             this._component.positionData = jsController.positionData;
         if (helperController && helperController.positionData)
@@ -226,19 +226,19 @@ class BundleAnalyzer {
         return this._component;
     }
 
-    static getController(componentPath) {
+    static getController(componentPath, position) {
         let controllerPath = componentPath.replace('.cmp', 'Controller.js').replace('.app', 'Controller.js').replace('.evt', 'Controller.js');
         if (FileChecker.isExists(controllerPath) && FileChecker.isAuraControllerJS(controllerPath)) {
-            const jsFileData = new JSParser(controllerPath).parse();
+            const jsFileData = new JSParser(controllerPath).setCursorPosition(position).parse();
             return jsFileData;
         }
         return undefined;
     }
 
-    static getHelper(componentPath) {
+    static getHelper(componentPath, position) {
         let helperPath = componentPath.replace('.cmp', 'Helper.js').replace('.app', 'Helper.js').replace('.evt', 'Helper.js');
         if (FileChecker.isExists(helperPath) && FileChecker.isAuraHelperJS(helperPath)) {
-            const jsFileData = new JSParser(helperPath).parse();
+            const jsFileData = new JSParser(helperPath).setCursorPosition(position).parse();
             return jsFileData;
         }
         return undefined;
