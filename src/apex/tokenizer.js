@@ -438,8 +438,8 @@ class ApexTokenizer {
                 lineNumber++;
                 column = 0;
             } else if (char !== "\t" && char !== " " && char.trim().length != 0) {
-                column++;
                 token = new Token(TokenType.UNKNOWN, char, lineNumber, column);
+                column++;
             } else if (char === "\t") {
                 column += 4;
             } else {
