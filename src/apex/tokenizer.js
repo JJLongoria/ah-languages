@@ -966,8 +966,6 @@ function isOperator(token) {
         case TokenType.OPERATOR.LOGICAL.OR_ASSIGN:
         case TokenType.PUNCTUATION.EXMARK:
         case TokenType.PUNCTUATION.COLON:
-        case TokenType.OPERATOR.PRIORITY.PARENTHESIS_CLOSE:
-        case TokenType.OPERATOR.PRIORITY.PARENTHESIS_OPEN:
             return true;
         default:
             return false;
@@ -988,18 +986,10 @@ function isBracket(token) {
         case TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN:
         case TokenType.BRACKET.PARENTHESIS_GUARD_CLOSE:
         case TokenType.BRACKET.PARENTHESIS_GUARD_OPEN:
-        case TokenType.BRACKET.PARENTHESIS_PARAM_CLOSE:
-        case TokenType.BRACKET.PARENTHESIS_PARAM_CLOSE:
         case TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE:
         case TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_OPEN:
         case TokenType.BRACKET.CASTING_OPEN:
         case TokenType.BRACKET.CASTING_CLOSE:
-        case TokenType.BRACKET.INNER_QUERY_END:
-        case TokenType.BRACKET.INNER_QUERY_START:
-        case TokenType.BRACKET.QUERY_END:
-        case TokenType.BRACKET.QUERY_START:
-        case TokenType.BRACKET.SQUARE_CLOSE:
-        case TokenType.BRACKET.SQUARE_OPEN:
         case TokenType.BRACKET.TRIGGER_GUARD_CLOSE:
         case TokenType.BRACKET.TRIGGER_GUARD_OPEN:
             return true;

@@ -344,7 +344,6 @@ function formatApex(tokens, config) {
             newLines = 1;
         }
         if (isUnaryOperator(token)) {
-            beforeWhitespaces = 0;
             afterWhitespaces = 0;
         }
         if (newLines > 0) {
