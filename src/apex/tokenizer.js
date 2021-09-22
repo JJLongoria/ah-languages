@@ -400,6 +400,8 @@ class ApexTokenizer {
                 }
             } else if (symbolTokens[char]) {
                 token = new Token(symbolTokens[char], char, lineNumber, column);
+                if (mustResetABracketIndex(token))
+                    aBracketsIndex = [];
                 column++;
             } else if (NUM_FORMAT.test(char)) {
                 var numContent = '';
@@ -1028,4 +1030,28 @@ function isQueryField(token, lastToken, twoLastToken) {
         isQueryField = false;
     }
     return isQueryField;
+}
+
+function mustResetABracketIndex(token) {
+    switch (token.type) {
+        case TokenType.PUNCTUATION.SEMICOLON:
+        case TokenType.BRACKET.CURLY_OPEN:
+        case TokenType.BRACKET.CURLY_CLOSE:
+        case TokenType.BRACKET.INITIALIZER_OPEN:
+        case TokenType.BRACKET.INITIALIZER_CLOSE:
+        case TokenType.BRACKET.ANNOTATION_PARAM_OPEN:
+        case TokenType.BRACKET.ANNOTATION_PARAM_CLOSE:
+        case TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_OPEN:
+        case TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE:
+        case TokenType.BRACKET.PARENTHESIS_GUARD_OPEN:
+        case TokenType.BRACKET.PARENTHESIS_GUARD_CLOSE:
+        case TokenType.BRACKET.PARENTHESIS_PARAM_OPEN:
+        case TokenType.BRACKET.PARENTHESIS_PARAM_CLOSE:
+        case TokenType.BRACKET.QUERY_START:
+        case TokenType.BRACKET.QUERY_END:
+        case TokenType.BRACKET.INNER_QUERY_START:
+        case TokenType.BRACKET.INNER_QUERY_END:
+            return true;
+    }
+    return false;
 }
