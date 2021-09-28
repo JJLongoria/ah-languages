@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_UpsertContext_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,7 +69,7 @@
   "enums": {},
   "variables": {
     "rows": {
-      "id": "Datasource.upsertcontext.rows",
+      "id": "Datasource.upsertcontext.method.list<map<string,any>> rows{get;set;}",
       "nodeType": "property",
       "name": "rows",
       "startToken": {
@@ -89,6 +91,9 @@
         },
         "id": "declaration.entity.name.property_rows_-1:0"
       },
+      "parentId": "Datasource.upsertcontext",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -96,73 +101,149 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public List<Map<String,ANY>> rows {get; set;}",
-      "simplifiedSignature": "List<Map<String,ANY>> rows { get; set; }",
+      "signature": "public List<Map<String, ANY>> rows { get; set; }",
+      "simplifiedSignature": "List<Map<String,ANY>> rows{get;set;}",
       "datatype": {
-        "id": "Datasource.upsertcontext.rows.list<map<string,any>>",
+        "id": ".datatype.List<Map<String,ANY>>",
         "nodeType": "datatype",
-        "name": "List<Map<String,ANY>>"
+        "name": "List<Map<String,ANY>>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": ".datatype.List<Map<String,ANY>>.value.Map<String,ANY>",
+          "nodeType": "datatype",
+          "name": "Map<String,ANY>",
+          "startToken": {
+            "type": "datatype.collection",
+            "text": "Map",
+            "textToLower": "map",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 15
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Map_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Map",
+          "value": {
+            "id": ".datatype.List<Map<String,ANY>>.value.Map<String,ANY>.value.ANY",
+            "nodeType": "datatype",
+            "name": "ANY",
+            "startToken": {
+              "type": "datatype.custom.class",
+              "text": "ANY",
+              "textToLower": "any",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 26
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ANY_0:23"
+            },
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ANY"
+          },
+          "key": {
+            "id": ".datatype.List<Map<String,ANY>>.value.Map<String,ANY>.key.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 16
+                },
+                "end": {
+                  "line": 0,
+                  "character": 22
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:16"
+            },
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          }
+        }
       },
-      "description": "List of rows corresponding to the external object records to upsert.",
+      "parentName": "UpsertContext",
       "getter": {
-        "id": "Datasource.upsertcontext.rows.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Datasource.upsertcontext.rows.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     }
   },
@@ -170,5 +251,7 @@
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

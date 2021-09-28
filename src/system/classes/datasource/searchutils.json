@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_SearchUtils_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "searchbyname(datasource.searchcontext,datasource.connection)": {
-      "id": "Datasource.searchutils.searchbyname",
+      "id": "Datasource.searchutils.method.searchbyname(datasource.searchcontext,datasource.connection)",
       "nodeType": "method",
       "name": "searchByName",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_searchByName_-1:0"
       },
+      "parentId": "Datasource.searchutils",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,83 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static List<DataSource.TableResult> searchByName(DataSource.SearchContext searchDetails, DataSource.Connection connection)",
+      "overrideSignature": "public static override List<DataSource.TableResult> searchByName(DataSource.SearchContext searchDetails, DataSource.Connection connection)",
       "simplifiedSignature": "searchByName(DataSource.SearchContext,DataSource.Connection)",
       "datatype": {
-        "id": "Datasource.searchutils.searchbyname.List<DataSource.TableResult>",
+        "id": "Datasource.searchutils.searchbyname.datatype.List<DataSource.TableResult>",
         "nodeType": "datatype",
-        "name": "List<DataSource.TableResult>"
+        "name": "List<DataSource.TableResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "Datasource.searchutils.searchbyname",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Datasource.searchutils.searchbyname.datatype.List<DataSource.TableResult>.value.DataSource.TableResult",
+          "nodeType": "datatype",
+          "name": "DataSource.TableResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "DataSource",
+            "textToLower": "datasource",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 29
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_DataSource_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "DataSource.TableResult"
+        }
       },
       "description": "Queries all the tables and returns each row whose designated name field contains the search phrase.",
+      "parentName": "SearchUtils",
+      "variables": {},
       "params": {
-        "searchDetails": {
-          "id": "Datasource.searchutils.searchbyname.searchdetails",
-          "type": "var",
+        "searchdetails": {
+          "id": "Datasource.searchutils.method.searchbyname(datasource.searchcontext,datasource.connection).varParam.searchdetails",
+          "nodeType": "variable",
           "name": "searchDetails",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +206,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_searchDetails_-1:0"
+            "id": "token.type.identifier_searchDetails_0:81"
           },
-          "signature": "DataSource.SearchContext searchDetails",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "searchDetails",
+            "textToLower": "searchdetails",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 94
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_searchDetails_0:81"
+          },
+          "parentId": "Datasource.searchutils.method.searchbyname(datasource.searchcontext,datasource.connection)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Datasource.searchutils.searchbyname.datasource.searchcontext",
+            "id": "Datasource.searchutils.searchbyname.datatype.DataSource.SearchContext",
             "nodeType": "datatype",
-            "name": "DataSource.SearchContext"
-          }
+            "name": "DataSource.SearchContext",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "DataSource",
+              "textToLower": "datasource",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 56
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_DataSource_0:56"
+            },
+            "parentId": "Datasource.searchutils.searchbyname",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "DataSource.SearchContext"
+          },
+          "scope": null
         },
         "connection": {
-          "id": "Datasource.searchutils.searchbyname.connection",
-          "type": "var",
+          "id": "Datasource.searchutils.method.searchbyname(datasource.searchcontext,datasource.connection).varParam.connection",
+          "nodeType": "variable",
           "name": "connection",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,30 +281,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 118
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 128
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_connection_-1:0"
+            "id": "token.type.identifier_connection_0:118"
           },
-          "signature": "DataSource.Connection connection",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "connection",
+            "textToLower": "connection",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 118
+              },
+              "end": {
+                "line": 0,
+                "character": 128
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_connection_0:118"
+          },
+          "parentId": "Datasource.searchutils.method.searchbyname(datasource.searchcontext,datasource.connection)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Datasource.searchutils.searchbyname.datasource.connection",
+            "id": "Datasource.searchutils.searchbyname.datatype.DataSource.Connection",
             "nodeType": "datatype",
-            "name": "DataSource.Connection"
-          }
+            "name": "DataSource.Connection",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "DataSource",
+              "textToLower": "datasource",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 96
+                },
+                "end": {
+                  "line": 0,
+                  "character": 106
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_DataSource_0:96"
+            },
+            "parentId": "Datasource.searchutils.searchbyname",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "DataSource.Connection"
+          },
+          "description": "The SearchContext class that specifies which data to search and what to search for. The DataSource.Connection class that connects to the external system.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

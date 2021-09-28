@@ -397,6 +397,7 @@ class ApexTokenizer {
                     column += 2;
                 } else if (symbolTokens[char]) {
                     token = new Token(symbolTokens[char], char, lineNumber, column);
+                    column++;
                 }
             } else if (symbolTokens[char]) {
                 token = new Token(symbolTokens[char], char, lineNumber, column);
@@ -772,9 +773,9 @@ class ApexTokenizer {
                                 token.type = TokenType.ENTITY.CLASS_MEMBER;
                             } else if (token.type !== TokenType.KEYWORD.FLOW_CONTROL.ELSE_IF) {
                                 if (!lastToken || (lastToken.type !== TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN && lastToken.type !== TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE)) {
-                                    if (isObjectAccessor(lastToken)) {
+                                    if (lastToken && isObjectAccessor(lastToken)) {
                                         token.type = TokenType.ENTITY.VARIABLE;
-                                    } else if (lastToken.type === TokenType.KEYWORD.DECLARATION.IMPLEMENTS || lastToken.type === TokenType.KEYWORD.DECLARATION.EXTENDS) {
+                                    } else if (lastToken && (lastToken.type === TokenType.KEYWORD.DECLARATION.IMPLEMENTS || lastToken.type === TokenType.KEYWORD.DECLARATION.EXTENDS)) {
                                         token.type = TokenType.DATATYPE.CUSTOM_CLASS;
                                     } else {
                                         token.type = TokenType.ENTITY.VARIABLE;

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_UserManagement_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "clone()": {
-      "id": "System.usermanagement.clone",
+      "id": "System.usermanagement.method.clone()",
       "nodeType": "method",
       "name": "clone",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_clone_-1:0"
       },
+      "parentId": "System.usermanagement",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public User Management clone()",
+      "signature": "public Object clone()",
+      "overrideSignature": "public override Object clone()",
       "simplifiedSignature": "clone()",
       "datatype": {
-        "id": "System.usermanagement.clone.User Management",
+        "id": "System.usermanagement.clone.datatype.Object",
         "nodeType": "datatype",
-        "name": "User Management"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:7"
+        },
+        "parentId": "System.usermanagement.clone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Makes a duplicate copy of the System.UserManagement object.",
-      "params": {}
+      "parentName": "UserManagement",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "deregisterverificationmethod(id,auth.verificationmethod)": {
-      "id": "System.usermanagement.deregisterverificationmethod",
+      "id": "System.usermanagement.method.deregisterverificationmethod(id,auth.verificationmethod)",
       "nodeType": "method",
       "name": "deregisterVerificationMethod",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_deregisterVerificationMethod_-1:0"
       },
+      "parentId": "System.usermanagement",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,17 +185,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -168,30 +204,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void deregisterVerificationMethod(Id userId, Auth.VerificationMethod method)",
+      "overrideSignature": "public static override void deregisterVerificationMethod(Id userId, Auth.VerificationMethod method)",
       "simplifiedSignature": "deregisterVerificationMethod(Id,Auth.VerificationMethod)",
       "datatype": {
-        "id": "System.usermanagement.deregisterverificationmethod.void",
+        "id": "System.usermanagement.deregisterverificationmethod.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "System.usermanagement.deregisterverificationmethod",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Deregisters an identity verification method. Use this method to let users delete an existing verification method.",
+      "parentName": "UserManagement",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "System.usermanagement.deregisterverificationmethod.userid",
-          "type": "var",
+        "userid": {
+          "id": "System.usermanagement.method.deregisterverificationmethod(id,auth.verificationmethod).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -200,28 +262,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:51"
           },
-          "signature": "Id userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 51
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:51"
+          },
+          "parentId": "System.usermanagement.method.deregisterverificationmethod(id,auth.verificationmethod)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.usermanagement.deregisterverificationmethod.id",
+            "id": "System.usermanagement.deregisterverificationmethod.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 48
+                },
+                "end": {
+                  "line": 0,
+                  "character": 50
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:48"
+            },
+            "parentId": "System.usermanagement.deregisterverificationmethod",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
         "method": {
-          "id": "System.usermanagement.deregisterverificationmethod.method",
-          "type": "var",
+          "id": "System.usermanagement.method.deregisterverificationmethod(id,auth.verificationmethod).varParam.method",
+          "nodeType": "variable",
           "name": "method",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -230,29 +337,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 89
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_method_-1:0"
+            "id": "token.type.identifier_method_0:83"
           },
-          "signature": "Auth.VerificationMethod method",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "method",
+            "textToLower": "method",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 83
+              },
+              "end": {
+                "line": 0,
+                "character": 89
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_method_0:83"
+          },
+          "parentId": "System.usermanagement.method.deregisterverificationmethod(id,auth.verificationmethod)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.usermanagement.deregisterverificationmethod.auth.verificationmethod",
+            "id": "System.usermanagement.deregisterverificationmethod.datatype.Auth.VerificationMethod",
             "nodeType": "datatype",
-            "name": "Auth.VerificationMethod"
-          }
+            "name": "Auth.VerificationMethod",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:59"
+            },
+            "parentId": "System.usermanagement.deregisterverificationmethod",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.VerificationMethod"
+          },
+          "description": "User ID of the user deregistering the verification method. Verification method used to verify the identity of the user.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "formatphonenumber(string,string)": {
-      "id": "System.usermanagement.formatphonenumber",
+      "id": "System.usermanagement.method.formatphonenumber(string,string)",
       "nodeType": "method",
       "name": "formatPhoneNumber",
       "startToken": {
@@ -274,6 +429,9 @@
         },
         "id": "declaration.entity.name.function_formatPhoneNumber_-1:0"
       },
+      "parentId": "System.usermanagement",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "global",
@@ -281,17 +439,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_global_-1:0"
+        "id": "token.type.identifier_global_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -300,30 +458,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "global static String formatPhoneNumber(String countryCode, String phoneNumber)",
+      "overrideSignature": "global static override String formatPhoneNumber(String countryCode, String phoneNumber)",
       "simplifiedSignature": "formatPhoneNumber(String,String)",
       "datatype": {
-        "id": "System.usermanagement.formatphonenumber.String",
+        "id": "System.usermanagement.formatphonenumber.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.usermanagement.formatphonenumber",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Formats a mobile phone number for a user. Call this method to ensure that the phone number is formatted properly before updating a user’s mobile phone number.",
+      "parentName": "UserManagement",
+      "variables": {},
       "params": {
-        "countryCode": {
-          "id": "System.usermanagement.formatphonenumber.countrycode",
-          "type": "var",
+        "countrycode": {
+          "id": "System.usermanagement.method.formatphonenumber(string,string).varParam.countrycode",
+          "nodeType": "variable",
           "name": "countryCode",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -332,28 +516,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_countryCode_-1:0"
+            "id": "token.type.identifier_countryCode_0:46"
           },
-          "signature": "String countryCode",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "countryCode",
+            "textToLower": "countrycode",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_countryCode_0:46"
+          },
+          "parentId": "System.usermanagement.method.formatphonenumber(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.usermanagement.formatphonenumber.string",
+            "id": "System.usermanagement.formatphonenumber.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:39"
+            },
+            "parentId": "System.usermanagement.formatphonenumber",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "phoneNumber": {
-          "id": "System.usermanagement.formatphonenumber.phonenumber",
-          "type": "var",
+        "phonenumber": {
+          "id": "System.usermanagement.method.formatphonenumber(string,string).varParam.phonenumber",
+          "nodeType": "variable",
           "name": "phoneNumber",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -362,29 +591,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_phoneNumber_-1:0"
+            "id": "token.type.identifier_phoneNumber_0:66"
           },
-          "signature": "String phoneNumber",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "phoneNumber",
+            "textToLower": "phonenumber",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 66
+              },
+              "end": {
+                "line": 0,
+                "character": 77
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_phoneNumber_0:66"
+          },
+          "parentId": "System.usermanagement.method.formatphonenumber(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.usermanagement.formatphonenumber.string",
+            "id": "System.usermanagement.formatphonenumber.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 65
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:59"
+            },
+            "parentId": "System.usermanagement.formatphonenumber",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "A valid country code. A mobile number that contains from 3 through 49 numeric characters, without the country code. For example, (415) 555-1234.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "initpasswordlesslogin(id,auth.verificationmethod)": {
-      "id": "System.usermanagement.initpasswordlesslogin",
+      "id": "System.usermanagement.method.initpasswordlesslogin(id,auth.verificationmethod)",
       "nodeType": "method",
       "name": "initPasswordlessLogin",
       "startToken": {
@@ -406,6 +683,9 @@
         },
         "id": "declaration.entity.name.function_initPasswordlessLogin_-1:0"
       },
+      "parentId": "System.usermanagement",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -413,17 +693,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -432,30 +712,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String initPasswordlessLogin(Id userId, Auth.VerificationMethod method)",
+      "overrideSignature": "public static override String initPasswordlessLogin(Id userId, Auth.VerificationMethod method)",
       "simplifiedSignature": "initPasswordlessLogin(Id,Auth.VerificationMethod)",
       "datatype": {
-        "id": "System.usermanagement.initpasswordlesslogin.String",
+        "id": "System.usermanagement.initpasswordlesslogin.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.usermanagement.initpasswordlesslogin",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Invokes a verification challenge for passwordless login when creating custom (Visualforce) Login and Verify pages for external users.",
+      "parentName": "UserManagement",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "System.usermanagement.initpasswordlesslogin.userid",
-          "type": "var",
+        "userid": {
+          "id": "System.usermanagement.method.initpasswordlesslogin(id,auth.verificationmethod).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -464,28 +770,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:46"
           },
-          "signature": "Id userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:46"
+          },
+          "parentId": "System.usermanagement.method.initpasswordlesslogin(id,auth.verificationmethod)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.usermanagement.initpasswordlesslogin.id",
+            "id": "System.usermanagement.initpasswordlesslogin.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 43
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:43"
+            },
+            "parentId": "System.usermanagement.initpasswordlesslogin",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
         "method": {
-          "id": "System.usermanagement.initpasswordlesslogin.method",
-          "type": "var",
+          "id": "System.usermanagement.method.initpasswordlesslogin(id,auth.verificationmethod).varParam.method",
+          "nodeType": "variable",
           "name": "method",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -494,29 +845,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_method_-1:0"
+            "id": "token.type.identifier_method_0:78"
           },
-          "signature": "Auth.VerificationMethod method",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "method",
+            "textToLower": "method",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 78
+              },
+              "end": {
+                "line": 0,
+                "character": 84
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_method_0:78"
+          },
+          "parentId": "System.usermanagement.method.initpasswordlesslogin(id,auth.verificationmethod)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.usermanagement.initpasswordlesslogin.auth.verificationmethod",
+            "id": "System.usermanagement.initpasswordlesslogin.datatype.Auth.VerificationMethod",
             "nodeType": "datatype",
-            "name": "Auth.VerificationMethod"
-          }
+            "name": "Auth.VerificationMethod",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:54"
+            },
+            "parentId": "System.usermanagement.initpasswordlesslogin",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.VerificationMethod"
+          },
+          "description": "ID of the user who’s logging in. Method used to verify the user’s identity, which can be EMAIL or SMS.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "initregisterverificationmethod(auth.verificationmethod)": {
-      "id": "System.usermanagement.initregisterverificationmethod",
+      "id": "System.usermanagement.method.initregisterverificationmethod(auth.verificationmethod)",
       "nodeType": "method",
       "name": "initRegisterVerificationMethod",
       "startToken": {
@@ -538,6 +937,9 @@
         },
         "id": "declaration.entity.name.function_initRegisterVerificationMethod_-1:0"
       },
+      "parentId": "System.usermanagement",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -545,17 +947,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -564,30 +966,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String initRegisterVerificationMethod(Auth.VerificationMethod method)",
+      "overrideSignature": "public static override String initRegisterVerificationMethod(Auth.VerificationMethod method)",
       "simplifiedSignature": "initRegisterVerificationMethod(Auth.VerificationMethod)",
       "datatype": {
-        "id": "System.usermanagement.initregisterverificationmethod.String",
+        "id": "System.usermanagement.initregisterverificationmethod.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.usermanagement.initregisterverificationmethod",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Invokes a verification challenge for registering identity verification methods with a custom (Visualforce) page. Users can register either their email address or phone number.",
+      "parentName": "UserManagement",
+      "variables": {},
       "params": {
         "method": {
-          "id": "System.usermanagement.initregisterverificationmethod.method",
-          "type": "var",
+          "id": "System.usermanagement.method.initregisterverificationmethod(auth.verificationmethod).varParam.method",
+          "nodeType": "variable",
           "name": "method",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -596,29 +1024,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 76
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_method_-1:0"
+            "id": "token.type.identifier_method_0:76"
           },
-          "signature": "Auth.VerificationMethod method",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "method",
+            "textToLower": "method",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 76
+              },
+              "end": {
+                "line": 0,
+                "character": 82
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_method_0:76"
+          },
+          "parentId": "System.usermanagement.method.initregisterverificationmethod(auth.verificationmethod)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.usermanagement.initregisterverificationmethod.auth.verificationmethod",
+            "id": "System.usermanagement.initregisterverificationmethod.datatype.Auth.VerificationMethod",
             "nodeType": "datatype",
-            "name": "Auth.VerificationMethod"
-          }
+            "name": "Auth.VerificationMethod",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:52"
+            },
+            "parentId": "System.usermanagement.initregisterverificationmethod",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.VerificationMethod"
+          },
+          "description": "Method used to verify the user’s identity, which can be EMAIL or SMS.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "initselfregistration(auth.verificationmethod,user)": {
-      "id": "System.usermanagement.initselfregistration",
+      "id": "System.usermanagement.method.initselfregistration(auth.verificationmethod,user)",
       "nodeType": "method",
       "name": "initSelfRegistration",
       "startToken": {
@@ -640,6 +1116,9 @@
         },
         "id": "declaration.entity.name.function_initSelfRegistration_-1:0"
       },
+      "parentId": "System.usermanagement",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -647,17 +1126,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -666,30 +1145,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String initSelfRegistration(Auth.VerificationMethod method, User user)",
+      "overrideSignature": "public static override String initSelfRegistration(Auth.VerificationMethod method, User user)",
       "simplifiedSignature": "initSelfRegistration(Auth.VerificationMethod,User)",
       "datatype": {
-        "id": "System.usermanagement.initselfregistration.String",
+        "id": "System.usermanagement.initselfregistration.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.usermanagement.initselfregistration",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Invokes a verification challenge for self-registration when creating a custom (Visualforce) Verify page for community self-registration.",
+      "parentName": "UserManagement",
+      "variables": {},
       "params": {
         "method": {
-          "id": "System.usermanagement.initselfregistration.method",
-          "type": "var",
+          "id": "System.usermanagement.method.initselfregistration(auth.verificationmethod,user).varParam.method",
+          "nodeType": "variable",
           "name": "method",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -698,28 +1203,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_method_-1:0"
+            "id": "token.type.identifier_method_0:66"
           },
-          "signature": "Auth.VerificationMethod method",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "method",
+            "textToLower": "method",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 66
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_method_0:66"
+          },
+          "parentId": "System.usermanagement.method.initselfregistration(auth.verificationmethod,user)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.usermanagement.initselfregistration.auth.verificationmethod",
+            "id": "System.usermanagement.initselfregistration.datatype.Auth.VerificationMethod",
             "nodeType": "datatype",
-            "name": "Auth.VerificationMethod"
-          }
+            "name": "Auth.VerificationMethod",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:42"
+            },
+            "parentId": "System.usermanagement.initselfregistration",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.VerificationMethod"
+          },
+          "scope": null
         },
         "user": {
-          "id": "System.usermanagement.initselfregistration.user",
-          "type": "var",
+          "id": "System.usermanagement.method.initselfregistration(auth.verificationmethod,user).varParam.user",
+          "nodeType": "variable",
           "name": "user",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -728,29 +1278,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_user_-1:0"
+            "id": "token.type.identifier_user_0:79"
           },
-          "signature": "User user",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "user",
+            "textToLower": "user",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 79
+              },
+              "end": {
+                "line": 0,
+                "character": 83
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_user_0:79"
+          },
+          "parentId": "System.usermanagement.method.initselfregistration(auth.verificationmethod,user)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.usermanagement.initselfregistration.user",
+            "id": "System.usermanagement.initselfregistration.datatype.User",
             "nodeType": "datatype",
-            "name": "User"
-          }
+            "name": "User",
+            "startToken": {
+              "type": "datatype.custom.class",
+              "text": "User",
+              "textToLower": "user",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 78
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_User_0:74"
+            },
+            "parentId": "System.usermanagement.initselfregistration",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "User"
+          },
+          "description": "Method used to verify the identity of the user, which can be EMAIL or SMS. User object to insert after successful registration.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "obfuscateuser(id,string)": {
-      "id": "System.usermanagement.obfuscateuser",
+      "id": "System.usermanagement.method.obfuscateuser(id,string)",
       "nodeType": "method",
       "name": "obfuscateUser",
       "startToken": {
@@ -772,6 +1370,9 @@
         },
         "id": "declaration.entity.name.function_obfuscateUser_-1:0"
       },
+      "parentId": "System.usermanagement",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -779,17 +1380,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -798,30 +1399,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void obfuscateUser(Id userId, String username)",
+      "overrideSignature": "public static override void obfuscateUser(Id userId, String username)",
       "simplifiedSignature": "obfuscateUser(Id,String)",
       "datatype": {
-        "id": "System.usermanagement.obfuscateuser.void",
+        "id": "System.usermanagement.obfuscateuser.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "System.usermanagement.obfuscateuser",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Scrambles users’ data on their request when they no longer want their personal data recognized in Salesforce. When you invoke the method for the user, the data becomes anonymous, and you can never recover it. Use this method to set the username to a specific value after it’s scrambled.",
+      "parentName": "UserManagement",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "System.usermanagement.obfuscateuser.userid",
-          "type": "var",
+        "userid": {
+          "id": "System.usermanagement.method.obfuscateuser(id,string).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -830,28 +1457,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 36
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:36"
           },
-          "signature": "Id userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 36
+              },
+              "end": {
+                "line": 0,
+                "character": 42
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:36"
+          },
+          "parentId": "System.usermanagement.method.obfuscateuser(id,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.usermanagement.obfuscateuser.id",
+            "id": "System.usermanagement.obfuscateuser.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 33
+                },
+                "end": {
+                  "line": 0,
+                  "character": 35
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:33"
+            },
+            "parentId": "System.usermanagement.obfuscateuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
         "username": {
-          "id": "System.usermanagement.obfuscateuser.username",
-          "type": "var",
+          "id": "System.usermanagement.method.obfuscateuser(id,string).varParam.username",
+          "nodeType": "variable",
           "name": "username",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -860,29 +1532,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_username_-1:0"
+            "id": "token.type.identifier_username_0:51"
           },
-          "signature": "String username",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "username",
+            "textToLower": "username",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 51
+              },
+              "end": {
+                "line": 0,
+                "character": 59
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_username_0:51"
+          },
+          "parentId": "System.usermanagement.method.obfuscateuser(id,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.usermanagement.obfuscateuser.string",
+            "id": "System.usermanagement.obfuscateuser.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 44
+                },
+                "end": {
+                  "line": 0,
+                  "character": 50
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:44"
+            },
+            "parentId": "System.usermanagement.obfuscateuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the user whose data this method scrambles. The username after the user’s data is scrambled. Sets the value of the scrambled username to a specific string.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "obfuscateuser(id)": {
-      "id": "System.usermanagement.obfuscateuser",
+      "id": "System.usermanagement.method.obfuscateuser(id)",
       "nodeType": "method",
       "name": "obfuscateUser",
       "startToken": {
@@ -904,6 +1624,9 @@
         },
         "id": "declaration.entity.name.function_obfuscateUser_-1:0"
       },
+      "parentId": "System.usermanagement",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -911,17 +1634,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -930,30 +1653,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void obfuscateUser(Id userId)",
+      "overrideSignature": "public static override void obfuscateUser(Id userId)",
       "simplifiedSignature": "obfuscateUser(Id)",
       "datatype": {
-        "id": "System.usermanagement.obfuscateuser.void",
+        "id": "System.usermanagement.obfuscateuser.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "System.usermanagement.obfuscateuser",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Scrambles users’ data on their request when they no longer want their personal data recognized in Salesforce. When you invoke the method for the user, the data becomes anonymous, and you can never recover it.",
+      "parentName": "UserManagement",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "System.usermanagement.obfuscateuser.userid",
-          "type": "var",
+        "userid": {
+          "id": "System.usermanagement.method.obfuscateuser(id).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -962,29 +1711,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 36
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:36"
           },
-          "signature": "Id userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 36
+              },
+              "end": {
+                "line": 0,
+                "character": 42
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:36"
+          },
+          "parentId": "System.usermanagement.method.obfuscateuser(id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.usermanagement.obfuscateuser.id",
+            "id": "System.usermanagement.obfuscateuser.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 33
+                },
+                "end": {
+                  "line": 0,
+                  "character": 35
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:33"
+            },
+            "parentId": "System.usermanagement.obfuscateuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "ID of the user whose data this method scrambles.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "registerverificationmethod(auth.verificationmethod,string)": {
-      "id": "System.usermanagement.registerverificationmethod",
+      "id": "System.usermanagement.method.registerverificationmethod(auth.verificationmethod,string)",
       "nodeType": "method",
       "name": "registerVerificationMethod",
       "startToken": {
@@ -1006,6 +1803,9 @@
         },
         "id": "declaration.entity.name.function_registerVerificationMethod_-1:0"
       },
+      "parentId": "System.usermanagement",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1013,17 +1813,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1032,30 +1832,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void registerVerificationMethod(Auth.VerificationMethod method, String startUrl)",
+      "signature": "public static System.PageReference registerVerificationMethod(Auth.VerificationMethod method, String startUrl)",
+      "overrideSignature": "public static override System.PageReference registerVerificationMethod(Auth.VerificationMethod method, String startUrl)",
       "simplifiedSignature": "registerVerificationMethod(Auth.VerificationMethod,String)",
       "datatype": {
-        "id": "System.usermanagement.registerverificationmethod.void",
+        "id": "System.usermanagement.registerverificationmethod.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:14"
+        },
+        "parentId": "System.usermanagement.registerverificationmethod",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Registers an identity verification method. Verification methods can be a time-based one-time password (TOTP), email or text verification code, Salesforce Authenticator, or U2F. End users register their verification methods.",
+      "parentName": "UserManagement",
+      "variables": {},
       "params": {
         "method": {
-          "id": "System.usermanagement.registerverificationmethod.method",
-          "type": "var",
+          "id": "System.usermanagement.method.registerverificationmethod(auth.verificationmethod,string).varParam.method",
+          "nodeType": "variable",
           "name": "method",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1064,28 +1890,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 92
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_method_-1:0"
+            "id": "token.type.identifier_method_0:86"
           },
-          "signature": "Auth.VerificationMethod method",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "method",
+            "textToLower": "method",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 86
+              },
+              "end": {
+                "line": 0,
+                "character": 92
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_method_0:86"
+          },
+          "parentId": "System.usermanagement.method.registerverificationmethod(auth.verificationmethod,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.usermanagement.registerverificationmethod.auth.verificationmethod",
+            "id": "System.usermanagement.registerverificationmethod.datatype.Auth.VerificationMethod",
             "nodeType": "datatype",
-            "name": "Auth.VerificationMethod"
-          }
+            "name": "Auth.VerificationMethod",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 62
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:62"
+            },
+            "parentId": "System.usermanagement.registerverificationmethod",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.VerificationMethod"
+          },
+          "scope": null
         },
-        "startUrl": {
-          "id": "System.usermanagement.registerverificationmethod.starturl",
-          "type": "var",
+        "starturl": {
+          "id": "System.usermanagement.method.registerverificationmethod(auth.verificationmethod,string).varParam.starturl",
+          "nodeType": "variable",
           "name": "startUrl",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1094,29 +1965,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 101
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 109
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_startUrl_-1:0"
+            "id": "token.type.identifier_startUrl_0:101"
           },
-          "signature": "String startUrl",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "startUrl",
+            "textToLower": "starturl",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 101
+              },
+              "end": {
+                "line": 0,
+                "character": 109
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_startUrl_0:101"
+          },
+          "parentId": "System.usermanagement.method.registerverificationmethod(auth.verificationmethod,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.usermanagement.registerverificationmethod.string",
+            "id": "System.usermanagement.registerverificationmethod.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 94
+                },
+                "end": {
+                  "line": 0,
+                  "character": 100
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:94"
+            },
+            "parentId": "System.usermanagement.registerverificationmethod",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Verification method used to verify the identity of the user. Path to the page that users see after they log in.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "sendasyncemailconfirmation(string,string,string,string)": {
-      "id": "System.usermanagement.sendasyncemailconfirmation",
+      "id": "System.usermanagement.method.sendasyncemailconfirmation(string,string,string,string)",
       "nodeType": "method",
       "name": "sendAsyncEmailConfirmation",
       "startToken": {
@@ -1138,6 +2057,9 @@
         },
         "id": "declaration.entity.name.function_sendAsyncEmailConfirmation_-1:0"
       },
+      "parentId": "System.usermanagement",
+      "order": 10,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1145,17 +2067,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1164,30 +2086,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean sendAsyncEmailConfirmation(String userId, String emailTemplateId, String networkId, String startUrl)",
+      "overrideSignature": "public static override Boolean sendAsyncEmailConfirmation(String userId, String emailTemplateId, String networkId, String startUrl)",
       "simplifiedSignature": "sendAsyncEmailConfirmation(String,String,String,String)",
       "datatype": {
-        "id": "System.usermanagement.sendasyncemailconfirmation.Boolean",
+        "id": "System.usermanagement.sendasyncemailconfirmation.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "System.usermanagement.sendasyncemailconfirmation",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Send an email message to a user’s email address for verification. The message contains a verification link (URL) that the user clicks to verify the email address later on. You can send email verifications in bulk.",
+      "parentName": "UserManagement",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "System.usermanagement.sendasyncemailconfirmation.userid",
-          "type": "var",
+        "userid": {
+          "id": "System.usermanagement.method.sendasyncemailconfirmation(string,string,string,string).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1196,28 +2144,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 62
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:56"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 56
+              },
+              "end": {
+                "line": 0,
+                "character": 62
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:56"
+          },
+          "parentId": "System.usermanagement.method.sendasyncemailconfirmation(string,string,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.usermanagement.sendasyncemailconfirmation.string",
+            "id": "System.usermanagement.sendasyncemailconfirmation.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 55
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:49"
+            },
+            "parentId": "System.usermanagement.sendasyncemailconfirmation",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "emailTemplateId": {
-          "id": "System.usermanagement.sendasyncemailconfirmation.emailtemplateid",
-          "type": "var",
+        "emailtemplateid": {
+          "id": "System.usermanagement.method.sendasyncemailconfirmation(string,string,string,string).varParam.emailtemplateid",
+          "nodeType": "variable",
           "name": "emailTemplateId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1226,28 +2219,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_emailTemplateId_-1:0"
+            "id": "token.type.identifier_emailTemplateId_0:71"
           },
-          "signature": "String emailTemplateId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "emailTemplateId",
+            "textToLower": "emailtemplateid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 71
+              },
+              "end": {
+                "line": 0,
+                "character": 86
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_emailTemplateId_0:71"
+          },
+          "parentId": "System.usermanagement.method.sendasyncemailconfirmation(string,string,string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.usermanagement.sendasyncemailconfirmation.string",
+            "id": "System.usermanagement.sendasyncemailconfirmation.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 64
+                },
+                "end": {
+                  "line": 0,
+                  "character": 70
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:64"
+            },
+            "parentId": "System.usermanagement.sendasyncemailconfirmation",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "networkId": {
-          "id": "System.usermanagement.sendasyncemailconfirmation.networkid",
-          "type": "var",
+        "networkid": {
+          "id": "System.usermanagement.method.sendasyncemailconfirmation(string,string,string,string).varParam.networkid",
+          "nodeType": "variable",
           "name": "networkId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1256,28 +2294,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 104
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_networkId_-1:0"
+            "id": "token.type.identifier_networkId_0:95"
           },
-          "signature": "String networkId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "networkId",
+            "textToLower": "networkid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 95
+              },
+              "end": {
+                "line": 0,
+                "character": 104
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_networkId_0:95"
+          },
+          "parentId": "System.usermanagement.method.sendasyncemailconfirmation(string,string,string,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.usermanagement.sendasyncemailconfirmation.string",
+            "id": "System.usermanagement.sendasyncemailconfirmation.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 88
+                },
+                "end": {
+                  "line": 0,
+                  "character": 94
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:88"
+            },
+            "parentId": "System.usermanagement.sendasyncemailconfirmation",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "startUrl": {
-          "id": "System.usermanagement.sendasyncemailconfirmation.starturl",
-          "type": "var",
+        "starturl": {
+          "id": "System.usermanagement.method.sendasyncemailconfirmation(string,string,string,string).varParam.starturl",
+          "nodeType": "variable",
           "name": "startUrl",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1286,29 +2369,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 113
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 121
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_startUrl_-1:0"
+            "id": "token.type.identifier_startUrl_0:113"
           },
-          "signature": "String startUrl",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "startUrl",
+            "textToLower": "starturl",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 113
+              },
+              "end": {
+                "line": 0,
+                "character": 121
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_startUrl_0:113"
+          },
+          "parentId": "System.usermanagement.method.sendasyncemailconfirmation(string,string,string,string)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "System.usermanagement.sendasyncemailconfirmation.string",
+            "id": "System.usermanagement.sendasyncemailconfirmation.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 106
+                },
+                "end": {
+                  "line": 0,
+                  "character": 112
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:106"
+            },
+            "parentId": "System.usermanagement.sendasyncemailconfirmation",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the user to receive the email confirmation. ID of the email template in which the verification link is defined. ID of the community. The user is redirected to this page after verification, with a success or error message as the parameter. If null, the user is redirected to the login page.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "verifypasswordlesslogin(id,auth.verificationmethod,string,string,string)": {
-      "id": "System.usermanagement.verifypasswordlesslogin",
+      "id": "System.usermanagement.method.verifypasswordlesslogin(id,auth.verificationmethod,string,string,string)",
       "nodeType": "method",
       "name": "verifyPasswordlessLogin",
       "startToken": {
@@ -1330,6 +2461,9 @@
         },
         "id": "declaration.entity.name.function_verifyPasswordlessLogin_-1:0"
       },
+      "parentId": "System.usermanagement",
+      "order": 11,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1337,17 +2471,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1356,30 +2490,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Auth.VerificationResult verifyPasswordlessLogin(Id userId, Auth.VerificationMethod method, String identifier, String code, String startUrl)",
+      "overrideSignature": "public static override Auth.VerificationResult verifyPasswordlessLogin(Id userId, Auth.VerificationMethod method, String identifier, String code, String startUrl)",
       "simplifiedSignature": "verifyPasswordlessLogin(Id,Auth.VerificationMethod,String,String,String)",
       "datatype": {
-        "id": "System.usermanagement.verifypasswordlesslogin.Auth.VerificationResult",
+        "id": "System.usermanagement.verifypasswordlesslogin.datatype.Auth.VerificationResult",
         "nodeType": "datatype",
-        "name": "Auth.VerificationResult"
+        "name": "Auth.VerificationResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Auth",
+          "textToLower": "auth",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Auth_0:14"
+        },
+        "parentId": "System.usermanagement.verifypasswordlesslogin",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Auth.VerificationResult"
       },
       "description": "Completes a verification challenge when creating a custom (Visualforce) Verify page for passwordless login. If the user who is trying to login enters the verification code successfully, the user is logged in.",
+      "parentName": "UserManagement",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "System.usermanagement.verifypasswordlesslogin.userid",
-          "type": "var",
+        "userid": {
+          "id": "System.usermanagement.method.verifypasswordlesslogin(id,auth.verificationmethod,string,string,string).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1388,28 +2548,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:65"
           },
-          "signature": "Id userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 65
+              },
+              "end": {
+                "line": 0,
+                "character": 71
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:65"
+          },
+          "parentId": "System.usermanagement.method.verifypasswordlesslogin(id,auth.verificationmethod,string,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.usermanagement.verifypasswordlesslogin.id",
+            "id": "System.usermanagement.verifypasswordlesslogin.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 62
+                },
+                "end": {
+                  "line": 0,
+                  "character": 64
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:62"
+            },
+            "parentId": "System.usermanagement.verifypasswordlesslogin",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
         "method": {
-          "id": "System.usermanagement.verifypasswordlesslogin.method",
-          "type": "var",
+          "id": "System.usermanagement.method.verifypasswordlesslogin(id,auth.verificationmethod,string,string,string).varParam.method",
+          "nodeType": "variable",
           "name": "method",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1418,28 +2623,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 97
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 103
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_method_-1:0"
+            "id": "token.type.identifier_method_0:97"
           },
-          "signature": "Auth.VerificationMethod method",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "method",
+            "textToLower": "method",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 97
+              },
+              "end": {
+                "line": 0,
+                "character": 103
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_method_0:97"
+          },
+          "parentId": "System.usermanagement.method.verifypasswordlesslogin(id,auth.verificationmethod,string,string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.usermanagement.verifypasswordlesslogin.auth.verificationmethod",
+            "id": "System.usermanagement.verifypasswordlesslogin.datatype.Auth.VerificationMethod",
             "nodeType": "datatype",
-            "name": "Auth.VerificationMethod"
-          }
+            "name": "Auth.VerificationMethod",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 73
+                },
+                "end": {
+                  "line": 0,
+                  "character": 77
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:73"
+            },
+            "parentId": "System.usermanagement.verifypasswordlesslogin",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.VerificationMethod"
+          },
+          "scope": null
         },
         "identifier": {
-          "id": "System.usermanagement.verifypasswordlesslogin.identifier",
-          "type": "var",
+          "id": "System.usermanagement.method.verifypasswordlesslogin(id,auth.verificationmethod,string,string,string).varParam.identifier",
+          "nodeType": "variable",
           "name": "identifier",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1448,28 +2698,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 112
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 122
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_identifier_-1:0"
+            "id": "token.type.identifier_identifier_0:112"
           },
-          "signature": "String identifier",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "identifier",
+            "textToLower": "identifier",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 112
+              },
+              "end": {
+                "line": 0,
+                "character": 122
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_identifier_0:112"
+          },
+          "parentId": "System.usermanagement.method.verifypasswordlesslogin(id,auth.verificationmethod,string,string,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.usermanagement.verifypasswordlesslogin.string",
+            "id": "System.usermanagement.verifypasswordlesslogin.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 105
+                },
+                "end": {
+                  "line": 0,
+                  "character": 111
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:105"
+            },
+            "parentId": "System.usermanagement.verifypasswordlesslogin",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "code": {
-          "id": "System.usermanagement.verifypasswordlesslogin.code",
-          "type": "var",
+          "id": "System.usermanagement.method.verifypasswordlesslogin(id,auth.verificationmethod,string,string,string).varParam.code",
+          "nodeType": "variable",
           "name": "code",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1478,28 +2773,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 131
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 135
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_code_-1:0"
+            "id": "token.type.identifier_code_0:131"
           },
-          "signature": "String code",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "code",
+            "textToLower": "code",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 131
+              },
+              "end": {
+                "line": 0,
+                "character": 135
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_code_0:131"
+          },
+          "parentId": "System.usermanagement.method.verifypasswordlesslogin(id,auth.verificationmethod,string,string,string)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "System.usermanagement.verifypasswordlesslogin.string",
+            "id": "System.usermanagement.verifypasswordlesslogin.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 124
+                },
+                "end": {
+                  "line": 0,
+                  "character": 130
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:124"
+            },
+            "parentId": "System.usermanagement.verifypasswordlesslogin",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "startUrl": {
-          "id": "System.usermanagement.verifypasswordlesslogin.starturl",
-          "type": "var",
+        "starturl": {
+          "id": "System.usermanagement.method.verifypasswordlesslogin(id,auth.verificationmethod,string,string,string).varParam.starturl",
+          "nodeType": "variable",
           "name": "startUrl",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1508,29 +2848,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 144
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 152
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_startUrl_-1:0"
+            "id": "token.type.identifier_startUrl_0:144"
           },
-          "signature": "String startUrl",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "startUrl",
+            "textToLower": "starturl",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 144
+              },
+              "end": {
+                "line": 0,
+                "character": 152
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_startUrl_0:144"
+          },
+          "parentId": "System.usermanagement.method.verifypasswordlesslogin(id,auth.verificationmethod,string,string,string)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "System.usermanagement.verifypasswordlesslogin.string",
+            "id": "System.usermanagement.verifypasswordlesslogin.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 137
+                },
+                "end": {
+                  "line": 0,
+                  "character": 143
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:137"
+            },
+            "parentId": "System.usermanagement.verifypasswordlesslogin",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the user who’s logging in. Method used to verify the identity of the user, which can be either EMAIL or SMS. ID of the verification attempt received from the initPasswordlessLogin method. Code used to verify the identity of the user. The page where the user is directed after successful login.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "verifyregisterverificationmethod(string,auth.verificationmethod)": {
-      "id": "System.usermanagement.verifyregisterverificationmethod",
+      "id": "System.usermanagement.method.verifyregisterverificationmethod(string,auth.verificationmethod)",
       "nodeType": "method",
       "name": "verifyRegisterVerificationMethod",
       "startToken": {
@@ -1552,6 +2940,9 @@
         },
         "id": "declaration.entity.name.function_verifyRegisterVerificationMethod_-1:0"
       },
+      "parentId": "System.usermanagement",
+      "order": 12,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1559,17 +2950,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1578,30 +2969,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String verifyRegisterVerificationMethod(String code, Auth.VerificationMethod method)",
+      "overrideSignature": "public static override String verifyRegisterVerificationMethod(String code, Auth.VerificationMethod method)",
       "simplifiedSignature": "verifyRegisterVerificationMethod(String,Auth.VerificationMethod)",
       "datatype": {
-        "id": "System.usermanagement.verifyregisterverificationmethod.String",
+        "id": "System.usermanagement.verifyregisterverificationmethod.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.usermanagement.verifyregisterverificationmethod",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Completes registering a user’s email address or phone number as a verification method when customizing the identity verification process.",
+      "parentName": "UserManagement",
+      "variables": {},
       "params": {
         "code": {
-          "id": "System.usermanagement.verifyregisterverificationmethod.code",
-          "type": "var",
+          "id": "System.usermanagement.method.verifyregisterverificationmethod(string,auth.verificationmethod).varParam.code",
+          "nodeType": "variable",
           "name": "code",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1610,28 +3027,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_code_-1:0"
+            "id": "token.type.identifier_code_0:61"
           },
-          "signature": "String code",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "code",
+            "textToLower": "code",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 65
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_code_0:61"
+          },
+          "parentId": "System.usermanagement.method.verifyregisterverificationmethod(string,auth.verificationmethod)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.usermanagement.verifyregisterverificationmethod.string",
+            "id": "System.usermanagement.verifyregisterverificationmethod.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:54"
+            },
+            "parentId": "System.usermanagement.verifyregisterverificationmethod",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "method": {
-          "id": "System.usermanagement.verifyregisterverificationmethod.method",
-          "type": "var",
+          "id": "System.usermanagement.method.verifyregisterverificationmethod(string,auth.verificationmethod).varParam.method",
+          "nodeType": "variable",
           "name": "method",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1640,29 +3102,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 91
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 97
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_method_-1:0"
+            "id": "token.type.identifier_method_0:91"
           },
-          "signature": "Auth.VerificationMethod method",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "method",
+            "textToLower": "method",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 91
+              },
+              "end": {
+                "line": 0,
+                "character": 97
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_method_0:91"
+          },
+          "parentId": "System.usermanagement.method.verifyregisterverificationmethod(string,auth.verificationmethod)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.usermanagement.verifyregisterverificationmethod.auth.verificationmethod",
+            "id": "System.usermanagement.verifyregisterverificationmethod.datatype.Auth.VerificationMethod",
             "nodeType": "datatype",
-            "name": "Auth.VerificationMethod"
-          }
+            "name": "Auth.VerificationMethod",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 67
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:67"
+            },
+            "parentId": "System.usermanagement.verifyregisterverificationmethod",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.VerificationMethod"
+          },
+          "description": "Code used to verify the identity of the user. Method used to verify the identity of the user, which can be either EMAIL or SMS.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "verifyselfregistration(auth.verificationmethod,string,string,string)": {
-      "id": "System.usermanagement.verifyselfregistration",
+      "id": "System.usermanagement.method.verifyselfregistration(auth.verificationmethod,string,string,string)",
       "nodeType": "method",
       "name": "verifySelfRegistration",
       "startToken": {
@@ -1684,6 +3194,9 @@
         },
         "id": "declaration.entity.name.function_verifySelfRegistration_-1:0"
       },
+      "parentId": "System.usermanagement",
+      "order": 13,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1691,17 +3204,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1710,30 +3223,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Auth.VerificationResult verifySelfRegistration(Auth.VerificationMethod method, String identifier, String code, String startUrl)",
+      "overrideSignature": "public static override Auth.VerificationResult verifySelfRegistration(Auth.VerificationMethod method, String identifier, String code, String startUrl)",
       "simplifiedSignature": "verifySelfRegistration(Auth.VerificationMethod,String,String,String)",
       "datatype": {
-        "id": "System.usermanagement.verifyselfregistration.Auth.VerificationResult",
+        "id": "System.usermanagement.verifyselfregistration.datatype.Auth.VerificationResult",
         "nodeType": "datatype",
-        "name": "Auth.VerificationResult"
+        "name": "Auth.VerificationResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Auth",
+          "textToLower": "auth",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Auth_0:14"
+        },
+        "parentId": "System.usermanagement.verifyselfregistration",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Auth.VerificationResult"
       },
       "description": "Completes a verification challenge when creating a custom (Visualforce) Verify page for community self-registration. If the person who is attempting to register enters the verification code successfully, the user is created and logged in.",
+      "parentName": "UserManagement",
+      "variables": {},
       "params": {
         "method": {
-          "id": "System.usermanagement.verifyselfregistration.method",
-          "type": "var",
+          "id": "System.usermanagement.method.verifyselfregistration(auth.verificationmethod,string,string,string).varParam.method",
+          "nodeType": "variable",
           "name": "method",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1742,28 +3281,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 85
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 91
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_method_-1:0"
+            "id": "token.type.identifier_method_0:85"
           },
-          "signature": "Auth.VerificationMethod method",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "method",
+            "textToLower": "method",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 85
+              },
+              "end": {
+                "line": 0,
+                "character": 91
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_method_0:85"
+          },
+          "parentId": "System.usermanagement.method.verifyselfregistration(auth.verificationmethod,string,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.usermanagement.verifyselfregistration.auth.verificationmethod",
+            "id": "System.usermanagement.verifyselfregistration.datatype.Auth.VerificationMethod",
             "nodeType": "datatype",
-            "name": "Auth.VerificationMethod"
-          }
+            "name": "Auth.VerificationMethod",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 61
+                },
+                "end": {
+                  "line": 0,
+                  "character": 65
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:61"
+            },
+            "parentId": "System.usermanagement.verifyselfregistration",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.VerificationMethod"
+          },
+          "scope": null
         },
         "identifier": {
-          "id": "System.usermanagement.verifyselfregistration.identifier",
-          "type": "var",
+          "id": "System.usermanagement.method.verifyselfregistration(auth.verificationmethod,string,string,string).varParam.identifier",
+          "nodeType": "variable",
           "name": "identifier",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1772,28 +3356,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 100
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 110
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_identifier_-1:0"
+            "id": "token.type.identifier_identifier_0:100"
           },
-          "signature": "String identifier",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "identifier",
+            "textToLower": "identifier",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 100
+              },
+              "end": {
+                "line": 0,
+                "character": 110
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_identifier_0:100"
+          },
+          "parentId": "System.usermanagement.method.verifyselfregistration(auth.verificationmethod,string,string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.usermanagement.verifyselfregistration.string",
+            "id": "System.usermanagement.verifyselfregistration.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 93
+                },
+                "end": {
+                  "line": 0,
+                  "character": 99
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:93"
+            },
+            "parentId": "System.usermanagement.verifyselfregistration",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "code": {
-          "id": "System.usermanagement.verifyselfregistration.code",
-          "type": "var",
+          "id": "System.usermanagement.method.verifyselfregistration(auth.verificationmethod,string,string,string).varParam.code",
+          "nodeType": "variable",
           "name": "code",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1802,28 +3431,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 119
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 123
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_code_-1:0"
+            "id": "token.type.identifier_code_0:119"
           },
-          "signature": "String code",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "code",
+            "textToLower": "code",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 119
+              },
+              "end": {
+                "line": 0,
+                "character": 123
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_code_0:119"
+          },
+          "parentId": "System.usermanagement.method.verifyselfregistration(auth.verificationmethod,string,string,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.usermanagement.verifyselfregistration.string",
+            "id": "System.usermanagement.verifyselfregistration.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 112
+                },
+                "end": {
+                  "line": 0,
+                  "character": 118
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:112"
+            },
+            "parentId": "System.usermanagement.verifyselfregistration",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "startUrl": {
-          "id": "System.usermanagement.verifyselfregistration.starturl",
-          "type": "var",
+        "starturl": {
+          "id": "System.usermanagement.method.verifyselfregistration(auth.verificationmethod,string,string,string).varParam.starturl",
+          "nodeType": "variable",
           "name": "startUrl",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1832,30 +3506,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 132
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 140
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_startUrl_-1:0"
+            "id": "token.type.identifier_startUrl_0:132"
           },
-          "signature": "String startUrl",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "startUrl",
+            "textToLower": "starturl",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 132
+              },
+              "end": {
+                "line": 0,
+                "character": 140
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_startUrl_0:132"
+          },
+          "parentId": "System.usermanagement.method.verifyselfregistration(auth.verificationmethod,string,string,string)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "System.usermanagement.verifyselfregistration.string",
+            "id": "System.usermanagement.verifyselfregistration.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 125
+                },
+                "end": {
+                  "line": 0,
+                  "character": 131
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:125"
+            },
+            "parentId": "System.usermanagement.verifyselfregistration",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Method used to verify the identity of the user, which can be either EMAIL or SMS. The unique identifier received from the initSelfRegistration method. Code used to verify the identity of the user. The page where the user is directed after successful self-registration.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 13,
+  "queries": []
 }

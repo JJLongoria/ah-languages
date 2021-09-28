@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_EncodingUtil_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "base64decode(string)": {
-      "id": "System.encodingutil.base64decode",
+      "id": "System.encodingutil.method.base64decode(string)",
       "nodeType": "method",
       "name": "base64Decode",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_base64Decode_-1:0"
       },
+      "parentId": "System.encodingutil",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Blob base64Decode(String inputString)",
+      "overrideSignature": "public static override Blob base64Decode(String inputString)",
       "simplifiedSignature": "base64Decode(String)",
       "datatype": {
-        "id": "System.encodingutil.base64decode.Blob",
+        "id": "System.encodingutil.base64decode.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.encodingutil.base64decode",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Converts a Base64-encoded String to a Blob representing its normal form.",
+      "parentName": "EncodingUtil",
+      "variables": {},
       "params": {
-        "inputString": {
-          "id": "System.encodingutil.base64decode.inputstring",
-          "type": "var",
+        "inputstring": {
+          "id": "System.encodingutil.method.base64decode(string).varParam.inputstring",
+          "nodeType": "variable",
           "name": "inputString",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,29 +179,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_inputString_-1:0"
+            "id": "token.type.identifier_inputString_0:39"
           },
-          "signature": "String inputString",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "inputString",
+            "textToLower": "inputstring",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 39
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_inputString_0:39"
+          },
+          "parentId": "System.encodingutil.method.base64decode(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.encodingutil.base64decode.string",
+            "id": "System.encodingutil.base64decode.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 32
+                },
+                "end": {
+                  "line": 0,
+                  "character": 38
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:32"
+            },
+            "parentId": "System.encodingutil.base64decode",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "base64encode(blob)": {
-      "id": "System.encodingutil.base64encode",
+      "id": "System.encodingutil.method.base64encode(blob)",
       "nodeType": "method",
       "name": "base64Encode",
       "startToken": {
@@ -192,6 +271,9 @@
         },
         "id": "declaration.entity.name.function_base64Encode_-1:0"
       },
+      "parentId": "System.encodingutil",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -199,17 +281,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -218,30 +300,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String base64Encode(Blob inputBlob)",
+      "overrideSignature": "public static override String base64Encode(Blob inputBlob)",
       "simplifiedSignature": "base64Encode(Blob)",
       "datatype": {
-        "id": "System.encodingutil.base64encode.String",
+        "id": "System.encodingutil.base64encode.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.encodingutil.base64encode",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Converts a Blob to an unencoded String representing its normal form.",
+      "parentName": "EncodingUtil",
+      "variables": {},
       "params": {
-        "inputBlob": {
-          "id": "System.encodingutil.base64encode.inputblob",
-          "type": "var",
+        "inputblob": {
+          "id": "System.encodingutil.method.base64encode(blob).varParam.inputblob",
+          "nodeType": "variable",
           "name": "inputBlob",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -250,29 +358,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_inputBlob_-1:0"
+            "id": "token.type.identifier_inputBlob_0:39"
           },
-          "signature": "Blob inputBlob",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "inputBlob",
+            "textToLower": "inputblob",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 39
+              },
+              "end": {
+                "line": 0,
+                "character": 48
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_inputBlob_0:39"
+          },
+          "parentId": "System.encodingutil.method.base64encode(blob)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.encodingutil.base64encode.blob",
+            "id": "System.encodingutil.base64encode.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 38
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:34"
+            },
+            "parentId": "System.encodingutil.base64encode",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "convertfromhex(string)": {
-      "id": "System.encodingutil.convertfromhex",
+      "id": "System.encodingutil.method.convertfromhex(string)",
       "nodeType": "method",
       "name": "convertFromHex",
       "startToken": {
@@ -294,6 +450,9 @@
         },
         "id": "declaration.entity.name.function_convertFromHex_-1:0"
       },
+      "parentId": "System.encodingutil",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -301,17 +460,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -320,30 +479,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Blob convertFromHex(String inputString)",
+      "overrideSignature": "public static override Blob convertFromHex(String inputString)",
       "simplifiedSignature": "convertFromHex(String)",
       "datatype": {
-        "id": "System.encodingutil.convertfromhex.Blob",
+        "id": "System.encodingutil.convertfromhex.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.encodingutil.convertfromhex",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Converts the specified hexadecimal (base 16) string to a Blob value and returns this Blob value.",
+      "parentName": "EncodingUtil",
+      "variables": {},
       "params": {
-        "inputString": {
-          "id": "System.encodingutil.convertfromhex.inputstring",
-          "type": "var",
+        "inputstring": {
+          "id": "System.encodingutil.method.convertfromhex(string).varParam.inputstring",
+          "nodeType": "variable",
           "name": "inputString",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -352,29 +537,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_inputString_-1:0"
+            "id": "token.type.identifier_inputString_0:41"
           },
-          "signature": "String inputString",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "inputString",
+            "textToLower": "inputstring",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 41
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_inputString_0:41"
+          },
+          "parentId": "System.encodingutil.method.convertfromhex(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.encodingutil.convertfromhex.string",
+            "id": "System.encodingutil.convertfromhex.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:34"
+            },
+            "parentId": "System.encodingutil.convertfromhex",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The hexadecimal string to convert. The string can contain only valid hexadecimal characters (0-9, a-f, A-F) and must have an even number of characters.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "converttohex(blob)": {
-      "id": "System.encodingutil.converttohex",
+      "id": "System.encodingutil.method.converttohex(blob)",
       "nodeType": "method",
       "name": "convertToHex",
       "startToken": {
@@ -396,6 +629,9 @@
         },
         "id": "declaration.entity.name.function_convertToHex_-1:0"
       },
+      "parentId": "System.encodingutil",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -403,17 +639,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -422,30 +658,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String convertToHex(Blob inputBlob)",
+      "overrideSignature": "public static override String convertToHex(Blob inputBlob)",
       "simplifiedSignature": "convertToHex(Blob)",
       "datatype": {
-        "id": "System.encodingutil.converttohex.String",
+        "id": "System.encodingutil.converttohex.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.encodingutil.converttohex",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns a hexadecimal (base 16) representation of the inputBlob. This method can be used to compute the client response (for example, HA1 or HA2) for HTTP Digest Authentication (RFC2617).",
+      "parentName": "EncodingUtil",
+      "variables": {},
       "params": {
-        "inputBlob": {
-          "id": "System.encodingutil.converttohex.inputblob",
-          "type": "var",
+        "inputblob": {
+          "id": "System.encodingutil.method.converttohex(blob).varParam.inputblob",
+          "nodeType": "variable",
           "name": "inputBlob",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -454,29 +716,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_inputBlob_-1:0"
+            "id": "token.type.identifier_inputBlob_0:39"
           },
-          "signature": "Blob inputBlob",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "inputBlob",
+            "textToLower": "inputblob",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 39
+              },
+              "end": {
+                "line": 0,
+                "character": 48
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_inputBlob_0:39"
+          },
+          "parentId": "System.encodingutil.method.converttohex(blob)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.encodingutil.converttohex.blob",
+            "id": "System.encodingutil.converttohex.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 38
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:34"
+            },
+            "parentId": "System.encodingutil.converttohex",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "urldecode(string,string)": {
-      "id": "System.encodingutil.urldecode",
+      "id": "System.encodingutil.method.urldecode(string,string)",
       "nodeType": "method",
       "name": "urlDecode",
       "startToken": {
@@ -498,6 +808,9 @@
         },
         "id": "declaration.entity.name.function_urlDecode_-1:0"
       },
+      "parentId": "System.encodingutil",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -505,17 +818,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -524,30 +837,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String urlDecode(String inputString, String encodingScheme)",
+      "overrideSignature": "public static override String urlDecode(String inputString, String encodingScheme)",
       "simplifiedSignature": "urlDecode(String,String)",
       "datatype": {
-        "id": "System.encodingutil.urldecode.String",
+        "id": "System.encodingutil.urldecode.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.encodingutil.urldecode",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Decodes a string in application/x-www-form-urlencoded format using a specific encoding scheme, for example “UTF-8.”",
+      "parentName": "EncodingUtil",
+      "variables": {},
       "params": {
-        "inputString": {
-          "id": "System.encodingutil.urldecode.inputstring",
-          "type": "var",
+        "inputstring": {
+          "id": "System.encodingutil.method.urldecode(string,string).varParam.inputstring",
+          "nodeType": "variable",
           "name": "inputString",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -556,28 +895,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_inputString_-1:0"
+            "id": "token.type.identifier_inputString_0:38"
           },
-          "signature": "String inputString",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "inputString",
+            "textToLower": "inputstring",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 49
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_inputString_0:38"
+          },
+          "parentId": "System.encodingutil.method.urldecode(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.encodingutil.urldecode.string",
+            "id": "System.encodingutil.urldecode.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:31"
+            },
+            "parentId": "System.encodingutil.urldecode",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "encodingScheme": {
-          "id": "System.encodingutil.urldecode.encodingscheme",
-          "type": "var",
+        "encodingscheme": {
+          "id": "System.encodingutil.method.urldecode(string,string).varParam.encodingscheme",
+          "nodeType": "variable",
           "name": "encodingScheme",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -586,29 +970,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_encodingScheme_-1:0"
+            "id": "token.type.identifier_encodingScheme_0:58"
           },
-          "signature": "String encodingScheme",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "encodingScheme",
+            "textToLower": "encodingscheme",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_encodingScheme_0:58"
+          },
+          "parentId": "System.encodingutil.method.urldecode(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.encodingutil.urldecode.string",
+            "id": "System.encodingutil.urldecode.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 51
+                },
+                "end": {
+                  "line": 0,
+                  "character": 57
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:51"
+            },
+            "parentId": "System.encodingutil.urldecode",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "urlencode(string,string)": {
-      "id": "System.encodingutil.urlencode",
+      "id": "System.encodingutil.method.urlencode(string,string)",
       "nodeType": "method",
       "name": "urlEncode",
       "startToken": {
@@ -630,6 +1062,9 @@
         },
         "id": "declaration.entity.name.function_urlEncode_-1:0"
       },
+      "parentId": "System.encodingutil",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -637,17 +1072,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -656,30 +1091,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String urlEncode(String inputString, String encodingScheme)",
+      "overrideSignature": "public static override String urlEncode(String inputString, String encodingScheme)",
       "simplifiedSignature": "urlEncode(String,String)",
       "datatype": {
-        "id": "System.encodingutil.urlencode.String",
+        "id": "System.encodingutil.urlencode.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.encodingutil.urlencode",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Encodes a string into the application/x-www-form-urlencoded format using a specific encoding scheme, for example “UTF-8.”",
+      "parentName": "EncodingUtil",
+      "variables": {},
       "params": {
-        "inputString": {
-          "id": "System.encodingutil.urlencode.inputstring",
-          "type": "var",
+        "inputstring": {
+          "id": "System.encodingutil.method.urlencode(string,string).varParam.inputstring",
+          "nodeType": "variable",
           "name": "inputString",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -688,28 +1149,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_inputString_-1:0"
+            "id": "token.type.identifier_inputString_0:38"
           },
-          "signature": "String inputString",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "inputString",
+            "textToLower": "inputstring",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 49
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_inputString_0:38"
+          },
+          "parentId": "System.encodingutil.method.urlencode(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.encodingutil.urlencode.string",
+            "id": "System.encodingutil.urlencode.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:31"
+            },
+            "parentId": "System.encodingutil.urlencode",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "encodingScheme": {
-          "id": "System.encodingutil.urlencode.encodingscheme",
-          "type": "var",
+        "encodingscheme": {
+          "id": "System.encodingutil.method.urlencode(string,string).varParam.encodingscheme",
+          "nodeType": "variable",
           "name": "encodingScheme",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -718,30 +1224,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_encodingScheme_-1:0"
+            "id": "token.type.identifier_encodingScheme_0:58"
           },
-          "signature": "String encodingScheme",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "encodingScheme",
+            "textToLower": "encodingscheme",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_encodingScheme_0:58"
+          },
+          "parentId": "System.encodingutil.method.urlencode(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.encodingutil.urlencode.string",
+            "id": "System.encodingutil.urlencode.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 51
+                },
+                "end": {
+                  "line": 0,
+                  "character": 57
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:51"
+            },
+            "parentId": "System.encodingutil.urlencode",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 6,
+  "queries": []
 }

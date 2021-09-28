@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Location_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getdistance(location,string)": {
-      "id": "System.location.getdistance",
+      "id": "System.location.method.getdistance(location,string)",
       "nodeType": "method",
       "name": "getDistance",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getDistance_-1:0"
       },
+      "parentId": "System.location",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Double getDistance(Location toLocation, String unit)",
+      "overrideSignature": "public override Double getDistance(Location toLocation, String unit)",
       "simplifiedSignature": "getDistance(Location,String)",
       "datatype": {
-        "id": "System.location.getdistance.Double",
+        "id": "System.location.getdistance.datatype.Double",
         "nodeType": "datatype",
-        "name": "Double"
+        "name": "Double",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Double",
+          "textToLower": "double",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Double_0:7"
+        },
+        "parentId": "System.location.getdistance",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Double"
       },
       "description": "Calculates the distance between this location and the specified location, using an approximation of the haversine formula and the specified unit.",
+      "parentName": "Location",
+      "variables": {},
       "params": {
-        "toLocation": {
-          "id": "System.location.getdistance.tolocation",
-          "type": "var",
+        "tolocation": {
+          "id": "System.location.method.getdistance(location,string).varParam.tolocation",
+          "nodeType": "variable",
           "name": "toLocation",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,28 +160,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_toLocation_-1:0"
+            "id": "token.type.identifier_toLocation_0:35"
           },
-          "signature": "Location toLocation",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "toLocation",
+            "textToLower": "tolocation",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 35
+              },
+              "end": {
+                "line": 0,
+                "character": 45
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_toLocation_0:35"
+          },
+          "parentId": "System.location.method.getdistance(location,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.location.getdistance.location",
+            "id": "System.location.getdistance.datatype.Location",
             "nodeType": "datatype",
-            "name": "Location"
-          }
+            "name": "Location",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "Location",
+              "textToLower": "location",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 26
+                },
+                "end": {
+                  "line": 0,
+                  "character": 34
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Location_0:26"
+            },
+            "parentId": "System.location.getdistance",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Location"
+          },
+          "scope": null
         },
         "unit": {
-          "id": "System.location.getdistance.unit",
-          "type": "var",
+          "id": "System.location.method.getdistance(location,string).varParam.unit",
+          "nodeType": "variable",
           "name": "unit",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -159,29 +235,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_unit_-1:0"
+            "id": "token.type.identifier_unit_0:54"
           },
-          "signature": "String unit",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "unit",
+            "textToLower": "unit",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_unit_0:54"
+          },
+          "parentId": "System.location.method.getdistance(location,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.location.getdistance.string",
+            "id": "System.location.getdistance.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 47
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:47"
+            },
+            "parentId": "System.location.getdistance",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The Location to which you want to calculate the distance from the current Location. The distance unit you want to use: mi or km.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getdistance(location,location,string)": {
-      "id": "System.location.getdistance",
+      "id": "System.location.method.getdistance(location,location,string)",
       "nodeType": "method",
       "name": "getDistance",
       "startToken": {
@@ -203,6 +327,9 @@
         },
         "id": "declaration.entity.name.function_getDistance_-1:0"
       },
+      "parentId": "System.location",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -210,17 +337,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -229,30 +356,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Double getDistance(Location firstLocation, Location secondLocation, String unit)",
+      "overrideSignature": "public static override Double getDistance(Location firstLocation, Location secondLocation, String unit)",
       "simplifiedSignature": "getDistance(Location,Location,String)",
       "datatype": {
-        "id": "System.location.getdistance.Double",
+        "id": "System.location.getdistance.datatype.Double",
         "nodeType": "datatype",
-        "name": "Double"
+        "name": "Double",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Double",
+          "textToLower": "double",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Double_0:14"
+        },
+        "parentId": "System.location.getdistance",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Double"
       },
       "description": "Calculates the distance between the two specified locations, using an approximation of the haversine formula and the specified unit.",
+      "parentName": "Location",
+      "variables": {},
       "params": {
-        "firstLocation": {
-          "id": "System.location.getdistance.firstlocation",
-          "type": "var",
+        "firstlocation": {
+          "id": "System.location.method.getdistance(location,location,string).varParam.firstlocation",
+          "nodeType": "variable",
           "name": "firstLocation",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -261,28 +414,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_firstLocation_-1:0"
+            "id": "token.type.identifier_firstLocation_0:42"
           },
-          "signature": "Location firstLocation",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "firstLocation",
+            "textToLower": "firstlocation",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_firstLocation_0:42"
+          },
+          "parentId": "System.location.method.getdistance(location,location,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.location.getdistance.location",
+            "id": "System.location.getdistance.datatype.Location",
             "nodeType": "datatype",
-            "name": "Location"
-          }
+            "name": "Location",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "Location",
+              "textToLower": "location",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 33
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Location_0:33"
+            },
+            "parentId": "System.location.getdistance",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Location"
+          },
+          "scope": null
         },
-        "secondLocation": {
-          "id": "System.location.getdistance.secondlocation",
-          "type": "var",
+        "secondlocation": {
+          "id": "System.location.method.getdistance(location,location,string).varParam.secondlocation",
+          "nodeType": "variable",
           "name": "secondLocation",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -291,28 +489,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_secondLocation_-1:0"
+            "id": "token.type.identifier_secondLocation_0:66"
           },
-          "signature": "Location secondLocation",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "secondLocation",
+            "textToLower": "secondlocation",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 66
+              },
+              "end": {
+                "line": 0,
+                "character": 80
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_secondLocation_0:66"
+          },
+          "parentId": "System.location.method.getdistance(location,location,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.location.getdistance.location",
+            "id": "System.location.getdistance.datatype.Location",
             "nodeType": "datatype",
-            "name": "Location"
-          }
+            "name": "Location",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "Location",
+              "textToLower": "location",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 57
+                },
+                "end": {
+                  "line": 0,
+                  "character": 65
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Location_0:57"
+            },
+            "parentId": "System.location.getdistance",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Location"
+          },
+          "scope": null
         },
         "unit": {
-          "id": "System.location.getdistance.unit",
-          "type": "var",
+          "id": "System.location.method.getdistance(location,location,string).varParam.unit",
+          "nodeType": "variable",
           "name": "unit",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -321,29 +564,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 89
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 93
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_unit_-1:0"
+            "id": "token.type.identifier_unit_0:89"
           },
-          "signature": "String unit",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "unit",
+            "textToLower": "unit",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 89
+              },
+              "end": {
+                "line": 0,
+                "character": 93
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_unit_0:89"
+          },
+          "parentId": "System.location.method.getdistance(location,location,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.location.getdistance.string",
+            "id": "System.location.getdistance.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 82
+                },
+                "end": {
+                  "line": 0,
+                  "character": 88
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:82"
+            },
+            "parentId": "System.location.getdistance",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The first of two locations used to calculate distance. The second of two locations used to calculate distance. The distance unit you want to use: mi or km.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getlatitude()": {
-      "id": "System.location.getlatitude",
+      "id": "System.location.method.getlatitude()",
       "nodeType": "method",
       "name": "getLatitude",
       "startToken": {
@@ -365,6 +656,9 @@
         },
         "id": "declaration.entity.name.function_getLatitude_-1:0"
       },
+      "parentId": "System.location",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -372,30 +666,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Double getLatitude()",
+      "overrideSignature": "public override Double getLatitude()",
       "simplifiedSignature": "getLatitude()",
       "datatype": {
-        "id": "System.location.getlatitude.Double",
+        "id": "System.location.getlatitude.datatype.Double",
         "nodeType": "datatype",
-        "name": "Double"
+        "name": "Double",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Double",
+          "textToLower": "double",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Double_0:7"
+        },
+        "parentId": "System.location.getlatitude",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Double"
       },
       "description": "Returns the latitude field of this location.",
-      "params": {}
+      "parentName": "Location",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getlongitude()": {
-      "id": "System.location.getlongitude",
+      "id": "System.location.method.getlongitude()",
       "nodeType": "method",
       "name": "getLongitude",
       "startToken": {
@@ -417,6 +739,9 @@
         },
         "id": "declaration.entity.name.function_getLongitude_-1:0"
       },
+      "parentId": "System.location",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -424,30 +749,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Double getLongitude()",
+      "overrideSignature": "public override Double getLongitude()",
       "simplifiedSignature": "getLongitude()",
       "datatype": {
-        "id": "System.location.getlongitude.Double",
+        "id": "System.location.getlongitude.datatype.Double",
         "nodeType": "datatype",
-        "name": "Double"
+        "name": "Double",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Double",
+          "textToLower": "double",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Double_0:7"
+        },
+        "parentId": "System.location.getlongitude",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Double"
       },
       "description": "Returns the longitude field of this location.",
-      "params": {}
+      "parentName": "Location",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "newinstance(decimal,decimal)": {
-      "id": "System.location.newinstance",
+      "id": "System.location.method.newinstance(decimal,decimal)",
       "nodeType": "method",
       "name": "newInstance",
       "startToken": {
@@ -469,6 +822,9 @@
         },
         "id": "declaration.entity.name.function_newInstance_-1:0"
       },
+      "parentId": "System.location",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -476,17 +832,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -495,30 +851,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Location newInstance(Decimal latitude, Decimal longitude)",
+      "overrideSignature": "public static override Location newInstance(Decimal latitude, Decimal longitude)",
       "simplifiedSignature": "newInstance(Decimal,Decimal)",
       "datatype": {
-        "id": "System.location.newinstance.Location",
+        "id": "System.location.newinstance.datatype.Location",
         "nodeType": "datatype",
-        "name": "Location"
+        "name": "Location",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "Location",
+          "textToLower": "location",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Location_0:14"
+        },
+        "parentId": "System.location.newinstance",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Location"
       },
       "description": "Creates an instance of the Location class, with the specified latitude and longitude.",
+      "parentName": "Location",
+      "variables": {},
       "params": {
         "latitude": {
-          "id": "System.location.newinstance.latitude",
-          "type": "var",
+          "id": "System.location.method.newinstance(decimal,decimal).varParam.latitude",
+          "nodeType": "variable",
           "name": "latitude",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -527,28 +909,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 43
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_latitude_-1:0"
+            "id": "token.type.identifier_latitude_0:43"
           },
-          "signature": "Decimal latitude",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "latitude",
+            "textToLower": "latitude",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 43
+              },
+              "end": {
+                "line": 0,
+                "character": 51
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_latitude_0:43"
+          },
+          "parentId": "System.location.method.newinstance(decimal,decimal)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.location.newinstance.decimal",
+            "id": "System.location.newinstance.datatype.Decimal",
             "nodeType": "datatype",
-            "name": "Decimal"
-          }
+            "name": "Decimal",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Decimal",
+              "textToLower": "decimal",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 42
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Decimal_0:35"
+            },
+            "parentId": "System.location.newinstance",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Decimal"
+          },
+          "scope": null
         },
         "longitude": {
-          "id": "System.location.newinstance.longitude",
-          "type": "var",
+          "id": "System.location.method.newinstance(decimal,decimal).varParam.longitude",
+          "nodeType": "variable",
           "name": "longitude",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -557,30 +984,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_longitude_-1:0"
+            "id": "token.type.identifier_longitude_0:61"
           },
-          "signature": "Decimal longitude",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "longitude",
+            "textToLower": "longitude",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 70
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_longitude_0:61"
+          },
+          "parentId": "System.location.method.newinstance(decimal,decimal)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.location.newinstance.decimal",
+            "id": "System.location.newinstance.datatype.Decimal",
             "nodeType": "datatype",
-            "name": "Decimal"
-          }
+            "name": "Decimal",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Decimal",
+              "textToLower": "decimal",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 53
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Decimal_0:53"
+            },
+            "parentId": "System.location.newinstance",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Decimal"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 5,
+  "queries": []
 }

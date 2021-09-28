@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_SocialEngagement_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "deletesocialpost(string,string)": {
-      "id": "ConnectApi.socialengagement.deletesocialpost",
+      "id": "ConnectApi.socialengagement.method.deletesocialpost(string,string)",
       "nodeType": "method",
       "name": "deleteSocialPost",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_deleteSocialPost_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.DeleteSocialPostIntent deleteSocialPost(String socialPostId, String socialAccountId)",
+      "overrideSignature": "public static override ConnectApi.DeleteSocialPostIntent deleteSocialPost(String socialPostId, String socialAccountId)",
       "simplifiedSignature": "deleteSocialPost(String,String)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.deletesocialpost.ConnectApi.DeleteSocialPostIntent",
+        "id": "ConnectApi.socialengagement.deletesocialpost.datatype.ConnectApi.DeleteSocialPostIntent",
         "nodeType": "datatype",
-        "name": "ConnectApi.DeleteSocialPostIntent"
+        "name": "ConnectApi.DeleteSocialPostIntent",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.deletesocialpost",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.DeleteSocialPostIntent"
       },
       "description": "Delete a social post from its social network.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
-        "socialPostId": {
-          "id": "ConnectApi.socialengagement.deletesocialpost.socialpostid",
-          "type": "var",
+        "socialpostid": {
+          "id": "ConnectApi.socialengagement.method.deletesocialpost(string,string).varParam.socialpostid",
+          "nodeType": "variable",
           "name": "socialPostId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialPostId_-1:0"
+            "id": "token.type.identifier_socialPostId_0:72"
           },
-          "signature": "String socialPostId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialPostId",
+            "textToLower": "socialpostid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 72
+              },
+              "end": {
+                "line": 0,
+                "character": 84
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialPostId_0:72"
+          },
+          "parentId": "ConnectApi.socialengagement.method.deletesocialpost(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.deletesocialpost.string",
+            "id": "ConnectApi.socialengagement.deletesocialpost.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:65"
+            },
+            "parentId": "ConnectApi.socialengagement.deletesocialpost",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "socialAccountId": {
-          "id": "ConnectApi.socialengagement.deletesocialpost.socialaccountid",
-          "type": "var",
+        "socialaccountid": {
+          "id": "ConnectApi.socialengagement.method.deletesocialpost(string,string).varParam.socialaccountid",
+          "nodeType": "variable",
           "name": "socialAccountId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,29 +254,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 93
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 108
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialAccountId_-1:0"
+            "id": "token.type.identifier_socialAccountId_0:93"
           },
-          "signature": "String socialAccountId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialAccountId",
+            "textToLower": "socialaccountid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 93
+              },
+              "end": {
+                "line": 0,
+                "character": 108
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialAccountId_0:93"
+          },
+          "parentId": "ConnectApi.socialengagement.method.deletesocialpost(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.socialengagement.deletesocialpost.string",
+            "id": "ConnectApi.socialengagement.deletesocialpost.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 86
+                },
+                "end": {
+                  "line": 0,
+                  "character": 92
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:86"
+            },
+            "parentId": "ConnectApi.socialengagement.deletesocialpost",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the social post to delete. ID of the social account that deletes the post.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "followsocialpersona(string,string)": {
-      "id": "ConnectApi.socialengagement.followsocialpersona",
+      "id": "ConnectApi.socialengagement.method.followsocialpersona(string,string)",
       "nodeType": "method",
       "name": "followSocialPersona",
       "startToken": {
@@ -222,6 +346,9 @@
         },
         "id": "declaration.entity.name.function_followSocialPersona_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -229,17 +356,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -248,30 +375,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.FollowSocialPersonaIntent followSocialPersona(String socialPersonaId, String socialAccountId)",
+      "overrideSignature": "public static override ConnectApi.FollowSocialPersonaIntent followSocialPersona(String socialPersonaId, String socialAccountId)",
       "simplifiedSignature": "followSocialPersona(String,String)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.followsocialpersona.ConnectApi.FollowSocialPersonaIntent",
+        "id": "ConnectApi.socialengagement.followsocialpersona.datatype.ConnectApi.FollowSocialPersonaIntent",
         "nodeType": "datatype",
-        "name": "ConnectApi.FollowSocialPersonaIntent"
+        "name": "ConnectApi.FollowSocialPersonaIntent",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.followsocialpersona",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.FollowSocialPersonaIntent"
       },
       "description": "Follow a social persona in its social network.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
-        "socialPersonaId": {
-          "id": "ConnectApi.socialengagement.followsocialpersona.socialpersonaid",
-          "type": "var",
+        "socialpersonaid": {
+          "id": "ConnectApi.socialengagement.method.followsocialpersona(string,string).varParam.socialpersonaid",
+          "nodeType": "variable",
           "name": "socialPersonaId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -280,28 +433,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 93
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialPersonaId_-1:0"
+            "id": "token.type.identifier_socialPersonaId_0:78"
           },
-          "signature": "String socialPersonaId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialPersonaId",
+            "textToLower": "socialpersonaid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 78
+              },
+              "end": {
+                "line": 0,
+                "character": 93
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialPersonaId_0:78"
+          },
+          "parentId": "ConnectApi.socialengagement.method.followsocialpersona(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.followsocialpersona.string",
+            "id": "ConnectApi.socialengagement.followsocialpersona.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 71
+                },
+                "end": {
+                  "line": 0,
+                  "character": 77
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:71"
+            },
+            "parentId": "ConnectApi.socialengagement.followsocialpersona",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "socialAccountId": {
-          "id": "ConnectApi.socialengagement.followsocialpersona.socialaccountid",
-          "type": "var",
+        "socialaccountid": {
+          "id": "ConnectApi.socialengagement.method.followsocialpersona(string,string).varParam.socialaccountid",
+          "nodeType": "variable",
           "name": "socialAccountId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,29 +508,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 102
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 117
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialAccountId_-1:0"
+            "id": "token.type.identifier_socialAccountId_0:102"
           },
-          "signature": "String socialAccountId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialAccountId",
+            "textToLower": "socialaccountid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 102
+              },
+              "end": {
+                "line": 0,
+                "character": 117
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialAccountId_0:102"
+          },
+          "parentId": "ConnectApi.socialengagement.method.followsocialpersona(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.socialengagement.followsocialpersona.string",
+            "id": "ConnectApi.socialengagement.followsocialpersona.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 95
+                },
+                "end": {
+                  "line": 0,
+                  "character": 101
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:95"
+            },
+            "parentId": "ConnectApi.socialengagement.followsocialpersona",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the social persona to follow. ID of the social account that follows the social persona.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "followsocialpostpersona(string,string)": {
-      "id": "ConnectApi.socialengagement.followsocialpostpersona",
+      "id": "ConnectApi.socialengagement.method.followsocialpostpersona(string,string)",
       "nodeType": "method",
       "name": "followSocialPostPersona",
       "startToken": {
@@ -354,6 +600,9 @@
         },
         "id": "declaration.entity.name.function_followSocialPostPersona_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -361,17 +610,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -380,30 +629,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.FollowSocialPersonaIntent followSocialPostPersona(String socialPostId, String socialAccountId)",
+      "overrideSignature": "public static override ConnectApi.FollowSocialPersonaIntent followSocialPostPersona(String socialPostId, String socialAccountId)",
       "simplifiedSignature": "followSocialPostPersona(String,String)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.followsocialpostpersona.ConnectApi.FollowSocialPersonaIntent",
+        "id": "ConnectApi.socialengagement.followsocialpostpersona.datatype.ConnectApi.FollowSocialPersonaIntent",
         "nodeType": "datatype",
-        "name": "ConnectApi.FollowSocialPersonaIntent"
+        "name": "ConnectApi.FollowSocialPersonaIntent",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.followsocialpostpersona",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.FollowSocialPersonaIntent"
       },
       "description": "Follow a social persona on a social post in its social network.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
-        "socialPostId": {
-          "id": "ConnectApi.socialengagement.followsocialpostpersona.socialpostid",
-          "type": "var",
+        "socialpostid": {
+          "id": "ConnectApi.socialengagement.method.followsocialpostpersona(string,string).varParam.socialpostid",
+          "nodeType": "variable",
           "name": "socialPostId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -412,28 +687,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialPostId_-1:0"
+            "id": "token.type.identifier_socialPostId_0:82"
           },
-          "signature": "String socialPostId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialPostId",
+            "textToLower": "socialpostid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 82
+              },
+              "end": {
+                "line": 0,
+                "character": 94
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialPostId_0:82"
+          },
+          "parentId": "ConnectApi.socialengagement.method.followsocialpostpersona(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.followsocialpostpersona.string",
+            "id": "ConnectApi.socialengagement.followsocialpostpersona.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 75
+                },
+                "end": {
+                  "line": 0,
+                  "character": 81
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:75"
+            },
+            "parentId": "ConnectApi.socialengagement.followsocialpostpersona",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "socialAccountId": {
-          "id": "ConnectApi.socialengagement.followsocialpostpersona.socialaccountid",
-          "type": "var",
+        "socialaccountid": {
+          "id": "ConnectApi.socialengagement.method.followsocialpostpersona(string,string).varParam.socialaccountid",
+          "nodeType": "variable",
           "name": "socialAccountId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -442,29 +762,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 103
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 118
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialAccountId_-1:0"
+            "id": "token.type.identifier_socialAccountId_0:103"
           },
-          "signature": "String socialAccountId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialAccountId",
+            "textToLower": "socialaccountid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 103
+              },
+              "end": {
+                "line": 0,
+                "character": 118
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialAccountId_0:103"
+          },
+          "parentId": "ConnectApi.socialengagement.method.followsocialpostpersona(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.socialengagement.followsocialpostpersona.string",
+            "id": "ConnectApi.socialengagement.followsocialpostpersona.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 96
+                },
+                "end": {
+                  "line": 0,
+                  "character": 102
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:96"
+            },
+            "parentId": "ConnectApi.socialengagement.followsocialpostpersona",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the social post authored by the social persona to follow. ID of the social account that follows the social persona.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getintents(string)": {
-      "id": "ConnectApi.socialengagement.getintents",
+      "id": "ConnectApi.socialengagement.method.getintents(string)",
       "nodeType": "method",
       "name": "getIntents",
       "startToken": {
@@ -486,6 +854,9 @@
         },
         "id": "declaration.entity.name.function_getIntents_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -493,17 +864,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -512,30 +883,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.SocialPostIntents getIntents(String socialPostId)",
+      "overrideSignature": "public static override ConnectApi.SocialPostIntents getIntents(String socialPostId)",
       "simplifiedSignature": "getIntents(String)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.getintents.ConnectApi.SocialPostIntents",
+        "id": "ConnectApi.socialengagement.getintents.datatype.ConnectApi.SocialPostIntents",
         "nodeType": "datatype",
-        "name": "ConnectApi.SocialPostIntents"
+        "name": "ConnectApi.SocialPostIntents",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.getintents",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.SocialPostIntents"
       },
       "description": "Get available intents for a social post.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
-        "socialPostId": {
-          "id": "ConnectApi.socialengagement.getintents.socialpostid",
-          "type": "var",
+        "socialpostid": {
+          "id": "ConnectApi.socialengagement.method.getintents(string).varParam.socialpostid",
+          "nodeType": "variable",
           "name": "socialPostId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -544,29 +941,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialPostId_-1:0"
+            "id": "token.type.identifier_socialPostId_0:61"
           },
-          "signature": "String socialPostId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialPostId",
+            "textToLower": "socialpostid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 73
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialPostId_0:61"
+          },
+          "parentId": "ConnectApi.socialengagement.method.getintents(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.getintents.string",
+            "id": "ConnectApi.socialengagement.getintents.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:54"
+            },
+            "parentId": "ConnectApi.socialengagement.getintents",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of a social post.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getmanagedsocialaccount(string)": {
-      "id": "ConnectApi.socialengagement.getmanagedsocialaccount",
+      "id": "ConnectApi.socialengagement.method.getmanagedsocialaccount(string)",
       "nodeType": "method",
       "name": "getManagedSocialAccount",
       "startToken": {
@@ -588,6 +1033,9 @@
         },
         "id": "declaration.entity.name.function_getManagedSocialAccount_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -595,17 +1043,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -614,30 +1062,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.​ManagedSocialAccount getManagedSocialAccount(String id)",
+      "signature": "public static ConnectApi.ManagedSocialAccount getManagedSocialAccount(String id)",
+      "overrideSignature": "public static override ConnectApi.ManagedSocialAccount getManagedSocialAccount(String id)",
       "simplifiedSignature": "getManagedSocialAccount(String)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.getmanagedsocialaccount.ConnectApi.​ManagedSocialAccount",
+        "id": "ConnectApi.socialengagement.getmanagedsocialaccount.datatype.ConnectApi.ManagedSocialAccount",
         "nodeType": "datatype",
-        "name": "ConnectApi.​ManagedSocialAccount"
+        "name": "ConnectApi.ManagedSocialAccount",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.getmanagedsocialaccount",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedSocialAccount"
       },
       "description": "Get a managed social account that is in the org and assigned to the user.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
         "id": {
-          "id": "ConnectApi.socialengagement.getmanagedsocialaccount.id",
-          "type": "var",
+          "id": "ConnectApi.socialengagement.method.getmanagedsocialaccount(string).varParam.id",
+          "nodeType": "variable",
           "name": "id",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -646,29 +1120,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_id_-1:0"
+            "id": "token.type.identifier_id_0:77"
           },
-          "signature": "String id",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "id",
+            "textToLower": "id",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 77
+              },
+              "end": {
+                "line": 0,
+                "character": 79
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_id_0:77"
+          },
+          "parentId": "ConnectApi.socialengagement.method.getmanagedsocialaccount(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.getmanagedsocialaccount.string",
+            "id": "ConnectApi.socialengagement.getmanagedsocialaccount.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 70
+                },
+                "end": {
+                  "line": 0,
+                  "character": 76
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:70"
+            },
+            "parentId": "ConnectApi.socialengagement.getmanagedsocialaccount",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Description: Internal SFDC ID for this managed social account.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getmanagedsocialaccounts()": {
-      "id": "ConnectApi.socialengagement.getmanagedsocialaccounts",
+      "id": "ConnectApi.socialengagement.method.getmanagedsocialaccounts()",
       "nodeType": "method",
       "name": "getManagedSocialAccounts",
       "startToken": {
@@ -690,6 +1212,9 @@
         },
         "id": "declaration.entity.name.function_getManagedSocialAccounts_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -697,17 +1222,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -716,30 +1241,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedSocialAccounts getManagedSocialAccounts()",
+      "overrideSignature": "public static override ConnectApi.ManagedSocialAccounts getManagedSocialAccounts()",
       "simplifiedSignature": "getManagedSocialAccounts()",
       "datatype": {
-        "id": "ConnectApi.socialengagement.getmanagedsocialaccounts.ConnectApi.ManagedSocialAccounts",
+        "id": "ConnectApi.socialengagement.getmanagedsocialaccounts.datatype.ConnectApi.ManagedSocialAccounts",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedSocialAccounts"
+        "name": "ConnectApi.ManagedSocialAccounts",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.getmanagedsocialaccounts",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedSocialAccounts"
       },
       "description": "Gets a list of managed social accounts that are in the org and assigned to the user.",
-      "params": {}
+      "parentName": "SocialEngagement",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getmanagedsocialaccounts(connectapi.socialnetworkprovider)": {
-      "id": "ConnectApi.socialengagement.getmanagedsocialaccounts",
+      "id": "ConnectApi.socialengagement.method.getmanagedsocialaccounts(connectapi.socialnetworkprovider)",
       "nodeType": "method",
       "name": "getManagedSocialAccounts",
       "startToken": {
@@ -761,6 +1314,9 @@
         },
         "id": "declaration.entity.name.function_getManagedSocialAccounts_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -768,17 +1324,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -787,30 +1343,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedSocialAccounts getManagedSocialAccounts(ConnectApi.SocialNetworkProvider socialNetwork)",
+      "overrideSignature": "public static override ConnectApi.ManagedSocialAccounts getManagedSocialAccounts(ConnectApi.SocialNetworkProvider socialNetwork)",
       "simplifiedSignature": "getManagedSocialAccounts(ConnectApi.SocialNetworkProvider)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.getmanagedsocialaccounts.ConnectApi.ManagedSocialAccounts",
+        "id": "ConnectApi.socialengagement.getmanagedsocialaccounts.datatype.ConnectApi.ManagedSocialAccounts",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedSocialAccounts"
+        "name": "ConnectApi.ManagedSocialAccounts",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.getmanagedsocialaccounts",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedSocialAccounts"
       },
       "description": "Get a list of managed social accounts that are in the org and assigned to the user.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
-        "socialNetwork": {
-          "id": "ConnectApi.socialengagement.getmanagedsocialaccounts.socialnetwork",
-          "type": "var",
+        "socialnetwork": {
+          "id": "ConnectApi.socialengagement.method.getmanagedsocialaccounts(connectapi.socialnetworkprovider).varParam.socialnetwork",
+          "nodeType": "variable",
           "name": "socialNetwork",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -819,29 +1401,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 105
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 118
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialNetwork_-1:0"
+            "id": "token.type.identifier_socialNetwork_0:105"
           },
-          "signature": "ConnectApi.SocialNetworkProvider socialNetwork",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialNetwork",
+            "textToLower": "socialnetwork",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 105
+              },
+              "end": {
+                "line": 0,
+                "character": 118
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialNetwork_0:105"
+          },
+          "parentId": "ConnectApi.socialengagement.method.getmanagedsocialaccounts(connectapi.socialnetworkprovider)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.getmanagedsocialaccounts.connectapi.socialnetworkprovider",
+            "id": "ConnectApi.socialengagement.getmanagedsocialaccounts.datatype.ConnectApi.SocialNetworkProvider",
             "nodeType": "datatype",
-            "name": "ConnectApi.SocialNetworkProvider"
-          }
+            "name": "ConnectApi.SocialNetworkProvider",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 72
+                },
+                "end": {
+                  "line": 0,
+                  "character": 82
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:72"
+            },
+            "parentId": "ConnectApi.socialengagement.getmanagedsocialaccounts",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.SocialNetworkProvider"
+          },
+          "description": "Description: Filters results based on the social network. Values are: Facebook  GooglePlus  Instagram  InstagramBusiness  KakaoTalk  Kik  Line  LinkedIn  Messenger  Other  Pinterest  QQ  Rypple  SinaWeibo  SMS  Snapchat  Telegram  Twitter  VKontakte  WeChat  WhatsApp  YouTube",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getrelationship(string,string)": {
-      "id": "ConnectApi.socialengagement.getrelationship",
+      "id": "ConnectApi.socialengagement.method.getrelationship(string,string)",
       "nodeType": "method",
       "name": "getRelationship",
       "startToken": {
@@ -863,6 +1493,9 @@
         },
         "id": "declaration.entity.name.function_getRelationship_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -870,17 +1503,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -889,30 +1522,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.SocialAccountRelationship getRelationship(String id, String socialPersonaId)",
+      "overrideSignature": "public static override ConnectApi.SocialAccountRelationship getRelationship(String id, String socialPersonaId)",
       "simplifiedSignature": "getRelationship(String,String)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.getrelationship.ConnectApi.SocialAccountRelationship",
+        "id": "ConnectApi.socialengagement.getrelationship.datatype.ConnectApi.SocialAccountRelationship",
         "nodeType": "datatype",
-        "name": "ConnectApi.SocialAccountRelationship"
+        "name": "ConnectApi.SocialAccountRelationship",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.getrelationship",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.SocialAccountRelationship"
       },
       "description": "Get the follow relationship between a managed social account and a social persona.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
         "id": {
-          "id": "ConnectApi.socialengagement.getrelationship.id",
-          "type": "var",
+          "id": "ConnectApi.socialengagement.method.getrelationship(string,string).varParam.id",
+          "nodeType": "variable",
           "name": "id",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -921,28 +1580,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 74
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 76
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_id_-1:0"
+            "id": "token.type.identifier_id_0:74"
           },
-          "signature": "String id",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "id",
+            "textToLower": "id",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 74
+              },
+              "end": {
+                "line": 0,
+                "character": 76
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_id_0:74"
+          },
+          "parentId": "ConnectApi.socialengagement.method.getrelationship(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.getrelationship.string",
+            "id": "ConnectApi.socialengagement.getrelationship.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 67
+                },
+                "end": {
+                  "line": 0,
+                  "character": 73
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:67"
+            },
+            "parentId": "ConnectApi.socialengagement.getrelationship",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "socialPersonaId": {
-          "id": "ConnectApi.socialengagement.getrelationship.socialpersonaid",
-          "type": "var",
+        "socialpersonaid": {
+          "id": "ConnectApi.socialengagement.method.getrelationship(string,string).varParam.socialpersonaid",
+          "nodeType": "variable",
           "name": "socialPersonaId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -951,29 +1655,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 85
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 100
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialPersonaId_-1:0"
+            "id": "token.type.identifier_socialPersonaId_0:85"
           },
-          "signature": "String socialPersonaId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialPersonaId",
+            "textToLower": "socialpersonaid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 85
+              },
+              "end": {
+                "line": 0,
+                "character": 100
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialPersonaId_0:85"
+          },
+          "parentId": "ConnectApi.socialengagement.method.getrelationship(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.socialengagement.getrelationship.string",
+            "id": "ConnectApi.socialengagement.getrelationship.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 78
+                },
+                "end": {
+                  "line": 0,
+                  "character": 84
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:78"
+            },
+            "parentId": "ConnectApi.socialengagement.getrelationship",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the managed social account. ID of the social persona.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "hidesocialpost(string,string)": {
-      "id": "ConnectApi.socialengagement.hidesocialpost",
+      "id": "ConnectApi.socialengagement.method.hidesocialpost(string,string)",
       "nodeType": "method",
       "name": "hideSocialPost",
       "startToken": {
@@ -995,6 +1747,9 @@
         },
         "id": "declaration.entity.name.function_hideSocialPost_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1002,17 +1757,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1021,30 +1776,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.HideSocialPostIntent hideSocialPost(String socialPostId, String socialAccountId)",
+      "overrideSignature": "public static override ConnectApi.HideSocialPostIntent hideSocialPost(String socialPostId, String socialAccountId)",
       "simplifiedSignature": "hideSocialPost(String,String)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.hidesocialpost.ConnectApi.HideSocialPostIntent",
+        "id": "ConnectApi.socialengagement.hidesocialpost.datatype.ConnectApi.HideSocialPostIntent",
         "nodeType": "datatype",
-        "name": "ConnectApi.HideSocialPostIntent"
+        "name": "ConnectApi.HideSocialPostIntent",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.hidesocialpost",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.HideSocialPostIntent"
       },
       "description": "Hide a social post in its social network.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
-        "socialPostId": {
-          "id": "ConnectApi.socialengagement.hidesocialpost.socialpostid",
-          "type": "var",
+        "socialpostid": {
+          "id": "ConnectApi.socialengagement.method.hidesocialpost(string,string).varParam.socialpostid",
+          "nodeType": "variable",
           "name": "socialPostId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1053,28 +1834,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 68
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialPostId_-1:0"
+            "id": "token.type.identifier_socialPostId_0:68"
           },
-          "signature": "String socialPostId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialPostId",
+            "textToLower": "socialpostid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 68
+              },
+              "end": {
+                "line": 0,
+                "character": 80
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialPostId_0:68"
+          },
+          "parentId": "ConnectApi.socialengagement.method.hidesocialpost(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.hidesocialpost.string",
+            "id": "ConnectApi.socialengagement.hidesocialpost.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 61
+                },
+                "end": {
+                  "line": 0,
+                  "character": 67
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:61"
+            },
+            "parentId": "ConnectApi.socialengagement.hidesocialpost",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "socialAccountId": {
-          "id": "ConnectApi.socialengagement.hidesocialpost.socialaccountid",
-          "type": "var",
+        "socialaccountid": {
+          "id": "ConnectApi.socialengagement.method.hidesocialpost(string,string).varParam.socialaccountid",
+          "nodeType": "variable",
           "name": "socialAccountId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1083,29 +1909,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 89
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 104
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialAccountId_-1:0"
+            "id": "token.type.identifier_socialAccountId_0:89"
           },
-          "signature": "String socialAccountId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialAccountId",
+            "textToLower": "socialaccountid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 89
+              },
+              "end": {
+                "line": 0,
+                "character": 104
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialAccountId_0:89"
+          },
+          "parentId": "ConnectApi.socialengagement.method.hidesocialpost(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.socialengagement.hidesocialpost.string",
+            "id": "ConnectApi.socialengagement.hidesocialpost.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 82
+                },
+                "end": {
+                  "line": 0,
+                  "character": 88
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:82"
+            },
+            "parentId": "ConnectApi.socialengagement.hidesocialpost",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the social post to hide. ID of the social account that hides the post.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "likesocialpost(string,string)": {
-      "id": "ConnectApi.socialengagement.likesocialpost",
+      "id": "ConnectApi.socialengagement.method.likesocialpost(string,string)",
       "nodeType": "method",
       "name": "likeSocialPost",
       "startToken": {
@@ -1127,6 +2001,9 @@
         },
         "id": "declaration.entity.name.function_likeSocialPost_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 10,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1134,17 +2011,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1153,30 +2030,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.LikeSocialPostIntent likeSocialPost(String socialPostId, String socialAccountId)",
+      "overrideSignature": "public static override ConnectApi.LikeSocialPostIntent likeSocialPost(String socialPostId, String socialAccountId)",
       "simplifiedSignature": "likeSocialPost(String,String)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.likesocialpost.ConnectApi.LikeSocialPostIntent",
+        "id": "ConnectApi.socialengagement.likesocialpost.datatype.ConnectApi.LikeSocialPostIntent",
         "nodeType": "datatype",
-        "name": "ConnectApi.LikeSocialPostIntent"
+        "name": "ConnectApi.LikeSocialPostIntent",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.likesocialpost",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.LikeSocialPostIntent"
       },
       "description": "Like a social post in its social network.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
-        "socialPostId": {
-          "id": "ConnectApi.socialengagement.likesocialpost.socialpostid",
-          "type": "var",
+        "socialpostid": {
+          "id": "ConnectApi.socialengagement.method.likesocialpost(string,string).varParam.socialpostid",
+          "nodeType": "variable",
           "name": "socialPostId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1185,28 +2088,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 68
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialPostId_-1:0"
+            "id": "token.type.identifier_socialPostId_0:68"
           },
-          "signature": "String socialPostId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialPostId",
+            "textToLower": "socialpostid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 68
+              },
+              "end": {
+                "line": 0,
+                "character": 80
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialPostId_0:68"
+          },
+          "parentId": "ConnectApi.socialengagement.method.likesocialpost(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.likesocialpost.string",
+            "id": "ConnectApi.socialengagement.likesocialpost.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 61
+                },
+                "end": {
+                  "line": 0,
+                  "character": 67
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:61"
+            },
+            "parentId": "ConnectApi.socialengagement.likesocialpost",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "socialAccountId": {
-          "id": "ConnectApi.socialengagement.likesocialpost.socialaccountid",
-          "type": "var",
+        "socialaccountid": {
+          "id": "ConnectApi.socialengagement.method.likesocialpost(string,string).varParam.socialaccountid",
+          "nodeType": "variable",
           "name": "socialAccountId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1215,29 +2163,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 89
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 104
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialAccountId_-1:0"
+            "id": "token.type.identifier_socialAccountId_0:89"
           },
-          "signature": "String socialAccountId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialAccountId",
+            "textToLower": "socialaccountid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 89
+              },
+              "end": {
+                "line": 0,
+                "character": 104
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialAccountId_0:89"
+          },
+          "parentId": "ConnectApi.socialengagement.method.likesocialpost(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.socialengagement.likesocialpost.string",
+            "id": "ConnectApi.socialengagement.likesocialpost.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 82
+                },
+                "end": {
+                  "line": 0,
+                  "character": 88
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:82"
+            },
+            "parentId": "ConnectApi.socialengagement.likesocialpost",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the social post to like. ID of the social account that likes the post.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "massapprove(connectapi.socialpostmassapprovalinput)": {
-      "id": "ConnectApi.socialengagement.massapprove",
+      "id": "ConnectApi.socialengagement.method.massapprove(connectapi.socialpostmassapprovalinput)",
       "nodeType": "method",
       "name": "massApprove",
       "startToken": {
@@ -1259,6 +2255,9 @@
         },
         "id": "declaration.entity.name.function_massApprove_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 11,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1266,17 +2265,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1285,30 +2284,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.SocialPostMassApprovalOutput massApprove(ConnectApi.SocialPostMassApprovalInput massApproval)",
+      "overrideSignature": "public static override ConnectApi.SocialPostMassApprovalOutput massApprove(ConnectApi.SocialPostMassApprovalInput massApproval)",
       "simplifiedSignature": "massApprove(ConnectApi.SocialPostMassApprovalInput)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.massapprove.ConnectApi.SocialPostMassApprovalOutput",
+        "id": "ConnectApi.socialengagement.massapprove.datatype.ConnectApi.SocialPostMassApprovalOutput",
         "nodeType": "datatype",
-        "name": "ConnectApi.SocialPostMassApprovalOutput"
+        "name": "ConnectApi.SocialPostMassApprovalOutput",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.massapprove",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.SocialPostMassApprovalOutput"
       },
       "description": "Approve or reject the publishing of a large number of social posts.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
-        "massApproval": {
-          "id": "ConnectApi.socialengagement.massapprove.massapproval",
-          "type": "var",
+        "massapproval": {
+          "id": "ConnectApi.socialengagement.method.massapprove(connectapi.socialpostmassapprovalinput).varParam.massapproval",
+          "nodeType": "variable",
           "name": "massApproval",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1317,29 +2342,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 105
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 117
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_massApproval_-1:0"
+            "id": "token.type.identifier_massApproval_0:105"
           },
-          "signature": "ConnectApi.SocialPostMassApprovalInput massApproval",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "massApproval",
+            "textToLower": "massapproval",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 105
+              },
+              "end": {
+                "line": 0,
+                "character": 117
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_massApproval_0:105"
+          },
+          "parentId": "ConnectApi.socialengagement.method.massapprove(connectapi.socialpostmassapprovalinput)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.massapprove.connectapi.socialpostmassapprovalinput",
+            "id": "ConnectApi.socialengagement.massapprove.datatype.ConnectApi.SocialPostMassApprovalInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.SocialPostMassApprovalInput"
-          }
+            "name": "ConnectApi.SocialPostMassApprovalInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 66
+                },
+                "end": {
+                  "line": 0,
+                  "character": 76
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:66"
+            },
+            "parentId": "ConnectApi.socialengagement.massapprove",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.SocialPostMassApprovalInput"
+          },
+          "description": "A ConnectApi.SocialPostMassApprovalInput body that includes a list of social post IDs and the action to approve or reject publishing them.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "recallapproval(string)": {
-      "id": "ConnectApi.socialengagement.recallapproval",
+      "id": "ConnectApi.socialengagement.method.recallapproval(string)",
       "nodeType": "method",
       "name": "recallApproval",
       "startToken": {
@@ -1361,6 +2434,9 @@
         },
         "id": "declaration.entity.name.function_recallApproval_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 12,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1368,17 +2444,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1387,30 +2463,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void recallApproval(String socialPostId)",
+      "signature": "public static Void recallApproval(String socialPostId)",
+      "overrideSignature": "public static override Void recallApproval(String socialPostId)",
       "simplifiedSignature": "recallApproval(String)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.recallapproval.void",
+        "id": "ConnectApi.socialengagement.recallapproval.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.recallapproval",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Recall an approval request to publish a social post.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
-        "socialPostId": {
-          "id": "ConnectApi.socialengagement.recallapproval.socialpostid",
-          "type": "var",
+        "socialpostid": {
+          "id": "ConnectApi.socialengagement.method.recallapproval(string).varParam.socialpostid",
+          "nodeType": "variable",
           "name": "socialPostId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1419,29 +2521,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialPostId_-1:0"
+            "id": "token.type.identifier_socialPostId_0:41"
           },
-          "signature": "String socialPostId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialPostId",
+            "textToLower": "socialpostid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 41
+              },
+              "end": {
+                "line": 0,
+                "character": 53
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialPostId_0:41"
+          },
+          "parentId": "ConnectApi.socialengagement.method.recallapproval(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.recallapproval.string",
+            "id": "ConnectApi.socialengagement.recallapproval.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:34"
+            },
+            "parentId": "ConnectApi.socialengagement.recallapproval",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the social post.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "unfollowsocialpersona(string,string)": {
-      "id": "ConnectApi.socialengagement.unfollowsocialpersona",
+      "id": "ConnectApi.socialengagement.method.unfollowsocialpersona(string,string)",
       "nodeType": "method",
       "name": "unfollowSocialPersona",
       "startToken": {
@@ -1463,6 +2613,9 @@
         },
         "id": "declaration.entity.name.function_unfollowSocialPersona_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 13,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1470,17 +2623,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1489,30 +2642,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void unfollowSocialPersona(String socialPersonaId, String socialAccountId)",
+      "signature": "public static Void unfollowSocialPersona(String socialPersonaId, String socialAccountId)",
+      "overrideSignature": "public static override Void unfollowSocialPersona(String socialPersonaId, String socialAccountId)",
       "simplifiedSignature": "unfollowSocialPersona(String,String)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.unfollowsocialpersona.void",
+        "id": "ConnectApi.socialengagement.unfollowsocialpersona.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.unfollowsocialpersona",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Stop following a social persona in its social network.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
-        "socialPersonaId": {
-          "id": "ConnectApi.socialengagement.unfollowsocialpersona.socialpersonaid",
-          "type": "var",
+        "socialpersonaid": {
+          "id": "ConnectApi.socialengagement.method.unfollowsocialpersona(string,string).varParam.socialpersonaid",
+          "nodeType": "variable",
           "name": "socialPersonaId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1521,28 +2700,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 63
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialPersonaId_-1:0"
+            "id": "token.type.identifier_socialPersonaId_0:48"
           },
-          "signature": "String socialPersonaId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialPersonaId",
+            "textToLower": "socialpersonaid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 48
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialPersonaId_0:48"
+          },
+          "parentId": "ConnectApi.socialengagement.method.unfollowsocialpersona(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.unfollowsocialpersona.string",
+            "id": "ConnectApi.socialengagement.unfollowsocialpersona.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 41
+                },
+                "end": {
+                  "line": 0,
+                  "character": 47
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:41"
+            },
+            "parentId": "ConnectApi.socialengagement.unfollowsocialpersona",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "socialAccountId": {
-          "id": "ConnectApi.socialengagement.unfollowsocialpersona.socialaccountid",
-          "type": "var",
+        "socialaccountid": {
+          "id": "ConnectApi.socialengagement.method.unfollowsocialpersona(string,string).varParam.socialaccountid",
+          "nodeType": "variable",
           "name": "socialAccountId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1551,29 +2775,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 87
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialAccountId_-1:0"
+            "id": "token.type.identifier_socialAccountId_0:72"
           },
-          "signature": "String socialAccountId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialAccountId",
+            "textToLower": "socialaccountid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 72
+              },
+              "end": {
+                "line": 0,
+                "character": 87
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialAccountId_0:72"
+          },
+          "parentId": "ConnectApi.socialengagement.method.unfollowsocialpersona(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.socialengagement.unfollowsocialpersona.string",
+            "id": "ConnectApi.socialengagement.unfollowsocialpersona.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:65"
+            },
+            "parentId": "ConnectApi.socialengagement.unfollowsocialpersona",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the social persona to stop following. ID of the social account that stops following the social persona.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "unfollowsocialpostpersona(string,string)": {
-      "id": "ConnectApi.socialengagement.unfollowsocialpostpersona",
+      "id": "ConnectApi.socialengagement.method.unfollowsocialpostpersona(string,string)",
       "nodeType": "method",
       "name": "unfollowSocialPostPersona",
       "startToken": {
@@ -1595,6 +2867,9 @@
         },
         "id": "declaration.entity.name.function_unfollowSocialPostPersona_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 14,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1602,17 +2877,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1621,30 +2896,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void unfollowSocialPostPersona(String socialPostId, String socialAccountId)",
+      "signature": "public static Void unfollowSocialPostPersona(String socialPostId, String socialAccountId)",
+      "overrideSignature": "public static override Void unfollowSocialPostPersona(String socialPostId, String socialAccountId)",
       "simplifiedSignature": "unfollowSocialPostPersona(String,String)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.unfollowsocialpostpersona.void",
+        "id": "ConnectApi.socialengagement.unfollowsocialpostpersona.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.unfollowsocialpostpersona",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Stop following a social persona of a social post in its social network.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
-        "socialPostId": {
-          "id": "ConnectApi.socialengagement.unfollowsocialpostpersona.socialpostid",
-          "type": "var",
+        "socialpostid": {
+          "id": "ConnectApi.socialengagement.method.unfollowsocialpostpersona(string,string).varParam.socialpostid",
+          "nodeType": "variable",
           "name": "socialPostId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1653,28 +2954,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialPostId_-1:0"
+            "id": "token.type.identifier_socialPostId_0:52"
           },
-          "signature": "String socialPostId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialPostId",
+            "textToLower": "socialpostid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 52
+              },
+              "end": {
+                "line": 0,
+                "character": 64
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialPostId_0:52"
+          },
+          "parentId": "ConnectApi.socialengagement.method.unfollowsocialpostpersona(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.unfollowsocialpostpersona.string",
+            "id": "ConnectApi.socialengagement.unfollowsocialpostpersona.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 51
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:45"
+            },
+            "parentId": "ConnectApi.socialengagement.unfollowsocialpostpersona",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "socialAccountId": {
-          "id": "ConnectApi.socialengagement.unfollowsocialpostpersona.socialaccountid",
-          "type": "var",
+        "socialaccountid": {
+          "id": "ConnectApi.socialengagement.method.unfollowsocialpostpersona(string,string).varParam.socialaccountid",
+          "nodeType": "variable",
           "name": "socialAccountId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1683,29 +3029,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 88
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialAccountId_-1:0"
+            "id": "token.type.identifier_socialAccountId_0:73"
           },
-          "signature": "String socialAccountId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialAccountId",
+            "textToLower": "socialaccountid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 88
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialAccountId_0:73"
+          },
+          "parentId": "ConnectApi.socialengagement.method.unfollowsocialpostpersona(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.socialengagement.unfollowsocialpostpersona.string",
+            "id": "ConnectApi.socialengagement.unfollowsocialpostpersona.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 66
+                },
+                "end": {
+                  "line": 0,
+                  "character": 72
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:66"
+            },
+            "parentId": "ConnectApi.socialengagement.unfollowsocialpostpersona",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the social post authored by the social persona to stop following. ID of the social account that stops following the social persona.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "unhidesocialpost(string,string)": {
-      "id": "ConnectApi.socialengagement.unhidesocialpost",
+      "id": "ConnectApi.socialengagement.method.unhidesocialpost(string,string)",
       "nodeType": "method",
       "name": "unhideSocialPost",
       "startToken": {
@@ -1727,6 +3121,9 @@
         },
         "id": "declaration.entity.name.function_unhideSocialPost_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 15,
+      "memberOrder": 15,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1734,17 +3131,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1753,30 +3150,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void unhideSocialPost(String socialPostId, String socialAccountId)",
+      "signature": "public static Void unhideSocialPost(String socialPostId, String socialAccountId)",
+      "overrideSignature": "public static override Void unhideSocialPost(String socialPostId, String socialAccountId)",
       "simplifiedSignature": "unhideSocialPost(String,String)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.unhidesocialpost.void",
+        "id": "ConnectApi.socialengagement.unhidesocialpost.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.unhidesocialpost",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Unhide a social post in its social network.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
-        "socialPostId": {
-          "id": "ConnectApi.socialengagement.unhidesocialpost.socialpostid",
-          "type": "var",
+        "socialpostid": {
+          "id": "ConnectApi.socialengagement.method.unhidesocialpost(string,string).varParam.socialpostid",
+          "nodeType": "variable",
           "name": "socialPostId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1785,28 +3208,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 43
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialPostId_-1:0"
+            "id": "token.type.identifier_socialPostId_0:43"
           },
-          "signature": "String socialPostId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialPostId",
+            "textToLower": "socialpostid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 43
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialPostId_0:43"
+          },
+          "parentId": "ConnectApi.socialengagement.method.unhidesocialpost(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.unhidesocialpost.string",
+            "id": "ConnectApi.socialengagement.unhidesocialpost.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 36
+                },
+                "end": {
+                  "line": 0,
+                  "character": 42
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:36"
+            },
+            "parentId": "ConnectApi.socialengagement.unhidesocialpost",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "socialAccountId": {
-          "id": "ConnectApi.socialengagement.unhidesocialpost.socialaccountid",
-          "type": "var",
+        "socialaccountid": {
+          "id": "ConnectApi.socialengagement.method.unhidesocialpost(string,string).varParam.socialaccountid",
+          "nodeType": "variable",
           "name": "socialAccountId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1815,29 +3283,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialAccountId_-1:0"
+            "id": "token.type.identifier_socialAccountId_0:64"
           },
-          "signature": "String socialAccountId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialAccountId",
+            "textToLower": "socialaccountid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 79
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialAccountId_0:64"
+          },
+          "parentId": "ConnectApi.socialengagement.method.unhidesocialpost(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.socialengagement.unhidesocialpost.string",
+            "id": "ConnectApi.socialengagement.unhidesocialpost.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 57
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:57"
+            },
+            "parentId": "ConnectApi.socialengagement.unhidesocialpost",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the social post to unhide. ID of the social account that unhides the post.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "unlikesocialpost(string,string)": {
-      "id": "ConnectApi.socialengagement.unlikesocialpost",
+      "id": "ConnectApi.socialengagement.method.unlikesocialpost(string,string)",
       "nodeType": "method",
       "name": "unlikeSocialPost",
       "startToken": {
@@ -1859,6 +3375,9 @@
         },
         "id": "declaration.entity.name.function_unlikeSocialPost_-1:0"
       },
+      "parentId": "ConnectApi.socialengagement",
+      "order": 16,
+      "memberOrder": 16,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1866,17 +3385,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1885,30 +3404,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void unlikeSocialPost(String socialPostId, String socialAccountId)",
+      "signature": "public static Void unlikeSocialPost(String socialPostId, String socialAccountId)",
+      "overrideSignature": "public static override Void unlikeSocialPost(String socialPostId, String socialAccountId)",
       "simplifiedSignature": "unlikeSocialPost(String,String)",
       "datatype": {
-        "id": "ConnectApi.socialengagement.unlikesocialpost.void",
+        "id": "ConnectApi.socialengagement.unlikesocialpost.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.socialengagement.unlikesocialpost",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Unlike a social post in its social network.",
+      "parentName": "SocialEngagement",
+      "variables": {},
       "params": {
-        "socialPostId": {
-          "id": "ConnectApi.socialengagement.unlikesocialpost.socialpostid",
-          "type": "var",
+        "socialpostid": {
+          "id": "ConnectApi.socialengagement.method.unlikesocialpost(string,string).varParam.socialpostid",
+          "nodeType": "variable",
           "name": "socialPostId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1917,28 +3462,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 43
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialPostId_-1:0"
+            "id": "token.type.identifier_socialPostId_0:43"
           },
-          "signature": "String socialPostId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialPostId",
+            "textToLower": "socialpostid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 43
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialPostId_0:43"
+          },
+          "parentId": "ConnectApi.socialengagement.method.unlikesocialpost(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.socialengagement.unlikesocialpost.string",
+            "id": "ConnectApi.socialengagement.unlikesocialpost.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 36
+                },
+                "end": {
+                  "line": 0,
+                  "character": 42
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:36"
+            },
+            "parentId": "ConnectApi.socialengagement.unlikesocialpost",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "socialAccountId": {
-          "id": "ConnectApi.socialengagement.unlikesocialpost.socialaccountid",
-          "type": "var",
+        "socialaccountid": {
+          "id": "ConnectApi.socialengagement.method.unlikesocialpost(string,string).varParam.socialaccountid",
+          "nodeType": "variable",
           "name": "socialAccountId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1947,30 +3537,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_socialAccountId_-1:0"
+            "id": "token.type.identifier_socialAccountId_0:64"
           },
-          "signature": "String socialAccountId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "socialAccountId",
+            "textToLower": "socialaccountid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 79
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_socialAccountId_0:64"
+          },
+          "parentId": "ConnectApi.socialengagement.method.unlikesocialpost(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.socialengagement.unlikesocialpost.string",
+            "id": "ConnectApi.socialengagement.unlikesocialpost.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 57
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:57"
+            },
+            "parentId": "ConnectApi.socialengagement.unlikesocialpost",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the social post to unlike. ID of the social account that unlikes the post.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 16,
+  "queries": []
 }

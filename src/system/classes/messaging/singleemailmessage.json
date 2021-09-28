@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_SingleEmailMessage_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "gettemplatename()": {
-      "id": "Messaging.singleemailmessage.gettemplatename",
+      "id": "Messaging.singleemailmessage.method.gettemplatename()",
       "nodeType": "method",
       "name": "getTemplateName",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getTemplateName_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 1,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String getTemplateName()",
+      "signature": "public STRING getTemplateName()",
+      "overrideSignature": "public override STRING getTemplateName()",
       "simplifiedSignature": "getTemplateName()",
       "datatype": {
-        "id": "Messaging.singleemailmessage.gettemplatename.String",
+        "id": "Messaging.singleemailmessage.gettemplatename.datatype.STRING",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "STRING",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "STRING",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_STRING_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.gettemplatename",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "STRING"
       },
       "description": "The name of the template used to create the email.",
-      "params": {}
+      "parentName": "SingleEmailMessage",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "setbccaddresses(string[])": {
-      "id": "Messaging.singleemailmessage.setbccaddresses",
+      "id": "Messaging.singleemailmessage.method.setbccaddresses(string[])",
       "nodeType": "method",
       "name": "setBccAddresses",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_setBccAddresses_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 2,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,30 +185,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setBccAddresses(String[] bccAddresses)",
+      "signature": "public Void setBccAddresses(String[] bccAddresses)",
+      "overrideSignature": "public override Void setBccAddresses(String[] bccAddresses)",
       "simplifiedSignature": "setBccAddresses(String[])",
       "datatype": {
-        "id": "Messaging.singleemailmessage.setbccaddresses.void",
+        "id": "Messaging.singleemailmessage.setbccaddresses.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.setbccaddresses",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Optional. A list of blind carbon copy (BCC) addresses or object IDs of the contacts, leads, and users you’re sending the email to. The maximum size for this field is 4,000 bytes. The maximum total of toAddresses, ccAddresses, and bccAddresses per email is 150.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "bccAddresses": {
-          "id": "Messaging.singleemailmessage.setbccaddresses.bccaddresses",
-          "type": "var",
+        "bccaddresses": {
+          "id": "Messaging.singleemailmessage.method.setbccaddresses(string[]).varParam.bccaddresses",
+          "nodeType": "variable",
           "name": "bccAddresses",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -181,29 +243,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_bccAddresses_-1:0"
+            "id": "token.type.identifier_bccAddresses_0:37"
           },
-          "signature": "String[] bccAddresses",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "bccAddresses",
+            "textToLower": "bccaddresses",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 49
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_bccAddresses_0:37"
+          },
+          "parentId": "Messaging.singleemailmessage.method.setbccaddresses(string[])",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.setbccaddresses.string[]",
+            "id": "Messaging.singleemailmessage.setbccaddresses.datatype.String[]",
             "nodeType": "datatype",
-            "name": "String[]"
-          }
+            "name": "String[]",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 28
+                },
+                "end": {
+                  "line": 0,
+                  "character": 34
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:28"
+            },
+            "parentId": "Messaging.singleemailmessage.setbccaddresses",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String[]"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setccaddresses(string[])": {
-      "id": "Messaging.singleemailmessage.setccaddresses",
+      "id": "Messaging.singleemailmessage.method.setccaddresses(string[])",
       "nodeType": "method",
       "name": "setCcAddresses",
       "startToken": {
@@ -225,6 +335,9 @@
         },
         "id": "declaration.entity.name.function_setCcAddresses_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 3,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -232,30 +345,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setCcAddresses(String[] ccAddresses)",
+      "signature": "public Void setCcAddresses(String[] ccAddresses)",
+      "overrideSignature": "public override Void setCcAddresses(String[] ccAddresses)",
       "simplifiedSignature": "setCcAddresses(String[])",
       "datatype": {
-        "id": "Messaging.singleemailmessage.setccaddresses.void",
+        "id": "Messaging.singleemailmessage.setccaddresses.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.setccaddresses",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Optional. A list of carbon copy (CC) addresses or object IDs of the contacts, leads, and users you’re sending the email to. The maximum size for this field is 4,000 bytes. The maximum total of toAddresses, ccAddresses, and bccAddresses per email is 150.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "ccAddresses": {
-          "id": "Messaging.singleemailmessage.setccaddresses.ccaddresses",
-          "type": "var",
+        "ccaddresses": {
+          "id": "Messaging.singleemailmessage.method.setccaddresses(string[]).varParam.ccaddresses",
+          "nodeType": "variable",
           "name": "ccAddresses",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -264,29 +403,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 36
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_ccAddresses_-1:0"
+            "id": "token.type.identifier_ccAddresses_0:36"
           },
-          "signature": "String[] ccAddresses",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "ccAddresses",
+            "textToLower": "ccaddresses",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 36
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ccAddresses_0:36"
+          },
+          "parentId": "Messaging.singleemailmessage.method.setccaddresses(string[])",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.setccaddresses.string[]",
+            "id": "Messaging.singleemailmessage.setccaddresses.datatype.String[]",
             "nodeType": "datatype",
-            "name": "String[]"
-          }
+            "name": "String[]",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 27
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:27"
+            },
+            "parentId": "Messaging.singleemailmessage.setccaddresses",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String[]"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setcharset(string)": {
-      "id": "Messaging.singleemailmessage.setcharset",
+      "id": "Messaging.singleemailmessage.method.setcharset(string)",
       "nodeType": "method",
       "name": "setCharset",
       "startToken": {
@@ -308,6 +495,9 @@
         },
         "id": "declaration.entity.name.function_setCharset_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 4,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -315,30 +505,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setCharset(String characterSet)",
+      "signature": "public Void setCharset(String characterSet)",
+      "overrideSignature": "public override Void setCharset(String characterSet)",
       "simplifiedSignature": "setCharset(String)",
       "datatype": {
-        "id": "Messaging.singleemailmessage.setcharset.void",
+        "id": "Messaging.singleemailmessage.setcharset.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.setcharset",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Optional. The character set for the email. If this value is null, the user's default value is used.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "characterSet": {
-          "id": "Messaging.singleemailmessage.setcharset.characterset",
-          "type": "var",
+        "characterset": {
+          "id": "Messaging.singleemailmessage.method.setcharset(string).varParam.characterset",
+          "nodeType": "variable",
           "name": "characterSet",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -347,29 +563,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 30
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_characterSet_-1:0"
+            "id": "token.type.identifier_characterSet_0:30"
           },
-          "signature": "String characterSet",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "characterSet",
+            "textToLower": "characterset",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 30
+              },
+              "end": {
+                "line": 0,
+                "character": 42
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_characterSet_0:30"
+          },
+          "parentId": "Messaging.singleemailmessage.method.setcharset(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.setcharset.string",
+            "id": "Messaging.singleemailmessage.setcharset.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:23"
+            },
+            "parentId": "Messaging.singleemailmessage.setcharset",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setdocumentattachments(id[])": {
-      "id": "Messaging.singleemailmessage.setdocumentattachments",
+      "id": "Messaging.singleemailmessage.method.setdocumentattachments(id[])",
       "nodeType": "method",
       "name": "setDocumentAttachments",
       "startToken": {
@@ -391,6 +655,9 @@
         },
         "id": "declaration.entity.name.function_setDocumentAttachments_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 5,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -398,30 +665,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setDocumentAttachments(ID[] documentIds)",
+      "signature": "public Void setDocumentAttachments(ID[] documentIds)",
+      "overrideSignature": "public override Void setDocumentAttachments(ID[] documentIds)",
       "simplifiedSignature": "setDocumentAttachments(ID[])",
       "datatype": {
-        "id": "Messaging.singleemailmessage.setdocumentattachments.void",
+        "id": "Messaging.singleemailmessage.setdocumentattachments.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.setdocumentattachments",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "(Deprecated. Use setEntityAttachments() instead.) Optional. A list containing the ID of each document object you want to attach to the email.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "documentIds": {
-          "id": "Messaging.singleemailmessage.setdocumentattachments.documentids",
-          "type": "var",
+        "documentids": {
+          "id": "Messaging.singleemailmessage.method.setdocumentattachments(id[]).varParam.documentids",
+          "nodeType": "variable",
           "name": "documentIds",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -430,29 +723,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 40
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_documentIds_-1:0"
+            "id": "token.type.identifier_documentIds_0:40"
           },
-          "signature": "ID[] documentIds",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "documentIds",
+            "textToLower": "documentids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 40
+              },
+              "end": {
+                "line": 0,
+                "character": 51
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_documentIds_0:40"
+          },
+          "parentId": "Messaging.singleemailmessage.method.setdocumentattachments(id[])",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.setdocumentattachments.id[]",
+            "id": "Messaging.singleemailmessage.setdocumentattachments.datatype.ID[]",
             "nodeType": "datatype",
-            "name": "ID[]"
-          }
+            "name": "ID[]",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "ID",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ID_0:35"
+            },
+            "parentId": "Messaging.singleemailmessage.setdocumentattachments",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ID[]"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "setentityattachments(list)": {
-      "id": "Messaging.singleemailmessage.setentityattachments",
+    "setentityattachments(list<string>)": {
+      "id": "Messaging.singleemailmessage.method.setentityattachments(list<string>)",
       "nodeType": "method",
       "name": "setEntityAttachments",
       "startToken": {
@@ -474,6 +815,9 @@
         },
         "id": "declaration.entity.name.function_setEntityAttachments_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 6,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -481,61 +825,162 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setEntityAttachments(List <String>)",
-      "simplifiedSignature": "setEntityAttachments(List)",
+      "signature": "public void setEntityAttachments(List<String> ids)",
+      "overrideSignature": "public override void setEntityAttachments(List<String> ids)",
+      "simplifiedSignature": "setEntityAttachments(List<String>)",
       "datatype": {
-        "id": "Messaging.singleemailmessage.setentityattachments.void",
+        "id": "Messaging.singleemailmessage.setentityattachments.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.setentityattachments",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Optional. Array of IDs of Document, ContentVersion, or Attachment items to attach to the email.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "<String>": {
-          "id": "Messaging.singleemailmessage.setentityattachments.<string>",
-          "type": "var",
-          "name": "<String>",
+        "ids": {
+          "id": "Messaging.singleemailmessage.method.setentityattachments(list<string>).varParam.ids",
+          "nodeType": "variable",
+          "name": "ids",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "ids",
+            "textToLower": "ids",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_ids_0:46"
           },
-          "signature": "List <String>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "ids",
+            "textToLower": "ids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 49
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ids_0:46"
+          },
+          "parentId": "Messaging.singleemailmessage.method.setentityattachments(list<string>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.setentityattachments.list",
+            "id": "Messaging.singleemailmessage.setentityattachments.datatype.List<String>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 33
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:33"
+            },
+            "parentId": "Messaging.singleemailmessage.setentityattachments",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Messaging.singleemailmessage.setentityattachments.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 38
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 44
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:38"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setfileattachments(emailfileattachment[])": {
-      "id": "Messaging.singleemailmessage.setfileattachments",
+      "id": "Messaging.singleemailmessage.method.setfileattachments(emailfileattachment[])",
       "nodeType": "method",
       "name": "setFileAttachments",
       "startToken": {
@@ -557,6 +1002,9 @@
         },
         "id": "declaration.entity.name.function_setFileAttachments_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 7,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -564,30 +1012,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setFileAttachments(EmailFileAttachment[] fileNames)",
+      "signature": "public Void setFileAttachments(EmailFileAttachment[] fileNames)",
+      "overrideSignature": "public override Void setFileAttachments(EmailFileAttachment[] fileNames)",
       "simplifiedSignature": "setFileAttachments(EmailFileAttachment[])",
       "datatype": {
-        "id": "Messaging.singleemailmessage.setfileattachments.void",
+        "id": "Messaging.singleemailmessage.setfileattachments.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.setfileattachments",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Optional. A list containing the file names of the binary and text files you want to attach to the email.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "fileNames": {
-          "id": "Messaging.singleemailmessage.setfileattachments.filenames",
-          "type": "var",
+        "filenames": {
+          "id": "Messaging.singleemailmessage.method.setfileattachments(emailfileattachment[]).varParam.filenames",
+          "nodeType": "variable",
           "name": "fileNames",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -596,29 +1070,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 62
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_fileNames_-1:0"
+            "id": "token.type.identifier_fileNames_0:53"
           },
-          "signature": "EmailFileAttachment[] fileNames",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fileNames",
+            "textToLower": "filenames",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 62
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fileNames_0:53"
+          },
+          "parentId": "Messaging.singleemailmessage.method.setfileattachments(emailfileattachment[])",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.setfileattachments.emailfileattachment[]",
+            "id": "Messaging.singleemailmessage.setfileattachments.datatype.EmailFileAttachment[]",
             "nodeType": "datatype",
-            "name": "EmailFileAttachment[]"
-          }
+            "name": "EmailFileAttachment[]",
+            "startToken": {
+              "type": "datatype.custom.class",
+              "text": "EmailFileAttachment",
+              "textToLower": "emailfileattachment",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 50
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_EmailFileAttachment_0:31"
+            },
+            "parentId": "Messaging.singleemailmessage.setfileattachments",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "EmailFileAttachment[]"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "sethtmlbody(string)": {
-      "id": "Messaging.singleemailmessage.sethtmlbody",
+      "id": "Messaging.singleemailmessage.method.sethtmlbody(string)",
       "nodeType": "method",
       "name": "setHtmlBody",
       "startToken": {
@@ -640,6 +1162,9 @@
         },
         "id": "declaration.entity.name.function_setHtmlBody_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 8,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -647,30 +1172,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setHtmlBody(String htmlBody)",
+      "signature": "public Void setHtmlBody(String htmlBody)",
+      "overrideSignature": "public override Void setHtmlBody(String htmlBody)",
       "simplifiedSignature": "setHtmlBody(String)",
       "datatype": {
-        "id": "Messaging.singleemailmessage.sethtmlbody.void",
+        "id": "Messaging.singleemailmessage.sethtmlbody.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.sethtmlbody",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Optional. The HTML version of the email, specified by the sender. The value is encoded according to the specification associated with the organization. Specify a value for setTemplateId, setHtmlBody, or setPlainTextBody. Or, you can define both setHtmlBody and setPlainTextBody.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "htmlBody": {
-          "id": "Messaging.singleemailmessage.sethtmlbody.htmlbody",
-          "type": "var",
+        "htmlbody": {
+          "id": "Messaging.singleemailmessage.method.sethtmlbody(string).varParam.htmlbody",
+          "nodeType": "variable",
           "name": "htmlBody",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -679,29 +1230,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 31
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_htmlBody_-1:0"
+            "id": "token.type.identifier_htmlBody_0:31"
           },
-          "signature": "String htmlBody",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "htmlBody",
+            "textToLower": "htmlbody",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 31
+              },
+              "end": {
+                "line": 0,
+                "character": 39
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_htmlBody_0:31"
+          },
+          "parentId": "Messaging.singleemailmessage.method.sethtmlbody(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.sethtmlbody.string",
+            "id": "Messaging.singleemailmessage.sethtmlbody.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 24
+                },
+                "end": {
+                  "line": 0,
+                  "character": 30
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:24"
+            },
+            "parentId": "Messaging.singleemailmessage.sethtmlbody",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setinreplyto(string)": {
-      "id": "Messaging.singleemailmessage.setinreplyto",
+      "id": "Messaging.singleemailmessage.method.setinreplyto(string)",
       "nodeType": "method",
       "name": "setInReplyTo",
       "startToken": {
@@ -723,6 +1322,9 @@
         },
         "id": "declaration.entity.name.function_setInReplyTo_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 9,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -730,30 +1332,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setInReplyTo(String parentMessageIds)",
+      "signature": "public Void setInReplyTo(String parentMessageIds)",
+      "overrideSignature": "public override Void setInReplyTo(String parentMessageIds)",
       "simplifiedSignature": "setInReplyTo(String)",
       "datatype": {
-        "id": "Messaging.singleemailmessage.setinreplyto.void",
+        "id": "Messaging.singleemailmessage.setinreplyto.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.setinreplyto",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Sets the optional In-Reply-To field of the outgoing email. This field identifies the email or emails to which this email is a reply (parent emails).",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "parentMessageIds": {
-          "id": "Messaging.singleemailmessage.setinreplyto.parentmessageids",
-          "type": "var",
+        "parentmessageids": {
+          "id": "Messaging.singleemailmessage.method.setinreplyto(string).varParam.parentmessageids",
+          "nodeType": "variable",
           "name": "parentMessageIds",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -762,29 +1390,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 32
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_parentMessageIds_-1:0"
+            "id": "token.type.identifier_parentMessageIds_0:32"
           },
-          "signature": "String parentMessageIds",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "parentMessageIds",
+            "textToLower": "parentmessageids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 32
+              },
+              "end": {
+                "line": 0,
+                "character": 48
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_parentMessageIds_0:32"
+          },
+          "parentId": "Messaging.singleemailmessage.method.setinreplyto(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.setinreplyto.string",
+            "id": "Messaging.singleemailmessage.setinreplyto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 31
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:25"
+            },
+            "parentId": "Messaging.singleemailmessage.setinreplyto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Contains one or more parent email message IDs.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setoptoutpolicy(string)": {
-      "id": "Messaging.singleemailmessage.setoptoutpolicy",
+      "id": "Messaging.singleemailmessage.method.setoptoutpolicy(string)",
       "nodeType": "method",
       "name": "setOptOutPolicy",
       "startToken": {
@@ -806,6 +1482,9 @@
         },
         "id": "declaration.entity.name.function_setOptOutPolicy_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 10,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -813,30 +1492,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setOptOutPolicy(String emailOptOutPolicy)",
+      "overrideSignature": "public override void setOptOutPolicy(String emailOptOutPolicy)",
       "simplifiedSignature": "setOptOutPolicy(String)",
       "datatype": {
-        "id": "Messaging.singleemailmessage.setoptoutpolicy.void",
+        "id": "Messaging.singleemailmessage.setoptoutpolicy.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.setoptoutpolicy",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Optional. If you added recipients by ID instead of email address and the Email Opt Out option is set, this method determines the behavior of the sendEmail() call. If you add recipients by their email addresses, the opt-out settings for those recipients aren’t checked and those recipients always receive the email.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "emailOptOutPolicy": {
-          "id": "Messaging.singleemailmessage.setoptoutpolicy.emailoptoutpolicy",
-          "type": "var",
+        "emailoptoutpolicy": {
+          "id": "Messaging.singleemailmessage.method.setoptoutpolicy(string).varParam.emailoptoutpolicy",
+          "nodeType": "variable",
           "name": "emailOptOutPolicy",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -845,29 +1550,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_emailOptOutPolicy_-1:0"
+            "id": "token.type.identifier_emailOptOutPolicy_0:35"
           },
-          "signature": "String emailOptOutPolicy",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "emailOptOutPolicy",
+            "textToLower": "emailoptoutpolicy",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 35
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_emailOptOutPolicy_0:35"
+          },
+          "parentId": "Messaging.singleemailmessage.method.setoptoutpolicy(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.setoptoutpolicy.string",
+            "id": "Messaging.singleemailmessage.setoptoutpolicy.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 28
+                },
+                "end": {
+                  "line": 0,
+                  "character": 34
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:28"
+            },
+            "parentId": "Messaging.singleemailmessage.setoptoutpolicy",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Possible values of the emailOptOutPolicy parameter are:  SEND (default)—The email is sent to all recipients. The recipients’ Email Opt Out setting is ignored. The setting Enforce email privacy settings is ignored.   FILTER—No email is sent to recipients that have the Email Opt Out option set. Emails are sent to the other recipients. The setting Enforce email privacy settings is ignored.   REJECT—If any of the recipients have the Email Opt Out option set, sendEmail() throws an error and no email is sent. The setting Enforce email privacy settings is respected, as are the selections in the data privacy record based on the Individual object. If any of the recipients have Don’t Market, Don’t Process, or Forget this Individual selected, sendEmail() throws an error and no email is sent.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setplaintextbody(string)": {
-      "id": "Messaging.singleemailmessage.setplaintextbody",
+      "id": "Messaging.singleemailmessage.method.setplaintextbody(string)",
       "nodeType": "method",
       "name": "setPlainTextBody",
       "startToken": {
@@ -889,6 +1642,9 @@
         },
         "id": "declaration.entity.name.function_setPlainTextBody_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 11,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -896,30 +1652,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setPlainTextBody(String plainTextBody)",
+      "signature": "public Void setPlainTextBody(String plainTextBody)",
+      "overrideSignature": "public override Void setPlainTextBody(String plainTextBody)",
       "simplifiedSignature": "setPlainTextBody(String)",
       "datatype": {
-        "id": "Messaging.singleemailmessage.setplaintextbody.void",
+        "id": "Messaging.singleemailmessage.setplaintextbody.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.setplaintextbody",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Optional. The text version of the email, specified by the sender. Specify a value for setTemplateId, setHtmlBody, or setPlainTextBody. Or, you can define both setHtmlBody and setPlainTextBody.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "plainTextBody": {
-          "id": "Messaging.singleemailmessage.setplaintextbody.plaintextbody",
-          "type": "var",
+        "plaintextbody": {
+          "id": "Messaging.singleemailmessage.method.setplaintextbody(string).varParam.plaintextbody",
+          "nodeType": "variable",
           "name": "plainTextBody",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -928,29 +1710,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 36
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_plainTextBody_-1:0"
+            "id": "token.type.identifier_plainTextBody_0:36"
           },
-          "signature": "String plainTextBody",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "plainTextBody",
+            "textToLower": "plaintextbody",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 36
+              },
+              "end": {
+                "line": 0,
+                "character": 49
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_plainTextBody_0:36"
+          },
+          "parentId": "Messaging.singleemailmessage.method.setplaintextbody(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.setplaintextbody.string",
+            "id": "Messaging.singleemailmessage.setplaintextbody.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 29
+                },
+                "end": {
+                  "line": 0,
+                  "character": 35
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:29"
+            },
+            "parentId": "Messaging.singleemailmessage.setplaintextbody",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setorgwideemailaddressid(id)": {
-      "id": "Messaging.singleemailmessage.setorgwideemailaddressid",
+      "id": "Messaging.singleemailmessage.method.setorgwideemailaddressid(id)",
       "nodeType": "method",
       "name": "setOrgWideEmailAddressId",
       "startToken": {
@@ -972,6 +1802,9 @@
         },
         "id": "declaration.entity.name.function_setOrgWideEmailAddressId_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 12,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -979,30 +1812,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setOrgWideEmailAddressId(ID emailAddressId)",
+      "signature": "public Void setOrgWideEmailAddressId(ID emailAddressId)",
+      "overrideSignature": "public override Void setOrgWideEmailAddressId(ID emailAddressId)",
       "simplifiedSignature": "setOrgWideEmailAddressId(ID)",
       "datatype": {
-        "id": "Messaging.singleemailmessage.setorgwideemailaddressid.void",
+        "id": "Messaging.singleemailmessage.setorgwideemailaddressid.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.setorgwideemailaddressid",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Optional. The ID of the organization-wide email address associated with the outgoing email. The object's DisplayName field cannot be set if the setSenderDisplayName field is already set.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "emailAddressId": {
-          "id": "Messaging.singleemailmessage.setorgwideemailaddressid.emailaddressid",
-          "type": "var",
+        "emailaddressid": {
+          "id": "Messaging.singleemailmessage.method.setorgwideemailaddressid(id).varParam.emailaddressid",
+          "nodeType": "variable",
           "name": "emailAddressId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1011,29 +1870,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 40
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_emailAddressId_-1:0"
+            "id": "token.type.identifier_emailAddressId_0:40"
           },
-          "signature": "ID emailAddressId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "emailAddressId",
+            "textToLower": "emailaddressid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 40
+              },
+              "end": {
+                "line": 0,
+                "character": 54
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_emailAddressId_0:40"
+          },
+          "parentId": "Messaging.singleemailmessage.method.setorgwideemailaddressid(id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.setorgwideemailaddressid.id",
+            "id": "Messaging.singleemailmessage.setorgwideemailaddressid.datatype.ID",
             "nodeType": "datatype",
-            "name": "ID"
-          }
+            "name": "ID",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "ID",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 39
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ID_0:37"
+            },
+            "parentId": "Messaging.singleemailmessage.setorgwideemailaddressid",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ID"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setreferences(string)": {
-      "id": "Messaging.singleemailmessage.setreferences",
+      "id": "Messaging.singleemailmessage.method.setreferences(string)",
       "nodeType": "method",
       "name": "setReferences",
       "startToken": {
@@ -1055,6 +1962,9 @@
         },
         "id": "declaration.entity.name.function_setReferences_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 13,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1062,30 +1972,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setReferences(String references)",
+      "signature": "public Void setReferences(String references)",
+      "overrideSignature": "public override Void setReferences(String references)",
       "simplifiedSignature": "setReferences(String)",
       "datatype": {
-        "id": "Messaging.singleemailmessage.setreferences.void",
+        "id": "Messaging.singleemailmessage.setreferences.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.setreferences",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Optional. The References field of the outgoing email. Identifies an email thread. Contains the parent emails' References and message IDs, and possibly the In-Reply-To fields.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
         "references": {
-          "id": "Messaging.singleemailmessage.setreferences.references",
-          "type": "var",
+          "id": "Messaging.singleemailmessage.method.setreferences(string).varParam.references",
+          "nodeType": "variable",
           "name": "references",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1094,29 +2030,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 33
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 43
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_references_-1:0"
+            "id": "token.type.identifier_references_0:33"
           },
-          "signature": "String references",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "references",
+            "textToLower": "references",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 33
+              },
+              "end": {
+                "line": 0,
+                "character": 43
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_references_0:33"
+          },
+          "parentId": "Messaging.singleemailmessage.method.setreferences(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.setreferences.string",
+            "id": "Messaging.singleemailmessage.setreferences.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 26
+                },
+                "end": {
+                  "line": 0,
+                  "character": 32
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:26"
+            },
+            "parentId": "Messaging.singleemailmessage.setreferences",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setsubject(string)": {
-      "id": "Messaging.singleemailmessage.setsubject",
+      "id": "Messaging.singleemailmessage.method.setsubject(string)",
       "nodeType": "method",
       "name": "setSubject",
       "startToken": {
@@ -1138,6 +2122,9 @@
         },
         "id": "declaration.entity.name.function_setSubject_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 14,
+      "memberOrder": 15,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1145,30 +2132,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setSubject(String subject)",
+      "signature": "public Void setSubject(String subject)",
+      "overrideSignature": "public override Void setSubject(String subject)",
       "simplifiedSignature": "setSubject(String)",
       "datatype": {
-        "id": "Messaging.singleemailmessage.setsubject.void",
+        "id": "Messaging.singleemailmessage.setsubject.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.setsubject",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Optional. The email subject line. If you are using an email template, the subject line of the template overrides this value.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
         "subject": {
-          "id": "Messaging.singleemailmessage.setsubject.subject",
-          "type": "var",
+          "id": "Messaging.singleemailmessage.method.setsubject(string).varParam.subject",
+          "nodeType": "variable",
           "name": "subject",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1177,29 +2190,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 30
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_subject_-1:0"
+            "id": "token.type.identifier_subject_0:30"
           },
-          "signature": "String subject",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "subject",
+            "textToLower": "subject",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 30
+              },
+              "end": {
+                "line": 0,
+                "character": 37
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_subject_0:30"
+          },
+          "parentId": "Messaging.singleemailmessage.method.setsubject(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.setsubject.string",
+            "id": "Messaging.singleemailmessage.setsubject.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:23"
+            },
+            "parentId": "Messaging.singleemailmessage.setsubject",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settargetobjectid(id)": {
-      "id": "Messaging.singleemailmessage.settargetobjectid",
+      "id": "Messaging.singleemailmessage.method.settargetobjectid(id)",
       "nodeType": "method",
       "name": "setTargetObjectId",
       "startToken": {
@@ -1221,6 +2282,9 @@
         },
         "id": "declaration.entity.name.function_setTargetObjectId_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 15,
+      "memberOrder": 16,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1228,30 +2292,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setTargetObjectId(ID targetObjectId)",
+      "signature": "public Void setTargetObjectId(ID targetObjectId)",
+      "overrideSignature": "public override Void setTargetObjectId(ID targetObjectId)",
       "simplifiedSignature": "setTargetObjectId(ID)",
       "datatype": {
-        "id": "Messaging.singleemailmessage.settargetobjectid.void",
+        "id": "Messaging.singleemailmessage.settargetobjectid.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.settargetobjectid",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Required if using a template, optional otherwise. The ID of the contact, lead, or user to which the email will be sent. The ID you specify sets the context and ensures that merge fields in the template contain the correct data.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "targetObjectId": {
-          "id": "Messaging.singleemailmessage.settargetobjectid.targetobjectid",
-          "type": "var",
+        "targetobjectid": {
+          "id": "Messaging.singleemailmessage.method.settargetobjectid(id).varParam.targetobjectid",
+          "nodeType": "variable",
           "name": "targetObjectId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1260,29 +2350,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 33
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_targetObjectId_-1:0"
+            "id": "token.type.identifier_targetObjectId_0:33"
           },
-          "signature": "ID targetObjectId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "targetObjectId",
+            "textToLower": "targetobjectid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 33
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_targetObjectId_0:33"
+          },
+          "parentId": "Messaging.singleemailmessage.method.settargetobjectid(id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.settargetobjectid.id",
+            "id": "Messaging.singleemailmessage.settargetobjectid.datatype.ID",
             "nodeType": "datatype",
-            "name": "ID"
-          }
+            "name": "ID",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "ID",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 32
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ID_0:30"
+            },
+            "parentId": "Messaging.singleemailmessage.settargetobjectid",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ID"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settemplateid(id)": {
-      "id": "Messaging.singleemailmessage.settemplateid",
+      "id": "Messaging.singleemailmessage.method.settemplateid(id)",
       "nodeType": "method",
       "name": "setTemplateId",
       "startToken": {
@@ -1304,6 +2442,9 @@
         },
         "id": "declaration.entity.name.function_setTemplateId_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 16,
+      "memberOrder": 17,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1311,30 +2452,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setTemplateId(ID templateId)",
+      "signature": "public Void setTemplateId(ID templateId)",
+      "overrideSignature": "public override Void setTemplateId(ID templateId)",
       "simplifiedSignature": "setTemplateId(ID)",
       "datatype": {
-        "id": "Messaging.singleemailmessage.settemplateid.void",
+        "id": "Messaging.singleemailmessage.settemplateid.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.settemplateid",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Required if using a template, optional otherwise. The ID of the template used to create the email.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "templateId": {
-          "id": "Messaging.singleemailmessage.settemplateid.templateid",
-          "type": "var",
+        "templateid": {
+          "id": "Messaging.singleemailmessage.method.settemplateid(id).varParam.templateid",
+          "nodeType": "variable",
           "name": "templateId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1343,29 +2510,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_templateId_-1:0"
+            "id": "token.type.identifier_templateId_0:29"
           },
-          "signature": "ID templateId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "templateId",
+            "textToLower": "templateid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 39
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_templateId_0:29"
+          },
+          "parentId": "Messaging.singleemailmessage.method.settemplateid(id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.settemplateid.id",
+            "id": "Messaging.singleemailmessage.settemplateid.datatype.ID",
             "nodeType": "datatype",
-            "name": "ID"
-          }
+            "name": "ID",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "ID",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 26
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ID_0:26"
+            },
+            "parentId": "Messaging.singleemailmessage.settemplateid",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ID"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settoaddresses(string[])": {
-      "id": "Messaging.singleemailmessage.settoaddresses",
+      "id": "Messaging.singleemailmessage.method.settoaddresses(string[])",
       "nodeType": "method",
       "name": "setToAddresses",
       "startToken": {
@@ -1387,6 +2602,9 @@
         },
         "id": "declaration.entity.name.function_setToAddresses_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 17,
+      "memberOrder": 18,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1394,30 +2612,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setToAddresses(String[] toAddresses)",
+      "signature": "public Void setToAddresses(String[] toAddresses)",
+      "overrideSignature": "public override Void setToAddresses(String[] toAddresses)",
       "simplifiedSignature": "setToAddresses(String[])",
       "datatype": {
-        "id": "Messaging.singleemailmessage.settoaddresses.void",
+        "id": "Messaging.singleemailmessage.settoaddresses.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.settoaddresses",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Optional. A list of email addresses or object IDs of the contacts, leads, and users you’re sending the email to. The maximum size for this field is 4,000 bytes. The maximum total of toAddresses, ccAddresses, and bccAddresses per email is 150.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "toAddresses": {
-          "id": "Messaging.singleemailmessage.settoaddresses.toaddresses",
-          "type": "var",
+        "toaddresses": {
+          "id": "Messaging.singleemailmessage.method.settoaddresses(string[]).varParam.toaddresses",
+          "nodeType": "variable",
           "name": "toAddresses",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1426,29 +2670,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 36
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_toAddresses_-1:0"
+            "id": "token.type.identifier_toAddresses_0:36"
           },
-          "signature": "String[] toAddresses",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "toAddresses",
+            "textToLower": "toaddresses",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 36
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_toAddresses_0:36"
+          },
+          "parentId": "Messaging.singleemailmessage.method.settoaddresses(string[])",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.settoaddresses.string[]",
+            "id": "Messaging.singleemailmessage.settoaddresses.datatype.String[]",
             "nodeType": "datatype",
-            "name": "String[]"
-          }
+            "name": "String[]",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 27
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:27"
+            },
+            "parentId": "Messaging.singleemailmessage.settoaddresses",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String[]"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settreatbodiesastemplate(boolean)": {
-      "id": "Messaging.singleemailmessage.settreatbodiesastemplate",
+      "id": "Messaging.singleemailmessage.method.settreatbodiesastemplate(boolean)",
       "nodeType": "method",
       "name": "setTreatBodiesAsTemplate",
       "startToken": {
@@ -1470,6 +2762,9 @@
         },
         "id": "declaration.entity.name.function_setTreatBodiesAsTemplate_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 18,
+      "memberOrder": 19,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1477,30 +2772,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setTreatBodiesAsTemplate(Boolean treatAsTemplate)",
+      "overrideSignature": "public override void setTreatBodiesAsTemplate(Boolean treatAsTemplate)",
       "simplifiedSignature": "setTreatBodiesAsTemplate(Boolean)",
       "datatype": {
-        "id": "Messaging.singleemailmessage.settreatbodiesastemplate.void",
+        "id": "Messaging.singleemailmessage.settreatbodiesastemplate.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.settreatbodiesastemplate",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Optional. If set to true, the subject, plain text, and HTML text bodies of the email are treated as template data. The merge fields are resolved using the renderEmailTemplate method. Default is false.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "treatAsTemplate": {
-          "id": "Messaging.singleemailmessage.settreatbodiesastemplate.treatastemplate",
-          "type": "var",
+        "treatastemplate": {
+          "id": "Messaging.singleemailmessage.method.settreatbodiesastemplate(boolean).varParam.treatastemplate",
+          "nodeType": "variable",
           "name": "treatAsTemplate",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1509,29 +2830,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_treatAsTemplate_-1:0"
+            "id": "token.type.identifier_treatAsTemplate_0:45"
           },
-          "signature": "Boolean treatAsTemplate",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "treatAsTemplate",
+            "textToLower": "treatastemplate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 45
+              },
+              "end": {
+                "line": 0,
+                "character": 60
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_treatAsTemplate_0:45"
+          },
+          "parentId": "Messaging.singleemailmessage.method.settreatbodiesastemplate(boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.settreatbodiesastemplate.boolean",
+            "id": "Messaging.singleemailmessage.settreatbodiesastemplate.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 44
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:37"
+            },
+            "parentId": "Messaging.singleemailmessage.settreatbodiesastemplate",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settreattargetobjectasrecipient(boolean)": {
-      "id": "Messaging.singleemailmessage.settreattargetobjectasrecipient",
+      "id": "Messaging.singleemailmessage.method.settreattargetobjectasrecipient(boolean)",
       "nodeType": "method",
       "name": "setTreatTargetObjectAsRecipient",
       "startToken": {
@@ -1553,6 +2922,9 @@
         },
         "id": "declaration.entity.name.function_setTreatTargetObjectAsRecipient_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 19,
+      "memberOrder": 20,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1560,30 +2932,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setTreatTargetObjectAsRecipient(Boolean treatAsRecipient)",
+      "overrideSignature": "public override void setTreatTargetObjectAsRecipient(Boolean treatAsRecipient)",
       "simplifiedSignature": "setTreatTargetObjectAsRecipient(Boolean)",
       "datatype": {
-        "id": "Messaging.singleemailmessage.settreattargetobjectasrecipient.void",
+        "id": "Messaging.singleemailmessage.settreattargetobjectasrecipient.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.settreattargetobjectasrecipient",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Optional. If set to true, the targetObjectId (a contact, lead, or user) is the recipient of the email. If set to false, the targetObjectId is supplied as the WhoId field for template rendering but isn’t a recipient of the email. The default is true.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "treatAsRecipient": {
-          "id": "Messaging.singleemailmessage.settreattargetobjectasrecipient.treatasrecipient",
-          "type": "var",
+        "treatasrecipient": {
+          "id": "Messaging.singleemailmessage.method.settreattargetobjectasrecipient(boolean).varParam.treatasrecipient",
+          "nodeType": "variable",
           "name": "treatAsRecipient",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1592,29 +2990,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 68
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_treatAsRecipient_-1:0"
+            "id": "token.type.identifier_treatAsRecipient_0:52"
           },
-          "signature": "Boolean treatAsRecipient",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "treatAsRecipient",
+            "textToLower": "treatasrecipient",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 52
+              },
+              "end": {
+                "line": 0,
+                "character": 68
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_treatAsRecipient_0:52"
+          },
+          "parentId": "Messaging.singleemailmessage.method.settreattargetobjectasrecipient(boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.settreattargetobjectasrecipient.boolean",
+            "id": "Messaging.singleemailmessage.settreattargetobjectasrecipient.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 44
+                },
+                "end": {
+                  "line": 0,
+                  "character": 51
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:44"
+            },
+            "parentId": "Messaging.singleemailmessage.settreattargetobjectasrecipient",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setwhatid(id)": {
-      "id": "Messaging.singleemailmessage.setwhatid",
+      "id": "Messaging.singleemailmessage.method.setwhatid(id)",
       "nodeType": "method",
       "name": "setWhatId",
       "startToken": {
@@ -1636,6 +3082,9 @@
         },
         "id": "declaration.entity.name.function_setWhatId_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 20,
+      "memberOrder": 21,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1643,30 +3092,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setWhatId(ID whatId)",
+      "signature": "public Void setWhatId(ID whatId)",
+      "overrideSignature": "public override Void setWhatId(ID whatId)",
       "simplifiedSignature": "setWhatId(ID)",
       "datatype": {
-        "id": "Messaging.singleemailmessage.setwhatid.void",
+        "id": "Messaging.singleemailmessage.setwhatid.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Messaging.singleemailmessage.setwhatid",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "If you specify a contact for the targetObjectId field, you can specify an optional whatId as well. This helps to further ensure that merge fields in the template contain the correct data.",
+      "parentName": "SingleEmailMessage",
+      "variables": {},
       "params": {
-        "whatId": {
-          "id": "Messaging.singleemailmessage.setwhatid.whatid",
-          "type": "var",
+        "whatid": {
+          "id": "Messaging.singleemailmessage.method.setwhatid(id).varParam.whatid",
+          "nodeType": "variable",
           "name": "whatId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1675,31 +3150,79 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 25
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 31
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_whatId_-1:0"
+            "id": "token.type.identifier_whatId_0:25"
           },
-          "signature": "ID whatId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "whatId",
+            "textToLower": "whatid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 25
+              },
+              "end": {
+                "line": 0,
+                "character": 31
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_whatId_0:25"
+          },
+          "parentId": "Messaging.singleemailmessage.method.setwhatid(id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Messaging.singleemailmessage.setwhatid.id",
+            "id": "Messaging.singleemailmessage.setwhatid.datatype.ID",
             "nodeType": "datatype",
-            "name": "ID"
-          }
+            "name": "ID",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "ID",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 24
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ID_0:22"
+            },
+            "parentId": "Messaging.singleemailmessage.setwhatid",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ID"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {
     "singleemailmessage()": {
-      "id": "Messaging.singleemailmessage.singleemailmessage",
+      "id": "Messaging.singleemailmessage.method.singleemailmessage()",
       "nodeType": "constructor",
       "name": "SingleEmailMessage",
       "startToken": {
@@ -1721,6 +3244,9 @@
         },
         "id": "declaration.entity.name.function_SingleEmailMessage_-1:0"
       },
+      "parentId": "Messaging.singleemailmessage",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1728,30 +3254,32 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public SingleEmailMessage()",
+      "overrideSignature": "public override SingleEmailMessage()",
       "simplifiedSignature": "SingleEmailMessage()",
-      "datatype": {
-        "id": "Messaging.singleemailmessage.singleemailmessage.constructor",
-        "nodeType": "datatype",
-        "name": "SingleEmailMessage"
-      },
       "description": "Creates a new instance of the Messaging.SingleEmailMessage class.",
-      "params": {}
+      "parentName": "SingleEmailMessage",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 21,
+  "queries": []
 }

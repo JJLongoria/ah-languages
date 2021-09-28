@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_SendEmailQuickActionDefaults_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getfromaddresslist()": {
-      "id": "QuickAction.sendemailquickactiondefaults.getfromaddresslist",
+      "id": "QuickAction.sendemailquickactiondefaults.method.getfromaddresslist()",
       "nodeType": "method",
       "name": "getFromAddressList",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getFromAddressList_-1:0"
       },
+      "parentId": "QuickAction.sendemailquickactiondefaults",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<String> getFromAddressList()",
+      "overrideSignature": "public override List<String> getFromAddressList()",
       "simplifiedSignature": "getFromAddressList()",
       "datatype": {
-        "id": "QuickAction.sendemailquickactiondefaults.getfromaddresslist.List<String>",
+        "id": "QuickAction.sendemailquickactiondefaults.getfromaddresslist.datatype.List<String>",
         "nodeType": "datatype",
-        "name": "List<String>"
+        "name": "List<String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "QuickAction.sendemailquickactiondefaults.getfromaddresslist",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "QuickAction.sendemailquickactiondefaults.getfromaddresslist.datatype.List<String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 18
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Returns a list of email addresses that are available in the From: address drop-down menu for the standard Email Action.",
-      "params": {}
+      "parentName": "SendEmailQuickActionDefaults",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getinreplytoid()": {
-      "id": "QuickAction.sendemailquickactiondefaults.getinreplytoid",
+      "id": "QuickAction.sendemailquickactiondefaults.method.getinreplytoid()",
       "nodeType": "method",
       "name": "getInReplyToId",
       "startToken": {
@@ -142,6 +202,9 @@
         },
         "id": "declaration.entity.name.function_getInReplyToId_-1:0"
       },
+      "parentId": "QuickAction.sendemailquickactiondefaults",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,30 +212,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Id getInReplyToId()",
+      "overrideSignature": "public override Id getInReplyToId()",
       "simplifiedSignature": "getInReplyToId()",
       "datatype": {
-        "id": "QuickAction.sendemailquickactiondefaults.getinreplytoid.Id",
+        "id": "QuickAction.sendemailquickactiondefaults.getinreplytoid.datatype.Id",
         "nodeType": "datatype",
-        "name": "Id"
+        "name": "Id",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Id",
+          "textToLower": "id",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 9
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Id_0:7"
+        },
+        "parentId": "QuickAction.sendemailquickactiondefaults.getinreplytoid",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Id"
       },
       "description": "Returns the email message ID of the email to which the reply/reply all action has been invoked.",
-      "params": {}
+      "parentName": "SendEmailQuickActionDefaults",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "setignoretemplatesubject(boolean)": {
-      "id": "QuickAction.sendemailquickactiondefaults.setignoretemplatesubject",
+      "id": "QuickAction.sendemailquickactiondefaults.method.setignoretemplatesubject(boolean)",
       "nodeType": "method",
       "name": "setIgnoreTemplateSubject",
       "startToken": {
@@ -194,6 +285,9 @@
         },
         "id": "declaration.entity.name.function_setIgnoreTemplateSubject_-1:0"
       },
+      "parentId": "QuickAction.sendemailquickactiondefaults",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -201,30 +295,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setIgnoreTemplateSubject(Boolean useOriginalSubject)",
+      "overrideSignature": "public override void setIgnoreTemplateSubject(Boolean useOriginalSubject)",
       "simplifiedSignature": "setIgnoreTemplateSubject(Boolean)",
       "datatype": {
-        "id": "QuickAction.sendemailquickactiondefaults.setignoretemplatesubject.void",
+        "id": "QuickAction.sendemailquickactiondefaults.setignoretemplatesubject.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "QuickAction.sendemailquickactiondefaults.setignoretemplatesubject",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Specifies whether the template subject should be ignored (true), thus using the original subject, or whether the template subject should replace the original subject (false).",
+      "parentName": "SendEmailQuickActionDefaults",
+      "variables": {},
       "params": {
-        "useOriginalSubject": {
-          "id": "QuickAction.sendemailquickactiondefaults.setignoretemplatesubject.useoriginalsubject",
-          "type": "var",
+        "useoriginalsubject": {
+          "id": "QuickAction.sendemailquickactiondefaults.method.setignoretemplatesubject(boolean).varParam.useoriginalsubject",
+          "nodeType": "variable",
           "name": "useOriginalSubject",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -233,29 +353,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 63
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_useOriginalSubject_-1:0"
+            "id": "token.type.identifier_useOriginalSubject_0:45"
           },
-          "signature": "Boolean useOriginalSubject",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "useOriginalSubject",
+            "textToLower": "useoriginalsubject",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 45
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_useOriginalSubject_0:45"
+          },
+          "parentId": "QuickAction.sendemailquickactiondefaults.method.setignoretemplatesubject(boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "QuickAction.sendemailquickactiondefaults.setignoretemplatesubject.boolean",
+            "id": "QuickAction.sendemailquickactiondefaults.setignoretemplatesubject.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 44
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:37"
+            },
+            "parentId": "QuickAction.sendemailquickactiondefaults.setignoretemplatesubject",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setinserttemplatebody(boolean)": {
-      "id": "QuickAction.sendemailquickactiondefaults.setinserttemplatebody",
+      "id": "QuickAction.sendemailquickactiondefaults.method.setinserttemplatebody(boolean)",
       "nodeType": "method",
       "name": "setInsertTemplateBody",
       "startToken": {
@@ -277,6 +445,9 @@
         },
         "id": "declaration.entity.name.function_setInsertTemplateBody_-1:0"
       },
+      "parentId": "QuickAction.sendemailquickactiondefaults",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -284,30 +455,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setInsertTemplateBody(Boolean keepOriginalBodyContent)",
+      "overrideSignature": "public override void setInsertTemplateBody(Boolean keepOriginalBodyContent)",
       "simplifiedSignature": "setInsertTemplateBody(Boolean)",
       "datatype": {
-        "id": "QuickAction.sendemailquickactiondefaults.setinserttemplatebody.void",
+        "id": "QuickAction.sendemailquickactiondefaults.setinserttemplatebody.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "QuickAction.sendemailquickactiondefaults.setinserttemplatebody",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Specifies whether the template body should be inserted above the original body content (true) or whether it should replace the entire content with the template body (false).",
+      "parentName": "SendEmailQuickActionDefaults",
+      "variables": {},
       "params": {
-        "keepOriginalBodyContent": {
-          "id": "QuickAction.sendemailquickactiondefaults.setinserttemplatebody.keeporiginalbodycontent",
-          "type": "var",
+        "keeporiginalbodycontent": {
+          "id": "QuickAction.sendemailquickactiondefaults.method.setinserttemplatebody(boolean).varParam.keeporiginalbodycontent",
+          "nodeType": "variable",
           "name": "keepOriginalBodyContent",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -316,29 +513,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_keepOriginalBodyContent_-1:0"
+            "id": "token.type.identifier_keepOriginalBodyContent_0:42"
           },
-          "signature": "Boolean keepOriginalBodyContent",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "keepOriginalBodyContent",
+            "textToLower": "keeporiginalbodycontent",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 65
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_keepOriginalBodyContent_0:42"
+          },
+          "parentId": "QuickAction.sendemailquickactiondefaults.method.setinserttemplatebody(boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "QuickAction.sendemailquickactiondefaults.setinserttemplatebody.boolean",
+            "id": "QuickAction.sendemailquickactiondefaults.setinserttemplatebody.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:34"
+            },
+            "parentId": "QuickAction.sendemailquickactiondefaults.setinserttemplatebody",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settemplateid(id)": {
-      "id": "QuickAction.sendemailquickactiondefaults.settemplateid",
+      "id": "QuickAction.sendemailquickactiondefaults.method.settemplateid(id)",
       "nodeType": "method",
       "name": "setTemplateId",
       "startToken": {
@@ -360,6 +605,9 @@
         },
         "id": "declaration.entity.name.function_setTemplateId_-1:0"
       },
+      "parentId": "QuickAction.sendemailquickactiondefaults",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -367,30 +615,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setTemplateId(Id templateId)",
+      "overrideSignature": "public override void setTemplateId(Id templateId)",
       "simplifiedSignature": "setTemplateId(Id)",
       "datatype": {
-        "id": "QuickAction.sendemailquickactiondefaults.settemplateid.void",
+        "id": "QuickAction.sendemailquickactiondefaults.settemplateid.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "QuickAction.sendemailquickactiondefaults.settemplateid",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Sets the email template ID to load into the email body.",
+      "parentName": "SendEmailQuickActionDefaults",
+      "variables": {},
       "params": {
-        "templateId": {
-          "id": "QuickAction.sendemailquickactiondefaults.settemplateid.templateid",
-          "type": "var",
+        "templateid": {
+          "id": "QuickAction.sendemailquickactiondefaults.method.settemplateid(id).varParam.templateid",
+          "nodeType": "variable",
           "name": "templateId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -399,30 +673,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_templateId_-1:0"
+            "id": "token.type.identifier_templateId_0:29"
           },
-          "signature": "Id templateId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "templateId",
+            "textToLower": "templateid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 39
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_templateId_0:29"
+          },
+          "parentId": "QuickAction.sendemailquickactiondefaults.method.settemplateid(id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "QuickAction.sendemailquickactiondefaults.settemplateid.id",
+            "id": "QuickAction.sendemailquickactiondefaults.settemplateid.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 26
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:26"
+            },
+            "parentId": "QuickAction.sendemailquickactiondefaults.settemplateid",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "The template ID.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 5,
+  "queries": []
 }

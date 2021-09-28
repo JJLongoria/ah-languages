@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Integer_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "format()": {
-      "id": "System.integer.format",
+      "id": "System.integer.method.format()",
       "nodeType": "method",
       "name": "format",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_format_-1:0"
       },
+      "parentId": "System.integer",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String format()",
+      "overrideSignature": "public override String format()",
       "simplifiedSignature": "format()",
       "datatype": {
-        "id": "System.integer.format.String",
+        "id": "System.integer.format.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.integer.format",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the integer as a string using the locale of the context user.",
-      "params": {}
+      "parentName": "Integer",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "valueof(string)": {
-      "id": "System.integer.valueof",
+      "id": "System.integer.method.valueof(string)",
       "nodeType": "method",
       "name": "valueOf",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_valueOf_-1:0"
       },
+      "parentId": "System.integer",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,17 +185,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -168,30 +204,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Integer valueOf(String stringToInteger)",
+      "overrideSignature": "public static override Integer valueOf(String stringToInteger)",
       "simplifiedSignature": "valueOf(String)",
       "datatype": {
-        "id": "System.integer.valueof.Integer",
+        "id": "System.integer.valueof.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:14"
+        },
+        "parentId": "System.integer.valueof",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns an Integer that contains the value of the specified String. As in Java, the String is interpreted as representing a signed decimal integer.",
+      "parentName": "Integer",
+      "variables": {},
       "params": {
-        "stringToInteger": {
-          "id": "System.integer.valueof.stringtointeger",
-          "type": "var",
+        "stringtointeger": {
+          "id": "System.integer.method.valueof(string).varParam.stringtointeger",
+          "nodeType": "variable",
           "name": "stringToInteger",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -200,29 +262,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_stringToInteger_-1:0"
+            "id": "token.type.identifier_stringToInteger_0:37"
           },
-          "signature": "String stringToInteger",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "stringToInteger",
+            "textToLower": "stringtointeger",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_stringToInteger_0:37"
+          },
+          "parentId": "System.integer.method.valueof(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.integer.valueof.string",
+            "id": "System.integer.valueof.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:30"
+            },
+            "parentId": "System.integer.valueof",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "valueof(object)": {
-      "id": "System.integer.valueof",
+      "id": "System.integer.method.valueof(object)",
       "nodeType": "method",
       "name": "valueOf",
       "startToken": {
@@ -244,6 +354,9 @@
         },
         "id": "declaration.entity.name.function_valueOf_-1:0"
       },
+      "parentId": "System.integer",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -251,17 +364,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -270,30 +383,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Integer valueOf(Object fieldValue)",
+      "overrideSignature": "public static override Integer valueOf(Object fieldValue)",
       "simplifiedSignature": "valueOf(Object)",
       "datatype": {
-        "id": "System.integer.valueof.Integer",
+        "id": "System.integer.valueof.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:14"
+        },
+        "parentId": "System.integer.valueof",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Converts the specified object to an Integer. Use this method to convert a history tracking field value or an object that represents an Integer value.",
+      "parentName": "Integer",
+      "variables": {},
       "params": {
-        "fieldValue": {
-          "id": "System.integer.valueof.fieldvalue",
-          "type": "var",
+        "fieldvalue": {
+          "id": "System.integer.method.valueof(object).varParam.fieldvalue",
+          "nodeType": "variable",
           "name": "fieldValue",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -302,30 +441,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_fieldValue_-1:0"
+            "id": "token.type.identifier_fieldValue_0:37"
           },
-          "signature": "Object fieldValue",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fieldValue",
+            "textToLower": "fieldvalue",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fieldValue_0:37"
+          },
+          "parentId": "System.integer.method.valueof(object)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.integer.valueof.object",
+            "id": "System.integer.valueof.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:30"
+            },
+            "parentId": "System.integer.valueof",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 3,
+  "queries": []
 }

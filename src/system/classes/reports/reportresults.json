@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_ReportResults_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getalldata()": {
-      "id": "Reports.reportresults.getalldata",
+      "id": "Reports.reportresults.method.getalldata()",
       "nodeType": "method",
       "name": "getAllData",
       "startToken": {
@@ -90,18 +92,68 @@
         },
         "id": "declaration.entity.name.function_getAllData_-1:0"
       },
-      "signature": "Boolean getAllData()",
+      "parentId": "Reports.reportresults",
+      "order": 1,
+      "memberOrder": 1,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public Boolean getAllData()",
+      "overrideSignature": "public override Boolean getAllData()",
       "simplifiedSignature": "getAllData()",
       "datatype": {
-        "id": "Reports.reportresults.getalldata.Boolean",
+        "id": "Reports.reportresults.getalldata.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Reports.reportresults.getalldata",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns all report data.",
-      "params": {}
+      "parentName": "ReportResults",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getfactmap()": {
-      "id": "Reports.reportresults.getfactmap",
+      "id": "Reports.reportresults.method.getfactmap()",
       "nodeType": "method",
       "name": "getFactMap",
       "startToken": {
@@ -123,18 +175,122 @@
         },
         "id": "declaration.entity.name.function_getFactMap_-1:0"
       },
-      "signature": "Map<String, Reports.ReportFact> getFactMap()",
+      "parentId": "Reports.reportresults",
+      "order": 2,
+      "memberOrder": 2,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public Map<String,Reports.ReportFact> getFactMap()",
+      "overrideSignature": "public override Map<String,Reports.ReportFact> getFactMap()",
       "simplifiedSignature": "getFactMap()",
       "datatype": {
-        "id": "Reports.reportresults.getfactmap.Map<String, Reports.ReportFact>",
+        "id": "Reports.reportresults.getfactmap.datatype.Map<String,Reports.ReportFact>",
         "nodeType": "datatype",
-        "name": "Map<String, Reports.ReportFact>"
+        "name": "Map<String,Reports.ReportFact>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "Reports.reportresults.getfactmap",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "Reports.reportresults.getfactmap.datatype.Map<String,Reports.ReportFact>.value.Reports.ReportFact",
+          "nodeType": "datatype",
+          "name": "Reports.ReportFact",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Reports",
+            "textToLower": "reports",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 25
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Reports_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Reports.ReportFact"
+        },
+        "key": {
+          "id": "Reports.reportresults.getfactmap.datatype.Map<String,Reports.ReportFact>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Returns summary-level data or summary and detailed data for each row or column grouping. Detailed data is available if the includeDetails parameter is set to true when the report is run.",
-      "params": {}
+      "parentName": "ReportResults",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getgroupingsacross()": {
-      "id": "Reports.reportresults.getgroupingsacross",
+      "id": "Reports.reportresults.method.getgroupingsacross()",
       "nodeType": "method",
       "name": "getGroupingsAcross",
       "startToken": {
@@ -156,18 +312,68 @@
         },
         "id": "declaration.entity.name.function_getGroupingsAcross_-1:0"
       },
-      "signature": "Reports.Dimension getGroupingsAcross()",
+      "parentId": "Reports.reportresults",
+      "order": 3,
+      "memberOrder": 3,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public Reports.Dimension getGroupingsAcross()",
+      "overrideSignature": "public override Reports.Dimension getGroupingsAcross()",
       "simplifiedSignature": "getGroupingsAcross()",
       "datatype": {
-        "id": "Reports.reportresults.getgroupingsacross.Reports.Dimension",
+        "id": "Reports.reportresults.getgroupingsacross.datatype.Reports.Dimension",
         "nodeType": "datatype",
-        "name": "Reports.Dimension"
+        "name": "Reports.Dimension",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:7"
+        },
+        "parentId": "Reports.reportresults.getgroupingsacross",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.Dimension"
       },
       "description": "Returns a collection of column groupings, keys, and values.",
-      "params": {}
+      "parentName": "ReportResults",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getgroupingsdown()": {
-      "id": "Reports.reportresults.getgroupingsdown",
+      "id": "Reports.reportresults.method.getgroupingsdown()",
       "nodeType": "method",
       "name": "getGroupingsDown",
       "startToken": {
@@ -189,18 +395,68 @@
         },
         "id": "declaration.entity.name.function_getGroupingsDown_-1:0"
       },
-      "signature": "Reports.Dimension getGroupingsDown()",
+      "parentId": "Reports.reportresults",
+      "order": 4,
+      "memberOrder": 4,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public Reports.Dimension getGroupingsDown()",
+      "overrideSignature": "public override Reports.Dimension getGroupingsDown()",
       "simplifiedSignature": "getGroupingsDown()",
       "datatype": {
-        "id": "Reports.reportresults.getgroupingsdown.Reports.Dimension",
+        "id": "Reports.reportresults.getgroupingsdown.datatype.Reports.Dimension",
         "nodeType": "datatype",
-        "name": "Reports.Dimension"
+        "name": "Reports.Dimension",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:7"
+        },
+        "parentId": "Reports.reportresults.getgroupingsdown",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.Dimension"
       },
       "description": "Returns a collection of row groupings, keys, and values.",
-      "params": {}
+      "parentName": "ReportResults",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "gethasdetailrows()": {
-      "id": "Reports.reportresults.gethasdetailrows",
+      "id": "Reports.reportresults.method.gethasdetailrows()",
       "nodeType": "method",
       "name": "getHasDetailRows",
       "startToken": {
@@ -222,18 +478,68 @@
         },
         "id": "declaration.entity.name.function_getHasDetailRows_-1:0"
       },
-      "signature": "Boolean getHasDetailRows()",
+      "parentId": "Reports.reportresults",
+      "order": 5,
+      "memberOrder": 5,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public Boolean getHasDetailRows()",
+      "overrideSignature": "public override Boolean getHasDetailRows()",
       "simplifiedSignature": "getHasDetailRows()",
       "datatype": {
-        "id": "Reports.reportresults.gethasdetailrows.Boolean",
+        "id": "Reports.reportresults.gethasdetailrows.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Reports.reportresults.gethasdetailrows",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns information about whether the fact map has detail rows.",
-      "params": {}
+      "parentName": "ReportResults",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getreportextendedmetadata()": {
-      "id": "Reports.reportresults.getreportextendedmetadata",
+      "id": "Reports.reportresults.method.getreportextendedmetadata()",
       "nodeType": "method",
       "name": "getReportExtendedMetadata",
       "startToken": {
@@ -255,18 +561,68 @@
         },
         "id": "declaration.entity.name.function_getReportExtendedMetadata_-1:0"
       },
-      "signature": "Reports.ReportExtendedMetadata getReportExtendedMetadata()",
+      "parentId": "Reports.reportresults",
+      "order": 6,
+      "memberOrder": 6,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public Reports.ReportExtendedMetadata getReportExtendedMetadata()",
+      "overrideSignature": "public override Reports.ReportExtendedMetadata getReportExtendedMetadata()",
       "simplifiedSignature": "getReportExtendedMetadata()",
       "datatype": {
-        "id": "Reports.reportresults.getreportextendedmetadata.Reports.ReportExtendedMetadata",
+        "id": "Reports.reportresults.getreportextendedmetadata.datatype.Reports.ReportExtendedMetadata",
         "nodeType": "datatype",
-        "name": "Reports.ReportExtendedMetadata"
+        "name": "Reports.ReportExtendedMetadata",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:7"
+        },
+        "parentId": "Reports.reportresults.getreportextendedmetadata",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.ReportExtendedMetadata"
       },
       "description": "Returns additional, detailed metadata about the report, including data type and label information for groupings and summaries.",
-      "params": {}
+      "parentName": "ReportResults",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getreportmetadata()": {
-      "id": "Reports.reportresults.getreportmetadata",
+      "id": "Reports.reportresults.method.getreportmetadata()",
       "nodeType": "method",
       "name": "getReportMetadata",
       "startToken": {
@@ -288,19 +644,71 @@
         },
         "id": "declaration.entity.name.function_getReportMetadata_-1:0"
       },
-      "signature": "Reports.ReportMetadata getReportMetadata()",
+      "parentId": "Reports.reportresults",
+      "order": 7,
+      "memberOrder": 7,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public Reports.ReportMetadata getReportMetadata()",
+      "overrideSignature": "public override Reports.ReportMetadata getReportMetadata()",
       "simplifiedSignature": "getReportMetadata()",
       "datatype": {
-        "id": "Reports.reportresults.getreportmetadata.Reports.ReportMetadata",
+        "id": "Reports.reportresults.getreportmetadata.datatype.Reports.ReportMetadata",
         "nodeType": "datatype",
-        "name": "Reports.ReportMetadata"
+        "name": "Reports.ReportMetadata",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:7"
+        },
+        "parentId": "Reports.reportresults.getreportmetadata",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.ReportMetadata"
       },
       "description": "Returns metadata about the report, including grouping and summary information.",
-      "params": {}
+      "parentName": "ReportResults",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 7,
+  "queries": []
 }

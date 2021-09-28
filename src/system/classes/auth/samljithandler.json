@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_SamlJitHandler_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "createuser(id,id,id,string,map,string>)": {
-      "id": "Auth.samljithandler.createuser",
+    "createuser(id,id,id,string,map<string,string>,string)": {
+      "id": "Auth.samljithandler.method.createuser(id,id,id,string,map<string,string>,string)",
       "nodeType": "method",
       "name": "createUser",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_createUser_-1:0"
       },
+      "parentId": "Auth.samljithandler",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public User createUser(Id samlSsoProviderId, Id communityId, Id portalId, String federationId, Map <String, String> attributes,)",
-      "simplifiedSignature": "createUser(Id,Id,Id,String,Map,String>)",
+      "signature": "public User createUser(Id samlSsoProviderId, Id communityId, Id portalId, String federationId, Map<String,String> attributes, String assertion)",
+      "overrideSignature": "public override User createUser(Id samlSsoProviderId, Id communityId, Id portalId, String federationId, Map<String,String> attributes, String assertion)",
+      "simplifiedSignature": "createUser(Id,Id,Id,String,Map<String,String>,String)",
       "datatype": {
-        "id": "Auth.samljithandler.createuser.User",
+        "id": "Auth.samljithandler.createuser.datatype.User",
         "nodeType": "datatype",
-        "name": "User"
+        "name": "User",
+        "startToken": {
+          "type": "datatype.support.sobject",
+          "text": "User",
+          "textToLower": "user",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_User_0:7"
+        },
+        "parentId": "Auth.samljithandler.createuser",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "User"
       },
       "description": "Returns a User object using the specified Federation ID. The User object corresponds to the user information and may be a new user that hasn’t t been inserted in the database or may represent an existing user record in the database.",
+      "parentName": "SamlJitHandler",
+      "variables": {},
       "params": {
-        "samlSsoProviderId": {
-          "id": "Auth.samljithandler.createuser.samlssoproviderid",
-          "type": "var",
+        "samlssoproviderid": {
+          "id": "Auth.samljithandler.method.createuser(id,id,id,string,map<string,string>,string).varParam.samlssoproviderid",
+          "nodeType": "variable",
           "name": "samlSsoProviderId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,28 +160,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 26
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 43
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_samlSsoProviderId_-1:0"
+            "id": "token.type.identifier_samlSsoProviderId_0:26"
           },
-          "signature": "Id samlSsoProviderId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "samlSsoProviderId",
+            "textToLower": "samlssoproviderid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 26
+              },
+              "end": {
+                "line": 0,
+                "character": 43
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_samlSsoProviderId_0:26"
+          },
+          "parentId": "Auth.samljithandler.method.createuser(id,id,id,string,map<string,string>,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.samljithandler.createuser.id",
+            "id": "Auth.samljithandler.createuser.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 25
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:23"
+            },
+            "parentId": "Auth.samljithandler.createuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "communityId": {
-          "id": "Auth.samljithandler.createuser.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "Auth.samljithandler.method.createuser(id,id,id,string,map<string,string>,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -159,28 +235,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:48"
           },
-          "signature": "Id communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 48
+              },
+              "end": {
+                "line": 0,
+                "character": 59
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:48"
+          },
+          "parentId": "Auth.samljithandler.method.createuser(id,id,id,string,map<string,string>,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.samljithandler.createuser.id",
+            "id": "Auth.samljithandler.createuser.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 47
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:45"
+            },
+            "parentId": "Auth.samljithandler.createuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "portalId": {
-          "id": "Auth.samljithandler.createuser.portalid",
-          "type": "var",
+        "portalid": {
+          "id": "Auth.samljithandler.method.createuser(id,id,id,string,map<string,string>,string).varParam.portalid",
+          "nodeType": "variable",
           "name": "portalId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -189,28 +310,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_portalId_-1:0"
+            "id": "token.type.identifier_portalId_0:64"
           },
-          "signature": "Id portalId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "portalId",
+            "textToLower": "portalid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_portalId_0:64"
+          },
+          "parentId": "Auth.samljithandler.method.createuser(id,id,id,string,map<string,string>,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Auth.samljithandler.createuser.id",
+            "id": "Auth.samljithandler.createuser.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 61
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:61"
+            },
+            "parentId": "Auth.samljithandler.createuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "federationId": {
-          "id": "Auth.samljithandler.createuser.federationid",
-          "type": "var",
+        "federationid": {
+          "id": "Auth.samljithandler.method.createuser(id,id,id,string,map<string,string>,string).varParam.federationid",
+          "nodeType": "variable",
           "name": "federationId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -219,89 +385,281 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 93
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_federationId_-1:0"
+            "id": "token.type.identifier_federationId_0:81"
           },
-          "signature": "String federationId",
-          "datatype": {
-            "id": "Auth.samljithandler.createuser.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String": {
-          "id": "Auth.samljithandler.createuser.<string",
-          "type": "var",
-          "name": "<String",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "federationId",
+            "textToLower": "federationid",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 93
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_federationId_0:81"
           },
-          "signature": "Map <String",
+          "parentId": "Auth.samljithandler.method.createuser(id,id,id,string,map<string,string>,string)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "Auth.samljithandler.createuser.map",
+            "id": "Auth.samljithandler.createuser.datatype.String",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 80
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:74"
+            },
+            "parentId": "Auth.samljithandler.createuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "attributes,": {
-          "id": "Auth.samljithandler.createuser.attributes,",
-          "type": "var",
-          "name": "attributes,",
+        "attributes": {
+          "id": "Auth.samljithandler.method.createuser(id,id,id,string,map<string,string>,string).varParam.attributes",
+          "nodeType": "variable",
+          "name": "attributes",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "attributes,",
-            "textToLower": "attributes,",
+            "text": "attributes",
+            "textToLower": "attributes",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 114
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 124
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_attributes,_-1:0"
+            "id": "token.type.identifier_attributes_0:114"
           },
-          "signature": "String> attributes,",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "attributes",
+            "textToLower": "attributes",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 114
+              },
+              "end": {
+                "line": 0,
+                "character": 124
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_attributes_0:114"
+          },
+          "parentId": "Auth.samljithandler.method.createuser(id,id,id,string,map<string,string>,string)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "Auth.samljithandler.createuser.string>",
+            "id": "Auth.samljithandler.createuser.datatype.Map<String,String>",
             "nodeType": "datatype",
-            "name": "String>"
-          }
+            "name": "Map<String,String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 95
+                },
+                "end": {
+                  "line": 0,
+                  "character": 98
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:95"
+            },
+            "parentId": "Auth.samljithandler.createuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "Auth.samljithandler.createuser.datatype.Map<String,String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 106
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 112
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:106"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            },
+            "key": {
+              "id": "Auth.samljithandler.createuser.datatype.Map<String,String>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 99
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 105
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:99"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
+        },
+        "assertion": {
+          "id": "Auth.samljithandler.method.createuser(id,id,id,string,map<string,string>,string).varParam.assertion",
+          "nodeType": "variable",
+          "name": "assertion",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "assertion",
+            "textToLower": "assertion",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 133
+              },
+              "end": {
+                "line": 0,
+                "character": 142
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_assertion_0:133"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "assertion",
+            "textToLower": "assertion",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 133
+              },
+              "end": {
+                "line": 0,
+                "character": 142
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_assertion_0:133"
+          },
+          "parentId": "Auth.samljithandler.method.createuser(id,id,id,string,map<string,string>,string)",
+          "order": 6,
+          "memberOrder": 6,
+          "datatype": {
+            "id": "Auth.samljithandler.createuser.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 126
+                },
+                "end": {
+                  "line": 0,
+                  "character": 132
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:126"
+            },
+            "parentId": "Auth.samljithandler.createuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The ID of the SamlSsoConfig standard object. The ID of the community. This parameter can be null if you’re not creating a community user. The ID of the portal. This parameter can be null if you’re not creating a portal user. The ID Salesforce expects to be used for this user. All of the attributes in the SAML assertion that were added to the default assertion; for example, custom attributes. Attributes are case-sensitive. The default SAML assertion, base-64 encoded.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "updateuser(id,id,id,id,string,map,string>)": {
-      "id": "Auth.samljithandler.updateuser",
+    "updateuser(id,id,id,id,string,map<string,string>,string)": {
+      "id": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string)",
       "nodeType": "method",
       "name": "updateUser",
       "startToken": {
@@ -323,6 +681,9 @@
         },
         "id": "declaration.entity.name.function_updateUser_-1:0"
       },
+      "parentId": "Auth.samljithandler",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -330,30 +691,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void updateUser(Id userId, Id samlSsoProviderId, Id communityId, Id portalId, String federationId, Map <String, String> attributes,)",
-      "simplifiedSignature": "updateUser(Id,Id,Id,Id,String,Map,String>)",
+      "signature": "public void updateUser(Id userId, Id samlSsoProviderId, Id communityId, Id portalId, String federationId, Map<String,String> attributes, String assertion)",
+      "overrideSignature": "public override void updateUser(Id userId, Id samlSsoProviderId, Id communityId, Id portalId, String federationId, Map<String,String> attributes, String assertion)",
+      "simplifiedSignature": "updateUser(Id,Id,Id,Id,String,Map<String,String>,String)",
       "datatype": {
-        "id": "Auth.samljithandler.updateuser.void",
+        "id": "Auth.samljithandler.updateuser.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Auth.samljithandler.updateuser",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Updates the specified user’s information. This method is called if the user has logged in before with SAML single sign-on and then logs in again, or if your application is using the Existing User Linking URL.",
+      "parentName": "SamlJitHandler",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "Auth.samljithandler.updateuser.userid",
-          "type": "var",
+        "userid": {
+          "id": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -362,28 +749,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 26
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 32
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:26"
           },
-          "signature": "Id userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 26
+              },
+              "end": {
+                "line": 0,
+                "character": 32
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:26"
+          },
+          "parentId": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.samljithandler.updateuser.id",
+            "id": "Auth.samljithandler.updateuser.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 25
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:23"
+            },
+            "parentId": "Auth.samljithandler.updateuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "samlSsoProviderId": {
-          "id": "Auth.samljithandler.updateuser.samlssoproviderid",
-          "type": "var",
+        "samlssoproviderid": {
+          "id": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string).varParam.samlssoproviderid",
+          "nodeType": "variable",
           "name": "samlSsoProviderId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -392,28 +824,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_samlSsoProviderId_-1:0"
+            "id": "token.type.identifier_samlSsoProviderId_0:37"
           },
-          "signature": "Id samlSsoProviderId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "samlSsoProviderId",
+            "textToLower": "samlssoproviderid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 54
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_samlSsoProviderId_0:37"
+          },
+          "parentId": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.samljithandler.updateuser.id",
+            "id": "Auth.samljithandler.updateuser.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:34"
+            },
+            "parentId": "Auth.samljithandler.updateuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "communityId": {
-          "id": "Auth.samljithandler.updateuser.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -422,28 +899,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:59"
           },
-          "signature": "Id communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 70
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:59"
+          },
+          "parentId": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Auth.samljithandler.updateuser.id",
+            "id": "Auth.samljithandler.updateuser.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 56
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:56"
+            },
+            "parentId": "Auth.samljithandler.updateuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "portalId": {
-          "id": "Auth.samljithandler.updateuser.portalid",
-          "type": "var",
+        "portalid": {
+          "id": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string).varParam.portalid",
+          "nodeType": "variable",
           "name": "portalId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -452,28 +974,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 75
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_portalId_-1:0"
+            "id": "token.type.identifier_portalId_0:75"
           },
-          "signature": "Id portalId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "portalId",
+            "textToLower": "portalid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 75
+              },
+              "end": {
+                "line": 0,
+                "character": 83
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_portalId_0:75"
+          },
+          "parentId": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "Auth.samljithandler.updateuser.id",
+            "id": "Auth.samljithandler.updateuser.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 72
+                },
+                "end": {
+                  "line": 0,
+                  "character": 74
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:72"
+            },
+            "parentId": "Auth.samljithandler.updateuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "federationId": {
-          "id": "Auth.samljithandler.updateuser.federationid",
-          "type": "var",
+        "federationid": {
+          "id": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string).varParam.federationid",
+          "nodeType": "variable",
           "name": "federationId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -482,90 +1049,284 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 92
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 104
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_federationId_-1:0"
+            "id": "token.type.identifier_federationId_0:92"
           },
-          "signature": "String federationId",
-          "datatype": {
-            "id": "Auth.samljithandler.updateuser.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String": {
-          "id": "Auth.samljithandler.updateuser.<string",
-          "type": "var",
-          "name": "<String",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "federationId",
+            "textToLower": "federationid",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 92
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 104
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_federationId_0:92"
           },
-          "signature": "Map <String",
+          "parentId": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "Auth.samljithandler.updateuser.map",
+            "id": "Auth.samljithandler.updateuser.datatype.String",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 85
+                },
+                "end": {
+                  "line": 0,
+                  "character": 91
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:85"
+            },
+            "parentId": "Auth.samljithandler.updateuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "attributes,": {
-          "id": "Auth.samljithandler.updateuser.attributes,",
-          "type": "var",
-          "name": "attributes,",
+        "attributes": {
+          "id": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string).varParam.attributes",
+          "nodeType": "variable",
+          "name": "attributes",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "attributes,",
-            "textToLower": "attributes,",
+            "text": "attributes",
+            "textToLower": "attributes",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 125
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 135
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_attributes,_-1:0"
+            "id": "token.type.identifier_attributes_0:125"
           },
-          "signature": "String> attributes,",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "attributes",
+            "textToLower": "attributes",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 125
+              },
+              "end": {
+                "line": 0,
+                "character": 135
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_attributes_0:125"
+          },
+          "parentId": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string)",
+          "order": 6,
+          "memberOrder": 6,
           "datatype": {
-            "id": "Auth.samljithandler.updateuser.string>",
+            "id": "Auth.samljithandler.updateuser.datatype.Map<String,String>",
             "nodeType": "datatype",
-            "name": "String>"
-          }
+            "name": "Map<String,String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 106
+                },
+                "end": {
+                  "line": 0,
+                  "character": 109
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:106"
+            },
+            "parentId": "Auth.samljithandler.updateuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "Auth.samljithandler.updateuser.datatype.Map<String,String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 117
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 123
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:117"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            },
+            "key": {
+              "id": "Auth.samljithandler.updateuser.datatype.Map<String,String>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 110
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 116
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:110"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
+        },
+        "assertion": {
+          "id": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string).varParam.assertion",
+          "nodeType": "variable",
+          "name": "assertion",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "assertion",
+            "textToLower": "assertion",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 144
+              },
+              "end": {
+                "line": 0,
+                "character": 153
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_assertion_0:144"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "assertion",
+            "textToLower": "assertion",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 144
+              },
+              "end": {
+                "line": 0,
+                "character": 153
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_assertion_0:144"
+          },
+          "parentId": "Auth.samljithandler.method.updateuser(id,id,id,id,string,map<string,string>,string)",
+          "order": 7,
+          "memberOrder": 7,
+          "datatype": {
+            "id": "Auth.samljithandler.updateuser.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 137
+                },
+                "end": {
+                  "line": 0,
+                  "character": 143
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:137"
+            },
+            "parentId": "Auth.samljithandler.updateuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The ID of the Salesforce user. The ID of the SamlSsoConfig object. The ID of the community. This can be null if you’re not updating a community user. The ID of the portal. This can be null if you’re not updating a portal user. The ID Salesforce expects to be used for this user. All of the attributes in the SAML assertion that were added to the default assertion; for example, custom attributes. Attributes are case-sensitive. The default SAML assertion, base-64 encoded.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

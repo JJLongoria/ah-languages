@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_AuthProviderPluginClass_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getcustommetadatatype()": {
-      "id": "Auth.authproviderpluginclass.getcustommetadatatype",
+      "id": "Auth.authproviderpluginclass.method.getcustommetadatatype()",
       "nodeType": "method",
       "name": "getCustomMetadataType",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getCustomMetadataType_-1:0"
       },
+      "parentId": "Auth.authproviderpluginclass",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getCustomMetadataType()",
+      "overrideSignature": "public override String getCustomMetadataType()",
       "simplifiedSignature": "getCustomMetadataType()",
       "datatype": {
-        "id": "Auth.authproviderpluginclass.getcustommetadatatype.String",
+        "id": "Auth.authproviderpluginclass.getcustommetadatatype.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Auth.authproviderpluginclass.getcustommetadatatype",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the custom metadata type API name for a custom OAuth-based authentication provider for single sign-on to Salesforce.",
-      "params": {}
+      "parentName": "AuthProviderPluginClass",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
-    "getuserinfo(map,string>)": {
-      "id": "Auth.authproviderpluginclass.getuserinfo",
+    "getuserinfo(map<string,string>,auth.authprovidertokenresponse)": {
+      "id": "Auth.authproviderpluginclass.method.getuserinfo(map<string,string>,auth.authprovidertokenresponse)",
       "nodeType": "method",
       "name": "getUserInfo",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_getUserInfo_-1:0"
       },
+      "parentId": "Auth.authproviderpluginclass",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,91 +185,264 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Auth.UserData getUserInfo(Map <String, String> authProviderConfiguration,)",
-      "simplifiedSignature": "getUserInfo(Map,String>)",
+      "signature": "public Auth.UserData getUserInfo(Map<String,String> authProviderConfiguration, Auth.AuthProviderTokenResponse response)",
+      "overrideSignature": "public override Auth.UserData getUserInfo(Map<String,String> authProviderConfiguration, Auth.AuthProviderTokenResponse response)",
+      "simplifiedSignature": "getUserInfo(Map<String,String>,Auth.AuthProviderTokenResponse)",
       "datatype": {
-        "id": "Auth.authproviderpluginclass.getuserinfo.Auth.UserData",
+        "id": "Auth.authproviderpluginclass.getuserinfo.datatype.Auth.UserData",
         "nodeType": "datatype",
-        "name": "Auth.UserData"
+        "name": "Auth.UserData",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Auth",
+          "textToLower": "auth",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Auth_0:7"
+        },
+        "parentId": "Auth.authproviderpluginclass.getuserinfo",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Auth.UserData"
       },
       "description": "Returns information from the custom authentication provider about the current user. This information is used by the registration handler and in other authentication provider flows.",
+      "parentName": "AuthProviderPluginClass",
+      "variables": {},
       "params": {
-        "<String": {
-          "id": "Auth.authproviderpluginclass.getuserinfo.<string",
-          "type": "var",
-          "name": "<String",
+        "authproviderconfiguration": {
+          "id": "Auth.authproviderpluginclass.method.getuserinfo(map<string,string>,auth.authprovidertokenresponse).varParam.authproviderconfiguration",
+          "nodeType": "variable",
+          "name": "authProviderConfiguration",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "authProviderConfiguration",
+            "textToLower": "authproviderconfiguration",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_authProviderConfiguration_0:52"
           },
-          "signature": "Map <String",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "authProviderConfiguration",
+            "textToLower": "authproviderconfiguration",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 52
+              },
+              "end": {
+                "line": 0,
+                "character": 77
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_authProviderConfiguration_0:52"
+          },
+          "parentId": "Auth.authproviderpluginclass.method.getuserinfo(map<string,string>,auth.authprovidertokenresponse)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.authproviderpluginclass.getuserinfo.map",
+            "id": "Auth.authproviderpluginclass.getuserinfo.datatype.Map<String,String>",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "Map<String,String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 33
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:33"
+            },
+            "parentId": "Auth.authproviderpluginclass.getuserinfo",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "Auth.authproviderpluginclass.getuserinfo.datatype.Map<String,String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 44
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 50
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:44"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            },
+            "key": {
+              "id": "Auth.authproviderpluginclass.getuserinfo.datatype.Map<String,String>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 37
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 43
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:37"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
         },
-        "authProviderConfiguration,": {
-          "id": "Auth.authproviderpluginclass.getuserinfo.authproviderconfiguration,",
-          "type": "var",
-          "name": "authProviderConfiguration,",
+        "response": {
+          "id": "Auth.authproviderpluginclass.method.getuserinfo(map<string,string>,auth.authprovidertokenresponse).varParam.response",
+          "nodeType": "variable",
+          "name": "response",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "authProviderConfiguration,",
-            "textToLower": "authproviderconfiguration,",
+            "text": "response",
+            "textToLower": "response",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 110
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 118
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_authProviderConfiguration,_-1:0"
+            "id": "token.type.identifier_response_0:110"
           },
-          "signature": "String> authProviderConfiguration,",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "response",
+            "textToLower": "response",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 110
+              },
+              "end": {
+                "line": 0,
+                "character": 118
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_response_0:110"
+          },
+          "parentId": "Auth.authproviderpluginclass.method.getuserinfo(map<string,string>,auth.authprovidertokenresponse)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.authproviderpluginclass.getuserinfo.string>",
+            "id": "Auth.authproviderpluginclass.getuserinfo.datatype.Auth.AuthProviderTokenResponse",
             "nodeType": "datatype",
-            "name": "String>"
-          }
+            "name": "Auth.AuthProviderTokenResponse",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 79
+                },
+                "end": {
+                  "line": 0,
+                  "character": 83
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:79"
+            },
+            "parentId": "Auth.authproviderpluginclass.getuserinfo",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.AuthProviderTokenResponse"
+          },
+          "description": "The configuration for the custom authentication provider. When you create a custom metadata type in Salesforce, the configuration populates it with the custom metadata type default values. Or you can set the configuration with values that you enter when you create the custom provider in Auth. Providers in Setup.  The OAuth access token, OAuth secret or refresh token, and state provided by the authentication provider to authenticate the current user.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "handlecallback(map,string>)": {
-      "id": "Auth.authproviderpluginclass.handlecallback",
+    "handlecallback(map<string,string>,auth.authprovidercallbackstate)": {
+      "id": "Auth.authproviderpluginclass.method.handlecallback(map<string,string>,auth.authprovidercallbackstate)",
       "nodeType": "method",
       "name": "handleCallback",
       "startToken": {
@@ -255,6 +464,9 @@
         },
         "id": "declaration.entity.name.function_handleCallback_-1:0"
       },
+      "parentId": "Auth.authproviderpluginclass",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -262,91 +474,264 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Auth.AuthProviderTokenResponse handleCallback(Map <String, String> authProviderConfiguration,)",
-      "simplifiedSignature": "handleCallback(Map,String>)",
+      "signature": "public Auth.AuthProviderTokenResponse handleCallback(Map<String,String> authProviderConfiguration, Auth.AuthProviderCallbackState callbackState)",
+      "overrideSignature": "public override Auth.AuthProviderTokenResponse handleCallback(Map<String,String> authProviderConfiguration, Auth.AuthProviderCallbackState callbackState)",
+      "simplifiedSignature": "handleCallback(Map<String,String>,Auth.AuthProviderCallbackState)",
       "datatype": {
-        "id": "Auth.authproviderpluginclass.handlecallback.Auth.AuthProviderTokenResponse",
+        "id": "Auth.authproviderpluginclass.handlecallback.datatype.Auth.AuthProviderTokenResponse",
         "nodeType": "datatype",
-        "name": "Auth.AuthProviderTokenResponse"
+        "name": "Auth.AuthProviderTokenResponse",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Auth",
+          "textToLower": "auth",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Auth_0:7"
+        },
+        "parentId": "Auth.authproviderpluginclass.handlecallback",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Auth.AuthProviderTokenResponse"
       },
       "description": "Uses the authentication provider’s supported authentication protocol to return an OAuth access token, OAuth secret or refresh token, and the state passed in when the request for the current user was initiated.",
+      "parentName": "AuthProviderPluginClass",
+      "variables": {},
       "params": {
-        "<String": {
-          "id": "Auth.authproviderpluginclass.handlecallback.<string",
-          "type": "var",
-          "name": "<String",
+        "authproviderconfiguration": {
+          "id": "Auth.authproviderpluginclass.method.handlecallback(map<string,string>,auth.authprovidercallbackstate).varParam.authproviderconfiguration",
+          "nodeType": "variable",
+          "name": "authProviderConfiguration",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "authProviderConfiguration",
+            "textToLower": "authproviderconfiguration",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 97
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_authProviderConfiguration_0:72"
           },
-          "signature": "Map <String",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "authProviderConfiguration",
+            "textToLower": "authproviderconfiguration",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 72
+              },
+              "end": {
+                "line": 0,
+                "character": 97
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_authProviderConfiguration_0:72"
+          },
+          "parentId": "Auth.authproviderpluginclass.method.handlecallback(map<string,string>,auth.authprovidercallbackstate)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.authproviderpluginclass.handlecallback.map",
+            "id": "Auth.authproviderpluginclass.handlecallback.datatype.Map<String,String>",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "Map<String,String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 53
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:53"
+            },
+            "parentId": "Auth.authproviderpluginclass.handlecallback",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "Auth.authproviderpluginclass.handlecallback.datatype.Map<String,String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 64
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 70
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:64"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            },
+            "key": {
+              "id": "Auth.authproviderpluginclass.handlecallback.datatype.Map<String,String>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 57
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 63
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:57"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
         },
-        "authProviderConfiguration,": {
-          "id": "Auth.authproviderpluginclass.handlecallback.authproviderconfiguration,",
-          "type": "var",
-          "name": "authProviderConfiguration,",
+        "callbackstate": {
+          "id": "Auth.authproviderpluginclass.method.handlecallback(map<string,string>,auth.authprovidercallbackstate).varParam.callbackstate",
+          "nodeType": "variable",
+          "name": "callbackState",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "authProviderConfiguration,",
-            "textToLower": "authproviderconfiguration,",
+            "text": "callbackState",
+            "textToLower": "callbackstate",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 130
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 143
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_authProviderConfiguration,_-1:0"
+            "id": "token.type.identifier_callbackState_0:130"
           },
-          "signature": "String> authProviderConfiguration,",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "callbackState",
+            "textToLower": "callbackstate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 130
+              },
+              "end": {
+                "line": 0,
+                "character": 143
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_callbackState_0:130"
+          },
+          "parentId": "Auth.authproviderpluginclass.method.handlecallback(map<string,string>,auth.authprovidercallbackstate)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.authproviderpluginclass.handlecallback.string>",
+            "id": "Auth.authproviderpluginclass.handlecallback.datatype.Auth.AuthProviderCallbackState",
             "nodeType": "datatype",
-            "name": "String>"
-          }
+            "name": "Auth.AuthProviderCallbackState",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 99
+                },
+                "end": {
+                  "line": 0,
+                  "character": 103
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:99"
+            },
+            "parentId": "Auth.authproviderpluginclass.handlecallback",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.AuthProviderCallbackState"
+          },
+          "description": "The configuration for the custom authentication provider. When you create a custom metadata type in Salesforce, the configuration populates with the custom metadata type default values. Or you can set the configuration with values you enter when you create the custom provider in Auth. Providers in Setup. The class that contains the HTTP headers, body, and queryParams of the authentication request.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "initiate(map,string>)": {
-      "id": "Auth.authproviderpluginclass.initiate",
+    "initiate(map<string,string>,string)": {
+      "id": "Auth.authproviderpluginclass.method.initiate(map<string,string>,string)",
       "nodeType": "method",
       "name": "initiate",
       "startToken": {
@@ -368,6 +753,9 @@
         },
         "id": "declaration.entity.name.function_initiate_-1:0"
       },
+      "parentId": "Auth.authproviderpluginclass",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -375,91 +763,264 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public System.PageReference initiate(Map <String, String> authProviderConfiguration,)",
-      "simplifiedSignature": "initiate(Map,String>)",
+      "signature": "public System.PageReference initiate(Map<String,String> authProviderConfiguration, String stateToPropagate)",
+      "overrideSignature": "public override System.PageReference initiate(Map<String,String> authProviderConfiguration, String stateToPropagate)",
+      "simplifiedSignature": "initiate(Map<String,String>,String)",
       "datatype": {
-        "id": "Auth.authproviderpluginclass.initiate.System.PageReference",
+        "id": "Auth.authproviderpluginclass.initiate.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:7"
+        },
+        "parentId": "Auth.authproviderpluginclass.initiate",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Returns the URL where the user is redirected for authentication.",
+      "parentName": "AuthProviderPluginClass",
+      "variables": {},
       "params": {
-        "<String": {
-          "id": "Auth.authproviderpluginclass.initiate.<string",
-          "type": "var",
-          "name": "<String",
+        "authproviderconfiguration": {
+          "id": "Auth.authproviderpluginclass.method.initiate(map<string,string>,string).varParam.authproviderconfiguration",
+          "nodeType": "variable",
+          "name": "authProviderConfiguration",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "authProviderConfiguration",
+            "textToLower": "authproviderconfiguration",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_authProviderConfiguration_0:56"
           },
-          "signature": "Map <String",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "authProviderConfiguration",
+            "textToLower": "authproviderconfiguration",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 56
+              },
+              "end": {
+                "line": 0,
+                "character": 81
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_authProviderConfiguration_0:56"
+          },
+          "parentId": "Auth.authproviderpluginclass.method.initiate(map<string,string>,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.authproviderpluginclass.initiate.map",
+            "id": "Auth.authproviderpluginclass.initiate.datatype.Map<String,String>",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "Map<String,String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:37"
+            },
+            "parentId": "Auth.authproviderpluginclass.initiate",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "Auth.authproviderpluginclass.initiate.datatype.Map<String,String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 48
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 54
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:48"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            },
+            "key": {
+              "id": "Auth.authproviderpluginclass.initiate.datatype.Map<String,String>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 41
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 47
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:41"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
         },
-        "authProviderConfiguration,": {
-          "id": "Auth.authproviderpluginclass.initiate.authproviderconfiguration,",
-          "type": "var",
-          "name": "authProviderConfiguration,",
+        "statetopropagate": {
+          "id": "Auth.authproviderpluginclass.method.initiate(map<string,string>,string).varParam.statetopropagate",
+          "nodeType": "variable",
+          "name": "stateToPropagate",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "authProviderConfiguration,",
-            "textToLower": "authproviderconfiguration,",
+            "text": "stateToPropagate",
+            "textToLower": "statetopropagate",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 90
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 106
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_authProviderConfiguration,_-1:0"
+            "id": "token.type.identifier_stateToPropagate_0:90"
           },
-          "signature": "String> authProviderConfiguration,",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "stateToPropagate",
+            "textToLower": "statetopropagate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 90
+              },
+              "end": {
+                "line": 0,
+                "character": 106
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_stateToPropagate_0:90"
+          },
+          "parentId": "Auth.authproviderpluginclass.method.initiate(map<string,string>,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.authproviderpluginclass.initiate.string>",
+            "id": "Auth.authproviderpluginclass.initiate.datatype.String",
             "nodeType": "datatype",
-            "name": "String>"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 83
+                },
+                "end": {
+                  "line": 0,
+                  "character": 89
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:83"
+            },
+            "parentId": "Auth.authproviderpluginclass.initiate",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The configuration for the custom authentication provider. When you create a custom metadata type in Salesforce, the configuration populates with the custom metadata type default values. Or you can set the configuration with values you enter when you create the custom provider in Auth. Providers in Setup. The state passed in to initiate the authentication request for the user.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "refresh(map,string>)": {
-      "id": "Auth.authproviderpluginclass.refresh",
+    "refresh(map<string,string>,string)": {
+      "id": "Auth.authproviderpluginclass.method.refresh(map<string,string>,string)",
       "nodeType": "method",
       "name": "refresh",
       "startToken": {
@@ -481,6 +1042,9 @@
         },
         "id": "declaration.entity.name.function_refresh_-1:0"
       },
+      "parentId": "Auth.authproviderpluginclass",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -488,92 +1052,267 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Auth.OAuthRefreshResult refresh(Map <String, String> authProviderConfiguration,)",
-      "simplifiedSignature": "refresh(Map,String>)",
+      "signature": "public Auth.OAuthRefreshResult refresh(Map<String,String> authProviderConfiguration, String refreshToken)",
+      "overrideSignature": "public override Auth.OAuthRefreshResult refresh(Map<String,String> authProviderConfiguration, String refreshToken)",
+      "simplifiedSignature": "refresh(Map<String,String>,String)",
       "datatype": {
-        "id": "Auth.authproviderpluginclass.refresh.Auth.OAuthRefreshResult",
+        "id": "Auth.authproviderpluginclass.refresh.datatype.Auth.OAuthRefreshResult",
         "nodeType": "datatype",
-        "name": "Auth.OAuthRefreshResult"
+        "name": "Auth.OAuthRefreshResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Auth",
+          "textToLower": "auth",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Auth_0:7"
+        },
+        "parentId": "Auth.authproviderpluginclass.refresh",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Auth.OAuthRefreshResult"
       },
       "description": "Returns a new access token, which is used to update an expired access token.",
+      "parentName": "AuthProviderPluginClass",
+      "variables": {},
       "params": {
-        "<String": {
-          "id": "Auth.authproviderpluginclass.refresh.<string",
-          "type": "var",
-          "name": "<String",
+        "authproviderconfiguration": {
+          "id": "Auth.authproviderpluginclass.method.refresh(map<string,string>,string).varParam.authproviderconfiguration",
+          "nodeType": "variable",
+          "name": "authProviderConfiguration",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "authProviderConfiguration",
+            "textToLower": "authproviderconfiguration",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_authProviderConfiguration_0:58"
           },
-          "signature": "Map <String",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "authProviderConfiguration",
+            "textToLower": "authproviderconfiguration",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 83
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_authProviderConfiguration_0:58"
+          },
+          "parentId": "Auth.authproviderpluginclass.method.refresh(map<string,string>,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.authproviderpluginclass.refresh.map",
+            "id": "Auth.authproviderpluginclass.refresh.datatype.Map<String,String>",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "Map<String,String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 42
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:39"
+            },
+            "parentId": "Auth.authproviderpluginclass.refresh",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "Auth.authproviderpluginclass.refresh.datatype.Map<String,String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 50
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 56
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:50"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            },
+            "key": {
+              "id": "Auth.authproviderpluginclass.refresh.datatype.Map<String,String>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 43
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 49
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:43"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
         },
-        "authProviderConfiguration,": {
-          "id": "Auth.authproviderpluginclass.refresh.authproviderconfiguration,",
-          "type": "var",
-          "name": "authProviderConfiguration,",
+        "refreshtoken": {
+          "id": "Auth.authproviderpluginclass.method.refresh(map<string,string>,string).varParam.refreshtoken",
+          "nodeType": "variable",
+          "name": "refreshToken",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "authProviderConfiguration,",
-            "textToLower": "authproviderconfiguration,",
+            "text": "refreshToken",
+            "textToLower": "refreshtoken",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 92
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 104
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_authProviderConfiguration,_-1:0"
+            "id": "token.type.identifier_refreshToken_0:92"
           },
-          "signature": "String> authProviderConfiguration,",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "refreshToken",
+            "textToLower": "refreshtoken",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 92
+              },
+              "end": {
+                "line": 0,
+                "character": 104
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_refreshToken_0:92"
+          },
+          "parentId": "Auth.authproviderpluginclass.method.refresh(map<string,string>,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.authproviderpluginclass.refresh.string>",
+            "id": "Auth.authproviderpluginclass.refresh.datatype.String",
             "nodeType": "datatype",
-            "name": "String>"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 85
+                },
+                "end": {
+                  "line": 0,
+                  "character": 91
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:85"
+            },
+            "parentId": "Auth.authproviderpluginclass.refresh",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The configuration for the custom authentication provider. When you create a custom metadata type in Salesforce, the configuration populates with the custom metadata type default values. Or you can set the configuration with values you enter when you create the custom provider in Auth. Providers in Setup. The refresh token for the user who is logged in.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 5,
+  "queries": []
 }

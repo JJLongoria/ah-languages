@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_DescribeTabResult_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getcolors()": {
-      "id": "Schema.describetabresult.getcolors",
+      "id": "Schema.describetabresult.method.getcolors()",
       "nodeType": "method",
       "name": "getColors",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getColors_-1:0"
       },
+      "parentId": "Schema.describetabresult",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<Schema.DescribeColorResult> getColors()",
+      "overrideSignature": "public override List<Schema.DescribeColorResult> getColors()",
       "simplifiedSignature": "getColors()",
       "datatype": {
-        "id": "Schema.describetabresult.getcolors.List<Schema.DescribeColorResult>",
+        "id": "Schema.describetabresult.getcolors.datatype.List<Schema.DescribeColorResult>",
         "nodeType": "datatype",
-        "name": "List<Schema.DescribeColorResult>"
+        "name": "List<Schema.DescribeColorResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Schema.describetabresult.getcolors",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Schema.describetabresult.getcolors.datatype.List<Schema.DescribeColorResult>.value.Schema.DescribeColorResult",
+          "nodeType": "datatype",
+          "name": "Schema.DescribeColorResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Schema",
+            "textToLower": "schema",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 18
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Schema_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Schema.DescribeColorResult"
+        }
       },
       "description": "Returns a list of color metadata information for all colors associated with this tab. Each color is associated with a theme and context.",
-      "params": {}
+      "parentName": "DescribeTabResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "geticonurl()": {
-      "id": "Schema.describetabresult.geticonurl",
+      "id": "Schema.describetabresult.method.geticonurl()",
       "nodeType": "method",
       "name": "getIconUrl",
       "startToken": {
@@ -142,6 +202,9 @@
         },
         "id": "declaration.entity.name.function_getIconUrl_-1:0"
       },
+      "parentId": "Schema.describetabresult",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,30 +212,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getIconUrl()",
+      "overrideSignature": "public override String getIconUrl()",
       "simplifiedSignature": "getIconUrl()",
       "datatype": {
-        "id": "Schema.describetabresult.geticonurl.String",
+        "id": "Schema.describetabresult.geticonurl.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Schema.describetabresult.geticonurl",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the URL for the main 32 x 32-pixel icon for a tab. This icon corresponds to the current theme (theme3) and appears next to the heading at the top of most pages.",
-      "params": {}
+      "parentName": "DescribeTabResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "geticons()": {
-      "id": "Schema.describetabresult.geticons",
+      "id": "Schema.describetabresult.method.geticons()",
       "nodeType": "method",
       "name": "getIcons",
       "startToken": {
@@ -194,6 +285,9 @@
         },
         "id": "declaration.entity.name.function_getIcons_-1:0"
       },
+      "parentId": "Schema.describetabresult",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -201,30 +295,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<Schema.DescribeIconResult> getIcons()",
+      "overrideSignature": "public override List<Schema.DescribeIconResult> getIcons()",
       "simplifiedSignature": "getIcons()",
       "datatype": {
-        "id": "Schema.describetabresult.geticons.List<Schema.DescribeIconResult>",
+        "id": "Schema.describetabresult.geticons.datatype.List<Schema.DescribeIconResult>",
         "nodeType": "datatype",
-        "name": "List<Schema.DescribeIconResult>"
+        "name": "List<Schema.DescribeIconResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Schema.describetabresult.geticons",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Schema.describetabresult.geticons.datatype.List<Schema.DescribeIconResult>.value.Schema.DescribeIconResult",
+          "nodeType": "datatype",
+          "name": "Schema.DescribeIconResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Schema",
+            "textToLower": "schema",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 18
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Schema_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Schema.DescribeIconResult"
+        }
       },
       "description": "Returns a list of icon metadata information for all icons associated with this tab. Each icon is associated with a theme and context.",
-      "params": {}
+      "parentName": "DescribeTabResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getlabel()": {
-      "id": "Schema.describetabresult.getlabel",
+      "id": "Schema.describetabresult.method.getlabel()",
       "nodeType": "method",
       "name": "getLabel",
       "startToken": {
@@ -246,6 +395,9 @@
         },
         "id": "declaration.entity.name.function_getLabel_-1:0"
       },
+      "parentId": "Schema.describetabresult",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -253,30 +405,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getLabel()",
+      "overrideSignature": "public override String getLabel()",
       "simplifiedSignature": "getLabel()",
       "datatype": {
-        "id": "Schema.describetabresult.getlabel.String",
+        "id": "Schema.describetabresult.getlabel.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Schema.describetabresult.getlabel",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the display label of this tab.",
-      "params": {}
+      "parentName": "DescribeTabResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getminiiconurl()": {
-      "id": "Schema.describetabresult.getminiiconurl",
+      "id": "Schema.describetabresult.method.getminiiconurl()",
       "nodeType": "method",
       "name": "getMiniIconUrl",
       "startToken": {
@@ -298,6 +478,9 @@
         },
         "id": "declaration.entity.name.function_getMiniIconUrl_-1:0"
       },
+      "parentId": "Schema.describetabresult",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -305,30 +488,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getMiniIconUrl()",
+      "overrideSignature": "public override String getMiniIconUrl()",
       "simplifiedSignature": "getMiniIconUrl()",
       "datatype": {
-        "id": "Schema.describetabresult.getminiiconurl.String",
+        "id": "Schema.describetabresult.getminiiconurl.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Schema.describetabresult.getminiiconurl",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the URL for the 16 x 16-pixel icon that represents a tab. This icon corresponds to the current theme (theme3) and appears in related lists and other locations.",
-      "params": {}
+      "parentName": "DescribeTabResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getsobjectname()": {
-      "id": "Schema.describetabresult.getsobjectname",
+      "id": "Schema.describetabresult.method.getsobjectname()",
       "nodeType": "method",
       "name": "getSobjectName",
       "startToken": {
@@ -350,6 +561,9 @@
         },
         "id": "declaration.entity.name.function_getSobjectName_-1:0"
       },
+      "parentId": "Schema.describetabresult",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -357,30 +571,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getSobjectName()",
+      "overrideSignature": "public override String getSobjectName()",
       "simplifiedSignature": "getSobjectName()",
       "datatype": {
-        "id": "Schema.describetabresult.getsobjectname.String",
+        "id": "Schema.describetabresult.getsobjectname.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Schema.describetabresult.getsobjectname",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the name of the sObject that is primarily displayed on this tab (for tabs that display a particular SObject).",
-      "params": {}
+      "parentName": "DescribeTabResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "geturl()": {
-      "id": "Schema.describetabresult.geturl",
+      "id": "Schema.describetabresult.method.geturl()",
       "nodeType": "method",
       "name": "getUrl",
       "startToken": {
@@ -402,6 +644,9 @@
         },
         "id": "declaration.entity.name.function_getUrl_-1:0"
       },
+      "parentId": "Schema.describetabresult",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -409,30 +654,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getUrl()",
+      "overrideSignature": "public override String getUrl()",
       "simplifiedSignature": "getUrl()",
       "datatype": {
-        "id": "Schema.describetabresult.geturl.String",
+        "id": "Schema.describetabresult.geturl.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Schema.describetabresult.geturl",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns a fully qualified URL for viewing this tab.",
-      "params": {}
+      "parentName": "DescribeTabResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "iscustom()": {
-      "id": "Schema.describetabresult.iscustom",
+      "id": "Schema.describetabresult.method.iscustom()",
       "nodeType": "method",
       "name": "isCustom",
       "startToken": {
@@ -454,6 +727,9 @@
         },
         "id": "declaration.entity.name.function_isCustom_-1:0"
       },
+      "parentId": "Schema.describetabresult",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -461,31 +737,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean isCustom()",
+      "overrideSignature": "public override Boolean isCustom()",
       "simplifiedSignature": "isCustom()",
       "datatype": {
-        "id": "Schema.describetabresult.iscustom.Boolean",
+        "id": "Schema.describetabresult.iscustom.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Schema.describetabresult.iscustom",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if this is a custom tab, or false if this is a standard tab.",
-      "params": {}
+      "parentName": "DescribeTabResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 8,
+  "queries": []
 }

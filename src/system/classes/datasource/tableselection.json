@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_TableSelection_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,7 +69,7 @@
   "enums": {},
   "variables": {
     "columnsselected": {
-      "id": "Datasource.tableselection.columnsselected",
+      "id": "Datasource.tableselection.method.list<datasource.columnselection> columnsselected{get;set;}",
       "nodeType": "property",
       "name": "columnsSelected",
       "startToken": {
@@ -89,6 +91,9 @@
         },
         "id": "declaration.entity.name.property_columnsSelected_-1:0"
       },
+      "parentId": "Datasource.tableselection",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -96,77 +101,99 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public List<DataSource.ColumnSelection> columnsSelected {get; set;}",
-      "simplifiedSignature": "List<DataSource.ColumnSelection> columnsSelected { get; set; }",
+      "signature": "public List<DataSource.ColumnSelection> columnsSelected { get; set; }",
+      "simplifiedSignature": "List<DataSource.ColumnSelection> columnsSelected{get;set;}",
       "datatype": {
-        "id": "Datasource.tableselection.columnsselected.list<datasource.columnselection>",
+        "id": ".datatype.List<DataSource.ColumnSelection>",
         "nodeType": "datatype",
-        "name": "List<DataSource.ColumnSelection>"
+        "name": "List<DataSource.ColumnSelection>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": ".datatype.List<DataSource.ColumnSelection>.value.DataSource.ColumnSelection",
+          "nodeType": "datatype",
+          "name": "DataSource.ColumnSelection",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "DataSource",
+            "textToLower": "datasource",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 22
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_DataSource_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "DataSource.ColumnSelection"
+        }
       },
-      "description": "List of columns to query. Corresponds to the SELECT clause in a SOQL or SOSL query.",
+      "parentName": "TableSelection",
       "getter": {
-        "id": "Datasource.tableselection.columnsselected.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Datasource.tableselection.columnsselected.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "filter": {
-      "id": "Datasource.tableselection.filter",
+      "id": "Datasource.tableselection.method.datasource.filter filter{get;set;}",
       "nodeType": "property",
       "name": "filter",
       "startToken": {
@@ -188,6 +215,9 @@
         },
         "id": "declaration.entity.name.property_filter_-1:0"
       },
+      "parentId": "Datasource.tableselection",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -195,77 +225,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public DataSource.Filter filter {get; set;}",
-      "simplifiedSignature": "DataSource.Filter filter { get; set; }",
+      "signature": "public DataSource.Filter filter { get; set; }",
+      "simplifiedSignature": "DataSource.Filter filter{get;set;}",
       "datatype": {
-        "id": "Datasource.tableselection.filter.datasource.filter",
+        "id": ".datatype.DataSource.Filter",
         "nodeType": "datatype",
-        "name": "DataSource.Filter"
+        "name": "DataSource.Filter",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "DataSource",
+          "textToLower": "datasource",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_DataSource_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "DataSource.Filter"
       },
-      "description": "Identifies the query filter, which can be a compound filter that has a list of subfilters. The filter corresponds to the WHERE clause in a SOQL or SOSL query.",
+      "parentName": "TableSelection",
       "getter": {
-        "id": "Datasource.tableselection.filter.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Datasource.tableselection.filter.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "order": {
-      "id": "Datasource.tableselection.order",
+      "id": "Datasource.tableselection.method.list<datasource.order> order{get;set;}",
       "nodeType": "property",
       "name": "order",
       "startToken": {
@@ -287,6 +312,9 @@
         },
         "id": "declaration.entity.name.property_order_-1:0"
       },
+      "parentId": "Datasource.tableselection",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -294,73 +322,95 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public List<DataSource.Order> order {get; set;}",
-      "simplifiedSignature": "List<DataSource.Order> order { get; set; }",
+      "signature": "public List<DataSource.Order> order { get; set; }",
+      "simplifiedSignature": "List<DataSource.Order> order{get;set;}",
       "datatype": {
-        "id": "Datasource.tableselection.order.list<datasource.order>",
+        "id": ".datatype.List<DataSource.Order>",
         "nodeType": "datatype",
-        "name": "List<DataSource.Order>"
+        "name": "List<DataSource.Order>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": ".datatype.List<DataSource.Order>.value.DataSource.Order>",
+          "nodeType": "datatype",
+          "name": "DataSource.Order>",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "DataSource",
+            "textToLower": "datasource",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 22
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_DataSource_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "DataSource.Order>"
+        }
       },
-      "description": "Identifies the order for sorting the query results. Corresponds to the ORDER BY clause in a SOQL or SOSL query.",
+      "parentName": "TableSelection",
       "getter": {
-        "id": "Datasource.tableselection.order.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Datasource.tableselection.order.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     }
   },
@@ -368,5 +418,7 @@
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 3,
+  "queries": []
 }

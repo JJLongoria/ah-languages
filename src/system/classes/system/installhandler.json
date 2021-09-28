@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_InstallHandler_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "oninstall(installcontext)": {
-      "id": "System.installhandler.oninstall",
+      "id": "System.installhandler.method.oninstall(installcontext)",
       "nodeType": "method",
       "name": "onInstall",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_onInstall_-1:0"
       },
+      "parentId": "System.installhandler",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void onInstall(InstallContext context)",
+      "signature": "public Void onInstall(InstallContext context)",
+      "overrideSignature": "public override Void onInstall(InstallContext context)",
       "simplifiedSignature": "onInstall(InstallContext)",
       "datatype": {
-        "id": "System.installhandler.oninstall.void",
+        "id": "System.installhandler.oninstall.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "System.installhandler.oninstall",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Specifies the actions to be performed on install/upgrade.",
+      "parentName": "InstallHandler",
+      "variables": {},
       "params": {
         "context": {
-          "id": "System.installhandler.oninstall.context",
-          "type": "var",
+          "id": "System.installhandler.method.oninstall(installcontext).varParam.context",
+          "nodeType": "variable",
           "name": "context",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,30 +160,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_context_-1:0"
+            "id": "token.type.identifier_context_0:37"
           },
-          "signature": "InstallContext context",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "context",
+            "textToLower": "context",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 44
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_context_0:37"
+          },
+          "parentId": "System.installhandler.method.oninstall(installcontext)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.installhandler.oninstall.installcontext",
+            "id": "System.installhandler.oninstall.datatype.InstallContext",
             "nodeType": "datatype",
-            "name": "InstallContext"
-          }
+            "name": "InstallContext",
+            "startToken": {
+              "type": "datatype.custom.class",
+              "text": "InstallContext",
+              "textToLower": "installcontext",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_InstallContext_0:22"
+            },
+            "parentId": "System.installhandler.oninstall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "InstallContext"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

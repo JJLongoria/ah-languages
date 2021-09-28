@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_OrgPartition_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "contains(string)": {
-      "id": "Cache.orgpartition.contains",
+      "id": "Cache.orgpartition.method.contains(string)",
       "nodeType": "method",
       "name": "contains",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_contains_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean contains(String key)",
+      "overrideSignature": "public override Boolean contains(String key)",
       "simplifiedSignature": "contains(String)",
       "datatype": {
-        "id": "Cache.orgpartition.contains.Boolean",
+        "id": "Cache.orgpartition.contains.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Cache.orgpartition.contains",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the cache partition contains a cached value corresponding to the specified key.",
+      "parentName": "OrgPartition",
+      "variables": {},
       "params": {
         "key": {
-          "id": "Cache.orgpartition.contains.key",
-          "type": "var",
+          "id": "Cache.orgpartition.method.contains(string).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,29 +160,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 31
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:31"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 31
+              },
+              "end": {
+                "line": 0,
+                "character": 34
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:31"
+          },
+          "parentId": "Cache.orgpartition.method.contains(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.orgpartition.contains.string",
+            "id": "Cache.orgpartition.contains.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 24
+                },
+                "end": {
+                  "line": 0,
+                  "character": 30
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:24"
+            },
+            "parentId": "Cache.orgpartition.contains",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "A case-sensitive string value that uniquely identifies a cached value.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "get(string)": {
-      "id": "Cache.orgpartition.get",
+      "id": "Cache.orgpartition.method.get(string)",
       "nodeType": "method",
       "name": "get",
       "startToken": {
@@ -173,6 +252,9 @@
         },
         "id": "declaration.entity.name.function_get_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -180,30 +262,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Object get(String key)",
+      "overrideSignature": "public override Object get(String key)",
       "simplifiedSignature": "get(String)",
       "datatype": {
-        "id": "Cache.orgpartition.get.Object",
+        "id": "Cache.orgpartition.get.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:7"
+        },
+        "parentId": "Cache.orgpartition.get",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Returns the cached value corresponding to the specified key from the cache partition.",
+      "parentName": "OrgPartition",
+      "variables": {},
       "params": {
         "key": {
-          "id": "Cache.orgpartition.get.key",
-          "type": "var",
+          "id": "Cache.orgpartition.method.get(string).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -212,29 +320,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 25
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 28
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:25"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 25
+              },
+              "end": {
+                "line": 0,
+                "character": 28
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:25"
+          },
+          "parentId": "Cache.orgpartition.method.get(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.orgpartition.get.string",
+            "id": "Cache.orgpartition.get.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 18
+                },
+                "end": {
+                  "line": 0,
+                  "character": 24
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:18"
+            },
+            "parentId": "Cache.orgpartition.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "A case-sensitive string value that uniquely identifies a cached value.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "get(system.type,string)": {
-      "id": "Cache.orgpartition.get",
+      "id": "Cache.orgpartition.method.get(system.type,string)",
       "nodeType": "method",
       "name": "get",
       "startToken": {
@@ -256,6 +412,9 @@
         },
         "id": "declaration.entity.name.function_get_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -263,30 +422,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Object get(System.Type cacheBuilder, String key)",
+      "overrideSignature": "public override Object get(System.Type cacheBuilder, String key)",
       "simplifiedSignature": "get(System.Type,String)",
       "datatype": {
-        "id": "Cache.orgpartition.get.Object",
+        "id": "Cache.orgpartition.get.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:7"
+        },
+        "parentId": "Cache.orgpartition.get",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Returns the cached value corresponding to the specified key from the partition cache. Use this method if your cached value is a class that implements the CacheBuilder interface.",
+      "parentName": "OrgPartition",
+      "variables": {},
       "params": {
-        "cacheBuilder": {
-          "id": "Cache.orgpartition.get.cachebuilder",
-          "type": "var",
+        "cachebuilder": {
+          "id": "Cache.orgpartition.method.get(system.type,string).varParam.cachebuilder",
+          "nodeType": "variable",
           "name": "cacheBuilder",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -295,28 +480,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 30
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_cacheBuilder_-1:0"
+            "id": "token.type.identifier_cacheBuilder_0:30"
           },
-          "signature": "System.Type cacheBuilder",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "cacheBuilder",
+            "textToLower": "cachebuilder",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 30
+              },
+              "end": {
+                "line": 0,
+                "character": 42
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_cacheBuilder_0:30"
+          },
+          "parentId": "Cache.orgpartition.method.get(system.type,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.orgpartition.get.system.type",
+            "id": "Cache.orgpartition.get.datatype.System.Type",
             "nodeType": "datatype",
-            "name": "System.Type"
-          }
+            "name": "System.Type",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 18
+                },
+                "end": {
+                  "line": 0,
+                  "character": 24
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:18"
+            },
+            "parentId": "Cache.orgpartition.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.Type"
+          },
+          "scope": null
         },
         "key": {
-          "id": "Cache.orgpartition.get.key",
-          "type": "var",
+          "id": "Cache.orgpartition.method.get(system.type,string).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -325,29 +555,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:51"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 51
+              },
+              "end": {
+                "line": 0,
+                "character": 54
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:51"
+          },
+          "parentId": "Cache.orgpartition.method.get(system.type,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Cache.orgpartition.get.string",
+            "id": "Cache.orgpartition.get.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 44
+                },
+                "end": {
+                  "line": 0,
+                  "character": 50
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:44"
+            },
+            "parentId": "Cache.orgpartition.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The Apex class that implements the CacheBuilder interface. A case-sensitive string value that, combined with the class name corresponding to the cacheBuilder parameter, uniquely identifies a cached value.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getavggettime()": {
-      "id": "Cache.orgpartition.getavggettime",
+      "id": "Cache.orgpartition.method.getavggettime()",
       "nodeType": "method",
       "name": "getAvgGetTime",
       "startToken": {
@@ -369,6 +647,9 @@
         },
         "id": "declaration.entity.name.function_getAvgGetTime_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -376,30 +657,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Long getAvgGetTime()",
+      "overrideSignature": "public override Long getAvgGetTime()",
       "simplifiedSignature": "getAvgGetTime()",
       "datatype": {
-        "id": "Cache.orgpartition.getavggettime.Long",
+        "id": "Cache.orgpartition.getavggettime.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:7"
+        },
+        "parentId": "Cache.orgpartition.getavggettime",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns the average time taken to get a key from the partition, in nanoseconds.",
-      "params": {}
+      "parentName": "OrgPartition",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getavgvaluesize()": {
-      "id": "Cache.orgpartition.getavgvaluesize",
+      "id": "Cache.orgpartition.method.getavgvaluesize()",
       "nodeType": "method",
       "name": "getAvgValueSize",
       "startToken": {
@@ -421,6 +730,9 @@
         },
         "id": "declaration.entity.name.function_getAvgValueSize_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -428,30 +740,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Long getAvgValueSize()",
+      "overrideSignature": "public override Long getAvgValueSize()",
       "simplifiedSignature": "getAvgValueSize()",
       "datatype": {
-        "id": "Cache.orgpartition.getavgvaluesize.Long",
+        "id": "Cache.orgpartition.getavgvaluesize.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:7"
+        },
+        "parentId": "Cache.orgpartition.getavgvaluesize",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns the average item size for keys in the partition, in bytes.",
-      "params": {}
+      "parentName": "OrgPartition",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getcapacity()": {
-      "id": "Cache.orgpartition.getcapacity",
+      "id": "Cache.orgpartition.method.getcapacity()",
       "nodeType": "method",
       "name": "getCapacity",
       "startToken": {
@@ -473,6 +813,9 @@
         },
         "id": "declaration.entity.name.function_getCapacity_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -480,30 +823,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Double getCapacity()",
+      "overrideSignature": "public override Double getCapacity()",
       "simplifiedSignature": "getCapacity()",
       "datatype": {
-        "id": "Cache.orgpartition.getcapacity.Double",
+        "id": "Cache.orgpartition.getcapacity.datatype.Double",
         "nodeType": "datatype",
-        "name": "Double"
+        "name": "Double",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Double",
+          "textToLower": "double",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Double_0:7"
+        },
+        "parentId": "Cache.orgpartition.getcapacity",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Double"
       },
       "description": "Returns the percentage of cache used of the total capacity for this partition.",
-      "params": {}
+      "parentName": "OrgPartition",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getkeys()": {
-      "id": "Cache.orgpartition.getkeys",
+      "id": "Cache.orgpartition.method.getkeys()",
       "nodeType": "method",
       "name": "getKeys",
       "startToken": {
@@ -525,6 +896,9 @@
         },
         "id": "declaration.entity.name.function_getKeys_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -532,30 +906,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Set<String> getKeys()",
+      "overrideSignature": "public override Set<String> getKeys()",
       "simplifiedSignature": "getKeys()",
       "datatype": {
-        "id": "Cache.orgpartition.getkeys.Set<String>",
+        "id": "Cache.orgpartition.getkeys.datatype.Set<String>",
         "nodeType": "datatype",
-        "name": "Set<String>"
+        "name": "Set<String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Set",
+          "textToLower": "set",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Set_0:7"
+        },
+        "parentId": "Cache.orgpartition.getkeys",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Set",
+        "value": {
+          "id": "Cache.orgpartition.getkeys.datatype.Set<String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Returns a set of all keys that are stored in the cache partition and visible to the invoking namespace.",
-      "params": {}
+      "parentName": "OrgPartition",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getmaxgettime()": {
-      "id": "Cache.orgpartition.getmaxgettime",
+      "id": "Cache.orgpartition.method.getmaxgettime()",
       "nodeType": "method",
       "name": "getMaxGetTime",
       "startToken": {
@@ -577,6 +1006,9 @@
         },
         "id": "declaration.entity.name.function_getMaxGetTime_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -584,30 +1016,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Long getMaxGetTime()",
+      "overrideSignature": "public override Long getMaxGetTime()",
       "simplifiedSignature": "getMaxGetTime()",
       "datatype": {
-        "id": "Cache.orgpartition.getmaxgettime.Long",
+        "id": "Cache.orgpartition.getmaxgettime.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:7"
+        },
+        "parentId": "Cache.orgpartition.getmaxgettime",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns the maximum time taken to get a key from the partition, in nanoseconds.",
-      "params": {}
+      "parentName": "OrgPartition",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getmaxvaluesize()": {
-      "id": "Cache.orgpartition.getmaxvaluesize",
+      "id": "Cache.orgpartition.method.getmaxvaluesize()",
       "nodeType": "method",
       "name": "getMaxValueSize",
       "startToken": {
@@ -629,6 +1089,9 @@
         },
         "id": "declaration.entity.name.function_getMaxValueSize_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -636,30 +1099,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Long getMaxValueSize()",
+      "overrideSignature": "public override Long getMaxValueSize()",
       "simplifiedSignature": "getMaxValueSize()",
       "datatype": {
-        "id": "Cache.orgpartition.getmaxvaluesize.Long",
+        "id": "Cache.orgpartition.getmaxvaluesize.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:7"
+        },
+        "parentId": "Cache.orgpartition.getmaxvaluesize",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns the maximum item size for keys in the partition, in bytes.",
-      "params": {}
+      "parentName": "OrgPartition",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getmissrate()": {
-      "id": "Cache.orgpartition.getmissrate",
+      "id": "Cache.orgpartition.method.getmissrate()",
       "nodeType": "method",
       "name": "getMissRate",
       "startToken": {
@@ -681,6 +1172,9 @@
         },
         "id": "declaration.entity.name.function_getMissRate_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 10,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -688,30 +1182,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Double getMissRate()",
+      "overrideSignature": "public override Double getMissRate()",
       "simplifiedSignature": "getMissRate()",
       "datatype": {
-        "id": "Cache.orgpartition.getmissrate.Double",
+        "id": "Cache.orgpartition.getmissrate.datatype.Double",
         "nodeType": "datatype",
-        "name": "Double"
+        "name": "Double",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Double",
+          "textToLower": "double",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Double_0:7"
+        },
+        "parentId": "Cache.orgpartition.getmissrate",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Double"
       },
       "description": "Returns the miss rate in the partition.",
-      "params": {}
+      "parentName": "OrgPartition",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getname()": {
-      "id": "Cache.orgpartition.getname",
+      "id": "Cache.orgpartition.method.getname()",
       "nodeType": "method",
       "name": "getName",
       "startToken": {
@@ -733,6 +1255,9 @@
         },
         "id": "declaration.entity.name.function_getName_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 11,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -740,30 +1265,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getName()",
+      "overrideSignature": "public override String getName()",
       "simplifiedSignature": "getName()",
       "datatype": {
-        "id": "Cache.orgpartition.getname.String",
+        "id": "Cache.orgpartition.getname.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Cache.orgpartition.getname",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the name of this cache partition.",
-      "params": {}
+      "parentName": "OrgPartition",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getnumkeys()": {
-      "id": "Cache.orgpartition.getnumkeys",
+      "id": "Cache.orgpartition.method.getnumkeys()",
       "nodeType": "method",
       "name": "getNumKeys",
       "startToken": {
@@ -785,6 +1338,9 @@
         },
         "id": "declaration.entity.name.function_getNumKeys_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 12,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -792,30 +1348,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Long getNumKeys()",
+      "overrideSignature": "public override Long getNumKeys()",
       "simplifiedSignature": "getNumKeys()",
       "datatype": {
-        "id": "Cache.orgpartition.getnumkeys.Long",
+        "id": "Cache.orgpartition.getnumkeys.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:7"
+        },
+        "parentId": "Cache.orgpartition.getnumkeys",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns the total number of keys in the partition.",
-      "params": {}
+      "parentName": "OrgPartition",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "isavailable()": {
-      "id": "Cache.orgpartition.isavailable",
+      "id": "Cache.orgpartition.method.isavailable()",
       "nodeType": "method",
       "name": "isAvailable",
       "startToken": {
@@ -837,6 +1421,9 @@
         },
         "id": "declaration.entity.name.function_isAvailable_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 13,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -844,30 +1431,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean isAvailable()",
+      "overrideSignature": "public override Boolean isAvailable()",
       "simplifiedSignature": "isAvailable()",
       "datatype": {
-        "id": "Cache.orgpartition.isavailable.Boolean",
+        "id": "Cache.orgpartition.isavailable.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Cache.orgpartition.isavailable",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the Salesforce session is available. Only applies to Cache.SessionPartition. The session cache isn’t available when an active session isn’t present, such as in asynchronous Apex or code called by asynchronous Apex. For example, if batch Apex causes an Apex trigger to execute, the session cache isn’t available in the trigger because the trigger runs in asynchronous context.",
-      "params": {}
+      "parentName": "OrgPartition",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "put(string,object)": {
-      "id": "Cache.orgpartition.put",
+      "id": "Cache.orgpartition.method.put(string,object)",
       "nodeType": "method",
       "name": "put",
       "startToken": {
@@ -889,6 +1504,9 @@
         },
         "id": "declaration.entity.name.function_put_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 14,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -896,30 +1514,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void put(String key, Object value)",
+      "overrideSignature": "public override void put(String key, Object value)",
       "simplifiedSignature": "put(String,Object)",
       "datatype": {
-        "id": "Cache.orgpartition.put.void",
+        "id": "Cache.orgpartition.put.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Cache.orgpartition.put",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Stores the specified key/value pair as a cached entry in the cache partition. The put method can write only to the cache in your org’s namespace.",
+      "parentName": "OrgPartition",
+      "variables": {},
       "params": {
         "key": {
-          "id": "Cache.orgpartition.put.key",
-          "type": "var",
+          "id": "Cache.orgpartition.method.put(string,object).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -928,28 +1572,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 23
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 26
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:23"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 23
+              },
+              "end": {
+                "line": 0,
+                "character": 26
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:23"
+          },
+          "parentId": "Cache.orgpartition.method.put(string,object)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.orgpartition.put.string",
+            "id": "Cache.orgpartition.put.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 16
+                },
+                "end": {
+                  "line": 0,
+                  "character": 22
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:16"
+            },
+            "parentId": "Cache.orgpartition.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "value": {
-          "id": "Cache.orgpartition.put.value",
-          "type": "var",
+          "id": "Cache.orgpartition.method.put(string,object).varParam.value",
+          "nodeType": "variable",
           "name": "value",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -958,29 +1647,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 40
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_value_-1:0"
+            "id": "token.type.identifier_value_0:35"
           },
-          "signature": "Object value",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "value",
+            "textToLower": "value",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 35
+              },
+              "end": {
+                "line": 0,
+                "character": 40
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_value_0:35"
+          },
+          "parentId": "Cache.orgpartition.method.put(string,object)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Cache.orgpartition.put.object",
+            "id": "Cache.orgpartition.put.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 28
+                },
+                "end": {
+                  "line": 0,
+                  "character": 34
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:28"
+            },
+            "parentId": "Cache.orgpartition.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "description": "A case-sensitive string value that uniquely identifies a cached value. The value to store in the cache. The cached value must be serializable.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "put(string,object,cache.visibility)": {
-      "id": "Cache.orgpartition.put",
+      "id": "Cache.orgpartition.method.put(string,object,cache.visibility)",
       "nodeType": "method",
       "name": "put",
       "startToken": {
@@ -1002,6 +1739,9 @@
         },
         "id": "declaration.entity.name.function_put_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 15,
+      "memberOrder": 15,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1009,30 +1749,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void put(String key, Object value, cache.Visibility visibility)",
+      "overrideSignature": "public override void put(String key, Object value, cache.Visibility visibility)",
       "simplifiedSignature": "put(String,Object,cache.Visibility)",
       "datatype": {
-        "id": "Cache.orgpartition.put.void",
+        "id": "Cache.orgpartition.put.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Cache.orgpartition.put",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Stores the specified key/value pair as a cached entry in the cache partition and sets the cached value’s visibility.",
+      "parentName": "OrgPartition",
+      "variables": {},
       "params": {
         "key": {
-          "id": "Cache.orgpartition.put.key",
-          "type": "var",
+          "id": "Cache.orgpartition.method.put(string,object,cache.visibility).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1041,28 +1807,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 23
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 26
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:23"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 23
+              },
+              "end": {
+                "line": 0,
+                "character": 26
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:23"
+          },
+          "parentId": "Cache.orgpartition.method.put(string,object,cache.visibility)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.orgpartition.put.string",
+            "id": "Cache.orgpartition.put.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 16
+                },
+                "end": {
+                  "line": 0,
+                  "character": 22
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:16"
+            },
+            "parentId": "Cache.orgpartition.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "value": {
-          "id": "Cache.orgpartition.put.value",
-          "type": "var",
+          "id": "Cache.orgpartition.method.put(string,object,cache.visibility).varParam.value",
+          "nodeType": "variable",
           "name": "value",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1071,28 +1882,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 40
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_value_-1:0"
+            "id": "token.type.identifier_value_0:35"
           },
-          "signature": "Object value",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "value",
+            "textToLower": "value",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 35
+              },
+              "end": {
+                "line": 0,
+                "character": 40
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_value_0:35"
+          },
+          "parentId": "Cache.orgpartition.method.put(string,object,cache.visibility)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Cache.orgpartition.put.object",
+            "id": "Cache.orgpartition.put.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 28
+                },
+                "end": {
+                  "line": 0,
+                  "character": 34
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:28"
+            },
+            "parentId": "Cache.orgpartition.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "scope": null
         },
         "visibility": {
-          "id": "Cache.orgpartition.put.visibility",
-          "type": "var",
+          "id": "Cache.orgpartition.method.put(string,object,cache.visibility).varParam.visibility",
+          "nodeType": "variable",
           "name": "visibility",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1101,29 +1957,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_visibility_-1:0"
+            "id": "token.type.identifier_visibility_0:59"
           },
-          "signature": "cache.Visibility visibility",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "visibility",
+            "textToLower": "visibility",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_visibility_0:59"
+          },
+          "parentId": "Cache.orgpartition.method.put(string,object,cache.visibility)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Cache.orgpartition.put.cache.visibility",
+            "id": "Cache.orgpartition.put.datatype.cache.Visibility",
             "nodeType": "datatype",
-            "name": "cache.Visibility"
-          }
+            "name": "cache.Visibility",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "cache",
+              "textToLower": "cache",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 47
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_cache_0:42"
+            },
+            "parentId": "Cache.orgpartition.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "cache.Visibility"
+          },
+          "description": "A case-sensitive string value that uniquely identifies a cached value. The value to store in the cache. The cached value must be serializable. Indicates whether the cached value is available only to Apex code that is executing in the same namespace or to Apex code executing from any namespace.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "put(string,object,integer)": {
-      "id": "Cache.orgpartition.put",
+      "id": "Cache.orgpartition.method.put(string,object,integer)",
       "nodeType": "method",
       "name": "put",
       "startToken": {
@@ -1145,6 +2049,9 @@
         },
         "id": "declaration.entity.name.function_put_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 16,
+      "memberOrder": 16,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1152,30 +2059,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void put(String key, Object value, Integer ttlSecs)",
+      "overrideSignature": "public override void put(String key, Object value, Integer ttlSecs)",
       "simplifiedSignature": "put(String,Object,Integer)",
       "datatype": {
-        "id": "Cache.orgpartition.put.void",
+        "id": "Cache.orgpartition.put.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Cache.orgpartition.put",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Stores the specified key/value pair as a cached entry in the cache partition and sets the cached value’s lifetime.",
+      "parentName": "OrgPartition",
+      "variables": {},
       "params": {
         "key": {
-          "id": "Cache.orgpartition.put.key",
-          "type": "var",
+          "id": "Cache.orgpartition.method.put(string,object,integer).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1184,28 +2117,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 23
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 26
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:23"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 23
+              },
+              "end": {
+                "line": 0,
+                "character": 26
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:23"
+          },
+          "parentId": "Cache.orgpartition.method.put(string,object,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.orgpartition.put.string",
+            "id": "Cache.orgpartition.put.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 16
+                },
+                "end": {
+                  "line": 0,
+                  "character": 22
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:16"
+            },
+            "parentId": "Cache.orgpartition.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "value": {
-          "id": "Cache.orgpartition.put.value",
-          "type": "var",
+          "id": "Cache.orgpartition.method.put(string,object,integer).varParam.value",
+          "nodeType": "variable",
           "name": "value",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1214,28 +2192,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 40
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_value_-1:0"
+            "id": "token.type.identifier_value_0:35"
           },
-          "signature": "Object value",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "value",
+            "textToLower": "value",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 35
+              },
+              "end": {
+                "line": 0,
+                "character": 40
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_value_0:35"
+          },
+          "parentId": "Cache.orgpartition.method.put(string,object,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Cache.orgpartition.put.object",
+            "id": "Cache.orgpartition.put.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 28
+                },
+                "end": {
+                  "line": 0,
+                  "character": 34
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:28"
+            },
+            "parentId": "Cache.orgpartition.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "scope": null
         },
-        "ttlSecs": {
-          "id": "Cache.orgpartition.put.ttlsecs",
-          "type": "var",
+        "ttlsecs": {
+          "id": "Cache.orgpartition.method.put(string,object,integer).varParam.ttlsecs",
+          "nodeType": "variable",
           "name": "ttlSecs",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1244,29 +2267,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_ttlSecs_-1:0"
+            "id": "token.type.identifier_ttlSecs_0:50"
           },
-          "signature": "Integer ttlSecs",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "ttlSecs",
+            "textToLower": "ttlsecs",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 50
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ttlSecs_0:50"
+          },
+          "parentId": "Cache.orgpartition.method.put(string,object,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Cache.orgpartition.put.integer",
+            "id": "Cache.orgpartition.put.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 49
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:42"
+            },
+            "parentId": "Cache.orgpartition.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "A case-sensitive string value that uniquely identifies a cached value. The value to store in the cache. The cached value must be serializable. The amount of time, in seconds, to keep the cached value in the cache.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "put(string,object,integer,cache.visibility,boolean)": {
-      "id": "Cache.orgpartition.put",
+      "id": "Cache.orgpartition.method.put(string,object,integer,cache.visibility,boolean)",
       "nodeType": "method",
       "name": "put",
       "startToken": {
@@ -1288,6 +2359,9 @@
         },
         "id": "declaration.entity.name.function_put_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 17,
+      "memberOrder": 17,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1295,30 +2369,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void put(String key, Object value, Integer ttlSecs, cache.Visibility visibility, Boolean immutable)",
+      "overrideSignature": "public override void put(String key, Object value, Integer ttlSecs, cache.Visibility visibility, Boolean immutable)",
       "simplifiedSignature": "put(String,Object,Integer,cache.Visibility,Boolean)",
       "datatype": {
-        "id": "Cache.orgpartition.put.void",
+        "id": "Cache.orgpartition.put.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Cache.orgpartition.put",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Stores the specified key/value pair as a cached entry in the cache partition. This method also sets the cached value’s lifetime, visibility, and whether it can be overwritten by another namespace.",
+      "parentName": "OrgPartition",
+      "variables": {},
       "params": {
         "key": {
-          "id": "Cache.orgpartition.put.key",
-          "type": "var",
+          "id": "Cache.orgpartition.method.put(string,object,integer,cache.visibility,boolean).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1327,28 +2427,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 23
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 26
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:23"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 23
+              },
+              "end": {
+                "line": 0,
+                "character": 26
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:23"
+          },
+          "parentId": "Cache.orgpartition.method.put(string,object,integer,cache.visibility,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.orgpartition.put.string",
+            "id": "Cache.orgpartition.put.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 16
+                },
+                "end": {
+                  "line": 0,
+                  "character": 22
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:16"
+            },
+            "parentId": "Cache.orgpartition.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "value": {
-          "id": "Cache.orgpartition.put.value",
-          "type": "var",
+          "id": "Cache.orgpartition.method.put(string,object,integer,cache.visibility,boolean).varParam.value",
+          "nodeType": "variable",
           "name": "value",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1357,28 +2502,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 40
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_value_-1:0"
+            "id": "token.type.identifier_value_0:35"
           },
-          "signature": "Object value",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "value",
+            "textToLower": "value",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 35
+              },
+              "end": {
+                "line": 0,
+                "character": 40
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_value_0:35"
+          },
+          "parentId": "Cache.orgpartition.method.put(string,object,integer,cache.visibility,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Cache.orgpartition.put.object",
+            "id": "Cache.orgpartition.put.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 28
+                },
+                "end": {
+                  "line": 0,
+                  "character": 34
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:28"
+            },
+            "parentId": "Cache.orgpartition.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "scope": null
         },
-        "ttlSecs": {
-          "id": "Cache.orgpartition.put.ttlsecs",
-          "type": "var",
+        "ttlsecs": {
+          "id": "Cache.orgpartition.method.put(string,object,integer,cache.visibility,boolean).varParam.ttlsecs",
+          "nodeType": "variable",
           "name": "ttlSecs",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1387,28 +2577,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_ttlSecs_-1:0"
+            "id": "token.type.identifier_ttlSecs_0:50"
           },
-          "signature": "Integer ttlSecs",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "ttlSecs",
+            "textToLower": "ttlsecs",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 50
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ttlSecs_0:50"
+          },
+          "parentId": "Cache.orgpartition.method.put(string,object,integer,cache.visibility,boolean)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Cache.orgpartition.put.integer",
+            "id": "Cache.orgpartition.put.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 49
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:42"
+            },
+            "parentId": "Cache.orgpartition.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
         "visibility": {
-          "id": "Cache.orgpartition.put.visibility",
-          "type": "var",
+          "id": "Cache.orgpartition.method.put(string,object,integer,cache.visibility,boolean).varParam.visibility",
+          "nodeType": "variable",
           "name": "visibility",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1417,28 +2652,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 76
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_visibility_-1:0"
+            "id": "token.type.identifier_visibility_0:76"
           },
-          "signature": "cache.Visibility visibility",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "visibility",
+            "textToLower": "visibility",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 76
+              },
+              "end": {
+                "line": 0,
+                "character": 86
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_visibility_0:76"
+          },
+          "parentId": "Cache.orgpartition.method.put(string,object,integer,cache.visibility,boolean)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "Cache.orgpartition.put.cache.visibility",
+            "id": "Cache.orgpartition.put.datatype.cache.Visibility",
             "nodeType": "datatype",
-            "name": "cache.Visibility"
-          }
+            "name": "cache.Visibility",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "cache",
+              "textToLower": "cache",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 64
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_cache_0:59"
+            },
+            "parentId": "Cache.orgpartition.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "cache.Visibility"
+          },
+          "scope": null
         },
         "immutable": {
-          "id": "Cache.orgpartition.put.immutable",
-          "type": "var",
+          "id": "Cache.orgpartition.method.put(string,object,integer,cache.visibility,boolean).varParam.immutable",
+          "nodeType": "variable",
           "name": "immutable",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1447,29 +2727,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 96
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 105
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_immutable_-1:0"
+            "id": "token.type.identifier_immutable_0:96"
           },
-          "signature": "Boolean immutable",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "immutable",
+            "textToLower": "immutable",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 96
+              },
+              "end": {
+                "line": 0,
+                "character": 105
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_immutable_0:96"
+          },
+          "parentId": "Cache.orgpartition.method.put(string,object,integer,cache.visibility,boolean)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "Cache.orgpartition.put.boolean",
+            "id": "Cache.orgpartition.put.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 88
+                },
+                "end": {
+                  "line": 0,
+                  "character": 95
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:88"
+            },
+            "parentId": "Cache.orgpartition.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "A case-sensitive string value that uniquely identifies a cached value. The value to store in the cache. The cached value must be serializable. The amount of time, in seconds, to keep the cached value in the cache. Indicates whether the cached value is available only to Apex code that is executing in the same namespace or to Apex code executing from any namespace. Indicates whether the cached value can be overwritten by another namespace (false) or not (true).",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "remove(string)": {
-      "id": "Cache.orgpartition.remove",
+      "id": "Cache.orgpartition.method.remove(string)",
       "nodeType": "method",
       "name": "remove",
       "startToken": {
@@ -1491,6 +2819,9 @@
         },
         "id": "declaration.entity.name.function_remove_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 18,
+      "memberOrder": 18,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1498,30 +2829,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean remove(String key)",
+      "overrideSignature": "public override Boolean remove(String key)",
       "simplifiedSignature": "remove(String)",
       "datatype": {
-        "id": "Cache.orgpartition.remove.Boolean",
+        "id": "Cache.orgpartition.remove.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Cache.orgpartition.remove",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Deletes the cached value corresponding to the specified key from this cache partition.",
+      "parentName": "OrgPartition",
+      "variables": {},
       "params": {
         "key": {
-          "id": "Cache.orgpartition.remove.key",
-          "type": "var",
+          "id": "Cache.orgpartition.method.remove(string).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1530,29 +2887,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 32
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:29"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 32
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:29"
+          },
+          "parentId": "Cache.orgpartition.method.remove(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.orgpartition.remove.string",
+            "id": "Cache.orgpartition.remove.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:22"
+            },
+            "parentId": "Cache.orgpartition.remove",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "A case-sensitive string value that uniquely identifies a cached value.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "remove(system.type,string)": {
-      "id": "Cache.orgpartition.remove",
+      "id": "Cache.orgpartition.method.remove(system.type,string)",
       "nodeType": "method",
       "name": "remove",
       "startToken": {
@@ -1574,6 +2979,9 @@
         },
         "id": "declaration.entity.name.function_remove_-1:0"
       },
+      "parentId": "Cache.orgpartition",
+      "order": 19,
+      "memberOrder": 19,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1581,30 +2989,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean remove(System.Type cacheBuilder, String key)",
+      "overrideSignature": "public override Boolean remove(System.Type cacheBuilder, String key)",
       "simplifiedSignature": "remove(System.Type,String)",
       "datatype": {
-        "id": "Cache.orgpartition.remove.Boolean",
+        "id": "Cache.orgpartition.remove.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Cache.orgpartition.remove",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Deletes the cached value corresponding to the specified key from the partition cache. Use this method if your cached value is a class that implements the CacheBuilder interface.",
+      "parentName": "OrgPartition",
+      "variables": {},
       "params": {
-        "cacheBuilder": {
-          "id": "Cache.orgpartition.remove.cachebuilder",
-          "type": "var",
+        "cachebuilder": {
+          "id": "Cache.orgpartition.method.remove(system.type,string).varParam.cachebuilder",
+          "nodeType": "variable",
           "name": "cacheBuilder",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1613,28 +3047,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_cacheBuilder_-1:0"
+            "id": "token.type.identifier_cacheBuilder_0:34"
           },
-          "signature": "System.Type cacheBuilder",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "cacheBuilder",
+            "textToLower": "cachebuilder",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 46
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_cacheBuilder_0:34"
+          },
+          "parentId": "Cache.orgpartition.method.remove(system.type,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.orgpartition.remove.system.type",
+            "id": "Cache.orgpartition.remove.datatype.System.Type",
             "nodeType": "datatype",
-            "name": "System.Type"
-          }
+            "name": "System.Type",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:22"
+            },
+            "parentId": "Cache.orgpartition.remove",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.Type"
+          },
+          "scope": null
         },
         "key": {
-          "id": "Cache.orgpartition.remove.key",
-          "type": "var",
+          "id": "Cache.orgpartition.method.remove(system.type,string).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1643,30 +3122,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:55"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 55
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:55"
+          },
+          "parentId": "Cache.orgpartition.method.remove(system.type,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Cache.orgpartition.remove.string",
+            "id": "Cache.orgpartition.remove.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 48
+                },
+                "end": {
+                  "line": 0,
+                  "character": 54
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:48"
+            },
+            "parentId": "Cache.orgpartition.remove",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The Apex class that implements the CacheBuilder interface. A case-sensitive string value that, combined with the class name corresponding to the cacheBuilder parameter, uniquely identifies a cached value.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "Partition",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 19,
+  "queries": []
 }

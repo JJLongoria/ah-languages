@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Zones_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getzone(string,string)": {
-      "id": "ConnectApi.zones.getzone",
+      "id": "ConnectApi.zones.method.getzone(string,string)",
       "nodeType": "method",
       "name": "getZone",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getZone_-1:0"
       },
+      "parentId": "ConnectApi.zones",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.Zone getZone(String communityId, String zoneId)",
+      "overrideSignature": "public static override ConnectApi.Zone getZone(String communityId, String zoneId)",
       "simplifiedSignature": "getZone(String,String)",
       "datatype": {
-        "id": "ConnectApi.zones.getzone.ConnectApi.Zone",
+        "id": "ConnectApi.zones.getzone.datatype.ConnectApi.Zone",
         "nodeType": "datatype",
-        "name": "ConnectApi.Zone"
+        "name": "ConnectApi.Zone",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.zones.getzone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.Zone"
       },
       "description": "Get a zone.",
+      "parentName": "Zones",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.zones.getzone.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.zones.method.getzone(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:45"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 45
+              },
+              "end": {
+                "line": 0,
+                "character": 56
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:45"
+          },
+          "parentId": "ConnectApi.zones.method.getzone(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.zones.getzone.string",
+            "id": "ConnectApi.zones.getzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 38
+                },
+                "end": {
+                  "line": 0,
+                  "character": 44
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:38"
+            },
+            "parentId": "ConnectApi.zones.getzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "zoneId": {
-          "id": "ConnectApi.zones.getzone.zoneid",
-          "type": "var",
+        "zoneid": {
+          "id": "ConnectApi.zones.method.getzone(string,string).varParam.zoneid",
+          "nodeType": "variable",
           "name": "zoneId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,29 +254,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_zoneId_-1:0"
+            "id": "token.type.identifier_zoneId_0:65"
           },
-          "signature": "String zoneId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "zoneId",
+            "textToLower": "zoneid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 65
+              },
+              "end": {
+                "line": 0,
+                "character": 71
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_zoneId_0:65"
+          },
+          "parentId": "ConnectApi.zones.method.getzone(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.zones.getzone.string",
+            "id": "ConnectApi.zones.getzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 58
+                },
+                "end": {
+                  "line": 0,
+                  "character": 64
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:58"
+            },
+            "parentId": "ConnectApi.zones.getzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID of a zone.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getzones(string)": {
-      "id": "ConnectApi.zones.getzones",
+      "id": "ConnectApi.zones.method.getzones(string)",
       "nodeType": "method",
       "name": "getZones",
       "startToken": {
@@ -222,6 +346,9 @@
         },
         "id": "declaration.entity.name.function_getZones_-1:0"
       },
+      "parentId": "ConnectApi.zones",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -229,17 +356,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -248,30 +375,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ZonePage getZones(String communityId)",
+      "overrideSignature": "public static override ConnectApi.ZonePage getZones(String communityId)",
       "simplifiedSignature": "getZones(String)",
       "datatype": {
-        "id": "ConnectApi.zones.getzones.ConnectApi.ZonePage",
+        "id": "ConnectApi.zones.getzones.datatype.ConnectApi.ZonePage",
         "nodeType": "datatype",
-        "name": "ConnectApi.ZonePage"
+        "name": "ConnectApi.ZonePage",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.zones.getzones",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ZonePage"
       },
       "description": "Get a list of zones.",
+      "parentName": "Zones",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.zones.getzones.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.zones.method.getzones(string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -280,29 +433,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:50"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 50
+              },
+              "end": {
+                "line": 0,
+                "character": 61
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:50"
+          },
+          "parentId": "ConnectApi.zones.method.getzones(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.zones.getzones.string",
+            "id": "ConnectApi.zones.getzones.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 43
+                },
+                "end": {
+                  "line": 0,
+                  "character": 49
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:43"
+            },
+            "parentId": "ConnectApi.zones.getzones",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getzones(string,integer,integer)": {
-      "id": "ConnectApi.zones.getzones",
+      "id": "ConnectApi.zones.method.getzones(string,integer,integer)",
       "nodeType": "method",
       "name": "getZones",
       "startToken": {
@@ -324,6 +525,9 @@
         },
         "id": "declaration.entity.name.function_getZones_-1:0"
       },
+      "parentId": "ConnectApi.zones",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -331,17 +535,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -350,30 +554,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.ZonePage getZones(String communityId, Integer pageParam, Integer pageSize)",
+      "signature": "public static ConnectApi.Zone getZones(String communityId, Integer pageParam, Integer pageSize)",
+      "overrideSignature": "public static override ConnectApi.Zone getZones(String communityId, Integer pageParam, Integer pageSize)",
       "simplifiedSignature": "getZones(String,Integer,Integer)",
       "datatype": {
-        "id": "ConnectApi.zones.getzones.ConnectApi.ZonePage",
+        "id": "ConnectApi.zones.getzones.datatype.ConnectApi.Zone",
         "nodeType": "datatype",
-        "name": "ConnectApi.ZonePage"
+        "name": "ConnectApi.Zone",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.zones.getzones",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.Zone"
       },
       "description": "Get a page of zones.",
+      "parentName": "Zones",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.zones.getzones.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.zones.method.getzones(string,integer,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -382,28 +612,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:46"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:46"
+          },
+          "parentId": "ConnectApi.zones.method.getzones(string,integer,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.zones.getzones.string",
+            "id": "ConnectApi.zones.getzones.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:39"
+            },
+            "parentId": "ConnectApi.zones.getzones",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "pageParam": {
-          "id": "ConnectApi.zones.getzones.pageparam",
-          "type": "var",
+        "pageparam": {
+          "id": "ConnectApi.zones.method.getzones(string,integer,integer).varParam.pageparam",
+          "nodeType": "variable",
           "name": "pageParam",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -412,28 +687,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 76
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageParam_-1:0"
+            "id": "token.type.identifier_pageParam_0:67"
           },
-          "signature": "Integer pageParam",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 76
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:67"
+          },
+          "parentId": "ConnectApi.zones.method.getzones(string,integer,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.zones.getzones.integer",
+            "id": "ConnectApi.zones.getzones.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:59"
+            },
+            "parentId": "ConnectApi.zones.getzones",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
-        "pageSize": {
-          "id": "ConnectApi.zones.getzones.pagesize",
-          "type": "var",
+        "pagesize": {
+          "id": "ConnectApi.zones.method.getzones(string,integer,integer).varParam.pagesize",
+          "nodeType": "variable",
           "name": "pageSize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -442,29 +762,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageSize_-1:0"
+            "id": "token.type.identifier_pageSize_0:86"
           },
-          "signature": "Integer pageSize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 86
+              },
+              "end": {
+                "line": 0,
+                "character": 94
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:86"
+          },
+          "parentId": "ConnectApi.zones.method.getzones(string,integer,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.zones.getzones.integer",
+            "id": "ConnectApi.zones.getzones.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 78
+                },
+                "end": {
+                  "line": 0,
+                  "character": 85
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:78"
+            },
+            "parentId": "ConnectApi.zones.getzones",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. Specifies the number of the page you want returned. Starts at 0. If you pass in null or 0, the first page is returned. Specifies the number of items per page. Valid values are from 1 through 100. If you pass in null, the default size is 25.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "searchinzone(string,string,string,connectapi.zonesearchresulttype)": {
-      "id": "ConnectApi.zones.searchinzone",
+      "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype)",
       "nodeType": "method",
       "name": "searchInZone",
       "startToken": {
@@ -486,6 +854,9 @@
         },
         "id": "declaration.entity.name.function_searchInZone_-1:0"
       },
+      "parentId": "ConnectApi.zones",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -493,17 +864,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -512,30 +883,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ZoneSearchPage searchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter)",
+      "overrideSignature": "public static override ConnectApi.ZoneSearchPage searchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter)",
       "simplifiedSignature": "searchInZone(String,String,String,ConnectApi.ZoneSearchResultType)",
       "datatype": {
-        "id": "ConnectApi.zones.searchinzone.ConnectApi.ZoneSearchPage",
+        "id": "ConnectApi.zones.searchinzone.datatype.ConnectApi.ZoneSearchPage",
         "nodeType": "datatype",
-        "name": "ConnectApi.ZoneSearchPage"
+        "name": "ConnectApi.ZoneSearchPage",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.zones.searchinzone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ZoneSearchPage"
       },
       "description": "Search articles or questions in a zone.",
+      "parentName": "Zones",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.zones.searchinzone.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -544,28 +941,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:60"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 60
+              },
+              "end": {
+                "line": 0,
+                "character": 71
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:60"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.string",
+            "id": "ConnectApi.zones.searchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 53
+                },
+                "end": {
+                  "line": 0,
+                  "character": 59
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:53"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "zoneId": {
-          "id": "ConnectApi.zones.searchinzone.zoneid",
-          "type": "var",
+        "zoneid": {
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype).varParam.zoneid",
+          "nodeType": "variable",
           "name": "zoneId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -574,28 +1016,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_zoneId_-1:0"
+            "id": "token.type.identifier_zoneId_0:80"
           },
-          "signature": "String zoneId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "zoneId",
+            "textToLower": "zoneid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 80
+              },
+              "end": {
+                "line": 0,
+                "character": 86
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_zoneId_0:80"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.string",
+            "id": "ConnectApi.zones.searchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 73
+                },
+                "end": {
+                  "line": 0,
+                  "character": 79
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:73"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "q": {
-          "id": "ConnectApi.zones.searchinzone.q",
-          "type": "var",
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype).varParam.q",
+          "nodeType": "variable",
           "name": "q",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -604,28 +1091,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 96
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_q_-1:0"
+            "id": "token.type.identifier_q_0:95"
           },
-          "signature": "String q",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "q",
+            "textToLower": "q",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 95
+              },
+              "end": {
+                "line": 0,
+                "character": 96
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_q_0:95"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.string",
+            "id": "ConnectApi.zones.searchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 88
+                },
+                "end": {
+                  "line": 0,
+                  "character": 94
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:88"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "filter": {
-          "id": "ConnectApi.zones.searchinzone.filter",
-          "type": "var",
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype).varParam.filter",
+          "nodeType": "variable",
           "name": "filter",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -634,29 +1166,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 130
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 136
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_filter_-1:0"
+            "id": "token.type.identifier_filter_0:130"
           },
-          "signature": "ConnectApi.ZoneSearchResultType filter",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "filter",
+            "textToLower": "filter",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 130
+              },
+              "end": {
+                "line": 0,
+                "character": 136
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_filter_0:130"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.connectapi.zonesearchresulttype",
+            "id": "ConnectApi.zones.searchinzone.datatype.ConnectApi.ZoneSearchResultType",
             "nodeType": "datatype",
-            "name": "ConnectApi.ZoneSearchResultType"
-          }
+            "name": "ConnectApi.ZoneSearchResultType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 98
+                },
+                "end": {
+                  "line": 0,
+                  "character": 108
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:98"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ZoneSearchResultType"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID of a zone. Specifies the string to search. The search string must contain at least two characters, not including wildcards. See Wildcards. A ZoneSearchResultType enum value. One of the following:  Article—Search results contain only articles.   Question—Search results contain only questions.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "searchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer)": {
-      "id": "ConnectApi.zones.searchinzone",
+      "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer)",
       "nodeType": "method",
       "name": "searchInZone",
       "startToken": {
@@ -678,6 +1258,9 @@
         },
         "id": "declaration.entity.name.function_searchInZone_-1:0"
       },
+      "parentId": "ConnectApi.zones",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -685,17 +1268,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -704,30 +1287,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ZoneSearchPage searchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter, String pageParam, Integer pageSize)",
+      "overrideSignature": "public static override ConnectApi.ZoneSearchPage searchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter, String pageParam, Integer pageSize)",
       "simplifiedSignature": "searchInZone(String,String,String,ConnectApi.ZoneSearchResultType,String,Integer)",
       "datatype": {
-        "id": "ConnectApi.zones.searchinzone.ConnectApi.ZoneSearchPage",
+        "id": "ConnectApi.zones.searchinzone.datatype.ConnectApi.ZoneSearchPage",
         "nodeType": "datatype",
-        "name": "ConnectApi.ZoneSearchPage"
+        "name": "ConnectApi.ZoneSearchPage",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.zones.searchinzone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ZoneSearchPage"
       },
       "description": "Search a page of articles or questions in a zone.",
+      "parentName": "Zones",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.zones.searchinzone.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -736,28 +1345,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:60"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 60
+              },
+              "end": {
+                "line": 0,
+                "character": 71
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:60"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.string",
+            "id": "ConnectApi.zones.searchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 53
+                },
+                "end": {
+                  "line": 0,
+                  "character": 59
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:53"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "zoneId": {
-          "id": "ConnectApi.zones.searchinzone.zoneid",
-          "type": "var",
+        "zoneid": {
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer).varParam.zoneid",
+          "nodeType": "variable",
           "name": "zoneId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -766,28 +1420,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_zoneId_-1:0"
+            "id": "token.type.identifier_zoneId_0:80"
           },
-          "signature": "String zoneId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "zoneId",
+            "textToLower": "zoneid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 80
+              },
+              "end": {
+                "line": 0,
+                "character": 86
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_zoneId_0:80"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.string",
+            "id": "ConnectApi.zones.searchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 73
+                },
+                "end": {
+                  "line": 0,
+                  "character": 79
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:73"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "q": {
-          "id": "ConnectApi.zones.searchinzone.q",
-          "type": "var",
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer).varParam.q",
+          "nodeType": "variable",
           "name": "q",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -796,28 +1495,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 96
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_q_-1:0"
+            "id": "token.type.identifier_q_0:95"
           },
-          "signature": "String q",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "q",
+            "textToLower": "q",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 95
+              },
+              "end": {
+                "line": 0,
+                "character": 96
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_q_0:95"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.string",
+            "id": "ConnectApi.zones.searchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 88
+                },
+                "end": {
+                  "line": 0,
+                  "character": 94
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:88"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "filter": {
-          "id": "ConnectApi.zones.searchinzone.filter",
-          "type": "var",
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer).varParam.filter",
+          "nodeType": "variable",
           "name": "filter",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -826,28 +1570,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 130
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 136
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_filter_-1:0"
+            "id": "token.type.identifier_filter_0:130"
           },
-          "signature": "ConnectApi.ZoneSearchResultType filter",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "filter",
+            "textToLower": "filter",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 130
+              },
+              "end": {
+                "line": 0,
+                "character": 136
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_filter_0:130"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.connectapi.zonesearchresulttype",
+            "id": "ConnectApi.zones.searchinzone.datatype.ConnectApi.ZoneSearchResultType",
             "nodeType": "datatype",
-            "name": "ConnectApi.ZoneSearchResultType"
-          }
+            "name": "ConnectApi.ZoneSearchResultType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 98
+                },
+                "end": {
+                  "line": 0,
+                  "character": 108
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:98"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ZoneSearchResultType"
+          },
+          "scope": null
         },
-        "pageParam": {
-          "id": "ConnectApi.zones.searchinzone.pageparam",
-          "type": "var",
+        "pageparam": {
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer).varParam.pageparam",
+          "nodeType": "variable",
           "name": "pageParam",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -856,28 +1645,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 145
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 154
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageParam_-1:0"
+            "id": "token.type.identifier_pageParam_0:145"
           },
-          "signature": "String pageParam",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 145
+              },
+              "end": {
+                "line": 0,
+                "character": 154
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:145"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.string",
+            "id": "ConnectApi.zones.searchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 138
+                },
+                "end": {
+                  "line": 0,
+                  "character": 144
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:138"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "pageSize": {
-          "id": "ConnectApi.zones.searchinzone.pagesize",
-          "type": "var",
+        "pagesize": {
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer).varParam.pagesize",
+          "nodeType": "variable",
           "name": "pageSize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -886,29 +1720,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 164
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 172
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageSize_-1:0"
+            "id": "token.type.identifier_pageSize_0:164"
           },
-          "signature": "Integer pageSize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 164
+              },
+              "end": {
+                "line": 0,
+                "character": 172
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:164"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer)",
+          "order": 6,
+          "memberOrder": 6,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.integer",
+            "id": "ConnectApi.zones.searchinzone.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 156
+                },
+                "end": {
+                  "line": 0,
+                  "character": 163
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:156"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID of a zone. Specifies the string to search. The search string must contain at least two characters, not including wildcards. See Wildcards. A ZoneSearchResultType enum value. One of the following:  Article—Search results contain only articles.   Question—Search results contain only questions.    Specifies the page token to be used to view a page of information. Page tokens are returned as part of the response class, such as currentPageToken or nextPageToken. If you pass in null, the first page is returned. Specifies the number of items per page. Valid values are from 1 through 100. If you pass in null, the default size is 25.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "searchinzone(string,string,string,connectapi.zonesearchresulttype,string)": {
-      "id": "ConnectApi.zones.searchinzone",
+      "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string)",
       "nodeType": "method",
       "name": "searchInZone",
       "startToken": {
@@ -930,6 +1812,9 @@
         },
         "id": "declaration.entity.name.function_searchInZone_-1:0"
       },
+      "parentId": "ConnectApi.zones",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -937,17 +1822,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -956,30 +1841,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ZoneSearchPage searchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter, String language)",
+      "overrideSignature": "public static override ConnectApi.ZoneSearchPage searchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter, String language)",
       "simplifiedSignature": "searchInZone(String,String,String,ConnectApi.ZoneSearchResultType,String)",
       "datatype": {
-        "id": "ConnectApi.zones.searchinzone.ConnectApi.ZoneSearchPage",
+        "id": "ConnectApi.zones.searchinzone.datatype.ConnectApi.ZoneSearchPage",
         "nodeType": "datatype",
-        "name": "ConnectApi.ZoneSearchPage"
+        "name": "ConnectApi.ZoneSearchPage",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.zones.searchinzone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ZoneSearchPage"
       },
       "description": "Search articles or questions in a zone, and specify the language of the results.",
+      "parentName": "Zones",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.zones.searchinzone.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -988,28 +1899,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:60"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 60
+              },
+              "end": {
+                "line": 0,
+                "character": 71
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:60"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.string",
+            "id": "ConnectApi.zones.searchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 53
+                },
+                "end": {
+                  "line": 0,
+                  "character": 59
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:53"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "zoneId": {
-          "id": "ConnectApi.zones.searchinzone.zoneid",
-          "type": "var",
+        "zoneid": {
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string).varParam.zoneid",
+          "nodeType": "variable",
           "name": "zoneId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1018,28 +1974,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_zoneId_-1:0"
+            "id": "token.type.identifier_zoneId_0:80"
           },
-          "signature": "String zoneId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "zoneId",
+            "textToLower": "zoneid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 80
+              },
+              "end": {
+                "line": 0,
+                "character": 86
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_zoneId_0:80"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.string",
+            "id": "ConnectApi.zones.searchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 73
+                },
+                "end": {
+                  "line": 0,
+                  "character": 79
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:73"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "q": {
-          "id": "ConnectApi.zones.searchinzone.q",
-          "type": "var",
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string).varParam.q",
+          "nodeType": "variable",
           "name": "q",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1048,28 +2049,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 96
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_q_-1:0"
+            "id": "token.type.identifier_q_0:95"
           },
-          "signature": "String q",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "q",
+            "textToLower": "q",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 95
+              },
+              "end": {
+                "line": 0,
+                "character": 96
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_q_0:95"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.string",
+            "id": "ConnectApi.zones.searchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 88
+                },
+                "end": {
+                  "line": 0,
+                  "character": 94
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:88"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "filter": {
-          "id": "ConnectApi.zones.searchinzone.filter",
-          "type": "var",
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string).varParam.filter",
+          "nodeType": "variable",
           "name": "filter",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1078,28 +2124,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 130
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 136
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_filter_-1:0"
+            "id": "token.type.identifier_filter_0:130"
           },
-          "signature": "ConnectApi.ZoneSearchResultType filter",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "filter",
+            "textToLower": "filter",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 130
+              },
+              "end": {
+                "line": 0,
+                "character": 136
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_filter_0:130"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.connectapi.zonesearchresulttype",
+            "id": "ConnectApi.zones.searchinzone.datatype.ConnectApi.ZoneSearchResultType",
             "nodeType": "datatype",
-            "name": "ConnectApi.ZoneSearchResultType"
-          }
+            "name": "ConnectApi.ZoneSearchResultType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 98
+                },
+                "end": {
+                  "line": 0,
+                  "character": 108
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:98"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ZoneSearchResultType"
+          },
+          "scope": null
         },
         "language": {
-          "id": "ConnectApi.zones.searchinzone.language",
-          "type": "var",
+          "id": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string).varParam.language",
+          "nodeType": "variable",
           "name": "language",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1108,29 +2199,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 145
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 153
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_language_-1:0"
+            "id": "token.type.identifier_language_0:145"
           },
-          "signature": "String language",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "language",
+            "textToLower": "language",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 145
+              },
+              "end": {
+                "line": 0,
+                "character": 153
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_language_0:145"
+          },
+          "parentId": "ConnectApi.zones.method.searchinzone(string,string,string,connectapi.zonesearchresulttype,string)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "ConnectApi.zones.searchinzone.string",
+            "id": "ConnectApi.zones.searchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 138
+                },
+                "end": {
+                  "line": 0,
+                  "character": 144
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:138"
+            },
+            "parentId": "ConnectApi.zones.searchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID of a zone. Specifies the string to search. The search string must contain at least two characters, not including wildcards. See Wildcards.    Article—Search results contain only articles.   Question—Search results contain only questions.     The language of the articles or questions. The value must be a Salesforce supported locale code.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,connectapi.zonesearchpage)": {
-      "id": "ConnectApi.zones.settestsearchinzone",
+      "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,connectapi.zonesearchpage)",
       "nodeType": "method",
       "name": "setTestSearchInZone",
       "startToken": {
@@ -1152,6 +2291,9 @@
         },
         "id": "declaration.entity.name.function_setTestSearchInZone_-1:0"
       },
+      "parentId": "ConnectApi.zones",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1159,17 +2301,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1178,30 +2320,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void setTestSearchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter, ConnectApi.ZoneSearchPage result)",
+      "signature": "public static Void setTestSearchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter, ConnectApi.ZoneSearchPage result)",
+      "overrideSignature": "public static override Void setTestSearchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter, ConnectApi.ZoneSearchPage result)",
       "simplifiedSignature": "setTestSearchInZone(String,String,String,ConnectApi.ZoneSearchResultType,ConnectApi.ZoneSearchPage)",
       "datatype": {
-        "id": "ConnectApi.zones.settestsearchinzone.void",
+        "id": "ConnectApi.zones.settestsearchinzone.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.zones.settestsearchinzone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Register a ConnectApi.ZoneSearchPage object to be returned when searchInZone(communityId, zoneId, q, filter) is called in a test context. Use the method with the same parameters or you receive an exception.",
+      "parentName": "Zones",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.zones.settestsearchinzone.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,connectapi.zonesearchpage).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1210,28 +2378,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:46"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:46"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,connectapi.zonesearchpage)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.string",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:39"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "zoneId": {
-          "id": "ConnectApi.zones.settestsearchinzone.zoneid",
-          "type": "var",
+        "zoneid": {
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,connectapi.zonesearchpage).varParam.zoneid",
+          "nodeType": "variable",
           "name": "zoneId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1240,28 +2453,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_zoneId_-1:0"
+            "id": "token.type.identifier_zoneId_0:66"
           },
-          "signature": "String zoneId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "zoneId",
+            "textToLower": "zoneid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 66
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_zoneId_0:66"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,connectapi.zonesearchpage)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.string",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 65
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:59"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "q": {
-          "id": "ConnectApi.zones.settestsearchinzone.q",
-          "type": "var",
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,connectapi.zonesearchpage).varParam.q",
+          "nodeType": "variable",
           "name": "q",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1270,28 +2528,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_q_-1:0"
+            "id": "token.type.identifier_q_0:81"
           },
-          "signature": "String q",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "q",
+            "textToLower": "q",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 82
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_q_0:81"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,connectapi.zonesearchpage)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.string",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 80
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:74"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "filter": {
-          "id": "ConnectApi.zones.settestsearchinzone.filter",
-          "type": "var",
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,connectapi.zonesearchpage).varParam.filter",
+          "nodeType": "variable",
           "name": "filter",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1300,28 +2603,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 116
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 122
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_filter_-1:0"
+            "id": "token.type.identifier_filter_0:116"
           },
-          "signature": "ConnectApi.ZoneSearchResultType filter",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "filter",
+            "textToLower": "filter",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 116
+              },
+              "end": {
+                "line": 0,
+                "character": 122
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_filter_0:116"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,connectapi.zonesearchpage)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.connectapi.zonesearchresulttype",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.ConnectApi.ZoneSearchResultType",
             "nodeType": "datatype",
-            "name": "ConnectApi.ZoneSearchResultType"
-          }
+            "name": "ConnectApi.ZoneSearchResultType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 84
+                },
+                "end": {
+                  "line": 0,
+                  "character": 94
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:84"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ZoneSearchResultType"
+          },
+          "scope": null
         },
         "result": {
-          "id": "ConnectApi.zones.settestsearchinzone.result",
-          "type": "var",
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,connectapi.zonesearchpage).varParam.result",
+          "nodeType": "variable",
           "name": "result",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1330,29 +2678,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 150
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 156
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_result_-1:0"
+            "id": "token.type.identifier_result_0:150"
           },
-          "signature": "ConnectApi.ZoneSearchPage result",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "result",
+            "textToLower": "result",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 150
+              },
+              "end": {
+                "line": 0,
+                "character": 156
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_result_0:150"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,connectapi.zonesearchpage)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.connectapi.zonesearchpage",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.ConnectApi.ZoneSearchPage",
             "nodeType": "datatype",
-            "name": "ConnectApi.ZoneSearchPage"
-          }
+            "name": "ConnectApi.ZoneSearchPage",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 124
+                },
+                "end": {
+                  "line": 0,
+                  "character": 134
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:124"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ZoneSearchPage"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID of a zone. Specifies the string to search. The search string must contain at least two characters, not including wildcards. See Wildcards. A ZoneSearchResultType enum value. One of the following:  Article—Search results contain only articles.   Question—Search results contain only questions.    The object containing test data.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage)": {
-      "id": "ConnectApi.zones.settestsearchinzone",
+      "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage)",
       "nodeType": "method",
       "name": "setTestSearchInZone",
       "startToken": {
@@ -1374,6 +2770,9 @@
         },
         "id": "declaration.entity.name.function_setTestSearchInZone_-1:0"
       },
+      "parentId": "ConnectApi.zones",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1381,17 +2780,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1400,30 +2799,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void setTestSearchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter, String pageParam, Integer pageSize, ConnectApi.ZoneSearchPage result)",
+      "signature": "public static Void setTestSearchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter, String pageParam, Integer pageSize, ConnectApi.ZoneSearchPage result)",
+      "overrideSignature": "public static override Void setTestSearchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter, String pageParam, Integer pageSize, ConnectApi.ZoneSearchPage result)",
       "simplifiedSignature": "setTestSearchInZone(String,String,String,ConnectApi.ZoneSearchResultType,String,Integer,ConnectApi.ZoneSearchPage)",
       "datatype": {
-        "id": "ConnectApi.zones.settestsearchinzone.void",
+        "id": "ConnectApi.zones.settestsearchinzone.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.zones.settestsearchinzone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Register a ConnectApi.ZoneSearchPage object to be returned when searchInZone(communityId, zoneId, q, filter, pageParam, pageSize) is called in a test context. Use the method with the same parameters or you receive an exception.",
+      "parentName": "Zones",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.zones.settestsearchinzone.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1432,28 +2857,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:46"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:46"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.string",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:39"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "zoneId": {
-          "id": "ConnectApi.zones.settestsearchinzone.zoneid",
-          "type": "var",
+        "zoneid": {
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage).varParam.zoneid",
+          "nodeType": "variable",
           "name": "zoneId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1462,28 +2932,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_zoneId_-1:0"
+            "id": "token.type.identifier_zoneId_0:66"
           },
-          "signature": "String zoneId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "zoneId",
+            "textToLower": "zoneid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 66
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_zoneId_0:66"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.string",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 65
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:59"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "q": {
-          "id": "ConnectApi.zones.settestsearchinzone.q",
-          "type": "var",
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage).varParam.q",
+          "nodeType": "variable",
           "name": "q",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1492,28 +3007,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_q_-1:0"
+            "id": "token.type.identifier_q_0:81"
           },
-          "signature": "String q",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "q",
+            "textToLower": "q",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 82
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_q_0:81"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.string",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 80
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:74"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "filter": {
-          "id": "ConnectApi.zones.settestsearchinzone.filter",
-          "type": "var",
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage).varParam.filter",
+          "nodeType": "variable",
           "name": "filter",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1522,28 +3082,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 116
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 122
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_filter_-1:0"
+            "id": "token.type.identifier_filter_0:116"
           },
-          "signature": "ConnectApi.ZoneSearchResultType filter",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "filter",
+            "textToLower": "filter",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 116
+              },
+              "end": {
+                "line": 0,
+                "character": 122
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_filter_0:116"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.connectapi.zonesearchresulttype",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.ConnectApi.ZoneSearchResultType",
             "nodeType": "datatype",
-            "name": "ConnectApi.ZoneSearchResultType"
-          }
+            "name": "ConnectApi.ZoneSearchResultType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 84
+                },
+                "end": {
+                  "line": 0,
+                  "character": 94
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:84"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ZoneSearchResultType"
+          },
+          "scope": null
         },
-        "pageParam": {
-          "id": "ConnectApi.zones.settestsearchinzone.pageparam",
-          "type": "var",
+        "pageparam": {
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage).varParam.pageparam",
+          "nodeType": "variable",
           "name": "pageParam",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1552,28 +3157,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 131
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 140
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageParam_-1:0"
+            "id": "token.type.identifier_pageParam_0:131"
           },
-          "signature": "String pageParam",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 131
+              },
+              "end": {
+                "line": 0,
+                "character": 140
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:131"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.string",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 124
+                },
+                "end": {
+                  "line": 0,
+                  "character": 130
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:124"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "pageSize": {
-          "id": "ConnectApi.zones.settestsearchinzone.pagesize",
-          "type": "var",
+        "pagesize": {
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage).varParam.pagesize",
+          "nodeType": "variable",
           "name": "pageSize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1582,28 +3232,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 150
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 158
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageSize_-1:0"
+            "id": "token.type.identifier_pageSize_0:150"
           },
-          "signature": "Integer pageSize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 150
+              },
+              "end": {
+                "line": 0,
+                "character": 158
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:150"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage)",
+          "order": 6,
+          "memberOrder": 6,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.integer",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 142
+                },
+                "end": {
+                  "line": 0,
+                  "character": 149
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:142"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
         "result": {
-          "id": "ConnectApi.zones.settestsearchinzone.result",
-          "type": "var",
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage).varParam.result",
+          "nodeType": "variable",
           "name": "result",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1612,29 +3307,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 186
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 192
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_result_-1:0"
+            "id": "token.type.identifier_result_0:186"
           },
-          "signature": "ConnectApi.ZoneSearchPage result",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "result",
+            "textToLower": "result",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 186
+              },
+              "end": {
+                "line": 0,
+                "character": 192
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_result_0:186"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,integer,connectapi.zonesearchpage)",
+          "order": 7,
+          "memberOrder": 7,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.connectapi.zonesearchpage",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.ConnectApi.ZoneSearchPage",
             "nodeType": "datatype",
-            "name": "ConnectApi.ZoneSearchPage"
-          }
+            "name": "ConnectApi.ZoneSearchPage",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 160
+                },
+                "end": {
+                  "line": 0,
+                  "character": 170
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:160"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ZoneSearchPage"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID of a zone. Specifies the string to search. The search string must contain at least two characters, not including wildcards. See Wildcards. A ZoneSearchResultType enum value. One of the following:  Article—Search results contain only articles.   Question—Search results contain only questions.    Specifies the page token to be used to view a page of information. Page tokens are returned as part of the response class, such as currentPageToken or nextPageToken. If you pass in null, the first page is returned. Specifies the number of items per page. Valid values are from 1 through 100. If you pass in null, the default size is 25. The object containing test data.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,connectapi.zonesearchpage)": {
-      "id": "ConnectApi.zones.settestsearchinzone",
+      "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,connectapi.zonesearchpage)",
       "nodeType": "method",
       "name": "setTestSearchInZone",
       "startToken": {
@@ -1656,6 +3399,9 @@
         },
         "id": "declaration.entity.name.function_setTestSearchInZone_-1:0"
       },
+      "parentId": "ConnectApi.zones",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1663,17 +3409,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1682,30 +3428,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void setTestSearchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter, String language, ConnectApi.ZoneSearchPage result)",
+      "signature": "public static Void setTestSearchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter, String language, ConnectApi.ZoneSearchPage result)",
+      "overrideSignature": "public static override Void setTestSearchInZone(String communityId, String zoneId, String q, ConnectApi.ZoneSearchResultType filter, String language, ConnectApi.ZoneSearchPage result)",
       "simplifiedSignature": "setTestSearchInZone(String,String,String,ConnectApi.ZoneSearchResultType,String,ConnectApi.ZoneSearchPage)",
       "datatype": {
-        "id": "ConnectApi.zones.settestsearchinzone.void",
+        "id": "ConnectApi.zones.settestsearchinzone.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.zones.settestsearchinzone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Register a ConnectApi.ZoneSearchPage object to be returned when searchInZone(communityId, zoneId, q, filter, language) is called in a test context. Use the method with the same parameters or you receive an exception.",
+      "parentName": "Zones",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.zones.settestsearchinzone.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,connectapi.zonesearchpage).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1714,28 +3486,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:46"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:46"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,connectapi.zonesearchpage)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.string",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:39"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "zoneId": {
-          "id": "ConnectApi.zones.settestsearchinzone.zoneid",
-          "type": "var",
+        "zoneid": {
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,connectapi.zonesearchpage).varParam.zoneid",
+          "nodeType": "variable",
           "name": "zoneId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1744,28 +3561,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_zoneId_-1:0"
+            "id": "token.type.identifier_zoneId_0:66"
           },
-          "signature": "String zoneId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "zoneId",
+            "textToLower": "zoneid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 66
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_zoneId_0:66"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,connectapi.zonesearchpage)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.string",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 65
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:59"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "q": {
-          "id": "ConnectApi.zones.settestsearchinzone.q",
-          "type": "var",
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,connectapi.zonesearchpage).varParam.q",
+          "nodeType": "variable",
           "name": "q",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1774,28 +3636,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_q_-1:0"
+            "id": "token.type.identifier_q_0:81"
           },
-          "signature": "String q",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "q",
+            "textToLower": "q",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 82
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_q_0:81"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,connectapi.zonesearchpage)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.string",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 80
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:74"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "filter": {
-          "id": "ConnectApi.zones.settestsearchinzone.filter",
-          "type": "var",
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,connectapi.zonesearchpage).varParam.filter",
+          "nodeType": "variable",
           "name": "filter",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1804,28 +3711,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 116
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 122
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_filter_-1:0"
+            "id": "token.type.identifier_filter_0:116"
           },
-          "signature": "ConnectApi.ZoneSearchResultType filter",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "filter",
+            "textToLower": "filter",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 116
+              },
+              "end": {
+                "line": 0,
+                "character": 122
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_filter_0:116"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,connectapi.zonesearchpage)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.connectapi.zonesearchresulttype",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.ConnectApi.ZoneSearchResultType",
             "nodeType": "datatype",
-            "name": "ConnectApi.ZoneSearchResultType"
-          }
+            "name": "ConnectApi.ZoneSearchResultType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 84
+                },
+                "end": {
+                  "line": 0,
+                  "character": 94
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:84"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ZoneSearchResultType"
+          },
+          "scope": null
         },
         "language": {
-          "id": "ConnectApi.zones.settestsearchinzone.language",
-          "type": "var",
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,connectapi.zonesearchpage).varParam.language",
+          "nodeType": "variable",
           "name": "language",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1834,28 +3786,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 131
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 139
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_language_-1:0"
+            "id": "token.type.identifier_language_0:131"
           },
-          "signature": "String language",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "language",
+            "textToLower": "language",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 131
+              },
+              "end": {
+                "line": 0,
+                "character": 139
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_language_0:131"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,connectapi.zonesearchpage)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.string",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 124
+                },
+                "end": {
+                  "line": 0,
+                  "character": 130
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:124"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "result": {
-          "id": "ConnectApi.zones.settestsearchinzone.result",
-          "type": "var",
+          "id": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,connectapi.zonesearchpage).varParam.result",
+          "nodeType": "variable",
           "name": "result",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1864,30 +3861,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 167
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 173
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_result_-1:0"
+            "id": "token.type.identifier_result_0:167"
           },
-          "signature": "ConnectApi.ZoneSearchPage result",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "result",
+            "textToLower": "result",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 167
+              },
+              "end": {
+                "line": 0,
+                "character": 173
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_result_0:167"
+          },
+          "parentId": "ConnectApi.zones.method.settestsearchinzone(string,string,string,connectapi.zonesearchresulttype,string,connectapi.zonesearchpage)",
+          "order": 6,
+          "memberOrder": 6,
           "datatype": {
-            "id": "ConnectApi.zones.settestsearchinzone.connectapi.zonesearchpage",
+            "id": "ConnectApi.zones.settestsearchinzone.datatype.ConnectApi.ZoneSearchPage",
             "nodeType": "datatype",
-            "name": "ConnectApi.ZoneSearchPage"
-          }
+            "name": "ConnectApi.ZoneSearchPage",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 141
+                },
+                "end": {
+                  "line": 0,
+                  "character": 151
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:141"
+            },
+            "parentId": "ConnectApi.zones.settestsearchinzone",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ZoneSearchPage"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID of a zone. Specifies the string to search. The search string must contain at least two characters, not including wildcards. See Wildcards.    Article—Search results contain only articles.   Question—Search results contain only questions.     The language of the articles or questions. The value must be a Salesforce supported locale code. In an &lt;apex:page&gt;, the default value is the language of the page. Otherwise, the default value is the user's locale. The object containing test data.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 9,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_EnvironmentContext_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "addentityfield(string)": {
-      "id": "Canvas.environmentcontext.addentityfield",
+      "id": "Canvas.environmentcontext.method.addentityfield(string)",
       "nodeType": "method",
       "name": "addEntityField",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_addEntityField_-1:0"
       },
+      "parentId": "Canvas.environmentcontext",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void addEntityField(String fieldName)",
+      "overrideSignature": "public override void addEntityField(String fieldName)",
       "simplifiedSignature": "addEntityField(String)",
       "datatype": {
-        "id": "Canvas.environmentcontext.addentityfield.void",
+        "id": "Canvas.environmentcontext.addentityfield.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Canvas.environmentcontext.addentityfield",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Adds a field to the list of object fields that are returned in the signed request Record object when the component appears on a Visualforce page that’s placed on an object.",
+      "parentName": "EnvironmentContext",
+      "variables": {},
       "params": {
-        "fieldName": {
-          "id": "Canvas.environmentcontext.addentityfield.fieldname",
-          "type": "var",
+        "fieldname": {
+          "id": "Canvas.environmentcontext.method.addentityfield(string).varParam.fieldname",
+          "nodeType": "variable",
           "name": "fieldName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,29 +160,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 43
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_fieldName_-1:0"
+            "id": "token.type.identifier_fieldName_0:34"
           },
-          "signature": "String fieldName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fieldName",
+            "textToLower": "fieldname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 43
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fieldName_0:34"
+          },
+          "parentId": "Canvas.environmentcontext.method.addentityfield(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Canvas.environmentcontext.addentityfield.string",
+            "id": "Canvas.environmentcontext.addentityfield.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 27
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:27"
+            },
+            "parentId": "Canvas.environmentcontext.addentityfield",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The object field name that you need to add to the list of returned fields., Using ‘*’ adds all fields that the user has permission to view.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "addentityfields(set)": {
-      "id": "Canvas.environmentcontext.addentityfields",
+    "addentityfields(set<string>)": {
+      "id": "Canvas.environmentcontext.method.addentityfields(set<string>)",
       "nodeType": "method",
       "name": "addEntityFields",
       "startToken": {
@@ -173,6 +252,9 @@
         },
         "id": "declaration.entity.name.function_addEntityFields_-1:0"
       },
+      "parentId": "Canvas.environmentcontext",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -180,61 +262,162 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void addEntityFields(Set <String>)",
-      "simplifiedSignature": "addEntityFields(Set)",
+      "signature": "public void addEntityFields(Set<String> fieldNames)",
+      "overrideSignature": "public override void addEntityFields(Set<String> fieldNames)",
+      "simplifiedSignature": "addEntityFields(Set<String>)",
       "datatype": {
-        "id": "Canvas.environmentcontext.addentityfields.void",
+        "id": "Canvas.environmentcontext.addentityfields.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Canvas.environmentcontext.addentityfields",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Adds a set of fields to the list of object fields that are returned in the signed request Record object when the component appears on a Visualforce page that’s placed on an object.",
+      "parentName": "EnvironmentContext",
+      "variables": {},
       "params": {
-        "<String>": {
-          "id": "Canvas.environmentcontext.addentityfields.<string>",
-          "type": "var",
-          "name": "<String>",
+        "fieldnames": {
+          "id": "Canvas.environmentcontext.method.addentityfields(set<string>).varParam.fieldnames",
+          "nodeType": "variable",
+          "name": "fieldNames",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "fieldNames",
+            "textToLower": "fieldnames",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 40
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_fieldNames_0:40"
           },
-          "signature": "Set <String>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fieldNames",
+            "textToLower": "fieldnames",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 40
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fieldNames_0:40"
+          },
+          "parentId": "Canvas.environmentcontext.method.addentityfields(set<string>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Canvas.environmentcontext.addentityfields.set",
+            "id": "Canvas.environmentcontext.addentityfields.datatype.Set<String>",
             "nodeType": "datatype",
-            "name": "Set"
-          }
+            "name": "Set<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Set",
+              "textToLower": "set",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 28
+                },
+                "end": {
+                  "line": 0,
+                  "character": 31
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Set_0:28"
+            },
+            "parentId": "Canvas.environmentcontext.addentityfields",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Set",
+            "value": {
+              "id": "Canvas.environmentcontext.addentityfields.datatype.Set<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 32
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 38
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:32"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "The set of object field names that you need to add to the list of returned fields. If an item in the set is ‘*’, all fields that the user has permission to view are added.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getdisplaylocation()": {
-      "id": "Canvas.environmentcontext.getdisplaylocation",
+      "id": "Canvas.environmentcontext.method.getdisplaylocation()",
       "nodeType": "method",
       "name": "getDisplayLocation",
       "startToken": {
@@ -256,6 +439,9 @@
         },
         "id": "declaration.entity.name.function_getDisplayLocation_-1:0"
       },
+      "parentId": "Canvas.environmentcontext",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -263,30 +449,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getDisplayLocation()",
+      "overrideSignature": "public override String getDisplayLocation()",
       "simplifiedSignature": "getDisplayLocation()",
       "datatype": {
-        "id": "Canvas.environmentcontext.getdisplaylocation.String",
+        "id": "Canvas.environmentcontext.getdisplaylocation.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Canvas.environmentcontext.getdisplaylocation",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Retrieves the display location where the canvas app is being called from. For example, a value of Visualforce page.",
-      "params": {}
+      "parentName": "EnvironmentContext",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getentityfields()": {
-      "id": "Canvas.environmentcontext.getentityfields",
+      "id": "Canvas.environmentcontext.method.getentityfields()",
       "nodeType": "method",
       "name": "getEntityFields",
       "startToken": {
@@ -308,6 +522,9 @@
         },
         "id": "declaration.entity.name.function_getEntityFields_-1:0"
       },
+      "parentId": "Canvas.environmentcontext",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -315,30 +532,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<String> getEntityFields()",
+      "overrideSignature": "public override List<String> getEntityFields()",
       "simplifiedSignature": "getEntityFields()",
       "datatype": {
-        "id": "Canvas.environmentcontext.getentityfields.List<String>",
+        "id": "Canvas.environmentcontext.getentityfields.datatype.List<String>",
         "nodeType": "datatype",
-        "name": "List<String>"
+        "name": "List<String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Canvas.environmentcontext.getentityfields",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Canvas.environmentcontext.getentityfields.datatype.List<String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 18
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Retrieves the list of object fields that are returned in the signed request Record object when the component appears on a Visualforce page that’s placed on an object.",
-      "params": {}
+      "parentName": "EnvironmentContext",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getlocationurl()": {
-      "id": "Canvas.environmentcontext.getlocationurl",
+      "id": "Canvas.environmentcontext.method.getlocationurl()",
       "nodeType": "method",
       "name": "getLocationUrl",
       "startToken": {
@@ -360,6 +632,9 @@
         },
         "id": "declaration.entity.name.function_getLocationUrl_-1:0"
       },
+      "parentId": "Canvas.environmentcontext",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -367,30 +642,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getLocationUrl()",
+      "overrideSignature": "public override String getLocationUrl()",
       "simplifiedSignature": "getLocationUrl()",
       "datatype": {
-        "id": "Canvas.environmentcontext.getlocationurl.String",
+        "id": "Canvas.environmentcontext.getlocationurl.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Canvas.environmentcontext.getlocationurl",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Retrieves the location URL of the canvas app.",
-      "params": {}
+      "parentName": "EnvironmentContext",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getparametersasjson()": {
-      "id": "Canvas.environmentcontext.getparametersasjson",
+      "id": "Canvas.environmentcontext.method.getparametersasjson()",
       "nodeType": "method",
       "name": "getParametersAsJSON",
       "startToken": {
@@ -412,6 +715,9 @@
         },
         "id": "declaration.entity.name.function_getParametersAsJSON_-1:0"
       },
+      "parentId": "Canvas.environmentcontext",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -419,30 +725,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getParametersAsJSON()",
+      "overrideSignature": "public override String getParametersAsJSON()",
       "simplifiedSignature": "getParametersAsJSON()",
       "datatype": {
-        "id": "Canvas.environmentcontext.getparametersasjson.String",
+        "id": "Canvas.environmentcontext.getparametersasjson.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Canvas.environmentcontext.getparametersasjson",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Retrieves the current custom parameters for the canvas app. Parameters are returned as a JSON string.",
-      "params": {}
+      "parentName": "EnvironmentContext",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getsublocation()": {
-      "id": "Canvas.environmentcontext.getsublocation",
+      "id": "Canvas.environmentcontext.method.getsublocation()",
       "nodeType": "method",
       "name": "getSublocation",
       "startToken": {
@@ -464,6 +798,9 @@
         },
         "id": "declaration.entity.name.function_getSublocation_-1:0"
       },
+      "parentId": "Canvas.environmentcontext",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -471,30 +808,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getSublocation()",
+      "overrideSignature": "public override String getSublocation()",
       "simplifiedSignature": "getSublocation()",
       "datatype": {
-        "id": "Canvas.environmentcontext.getsublocation.String",
+        "id": "Canvas.environmentcontext.getsublocation.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Canvas.environmentcontext.getsublocation",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Retrieves the display sublocation where the canvas app is being called from.",
-      "params": {}
+      "parentName": "EnvironmentContext",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "setparametersasjson(string)": {
-      "id": "Canvas.environmentcontext.setparametersasjson",
+      "id": "Canvas.environmentcontext.method.setparametersasjson(string)",
       "nodeType": "method",
       "name": "setParametersAsJSON",
       "startToken": {
@@ -516,6 +881,9 @@
         },
         "id": "declaration.entity.name.function_setParametersAsJSON_-1:0"
       },
+      "parentId": "Canvas.environmentcontext",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -523,30 +891,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setParametersAsJSON(String jsonString)",
+      "overrideSignature": "public override void setParametersAsJSON(String jsonString)",
       "simplifiedSignature": "setParametersAsJSON(String)",
       "datatype": {
-        "id": "Canvas.environmentcontext.setparametersasjson.void",
+        "id": "Canvas.environmentcontext.setparametersasjson.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Canvas.environmentcontext.setparametersasjson",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Sets the custom parameters for the canvas app.",
+      "parentName": "EnvironmentContext",
+      "variables": {},
       "params": {
-        "jsonString": {
-          "id": "Canvas.environmentcontext.setparametersasjson.jsonstring",
-          "type": "var",
+        "jsonstring": {
+          "id": "Canvas.environmentcontext.method.setparametersasjson(string).varParam.jsonstring",
+          "nodeType": "variable",
           "name": "jsonString",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -555,30 +949,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_jsonString_-1:0"
+            "id": "token.type.identifier_jsonString_0:39"
           },
-          "signature": "String jsonString",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jsonString",
+            "textToLower": "jsonstring",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 39
+              },
+              "end": {
+                "line": 0,
+                "character": 49
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_jsonString_0:39"
+          },
+          "parentId": "Canvas.environmentcontext.method.setparametersasjson(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Canvas.environmentcontext.setparametersasjson.string",
+            "id": "Canvas.environmentcontext.setparametersasjson.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 32
+                },
+                "end": {
+                  "line": 0,
+                  "character": 38
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:32"
+            },
+            "parentId": "Canvas.environmentcontext.setparametersasjson",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The custom parameters that you need to set, serialized into a JSON format string.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 8,
+  "queries": []
 }

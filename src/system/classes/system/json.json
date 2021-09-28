@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_JSON_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "creategenerator(boolean)": {
-      "id": "System.json.creategenerator",
+      "id": "System.json.method.creategenerator(boolean)",
       "nodeType": "method",
       "name": "createGenerator",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_createGenerator_-1:0"
       },
+      "parentId": "System.json",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static System.JSONGenerator createGenerator(Boolean prettyPrint)",
+      "overrideSignature": "public static override System.JSONGenerator createGenerator(Boolean prettyPrint)",
       "simplifiedSignature": "createGenerator(Boolean)",
       "datatype": {
-        "id": "System.json.creategenerator.System.JSONGenerator",
+        "id": "System.json.creategenerator.datatype.System.JSONGenerator",
         "nodeType": "datatype",
-        "name": "System.JSONGenerator"
+        "name": "System.JSONGenerator",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:14"
+        },
+        "parentId": "System.json.creategenerator",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.JSONGenerator"
       },
       "description": "Returns a new JSON generator.",
+      "parentName": "JSON",
+      "variables": {},
       "params": {
-        "prettyPrint": {
-          "id": "System.json.creategenerator.prettyprint",
-          "type": "var",
+        "prettyprint": {
+          "id": "System.json.method.creategenerator(boolean).varParam.prettyprint",
+          "nodeType": "variable",
           "name": "prettyPrint",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,29 +179,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_prettyPrint_-1:0"
+            "id": "token.type.identifier_prettyPrint_0:59"
           },
-          "signature": "Boolean prettyPrint",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "prettyPrint",
+            "textToLower": "prettyprint",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 70
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_prettyPrint_0:59"
+          },
+          "parentId": "System.json.method.creategenerator(boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.json.creategenerator.boolean",
+            "id": "System.json.creategenerator.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 51
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:51"
+            },
+            "parentId": "System.json.creategenerator",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "Determines whether the JSON generator creates JSON content in pretty-print format with the content indented. Set to true to create indented content.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "createparser(string)": {
-      "id": "System.json.createparser",
+      "id": "System.json.method.createparser(string)",
       "nodeType": "method",
       "name": "createParser",
       "startToken": {
@@ -192,6 +271,9 @@
         },
         "id": "declaration.entity.name.function_createParser_-1:0"
       },
+      "parentId": "System.json",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -199,17 +281,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -218,30 +300,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static System.JSONParser createParser(String jsonString)",
+      "overrideSignature": "public static override System.JSONParser createParser(String jsonString)",
       "simplifiedSignature": "createParser(String)",
       "datatype": {
-        "id": "System.json.createparser.System.JSONParser",
+        "id": "System.json.createparser.datatype.System.JSONParser",
         "nodeType": "datatype",
-        "name": "System.JSONParser"
+        "name": "System.JSONParser",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:14"
+        },
+        "parentId": "System.json.createparser",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.JSONParser"
       },
       "description": "Returns a new JSON parser.",
+      "parentName": "JSON",
+      "variables": {},
       "params": {
-        "jsonString": {
-          "id": "System.json.createparser.jsonstring",
-          "type": "var",
+        "jsonstring": {
+          "id": "System.json.method.createparser(string).varParam.jsonstring",
+          "nodeType": "variable",
           "name": "jsonString",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -250,29 +358,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 62
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_jsonString_-1:0"
+            "id": "token.type.identifier_jsonString_0:52"
           },
-          "signature": "String jsonString",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jsonString",
+            "textToLower": "jsonstring",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 52
+              },
+              "end": {
+                "line": 0,
+                "character": 62
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_jsonString_0:52"
+          },
+          "parentId": "System.json.method.createparser(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.json.createparser.string",
+            "id": "System.json.createparser.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 51
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:45"
+            },
+            "parentId": "System.json.createparser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The JSON content to parse.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "deserialize(string,system.type)": {
-      "id": "System.json.deserialize",
+      "id": "System.json.method.deserialize(string,system.type)",
       "nodeType": "method",
       "name": "deserialize",
       "startToken": {
@@ -294,6 +450,9 @@
         },
         "id": "declaration.entity.name.function_deserialize_-1:0"
       },
+      "parentId": "System.json",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -301,17 +460,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -320,30 +479,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Object deserialize(String jsonString, System.Type apexType)",
+      "overrideSignature": "public static override Object deserialize(String jsonString, System.Type apexType)",
       "simplifiedSignature": "deserialize(String,System.Type)",
       "datatype": {
-        "id": "System.json.deserialize.Object",
+        "id": "System.json.deserialize.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:14"
+        },
+        "parentId": "System.json.deserialize",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Deserializes the specified JSON string into an Apex object of the specified type.",
+      "parentName": "JSON",
+      "variables": {},
       "params": {
-        "jsonString": {
-          "id": "System.json.deserialize.jsonstring",
-          "type": "var",
+        "jsonstring": {
+          "id": "System.json.method.deserialize(string,system.type).varParam.jsonstring",
+          "nodeType": "variable",
           "name": "jsonString",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -352,28 +537,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 40
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_jsonString_-1:0"
+            "id": "token.type.identifier_jsonString_0:40"
           },
-          "signature": "String jsonString",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jsonString",
+            "textToLower": "jsonstring",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 40
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_jsonString_0:40"
+          },
+          "parentId": "System.json.method.deserialize(string,system.type)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.json.deserialize.string",
+            "id": "System.json.deserialize.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 33
+                },
+                "end": {
+                  "line": 0,
+                  "character": 39
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:33"
+            },
+            "parentId": "System.json.deserialize",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "apexType": {
-          "id": "System.json.deserialize.apextype",
-          "type": "var",
+        "apextype": {
+          "id": "System.json.method.deserialize(string,system.type).varParam.apextype",
+          "nodeType": "variable",
           "name": "apexType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -382,29 +612,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_apexType_-1:0"
+            "id": "token.type.identifier_apexType_0:64"
           },
-          "signature": "System.Type apexType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "apexType",
+            "textToLower": "apextype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_apexType_0:64"
+          },
+          "parentId": "System.json.method.deserialize(string,system.type)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.json.deserialize.system.type",
+            "id": "System.json.deserialize.datatype.System.Type",
             "nodeType": "datatype",
-            "name": "System.Type"
-          }
+            "name": "System.Type",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:52"
+            },
+            "parentId": "System.json.deserialize",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.Type"
+          },
+          "description": "The JSON content to deserialize. The Apex type of the object that this method creates after deserializing the JSON content.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "deserializestrict(string,system.type)": {
-      "id": "System.json.deserializestrict",
+      "id": "System.json.method.deserializestrict(string,system.type)",
       "nodeType": "method",
       "name": "deserializeStrict",
       "startToken": {
@@ -426,6 +704,9 @@
         },
         "id": "declaration.entity.name.function_deserializeStrict_-1:0"
       },
+      "parentId": "System.json",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -433,17 +714,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -452,30 +733,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Object deserializeStrict(String jsonString, System.Type apexType)",
+      "overrideSignature": "public static override Object deserializeStrict(String jsonString, System.Type apexType)",
       "simplifiedSignature": "deserializeStrict(String,System.Type)",
       "datatype": {
-        "id": "System.json.deserializestrict.Object",
+        "id": "System.json.deserializestrict.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:14"
+        },
+        "parentId": "System.json.deserializestrict",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Deserializes the specified JSON string into an Apex object of the specified type.",
+      "parentName": "JSON",
+      "variables": {},
       "params": {
-        "jsonString": {
-          "id": "System.json.deserializestrict.jsonstring",
-          "type": "var",
+        "jsonstring": {
+          "id": "System.json.method.deserializestrict(string,system.type).varParam.jsonstring",
+          "nodeType": "variable",
           "name": "jsonString",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -484,28 +791,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_jsonString_-1:0"
+            "id": "token.type.identifier_jsonString_0:46"
           },
-          "signature": "String jsonString",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jsonString",
+            "textToLower": "jsonstring",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 56
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_jsonString_0:46"
+          },
+          "parentId": "System.json.method.deserializestrict(string,system.type)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.json.deserializestrict.string",
+            "id": "System.json.deserializestrict.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:39"
+            },
+            "parentId": "System.json.deserializestrict",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "apexType": {
-          "id": "System.json.deserializestrict.apextype",
-          "type": "var",
+        "apextype": {
+          "id": "System.json.method.deserializestrict(string,system.type).varParam.apextype",
+          "nodeType": "variable",
           "name": "apexType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -514,29 +866,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_apexType_-1:0"
+            "id": "token.type.identifier_apexType_0:70"
           },
-          "signature": "System.Type apexType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "apexType",
+            "textToLower": "apextype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 70
+              },
+              "end": {
+                "line": 0,
+                "character": 78
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_apexType_0:70"
+          },
+          "parentId": "System.json.method.deserializestrict(string,system.type)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.json.deserializestrict.system.type",
+            "id": "System.json.deserializestrict.datatype.System.Type",
             "nodeType": "datatype",
-            "name": "System.Type"
-          }
+            "name": "System.Type",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 58
+                },
+                "end": {
+                  "line": 0,
+                  "character": 64
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:58"
+            },
+            "parentId": "System.json.deserializestrict",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.Type"
+          },
+          "description": "The JSON content to deserialize. The Apex type of the object that this method creates after deserializing the JSON content.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "deserializeuntyped(string)": {
-      "id": "System.json.deserializeuntyped",
+      "id": "System.json.method.deserializeuntyped(string)",
       "nodeType": "method",
       "name": "deserializeUntyped",
       "startToken": {
@@ -558,6 +958,9 @@
         },
         "id": "declaration.entity.name.function_deserializeUntyped_-1:0"
       },
+      "parentId": "System.json",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -565,17 +968,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -584,30 +987,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Object deserializeUntyped(String jsonString)",
+      "overrideSignature": "public static override Object deserializeUntyped(String jsonString)",
       "simplifiedSignature": "deserializeUntyped(String)",
       "datatype": {
-        "id": "System.json.deserializeuntyped.Object",
+        "id": "System.json.deserializeuntyped.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:14"
+        },
+        "parentId": "System.json.deserializeuntyped",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Deserializes the specified JSON string into collections of primitive data types.",
+      "parentName": "JSON",
+      "variables": {},
       "params": {
-        "jsonString": {
-          "id": "System.json.deserializeuntyped.jsonstring",
-          "type": "var",
+        "jsonstring": {
+          "id": "System.json.method.deserializeuntyped(string).varParam.jsonstring",
+          "nodeType": "variable",
           "name": "jsonString",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -616,29 +1045,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_jsonString_-1:0"
+            "id": "token.type.identifier_jsonString_0:47"
           },
-          "signature": "String jsonString",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jsonString",
+            "textToLower": "jsonstring",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_jsonString_0:47"
+          },
+          "parentId": "System.json.method.deserializeuntyped(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.json.deserializeuntyped.string",
+            "id": "System.json.deserializeuntyped.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 40
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:40"
+            },
+            "parentId": "System.json.deserializeuntyped",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The JSON content to deserialize.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "serialize(object)": {
-      "id": "System.json.serialize",
+      "id": "System.json.method.serialize(object)",
       "nodeType": "method",
       "name": "serialize",
       "startToken": {
@@ -660,6 +1137,9 @@
         },
         "id": "declaration.entity.name.function_serialize_-1:0"
       },
+      "parentId": "System.json",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -667,17 +1147,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -686,30 +1166,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String serialize(Object objectToSerialize)",
+      "overrideSignature": "public static override String serialize(Object objectToSerialize)",
       "simplifiedSignature": "serialize(Object)",
       "datatype": {
-        "id": "System.json.serialize.String",
+        "id": "System.json.serialize.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.json.serialize",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Serializes Apex objects into JSON content.",
+      "parentName": "JSON",
+      "variables": {},
       "params": {
-        "objectToSerialize": {
-          "id": "System.json.serialize.objecttoserialize",
-          "type": "var",
+        "objecttoserialize": {
+          "id": "System.json.method.serialize(object).varParam.objecttoserialize",
+          "nodeType": "variable",
           "name": "objectToSerialize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -718,29 +1224,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_objectToSerialize_-1:0"
+            "id": "token.type.identifier_objectToSerialize_0:38"
           },
-          "signature": "Object objectToSerialize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "objectToSerialize",
+            "textToLower": "objecttoserialize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_objectToSerialize_0:38"
+          },
+          "parentId": "System.json.method.serialize(object)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.json.serialize.object",
+            "id": "System.json.serialize.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:31"
+            },
+            "parentId": "System.json.serialize",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "description": "The Apex object to serialize.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "serialize(object,boolean)": {
-      "id": "System.json.serialize",
+      "id": "System.json.method.serialize(object,boolean)",
       "nodeType": "method",
       "name": "serialize",
       "startToken": {
@@ -762,6 +1316,9 @@
         },
         "id": "declaration.entity.name.function_serialize_-1:0"
       },
+      "parentId": "System.json",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -769,17 +1326,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -788,30 +1345,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String serialize(Object objectToSerialize, Boolean suppressApexObjectNulls)",
+      "overrideSignature": "public static override String serialize(Object objectToSerialize, Boolean suppressApexObjectNulls)",
       "simplifiedSignature": "serialize(Object,Boolean)",
       "datatype": {
-        "id": "System.json.serialize.String",
+        "id": "System.json.serialize.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.json.serialize",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Suppresses null values when serializing Apex objects into JSON content.",
+      "parentName": "JSON",
+      "variables": {},
       "params": {
-        "objectToSerialize": {
-          "id": "System.json.serialize.objecttoserialize",
-          "type": "var",
+        "objecttoserialize": {
+          "id": "System.json.method.serialize(object,boolean).varParam.objecttoserialize",
+          "nodeType": "variable",
           "name": "objectToSerialize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -820,28 +1403,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_objectToSerialize_-1:0"
+            "id": "token.type.identifier_objectToSerialize_0:38"
           },
-          "signature": "Object objectToSerialize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "objectToSerialize",
+            "textToLower": "objecttoserialize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_objectToSerialize_0:38"
+          },
+          "parentId": "System.json.method.serialize(object,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.json.serialize.object",
+            "id": "System.json.serialize.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:31"
+            },
+            "parentId": "System.json.serialize",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "scope": null
         },
-        "suppressApexObjectNulls": {
-          "id": "System.json.serialize.suppressapexobjectnulls",
-          "type": "var",
+        "suppressapexobjectnulls": {
+          "id": "System.json.method.serialize(object,boolean).varParam.suppressapexobjectnulls",
+          "nodeType": "variable",
           "name": "suppressApexObjectNulls",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -850,29 +1478,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 88
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_suppressApexObjectNulls_-1:0"
+            "id": "token.type.identifier_suppressApexObjectNulls_0:65"
           },
-          "signature": "Boolean suppressApexObjectNulls",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "suppressApexObjectNulls",
+            "textToLower": "suppressapexobjectnulls",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 65
+              },
+              "end": {
+                "line": 0,
+                "character": 88
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_suppressApexObjectNulls_0:65"
+          },
+          "parentId": "System.json.method.serialize(object,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.json.serialize.boolean",
+            "id": "System.json.serialize.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 57
+                },
+                "end": {
+                  "line": 0,
+                  "character": 64
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:57"
+            },
+            "parentId": "System.json.serialize",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "The Apex object to serialize. If true, remove null values before serializing the JSON object.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "serializepretty(object)": {
-      "id": "System.json.serializepretty",
+      "id": "System.json.method.serializepretty(object)",
       "nodeType": "method",
       "name": "serializePretty",
       "startToken": {
@@ -894,6 +1570,9 @@
         },
         "id": "declaration.entity.name.function_serializePretty_-1:0"
       },
+      "parentId": "System.json",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -901,17 +1580,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -920,30 +1599,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String serializePretty(Object objectToSerialize)",
+      "overrideSignature": "public static override String serializePretty(Object objectToSerialize)",
       "simplifiedSignature": "serializePretty(Object)",
       "datatype": {
-        "id": "System.json.serializepretty.String",
+        "id": "System.json.serializepretty.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.json.serializepretty",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Serializes Apex objects into JSON content and generates indented content using the pretty-print format.",
+      "parentName": "JSON",
+      "variables": {},
       "params": {
-        "objectToSerialize": {
-          "id": "System.json.serializepretty.objecttoserialize",
-          "type": "var",
+        "objecttoserialize": {
+          "id": "System.json.method.serializepretty(object).varParam.objecttoserialize",
+          "nodeType": "variable",
           "name": "objectToSerialize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -952,29 +1657,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_objectToSerialize_-1:0"
+            "id": "token.type.identifier_objectToSerialize_0:44"
           },
-          "signature": "Object objectToSerialize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "objectToSerialize",
+            "textToLower": "objecttoserialize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 44
+              },
+              "end": {
+                "line": 0,
+                "character": 61
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_objectToSerialize_0:44"
+          },
+          "parentId": "System.json.method.serializepretty(object)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.json.serializepretty.object",
+            "id": "System.json.serializepretty.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 43
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:37"
+            },
+            "parentId": "System.json.serializepretty",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "description": "The Apex object to serialize.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "serializepretty(object,boolean)": {
-      "id": "System.json.serializepretty",
+      "id": "System.json.method.serializepretty(object,boolean)",
       "nodeType": "method",
       "name": "serializePretty",
       "startToken": {
@@ -996,6 +1749,9 @@
         },
         "id": "declaration.entity.name.function_serializePretty_-1:0"
       },
+      "parentId": "System.json",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1003,17 +1759,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1022,30 +1778,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String serializePretty(Object objectToSerialize, Boolean suppressApexObjectNulls)",
+      "overrideSignature": "public static override String serializePretty(Object objectToSerialize, Boolean suppressApexObjectNulls)",
       "simplifiedSignature": "serializePretty(Object,Boolean)",
       "datatype": {
-        "id": "System.json.serializepretty.String",
+        "id": "System.json.serializepretty.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.json.serializepretty",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Suppresses null values when serializing Apex objects into JSON content and generates indented content using the pretty-print format.",
+      "parentName": "JSON",
+      "variables": {},
       "params": {
-        "objectToSerialize": {
-          "id": "System.json.serializepretty.objecttoserialize",
-          "type": "var",
+        "objecttoserialize": {
+          "id": "System.json.method.serializepretty(object,boolean).varParam.objecttoserialize",
+          "nodeType": "variable",
           "name": "objectToSerialize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1054,28 +1836,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_objectToSerialize_-1:0"
+            "id": "token.type.identifier_objectToSerialize_0:44"
           },
-          "signature": "Object objectToSerialize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "objectToSerialize",
+            "textToLower": "objecttoserialize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 44
+              },
+              "end": {
+                "line": 0,
+                "character": 61
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_objectToSerialize_0:44"
+          },
+          "parentId": "System.json.method.serializepretty(object,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.json.serializepretty.object",
+            "id": "System.json.serializepretty.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 43
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:37"
+            },
+            "parentId": "System.json.serializepretty",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "scope": null
         },
-        "suppressApexObjectNulls": {
-          "id": "System.json.serializepretty.suppressapexobjectnulls",
-          "type": "var",
+        "suppressapexobjectnulls": {
+          "id": "System.json.method.serializepretty(object,boolean).varParam.suppressapexobjectnulls",
+          "nodeType": "variable",
           "name": "suppressApexObjectNulls",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1084,30 +1911,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_suppressApexObjectNulls_-1:0"
+            "id": "token.type.identifier_suppressApexObjectNulls_0:71"
           },
-          "signature": "Boolean suppressApexObjectNulls",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "suppressApexObjectNulls",
+            "textToLower": "suppressapexobjectnulls",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 71
+              },
+              "end": {
+                "line": 0,
+                "character": 94
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_suppressApexObjectNulls_0:71"
+          },
+          "parentId": "System.json.method.serializepretty(object,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.json.serializepretty.boolean",
+            "id": "System.json.serializepretty.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 63
+                },
+                "end": {
+                  "line": 0,
+                  "character": 70
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:63"
+            },
+            "parentId": "System.json.serializepretty",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "The Apex object to serialize. If true, remove null values before serializing the JSON object.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 9,
+  "queries": []
 }

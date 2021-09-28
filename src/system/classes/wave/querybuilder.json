@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_QueryBuilder_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "load(string,string)": {
-      "id": "Wave.querybuilder.load",
+      "id": "Wave.querybuilder.method.load(string,string)",
       "nodeType": "method",
       "name": "load",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_load_-1:0"
       },
+      "parentId": "Wave.querybuilder",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static wave.QueryNode load(String datasetID, String datasetVersionID)",
+      "overrideSignature": "public static override wave.QueryNode load(String datasetID, String datasetVersionID)",
       "simplifiedSignature": "load(String,String)",
       "datatype": {
-        "id": "Wave.querybuilder.load.wave.QueryNode",
+        "id": "Wave.querybuilder.load.datatype.wave.QueryNode",
         "nodeType": "datatype",
-        "name": "wave.QueryNode"
+        "name": "wave.QueryNode",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "wave",
+          "textToLower": "wave",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_wave_0:14"
+        },
+        "parentId": "Wave.querybuilder.load",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "wave.QueryNode"
       },
       "description": "Load a stream from a dataset.",
+      "parentName": "QueryBuilder",
+      "variables": {},
       "params": {
-        "datasetID": {
-          "id": "Wave.querybuilder.load.datasetid",
-          "type": "var",
+        "datasetid": {
+          "id": "Wave.querybuilder.method.load(string,string).varParam.datasetid",
+          "nodeType": "variable",
           "name": "datasetID",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_datasetID_-1:0"
+            "id": "token.type.identifier_datasetID_0:41"
           },
-          "signature": "String datasetID",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "datasetID",
+            "textToLower": "datasetid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 41
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_datasetID_0:41"
+          },
+          "parentId": "Wave.querybuilder.method.load(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Wave.querybuilder.load.string",
+            "id": "Wave.querybuilder.load.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:34"
+            },
+            "parentId": "Wave.querybuilder.load",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "datasetVersionID": {
-          "id": "Wave.querybuilder.load.datasetversionid",
-          "type": "var",
+        "datasetversionid": {
+          "id": "Wave.querybuilder.method.load(string,string).varParam.datasetversionid",
+          "nodeType": "variable",
           "name": "datasetVersionID",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,29 +254,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 75
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_datasetVersionID_-1:0"
+            "id": "token.type.identifier_datasetVersionID_0:59"
           },
-          "signature": "String datasetVersionID",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "datasetVersionID",
+            "textToLower": "datasetversionid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 75
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_datasetVersionID_0:59"
+          },
+          "parentId": "Wave.querybuilder.method.load(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Wave.querybuilder.load.string",
+            "id": "Wave.querybuilder.load.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:52"
+            },
+            "parentId": "Wave.querybuilder.load",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The ID of the dataset. The ID identifying the version of the dataset.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "count()": {
-      "id": "Wave.querybuilder.count",
+      "id": "Wave.querybuilder.method.count()",
       "nodeType": "method",
       "name": "count",
       "startToken": {
@@ -222,6 +346,9 @@
         },
         "id": "declaration.entity.name.function_count_-1:0"
       },
+      "parentId": "Wave.querybuilder",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -229,17 +356,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -248,30 +375,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static wave.ProjectionNode count()",
+      "overrideSignature": "public static override wave.ProjectionNode count()",
       "simplifiedSignature": "count()",
       "datatype": {
-        "id": "Wave.querybuilder.count.wave.ProjectionNode",
+        "id": "Wave.querybuilder.count.datatype.wave.ProjectionNode",
         "nodeType": "datatype",
-        "name": "wave.ProjectionNode"
+        "name": "wave.ProjectionNode",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "wave",
+          "textToLower": "wave",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_wave_0:14"
+        },
+        "parentId": "Wave.querybuilder.count",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "wave.ProjectionNode"
       },
       "description": "Calculate the number of rows that match the query criteria.",
-      "params": {}
+      "parentName": "QueryBuilder",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "get(string)": {
-      "id": "Wave.querybuilder.get",
+      "id": "Wave.querybuilder.method.get(string)",
       "nodeType": "method",
       "name": "get",
       "startToken": {
@@ -293,6 +448,9 @@
         },
         "id": "declaration.entity.name.function_get_-1:0"
       },
+      "parentId": "Wave.querybuilder",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -300,17 +458,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -319,30 +477,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static wave.ProjectionNode get(String proj)",
+      "overrideSignature": "public static override wave.ProjectionNode get(String proj)",
       "simplifiedSignature": "get(String)",
       "datatype": {
-        "id": "Wave.querybuilder.get.wave.ProjectionNode",
+        "id": "Wave.querybuilder.get.datatype.wave.ProjectionNode",
         "nodeType": "datatype",
-        "name": "wave.ProjectionNode"
+        "name": "wave.ProjectionNode",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "wave",
+          "textToLower": "wave",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_wave_0:14"
+        },
+        "parentId": "Wave.querybuilder.get",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "wave.ProjectionNode"
       },
       "description": "Query by selecting specific attributes.",
+      "parentName": "QueryBuilder",
+      "variables": {},
       "params": {
         "proj": {
-          "id": "Wave.querybuilder.get.proj",
-          "type": "var",
+          "id": "Wave.querybuilder.method.get(string).varParam.proj",
+          "nodeType": "variable",
           "name": "proj",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -351,29 +535,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_proj_-1:0"
+            "id": "token.type.identifier_proj_0:45"
           },
-          "signature": "String proj",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "proj",
+            "textToLower": "proj",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 45
+              },
+              "end": {
+                "line": 0,
+                "character": 49
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_proj_0:45"
+          },
+          "parentId": "Wave.querybuilder.method.get(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Wave.querybuilder.get.string",
+            "id": "Wave.querybuilder.get.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 38
+                },
+                "end": {
+                  "line": 0,
+                  "character": 44
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:38"
+            },
+            "parentId": "Wave.querybuilder.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The name of the column to query.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "union(list)": {
-      "id": "Wave.querybuilder.union",
+    "union(list<wave.querynode>)": {
+      "id": "Wave.querybuilder.method.union(list<wave.querynode>)",
       "nodeType": "method",
       "name": "union",
       "startToken": {
@@ -395,6 +627,9 @@
         },
         "id": "declaration.entity.name.function_union_-1:0"
       },
+      "parentId": "Wave.querybuilder",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "global",
@@ -402,17 +637,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_global_-1:0"
+        "id": "token.type.identifier_global_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -421,61 +656,162 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "global static wave.QueryNode union(List <Wave.QueryNode>)",
-      "simplifiedSignature": "union(List)",
+      "signature": "global static Wave.QueryNode union(List<Wave.QueryNode> unionNodes)",
+      "overrideSignature": "global static override Wave.QueryNode union(List<Wave.QueryNode> unionNodes)",
+      "simplifiedSignature": "union(List<Wave.QueryNode>)",
       "datatype": {
-        "id": "Wave.querybuilder.union.wave.QueryNode",
+        "id": "Wave.querybuilder.union.datatype.Wave.QueryNode",
         "nodeType": "datatype",
-        "name": "wave.QueryNode"
+        "name": "Wave.QueryNode",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Wave",
+          "textToLower": "wave",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Wave_0:14"
+        },
+        "parentId": "Wave.querybuilder.union",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Wave.QueryNode"
       },
       "description": "Combine multiple result sets into one result set.",
+      "parentName": "QueryBuilder",
+      "variables": {},
       "params": {
-        "<Wave.QueryNode>": {
-          "id": "Wave.querybuilder.union.<wave.querynode>",
-          "type": "var",
-          "name": "<Wave.QueryNode>",
+        "unionnodes": {
+          "id": "Wave.querybuilder.method.union(list<wave.querynode>).varParam.unionnodes",
+          "nodeType": "variable",
+          "name": "unionNodes",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Wave.QueryNode>",
-            "textToLower": "<wave.querynode>",
+            "text": "unionNodes",
+            "textToLower": "unionnodes",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Wave.QueryNode>_-1:0"
+            "id": "token.type.identifier_unionNodes_0:56"
           },
-          "signature": "List <Wave.QueryNode>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "unionNodes",
+            "textToLower": "unionnodes",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 56
+              },
+              "end": {
+                "line": 0,
+                "character": 66
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_unionNodes_0:56"
+          },
+          "parentId": "Wave.querybuilder.method.union(list<wave.querynode>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Wave.querybuilder.union.list",
+            "id": "Wave.querybuilder.union.datatype.List<Wave.QueryNode>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<Wave.QueryNode>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 39
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:35"
+            },
+            "parentId": "Wave.querybuilder.union",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Wave.querybuilder.union.datatype.List<Wave.QueryNode>.value.Wave.QueryNode",
+              "nodeType": "datatype",
+              "name": "Wave.QueryNode",
+              "startToken": {
+                "type": "datatype.support.namespace",
+                "text": "Wave",
+                "textToLower": "wave",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 40
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 44
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Wave_0:40"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Wave.QueryNode"
+            }
+          },
+          "description": "List of nodes to combine.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "cogroup(list)": {
-      "id": "Wave.querybuilder.cogroup",
+    "cogroup(list<wave.querynode>,list<list<string>>)": {
+      "id": "Wave.querybuilder.method.cogroup(list<wave.querynode>,list<list<string>>)",
       "nodeType": "method",
       "name": "cogroup",
       "startToken": {
@@ -497,6 +833,9 @@
         },
         "id": "declaration.entity.name.function_cogroup_-1:0"
       },
+      "parentId": "Wave.querybuilder",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "global",
@@ -504,17 +843,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_global_-1:0"
+        "id": "token.type.identifier_global_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -523,62 +862,294 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "global static wave.QueryNode cogroup(List <Wave.QueryNode>)",
-      "simplifiedSignature": "cogroup(List)",
+      "signature": "global static Wave.QueryNode cogroup(List<Wave.QueryNode> cogroupNodes, List<List<String>> groups)",
+      "overrideSignature": "global static override Wave.QueryNode cogroup(List<Wave.QueryNode> cogroupNodes, List<List<String>> groups)",
+      "simplifiedSignature": "cogroup(List<Wave.QueryNode>,List<List<String>>)",
       "datatype": {
-        "id": "Wave.querybuilder.cogroup.wave.QueryNode",
+        "id": "Wave.querybuilder.cogroup.datatype.Wave.QueryNode",
         "nodeType": "datatype",
-        "name": "wave.QueryNode"
+        "name": "Wave.QueryNode",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Wave",
+          "textToLower": "wave",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Wave_0:14"
+        },
+        "parentId": "Wave.querybuilder.cogroup",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Wave.QueryNode"
       },
       "description": "Cogrouping means that two input streams are grouped independently and arranged side by side. Only data that exists in both groups appears in the results.",
+      "parentName": "QueryBuilder",
+      "variables": {},
       "params": {
-        "<Wave.QueryNode>": {
-          "id": "Wave.querybuilder.cogroup.<wave.querynode>",
-          "type": "var",
-          "name": "<Wave.QueryNode>",
+        "cogroupnodes": {
+          "id": "Wave.querybuilder.method.cogroup(list<wave.querynode>,list<list<string>>).varParam.cogroupnodes",
+          "nodeType": "variable",
+          "name": "cogroupNodes",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Wave.QueryNode>",
-            "textToLower": "<wave.querynode>",
+            "text": "cogroupNodes",
+            "textToLower": "cogroupnodes",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Wave.QueryNode>_-1:0"
+            "id": "token.type.identifier_cogroupNodes_0:58"
           },
-          "signature": "List <Wave.QueryNode>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "cogroupNodes",
+            "textToLower": "cogroupnodes",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 70
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_cogroupNodes_0:58"
+          },
+          "parentId": "Wave.querybuilder.method.cogroup(list<wave.querynode>,list<list<string>>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Wave.querybuilder.cogroup.list",
+            "id": "Wave.querybuilder.cogroup.datatype.List<Wave.QueryNode>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<Wave.QueryNode>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:37"
+            },
+            "parentId": "Wave.querybuilder.cogroup",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Wave.querybuilder.cogroup.datatype.List<Wave.QueryNode>.value.Wave.QueryNode",
+              "nodeType": "datatype",
+              "name": "Wave.QueryNode",
+              "startToken": {
+                "type": "datatype.support.namespace",
+                "text": "Wave",
+                "textToLower": "wave",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 42
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 46
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Wave_0:42"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Wave.QueryNode"
+            }
+          },
+          "scope": null
+        },
+        "groups": {
+          "id": "Wave.querybuilder.method.cogroup(list<wave.querynode>,list<list<string>>).varParam.groups",
+          "nodeType": "variable",
+          "name": "groups",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "groups",
+            "textToLower": "groups",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 91
+              },
+              "end": {
+                "line": 0,
+                "character": 97
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_groups_0:91"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "groups",
+            "textToLower": "groups",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 91
+              },
+              "end": {
+                "line": 0,
+                "character": 97
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_groups_0:91"
+          },
+          "parentId": "Wave.querybuilder.method.cogroup(list<wave.querynode>,list<list<string>>)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "Wave.querybuilder.cogroup.datatype.List<List<String>>",
+            "nodeType": "datatype",
+            "name": "List<List<String>>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 72
+                },
+                "end": {
+                  "line": 0,
+                  "character": 76
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:72"
+            },
+            "parentId": "Wave.querybuilder.cogroup",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Wave.querybuilder.cogroup.datatype.List<List<String>>.value.List<String>",
+              "nodeType": "datatype",
+              "name": "List<String>",
+              "startToken": {
+                "type": "datatype.collection",
+                "text": "List",
+                "textToLower": "list",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 77
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 81
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_List_0:77"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "List",
+              "value": {
+                "id": "Wave.querybuilder.cogroup.datatype.List<List<String>>.value.List<String>.value.String",
+                "nodeType": "datatype",
+                "name": "String",
+                "startToken": {
+                  "type": "datatype.primitive",
+                  "text": "String",
+                  "textToLower": "string",
+                  "isAux": false,
+                  "range": {
+                    "start": {
+                      "line": 0,
+                      "character": 82
+                    },
+                    "end": {
+                      "line": 0,
+                      "character": 88
+                    },
+                    "isEmpty": false,
+                    "isSingleLine": true
+                  },
+                  "id": "token.type.identifier_String_0:82"
+                },
+                "order": 0,
+                "memberOrder": 0,
+                "type": "String"
+              }
+            }
+          },
+          "description": "List of nodes to group. The type of grouping.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 5,
+  "queries": []
 }

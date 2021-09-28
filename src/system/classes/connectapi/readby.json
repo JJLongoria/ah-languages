@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_ReadBy_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {
     "lastreaddatebyuser": {
-      "id": "ConnectApi.readby.lastreaddatebyuser",
-      "type": "var",
+      "id": "ConnectApi.readby.method.datetime lastreaddatebyuser",
+      "nodeType": "variable",
       "name": "lastReadDateByUser",
       "startToken": {
         "type": "declaration.entity.name.variable",
@@ -89,6 +91,9 @@
         },
         "id": "declaration.entity.name.variable_lastReadDateByUser_-1:0"
       },
+      "parentId": "ConnectApi.readby",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -96,30 +101,53 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Datetime lastReadDateByUser",
       "simplifiedSignature": "Datetime lastReadDateByUser",
       "datatype": {
-        "id": "ConnectApi.readby.lastreaddatebyuser.datetime",
+        "id": ".datatype.Datetime",
         "nodeType": "datatype",
-        "name": "Datetime"
+        "name": "Datetime",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Datetime",
+          "textToLower": "datetime",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 15
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Datetime_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Datetime"
       },
-      "description": "When the user last read the feed element in ISO 8601"
+      "parentName": "ReadBy"
     },
     "user": {
-      "id": "ConnectApi.readby.user",
-      "type": "var",
+      "id": "ConnectApi.readby.method.usersummary user",
+      "nodeType": "variable",
       "name": "user",
       "startToken": {
         "type": "declaration.entity.name.variable",
@@ -140,6 +168,9 @@
         },
         "id": "declaration.entity.name.variable_user_-1:0"
       },
+      "parentId": "ConnectApi.readby",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -147,31 +178,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public ConnectApi.​UserSummary user",
-      "simplifiedSignature": "ConnectApi.​UserSummary user",
+      "signature": "public UserSummary user",
+      "simplifiedSignature": "UserSummary user",
       "datatype": {
-        "id": "ConnectApi.readby.user.connectapi.​usersummary",
+        "id": ".datatype.UserSummary",
         "nodeType": "datatype",
-        "name": "ConnectApi.​UserSummary"
+        "name": "UserSummary",
+        "startToken": {
+          "type": "datatype.custom.class",
+          "text": "UserSummary",
+          "textToLower": "usersummary",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 19
+            },
+            "end": {
+              "line": 0,
+              "character": 30
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_UserSummary_0:19"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "UserSummary"
       },
-      "description": "Information about the user who read the feed element."
+      "parentName": "ReadBy"
     }
   },
   "methods": {},
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

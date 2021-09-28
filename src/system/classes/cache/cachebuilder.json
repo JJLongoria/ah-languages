@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_CacheBuilder_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "doload(string)": {
-      "id": "Cache.cachebuilder.doload",
+      "id": "Cache.cachebuilder.method.doload(string)",
       "nodeType": "method",
       "name": "doLoad",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_doLoad_-1:0"
       },
+      "parentId": "Cache.cachebuilder",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Object doLoad(String var)",
+      "overrideSignature": "public override Object doLoad(String var)",
       "simplifiedSignature": "doLoad(String)",
       "datatype": {
-        "id": "Cache.cachebuilder.doload.Object",
+        "id": "Cache.cachebuilder.doload.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:7"
+        },
+        "parentId": "Cache.cachebuilder.doload",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Contains the logic that builds a cached value. You don’t call this method directly. Instead, it’s called indirectly when you reference the class that implements the CacheBuilder interface.",
+      "parentName": "CacheBuilder",
+      "variables": {},
       "params": {
         "var": {
-          "id": "Cache.cachebuilder.doload.var",
-          "type": "var",
+          "id": "Cache.cachebuilder.method.doload(string).varParam.var",
+          "nodeType": "variable",
           "name": "var",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,30 +160,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 28
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 31
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_var_-1:0"
+            "id": "token.type.identifier_var_0:28"
           },
-          "signature": "String var",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "var",
+            "textToLower": "var",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 28
+              },
+              "end": {
+                "line": 0,
+                "character": 31
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_var_0:28"
+          },
+          "parentId": "Cache.cachebuilder.method.doload(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.cachebuilder.doload.string",
+            "id": "Cache.cachebuilder.doload.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 21
+                },
+                "end": {
+                  "line": 0,
+                  "character": 27
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:21"
+            },
+            "parentId": "Cache.cachebuilder.doload",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "A case-sensitive string value used to build a cached value. This parameter is also used as part of the unique key that identifies the cached value.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

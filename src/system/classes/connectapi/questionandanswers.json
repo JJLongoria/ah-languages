@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_QuestionAndAnswers_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getsuggestions(string,string,string,boolean,integer)": {
-      "id": "ConnectApi.questionandanswers.getsuggestions",
+      "id": "ConnectApi.questionandanswers.method.getsuggestions(string,string,string,boolean,integer)",
       "nodeType": "method",
       "name": "getSuggestions",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getSuggestions_-1:0"
       },
+      "parentId": "ConnectApi.questionandanswers",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.QuestionAndAnswersSuggestions getSuggestions(String communityId, String q, String subjectId, Boolean includeArticles, Integer maxResults)",
+      "overrideSignature": "public static override ConnectApi.QuestionAndAnswersSuggestions getSuggestions(String communityId, String q, String subjectId, Boolean includeArticles, Integer maxResults)",
       "simplifiedSignature": "getSuggestions(String,String,String,Boolean,Integer)",
       "datatype": {
-        "id": "ConnectApi.questionandanswers.getsuggestions.ConnectApi.QuestionAndAnswersSuggestions",
+        "id": "ConnectApi.questionandanswers.getsuggestions.datatype.ConnectApi.QuestionAndAnswersSuggestions",
         "nodeType": "datatype",
-        "name": "ConnectApi.QuestionAndAnswersSuggestions"
+        "name": "ConnectApi.QuestionAndAnswersSuggestions",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.questionandanswers.getsuggestions",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.QuestionAndAnswersSuggestions"
       },
       "description": "Get question and answers suggestions.",
+      "parentName": "QuestionAndAnswers",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.questionandanswers.getsuggestions.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.questionandanswers.method.getsuggestions(string,string,string,boolean,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 88
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:77"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 77
+              },
+              "end": {
+                "line": 0,
+                "character": 88
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:77"
+          },
+          "parentId": "ConnectApi.questionandanswers.method.getsuggestions(string,string,string,boolean,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.questionandanswers.getsuggestions.string",
+            "id": "ConnectApi.questionandanswers.getsuggestions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 70
+                },
+                "end": {
+                  "line": 0,
+                  "character": 76
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:70"
+            },
+            "parentId": "ConnectApi.questionandanswers.getsuggestions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "q": {
-          "id": "ConnectApi.questionandanswers.getsuggestions.q",
-          "type": "var",
+          "id": "ConnectApi.questionandanswers.method.getsuggestions(string,string,string,boolean,integer).varParam.q",
+          "nodeType": "variable",
           "name": "q",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,28 +254,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 97
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_q_-1:0"
+            "id": "token.type.identifier_q_0:97"
           },
-          "signature": "String q",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "q",
+            "textToLower": "q",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 97
+              },
+              "end": {
+                "line": 0,
+                "character": 98
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_q_0:97"
+          },
+          "parentId": "ConnectApi.questionandanswers.method.getsuggestions(string,string,string,boolean,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.questionandanswers.getsuggestions.string",
+            "id": "ConnectApi.questionandanswers.getsuggestions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 90
+                },
+                "end": {
+                  "line": 0,
+                  "character": 96
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:90"
+            },
+            "parentId": "ConnectApi.questionandanswers.getsuggestions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "subjectId": {
-          "id": "ConnectApi.questionandanswers.getsuggestions.subjectid",
-          "type": "var",
+        "subjectid": {
+          "id": "ConnectApi.questionandanswers.method.getsuggestions(string,string,string,boolean,integer).varParam.subjectid",
+          "nodeType": "variable",
           "name": "subjectId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -208,28 +329,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 107
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 116
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_subjectId_-1:0"
+            "id": "token.type.identifier_subjectId_0:107"
           },
-          "signature": "String subjectId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "subjectId",
+            "textToLower": "subjectid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 107
+              },
+              "end": {
+                "line": 0,
+                "character": 116
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_subjectId_0:107"
+          },
+          "parentId": "ConnectApi.questionandanswers.method.getsuggestions(string,string,string,boolean,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.questionandanswers.getsuggestions.string",
+            "id": "ConnectApi.questionandanswers.getsuggestions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 100
+                },
+                "end": {
+                  "line": 0,
+                  "character": 106
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:100"
+            },
+            "parentId": "ConnectApi.questionandanswers.getsuggestions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "includeArticles": {
-          "id": "ConnectApi.questionandanswers.getsuggestions.includearticles",
-          "type": "var",
+        "includearticles": {
+          "id": "ConnectApi.questionandanswers.method.getsuggestions(string,string,string,boolean,integer).varParam.includearticles",
+          "nodeType": "variable",
           "name": "includeArticles",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -238,28 +404,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 126
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 141
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_includeArticles_-1:0"
+            "id": "token.type.identifier_includeArticles_0:126"
           },
-          "signature": "Boolean includeArticles",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "includeArticles",
+            "textToLower": "includearticles",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 126
+              },
+              "end": {
+                "line": 0,
+                "character": 141
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_includeArticles_0:126"
+          },
+          "parentId": "ConnectApi.questionandanswers.method.getsuggestions(string,string,string,boolean,integer)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.questionandanswers.getsuggestions.boolean",
+            "id": "ConnectApi.questionandanswers.getsuggestions.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 118
+                },
+                "end": {
+                  "line": 0,
+                  "character": 125
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:118"
+            },
+            "parentId": "ConnectApi.questionandanswers.getsuggestions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "scope": null
         },
-        "maxResults": {
-          "id": "ConnectApi.questionandanswers.getsuggestions.maxresults",
-          "type": "var",
+        "maxresults": {
+          "id": "ConnectApi.questionandanswers.method.getsuggestions(string,string,string,boolean,integer).varParam.maxresults",
+          "nodeType": "variable",
           "name": "maxResults",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -268,29 +479,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 151
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 161
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_maxResults_-1:0"
+            "id": "token.type.identifier_maxResults_0:151"
           },
-          "signature": "Integer maxResults",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "maxResults",
+            "textToLower": "maxresults",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 151
+              },
+              "end": {
+                "line": 0,
+                "character": 161
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_maxResults_0:151"
+          },
+          "parentId": "ConnectApi.questionandanswers.method.getsuggestions(string,string,string,boolean,integer)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "ConnectApi.questionandanswers.getsuggestions.integer",
+            "id": "ConnectApi.questionandanswers.getsuggestions.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 143
+                },
+                "end": {
+                  "line": 0,
+                  "character": 150
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:143"
+            },
+            "parentId": "ConnectApi.questionandanswers.getsuggestions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. Required and cannot be null. Specifies the string to search. The search string must contain at least two characters, not including wildcards. See Wildcards.  Specify a subject ID to search only questions on that object. If the ID is a topic or a user, the ID is ignored. Specify true to include knowledge articles in the search results. To return only questions, specify false. The maximum number of results to return for each type of item. Possible values are 1–10. The default value is 5.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settestgetsuggestions(string,string,string,boolean,integer,connectapi.questionandanswerssuggestions)": {
-      "id": "ConnectApi.questionandanswers.settestgetsuggestions",
+      "id": "ConnectApi.questionandanswers.method.settestgetsuggestions(string,string,string,boolean,integer,connectapi.questionandanswerssuggestions)",
       "nodeType": "method",
       "name": "setTestGetSuggestions",
       "startToken": {
@@ -312,6 +571,9 @@
         },
         "id": "declaration.entity.name.function_setTestGetSuggestions_-1:0"
       },
+      "parentId": "ConnectApi.questionandanswers",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -319,17 +581,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -338,30 +600,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void setTestGetSuggestions(String communityId, String q, String subjectId, Boolean includeArticles, Integer maxResults, ConnectApi.QuestionAndAnswersSuggestions result)",
+      "signature": "public static Void setTestGetSuggestions(String communityId, String q, String subjectId, Boolean includeArticles, Integer maxResults, ConnectApi.QuestionAndAnswersSuggestions result)",
+      "overrideSignature": "public static override Void setTestGetSuggestions(String communityId, String q, String subjectId, Boolean includeArticles, Integer maxResults, ConnectApi.QuestionAndAnswersSuggestions result)",
       "simplifiedSignature": "setTestGetSuggestions(String,String,String,Boolean,Integer,ConnectApi.QuestionAndAnswersSuggestions)",
       "datatype": {
-        "id": "ConnectApi.questionandanswers.settestgetsuggestions.void",
+        "id": "ConnectApi.questionandanswers.settestgetsuggestions.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.questionandanswers.settestgetsuggestions",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Register a ConnectApi.QuestionAndAnswersSuggestions object to be returned when getSuggestions is called with matching parameters in a test context. Use the method with the same parameters or the code throws an exception.",
+      "parentName": "QuestionAndAnswers",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.questionandanswers.settestgetsuggestions.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.questionandanswers.method.settestgetsuggestions(string,string,string,boolean,integer,connectapi.questionandanswerssuggestions).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -370,28 +658,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:48"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 48
+              },
+              "end": {
+                "line": 0,
+                "character": 59
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:48"
+          },
+          "parentId": "ConnectApi.questionandanswers.method.settestgetsuggestions(string,string,string,boolean,integer,connectapi.questionandanswerssuggestions)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.questionandanswers.settestgetsuggestions.string",
+            "id": "ConnectApi.questionandanswers.settestgetsuggestions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 41
+                },
+                "end": {
+                  "line": 0,
+                  "character": 47
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:41"
+            },
+            "parentId": "ConnectApi.questionandanswers.settestgetsuggestions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "q": {
-          "id": "ConnectApi.questionandanswers.settestgetsuggestions.q",
-          "type": "var",
+          "id": "ConnectApi.questionandanswers.method.settestgetsuggestions(string,string,string,boolean,integer,connectapi.questionandanswerssuggestions).varParam.q",
+          "nodeType": "variable",
           "name": "q",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -400,28 +733,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 68
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_q_-1:0"
+            "id": "token.type.identifier_q_0:68"
           },
-          "signature": "String q",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "q",
+            "textToLower": "q",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 68
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_q_0:68"
+          },
+          "parentId": "ConnectApi.questionandanswers.method.settestgetsuggestions(string,string,string,boolean,integer,connectapi.questionandanswerssuggestions)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.questionandanswers.settestgetsuggestions.string",
+            "id": "ConnectApi.questionandanswers.settestgetsuggestions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 61
+                },
+                "end": {
+                  "line": 0,
+                  "character": 67
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:61"
+            },
+            "parentId": "ConnectApi.questionandanswers.settestgetsuggestions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "subjectId": {
-          "id": "ConnectApi.questionandanswers.settestgetsuggestions.subjectid",
-          "type": "var",
+        "subjectid": {
+          "id": "ConnectApi.questionandanswers.method.settestgetsuggestions(string,string,string,boolean,integer,connectapi.questionandanswerssuggestions).varParam.subjectid",
+          "nodeType": "variable",
           "name": "subjectId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -430,28 +808,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 87
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_subjectId_-1:0"
+            "id": "token.type.identifier_subjectId_0:78"
           },
-          "signature": "String subjectId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "subjectId",
+            "textToLower": "subjectid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 78
+              },
+              "end": {
+                "line": 0,
+                "character": 87
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_subjectId_0:78"
+          },
+          "parentId": "ConnectApi.questionandanswers.method.settestgetsuggestions(string,string,string,boolean,integer,connectapi.questionandanswerssuggestions)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.questionandanswers.settestgetsuggestions.string",
+            "id": "ConnectApi.questionandanswers.settestgetsuggestions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 71
+                },
+                "end": {
+                  "line": 0,
+                  "character": 77
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:71"
+            },
+            "parentId": "ConnectApi.questionandanswers.settestgetsuggestions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "includeArticles": {
-          "id": "ConnectApi.questionandanswers.settestgetsuggestions.includearticles",
-          "type": "var",
+        "includearticles": {
+          "id": "ConnectApi.questionandanswers.method.settestgetsuggestions(string,string,string,boolean,integer,connectapi.questionandanswerssuggestions).varParam.includearticles",
+          "nodeType": "variable",
           "name": "includeArticles",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -460,28 +883,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 97
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 112
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_includeArticles_-1:0"
+            "id": "token.type.identifier_includeArticles_0:97"
           },
-          "signature": "Boolean includeArticles",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "includeArticles",
+            "textToLower": "includearticles",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 97
+              },
+              "end": {
+                "line": 0,
+                "character": 112
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_includeArticles_0:97"
+          },
+          "parentId": "ConnectApi.questionandanswers.method.settestgetsuggestions(string,string,string,boolean,integer,connectapi.questionandanswerssuggestions)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.questionandanswers.settestgetsuggestions.boolean",
+            "id": "ConnectApi.questionandanswers.settestgetsuggestions.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 89
+                },
+                "end": {
+                  "line": 0,
+                  "character": 96
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:89"
+            },
+            "parentId": "ConnectApi.questionandanswers.settestgetsuggestions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "scope": null
         },
-        "maxResults": {
-          "id": "ConnectApi.questionandanswers.settestgetsuggestions.maxresults",
-          "type": "var",
+        "maxresults": {
+          "id": "ConnectApi.questionandanswers.method.settestgetsuggestions(string,string,string,boolean,integer,connectapi.questionandanswerssuggestions).varParam.maxresults",
+          "nodeType": "variable",
           "name": "maxResults",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -490,28 +958,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 122
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 132
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_maxResults_-1:0"
+            "id": "token.type.identifier_maxResults_0:122"
           },
-          "signature": "Integer maxResults",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "maxResults",
+            "textToLower": "maxresults",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 122
+              },
+              "end": {
+                "line": 0,
+                "character": 132
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_maxResults_0:122"
+          },
+          "parentId": "ConnectApi.questionandanswers.method.settestgetsuggestions(string,string,string,boolean,integer,connectapi.questionandanswerssuggestions)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "ConnectApi.questionandanswers.settestgetsuggestions.integer",
+            "id": "ConnectApi.questionandanswers.settestgetsuggestions.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 114
+                },
+                "end": {
+                  "line": 0,
+                  "character": 121
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:114"
+            },
+            "parentId": "ConnectApi.questionandanswers.settestgetsuggestions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
         "result": {
-          "id": "ConnectApi.questionandanswers.settestgetsuggestions.result",
-          "type": "var",
+          "id": "ConnectApi.questionandanswers.method.settestgetsuggestions(string,string,string,boolean,integer,connectapi.questionandanswerssuggestions).varParam.result",
+          "nodeType": "variable",
           "name": "result",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -520,29 +1033,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 175
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 181
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_result_-1:0"
+            "id": "token.type.identifier_result_0:175"
           },
-          "signature": "ConnectApi.QuestionAndAnswersSuggestions result",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "result",
+            "textToLower": "result",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 175
+              },
+              "end": {
+                "line": 0,
+                "character": 181
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_result_0:175"
+          },
+          "parentId": "ConnectApi.questionandanswers.method.settestgetsuggestions(string,string,string,boolean,integer,connectapi.questionandanswerssuggestions)",
+          "order": 6,
+          "memberOrder": 6,
           "datatype": {
-            "id": "ConnectApi.questionandanswers.settestgetsuggestions.connectapi.questionandanswerssuggestions",
+            "id": "ConnectApi.questionandanswers.settestgetsuggestions.datatype.ConnectApi.QuestionAndAnswersSuggestions",
             "nodeType": "datatype",
-            "name": "ConnectApi.QuestionAndAnswersSuggestions"
-          }
+            "name": "ConnectApi.QuestionAndAnswersSuggestions",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 134
+                },
+                "end": {
+                  "line": 0,
+                  "character": 144
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:134"
+            },
+            "parentId": "ConnectApi.questionandanswers.settestgetsuggestions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.QuestionAndAnswersSuggestions"
+          },
+          "description": "Use either the ID for a community, internal, or null. Required and cannot be null. Specifies the string to search. The search string must contain at least two characters, not including wildcards. See Wildcards.  Specify a subject ID to search only questions on that object. If the ID is a topic or a user, the ID is ignored. Specify true to include knowledge articles in the search results. To return only questions, specify false. The maximum number of results to return for each type of item. Possible values are 1–10. The default value is 5. The object containing test data.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "updatequestionandanswers(string,string,connectapi.questionandanswerscapabilityinput)": {
-      "id": "ConnectApi.questionandanswers.updatequestionandanswers",
+      "id": "ConnectApi.questionandanswers.method.updatequestionandanswers(string,string,connectapi.questionandanswerscapabilityinput)",
       "nodeType": "method",
       "name": "updateQuestionAndAnswers",
       "startToken": {
@@ -564,6 +1125,9 @@
         },
         "id": "declaration.entity.name.function_updateQuestionAndAnswers_-1:0"
       },
+      "parentId": "ConnectApi.questionandanswers",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -571,17 +1135,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -590,30 +1154,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.QuestionAndAnswersCapability updateQuestionAndAnswers(String communityId, String feedElementId, ConnectApi.QuestionAndAnswersCapabilityInput questionAndAnswersCapability)",
+      "overrideSignature": "public static override ConnectApi.QuestionAndAnswersCapability updateQuestionAndAnswers(String communityId, String feedElementId, ConnectApi.QuestionAndAnswersCapabilityInput questionAndAnswersCapability)",
       "simplifiedSignature": "updateQuestionAndAnswers(String,String,ConnectApi.QuestionAndAnswersCapabilityInput)",
       "datatype": {
-        "id": "ConnectApi.questionandanswers.updatequestionandanswers.ConnectApi.QuestionAndAnswersCapability",
+        "id": "ConnectApi.questionandanswers.updatequestionandanswers.datatype.ConnectApi.QuestionAndAnswersCapability",
         "nodeType": "datatype",
-        "name": "ConnectApi.QuestionAndAnswersCapability"
+        "name": "ConnectApi.QuestionAndAnswersCapability",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.questionandanswers.updatequestionandanswers",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.QuestionAndAnswersCapability"
       },
       "description": "Choose or change the best answer for a question.",
+      "parentName": "QuestionAndAnswers",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.questionandanswers.updatequestionandanswers.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.questionandanswers.method.updatequestionandanswers(string,string,connectapi.questionandanswerscapabilityinput).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -622,28 +1212,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 97
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:86"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 86
+              },
+              "end": {
+                "line": 0,
+                "character": 97
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:86"
+          },
+          "parentId": "ConnectApi.questionandanswers.method.updatequestionandanswers(string,string,connectapi.questionandanswerscapabilityinput)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.questionandanswers.updatequestionandanswers.string",
+            "id": "ConnectApi.questionandanswers.updatequestionandanswers.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 79
+                },
+                "end": {
+                  "line": 0,
+                  "character": 85
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:79"
+            },
+            "parentId": "ConnectApi.questionandanswers.updatequestionandanswers",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "feedElementId": {
-          "id": "ConnectApi.questionandanswers.updatequestionandanswers.feedelementid",
-          "type": "var",
+        "feedelementid": {
+          "id": "ConnectApi.questionandanswers.method.updatequestionandanswers(string,string,connectapi.questionandanswerscapabilityinput).varParam.feedelementid",
+          "nodeType": "variable",
           "name": "feedElementId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -652,28 +1287,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 106
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 119
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_feedElementId_-1:0"
+            "id": "token.type.identifier_feedElementId_0:106"
           },
-          "signature": "String feedElementId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "feedElementId",
+            "textToLower": "feedelementid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 106
+              },
+              "end": {
+                "line": 0,
+                "character": 119
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_feedElementId_0:106"
+          },
+          "parentId": "ConnectApi.questionandanswers.method.updatequestionandanswers(string,string,connectapi.questionandanswerscapabilityinput)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.questionandanswers.updatequestionandanswers.string",
+            "id": "ConnectApi.questionandanswers.updatequestionandanswers.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 99
+                },
+                "end": {
+                  "line": 0,
+                  "character": 105
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:99"
+            },
+            "parentId": "ConnectApi.questionandanswers.updatequestionandanswers",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "questionAndAnswersCapability": {
-          "id": "ConnectApi.questionandanswers.updatequestionandanswers.questionandanswerscapability",
-          "type": "var",
+        "questionandanswerscapability": {
+          "id": "ConnectApi.questionandanswers.method.updatequestionandanswers(string,string,connectapi.questionandanswerscapabilityinput).varParam.questionandanswerscapability",
+          "nodeType": "variable",
           "name": "questionAndAnswersCapability",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -682,30 +1362,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 166
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 194
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_questionAndAnswersCapability_-1:0"
+            "id": "token.type.identifier_questionAndAnswersCapability_0:166"
           },
-          "signature": "ConnectApi.QuestionAndAnswersCapabilityInput questionAndAnswersCapability",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "questionAndAnswersCapability",
+            "textToLower": "questionandanswerscapability",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 166
+              },
+              "end": {
+                "line": 0,
+                "character": 194
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_questionAndAnswersCapability_0:166"
+          },
+          "parentId": "ConnectApi.questionandanswers.method.updatequestionandanswers(string,string,connectapi.questionandanswerscapabilityinput)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.questionandanswers.updatequestionandanswers.connectapi.questionandanswerscapabilityinput",
+            "id": "ConnectApi.questionandanswers.updatequestionandanswers.datatype.ConnectApi.QuestionAndAnswersCapabilityInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.QuestionAndAnswersCapabilityInput"
-          }
+            "name": "ConnectApi.QuestionAndAnswersCapabilityInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 121
+                },
+                "end": {
+                  "line": 0,
+                  "character": 131
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:121"
+            },
+            "parentId": "ConnectApi.questionandanswers.updatequestionandanswers",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.QuestionAndAnswersCapabilityInput"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of the feed element. Specify the best answer (comment ID) for the question.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 3,
+  "queries": []
 }

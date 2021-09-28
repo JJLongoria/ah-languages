@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_RegistrationHandler_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "createuser(id,auth.userdata)": {
-      "id": "Auth.registrationhandler.createuser",
+      "id": "Auth.registrationhandler.method.createuser(id,auth.userdata)",
       "nodeType": "method",
       "name": "createUser",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_createUser_-1:0"
       },
+      "parentId": "Auth.registrationhandler",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public User createUser(ID portalId, Auth.UserData userData)",
+      "overrideSignature": "public override User createUser(ID portalId, Auth.UserData userData)",
       "simplifiedSignature": "createUser(ID,Auth.UserData)",
       "datatype": {
-        "id": "Auth.registrationhandler.createuser.User",
+        "id": "Auth.registrationhandler.createuser.datatype.User",
         "nodeType": "datatype",
-        "name": "User"
+        "name": "User",
+        "startToken": {
+          "type": "datatype.support.sobject",
+          "text": "User",
+          "textToLower": "user",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_User_0:7"
+        },
+        "parentId": "Auth.registrationhandler.createuser",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "User"
       },
       "description": "Returns a User object using the specified portal ID and user information from the third party, such as the username and email address. The User object corresponds to the third party’s user information and may be a new user that hasn’t been inserted in the database or may represent an existing user record in the database.",
+      "parentName": "RegistrationHandler",
+      "variables": {},
       "params": {
-        "portalId": {
-          "id": "Auth.registrationhandler.createuser.portalid",
-          "type": "var",
+        "portalid": {
+          "id": "Auth.registrationhandler.method.createuser(id,auth.userdata).varParam.portalid",
+          "nodeType": "variable",
           "name": "portalId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,28 +160,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 26
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_portalId_-1:0"
+            "id": "token.type.identifier_portalId_0:26"
           },
-          "signature": "ID portalId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "portalId",
+            "textToLower": "portalid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 26
+              },
+              "end": {
+                "line": 0,
+                "character": 34
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_portalId_0:26"
+          },
+          "parentId": "Auth.registrationhandler.method.createuser(id,auth.userdata)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.registrationhandler.createuser.id",
+            "id": "Auth.registrationhandler.createuser.datatype.ID",
             "nodeType": "datatype",
-            "name": "ID"
-          }
+            "name": "ID",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "ID",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 25
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ID_0:23"
+            },
+            "parentId": "Auth.registrationhandler.createuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ID"
+          },
+          "scope": null
         },
-        "userData": {
-          "id": "Auth.registrationhandler.createuser.userdata",
-          "type": "var",
+        "userdata": {
+          "id": "Auth.registrationhandler.method.createuser(id,auth.userdata).varParam.userdata",
+          "nodeType": "variable",
           "name": "userData",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -159,29 +235,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userData_-1:0"
+            "id": "token.type.identifier_userData_0:50"
           },
-          "signature": "Auth.UserData userData",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userData",
+            "textToLower": "userdata",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 50
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userData_0:50"
+          },
+          "parentId": "Auth.registrationhandler.method.createuser(id,auth.userdata)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.registrationhandler.createuser.auth.userdata",
+            "id": "Auth.registrationhandler.createuser.datatype.Auth.UserData",
             "nodeType": "datatype",
-            "name": "Auth.UserData"
-          }
+            "name": "Auth.UserData",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 36
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:36"
+            },
+            "parentId": "Auth.registrationhandler.createuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.UserData"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "updateuser(id,id,auth.userdata)": {
-      "id": "Auth.registrationhandler.updateuser",
+      "id": "Auth.registrationhandler.method.updateuser(id,id,auth.userdata)",
       "nodeType": "method",
       "name": "updateUser",
       "startToken": {
@@ -203,6 +327,9 @@
         },
         "id": "declaration.entity.name.function_updateUser_-1:0"
       },
+      "parentId": "Auth.registrationhandler",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -210,30 +337,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void updateUser(ID userId, ID portalId, Auth.UserData userData)",
+      "signature": "public Void updateUser(ID userId, ID portalId, Auth.UserData userData)",
+      "overrideSignature": "public override Void updateUser(ID userId, ID portalId, Auth.UserData userData)",
       "simplifiedSignature": "updateUser(ID,ID,Auth.UserData)",
       "datatype": {
-        "id": "Auth.registrationhandler.updateuser.void",
+        "id": "Auth.registrationhandler.updateuser.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Auth.registrationhandler.updateuser",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Updates the specified user’s information. This method is called if the user has logged in before with the authorization provider and then logs in again.",
+      "parentName": "RegistrationHandler",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "Auth.registrationhandler.updateuser.userid",
-          "type": "var",
+        "userid": {
+          "id": "Auth.registrationhandler.method.updateuser(id,id,auth.userdata).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -242,28 +395,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 26
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 32
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:26"
           },
-          "signature": "ID userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 26
+              },
+              "end": {
+                "line": 0,
+                "character": 32
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:26"
+          },
+          "parentId": "Auth.registrationhandler.method.updateuser(id,id,auth.userdata)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.registrationhandler.updateuser.id",
+            "id": "Auth.registrationhandler.updateuser.datatype.ID",
             "nodeType": "datatype",
-            "name": "ID"
-          }
+            "name": "ID",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "ID",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 25
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ID_0:23"
+            },
+            "parentId": "Auth.registrationhandler.updateuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ID"
+          },
+          "scope": null
         },
-        "portalId": {
-          "id": "Auth.registrationhandler.updateuser.portalid",
-          "type": "var",
+        "portalid": {
+          "id": "Auth.registrationhandler.method.updateuser(id,id,auth.userdata).varParam.portalid",
+          "nodeType": "variable",
           "name": "portalId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -272,28 +470,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_portalId_-1:0"
+            "id": "token.type.identifier_portalId_0:37"
           },
-          "signature": "ID portalId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "portalId",
+            "textToLower": "portalid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 45
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_portalId_0:37"
+          },
+          "parentId": "Auth.registrationhandler.method.updateuser(id,id,auth.userdata)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.registrationhandler.updateuser.id",
+            "id": "Auth.registrationhandler.updateuser.datatype.ID",
             "nodeType": "datatype",
-            "name": "ID"
-          }
+            "name": "ID",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "ID",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ID_0:34"
+            },
+            "parentId": "Auth.registrationhandler.updateuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ID"
+          },
+          "scope": null
         },
-        "userData": {
-          "id": "Auth.registrationhandler.updateuser.userdata",
-          "type": "var",
+        "userdata": {
+          "id": "Auth.registrationhandler.method.updateuser(id,id,auth.userdata).varParam.userdata",
+          "nodeType": "variable",
           "name": "userData",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -302,30 +545,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userData_-1:0"
+            "id": "token.type.identifier_userData_0:61"
           },
-          "signature": "Auth.UserData userData",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userData",
+            "textToLower": "userdata",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userData_0:61"
+          },
+          "parentId": "Auth.registrationhandler.method.updateuser(id,id,auth.userdata)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Auth.registrationhandler.updateuser.auth.userdata",
+            "id": "Auth.registrationhandler.updateuser.datatype.Auth.UserData",
             "nodeType": "datatype",
-            "name": "Auth.UserData"
-          }
+            "name": "Auth.UserData",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 47
+                },
+                "end": {
+                  "line": 0,
+                  "character": 51
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:47"
+            },
+            "parentId": "Auth.registrationhandler.updateuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.UserData"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

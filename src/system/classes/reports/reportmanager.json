@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_ReportManager_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "describereport()": {
-      "id": "Reports.reportmanager.describereport",
+    "describereport(id)": {
+      "id": "Reports.reportmanager.method.describereport(id)",
       "nodeType": "method",
       "name": "describeReport",
       "startToken": {
@@ -90,18 +92,164 @@
         },
         "id": "declaration.entity.name.function_describeReport_-1:0"
       },
-      "signature": "Reports.ReportDescribeResult describeReport()",
-      "simplifiedSignature": "describeReport()",
+      "parentId": "Reports.reportmanager",
+      "order": 1,
+      "memberOrder": 1,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Reports.ReportDescribeResult describeReport(Id reportId)",
+      "overrideSignature": "public static override Reports.ReportDescribeResult describeReport(Id reportId)",
+      "simplifiedSignature": "describeReport(Id)",
       "datatype": {
-        "id": "Reports.reportmanager.describereport.Reports.ReportDescribeResult",
+        "id": "Reports.reportmanager.describereport.datatype.Reports.ReportDescribeResult",
         "nodeType": "datatype",
-        "name": "Reports.ReportDescribeResult"
+        "name": "Reports.ReportDescribeResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:14"
+        },
+        "parentId": "Reports.reportmanager.describereport",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.ReportDescribeResult"
       },
       "description": "Retrieves report, report type, and extended metadata for a tabular, summary, or matrix report.",
-      "params": {}
+      "parentName": "ReportManager",
+      "variables": {},
+      "params": {
+        "reportid": {
+          "id": "Reports.reportmanager.method.describereport(id).varParam.reportid",
+          "nodeType": "variable",
+          "name": "reportId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:61"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:61"
+          },
+          "parentId": "Reports.reportmanager.method.describereport(id)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Reports.reportmanager.describereport.datatype.Id",
+            "nodeType": "datatype",
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 58
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:58"
+            },
+            "parentId": "Reports.reportmanager.describereport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getdatatypefilteroperatormap()": {
-      "id": "Reports.reportmanager.getdatatypefilteroperatormap",
+      "id": "Reports.reportmanager.method.getdatatypefilteroperatormap()",
       "nodeType": "method",
       "name": "getDatatypeFilterOperatorMap",
       "startToken": {
@@ -123,18 +271,168 @@
         },
         "id": "declaration.entity.name.function_getDatatypeFilterOperatorMap_-1:0"
       },
-      "signature": "Map<String,  List<Reports.FilterOperator>> getDatatypeFilterOperatorMap()",
+      "parentId": "Reports.reportmanager",
+      "order": 2,
+      "memberOrder": 2,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Map<String,List<Reports.FilterOperator>> getDatatypeFilterOperatorMap()",
+      "overrideSignature": "public static override Map<String,List<Reports.FilterOperator>> getDatatypeFilterOperatorMap()",
       "simplifiedSignature": "getDatatypeFilterOperatorMap()",
       "datatype": {
-        "id": "Reports.reportmanager.getdatatypefilteroperatormap.Map<String,  List<Reports.FilterOperator>>",
+        "id": "Reports.reportmanager.getdatatypefilteroperatormap.datatype.Map<String,List<Reports.FilterOperator>>",
         "nodeType": "datatype",
-        "name": "Map<String,  List<Reports.FilterOperator>>"
+        "name": "Map<String,List<Reports.FilterOperator>>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:14"
+        },
+        "parentId": "Reports.reportmanager.getdatatypefilteroperatormap",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "Reports.reportmanager.getdatatypefilteroperatormap.datatype.Map<String,List<Reports.FilterOperator>>.value.List<Reports.FilterOperator>",
+          "nodeType": "datatype",
+          "name": "List<Reports.FilterOperator>",
+          "startToken": {
+            "type": "datatype.collection",
+            "text": "List",
+            "textToLower": "list",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 26
+              },
+              "end": {
+                "line": 0,
+                "character": 30
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_List_0:26"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "List",
+          "value": {
+            "id": "Reports.reportmanager.getdatatypefilteroperatormap.datatype.Map<String,List<Reports.FilterOperator>>.value.List<Reports.FilterOperator>.value.Reports.FilterOperator",
+            "nodeType": "datatype",
+            "name": "Reports.FilterOperator",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Reports",
+              "textToLower": "reports",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 38
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Reports_0:31"
+            },
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Reports.FilterOperator"
+          }
+        },
+        "key": {
+          "id": "Reports.reportmanager.getdatatypefilteroperatormap.datatype.Map<String,List<Reports.FilterOperator>>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 24
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Lists the field data types that you can use to filter the report.",
-      "params": {}
+      "parentName": "ReportManager",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
-    "getreportinstance()": {
-      "id": "Reports.reportmanager.getreportinstance",
+    "getreportinstance(id)": {
+      "id": "Reports.reportmanager.method.getreportinstance(id)",
       "nodeType": "method",
       "name": "getReportInstance",
       "startToken": {
@@ -156,18 +454,164 @@
         },
         "id": "declaration.entity.name.function_getReportInstance_-1:0"
       },
-      "signature": "Reports.ReportInstance getReportInstance()",
-      "simplifiedSignature": "getReportInstance()",
+      "parentId": "Reports.reportmanager",
+      "order": 3,
+      "memberOrder": 3,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Reports.ReportInstance getReportInstance(Id instanceId)",
+      "overrideSignature": "public static override Reports.ReportInstance getReportInstance(Id instanceId)",
+      "simplifiedSignature": "getReportInstance(Id)",
       "datatype": {
-        "id": "Reports.reportmanager.getreportinstance.Reports.ReportInstance",
+        "id": "Reports.reportmanager.getreportinstance.datatype.Reports.ReportInstance",
         "nodeType": "datatype",
-        "name": "Reports.ReportInstance"
+        "name": "Reports.ReportInstance",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:14"
+        },
+        "parentId": "Reports.reportmanager.getreportinstance",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.ReportInstance"
       },
       "description": "Retrieves results for an instance of a report that has been run asynchronously. The settings you use when you run your asynchronous report determine whether you can retrieve summary data or detailed data.",
-      "params": {}
+      "parentName": "ReportManager",
+      "variables": {},
+      "params": {
+        "instanceid": {
+          "id": "Reports.reportmanager.method.getreportinstance(id).varParam.instanceid",
+          "nodeType": "variable",
+          "name": "instanceId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "instanceId",
+            "textToLower": "instanceid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 68
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_instanceId_0:58"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "instanceId",
+            "textToLower": "instanceid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 68
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_instanceId_0:58"
+          },
+          "parentId": "Reports.reportmanager.method.getreportinstance(id)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Reports.reportmanager.getreportinstance.datatype.Id",
+            "nodeType": "datatype",
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 55
+                },
+                "end": {
+                  "line": 0,
+                  "character": 57
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:55"
+            },
+            "parentId": "Reports.reportmanager.getreportinstance",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "getreportinstances()": {
-      "id": "Reports.reportmanager.getreportinstances",
+    "getreportinstances(id)": {
+      "id": "Reports.reportmanager.method.getreportinstances(id)",
       "nodeType": "method",
       "name": "getReportInstances",
       "startToken": {
@@ -189,18 +633,191 @@
         },
         "id": "declaration.entity.name.function_getReportInstances_-1:0"
       },
-      "signature": "List<Reports.ReportInstance> getReportInstances()",
-      "simplifiedSignature": "getReportInstances()",
+      "parentId": "Reports.reportmanager",
+      "order": 4,
+      "memberOrder": 4,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static List<Reports.ReportInstance> getReportInstances(Id reportId)",
+      "overrideSignature": "public static override List<Reports.ReportInstance> getReportInstances(Id reportId)",
+      "simplifiedSignature": "getReportInstances(Id)",
       "datatype": {
-        "id": "Reports.reportmanager.getreportinstances.List<Reports.ReportInstance>",
+        "id": "Reports.reportmanager.getreportinstances.datatype.List<Reports.ReportInstance>",
         "nodeType": "datatype",
-        "name": "List<Reports.ReportInstance>"
+        "name": "List<Reports.ReportInstance>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "Reports.reportmanager.getreportinstances",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Reports.reportmanager.getreportinstances.datatype.List<Reports.ReportInstance>.value.Reports.ReportInstance",
+          "nodeType": "datatype",
+          "name": "Reports.ReportInstance",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Reports",
+            "textToLower": "reports",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 26
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Reports_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Reports.ReportInstance"
+        }
       },
       "description": "Returns a list of instances for a report that was run asynchronously. Each item in the list represents a separate instance of the report, with metadata for the time at which the report was run.",
-      "params": {}
+      "parentName": "ReportManager",
+      "variables": {},
+      "params": {
+        "reportid": {
+          "id": "Reports.reportmanager.method.getreportinstances(id).varParam.reportid",
+          "nodeType": "variable",
+          "name": "reportId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 65
+              },
+              "end": {
+                "line": 0,
+                "character": 73
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:65"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 65
+              },
+              "end": {
+                "line": 0,
+                "character": 73
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:65"
+          },
+          "parentId": "Reports.reportmanager.method.getreportinstances(id)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Reports.reportmanager.getreportinstances.datatype.Id",
+            "nodeType": "datatype",
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 62
+                },
+                "end": {
+                  "line": 0,
+                  "character": 64
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:62"
+            },
+            "parentId": "Reports.reportmanager.getreportinstances",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "runasyncreport()": {
-      "id": "Reports.reportmanager.runasyncreport",
+    "runasyncreport(id,reports.reportmetadata,boolean)": {
+      "id": "Reports.reportmanager.method.runasyncreport(id,reports.reportmetadata,boolean)",
       "nodeType": "method",
       "name": "runAsyncReport",
       "startToken": {
@@ -222,18 +839,1001 @@
         },
         "id": "declaration.entity.name.function_runAsyncReport_-1:0"
       },
-      "signature": "Reports.ReportInstance runAsyncReport()",
-      "simplifiedSignature": "runAsyncReport()",
+      "parentId": "Reports.reportmanager",
+      "order": 5,
+      "memberOrder": 5,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Reports.ReportInstance runAsyncReport(Id reportId, Reports.ReportMetadata reportMetadata, Boolean includeDetails)",
+      "overrideSignature": "public static override Reports.ReportInstance runAsyncReport(Id reportId, Reports.ReportMetadata reportMetadata, Boolean includeDetails)",
+      "simplifiedSignature": "runAsyncReport(Id,Reports.ReportMetadata,Boolean)",
       "datatype": {
-        "id": "Reports.reportmanager.runasyncreport.Reports.ReportInstance",
+        "id": "Reports.reportmanager.runasyncreport.datatype.Reports.ReportInstance",
         "nodeType": "datatype",
-        "name": "Reports.ReportInstance"
+        "name": "Reports.ReportInstance",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:14"
+        },
+        "parentId": "Reports.reportmanager.runasyncreport",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.ReportInstance"
+      },
+      "description": "Runs a report asynchronously with the report ID. Includes details if includeDetails is set to true. Filters the report based on the report metadata in reportMetadata.",
+      "parentName": "ReportManager",
+      "variables": {},
+      "params": {
+        "reportid": {
+          "id": "Reports.reportmanager.method.runasyncreport(id,reports.reportmetadata,boolean).varParam.reportid",
+          "nodeType": "variable",
+          "name": "reportId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 55
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:55"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 55
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:55"
+          },
+          "parentId": "Reports.reportmanager.method.runasyncreport(id,reports.reportmetadata,boolean)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Reports.reportmanager.runasyncreport.datatype.Id",
+            "nodeType": "datatype",
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 54
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:52"
+            },
+            "parentId": "Reports.reportmanager.runasyncreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
+        },
+        "reportmetadata": {
+          "id": "Reports.reportmanager.method.runasyncreport(id,reports.reportmetadata,boolean).varParam.reportmetadata",
+          "nodeType": "variable",
+          "name": "reportMetadata",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportMetadata",
+            "textToLower": "reportmetadata",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 88
+              },
+              "end": {
+                "line": 0,
+                "character": 102
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportMetadata_0:88"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportMetadata",
+            "textToLower": "reportmetadata",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 88
+              },
+              "end": {
+                "line": 0,
+                "character": 102
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportMetadata_0:88"
+          },
+          "parentId": "Reports.reportmanager.method.runasyncreport(id,reports.reportmetadata,boolean)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "Reports.reportmanager.runasyncreport.datatype.Reports.ReportMetadata",
+            "nodeType": "datatype",
+            "name": "Reports.ReportMetadata",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Reports",
+              "textToLower": "reports",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 72
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Reports_0:65"
+            },
+            "parentId": "Reports.reportmanager.runasyncreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Reports.ReportMetadata"
+          },
+          "scope": null
+        },
+        "includedetails": {
+          "id": "Reports.reportmanager.method.runasyncreport(id,reports.reportmetadata,boolean).varParam.includedetails",
+          "nodeType": "variable",
+          "name": "includeDetails",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "includeDetails",
+            "textToLower": "includedetails",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 112
+              },
+              "end": {
+                "line": 0,
+                "character": 126
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_includeDetails_0:112"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "includeDetails",
+            "textToLower": "includedetails",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 112
+              },
+              "end": {
+                "line": 0,
+                "character": 126
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_includeDetails_0:112"
+          },
+          "parentId": "Reports.reportmanager.method.runasyncreport(id,reports.reportmetadata,boolean)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "Reports.reportmanager.runasyncreport.datatype.Boolean",
+            "nodeType": "datatype",
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 104
+                },
+                "end": {
+                  "line": 0,
+                  "character": 111
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:104"
+            },
+            "parentId": "Reports.reportmanager.runasyncreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "runasyncreport(id,boolean)": {
+      "id": "Reports.reportmanager.method.runasyncreport(id,boolean)",
+      "nodeType": "method",
+      "name": "runAsyncReport",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "runAsyncReport",
+        "textToLower": "runasyncreport",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_runAsyncReport_-1:0"
+      },
+      "parentId": "Reports.reportmanager",
+      "order": 6,
+      "memberOrder": 6,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Reports.ReportInstance runAsyncReport(Id reportId, Boolean includeDetails)",
+      "overrideSignature": "public static override Reports.ReportInstance runAsyncReport(Id reportId, Boolean includeDetails)",
+      "simplifiedSignature": "runAsyncReport(Id,Boolean)",
+      "datatype": {
+        "id": "Reports.reportmanager.runasyncreport.datatype.Reports.ReportInstance",
+        "nodeType": "datatype",
+        "name": "Reports.ReportInstance",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:14"
+        },
+        "parentId": "Reports.reportmanager.runasyncreport",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.ReportInstance"
+      },
+      "description": "Runs a report asynchronously with the report ID. Includes details if includeDetails is set to true.",
+      "parentName": "ReportManager",
+      "variables": {},
+      "params": {
+        "reportid": {
+          "id": "Reports.reportmanager.method.runasyncreport(id,boolean).varParam.reportid",
+          "nodeType": "variable",
+          "name": "reportId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 55
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:55"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 55
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:55"
+          },
+          "parentId": "Reports.reportmanager.method.runasyncreport(id,boolean)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Reports.reportmanager.runasyncreport.datatype.Id",
+            "nodeType": "datatype",
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 54
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:52"
+            },
+            "parentId": "Reports.reportmanager.runasyncreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
+        },
+        "includedetails": {
+          "id": "Reports.reportmanager.method.runasyncreport(id,boolean).varParam.includedetails",
+          "nodeType": "variable",
+          "name": "includeDetails",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "includeDetails",
+            "textToLower": "includedetails",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 87
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_includeDetails_0:73"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "includeDetails",
+            "textToLower": "includedetails",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 87
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_includeDetails_0:73"
+          },
+          "parentId": "Reports.reportmanager.method.runasyncreport(id,boolean)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "Reports.reportmanager.runasyncreport.datatype.Boolean",
+            "nodeType": "datatype",
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 72
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:65"
+            },
+            "parentId": "Reports.reportmanager.runasyncreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "runasyncreport(id,reports.reportmetadata)": {
+      "id": "Reports.reportmanager.method.runasyncreport(id,reports.reportmetadata)",
+      "nodeType": "method",
+      "name": "runAsyncReport",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "runAsyncReport",
+        "textToLower": "runasyncreport",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_runAsyncReport_-1:0"
+      },
+      "parentId": "Reports.reportmanager",
+      "order": 7,
+      "memberOrder": 7,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Reports.ReportInstance runAsyncReport(Id reportId, Reports.ReportMetadata reportMetadata)",
+      "overrideSignature": "public static override Reports.ReportInstance runAsyncReport(Id reportId, Reports.ReportMetadata reportMetadata)",
+      "simplifiedSignature": "runAsyncReport(Id,Reports.ReportMetadata)",
+      "datatype": {
+        "id": "Reports.reportmanager.runasyncreport.datatype.Reports.ReportInstance",
+        "nodeType": "datatype",
+        "name": "Reports.ReportInstance",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:14"
+        },
+        "parentId": "Reports.reportmanager.runasyncreport",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.ReportInstance"
+      },
+      "description": "Runs a report asynchronously with the report ID. Filters the results based on the report metadata in reportMetadata.",
+      "parentName": "ReportManager",
+      "variables": {},
+      "params": {
+        "reportid": {
+          "id": "Reports.reportmanager.method.runasyncreport(id,reports.reportmetadata).varParam.reportid",
+          "nodeType": "variable",
+          "name": "reportId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 55
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:55"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 55
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:55"
+          },
+          "parentId": "Reports.reportmanager.method.runasyncreport(id,reports.reportmetadata)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Reports.reportmanager.runasyncreport.datatype.Id",
+            "nodeType": "datatype",
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 54
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:52"
+            },
+            "parentId": "Reports.reportmanager.runasyncreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
+        },
+        "reportmetadata": {
+          "id": "Reports.reportmanager.method.runasyncreport(id,reports.reportmetadata).varParam.reportmetadata",
+          "nodeType": "variable",
+          "name": "reportMetadata",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportMetadata",
+            "textToLower": "reportmetadata",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 88
+              },
+              "end": {
+                "line": 0,
+                "character": 102
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportMetadata_0:88"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportMetadata",
+            "textToLower": "reportmetadata",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 88
+              },
+              "end": {
+                "line": 0,
+                "character": 102
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportMetadata_0:88"
+          },
+          "parentId": "Reports.reportmanager.method.runasyncreport(id,reports.reportmetadata)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "Reports.reportmanager.runasyncreport.datatype.Reports.ReportMetadata",
+            "nodeType": "datatype",
+            "name": "Reports.ReportMetadata",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Reports",
+              "textToLower": "reports",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 72
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Reports_0:65"
+            },
+            "parentId": "Reports.reportmanager.runasyncreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Reports.ReportMetadata"
+          },
+          "description": "",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "runasyncreport(id)": {
+      "id": "Reports.reportmanager.method.runasyncreport(id)",
+      "nodeType": "method",
+      "name": "runAsyncReport",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "runAsyncReport",
+        "textToLower": "runasyncreport",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_runAsyncReport_-1:0"
+      },
+      "parentId": "Reports.reportmanager",
+      "order": 8,
+      "memberOrder": 8,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Reports.ReportInstance runAsyncReport(Id reportId)",
+      "overrideSignature": "public static override Reports.ReportInstance runAsyncReport(Id reportId)",
+      "simplifiedSignature": "runAsyncReport(Id)",
+      "datatype": {
+        "id": "Reports.reportmanager.runasyncreport.datatype.Reports.ReportInstance",
+        "nodeType": "datatype",
+        "name": "Reports.ReportInstance",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:14"
+        },
+        "parentId": "Reports.reportmanager.runasyncreport",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.ReportInstance"
       },
       "description": "Runs a report asynchronously with the report ID.",
-      "params": {}
+      "parentName": "ReportManager",
+      "variables": {},
+      "params": {
+        "reportid": {
+          "id": "Reports.reportmanager.method.runasyncreport(id).varParam.reportid",
+          "nodeType": "variable",
+          "name": "reportId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 55
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:55"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 55
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:55"
+          },
+          "parentId": "Reports.reportmanager.method.runasyncreport(id)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Reports.reportmanager.runasyncreport.datatype.Id",
+            "nodeType": "datatype",
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 54
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:52"
+            },
+            "parentId": "Reports.reportmanager.runasyncreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "runreport()": {
-      "id": "Reports.reportmanager.runreport",
+    "runreport(id,reports.reportmetadata,boolean)": {
+      "id": "Reports.reportmanager.method.runreport(id,reports.reportmetadata,boolean)",
       "nodeType": "method",
       "name": "runReport",
       "startToken": {
@@ -255,19 +1855,1004 @@
         },
         "id": "declaration.entity.name.function_runReport_-1:0"
       },
-      "signature": "Reports.ReportResults runReport()",
-      "simplifiedSignature": "runReport()",
+      "parentId": "Reports.reportmanager",
+      "order": 9,
+      "memberOrder": 9,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Reports.ReportResults runReport(Id reportId, Reports.ReportMetadata reportMetadata, Boolean includeDetails)",
+      "overrideSignature": "public static override Reports.ReportResults runReport(Id reportId, Reports.ReportMetadata reportMetadata, Boolean includeDetails)",
+      "simplifiedSignature": "runReport(Id,Reports.ReportMetadata,Boolean)",
       "datatype": {
-        "id": "Reports.reportmanager.runreport.Reports.ReportResults",
+        "id": "Reports.reportmanager.runreport.datatype.Reports.ReportResults",
         "nodeType": "datatype",
-        "name": "Reports.ReportResults"
+        "name": "Reports.ReportResults",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:14"
+        },
+        "parentId": "Reports.reportmanager.runreport",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.ReportResults"
+      },
+      "description": "Runs a report immediately with the report ID. Includes details if includeDetails is set to true. Filters the results based on the report metadata in reportMetadata.",
+      "parentName": "ReportManager",
+      "variables": {},
+      "params": {
+        "reportid": {
+          "id": "Reports.reportmanager.method.runreport(id,reports.reportmetadata,boolean).varParam.reportid",
+          "nodeType": "variable",
+          "name": "reportId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:49"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:49"
+          },
+          "parentId": "Reports.reportmanager.method.runreport(id,reports.reportmetadata,boolean)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Reports.reportmanager.runreport.datatype.Id",
+            "nodeType": "datatype",
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 46
+                },
+                "end": {
+                  "line": 0,
+                  "character": 48
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:46"
+            },
+            "parentId": "Reports.reportmanager.runreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
+        },
+        "reportmetadata": {
+          "id": "Reports.reportmanager.method.runreport(id,reports.reportmetadata,boolean).varParam.reportmetadata",
+          "nodeType": "variable",
+          "name": "reportMetadata",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportMetadata",
+            "textToLower": "reportmetadata",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 82
+              },
+              "end": {
+                "line": 0,
+                "character": 96
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportMetadata_0:82"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportMetadata",
+            "textToLower": "reportmetadata",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 82
+              },
+              "end": {
+                "line": 0,
+                "character": 96
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportMetadata_0:82"
+          },
+          "parentId": "Reports.reportmanager.method.runreport(id,reports.reportmetadata,boolean)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "Reports.reportmanager.runreport.datatype.Reports.ReportMetadata",
+            "nodeType": "datatype",
+            "name": "Reports.ReportMetadata",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Reports",
+              "textToLower": "reports",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Reports_0:59"
+            },
+            "parentId": "Reports.reportmanager.runreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Reports.ReportMetadata"
+          },
+          "scope": null
+        },
+        "includedetails": {
+          "id": "Reports.reportmanager.method.runreport(id,reports.reportmetadata,boolean).varParam.includedetails",
+          "nodeType": "variable",
+          "name": "includeDetails",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "includeDetails",
+            "textToLower": "includedetails",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 106
+              },
+              "end": {
+                "line": 0,
+                "character": 120
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_includeDetails_0:106"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "includeDetails",
+            "textToLower": "includedetails",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 106
+              },
+              "end": {
+                "line": 0,
+                "character": 120
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_includeDetails_0:106"
+          },
+          "parentId": "Reports.reportmanager.method.runreport(id,reports.reportmetadata,boolean)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "Reports.reportmanager.runreport.datatype.Boolean",
+            "nodeType": "datatype",
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 98
+                },
+                "end": {
+                  "line": 0,
+                  "character": 105
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:98"
+            },
+            "parentId": "Reports.reportmanager.runreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "runreport(id,boolean)": {
+      "id": "Reports.reportmanager.method.runreport(id,boolean)",
+      "nodeType": "method",
+      "name": "runReport",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "runReport",
+        "textToLower": "runreport",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_runReport_-1:0"
+      },
+      "parentId": "Reports.reportmanager",
+      "order": 10,
+      "memberOrder": 10,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Reports.ReportResults runReport(Id reportId, Boolean includeDetails)",
+      "overrideSignature": "public static override Reports.ReportResults runReport(Id reportId, Boolean includeDetails)",
+      "simplifiedSignature": "runReport(Id,Boolean)",
+      "datatype": {
+        "id": "Reports.reportmanager.runreport.datatype.Reports.ReportResults",
+        "nodeType": "datatype",
+        "name": "Reports.ReportResults",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:14"
+        },
+        "parentId": "Reports.reportmanager.runreport",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.ReportResults"
+      },
+      "description": "Runs a report immediately with the report ID. Includes details if includeDetails is set to true.",
+      "parentName": "ReportManager",
+      "variables": {},
+      "params": {
+        "reportid": {
+          "id": "Reports.reportmanager.method.runreport(id,boolean).varParam.reportid",
+          "nodeType": "variable",
+          "name": "reportId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:49"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:49"
+          },
+          "parentId": "Reports.reportmanager.method.runreport(id,boolean)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Reports.reportmanager.runreport.datatype.Id",
+            "nodeType": "datatype",
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 46
+                },
+                "end": {
+                  "line": 0,
+                  "character": 48
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:46"
+            },
+            "parentId": "Reports.reportmanager.runreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
+        },
+        "includedetails": {
+          "id": "Reports.reportmanager.method.runreport(id,boolean).varParam.includedetails",
+          "nodeType": "variable",
+          "name": "includeDetails",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "includeDetails",
+            "textToLower": "includedetails",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 81
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_includeDetails_0:67"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "includeDetails",
+            "textToLower": "includedetails",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 81
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_includeDetails_0:67"
+          },
+          "parentId": "Reports.reportmanager.method.runreport(id,boolean)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "Reports.reportmanager.runreport.datatype.Boolean",
+            "nodeType": "datatype",
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:59"
+            },
+            "parentId": "Reports.reportmanager.runreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "runreport(id,reports.reportmetadata)": {
+      "id": "Reports.reportmanager.method.runreport(id,reports.reportmetadata)",
+      "nodeType": "method",
+      "name": "runReport",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "runReport",
+        "textToLower": "runreport",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_runReport_-1:0"
+      },
+      "parentId": "Reports.reportmanager",
+      "order": 11,
+      "memberOrder": 11,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Reports.ReportResults runReport(Id reportId, Reports.ReportMetadata reportMetadata)",
+      "overrideSignature": "public static override Reports.ReportResults runReport(Id reportId, Reports.ReportMetadata reportMetadata)",
+      "simplifiedSignature": "runReport(Id,Reports.ReportMetadata)",
+      "datatype": {
+        "id": "Reports.reportmanager.runreport.datatype.Reports.ReportResults",
+        "nodeType": "datatype",
+        "name": "Reports.ReportResults",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:14"
+        },
+        "parentId": "Reports.reportmanager.runreport",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.ReportResults"
+      },
+      "description": "Runs a report immediately with the report ID. Filters the results based on the report metadata in rmData.",
+      "parentName": "ReportManager",
+      "variables": {},
+      "params": {
+        "reportid": {
+          "id": "Reports.reportmanager.method.runreport(id,reports.reportmetadata).varParam.reportid",
+          "nodeType": "variable",
+          "name": "reportId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:49"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:49"
+          },
+          "parentId": "Reports.reportmanager.method.runreport(id,reports.reportmetadata)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Reports.reportmanager.runreport.datatype.Id",
+            "nodeType": "datatype",
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 46
+                },
+                "end": {
+                  "line": 0,
+                  "character": 48
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:46"
+            },
+            "parentId": "Reports.reportmanager.runreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
+        },
+        "reportmetadata": {
+          "id": "Reports.reportmanager.method.runreport(id,reports.reportmetadata).varParam.reportmetadata",
+          "nodeType": "variable",
+          "name": "reportMetadata",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportMetadata",
+            "textToLower": "reportmetadata",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 82
+              },
+              "end": {
+                "line": 0,
+                "character": 96
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportMetadata_0:82"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportMetadata",
+            "textToLower": "reportmetadata",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 82
+              },
+              "end": {
+                "line": 0,
+                "character": 96
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportMetadata_0:82"
+          },
+          "parentId": "Reports.reportmanager.method.runreport(id,reports.reportmetadata)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "Reports.reportmanager.runreport.datatype.Reports.ReportMetadata",
+            "nodeType": "datatype",
+            "name": "Reports.ReportMetadata",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Reports",
+              "textToLower": "reports",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Reports_0:59"
+            },
+            "parentId": "Reports.reportmanager.runreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Reports.ReportMetadata"
+          },
+          "description": "",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "runreport(id)": {
+      "id": "Reports.reportmanager.method.runreport(id)",
+      "nodeType": "method",
+      "name": "runReport",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "runReport",
+        "textToLower": "runreport",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_runReport_-1:0"
+      },
+      "parentId": "Reports.reportmanager",
+      "order": 12,
+      "memberOrder": 12,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Reports.ReportResults runReport(Id reportId)",
+      "overrideSignature": "public static override Reports.ReportResults runReport(Id reportId)",
+      "simplifiedSignature": "runReport(Id)",
+      "datatype": {
+        "id": "Reports.reportmanager.runreport.datatype.Reports.ReportResults",
+        "nodeType": "datatype",
+        "name": "Reports.ReportResults",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:14"
+        },
+        "parentId": "Reports.reportmanager.runreport",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.ReportResults"
       },
       "description": "Runs a report immediately with the report ID.",
-      "params": {}
+      "parentName": "ReportManager",
+      "variables": {},
+      "params": {
+        "reportid": {
+          "id": "Reports.reportmanager.method.runreport(id).varParam.reportid",
+          "nodeType": "variable",
+          "name": "reportId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:49"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "reportId",
+            "textToLower": "reportid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_reportId_0:49"
+          },
+          "parentId": "Reports.reportmanager.method.runreport(id)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Reports.reportmanager.runreport.datatype.Id",
+            "nodeType": "datatype",
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 46
+                },
+                "end": {
+                  "line": 0,
+                  "character": 48
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:46"
+            },
+            "parentId": "Reports.reportmanager.runreport",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 12,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Map_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "clear()": {
-      "id": "System.map.clear",
+      "id": "System.map.method.clear()",
       "nodeType": "method",
       "name": "clear",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_clear_-1:0"
       },
+      "parentId": "System.map",
+      "order": 1,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void clear()",
+      "signature": "public Void clear()",
+      "overrideSignature": "public override Void clear()",
       "simplifiedSignature": "clear()",
       "datatype": {
-        "id": "System.map.clear.void",
+        "id": "System.map.clear.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "System.map.clear",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Removes all of the key-value mappings from the map.",
-      "params": {}
+      "parentName": "Map",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "clone()": {
-      "id": "System.map.clone",
+      "id": "System.map.method.clone()",
       "nodeType": "method",
       "name": "clone",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_clone_-1:0"
       },
+      "parentId": "System.map",
+      "order": 2,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,30 +185,112 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Map (of same clone()",
+      "signature": "public Map<Object,Object> clone()",
+      "overrideSignature": "public override Map<Object,Object> clone()",
       "simplifiedSignature": "clone()",
       "datatype": {
-        "id": "System.map.clone.Map (of same",
+        "id": "System.map.clone.datatype.Map<Object,Object>",
         "nodeType": "datatype",
-        "name": "Map (of same"
+        "name": "Map<Object,Object>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "System.map.clone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "System.map.clone.datatype.Map<Object,Object>.value.Object",
+          "nodeType": "datatype",
+          "name": "Object",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Object",
+            "textToLower": "object",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 25
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Object_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Object"
+        },
+        "key": {
+          "id": "System.map.clone.datatype.Map<Object,Object>.key.Object",
+          "nodeType": "datatype",
+          "name": "Object",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Object",
+            "textToLower": "object",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Object_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Object"
+        }
       },
       "description": "Makes a duplicate copy of the map.",
-      "params": {}
+      "parentName": "Map",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "containskey(object)": {
-      "id": "System.map.containskey",
+      "id": "System.map.method.containskey(object)",
       "nodeType": "method",
       "name": "containsKey",
       "startToken": {
@@ -194,6 +312,9 @@
         },
         "id": "declaration.entity.name.function_containsKey_-1:0"
       },
+      "parentId": "System.map",
+      "order": 3,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -201,30 +322,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean containsKey(Object key)",
+      "overrideSignature": "public override Boolean containsKey(Object key)",
       "simplifiedSignature": "containsKey(Object)",
       "datatype": {
-        "id": "System.map.containskey.Boolean",
+        "id": "System.map.containskey.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.map.containskey",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the map contains a mapping for the specified key.",
+      "parentName": "Map",
+      "variables": {},
       "params": {
         "key": {
-          "id": "System.map.containskey.key",
-          "type": "var",
+          "id": "System.map.method.containskey(object).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -233,29 +380,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:34"
           },
-          "signature": "Object key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 37
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:34"
+          },
+          "parentId": "System.map.method.containskey(object)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.map.containskey.object",
+            "id": "System.map.containskey.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 27
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:27"
+            },
+            "parentId": "System.map.containskey",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "deepclone()": {
-      "id": "System.map.deepclone",
+      "id": "System.map.method.deepclone()",
       "nodeType": "method",
       "name": "deepClone",
       "startToken": {
@@ -277,6 +472,9 @@
         },
         "id": "declaration.entity.name.function_deepClone_-1:0"
       },
+      "parentId": "System.map",
+      "order": 4,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -284,30 +482,112 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Map (of the deepClone()",
+      "signature": "public Map<Object,Object> deepClone()",
+      "overrideSignature": "public override Map<Object,Object> deepClone()",
       "simplifiedSignature": "deepClone()",
       "datatype": {
-        "id": "System.map.deepclone.Map (of the",
+        "id": "System.map.deepclone.datatype.Map<Object,Object>",
         "nodeType": "datatype",
-        "name": "Map (of the"
+        "name": "Map<Object,Object>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "System.map.deepclone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "System.map.deepclone.datatype.Map<Object,Object>.value.Object",
+          "nodeType": "datatype",
+          "name": "Object",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Object",
+            "textToLower": "object",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 25
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Object_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Object"
+        },
+        "key": {
+          "id": "System.map.deepclone.datatype.Map<Object,Object>.key.Object",
+          "nodeType": "datatype",
+          "name": "Object",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Object",
+            "textToLower": "object",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Object_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Object"
+        }
       },
       "description": "Makes a duplicate copy of a map, including sObject records if this is a map with sObject record values.",
-      "params": {}
+      "parentName": "Map",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "equals(map)": {
-      "id": "System.map.equals",
+      "id": "System.map.method.equals(map)",
       "nodeType": "method",
       "name": "equals",
       "startToken": {
@@ -329,6 +609,9 @@
         },
         "id": "declaration.entity.name.function_equals_-1:0"
       },
+      "parentId": "System.map",
+      "order": 5,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -336,30 +619,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean equals(Map map2)",
+      "overrideSignature": "public override Boolean equals(Map map2)",
       "simplifiedSignature": "equals(Map)",
       "datatype": {
-        "id": "System.map.equals.Boolean",
+        "id": "System.map.equals.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.map.equals",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Compares this map with the specified map and returns true if both maps are equal; otherwise, returns false.",
+      "parentName": "Map",
+      "variables": {},
       "params": {
         "map2": {
-          "id": "System.map.equals.map2",
-          "type": "var",
+          "id": "System.map.method.equals(map).varParam.map2",
+          "nodeType": "variable",
           "name": "map2",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -368,29 +677,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 26
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 30
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_map2_-1:0"
+            "id": "token.type.identifier_map2_0:26"
           },
-          "signature": "Map map2",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "map2",
+            "textToLower": "map2",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 26
+              },
+              "end": {
+                "line": 0,
+                "character": 30
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_map2_0:26"
+          },
+          "parentId": "System.map.method.equals(map)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.map.equals.map",
+            "id": "System.map.equals.datatype.Map",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "Map",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 25
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:22"
+            },
+            "parentId": "System.map.equals",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map"
+          },
+          "description": "The map2 argument is the map to compare this map with.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "get(object)": {
-      "id": "System.map.get",
+      "id": "System.map.method.get(object)",
       "nodeType": "method",
       "name": "get",
       "startToken": {
@@ -412,6 +769,9 @@
         },
         "id": "declaration.entity.name.function_get_-1:0"
       },
+      "parentId": "System.map",
+      "order": 6,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -419,30 +779,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Object get(Object key)",
+      "overrideSignature": "public override Object get(Object key)",
       "simplifiedSignature": "get(Object)",
       "datatype": {
-        "id": "System.map.get.Object",
+        "id": "System.map.get.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:7"
+        },
+        "parentId": "System.map.get",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Returns the value to which the specified key is mapped, or null if the map contains no value for this key.",
+      "parentName": "Map",
+      "variables": {},
       "params": {
         "key": {
-          "id": "System.map.get.key",
-          "type": "var",
+          "id": "System.map.method.get(object).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -451,29 +837,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 25
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 28
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:25"
           },
-          "signature": "Object key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 25
+              },
+              "end": {
+                "line": 0,
+                "character": 28
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:25"
+          },
+          "parentId": "System.map.method.get(object)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.map.get.object",
+            "id": "System.map.get.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 18
+                },
+                "end": {
+                  "line": 0,
+                  "character": 24
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:18"
+            },
+            "parentId": "System.map.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getsobjecttype()": {
-      "id": "System.map.getsobjecttype",
+      "id": "System.map.method.getsobjecttype()",
       "nodeType": "method",
       "name": "getSObjectType",
       "startToken": {
@@ -495,6 +929,9 @@
         },
         "id": "declaration.entity.name.function_getSObjectType_-1:0"
       },
+      "parentId": "System.map",
+      "order": 7,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -502,30 +939,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Schema.SObjectType getSObjectType()",
+      "overrideSignature": "public override Schema.SObjectType getSObjectType()",
       "simplifiedSignature": "getSObjectType()",
       "datatype": {
-        "id": "System.map.getsobjecttype.Schema.SObjectType",
+        "id": "System.map.getsobjecttype.datatype.Schema.SObjectType",
         "nodeType": "datatype",
-        "name": "Schema.SObjectType"
+        "name": "Schema.SObjectType",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Schema",
+          "textToLower": "schema",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Schema_0:7"
+        },
+        "parentId": "System.map.getsobjecttype",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Schema.SObjectType"
       },
       "description": "Returns the token of the sObject type that makes up the map values.",
-      "params": {}
+      "parentName": "Map",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "hashcode()": {
-      "id": "System.map.hashcode",
+      "id": "System.map.method.hashcode()",
       "nodeType": "method",
       "name": "hashCode",
       "startToken": {
@@ -547,6 +1012,9 @@
         },
         "id": "declaration.entity.name.function_hashCode_-1:0"
       },
+      "parentId": "System.map",
+      "order": 8,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -554,30 +1022,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer hashCode()",
+      "overrideSignature": "public override Integer hashCode()",
       "simplifiedSignature": "hashCode()",
       "datatype": {
-        "id": "System.map.hashcode.Integer",
+        "id": "System.map.hashcode.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.map.hashcode",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the hashcode corresponding to this map.",
-      "params": {}
+      "parentName": "Map",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "isempty()": {
-      "id": "System.map.isempty",
+      "id": "System.map.method.isempty()",
       "nodeType": "method",
       "name": "isEmpty",
       "startToken": {
@@ -599,6 +1095,9 @@
         },
         "id": "declaration.entity.name.function_isEmpty_-1:0"
       },
+      "parentId": "System.map",
+      "order": 9,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -606,30 +1105,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean isEmpty()",
+      "overrideSignature": "public override Boolean isEmpty()",
       "simplifiedSignature": "isEmpty()",
       "datatype": {
-        "id": "System.map.isempty.Boolean",
+        "id": "System.map.isempty.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.map.isempty",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the map has zero key-value pairs.",
-      "params": {}
+      "parentName": "Map",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "keyset()": {
-      "id": "System.map.keyset",
+      "id": "System.map.method.keyset()",
       "nodeType": "method",
       "name": "keySet",
       "startToken": {
@@ -651,6 +1178,9 @@
         },
         "id": "declaration.entity.name.function_keySet_-1:0"
       },
+      "parentId": "System.map",
+      "order": 10,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -658,30 +1188,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Set (of key keySet()",
+      "signature": "public Set<Object> keySet()",
+      "overrideSignature": "public override Set<Object> keySet()",
       "simplifiedSignature": "keySet()",
       "datatype": {
-        "id": "System.map.keyset.Set (of key",
+        "id": "System.map.keyset.datatype.Set<Object>",
         "nodeType": "datatype",
-        "name": "Set (of key"
+        "name": "Set<Object>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Set",
+          "textToLower": "set",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Set_0:7"
+        },
+        "parentId": "System.map.keyset",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Set",
+        "value": {
+          "id": "System.map.keyset.datatype.Set<Object>.value.Object",
+          "nodeType": "datatype",
+          "name": "Object",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Object",
+            "textToLower": "object",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Object_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Object"
+        }
       },
       "description": "Returns a set that contains all of the keys in the map.",
-      "params": {}
+      "parentName": "Map",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "put(object,object)": {
-      "id": "System.map.put",
+      "id": "System.map.method.put(object,object)",
       "nodeType": "method",
       "name": "put",
       "startToken": {
@@ -703,6 +1288,9 @@
         },
         "id": "declaration.entity.name.function_put_-1:0"
       },
+      "parentId": "System.map",
+      "order": 11,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -710,30 +1298,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Object put(Object key, Object value)",
+      "overrideSignature": "public override Object put(Object key, Object value)",
       "simplifiedSignature": "put(Object,Object)",
       "datatype": {
-        "id": "System.map.put.Object",
+        "id": "System.map.put.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:7"
+        },
+        "parentId": "System.map.put",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Associates the specified value with the specified key in the map.",
+      "parentName": "Map",
+      "variables": {},
       "params": {
         "key": {
-          "id": "System.map.put.key",
-          "type": "var",
+          "id": "System.map.method.put(object,object).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -742,28 +1356,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 25
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 28
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:25"
           },
-          "signature": "Object key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 25
+              },
+              "end": {
+                "line": 0,
+                "character": 28
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:25"
+          },
+          "parentId": "System.map.method.put(object,object)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.map.put.object",
+            "id": "System.map.put.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 18
+                },
+                "end": {
+                  "line": 0,
+                  "character": 24
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:18"
+            },
+            "parentId": "System.map.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "scope": null
         },
         "value": {
-          "id": "System.map.put.value",
-          "type": "var",
+          "id": "System.map.method.put(object,object).varParam.value",
+          "nodeType": "variable",
           "name": "value",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -772,29 +1431,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_value_-1:0"
+            "id": "token.type.identifier_value_0:37"
           },
-          "signature": "Object value",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "value",
+            "textToLower": "value",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 42
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_value_0:37"
+          },
+          "parentId": "System.map.method.put(object,object)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.map.put.object",
+            "id": "System.map.put.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:30"
+            },
+            "parentId": "System.map.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "putall(map)": {
-      "id": "System.map.putall",
+      "id": "System.map.method.putall(map)",
       "nodeType": "method",
       "name": "putAll",
       "startToken": {
@@ -816,6 +1523,9 @@
         },
         "id": "declaration.entity.name.function_putAll_-1:0"
       },
+      "parentId": "System.map",
+      "order": 12,
+      "memberOrder": 15,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -823,30 +1533,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void putAll(Map fromMap)",
+      "signature": "public Void putAll(Map fromMap)",
+      "overrideSignature": "public override Void putAll(Map fromMap)",
       "simplifiedSignature": "putAll(Map)",
       "datatype": {
-        "id": "System.map.putall.void",
+        "id": "System.map.putall.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "System.map.putall",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Copies all of the mappings from the specified map to the original map.",
+      "parentName": "Map",
+      "variables": {},
       "params": {
-        "fromMap": {
-          "id": "System.map.putall.frommap",
-          "type": "var",
+        "frommap": {
+          "id": "System.map.method.putall(map).varParam.frommap",
+          "nodeType": "variable",
           "name": "fromMap",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -855,29 +1591,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 23
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 30
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_fromMap_-1:0"
+            "id": "token.type.identifier_fromMap_0:23"
           },
-          "signature": "Map fromMap",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fromMap",
+            "textToLower": "frommap",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 23
+              },
+              "end": {
+                "line": 0,
+                "character": 30
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fromMap_0:23"
+          },
+          "parentId": "System.map.method.putall(map)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.map.putall.map",
+            "id": "System.map.putall.datatype.Map",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "Map",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 19
+                },
+                "end": {
+                  "line": 0,
+                  "character": 22
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:19"
+            },
+            "parentId": "System.map.putall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "putall(sobject[])": {
-      "id": "System.map.putall",
+      "id": "System.map.method.putall(sobject[])",
       "nodeType": "method",
       "name": "putAll",
       "startToken": {
@@ -899,6 +1683,9 @@
         },
         "id": "declaration.entity.name.function_putAll_-1:0"
       },
+      "parentId": "System.map",
+      "order": 13,
+      "memberOrder": 16,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -906,30 +1693,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void putAll(sObject[] sobjectArray)",
+      "signature": "public Void putAll(sObject[] sobjectArray)",
+      "overrideSignature": "public override Void putAll(sObject[] sobjectArray)",
       "simplifiedSignature": "putAll(sObject[])",
       "datatype": {
-        "id": "System.map.putall.void",
+        "id": "System.map.putall.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "System.map.putall",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Adds the list of sObject records to a map declared as Map<ID, sObject> or Map<String, sObject>.",
+      "parentName": "Map",
+      "variables": {},
       "params": {
-        "sobjectArray": {
-          "id": "System.map.putall.sobjectarray",
-          "type": "var",
+        "sobjectarray": {
+          "id": "System.map.method.putall(sobject[]).varParam.sobjectarray",
+          "nodeType": "variable",
           "name": "sobjectArray",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -938,29 +1751,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_sobjectArray_-1:0"
+            "id": "token.type.identifier_sobjectArray_0:29"
           },
-          "signature": "sObject[] sobjectArray",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sobjectArray",
+            "textToLower": "sobjectarray",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 41
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sobjectArray_0:29"
+          },
+          "parentId": "System.map.method.putall(sobject[])",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.map.putall.sobject[]",
+            "id": "System.map.putall.datatype.sObject[]",
             "nodeType": "datatype",
-            "name": "sObject[]"
-          }
+            "name": "sObject[]",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "sObject",
+              "textToLower": "sobject",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 19
+                },
+                "end": {
+                  "line": 0,
+                  "character": 26
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_sObject_0:19"
+            },
+            "parentId": "System.map.putall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "sObject[]"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "remove(key)": {
-      "id": "System.map.remove",
+      "id": "System.map.method.remove(key)",
       "nodeType": "method",
       "name": "remove",
       "startToken": {
@@ -982,6 +1843,9 @@
         },
         "id": "declaration.entity.name.function_remove_-1:0"
       },
+      "parentId": "System.map",
+      "order": 14,
+      "memberOrder": 17,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -989,30 +1853,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Object remove(Key key)",
+      "overrideSignature": "public override Object remove(Key key)",
       "simplifiedSignature": "remove(Key)",
       "datatype": {
-        "id": "System.map.remove.Object",
+        "id": "System.map.remove.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:7"
+        },
+        "parentId": "System.map.remove",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Removes the mapping for the specified key from the map, if present, and returns the corresponding value.",
+      "parentName": "Map",
+      "variables": {},
       "params": {
         "key": {
-          "id": "System.map.remove.key",
-          "type": "var",
+          "id": "System.map.method.remove(key).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1021,29 +1911,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 25
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 28
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:25"
           },
-          "signature": "Key key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 25
+              },
+              "end": {
+                "line": 0,
+                "character": 28
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:25"
+          },
+          "parentId": "System.map.method.remove(key)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.map.remove.key",
+            "id": "System.map.remove.datatype.Key",
             "nodeType": "datatype",
-            "name": "Key"
-          }
+            "name": "Key",
+            "startToken": {
+              "type": "datatype.custom.class",
+              "text": "Key",
+              "textToLower": "key",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 21
+                },
+                "end": {
+                  "line": 0,
+                  "character": 24
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Key_0:21"
+            },
+            "parentId": "System.map.remove",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Key"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "size()": {
-      "id": "System.map.size",
+      "id": "System.map.method.size()",
       "nodeType": "method",
       "name": "size",
       "startToken": {
@@ -1065,6 +2003,9 @@
         },
         "id": "declaration.entity.name.function_size_-1:0"
       },
+      "parentId": "System.map",
+      "order": 15,
+      "memberOrder": 18,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1072,30 +2013,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer size()",
+      "overrideSignature": "public override Integer size()",
       "simplifiedSignature": "size()",
       "datatype": {
-        "id": "System.map.size.Integer",
+        "id": "System.map.size.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.map.size",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the number of key-value pairs in the map.",
-      "params": {}
+      "parentName": "Map",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "values()": {
-      "id": "System.map.values",
+      "id": "System.map.method.values()",
       "nodeType": "method",
       "name": "values",
       "startToken": {
@@ -1117,6 +2086,9 @@
         },
         "id": "declaration.entity.name.function_values_-1:0"
       },
+      "parentId": "System.map",
+      "order": 16,
+      "memberOrder": 19,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1124,32 +2096,87 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<Object> values()",
+      "overrideSignature": "public override List<Object> values()",
       "simplifiedSignature": "values()",
       "datatype": {
-        "id": "System.map.values.List<Object>",
+        "id": "System.map.values.datatype.List<Object>",
         "nodeType": "datatype",
-        "name": "List<Object>"
+        "name": "List<Object>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "System.map.values",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.map.values.datatype.List<Object>.value.Object",
+          "nodeType": "datatype",
+          "name": "Object",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Object",
+            "textToLower": "object",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 18
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Object_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Object"
+        }
       },
       "description": "Returns a list that contains all the values in the map.",
-      "params": {}
+      "parentName": "Map",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {
     "map&lt;t1,t2&gt;()": {
-      "id": "System.map.map&lt;t1,t2&gt;",
+      "id": "System.map.method.map&lt;t1,t2&gt;()",
       "nodeType": "constructor",
       "name": "Map&lt;T1,T2&gt;",
       "startToken": {
@@ -1171,6 +2198,9 @@
         },
         "id": "declaration.entity.name.function_Map&lt;T1,T2&gt;_-1:0"
       },
+      "parentId": "System.map",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1178,112 +2208,247 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Map&lt;T1,T2&gt;()",
+      "signature": "public Map<T1,T2> Map&lt;T1,T2&gt;()",
+      "overrideSignature": "public override Map<T1,T2> Map&lt;T1,T2&gt;()",
       "simplifiedSignature": "Map&lt;T1,T2&gt;()",
       "datatype": {
-        "id": "System.map.map&lt;t1,t2&gt;.constructor",
+        "id": "System.map.map&lt;t1,t2&gt;.datatype.Map<T1,T2>",
         "nodeType": "datatype",
-        "name": "Map"
-      },
-      "description": "Creates a new instance of the Map class. T1 is the data type of the keys and T2 is the data type of the values.",
-      "params": {}
-    },
-    "map&lt;t1,t2&gt;(map,t2>)": {
-      "id": "System.map.map&lt;t1,t2&gt;",
-      "nodeType": "constructor",
-      "name": "Map&lt;T1,T2&gt;",
-      "startToken": {
-        "type": "declaration.entity.name.function",
-        "text": "Map&lt;T1,T2&gt;",
-        "textToLower": "map&lt;t1,t2&gt;",
-        "isAux": false,
-        "range": {
-          "start": {
-            "line": -1,
-            "character": 0
+        "name": "Map<T1,T2>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
           },
-          "end": {
-            "line": -1,
-            "character": 0
-          },
-          "isEmpty": true,
-          "isSingleLine": true
+          "id": "token.type.identifier_Map_0:7"
         },
-        "id": "declaration.entity.name.function_Map&lt;T1,T2&gt;_-1:0"
-      },
-      "accessModifier": {
-        "type": "keyword.modifier.access",
-        "text": "public",
-        "textToLower": "public",
-        "isAux": false,
-        "range": {
-          "start": {
-            "line": -1,
-            "character": 0
-          },
-          "end": {
-            "line": -1,
-            "character": 0
-          },
-          "isEmpty": true,
-          "isSingleLine": true
-        },
-        "id": "keyword.modifier.access_public_-1:0"
-      },
-      "signature": "public Map&lt;T1,T2&gt;(Map <T1, T2> mapToCopy)",
-      "simplifiedSignature": "Map&lt;T1,T2&gt;(Map,T2>)",
-      "datatype": {
-        "id": "System.map.map&lt;t1,t2&gt;.constructor",
-        "nodeType": "datatype",
-        "name": "Map"
-      },
-      "description": "Creates a new instance of the Map class and initializes it by copying the entries from the specified map. T1 is the data type of the keys and T2 is the data type of the values.",
-      "params": {
-        "<T1": {
-          "id": "System.map.map&lt;t1,t2&gt;.<t1",
-          "type": "var",
-          "name": "<T1",
+        "parentId": "System.map.map&lt;t1,t2&gt;",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "System.map.map&lt;t1,t2&gt;.datatype.Map<T1,T2>.value.T2",
+          "nodeType": "datatype",
+          "name": "T2",
           "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "<T1",
-            "textToLower": "<t1",
+            "type": "datatype.custom.class",
+            "text": "T2",
+            "textToLower": "t2",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 14
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 16
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<T1_-1:0"
+            "id": "token.type.identifier_T2_0:14"
           },
-          "signature": "Map <T1",
-          "datatype": {
-            "id": "System.map.map&lt;t1,t2&gt;.map",
-            "nodeType": "datatype",
-            "name": "Map"
-          }
+          "order": 0,
+          "memberOrder": 0,
+          "type": "T2"
         },
-        "mapToCopy": {
-          "id": "System.map.map&lt;t1,t2&gt;.maptocopy",
-          "type": "var",
+        "key": {
+          "id": "System.map.map&lt;t1,t2&gt;.datatype.Map<T1,T2>.key.T1",
+          "nodeType": "datatype",
+          "name": "T1",
+          "startToken": {
+            "type": "datatype.custom.class",
+            "text": "T1",
+            "textToLower": "t1",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 13
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_T1_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "T1"
+        }
+      },
+      "description": "Creates a new instance of the Map class. T1 is the data type of the keys and T2 is the data type of the values.",
+      "parentName": "Map",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
+    },
+    "map&lt;t1,t2&gt;(map<t1,t2>)": {
+      "id": "System.map.method.map&lt;t1,t2&gt;(map<t1,t2>)",
+      "nodeType": "constructor",
+      "name": "Map&lt;T1,T2&gt;",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "Map&lt;T1,T2&gt;",
+        "textToLower": "map&lt;t1,t2&gt;",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_Map&lt;T1,T2&gt;_-1:0"
+      },
+      "parentId": "System.map",
+      "order": 2,
+      "memberOrder": 2,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public Map<T1,T2> Map&lt;T1,T2&gt;(Map<T1,T2> mapToCopy)",
+      "overrideSignature": "public override Map<T1,T2> Map&lt;T1,T2&gt;(Map<T1,T2> mapToCopy)",
+      "simplifiedSignature": "Map&lt;T1,T2&gt;(Map<T1,T2>)",
+      "datatype": {
+        "id": "System.map.map&lt;t1,t2&gt;.datatype.Map<T1,T2>",
+        "nodeType": "datatype",
+        "name": "Map<T1,T2>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "System.map.map&lt;t1,t2&gt;",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "System.map.map&lt;t1,t2&gt;.datatype.Map<T1,T2>.value.T2",
+          "nodeType": "datatype",
+          "name": "T2",
+          "startToken": {
+            "type": "datatype.custom.class",
+            "text": "T2",
+            "textToLower": "t2",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 14
+              },
+              "end": {
+                "line": 0,
+                "character": 16
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_T2_0:14"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "T2"
+        },
+        "key": {
+          "id": "System.map.map&lt;t1,t2&gt;.datatype.Map<T1,T2>.key.T1",
+          "nodeType": "datatype",
+          "name": "T1",
+          "startToken": {
+            "type": "datatype.custom.class",
+            "text": "T1",
+            "textToLower": "t1",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 13
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_T1_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "T1"
+        }
+      },
+      "description": "Creates a new instance of the Map class and initializes it by copying the entries from the specified map. T1 is the data type of the keys and T2 is the data type of the values.",
+      "parentName": "Map",
+      "variables": {},
+      "params": {
+        "maptocopy": {
+          "id": "System.map.method.map&lt;t1,t2&gt;(map<t1,t2>).varParam.maptocopy",
+          "nodeType": "variable",
           "name": "mapToCopy",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1292,29 +2457,131 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_mapToCopy_-1:0"
+            "id": "token.type.identifier_mapToCopy_0:29"
           },
-          "signature": "T2> mapToCopy",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "mapToCopy",
+            "textToLower": "maptocopy",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 38
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_mapToCopy_0:29"
+          },
+          "parentId": "System.map.method.map&lt;t1,t2&gt;(map<t1,t2>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.map.map&lt;t1,t2&gt;.t2>",
+            "id": "System.map.map&lt;t1,t2&gt;.datatype.Map<T1,T2>",
             "nodeType": "datatype",
-            "name": "T2>"
-          }
+            "name": "Map<T1,T2>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 18
+                },
+                "end": {
+                  "line": 0,
+                  "character": 21
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:18"
+            },
+            "parentId": "System.map.map&lt;t1,t2&gt;",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "System.map.map&lt;t1,t2&gt;.datatype.Map<T1,T2>.value.T2",
+              "nodeType": "datatype",
+              "name": "T2",
+              "startToken": {
+                "type": "datatype.custom.class",
+                "text": "T2",
+                "textToLower": "t2",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 25
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 27
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_T2_0:25"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "T2"
+            },
+            "key": {
+              "id": "System.map.map&lt;t1,t2&gt;.datatype.Map<T1,T2>.key.T1",
+              "nodeType": "datatype",
+              "name": "T1",
+              "startToken": {
+                "type": "datatype.custom.class",
+                "text": "T1",
+                "textToLower": "t1",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 22
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 24
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_T1_0:22"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "T1"
+            }
+          },
+          "description": "The map to initialize this map with. T1 is the data type of the keys and T2 is the data type of the values. All map keys and values are copied to this map.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "map&lt;id,sobject&gt;(list)": {
-      "id": "System.map.map&lt;id,sobject&gt;",
+    "map&lt;id,sobject&gt;(list<sobject>)": {
+      "id": "System.map.method.map&lt;id,sobject&gt;(list<sobject>)",
       "nodeType": "constructor",
       "name": "Map&lt;ID,sObject&gt;",
       "startToken": {
@@ -1336,6 +2603,9 @@
         },
         "id": "declaration.entity.name.function_Map&lt;ID,sObject&gt;_-1:0"
       },
+      "parentId": "System.map",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1343,61 +2613,218 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Map&lt;ID,sObject&gt;(List <sObject>)",
-      "simplifiedSignature": "Map&lt;ID,sObject&gt;(List)",
+      "signature": "public Map<ID,sObject> Map&lt;ID,sObject&gt;(List<sObject> recordList)",
+      "overrideSignature": "public override Map<ID,sObject> Map&lt;ID,sObject&gt;(List<sObject> recordList)",
+      "simplifiedSignature": "Map&lt;ID,sObject&gt;(List<sObject>)",
       "datatype": {
-        "id": "System.map.map&lt;id,sobject&gt;.constructor",
+        "id": "System.map.map&lt;id,sobject&gt;.datatype.Map<ID,sObject>",
         "nodeType": "datatype",
-        "name": "Map"
-      },
-      "description": "Creates a new instance of the Map class and populates it with the passed-in list of sObject records. The keys are populated with the sObject IDs and the values are the sObjects.",
-      "params": {
-        "<sObject>": {
-          "id": "System.map.map&lt;id,sobject&gt;.<sobject>",
-          "type": "var",
-          "name": "<sObject>",
+        "name": "Map<ID,sObject>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "System.map.map&lt;id,sobject&gt;",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "System.map.map&lt;id,sobject&gt;.datatype.Map<ID,sObject>.value.sObject",
+          "nodeType": "datatype",
+          "name": "sObject",
           "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "<sObject>",
-            "textToLower": "<sobject>",
+            "type": "datatype.support.class",
+            "text": "sObject",
+            "textToLower": "sobject",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 14
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 21
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<sObject>_-1:0"
+            "id": "token.type.identifier_sObject_0:14"
           },
-          "signature": "List <sObject>",
-          "datatype": {
-            "id": "System.map.map&lt;id,sobject&gt;.list",
-            "nodeType": "datatype",
-            "name": "List"
-          }
+          "order": 0,
+          "memberOrder": 0,
+          "type": "sObject"
+        },
+        "key": {
+          "id": "System.map.map&lt;id,sobject&gt;.datatype.Map<ID,sObject>.key.ID",
+          "nodeType": "datatype",
+          "name": "ID",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "ID",
+            "textToLower": "id",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 13
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ID_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "ID"
         }
-      }
+      },
+      "description": "Creates a new instance of the Map class and populates it with the passed-in list of sObject records. The keys are populated with the sObject IDs and the values are the sObjects.",
+      "parentName": "Map",
+      "variables": {},
+      "params": {
+        "recordlist": {
+          "id": "System.map.method.map&lt;id,sobject&gt;(list<sobject>).varParam.recordlist",
+          "nodeType": "variable",
+          "name": "recordList",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordList",
+            "textToLower": "recordlist",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordList_0:37"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordList",
+            "textToLower": "recordlist",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordList_0:37"
+          },
+          "parentId": "System.map.method.map&lt;id,sobject&gt;(list<sobject>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.map.map&lt;id,sobject&gt;.datatype.List<sObject>",
+            "nodeType": "datatype",
+            "name": "List<sObject>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 27
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:23"
+            },
+            "parentId": "System.map.map&lt;id,sobject&gt;",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.map.map&lt;id,sobject&gt;.datatype.List<sObject>.value.sObject",
+              "nodeType": "datatype",
+              "name": "sObject",
+              "startToken": {
+                "type": "datatype.support.class",
+                "text": "sObject",
+                "textToLower": "sobject",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 28
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 35
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_sObject_0:28"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "sObject"
+            }
+          },
+          "description": "The list of sObjects to populate the map with.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 19,
+  "queries": []
 }

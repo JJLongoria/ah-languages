@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Blob_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "size()": {
-      "id": "System.blob.size",
+      "id": "System.blob.method.size()",
       "nodeType": "method",
       "name": "size",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_size_-1:0"
       },
+      "parentId": "System.blob",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer size()",
+      "overrideSignature": "public override Integer size()",
       "simplifiedSignature": "size()",
       "datatype": {
-        "id": "System.blob.size.Integer",
+        "id": "System.blob.size.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.blob.size",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the number of characters in the Blob.",
-      "params": {}
+      "parentName": "Blob",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "topdf(string)": {
-      "id": "System.blob.topdf",
+      "id": "System.blob.method.topdf(string)",
       "nodeType": "method",
       "name": "toPdf",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_toPdf_-1:0"
       },
+      "parentId": "System.blob",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,17 +185,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -168,30 +204,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Blob toPdf(String stringToConvert)",
+      "overrideSignature": "public static override Blob toPdf(String stringToConvert)",
       "simplifiedSignature": "toPdf(String)",
       "datatype": {
-        "id": "System.blob.topdf.Blob",
+        "id": "System.blob.topdf.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.blob.topdf",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Creates a binary object out of the given string, encoding it as a PDF file.",
+      "parentName": "Blob",
+      "variables": {},
       "params": {
-        "stringToConvert": {
-          "id": "System.blob.topdf.stringtoconvert",
-          "type": "var",
+        "stringtoconvert": {
+          "id": "System.blob.method.topdf(string).varParam.stringtoconvert",
+          "nodeType": "variable",
           "name": "stringToConvert",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -200,29 +262,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 32
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_stringToConvert_-1:0"
+            "id": "token.type.identifier_stringToConvert_0:32"
           },
-          "signature": "String stringToConvert",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "stringToConvert",
+            "textToLower": "stringtoconvert",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 32
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_stringToConvert_0:32"
+          },
+          "parentId": "System.blob.method.topdf(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.blob.topdf.string",
+            "id": "System.blob.topdf.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 31
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:25"
+            },
+            "parentId": "System.blob.topdf",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "tostring()": {
-      "id": "System.blob.tostring",
+      "id": "System.blob.method.tostring()",
       "nodeType": "method",
       "name": "toString",
       "startToken": {
@@ -244,6 +354,9 @@
         },
         "id": "declaration.entity.name.function_toString_-1:0"
       },
+      "parentId": "System.blob",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -251,30 +364,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String toString()",
+      "overrideSignature": "public override String toString()",
       "simplifiedSignature": "toString()",
       "datatype": {
-        "id": "System.blob.tostring.String",
+        "id": "System.blob.tostring.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.blob.tostring",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Casts the Blob into a String.",
-      "params": {}
+      "parentName": "Blob",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "valueof(string)": {
-      "id": "System.blob.valueof",
+      "id": "System.blob.method.valueof(string)",
       "nodeType": "method",
       "name": "valueOf",
       "startToken": {
@@ -296,6 +437,9 @@
         },
         "id": "declaration.entity.name.function_valueOf_-1:0"
       },
+      "parentId": "System.blob",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -303,17 +447,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -322,30 +466,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Blob valueOf(String stringToBlob)",
+      "overrideSignature": "public static override Blob valueOf(String stringToBlob)",
       "simplifiedSignature": "valueOf(String)",
       "datatype": {
-        "id": "System.blob.valueof.Blob",
+        "id": "System.blob.valueof.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.blob.valueof",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Casts the specified String to a Blob.",
+      "parentName": "Blob",
+      "variables": {},
       "params": {
-        "stringToBlob": {
-          "id": "System.blob.valueof.stringtoblob",
-          "type": "var",
+        "stringtoblob": {
+          "id": "System.blob.method.valueof(string).varParam.stringtoblob",
+          "nodeType": "variable",
           "name": "stringToBlob",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -354,30 +524,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_stringToBlob_-1:0"
+            "id": "token.type.identifier_stringToBlob_0:34"
           },
-          "signature": "String stringToBlob",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "stringToBlob",
+            "textToLower": "stringtoblob",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 46
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_stringToBlob_0:34"
+          },
+          "parentId": "System.blob.method.valueof(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.blob.valueof.string",
+            "id": "System.blob.valueof.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 27
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:27"
+            },
+            "parentId": "System.blob.valueof",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 4,
+  "queries": []
 }

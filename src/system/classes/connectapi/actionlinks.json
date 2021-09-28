@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_ActionLinks_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,10 +69,10 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "createactionlinkgroupdefinition​(string,connectapi.actionlinkgroupdefinitioninput)": {
-      "id": "ConnectApi.actionlinks.createactionlinkgroupdefinition​",
+    "createactionlinkgroupdefinition(string,connectapi.actionlinkgroupdefinitioninput)": {
+      "id": "ConnectApi.actionlinks.method.createactionlinkgroupdefinition(string,connectapi.actionlinkgroupdefinitioninput)",
       "nodeType": "method",
-      "name": "createActionLinkGroupDefinition​",
+      "name": "createActionLinkGroupDefinition",
       "startToken": {
         "type": "declaration.entity.name.function",
         "text": "createActionLinkGroupDefinition​",
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_createActionLinkGroupDefinition​_-1:0"
       },
+      "parentId": "ConnectApi.actionlinks",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.ActionLinkGroupDefinition createActionLinkGroupDefinition​(String communityId, ConnectApi.ActionLinkGroupDefinitionInput actionLinkGroup)",
-      "simplifiedSignature": "createActionLinkGroupDefinition​(String,ConnectApi.ActionLinkGroupDefinitionInput)",
+      "signature": "public static ConnectApi.ActionLinkGroupDefinition createActionLinkGroupDefinition(String communityId, ConnectApi.ActionLinkGroupDefinitionInput actionLinkGroup)",
+      "overrideSignature": "public static override ConnectApi.ActionLinkGroupDefinition createActionLinkGroupDefinition(String communityId, ConnectApi.ActionLinkGroupDefinitionInput actionLinkGroup)",
+      "simplifiedSignature": "createActionLinkGroupDefinition(String,ConnectApi.ActionLinkGroupDefinitionInput)",
       "datatype": {
-        "id": "ConnectApi.actionlinks.createactionlinkgroupdefinition​.ConnectApi.ActionLinkGroupDefinition",
+        "id": "ConnectApi.actionlinks.createactionlinkgroupdefinition​.datatype.ConnectApi.ActionLinkGroupDefinition",
         "nodeType": "datatype",
-        "name": "ConnectApi.ActionLinkGroupDefinition"
+        "name": "ConnectApi.ActionLinkGroupDefinition",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.actionlinks.createactionlinkgroupdefinition​",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ActionLinkGroupDefinition"
       },
       "description": "Create an action link group definition. To associate an action link group with a feed element, first create an action link group definition. Then post a feed element with an associated actions capability.",
+      "parentName": "ActionLinks",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.actionlinks.createactionlinkgroupdefinition​.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.actionlinks.method.createactionlinkgroupdefinition(string,connectapi.actionlinkgroupdefinitioninput).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 90
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 101
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:90"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 90
+              },
+              "end": {
+                "line": 0,
+                "character": 101
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:90"
+          },
+          "parentId": "ConnectApi.actionlinks.method.createactionlinkgroupdefinition(string,connectapi.actionlinkgroupdefinitioninput)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.actionlinks.createactionlinkgroupdefinition​.string",
+            "id": "ConnectApi.actionlinks.createactionlinkgroupdefinition​.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 83
+                },
+                "end": {
+                  "line": 0,
+                  "character": 89
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:83"
+            },
+            "parentId": "ConnectApi.actionlinks.createactionlinkgroupdefinition​",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "actionLinkGroup": {
-          "id": "ConnectApi.actionlinks.createactionlinkgroupdefinition​.actionlinkgroup",
-          "type": "var",
+        "actionlinkgroup": {
+          "id": "ConnectApi.actionlinks.method.createactionlinkgroupdefinition(string,connectapi.actionlinkgroupdefinitioninput).varParam.actionlinkgroup",
+          "nodeType": "variable",
           "name": "actionLinkGroup",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,29 +254,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 145
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 160
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_actionLinkGroup_-1:0"
+            "id": "token.type.identifier_actionLinkGroup_0:145"
           },
-          "signature": "ConnectApi.ActionLinkGroupDefinitionInput actionLinkGroup",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "actionLinkGroup",
+            "textToLower": "actionlinkgroup",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 145
+              },
+              "end": {
+                "line": 0,
+                "character": 160
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_actionLinkGroup_0:145"
+          },
+          "parentId": "ConnectApi.actionlinks.method.createactionlinkgroupdefinition(string,connectapi.actionlinkgroupdefinitioninput)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.actionlinks.createactionlinkgroupdefinition​.connectapi.actionlinkgroupdefinitioninput",
+            "id": "ConnectApi.actionlinks.createactionlinkgroupdefinition​.datatype.ConnectApi.ActionLinkGroupDefinitionInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.ActionLinkGroupDefinitionInput"
-          }
+            "name": "ConnectApi.ActionLinkGroupDefinitionInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 103
+                },
+                "end": {
+                  "line": 0,
+                  "character": 113
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:103"
+            },
+            "parentId": "ConnectApi.actionlinks.createactionlinkgroupdefinition​",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ActionLinkGroupDefinitionInput"
+          },
+          "description": "Use either the ID for a community, internal, or null. A ConnectApi.ActionLinkGroupDefinitionInput object that defines the action link group.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "deleteactionlinkgroupdefinition(string,string)": {
-      "id": "ConnectApi.actionlinks.deleteactionlinkgroupdefinition",
+      "id": "ConnectApi.actionlinks.method.deleteactionlinkgroupdefinition(string,string)",
       "nodeType": "method",
       "name": "deleteActionLinkGroupDefinition",
       "startToken": {
@@ -222,6 +346,9 @@
         },
         "id": "declaration.entity.name.function_deleteActionLinkGroupDefinition_-1:0"
       },
+      "parentId": "ConnectApi.actionlinks",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -229,17 +356,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -248,30 +375,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void deleteActionLinkGroupDefinition(String communityId, String actionLinkGroupId)",
+      "overrideSignature": "public static override void deleteActionLinkGroupDefinition(String communityId, String actionLinkGroupId)",
       "simplifiedSignature": "deleteActionLinkGroupDefinition(String,String)",
       "datatype": {
-        "id": "ConnectApi.actionlinks.deleteactionlinkgroupdefinition.void",
+        "id": "ConnectApi.actionlinks.deleteactionlinkgroupdefinition.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "ConnectApi.actionlinks.deleteactionlinkgroupdefinition",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Delete an action link group definition. Deleting an action link group definition removes all references to it from feed elements.",
+      "parentName": "ActionLinks",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.actionlinks.deleteactionlinkgroupdefinition.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.actionlinks.method.deleteactionlinkgroupdefinition(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -280,28 +433,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:58"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:58"
+          },
+          "parentId": "ConnectApi.actionlinks.method.deleteactionlinkgroupdefinition(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.actionlinks.deleteactionlinkgroupdefinition.string",
+            "id": "ConnectApi.actionlinks.deleteactionlinkgroupdefinition.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 51
+                },
+                "end": {
+                  "line": 0,
+                  "character": 57
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:51"
+            },
+            "parentId": "ConnectApi.actionlinks.deleteactionlinkgroupdefinition",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "actionLinkGroupId": {
-          "id": "ConnectApi.actionlinks.deleteactionlinkgroupdefinition.actionlinkgroupid",
-          "type": "var",
+        "actionlinkgroupid": {
+          "id": "ConnectApi.actionlinks.method.deleteactionlinkgroupdefinition(string,string).varParam.actionlinkgroupid",
+          "nodeType": "variable",
           "name": "actionLinkGroupId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,29 +508,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_actionLinkGroupId_-1:0"
+            "id": "token.type.identifier_actionLinkGroupId_0:78"
           },
-          "signature": "String actionLinkGroupId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "actionLinkGroupId",
+            "textToLower": "actionlinkgroupid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 78
+              },
+              "end": {
+                "line": 0,
+                "character": 95
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_actionLinkGroupId_0:78"
+          },
+          "parentId": "ConnectApi.actionlinks.method.deleteactionlinkgroupdefinition(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.actionlinks.deleteactionlinkgroupdefinition.string",
+            "id": "ConnectApi.actionlinks.deleteactionlinkgroupdefinition.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 71
+                },
+                "end": {
+                  "line": 0,
+                  "character": 77
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:71"
+            },
+            "parentId": "ConnectApi.actionlinks.deleteactionlinkgroupdefinition",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID of the action link group.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getactionlink(string,string)": {
-      "id": "ConnectApi.actionlinks.getactionlink",
+      "id": "ConnectApi.actionlinks.method.getactionlink(string,string)",
       "nodeType": "method",
       "name": "getActionLink",
       "startToken": {
@@ -354,6 +600,9 @@
         },
         "id": "declaration.entity.name.function_getActionLink_-1:0"
       },
+      "parentId": "ConnectApi.actionlinks",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -361,17 +610,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -380,30 +629,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.PlatformAction getActionLink(String communityId, String actionLinkId)",
+      "overrideSignature": "public static override ConnectApi.PlatformAction getActionLink(String communityId, String actionLinkId)",
       "simplifiedSignature": "getActionLink(String,String)",
       "datatype": {
-        "id": "ConnectApi.actionlinks.getactionlink.ConnectApi.PlatformAction",
+        "id": "ConnectApi.actionlinks.getactionlink.datatype.ConnectApi.PlatformAction",
         "nodeType": "datatype",
-        "name": "ConnectApi.PlatformAction"
+        "name": "ConnectApi.PlatformAction",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.actionlinks.getactionlink",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.PlatformAction"
       },
       "description": "Get information about an action link, including state for the context user.",
+      "parentName": "ActionLinks",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.actionlinks.getactionlink.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.actionlinks.method.getactionlink(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -412,28 +687,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:61"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:61"
+          },
+          "parentId": "ConnectApi.actionlinks.method.getactionlink(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.actionlinks.getactionlink.string",
+            "id": "ConnectApi.actionlinks.getactionlink.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:54"
+            },
+            "parentId": "ConnectApi.actionlinks.getactionlink",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "actionLinkId": {
-          "id": "ConnectApi.actionlinks.getactionlink.actionlinkid",
-          "type": "var",
+        "actionlinkid": {
+          "id": "ConnectApi.actionlinks.method.getactionlink(string,string).varParam.actionlinkid",
+          "nodeType": "variable",
           "name": "actionLinkId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -442,29 +762,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 93
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_actionLinkId_-1:0"
+            "id": "token.type.identifier_actionLinkId_0:81"
           },
-          "signature": "String actionLinkId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "actionLinkId",
+            "textToLower": "actionlinkid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 93
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_actionLinkId_0:81"
+          },
+          "parentId": "ConnectApi.actionlinks.method.getactionlink(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.actionlinks.getactionlink.string",
+            "id": "ConnectApi.actionlinks.getactionlink.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 80
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:74"
+            },
+            "parentId": "ConnectApi.actionlinks.getactionlink",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID of the action link.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getactionlinkdiagnosticinfo(string,string)": {
-      "id": "ConnectApi.actionlinks.getactionlinkdiagnosticinfo",
+      "id": "ConnectApi.actionlinks.method.getactionlinkdiagnosticinfo(string,string)",
       "nodeType": "method",
       "name": "getActionLinkDiagnosticInfo",
       "startToken": {
@@ -486,6 +854,9 @@
         },
         "id": "declaration.entity.name.function_getActionLinkDiagnosticInfo_-1:0"
       },
+      "parentId": "ConnectApi.actionlinks",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -493,17 +864,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -512,30 +883,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ActionLinkDiagnosticInfo getActionLinkDiagnosticInfo(String communityId, String actionLinkId)",
+      "overrideSignature": "public static override ConnectApi.ActionLinkDiagnosticInfo getActionLinkDiagnosticInfo(String communityId, String actionLinkId)",
       "simplifiedSignature": "getActionLinkDiagnosticInfo(String,String)",
       "datatype": {
-        "id": "ConnectApi.actionlinks.getactionlinkdiagnosticinfo.ConnectApi.ActionLinkDiagnosticInfo",
+        "id": "ConnectApi.actionlinks.getactionlinkdiagnosticinfo.datatype.ConnectApi.ActionLinkDiagnosticInfo",
         "nodeType": "datatype",
-        "name": "ConnectApi.ActionLinkDiagnosticInfo"
+        "name": "ConnectApi.ActionLinkDiagnosticInfo",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.actionlinks.getactionlinkdiagnosticinfo",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ActionLinkDiagnosticInfo"
       },
       "description": "Get diagnostic information returned when an action link executes. Diagnostic information is given only for users who can access the action link.",
+      "parentName": "ActionLinks",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.actionlinks.getactionlinkdiagnosticinfo.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.actionlinks.method.getactionlinkdiagnosticinfo(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -544,28 +941,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 85
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 96
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:85"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 85
+              },
+              "end": {
+                "line": 0,
+                "character": 96
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:85"
+          },
+          "parentId": "ConnectApi.actionlinks.method.getactionlinkdiagnosticinfo(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.actionlinks.getactionlinkdiagnosticinfo.string",
+            "id": "ConnectApi.actionlinks.getactionlinkdiagnosticinfo.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 78
+                },
+                "end": {
+                  "line": 0,
+                  "character": 84
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:78"
+            },
+            "parentId": "ConnectApi.actionlinks.getactionlinkdiagnosticinfo",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "actionLinkId": {
-          "id": "ConnectApi.actionlinks.getactionlinkdiagnosticinfo.actionlinkid",
-          "type": "var",
+        "actionlinkid": {
+          "id": "ConnectApi.actionlinks.method.getactionlinkdiagnosticinfo(string,string).varParam.actionlinkid",
+          "nodeType": "variable",
           "name": "actionLinkId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -574,29 +1016,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 105
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 117
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_actionLinkId_-1:0"
+            "id": "token.type.identifier_actionLinkId_0:105"
           },
-          "signature": "String actionLinkId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "actionLinkId",
+            "textToLower": "actionlinkid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 105
+              },
+              "end": {
+                "line": 0,
+                "character": 117
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_actionLinkId_0:105"
+          },
+          "parentId": "ConnectApi.actionlinks.method.getactionlinkdiagnosticinfo(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.actionlinks.getactionlinkdiagnosticinfo.string",
+            "id": "ConnectApi.actionlinks.getactionlinkdiagnosticinfo.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 98
+                },
+                "end": {
+                  "line": 0,
+                  "character": 104
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:98"
+            },
+            "parentId": "ConnectApi.actionlinks.getactionlinkdiagnosticinfo",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID of the action link.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getactionlinkgroup(string,string)": {
-      "id": "ConnectApi.actionlinks.getactionlinkgroup",
+      "id": "ConnectApi.actionlinks.method.getactionlinkgroup(string,string)",
       "nodeType": "method",
       "name": "getActionLinkGroup",
       "startToken": {
@@ -618,6 +1108,9 @@
         },
         "id": "declaration.entity.name.function_getActionLinkGroup_-1:0"
       },
+      "parentId": "ConnectApi.actionlinks",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -625,17 +1118,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -644,30 +1137,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.PlatformActionGroup getActionLinkGroup(String communityId, String actionLinkGroupId)",
+      "overrideSignature": "public static override ConnectApi.PlatformActionGroup getActionLinkGroup(String communityId, String actionLinkGroupId)",
       "simplifiedSignature": "getActionLinkGroup(String,String)",
       "datatype": {
-        "id": "ConnectApi.actionlinks.getactionlinkgroup.ConnectApi.PlatformActionGroup",
+        "id": "ConnectApi.actionlinks.getactionlinkgroup.datatype.ConnectApi.PlatformActionGroup",
         "nodeType": "datatype",
-        "name": "ConnectApi.PlatformActionGroup"
+        "name": "ConnectApi.PlatformActionGroup",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.actionlinks.getactionlinkgroup",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.PlatformActionGroup"
       },
       "description": "Get information about an action link group including state for the context user.",
+      "parentName": "ActionLinks",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.actionlinks.getactionlinkgroup.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.actionlinks.method.getactionlinkgroup(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -676,28 +1195,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:71"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 71
+              },
+              "end": {
+                "line": 0,
+                "character": 82
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:71"
+          },
+          "parentId": "ConnectApi.actionlinks.method.getactionlinkgroup(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.actionlinks.getactionlinkgroup.string",
+            "id": "ConnectApi.actionlinks.getactionlinkgroup.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 64
+                },
+                "end": {
+                  "line": 0,
+                  "character": 70
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:64"
+            },
+            "parentId": "ConnectApi.actionlinks.getactionlinkgroup",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "actionLinkGroupId": {
-          "id": "ConnectApi.actionlinks.getactionlinkgroup.actionlinkgroupid",
-          "type": "var",
+        "actionlinkgroupid": {
+          "id": "ConnectApi.actionlinks.method.getactionlinkgroup(string,string).varParam.actionlinkgroupid",
+          "nodeType": "variable",
           "name": "actionLinkGroupId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -706,29 +1270,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 91
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 108
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_actionLinkGroupId_-1:0"
+            "id": "token.type.identifier_actionLinkGroupId_0:91"
           },
-          "signature": "String actionLinkGroupId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "actionLinkGroupId",
+            "textToLower": "actionlinkgroupid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 91
+              },
+              "end": {
+                "line": 0,
+                "character": 108
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_actionLinkGroupId_0:91"
+          },
+          "parentId": "ConnectApi.actionlinks.method.getactionlinkgroup(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.actionlinks.getactionlinkgroup.string",
+            "id": "ConnectApi.actionlinks.getactionlinkgroup.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 84
+                },
+                "end": {
+                  "line": 0,
+                  "character": 90
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:84"
+            },
+            "parentId": "ConnectApi.actionlinks.getactionlinkgroup",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID of the action link group.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getactionlinkgroupdefinition(string,string)": {
-      "id": "ConnectApi.actionlinks.getactionlinkgroupdefinition",
+      "id": "ConnectApi.actionlinks.method.getactionlinkgroupdefinition(string,string)",
       "nodeType": "method",
       "name": "getActionLinkGroupDefinition",
       "startToken": {
@@ -750,6 +1362,9 @@
         },
         "id": "declaration.entity.name.function_getActionLinkGroupDefinition_-1:0"
       },
+      "parentId": "ConnectApi.actionlinks",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -757,17 +1372,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -776,30 +1391,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ActionLinkGroupDefinition getActionLinkGroupDefinition(String communityId, String actionLinkGroupId)",
+      "overrideSignature": "public static override ConnectApi.ActionLinkGroupDefinition getActionLinkGroupDefinition(String communityId, String actionLinkGroupId)",
       "simplifiedSignature": "getActionLinkGroupDefinition(String,String)",
       "datatype": {
-        "id": "ConnectApi.actionlinks.getactionlinkgroupdefinition.ConnectApi.ActionLinkGroupDefinition",
+        "id": "ConnectApi.actionlinks.getactionlinkgroupdefinition.datatype.ConnectApi.ActionLinkGroupDefinition",
         "nodeType": "datatype",
-        "name": "ConnectApi.ActionLinkGroupDefinition"
+        "name": "ConnectApi.ActionLinkGroupDefinition",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.actionlinks.getactionlinkgroupdefinition",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ActionLinkGroupDefinition"
       },
       "description": "Get information about an action link group definition.",
+      "parentName": "ActionLinks",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.actionlinks.getactionlinkgroupdefinition.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.actionlinks.method.getactionlinkgroupdefinition(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -808,28 +1449,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 87
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:87"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 87
+              },
+              "end": {
+                "line": 0,
+                "character": 98
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:87"
+          },
+          "parentId": "ConnectApi.actionlinks.method.getactionlinkgroupdefinition(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.actionlinks.getactionlinkgroupdefinition.string",
+            "id": "ConnectApi.actionlinks.getactionlinkgroupdefinition.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 80
+                },
+                "end": {
+                  "line": 0,
+                  "character": 86
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:80"
+            },
+            "parentId": "ConnectApi.actionlinks.getactionlinkgroupdefinition",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "actionLinkGroupId": {
-          "id": "ConnectApi.actionlinks.getactionlinkgroupdefinition.actionlinkgroupid",
-          "type": "var",
+        "actionlinkgroupid": {
+          "id": "ConnectApi.actionlinks.method.getactionlinkgroupdefinition(string,string).varParam.actionlinkgroupid",
+          "nodeType": "variable",
           "name": "actionLinkGroupId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -838,30 +1524,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 107
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 124
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_actionLinkGroupId_-1:0"
+            "id": "token.type.identifier_actionLinkGroupId_0:107"
           },
-          "signature": "String actionLinkGroupId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "actionLinkGroupId",
+            "textToLower": "actionlinkgroupid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 107
+              },
+              "end": {
+                "line": 0,
+                "character": 124
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_actionLinkGroupId_0:107"
+          },
+          "parentId": "ConnectApi.actionlinks.method.getactionlinkgroupdefinition(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.actionlinks.getactionlinkgroupdefinition.string",
+            "id": "ConnectApi.actionlinks.getactionlinkgroupdefinition.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 100
+                },
+                "end": {
+                  "line": 0,
+                  "character": 106
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:100"
+            },
+            "parentId": "ConnectApi.actionlinks.getactionlinkgroupdefinition",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID of the action link group.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 6,
+  "queries": []
 }

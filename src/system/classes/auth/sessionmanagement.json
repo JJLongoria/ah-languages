@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_SessionManagement_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "finishlogindiscovery(auth.logindiscoverymethod,id)": {
-      "id": "Auth.sessionmanagement.finishlogindiscovery",
+      "id": "Auth.sessionmanagement.method.finishlogindiscovery(auth.logindiscoverymethod,id)",
       "nodeType": "method",
       "name": "finishLoginDiscovery",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_finishLoginDiscovery_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static System.PageReference finishLoginDiscovery(Auth.LoginDiscoveryMethod method, Id userId)",
+      "overrideSignature": "public static override System.PageReference finishLoginDiscovery(Auth.LoginDiscoveryMethod method, Id userId)",
       "simplifiedSignature": "finishLoginDiscovery(Auth.LoginDiscoveryMethod,Id)",
       "datatype": {
-        "id": "Auth.sessionmanagement.finishlogindiscovery.System.PageReference",
+        "id": "Auth.sessionmanagement.finishlogindiscovery.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.finishlogindiscovery",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Finishes the My Domain Login Discovery login process.",
+      "parentName": "SessionManagement",
+      "variables": {},
       "params": {
         "method": {
-          "id": "Auth.sessionmanagement.finishlogindiscovery.method",
-          "type": "var",
+          "id": "Auth.sessionmanagement.method.finishlogindiscovery(auth.logindiscoverymethod,id).varParam.method",
+          "nodeType": "variable",
           "name": "method",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 88
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_method_-1:0"
+            "id": "token.type.identifier_method_0:82"
           },
-          "signature": "Auth.LoginDiscoveryMethod method",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "method",
+            "textToLower": "method",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 82
+              },
+              "end": {
+                "line": 0,
+                "character": 88
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_method_0:82"
+          },
+          "parentId": "Auth.sessionmanagement.method.finishlogindiscovery(auth.logindiscoverymethod,id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.sessionmanagement.finishlogindiscovery.auth.logindiscoverymethod",
+            "id": "Auth.sessionmanagement.finishlogindiscovery.datatype.Auth.LoginDiscoveryMethod",
             "nodeType": "datatype",
-            "name": "Auth.LoginDiscoveryMethod"
-          }
+            "name": "Auth.LoginDiscoveryMethod",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 56
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:56"
+            },
+            "parentId": "Auth.sessionmanagement.finishlogindiscovery",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.LoginDiscoveryMethod"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "Auth.sessionmanagement.finishlogindiscovery.userid",
-          "type": "var",
+        "userid": {
+          "id": "Auth.sessionmanagement.method.finishlogindiscovery(auth.logindiscoverymethod,id).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,29 +254,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 93
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 99
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:93"
           },
-          "signature": "Id userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 93
+              },
+              "end": {
+                "line": 0,
+                "character": 99
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:93"
+          },
+          "parentId": "Auth.sessionmanagement.method.finishlogindiscovery(auth.logindiscoverymethod,id)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.sessionmanagement.finishlogindiscovery.id",
+            "id": "Auth.sessionmanagement.finishlogindiscovery.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 90
+                },
+                "end": {
+                  "line": 0,
+                  "character": 92
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:90"
+            },
+            "parentId": "Auth.sessionmanagement.finishlogindiscovery",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "Verification method used with My Domain Login Discovery. ID used to log in the user. The user must be active.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "finishloginflow()": {
-      "id": "Auth.sessionmanagement.finishloginflow",
+      "id": "Auth.sessionmanagement.method.finishloginflow()",
       "nodeType": "method",
       "name": "finishLoginFlow",
       "startToken": {
@@ -222,6 +346,9 @@
         },
         "id": "declaration.entity.name.function_finishLoginFlow_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -229,17 +356,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -248,30 +375,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static System.PageReference finishLoginFlow()",
+      "overrideSignature": "public static override System.PageReference finishLoginFlow()",
       "simplifiedSignature": "finishLoginFlow()",
       "datatype": {
-        "id": "Auth.sessionmanagement.finishloginflow.System.PageReference",
+        "id": "Auth.sessionmanagement.finishloginflow.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.finishloginflow",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Finish the Visualforce Page login flow process, and redirect the user to the default home page.",
-      "params": {}
+      "parentName": "SessionManagement",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "finishloginflow(string)": {
-      "id": "Auth.sessionmanagement.finishloginflow",
+      "id": "Auth.sessionmanagement.method.finishloginflow(string)",
       "nodeType": "method",
       "name": "finishLoginFlow",
       "startToken": {
@@ -293,6 +448,9 @@
         },
         "id": "declaration.entity.name.function_finishLoginFlow_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -300,17 +458,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -319,30 +477,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static System.PageReference finishLoginFlow(String startUrl)",
+      "overrideSignature": "public static override System.PageReference finishLoginFlow(String startUrl)",
       "simplifiedSignature": "finishLoginFlow(String)",
       "datatype": {
-        "id": "Auth.sessionmanagement.finishloginflow.System.PageReference",
+        "id": "Auth.sessionmanagement.finishloginflow.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.finishloginflow",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Finish the Visualforce Page login flow process, and redirect the user to the specified start URL.",
+      "parentName": "SessionManagement",
+      "variables": {},
       "params": {
-        "startUrl": {
-          "id": "Auth.sessionmanagement.finishloginflow.starturl",
-          "type": "var",
+        "starturl": {
+          "id": "Auth.sessionmanagement.method.finishloginflow(string).varParam.starturl",
+          "nodeType": "variable",
           "name": "startUrl",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -351,29 +535,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_startUrl_-1:0"
+            "id": "token.type.identifier_startUrl_0:58"
           },
-          "signature": "String startUrl",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "startUrl",
+            "textToLower": "starturl",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 66
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_startUrl_0:58"
+          },
+          "parentId": "Auth.sessionmanagement.method.finishloginflow(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.sessionmanagement.finishloginflow.string",
+            "id": "Auth.sessionmanagement.finishloginflow.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 51
+                },
+                "end": {
+                  "line": 0,
+                  "character": 57
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:51"
+            },
+            "parentId": "Auth.sessionmanagement.finishloginflow",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Path to the page that users see when they access the community.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "generateverificationurl(auth.verificationpolicy,string,string)": {
-      "id": "Auth.sessionmanagement.generateverificationurl",
+      "id": "Auth.sessionmanagement.method.generateverificationurl(auth.verificationpolicy,string,string)",
       "nodeType": "method",
       "name": "generateVerificationUrl",
       "startToken": {
@@ -395,6 +627,9 @@
         },
         "id": "declaration.entity.name.function_generateVerificationUrl_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -402,17 +637,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -421,30 +656,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String generateVerificationUrl(Auth.VerificationPolicy policy, String description, String destinationUrl)",
+      "overrideSignature": "public static override String generateVerificationUrl(Auth.VerificationPolicy policy, String description, String destinationUrl)",
       "simplifiedSignature": "generateVerificationUrl(Auth.VerificationPolicy,String,String)",
       "datatype": {
-        "id": "Auth.sessionmanagement.generateverificationurl.String",
+        "id": "Auth.sessionmanagement.generateverificationurl.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.generateverificationurl",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Initiates a user identity verification flow with the verification method that the user registered with, and returns a URL to the identity verification screen. For example, if you have a custom Visualforce page that displays sensitive account details, you can prompt the user to verify identity before viewing it.",
+      "parentName": "SessionManagement",
+      "variables": {},
       "params": {
         "policy": {
-          "id": "Auth.sessionmanagement.generateverificationurl.policy",
-          "type": "var",
+          "id": "Auth.sessionmanagement.method.generateverificationurl(auth.verificationpolicy,string,string).varParam.policy",
+          "nodeType": "variable",
           "name": "policy",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -453,28 +714,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 75
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_policy_-1:0"
+            "id": "token.type.identifier_policy_0:69"
           },
-          "signature": "Auth.VerificationPolicy policy",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "policy",
+            "textToLower": "policy",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 69
+              },
+              "end": {
+                "line": 0,
+                "character": 75
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_policy_0:69"
+          },
+          "parentId": "Auth.sessionmanagement.method.generateverificationurl(auth.verificationpolicy,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.sessionmanagement.generateverificationurl.auth.verificationpolicy",
+            "id": "Auth.sessionmanagement.generateverificationurl.datatype.Auth.VerificationPolicy",
             "nodeType": "datatype",
-            "name": "Auth.VerificationPolicy"
-          }
+            "name": "Auth.VerificationPolicy",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 49
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:45"
+            },
+            "parentId": "Auth.sessionmanagement.generateverificationurl",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.VerificationPolicy"
+          },
+          "scope": null
         },
         "description": {
-          "id": "Auth.sessionmanagement.generateverificationurl.description",
-          "type": "var",
+          "id": "Auth.sessionmanagement.method.generateverificationurl(auth.verificationpolicy,string,string).varParam.description",
+          "nodeType": "variable",
           "name": "description",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -483,28 +789,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_description_-1:0"
+            "id": "token.type.identifier_description_0:84"
           },
-          "signature": "String description",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "description",
+            "textToLower": "description",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 84
+              },
+              "end": {
+                "line": 0,
+                "character": 95
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_description_0:84"
+          },
+          "parentId": "Auth.sessionmanagement.method.generateverificationurl(auth.verificationpolicy,string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.sessionmanagement.generateverificationurl.string",
+            "id": "Auth.sessionmanagement.generateverificationurl.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 77
+                },
+                "end": {
+                  "line": 0,
+                  "character": 83
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:77"
+            },
+            "parentId": "Auth.sessionmanagement.generateverificationurl",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "destinationUrl": {
-          "id": "Auth.sessionmanagement.generateverificationurl.destinationurl",
-          "type": "var",
+        "destinationurl": {
+          "id": "Auth.sessionmanagement.method.generateverificationurl(auth.verificationpolicy,string,string).varParam.destinationurl",
+          "nodeType": "variable",
           "name": "destinationUrl",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -513,29 +864,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 104
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 118
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_destinationUrl_-1:0"
+            "id": "token.type.identifier_destinationUrl_0:104"
           },
-          "signature": "String destinationUrl",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "destinationUrl",
+            "textToLower": "destinationurl",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 104
+              },
+              "end": {
+                "line": 0,
+                "character": 118
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_destinationUrl_0:104"
+          },
+          "parentId": "Auth.sessionmanagement.method.generateverificationurl(auth.verificationpolicy,string,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Auth.sessionmanagement.generateverificationurl.string",
+            "id": "Auth.sessionmanagement.generateverificationurl.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 97
+                },
+                "end": {
+                  "line": 0,
+                  "character": 103
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:97"
+            },
+            "parentId": "Auth.sessionmanagement.generateverificationurl",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The session security policy required to initiate identity verification for the user’s session. For example, if the policy is set to High Assurance level of session security, and the user’s current session has the standard level of session security, the user’s session is raised to high assurance after successful verification of identity. In the Setup user interface, this value is shown in the Triggered By column of Identity Verification History. The custom description that describes the activity requiring identity verification; for example, “Complete purchase and check out”. This text appears to users when they verify their identity in Salesforce and, if they use Salesforce Authenticator version 2 or later, in the Salesforce Authenticator mobile app. In addition, in the Setup user interface, this text is shown in the Activity Message column of Identity Verification History. The relative or absolute Salesforce URL that you want to redirect the user to after identity verification—for example, /apex/mypage. The user is redirected to destinationUrl when the identity verification flow is complete, regardless of success. For example, if a user chooses to not respond to the identity challenge and cancels it, the user is still redirected to destinationUrl. As a best practice, ensure that your code for this page manually checks that the security policy was satisfied (and the user didn’t just manually type the URL in the browser). For example, if the policy is High Assurance, the target page checks that the user's session is high assurance before allowing access.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getcurrentsession()": {
-      "id": "Auth.sessionmanagement.getcurrentsession",
+      "id": "Auth.sessionmanagement.method.getcurrentsession()",
       "nodeType": "method",
       "name": "getCurrentSession",
       "startToken": {
@@ -557,6 +956,9 @@
         },
         "id": "declaration.entity.name.function_getCurrentSession_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -564,17 +966,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -583,30 +985,112 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static Map<String,  String> getCurrentSession()",
+      "signature": "public static Map<String,String> getCurrentSession()",
+      "overrideSignature": "public static override Map<String,String> getCurrentSession()",
       "simplifiedSignature": "getCurrentSession()",
       "datatype": {
-        "id": "Auth.sessionmanagement.getcurrentsession.Map<String,  String>",
+        "id": "Auth.sessionmanagement.getcurrentsession.datatype.Map<String,String>",
         "nodeType": "datatype",
-        "name": "Map<String,  String>"
+        "name": "Map<String,String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.getcurrentsession",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "Auth.sessionmanagement.getcurrentsession.datatype.Map<String,String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 26
+              },
+              "end": {
+                "line": 0,
+                "character": 32
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:26"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        },
+        "key": {
+          "id": "Auth.sessionmanagement.getcurrentsession.datatype.Map<String,String>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 24
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Returns a map of attributes for the current session.",
-      "params": {}
+      "parentName": "SessionManagement",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getlightninglogineligibility(id)": {
-      "id": "Auth.sessionmanagement.getlightninglogineligibility",
+      "id": "Auth.sessionmanagement.method.getlightninglogineligibility(id)",
       "nodeType": "method",
       "name": "getLightningLoginEligibility",
       "startToken": {
@@ -628,6 +1112,9 @@
         },
         "id": "declaration.entity.name.function_getLightningLoginEligibility_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -635,17 +1122,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -654,30 +1141,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Auth.LightningLoginEligibility getLightningLoginEligibility(Id userId)",
+      "overrideSignature": "public static override Auth.LightningLoginEligibility getLightningLoginEligibility(Id userId)",
       "simplifiedSignature": "getLightningLoginEligibility(Id)",
       "datatype": {
-        "id": "Auth.sessionmanagement.getlightninglogineligibility.Auth.LightningLoginEligibility",
+        "id": "Auth.sessionmanagement.getlightninglogineligibility.datatype.Auth.LightningLoginEligibility",
         "nodeType": "datatype",
-        "name": "Auth.LightningLoginEligibility"
+        "name": "Auth.LightningLoginEligibility",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Auth",
+          "textToLower": "auth",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Auth_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.getlightninglogineligibility",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Auth.LightningLoginEligibility"
       },
       "description": "Returns the eligibility status for a user who’s logging in with Lightning Login when you set up your org with My Domain and use the Login Discovery page type. Use this method to redirect the user to a custom login flow. For example, use after a login attempt to redirect the user to password flow if the user is ineligible for Lightning Login.",
+      "parentName": "SessionManagement",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "Auth.sessionmanagement.getlightninglogineligibility.userid",
-          "type": "var",
+        "userid": {
+          "id": "Auth.sessionmanagement.method.getlightninglogineligibility(id).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -686,29 +1199,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:77"
           },
-          "signature": "Id userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 77
+              },
+              "end": {
+                "line": 0,
+                "character": 83
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:77"
+          },
+          "parentId": "Auth.sessionmanagement.method.getlightninglogineligibility(id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.sessionmanagement.getlightninglogineligibility.id",
+            "id": "Auth.sessionmanagement.getlightninglogineligibility.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 76
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:74"
+            },
+            "parentId": "Auth.sessionmanagement.getlightninglogineligibility",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "ID of the user who is logging in.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getqrcode()": {
-      "id": "Auth.sessionmanagement.getqrcode",
+      "id": "Auth.sessionmanagement.method.getqrcode()",
       "nodeType": "method",
       "name": "getQrCode",
       "startToken": {
@@ -730,6 +1291,9 @@
         },
         "id": "declaration.entity.name.function_getQrCode_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -737,17 +1301,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -756,30 +1320,112 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static Map<String,  String> getQrCode()",
+      "signature": "public static Map<String,String> getQrCode()",
+      "overrideSignature": "public static override Map<String,String> getQrCode()",
       "simplifiedSignature": "getQrCode()",
       "datatype": {
-        "id": "Auth.sessionmanagement.getqrcode.Map<String,  String>",
+        "id": "Auth.sessionmanagement.getqrcode.datatype.Map<String,String>",
         "nodeType": "datatype",
-        "name": "Map<String,  String>"
+        "name": "Map<String,String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.getqrcode",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "Auth.sessionmanagement.getqrcode.datatype.Map<String,String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 26
+              },
+              "end": {
+                "line": 0,
+                "character": 32
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:26"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        },
+        "key": {
+          "id": "Auth.sessionmanagement.getqrcode.datatype.Map<String,String>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 24
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Returns a map containing a URL to a quick response (QR) code and a time-based one-time password (TOTP) shared secret to configure two-factor authentication apps or devices.",
-      "params": {}
+      "parentName": "SessionManagement",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getrequiredsessionlevelforprofile(string)": {
-      "id": "Auth.sessionmanagement.getrequiredsessionlevelforprofile",
+      "id": "Auth.sessionmanagement.method.getrequiredsessionlevelforprofile(string)",
       "nodeType": "method",
       "name": "getRequiredSessionLevelForProfile",
       "startToken": {
@@ -801,6 +1447,9 @@
         },
         "id": "declaration.entity.name.function_getRequiredSessionLevelForProfile_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -808,17 +1457,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -827,30 +1476,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Auth.SessionLevel getRequiredSessionLevelForProfile(String profileId)",
+      "overrideSignature": "public static override Auth.SessionLevel getRequiredSessionLevelForProfile(String profileId)",
       "simplifiedSignature": "getRequiredSessionLevelForProfile(String)",
       "datatype": {
-        "id": "Auth.sessionmanagement.getrequiredsessionlevelforprofile.Auth.SessionLevel",
+        "id": "Auth.sessionmanagement.getrequiredsessionlevelforprofile.datatype.Auth.SessionLevel",
         "nodeType": "datatype",
-        "name": "Auth.SessionLevel"
+        "name": "Auth.SessionLevel",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Auth",
+          "textToLower": "auth",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Auth_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.getrequiredsessionlevelforprofile",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Auth.SessionLevel"
       },
       "description": "Indicates the required login security session level for the given profile.",
+      "parentName": "SessionManagement",
+      "variables": {},
       "params": {
-        "profileId": {
-          "id": "Auth.sessionmanagement.getrequiredsessionlevelforprofile.profileid",
-          "type": "var",
+        "profileid": {
+          "id": "Auth.sessionmanagement.method.getrequiredsessionlevelforprofile(string).varParam.profileid",
+          "nodeType": "variable",
           "name": "profileId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -859,29 +1534,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_profileId_-1:0"
+            "id": "token.type.identifier_profileId_0:73"
           },
-          "signature": "String profileId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "profileId",
+            "textToLower": "profileid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 82
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_profileId_0:73"
+          },
+          "parentId": "Auth.sessionmanagement.method.getrequiredsessionlevelforprofile(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.sessionmanagement.getrequiredsessionlevelforprofile.string",
+            "id": "Auth.sessionmanagement.getrequiredsessionlevelforprofile.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 66
+                },
+                "end": {
+                  "line": 0,
+                  "character": 72
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:66"
+            },
+            "parentId": "Auth.sessionmanagement.getrequiredsessionlevelforprofile",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The 15-character profile ID.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "ignoreforconcurrentsessionlimit(object)": {
-      "id": "Auth.sessionmanagement.ignoreforconcurrentsessionlimit",
+      "id": "Auth.sessionmanagement.method.ignoreforconcurrentsessionlimit(object)",
       "nodeType": "method",
       "name": "ignoreForConcurrentSessionLimit",
       "startToken": {
@@ -903,6 +1626,9 @@
         },
         "id": "declaration.entity.name.function_ignoreForConcurrentSessionLimit_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -910,17 +1636,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -929,30 +1655,110 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static Map<String,  String> ignoreForConcurrentSessionLimit(Object sessions)",
+      "signature": "public static Map<String,String> ignoreForConcurrentSessionLimit(Object sessions)",
+      "overrideSignature": "public static override Map<String,String> ignoreForConcurrentSessionLimit(Object sessions)",
       "simplifiedSignature": "ignoreForConcurrentSessionLimit(Object)",
       "datatype": {
-        "id": "Auth.sessionmanagement.ignoreforconcurrentsessionlimit.Map<String,  String>",
+        "id": "Auth.sessionmanagement.ignoreforconcurrentsessionlimit.datatype.Map<String,String>",
         "nodeType": "datatype",
-        "name": "Map<String,  String>"
+        "name": "Map<String,String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.ignoreforconcurrentsessionlimit",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "Auth.sessionmanagement.ignoreforconcurrentsessionlimit.datatype.Map<String,String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 25
+              },
+              "end": {
+                "line": 0,
+                "character": 31
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:25"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        },
+        "key": {
+          "id": "Auth.sessionmanagement.ignoreforconcurrentsessionlimit.datatype.Map<String,String>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 24
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "This method is reserved for internal Salesforce use.",
+      "parentName": "SessionManagement",
+      "variables": {},
       "params": {
         "sessions": {
-          "id": "Auth.sessionmanagement.ignoreforconcurrentsessionlimit.sessions",
-          "type": "var",
+          "id": "Auth.sessionmanagement.method.ignoreforconcurrentsessionlimit(object).varParam.sessions",
+          "nodeType": "variable",
           "name": "sessions",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -961,29 +1767,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_sessions_-1:0"
+            "id": "token.type.identifier_sessions_0:72"
           },
-          "signature": "Object sessions",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sessions",
+            "textToLower": "sessions",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 72
+              },
+              "end": {
+                "line": 0,
+                "character": 80
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sessions_0:72"
+          },
+          "parentId": "Auth.sessionmanagement.method.ignoreforconcurrentsessionlimit(object)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.sessionmanagement.ignoreforconcurrentsessionlimit.object",
+            "id": "Auth.sessionmanagement.ignoreforconcurrentsessionlimit.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:65"
+            },
+            "parentId": "Auth.sessionmanagement.ignoreforconcurrentsessionlimit",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "inorgnetworkrange(string)": {
-      "id": "Auth.sessionmanagement.inorgnetworkrange",
+      "id": "Auth.sessionmanagement.method.inorgnetworkrange(string)",
       "nodeType": "method",
       "name": "inOrgNetworkRange",
       "startToken": {
@@ -1005,6 +1859,9 @@
         },
         "id": "declaration.entity.name.function_inOrgNetworkRange_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 10,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1012,17 +1869,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1031,30 +1888,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean inOrgNetworkRange(String ipAddress)",
+      "overrideSignature": "public static override Boolean inOrgNetworkRange(String ipAddress)",
       "simplifiedSignature": "inOrgNetworkRange(String)",
       "datatype": {
-        "id": "Auth.sessionmanagement.inorgnetworkrange.Boolean",
+        "id": "Auth.sessionmanagement.inorgnetworkrange.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.inorgnetworkrange",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Indicates whether the given IP address is within the organization's trusted IP range according to the organization's Network Access settings.",
+      "parentName": "SessionManagement",
+      "variables": {},
       "params": {
-        "ipAddress": {
-          "id": "Auth.sessionmanagement.inorgnetworkrange.ipaddress",
-          "type": "var",
+        "ipaddress": {
+          "id": "Auth.sessionmanagement.method.inorgnetworkrange(string).varParam.ipaddress",
+          "nodeType": "variable",
           "name": "ipAddress",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1063,29 +1946,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_ipAddress_-1:0"
+            "id": "token.type.identifier_ipAddress_0:47"
           },
-          "signature": "String ipAddress",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "ipAddress",
+            "textToLower": "ipaddress",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 56
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ipAddress_0:47"
+          },
+          "parentId": "Auth.sessionmanagement.method.inorgnetworkrange(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.sessionmanagement.inorgnetworkrange.string",
+            "id": "Auth.sessionmanagement.inorgnetworkrange.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 40
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:40"
+            },
+            "parentId": "Auth.sessionmanagement.inorgnetworkrange",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The IP address to validate.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "isipallowedforprofile(string,string)": {
-      "id": "Auth.sessionmanagement.isipallowedforprofile",
+      "id": "Auth.sessionmanagement.method.isipallowedforprofile(string,string)",
       "nodeType": "method",
       "name": "isIpAllowedForProfile",
       "startToken": {
@@ -1107,6 +2038,9 @@
         },
         "id": "declaration.entity.name.function_isIpAllowedForProfile_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 11,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1114,17 +2048,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1133,30 +2067,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean isIpAllowedForProfile(String profileId, String ipAddress)",
+      "overrideSignature": "public static override Boolean isIpAllowedForProfile(String profileId, String ipAddress)",
       "simplifiedSignature": "isIpAllowedForProfile(String,String)",
       "datatype": {
-        "id": "Auth.sessionmanagement.isipallowedforprofile.Boolean",
+        "id": "Auth.sessionmanagement.isipallowedforprofile.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.isipallowedforprofile",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Indicates whether the given IP address is within the trusted IP range for the given profile.",
+      "parentName": "SessionManagement",
+      "variables": {},
       "params": {
-        "profileId": {
-          "id": "Auth.sessionmanagement.isipallowedforprofile.profileid",
-          "type": "var",
+        "profileid": {
+          "id": "Auth.sessionmanagement.method.isipallowedforprofile(string,string).varParam.profileid",
+          "nodeType": "variable",
           "name": "profileId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1165,28 +2125,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_profileId_-1:0"
+            "id": "token.type.identifier_profileId_0:51"
           },
-          "signature": "String profileId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "profileId",
+            "textToLower": "profileid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 51
+              },
+              "end": {
+                "line": 0,
+                "character": 60
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_profileId_0:51"
+          },
+          "parentId": "Auth.sessionmanagement.method.isipallowedforprofile(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.sessionmanagement.isipallowedforprofile.string",
+            "id": "Auth.sessionmanagement.isipallowedforprofile.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 44
+                },
+                "end": {
+                  "line": 0,
+                  "character": 50
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:44"
+            },
+            "parentId": "Auth.sessionmanagement.isipallowedforprofile",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "ipAddress": {
-          "id": "Auth.sessionmanagement.isipallowedforprofile.ipaddress",
-          "type": "var",
+        "ipaddress": {
+          "id": "Auth.sessionmanagement.method.isipallowedforprofile(string,string).varParam.ipaddress",
+          "nodeType": "variable",
           "name": "ipAddress",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1195,29 +2200,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_ipAddress_-1:0"
+            "id": "token.type.identifier_ipAddress_0:69"
           },
-          "signature": "String ipAddress",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "ipAddress",
+            "textToLower": "ipaddress",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 69
+              },
+              "end": {
+                "line": 0,
+                "character": 78
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ipAddress_0:69"
+          },
+          "parentId": "Auth.sessionmanagement.method.isipallowedforprofile(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.sessionmanagement.isipallowedforprofile.string",
+            "id": "Auth.sessionmanagement.isipallowedforprofile.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 62
+                },
+                "end": {
+                  "line": 0,
+                  "character": 68
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:62"
+            },
+            "parentId": "Auth.sessionmanagement.isipallowedforprofile",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The 15-character alphanumeric string for the current user’s profile ID. The IP address to validate.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setsessionlevel(auth.sessionlevel)": {
-      "id": "Auth.sessionmanagement.setsessionlevel",
+      "id": "Auth.sessionmanagement.method.setsessionlevel(auth.sessionlevel)",
       "nodeType": "method",
       "name": "setSessionLevel",
       "startToken": {
@@ -1239,6 +2292,9 @@
         },
         "id": "declaration.entity.name.function_setSessionLevel_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 12,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1246,17 +2302,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1265,30 +2321,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void setSessionLevel(Auth.SessionLevel level)",
+      "signature": "public static Void setSessionLevel(Auth.SessionLevel level)",
+      "overrideSignature": "public static override Void setSessionLevel(Auth.SessionLevel level)",
       "simplifiedSignature": "setSessionLevel(Auth.SessionLevel)",
       "datatype": {
-        "id": "Auth.sessionmanagement.setsessionlevel.void",
+        "id": "Auth.sessionmanagement.setsessionlevel.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.setsessionlevel",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Sets the user's current session security level.",
+      "parentName": "SessionManagement",
+      "variables": {},
       "params": {
         "level": {
-          "id": "Auth.sessionmanagement.setsessionlevel.level",
-          "type": "var",
+          "id": "Auth.sessionmanagement.method.setsessionlevel(auth.sessionlevel).varParam.level",
+          "nodeType": "variable",
           "name": "level",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1297,29 +2379,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_level_-1:0"
+            "id": "token.type.identifier_level_0:53"
           },
-          "signature": "Auth.SessionLevel level",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "level",
+            "textToLower": "level",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_level_0:53"
+          },
+          "parentId": "Auth.sessionmanagement.method.setsessionlevel(auth.sessionlevel)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.sessionmanagement.setsessionlevel.auth.sessionlevel",
+            "id": "Auth.sessionmanagement.setsessionlevel.datatype.Auth.SessionLevel",
             "nodeType": "datatype",
-            "name": "Auth.SessionLevel"
-          }
+            "name": "Auth.SessionLevel",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 39
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:35"
+            },
+            "parentId": "Auth.sessionmanagement.setsessionlevel",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.SessionLevel"
+          },
+          "description": "The session security level to assign to the user. The meaning of each level can be customized in the Session Settings for each organization, such as setting the High Assurance level to apply only to users who authenticated with two-factor authentication or through a specific identity provider.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "validatetotptokenforkey(string,string)": {
-      "id": "Auth.sessionmanagement.validatetotptokenforkey",
+      "id": "Auth.sessionmanagement.method.validatetotptokenforkey(string,string)",
       "nodeType": "method",
       "name": "validateTotpTokenForKey",
       "startToken": {
@@ -1341,6 +2471,9 @@
         },
         "id": "declaration.entity.name.function_validateTotpTokenForKey_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 13,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1348,17 +2481,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1367,30 +2500,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean validateTotpTokenForKey(String sharedKey, String totpCode)",
+      "overrideSignature": "public static override Boolean validateTotpTokenForKey(String sharedKey, String totpCode)",
       "simplifiedSignature": "validateTotpTokenForKey(String,String)",
       "datatype": {
-        "id": "Auth.sessionmanagement.validatetotptokenforkey.Boolean",
+        "id": "Auth.sessionmanagement.validatetotptokenforkey.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.validatetotptokenforkey",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Deprecated. Use validateTotpTokenForKey(totpSharedKey, totpCode, description) instead.",
+      "parentName": "SessionManagement",
+      "variables": {},
       "params": {
-        "sharedKey": {
-          "id": "Auth.sessionmanagement.validatetotptokenforkey.sharedkey",
-          "type": "var",
+        "sharedkey": {
+          "id": "Auth.sessionmanagement.method.validatetotptokenforkey(string,string).varParam.sharedkey",
+          "nodeType": "variable",
           "name": "sharedKey",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1399,28 +2558,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 62
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_sharedKey_-1:0"
+            "id": "token.type.identifier_sharedKey_0:53"
           },
-          "signature": "String sharedKey",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sharedKey",
+            "textToLower": "sharedkey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 62
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sharedKey_0:53"
+          },
+          "parentId": "Auth.sessionmanagement.method.validatetotptokenforkey(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.sessionmanagement.validatetotptokenforkey.string",
+            "id": "Auth.sessionmanagement.validatetotptokenforkey.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 46
+                },
+                "end": {
+                  "line": 0,
+                  "character": 52
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:46"
+            },
+            "parentId": "Auth.sessionmanagement.validatetotptokenforkey",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "totpCode": {
-          "id": "Auth.sessionmanagement.validatetotptokenforkey.totpcode",
-          "type": "var",
+        "totpcode": {
+          "id": "Auth.sessionmanagement.method.validatetotptokenforkey(string,string).varParam.totpcode",
+          "nodeType": "variable",
           "name": "totpCode",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1429,29 +2633,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_totpCode_-1:0"
+            "id": "token.type.identifier_totpCode_0:71"
           },
-          "signature": "String totpCode",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "totpCode",
+            "textToLower": "totpcode",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 71
+              },
+              "end": {
+                "line": 0,
+                "character": 79
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_totpCode_0:71"
+          },
+          "parentId": "Auth.sessionmanagement.method.validatetotptokenforkey(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.sessionmanagement.validatetotptokenforkey.string",
+            "id": "Auth.sessionmanagement.validatetotptokenforkey.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 64
+                },
+                "end": {
+                  "line": 0,
+                  "character": 70
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:64"
+            },
+            "parentId": "Auth.sessionmanagement.validatetotptokenforkey",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The shared (secret) key. The sharedKey must be a base32-encoded string of a 20-byte shared key. The time-based one-time password (TOTP) code to validate.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "validatetotptokenforkey(string,string,string)": {
-      "id": "Auth.sessionmanagement.validatetotptokenforkey",
+      "id": "Auth.sessionmanagement.method.validatetotptokenforkey(string,string,string)",
       "nodeType": "method",
       "name": "validateTotpTokenForKey",
       "startToken": {
@@ -1473,6 +2725,9 @@
         },
         "id": "declaration.entity.name.function_validateTotpTokenForKey_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 14,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1480,17 +2735,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1499,30 +2754,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean validateTotpTokenForKey(String totpSharedKey, String totpCode, String description)",
+      "overrideSignature": "public static override Boolean validateTotpTokenForKey(String totpSharedKey, String totpCode, String description)",
       "simplifiedSignature": "validateTotpTokenForKey(String,String,String)",
       "datatype": {
-        "id": "Auth.sessionmanagement.validatetotptokenforkey.Boolean",
+        "id": "Auth.sessionmanagement.validatetotptokenforkey.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.validatetotptokenforkey",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Indicates whether a time-based one-time password (TOTP) code (token) is valid for the given shared key.",
+      "parentName": "SessionManagement",
+      "variables": {},
       "params": {
-        "totpSharedKey": {
-          "id": "Auth.sessionmanagement.validatetotptokenforkey.totpsharedkey",
-          "type": "var",
+        "totpsharedkey": {
+          "id": "Auth.sessionmanagement.method.validatetotptokenforkey(string,string,string).varParam.totpsharedkey",
+          "nodeType": "variable",
           "name": "totpSharedKey",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1531,28 +2812,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_totpSharedKey_-1:0"
+            "id": "token.type.identifier_totpSharedKey_0:53"
           },
-          "signature": "String totpSharedKey",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "totpSharedKey",
+            "textToLower": "totpsharedkey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 66
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_totpSharedKey_0:53"
+          },
+          "parentId": "Auth.sessionmanagement.method.validatetotptokenforkey(string,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.sessionmanagement.validatetotptokenforkey.string",
+            "id": "Auth.sessionmanagement.validatetotptokenforkey.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 46
+                },
+                "end": {
+                  "line": 0,
+                  "character": 52
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:46"
+            },
+            "parentId": "Auth.sessionmanagement.validatetotptokenforkey",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "totpCode": {
-          "id": "Auth.sessionmanagement.validatetotptokenforkey.totpcode",
-          "type": "var",
+        "totpcode": {
+          "id": "Auth.sessionmanagement.method.validatetotptokenforkey(string,string,string).varParam.totpcode",
+          "nodeType": "variable",
           "name": "totpCode",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1561,28 +2887,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 75
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_totpCode_-1:0"
+            "id": "token.type.identifier_totpCode_0:75"
           },
-          "signature": "String totpCode",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "totpCode",
+            "textToLower": "totpcode",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 75
+              },
+              "end": {
+                "line": 0,
+                "character": 83
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_totpCode_0:75"
+          },
+          "parentId": "Auth.sessionmanagement.method.validatetotptokenforkey(string,string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.sessionmanagement.validatetotptokenforkey.string",
+            "id": "Auth.sessionmanagement.validatetotptokenforkey.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 68
+                },
+                "end": {
+                  "line": 0,
+                  "character": 74
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:68"
+            },
+            "parentId": "Auth.sessionmanagement.validatetotptokenforkey",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "description": {
-          "id": "Auth.sessionmanagement.validatetotptokenforkey.description",
-          "type": "var",
+          "id": "Auth.sessionmanagement.method.validatetotptokenforkey(string,string,string).varParam.description",
+          "nodeType": "variable",
           "name": "description",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1591,29 +2962,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 92
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 103
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_description_-1:0"
+            "id": "token.type.identifier_description_0:92"
           },
-          "signature": "String description",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "description",
+            "textToLower": "description",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 92
+              },
+              "end": {
+                "line": 0,
+                "character": 103
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_description_0:92"
+          },
+          "parentId": "Auth.sessionmanagement.method.validatetotptokenforkey(string,string,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Auth.sessionmanagement.validatetotptokenforkey.string",
+            "id": "Auth.sessionmanagement.validatetotptokenforkey.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 85
+                },
+                "end": {
+                  "line": 0,
+                  "character": 91
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:85"
+            },
+            "parentId": "Auth.sessionmanagement.validatetotptokenforkey",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The shared (secret) key. The totpSharedKey must be a base32-encoded string of a 20-byte shared key. The time-based one-time password (TOTP) code to validate. The custom description that describes the activity requiring identity verification; for example, “Complete purchase and check out”. In the Setup user interface, this text is shown in the Activity Message column of Identity Verification History. The description must be 128 characters or fewer. If you provide a value that’s longer, it’s truncated to 128 characters.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "validatetotptokenforuser(string)": {
-      "id": "Auth.sessionmanagement.validatetotptokenforuser",
+      "id": "Auth.sessionmanagement.method.validatetotptokenforuser(string)",
       "nodeType": "method",
       "name": "validateTotpTokenForUser",
       "startToken": {
@@ -1635,6 +3054,9 @@
         },
         "id": "declaration.entity.name.function_validateTotpTokenForUser_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 15,
+      "memberOrder": 15,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1642,17 +3064,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1661,30 +3083,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean validateTotpTokenForUser(String totpCode)",
+      "overrideSignature": "public static override Boolean validateTotpTokenForUser(String totpCode)",
       "simplifiedSignature": "validateTotpTokenForUser(String)",
       "datatype": {
-        "id": "Auth.sessionmanagement.validatetotptokenforuser.Boolean",
+        "id": "Auth.sessionmanagement.validatetotptokenforuser.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.validatetotptokenforuser",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Deprecated. Use validateTotpTokenForUser(totpCode, description) instead.",
+      "parentName": "SessionManagement",
+      "variables": {},
       "params": {
-        "totpCode": {
-          "id": "Auth.sessionmanagement.validatetotptokenforuser.totpcode",
-          "type": "var",
+        "totpcode": {
+          "id": "Auth.sessionmanagement.method.validatetotptokenforuser(string).varParam.totpcode",
+          "nodeType": "variable",
           "name": "totpCode",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1693,29 +3141,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 62
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_totpCode_-1:0"
+            "id": "token.type.identifier_totpCode_0:54"
           },
-          "signature": "String totpCode",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "totpCode",
+            "textToLower": "totpcode",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 62
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_totpCode_0:54"
+          },
+          "parentId": "Auth.sessionmanagement.method.validatetotptokenforuser(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.sessionmanagement.validatetotptokenforuser.string",
+            "id": "Auth.sessionmanagement.validatetotptokenforuser.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 47
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:47"
+            },
+            "parentId": "Auth.sessionmanagement.validatetotptokenforuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The time-based one-time password (TOTP) code to validate.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "validatetotptokenforuser(string,string)": {
-      "id": "Auth.sessionmanagement.validatetotptokenforuser",
+      "id": "Auth.sessionmanagement.method.validatetotptokenforuser(string,string)",
       "nodeType": "method",
       "name": "validateTotpTokenForUser",
       "startToken": {
@@ -1737,6 +3233,9 @@
         },
         "id": "declaration.entity.name.function_validateTotpTokenForUser_-1:0"
       },
+      "parentId": "Auth.sessionmanagement",
+      "order": 16,
+      "memberOrder": 16,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1744,17 +3243,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1763,30 +3262,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean validateTotpTokenForUser(String totpCode, String description)",
+      "overrideSignature": "public static override Boolean validateTotpTokenForUser(String totpCode, String description)",
       "simplifiedSignature": "validateTotpTokenForUser(String,String)",
       "datatype": {
-        "id": "Auth.sessionmanagement.validatetotptokenforuser.Boolean",
+        "id": "Auth.sessionmanagement.validatetotptokenforuser.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "Auth.sessionmanagement.validatetotptokenforuser",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Indicates whether a time-based one-time password (TOTP) code (token) is valid for the current user.",
+      "parentName": "SessionManagement",
+      "variables": {},
       "params": {
-        "totpCode": {
-          "id": "Auth.sessionmanagement.validatetotptokenforuser.totpcode",
-          "type": "var",
+        "totpcode": {
+          "id": "Auth.sessionmanagement.method.validatetotptokenforuser(string,string).varParam.totpcode",
+          "nodeType": "variable",
           "name": "totpCode",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1795,28 +3320,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 62
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_totpCode_-1:0"
+            "id": "token.type.identifier_totpCode_0:54"
           },
-          "signature": "String totpCode",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "totpCode",
+            "textToLower": "totpcode",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 62
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_totpCode_0:54"
+          },
+          "parentId": "Auth.sessionmanagement.method.validatetotptokenforuser(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.sessionmanagement.validatetotptokenforuser.string",
+            "id": "Auth.sessionmanagement.validatetotptokenforuser.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 47
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:47"
+            },
+            "parentId": "Auth.sessionmanagement.validatetotptokenforuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "description": {
-          "id": "Auth.sessionmanagement.validatetotptokenforuser.description",
-          "type": "var",
+          "id": "Auth.sessionmanagement.method.validatetotptokenforuser(string,string).varParam.description",
+          "nodeType": "variable",
           "name": "description",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1825,30 +3395,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_description_-1:0"
+            "id": "token.type.identifier_description_0:71"
           },
-          "signature": "String description",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "description",
+            "textToLower": "description",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 71
+              },
+              "end": {
+                "line": 0,
+                "character": 82
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_description_0:71"
+          },
+          "parentId": "Auth.sessionmanagement.method.validatetotptokenforuser(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.sessionmanagement.validatetotptokenforuser.string",
+            "id": "Auth.sessionmanagement.validatetotptokenforuser.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 64
+                },
+                "end": {
+                  "line": 0,
+                  "character": 70
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:64"
+            },
+            "parentId": "Auth.sessionmanagement.validatetotptokenforuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The time-based one-time password (TOTP) code to validate. The custom description that describes the activity requiring identity verification; for example, “Complete purchase and check out”. This text appears to users when they verify their identity in Salesforce and, if they use Salesforce Authenticator version 2 or later, in the Salesforce Authenticator mobile app. In addition, in the Setup user interface, this text is shown in the Activity Message column of Identity Verification History. The description must be 128 characters or fewer. If you provide a value that’s longer, it’s truncated to 128 characters.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 16,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_ConnectedAppPlugin_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "authorize(id,id,boolean)": {
-      "id": "Auth.connectedappplugin.authorize",
+      "id": "Auth.connectedappplugin.method.authorize(id,id,boolean)",
       "nodeType": "method",
       "name": "authorize",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_authorize_-1:0"
       },
+      "parentId": "Auth.connectedappplugin",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean authorize(Id userId, Id connectedAppId, Boolean isAdminApproved)",
+      "overrideSignature": "public override Boolean authorize(Id userId, Id connectedAppId, Boolean isAdminApproved)",
       "simplifiedSignature": "authorize(Id,Id,Boolean)",
       "datatype": {
-        "id": "Auth.connectedappplugin.authorize.Boolean",
+        "id": "Auth.connectedappplugin.authorize.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Auth.connectedappplugin.authorize",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Deprecated and available only in API versions 35.0 and 36.0. As of version 37.0, use authorize(userId, connectedAppId, isAdminApproved, context) instead.",
+      "parentName": "ConnectedAppPlugin",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "Auth.connectedappplugin.authorize.userid",
-          "type": "var",
+        "userid": {
+          "id": "Auth.connectedappplugin.method.authorize(id,id,boolean).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,28 +160,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 28
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:28"
           },
-          "signature": "Id userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 28
+              },
+              "end": {
+                "line": 0,
+                "character": 34
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:28"
+          },
+          "parentId": "Auth.connectedappplugin.method.authorize(id,id,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.connectedappplugin.authorize.id",
+            "id": "Auth.connectedappplugin.authorize.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 27
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:25"
+            },
+            "parentId": "Auth.connectedappplugin.authorize",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "connectedAppId": {
-          "id": "Auth.connectedappplugin.authorize.connectedappid",
-          "type": "var",
+        "connectedappid": {
+          "id": "Auth.connectedappplugin.method.authorize(id,id,boolean).varParam.connectedappid",
+          "nodeType": "variable",
           "name": "connectedAppId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -159,28 +235,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_connectedAppId_-1:0"
+            "id": "token.type.identifier_connectedAppId_0:39"
           },
-          "signature": "Id connectedAppId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "connectedAppId",
+            "textToLower": "connectedappid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 39
+              },
+              "end": {
+                "line": 0,
+                "character": 53
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_connectedAppId_0:39"
+          },
+          "parentId": "Auth.connectedappplugin.method.authorize(id,id,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.connectedappplugin.authorize.id",
+            "id": "Auth.connectedappplugin.authorize.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 36
+                },
+                "end": {
+                  "line": 0,
+                  "character": 38
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:36"
+            },
+            "parentId": "Auth.connectedappplugin.authorize",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "isAdminApproved": {
-          "id": "Auth.connectedappplugin.authorize.isadminapproved",
-          "type": "var",
+        "isadminapproved": {
+          "id": "Auth.connectedappplugin.method.authorize(id,id,boolean).varParam.isadminapproved",
+          "nodeType": "variable",
           "name": "isAdminApproved",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -189,29 +310,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 63
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_isAdminApproved_-1:0"
+            "id": "token.type.identifier_isAdminApproved_0:63"
           },
-          "signature": "Boolean isAdminApproved",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "isAdminApproved",
+            "textToLower": "isadminapproved",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 63
+              },
+              "end": {
+                "line": 0,
+                "character": 78
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_isAdminApproved_0:63"
+          },
+          "parentId": "Auth.connectedappplugin.method.authorize(id,id,boolean)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Auth.connectedappplugin.authorize.boolean",
+            "id": "Auth.connectedappplugin.authorize.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 55
+                },
+                "end": {
+                  "line": 0,
+                  "character": 62
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:55"
+            },
+            "parentId": "Auth.connectedappplugin.authorize",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "The 15-character ID of the user attempting to use the connected app. The 15-character ID of the connected app. The approval state of the specified user when the connected app requires approval.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "authorize(id,id,boolean,auth.invocationcontext)": {
-      "id": "Auth.connectedappplugin.authorize",
+      "id": "Auth.connectedappplugin.method.authorize(id,id,boolean,auth.invocationcontext)",
       "nodeType": "method",
       "name": "authorize",
       "startToken": {
@@ -233,6 +402,9 @@
         },
         "id": "declaration.entity.name.function_authorize_-1:0"
       },
+      "parentId": "Auth.connectedappplugin",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -240,30 +412,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean authorize(Id userId, Id connectedAppId, Boolean isAdminApproved, Auth.InvocationContext context)",
+      "overrideSignature": "public override Boolean authorize(Id userId, Id connectedAppId, Boolean isAdminApproved, Auth.InvocationContext context)",
       "simplifiedSignature": "authorize(Id,Id,Boolean,Auth.InvocationContext)",
       "datatype": {
-        "id": "Auth.connectedappplugin.authorize.Boolean",
+        "id": "Auth.connectedappplugin.authorize.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Auth.connectedappplugin.authorize",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Authorizes the specified user to access the connected app. If the connected app is set for users to self-authorize, this method isn’t invoked.",
+      "parentName": "ConnectedAppPlugin",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "Auth.connectedappplugin.authorize.userid",
-          "type": "var",
+        "userid": {
+          "id": "Auth.connectedappplugin.method.authorize(id,id,boolean,auth.invocationcontext).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -272,28 +470,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 28
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:28"
           },
-          "signature": "Id userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 28
+              },
+              "end": {
+                "line": 0,
+                "character": 34
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:28"
+          },
+          "parentId": "Auth.connectedappplugin.method.authorize(id,id,boolean,auth.invocationcontext)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.connectedappplugin.authorize.id",
+            "id": "Auth.connectedappplugin.authorize.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 27
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:25"
+            },
+            "parentId": "Auth.connectedappplugin.authorize",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "connectedAppId": {
-          "id": "Auth.connectedappplugin.authorize.connectedappid",
-          "type": "var",
+        "connectedappid": {
+          "id": "Auth.connectedappplugin.method.authorize(id,id,boolean,auth.invocationcontext).varParam.connectedappid",
+          "nodeType": "variable",
           "name": "connectedAppId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -302,28 +545,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_connectedAppId_-1:0"
+            "id": "token.type.identifier_connectedAppId_0:39"
           },
-          "signature": "Id connectedAppId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "connectedAppId",
+            "textToLower": "connectedappid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 39
+              },
+              "end": {
+                "line": 0,
+                "character": 53
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_connectedAppId_0:39"
+          },
+          "parentId": "Auth.connectedappplugin.method.authorize(id,id,boolean,auth.invocationcontext)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.connectedappplugin.authorize.id",
+            "id": "Auth.connectedappplugin.authorize.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 36
+                },
+                "end": {
+                  "line": 0,
+                  "character": 38
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:36"
+            },
+            "parentId": "Auth.connectedappplugin.authorize",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "isAdminApproved": {
-          "id": "Auth.connectedappplugin.authorize.isadminapproved",
-          "type": "var",
+        "isadminapproved": {
+          "id": "Auth.connectedappplugin.method.authorize(id,id,boolean,auth.invocationcontext).varParam.isadminapproved",
+          "nodeType": "variable",
           "name": "isAdminApproved",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -332,28 +620,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 63
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_isAdminApproved_-1:0"
+            "id": "token.type.identifier_isAdminApproved_0:63"
           },
-          "signature": "Boolean isAdminApproved",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "isAdminApproved",
+            "textToLower": "isadminapproved",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 63
+              },
+              "end": {
+                "line": 0,
+                "character": 78
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_isAdminApproved_0:63"
+          },
+          "parentId": "Auth.connectedappplugin.method.authorize(id,id,boolean,auth.invocationcontext)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Auth.connectedappplugin.authorize.boolean",
+            "id": "Auth.connectedappplugin.authorize.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 55
+                },
+                "end": {
+                  "line": 0,
+                  "character": 62
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:55"
+            },
+            "parentId": "Auth.connectedappplugin.authorize",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "scope": null
         },
         "context": {
-          "id": "Auth.connectedappplugin.authorize.context",
-          "type": "var",
+          "id": "Auth.connectedappplugin.method.authorize(id,id,boolean,auth.invocationcontext).varParam.context",
+          "nodeType": "variable",
           "name": "context",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -362,29 +695,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 103
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 110
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_context_-1:0"
+            "id": "token.type.identifier_context_0:103"
           },
-          "signature": "Auth.InvocationContext context",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "context",
+            "textToLower": "context",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 103
+              },
+              "end": {
+                "line": 0,
+                "character": 110
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_context_0:103"
+          },
+          "parentId": "Auth.connectedappplugin.method.authorize(id,id,boolean,auth.invocationcontext)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "Auth.connectedappplugin.authorize.auth.invocationcontext",
+            "id": "Auth.connectedappplugin.authorize.datatype.Auth.InvocationContext",
             "nodeType": "datatype",
-            "name": "Auth.InvocationContext"
-          }
+            "name": "Auth.InvocationContext",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 80
+                },
+                "end": {
+                  "line": 0,
+                  "character": 84
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:80"
+            },
+            "parentId": "Auth.connectedappplugin.authorize",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.InvocationContext"
+          },
+          "description": "The 15-character ID of the user attempting to use the connected app. The 15-character ID of the connected app. The approval state of the specified user when the connected app requires approval. The context in which the connected app is invoked.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "customattributes(id,id,map,string>)": {
-      "id": "Auth.connectedappplugin.customattributes",
+    "customattributes(id,id,map<string,string>)": {
+      "id": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>)",
       "nodeType": "method",
       "name": "customAttributes",
       "startToken": {
@@ -406,10 +787,409 @@
         },
         "id": "declaration.entity.name.function_customAttributes_-1:0"
       },
+      "parentId": "Auth.connectedappplugin",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
         "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public Map<String,String> customAttributes(Id userId, Id connectedAppId, Map<String,String> formulaDefinedAttributes)",
+      "overrideSignature": "public override Map<String,String> customAttributes(Id userId, Id connectedAppId, Map<String,String> formulaDefinedAttributes)",
+      "simplifiedSignature": "customAttributes(Id,Id,Map<String,String>)",
+      "datatype": {
+        "id": "Auth.connectedappplugin.customattributes.datatype.Map<String,String>",
+        "nodeType": "datatype",
+        "name": "Map<String,String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "Auth.connectedappplugin.customattributes",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "Auth.connectedappplugin.customattributes.datatype.Map<String,String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 24
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        },
+        "key": {
+          "id": "Auth.connectedappplugin.customattributes.datatype.Map<String,String>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
+      },
+      "description": "Deprecated and available only in API versions 35.0 and 36.0. As of version 37.0, use customAttributes(userId, connectedAppId, formulaDefinedAttributes, context) instead.",
+      "parentName": "ConnectedAppPlugin",
+      "variables": {},
+      "params": {
+        "userid": {
+          "id": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>).varParam.userid",
+          "nodeType": "variable",
+          "name": "userId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:46"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:46"
+          },
+          "parentId": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Auth.connectedappplugin.customattributes.datatype.Id",
+            "nodeType": "datatype",
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 43
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:43"
+            },
+            "parentId": "Auth.connectedappplugin.customattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
+        },
+        "connectedappid": {
+          "id": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>).varParam.connectedappid",
+          "nodeType": "variable",
+          "name": "connectedAppId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "connectedAppId",
+            "textToLower": "connectedappid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 57
+              },
+              "end": {
+                "line": 0,
+                "character": 71
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_connectedAppId_0:57"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "connectedAppId",
+            "textToLower": "connectedappid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 57
+              },
+              "end": {
+                "line": 0,
+                "character": 71
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_connectedAppId_0:57"
+          },
+          "parentId": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "Auth.connectedappplugin.customattributes.datatype.Id",
+            "nodeType": "datatype",
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:54"
+            },
+            "parentId": "Auth.connectedappplugin.customattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
+        },
+        "formuladefinedattributes": {
+          "id": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>).varParam.formuladefinedattributes",
+          "nodeType": "variable",
+          "name": "formulaDefinedAttributes",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "formulaDefinedAttributes",
+            "textToLower": "formuladefinedattributes",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 92
+              },
+              "end": {
+                "line": 0,
+                "character": 116
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_formulaDefinedAttributes_0:92"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "formulaDefinedAttributes",
+            "textToLower": "formuladefinedattributes",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 92
+              },
+              "end": {
+                "line": 0,
+                "character": 116
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_formulaDefinedAttributes_0:92"
+          },
+          "parentId": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "Auth.connectedappplugin.customattributes.datatype.Map<String,String>",
+            "nodeType": "datatype",
+            "name": "Map<String,String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 73
+                },
+                "end": {
+                  "line": 0,
+                  "character": 76
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:73"
+            },
+            "parentId": "Auth.connectedappplugin.customattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "Auth.connectedappplugin.customattributes.datatype.Map<String,String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 84
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 90
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:84"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            },
+            "key": {
+              "id": "Auth.connectedappplugin.customattributes.datatype.Map<String,String>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 77
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 83
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:77"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "The 15-character ID of the user attempting to use the connected app. The 15-character ID of the connected app. A map of the new set of attributes from the UserInfo endpoint (OAuth) or from a SAML assertion. For more information, see The UserInfo Endpoint in the online help.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "customattributes(id,id,map<string,string>,auth.invocationcontext)": {
+      "id": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>,auth.invocationcontext)",
+      "nodeType": "method",
+      "name": "customAttributes",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "customAttributes",
+        "textToLower": "customattributes",
         "isAux": false,
         "range": {
           "start": {
@@ -423,20 +1203,122 @@
           "isEmpty": true,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "declaration.entity.name.function_customAttributes_-1:0"
       },
-      "signature": "public Map<String, String> customAttributes(Id userId, Id connectedAppId, Map <String, String> formulaDefinedAttributes,)",
-      "simplifiedSignature": "customAttributes(Id,Id,Map,String>)",
+      "parentId": "Auth.connectedappplugin",
+      "order": 4,
+      "memberOrder": 4,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public Map<String,String> customAttributes(Id userId, Id connectedAppId, Map<String,String> formulaDefinedAttributes, Auth.InvocationContext context)",
+      "overrideSignature": "public override Map<String,String> customAttributes(Id userId, Id connectedAppId, Map<String,String> formulaDefinedAttributes, Auth.InvocationContext context)",
+      "simplifiedSignature": "customAttributes(Id,Id,Map<String,String>,Auth.InvocationContext)",
       "datatype": {
-        "id": "Auth.connectedappplugin.customattributes.Map<String, String>",
+        "id": "Auth.connectedappplugin.customattributes.datatype.Map<String,String>",
         "nodeType": "datatype",
-        "name": "Map<String, String>"
+        "name": "Map<String,String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "Auth.connectedappplugin.customattributes",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "Auth.connectedappplugin.customattributes.datatype.Map<String,String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 24
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        },
+        "key": {
+          "id": "Auth.connectedappplugin.customattributes.datatype.Map<String,String>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Sets new attributes for the specified user. When the connected app gets the user’s attributes from the UserInfo endpoint or through a SAML assertion, use this method to update the attribute values.",
+      "parentName": "ConnectedAppPlugin",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "Auth.connectedappplugin.customattributes.userid",
-          "type": "var",
+        "userid": {
+          "id": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>,auth.invocationcontext).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -445,28 +1327,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:46"
           },
-          "signature": "Id userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:46"
+          },
+          "parentId": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>,auth.invocationcontext)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.connectedappplugin.customattributes.id",
+            "id": "Auth.connectedappplugin.customattributes.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 43
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:43"
+            },
+            "parentId": "Auth.connectedappplugin.customattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "connectedAppId": {
-          "id": "Auth.connectedappplugin.customattributes.connectedappid",
-          "type": "var",
+        "connectedappid": {
+          "id": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>,auth.invocationcontext).varParam.connectedappid",
+          "nodeType": "variable",
           "name": "connectedAppId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -475,89 +1402,281 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_connectedAppId_-1:0"
+            "id": "token.type.identifier_connectedAppId_0:57"
           },
-          "signature": "Id connectedAppId",
-          "datatype": {
-            "id": "Auth.connectedappplugin.customattributes.id",
-            "nodeType": "datatype",
-            "name": "Id"
-          }
-        },
-        "<String": {
-          "id": "Auth.connectedappplugin.customattributes.<string",
-          "type": "var",
-          "name": "<String",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "connectedAppId",
+            "textToLower": "connectedappid",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_connectedAppId_0:57"
           },
-          "signature": "Map <String",
+          "parentId": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>,auth.invocationcontext)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.connectedappplugin.customattributes.map",
+            "id": "Auth.connectedappplugin.customattributes.datatype.Id",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:54"
+            },
+            "parentId": "Auth.connectedappplugin.customattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "formulaDefinedAttributes,": {
-          "id": "Auth.connectedappplugin.customattributes.formuladefinedattributes,",
-          "type": "var",
-          "name": "formulaDefinedAttributes,",
+        "formuladefinedattributes": {
+          "id": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>,auth.invocationcontext).varParam.formuladefinedattributes",
+          "nodeType": "variable",
+          "name": "formulaDefinedAttributes",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "formulaDefinedAttributes,",
-            "textToLower": "formuladefinedattributes,",
+            "text": "formulaDefinedAttributes",
+            "textToLower": "formuladefinedattributes",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 92
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 116
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_formulaDefinedAttributes,_-1:0"
+            "id": "token.type.identifier_formulaDefinedAttributes_0:92"
           },
-          "signature": "String> formulaDefinedAttributes,",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "formulaDefinedAttributes",
+            "textToLower": "formuladefinedattributes",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 92
+              },
+              "end": {
+                "line": 0,
+                "character": 116
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_formulaDefinedAttributes_0:92"
+          },
+          "parentId": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>,auth.invocationcontext)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Auth.connectedappplugin.customattributes.string>",
+            "id": "Auth.connectedappplugin.customattributes.datatype.Map<String,String>",
             "nodeType": "datatype",
-            "name": "String>"
-          }
+            "name": "Map<String,String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 73
+                },
+                "end": {
+                  "line": 0,
+                  "character": 76
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:73"
+            },
+            "parentId": "Auth.connectedappplugin.customattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "Auth.connectedappplugin.customattributes.datatype.Map<String,String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 84
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 90
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:84"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            },
+            "key": {
+              "id": "Auth.connectedappplugin.customattributes.datatype.Map<String,String>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 77
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 83
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:77"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "The 15-character ID of the user attempting to use the connected app. The 15-character ID for the connected app. A map of the current set of attributes from the UserInfo endpoint (OAuth) or from a SAML assertion. For more information, see The UserInfo Endpoint in the online help. The context in which the connected app is invoked.",
+          "scope": null
+        },
+        "context": {
+          "id": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>,auth.invocationcontext).varParam.context",
+          "nodeType": "variable",
+          "name": "context",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "context",
+            "textToLower": "context",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 141
+              },
+              "end": {
+                "line": 0,
+                "character": 148
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_context_0:141"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "context",
+            "textToLower": "context",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 141
+              },
+              "end": {
+                "line": 0,
+                "character": 148
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_context_0:141"
+          },
+          "parentId": "Auth.connectedappplugin.method.customattributes(id,id,map<string,string>,auth.invocationcontext)",
+          "order": 4,
+          "memberOrder": 4,
+          "datatype": {
+            "id": "Auth.connectedappplugin.customattributes.datatype.Auth.InvocationContext",
+            "nodeType": "datatype",
+            "name": "Auth.InvocationContext",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 118
+                },
+                "end": {
+                  "line": 0,
+                  "character": 122
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:118"
+            },
+            "parentId": "Auth.connectedappplugin.customattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.InvocationContext"
+          },
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "modifysamlresponse(map,string>)": {
-      "id": "Auth.connectedappplugin.modifysamlresponse",
+    "modifysamlresponse(map<string,string>,id,dom.xmlnode)": {
+      "id": "Auth.connectedappplugin.method.modifysamlresponse(map<string,string>,id,dom.xmlnode)",
       "nodeType": "method",
       "name": "modifySAMLResponse",
       "startToken": {
@@ -579,6 +1698,9 @@
         },
         "id": "declaration.entity.name.function_modifySAMLResponse_-1:0"
       },
+      "parentId": "Auth.connectedappplugin",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -586,91 +1708,339 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Dom.XmlNode modifySAMLResponse(Map <String, String> authSession,)",
-      "simplifiedSignature": "modifySAMLResponse(Map,String>)",
+      "signature": "public dom.XmlNode modifySAMLResponse(Map<String,String> authSession, Id connectedAppId, dom.XmlNode samlResponse)",
+      "overrideSignature": "public override dom.XmlNode modifySAMLResponse(Map<String,String> authSession, Id connectedAppId, dom.XmlNode samlResponse)",
+      "simplifiedSignature": "modifySAMLResponse(Map<String,String>,Id,dom.XmlNode)",
       "datatype": {
-        "id": "Auth.connectedappplugin.modifysamlresponse.Dom.XmlNode",
+        "id": "Auth.connectedappplugin.modifysamlresponse.datatype.dom.XmlNode",
         "nodeType": "datatype",
-        "name": "Dom.XmlNode"
+        "name": "dom.XmlNode",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "dom",
+          "textToLower": "dom",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_dom_0:7"
+        },
+        "parentId": "Auth.connectedappplugin.modifysamlresponse",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "dom.XmlNode"
       },
       "description": "Modifies the XML generated by the Salesforce SAML Identity Provider (IDP) before it’s sent to the service provider.",
+      "parentName": "ConnectedAppPlugin",
+      "variables": {},
       "params": {
-        "<String": {
-          "id": "Auth.connectedappplugin.modifysamlresponse.<string",
-          "type": "var",
-          "name": "<String",
+        "authsession": {
+          "id": "Auth.connectedappplugin.method.modifysamlresponse(map<string,string>,id,dom.xmlnode).varParam.authsession",
+          "nodeType": "variable",
+          "name": "authSession",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "authSession",
+            "textToLower": "authsession",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 68
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_authSession_0:57"
           },
-          "signature": "Map <String",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "authSession",
+            "textToLower": "authsession",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 57
+              },
+              "end": {
+                "line": 0,
+                "character": 68
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_authSession_0:57"
+          },
+          "parentId": "Auth.connectedappplugin.method.modifysamlresponse(map<string,string>,id,dom.xmlnode)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.connectedappplugin.modifysamlresponse.map",
+            "id": "Auth.connectedappplugin.modifysamlresponse.datatype.Map<String,String>",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "Map<String,String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 38
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:38"
+            },
+            "parentId": "Auth.connectedappplugin.modifysamlresponse",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "Auth.connectedappplugin.modifysamlresponse.datatype.Map<String,String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 49
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 55
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:49"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            },
+            "key": {
+              "id": "Auth.connectedappplugin.modifysamlresponse.datatype.Map<String,String>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 42
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 48
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:42"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
         },
-        "authSession,": {
-          "id": "Auth.connectedappplugin.modifysamlresponse.authsession,",
-          "type": "var",
-          "name": "authSession,",
+        "connectedappid": {
+          "id": "Auth.connectedappplugin.method.modifysamlresponse(map<string,string>,id,dom.xmlnode).varParam.connectedappid",
+          "nodeType": "variable",
+          "name": "connectedAppId",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "authSession,",
-            "textToLower": "authsession,",
+            "text": "connectedAppId",
+            "textToLower": "connectedappid",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 87
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_authSession,_-1:0"
+            "id": "token.type.identifier_connectedAppId_0:73"
           },
-          "signature": "String> authSession,",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "connectedAppId",
+            "textToLower": "connectedappid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 87
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_connectedAppId_0:73"
+          },
+          "parentId": "Auth.connectedappplugin.method.modifysamlresponse(map<string,string>,id,dom.xmlnode)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.connectedappplugin.modifysamlresponse.string>",
+            "id": "Auth.connectedappplugin.modifysamlresponse.datatype.Id",
             "nodeType": "datatype",
-            "name": "String>"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 70
+                },
+                "end": {
+                  "line": 0,
+                  "character": 72
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:70"
+            },
+            "parentId": "Auth.connectedappplugin.modifysamlresponse",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
+        },
+        "samlresponse": {
+          "id": "Auth.connectedappplugin.method.modifysamlresponse(map<string,string>,id,dom.xmlnode).varParam.samlresponse",
+          "nodeType": "variable",
+          "name": "samlResponse",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "samlResponse",
+            "textToLower": "samlresponse",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 101
+              },
+              "end": {
+                "line": 0,
+                "character": 113
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_samlResponse_0:101"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "samlResponse",
+            "textToLower": "samlresponse",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 101
+              },
+              "end": {
+                "line": 0,
+                "character": 113
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_samlResponse_0:101"
+          },
+          "parentId": "Auth.connectedappplugin.method.modifysamlresponse(map<string,string>,id,dom.xmlnode)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "Auth.connectedappplugin.modifysamlresponse.datatype.dom.XmlNode",
+            "nodeType": "datatype",
+            "name": "dom.XmlNode",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "dom",
+              "textToLower": "dom",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 89
+                },
+                "end": {
+                  "line": 0,
+                  "character": 92
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_dom_0:89"
+            },
+            "parentId": "Auth.connectedappplugin.modifysamlresponse",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "dom.XmlNode"
+          },
+          "description": "The attributes for the authorized user’s session. The map includes the 15-character ID of the authorized user who’s accessing the connected app. The 15-character ID of the connected app. Contains the SAML XML response generated by the IDP.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "refresh(id,id)": {
-      "id": "Auth.connectedappplugin.refresh",
+      "id": "Auth.connectedappplugin.method.refresh(id,id)",
       "nodeType": "method",
       "name": "refresh",
       "startToken": {
@@ -692,6 +2062,9 @@
         },
         "id": "declaration.entity.name.function_refresh_-1:0"
       },
+      "parentId": "Auth.connectedappplugin",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -699,30 +2072,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void refresh(Id userId, Id connectedAppId)",
+      "overrideSignature": "public override void refresh(Id userId, Id connectedAppId)",
       "simplifiedSignature": "refresh(Id,Id)",
       "datatype": {
-        "id": "Auth.connectedappplugin.refresh.void",
+        "id": "Auth.connectedappplugin.refresh.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Auth.connectedappplugin.refresh",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Deprecated and available only in API versions 35.0 and 36.0. As of version 37.0, use refresh(userId, connectedAppId, context) instead.",
+      "parentName": "ConnectedAppPlugin",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "Auth.connectedappplugin.refresh.userid",
-          "type": "var",
+        "userid": {
+          "id": "Auth.connectedappplugin.method.refresh(id,id).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -731,28 +2130,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 23
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:23"
           },
-          "signature": "Id userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 23
+              },
+              "end": {
+                "line": 0,
+                "character": 29
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:23"
+          },
+          "parentId": "Auth.connectedappplugin.method.refresh(id,id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.connectedappplugin.refresh.id",
+            "id": "Auth.connectedappplugin.refresh.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 20
+                },
+                "end": {
+                  "line": 0,
+                  "character": 22
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:20"
+            },
+            "parentId": "Auth.connectedappplugin.refresh",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "connectedAppId": {
-          "id": "Auth.connectedappplugin.refresh.connectedappid",
-          "type": "var",
+        "connectedappid": {
+          "id": "Auth.connectedappplugin.method.refresh(id,id).varParam.connectedappid",
+          "nodeType": "variable",
           "name": "connectedAppId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -761,29 +2205,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_connectedAppId_-1:0"
+            "id": "token.type.identifier_connectedAppId_0:34"
           },
-          "signature": "Id connectedAppId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "connectedAppId",
+            "textToLower": "connectedappid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 48
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_connectedAppId_0:34"
+          },
+          "parentId": "Auth.connectedappplugin.method.refresh(id,id)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.connectedappplugin.refresh.id",
+            "id": "Auth.connectedappplugin.refresh.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:31"
+            },
+            "parentId": "Auth.connectedappplugin.refresh",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "The 15-character ID of the user requesting the refresh token. The 15-character ID of the connected app.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "refresh(id,id,auth.invocationcontext)": {
-      "id": "Auth.connectedappplugin.refresh",
+      "id": "Auth.connectedappplugin.method.refresh(id,id,auth.invocationcontext)",
       "nodeType": "method",
       "name": "refresh",
       "startToken": {
@@ -805,6 +2297,9 @@
         },
         "id": "declaration.entity.name.function_refresh_-1:0"
       },
+      "parentId": "Auth.connectedappplugin",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -812,30 +2307,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void refresh(Id userId, Id connectedAppId, Auth.InvocationContext context)",
+      "overrideSignature": "public override void refresh(Id userId, Id connectedAppId, Auth.InvocationContext context)",
       "simplifiedSignature": "refresh(Id,Id,Auth.InvocationContext)",
       "datatype": {
-        "id": "Auth.connectedappplugin.refresh.void",
+        "id": "Auth.connectedappplugin.refresh.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Auth.connectedappplugin.refresh",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Salesforce calls this method during a refresh token exchange.",
+      "parentName": "ConnectedAppPlugin",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "Auth.connectedappplugin.refresh.userid",
-          "type": "var",
+        "userid": {
+          "id": "Auth.connectedappplugin.method.refresh(id,id,auth.invocationcontext).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -844,28 +2365,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 23
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:23"
           },
-          "signature": "Id userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 23
+              },
+              "end": {
+                "line": 0,
+                "character": 29
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:23"
+          },
+          "parentId": "Auth.connectedappplugin.method.refresh(id,id,auth.invocationcontext)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.connectedappplugin.refresh.id",
+            "id": "Auth.connectedappplugin.refresh.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 20
+                },
+                "end": {
+                  "line": 0,
+                  "character": 22
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:20"
+            },
+            "parentId": "Auth.connectedappplugin.refresh",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "connectedAppId": {
-          "id": "Auth.connectedappplugin.refresh.connectedappid",
-          "type": "var",
+        "connectedappid": {
+          "id": "Auth.connectedappplugin.method.refresh(id,id,auth.invocationcontext).varParam.connectedappid",
+          "nodeType": "variable",
           "name": "connectedAppId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -874,28 +2440,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_connectedAppId_-1:0"
+            "id": "token.type.identifier_connectedAppId_0:34"
           },
-          "signature": "Id connectedAppId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "connectedAppId",
+            "textToLower": "connectedappid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 48
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_connectedAppId_0:34"
+          },
+          "parentId": "Auth.connectedappplugin.method.refresh(id,id,auth.invocationcontext)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.connectedappplugin.refresh.id",
+            "id": "Auth.connectedappplugin.refresh.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:31"
+            },
+            "parentId": "Auth.connectedappplugin.refresh",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
         "context": {
-          "id": "Auth.connectedappplugin.refresh.context",
-          "type": "var",
+          "id": "Auth.connectedappplugin.method.refresh(id,id,auth.invocationcontext).varParam.context",
+          "nodeType": "variable",
           "name": "context",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -904,30 +2515,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_context_-1:0"
+            "id": "token.type.identifier_context_0:73"
           },
-          "signature": "Auth.InvocationContext context",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "context",
+            "textToLower": "context",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 80
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_context_0:73"
+          },
+          "parentId": "Auth.connectedappplugin.method.refresh(id,id,auth.invocationcontext)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Auth.connectedappplugin.refresh.auth.invocationcontext",
+            "id": "Auth.connectedappplugin.refresh.datatype.Auth.InvocationContext",
             "nodeType": "datatype",
-            "name": "Auth.InvocationContext"
-          }
+            "name": "Auth.InvocationContext",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Auth",
+              "textToLower": "auth",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 50
+                },
+                "end": {
+                  "line": 0,
+                  "character": 54
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Auth_0:50"
+            },
+            "parentId": "Auth.connectedappplugin.refresh",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Auth.InvocationContext"
+          },
+          "description": "The 15-character ID of the user requesting the refresh token. The 15-character ID of the connected app. The context in which the connected app is invoked.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 7,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Matcher_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "end()": {
-      "id": "System.matcher.end",
+      "id": "System.matcher.method.end()",
       "nodeType": "method",
       "name": "end",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_end_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer end()",
+      "overrideSignature": "public override Integer end()",
       "simplifiedSignature": "end()",
       "datatype": {
-        "id": "System.matcher.end.Integer",
+        "id": "System.matcher.end.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.matcher.end",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the position after the last matched character.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "end(integer)": {
-      "id": "System.matcher.end",
+      "id": "System.matcher.method.end(integer)",
       "nodeType": "method",
       "name": "end",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_end_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,30 +185,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer end(Integer groupIndex)",
+      "overrideSignature": "public override Integer end(Integer groupIndex)",
       "simplifiedSignature": "end(Integer)",
       "datatype": {
-        "id": "System.matcher.end.Integer",
+        "id": "System.matcher.end.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.matcher.end",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the position after the last character of the subsequence captured by the group index during the previous match operation. If the match was successful but the group itself did not match anything, this method returns -1.",
+      "parentName": "Matcher",
+      "variables": {},
       "params": {
-        "groupIndex": {
-          "id": "System.matcher.end.groupindex",
-          "type": "var",
+        "groupindex": {
+          "id": "System.matcher.method.end(integer).varParam.groupindex",
+          "nodeType": "variable",
           "name": "groupIndex",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -181,29 +243,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 27
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_groupIndex_-1:0"
+            "id": "token.type.identifier_groupIndex_0:27"
           },
-          "signature": "Integer groupIndex",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "groupIndex",
+            "textToLower": "groupindex",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 27
+              },
+              "end": {
+                "line": 0,
+                "character": 37
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_groupIndex_0:27"
+          },
+          "parentId": "System.matcher.method.end(integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.matcher.end.integer",
+            "id": "System.matcher.end.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 19
+                },
+                "end": {
+                  "line": 0,
+                  "character": 26
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:19"
+            },
+            "parentId": "System.matcher.end",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "find()": {
-      "id": "System.matcher.find",
+      "id": "System.matcher.method.find()",
       "nodeType": "method",
       "name": "find",
       "startToken": {
@@ -225,6 +335,9 @@
         },
         "id": "declaration.entity.name.function_find_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -232,30 +345,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean find()",
+      "overrideSignature": "public override Boolean find()",
       "simplifiedSignature": "find()",
       "datatype": {
-        "id": "System.matcher.find.Boolean",
+        "id": "System.matcher.find.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.matcher.find",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Attempts to find the next subsequence of the input sequence that matches the pattern. This method returns true if a subsequence of the input sequence matches this Matcher object's pattern.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "find(integer)": {
-      "id": "System.matcher.find",
+      "id": "System.matcher.method.find(integer)",
       "nodeType": "method",
       "name": "find",
       "startToken": {
@@ -277,6 +418,9 @@
         },
         "id": "declaration.entity.name.function_find_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -284,30 +428,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean find(Integer group)",
+      "overrideSignature": "public override Boolean find(Integer group)",
       "simplifiedSignature": "find(Integer)",
       "datatype": {
-        "id": "System.matcher.find.Boolean",
+        "id": "System.matcher.find.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.matcher.find",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Resets the Matcher object and then tries to find the next subsequence of the input sequence that matches the pattern. This method returns true if a subsequence of the input sequence matches this Matcher object's pattern.",
+      "parentName": "Matcher",
+      "variables": {},
       "params": {
         "group": {
-          "id": "System.matcher.find.group",
-          "type": "var",
+          "id": "System.matcher.method.find(integer).varParam.group",
+          "nodeType": "variable",
           "name": "group",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -316,29 +486,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 28
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 33
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_group_-1:0"
+            "id": "token.type.identifier_group_0:28"
           },
-          "signature": "Integer group",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "group",
+            "textToLower": "group",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 28
+              },
+              "end": {
+                "line": 0,
+                "character": 33
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_group_0:28"
+          },
+          "parentId": "System.matcher.method.find(integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.matcher.find.integer",
+            "id": "System.matcher.find.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 20
+                },
+                "end": {
+                  "line": 0,
+                  "character": 27
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:20"
+            },
+            "parentId": "System.matcher.find",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "group()": {
-      "id": "System.matcher.group",
+      "id": "System.matcher.method.group()",
       "nodeType": "method",
       "name": "group",
       "startToken": {
@@ -360,6 +578,9 @@
         },
         "id": "declaration.entity.name.function_group_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -367,30 +588,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String group()",
+      "overrideSignature": "public override String group()",
       "simplifiedSignature": "group()",
       "datatype": {
-        "id": "System.matcher.group.String",
+        "id": "System.matcher.group.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.matcher.group",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the input subsequence returned by the previous match.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "group(integer)": {
-      "id": "System.matcher.group",
+      "id": "System.matcher.method.group(integer)",
       "nodeType": "method",
       "name": "group",
       "startToken": {
@@ -412,6 +661,9 @@
         },
         "id": "declaration.entity.name.function_group_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -419,30 +671,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String group(Integer groupIndex)",
+      "overrideSignature": "public override String group(Integer groupIndex)",
       "simplifiedSignature": "group(Integer)",
       "datatype": {
-        "id": "System.matcher.group.String",
+        "id": "System.matcher.group.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.matcher.group",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the input subsequence captured by the specified group index during the previous match operation. If the match was successful but the specified group failed to match any part of the input sequence, null is returned.",
+      "parentName": "Matcher",
+      "variables": {},
       "params": {
-        "groupIndex": {
-          "id": "System.matcher.group.groupindex",
-          "type": "var",
+        "groupindex": {
+          "id": "System.matcher.method.group(integer).varParam.groupindex",
+          "nodeType": "variable",
           "name": "groupIndex",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -451,29 +729,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 28
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_groupIndex_-1:0"
+            "id": "token.type.identifier_groupIndex_0:28"
           },
-          "signature": "Integer groupIndex",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "groupIndex",
+            "textToLower": "groupindex",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 28
+              },
+              "end": {
+                "line": 0,
+                "character": 38
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_groupIndex_0:28"
+          },
+          "parentId": "System.matcher.method.group(integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.matcher.group.integer",
+            "id": "System.matcher.group.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 20
+                },
+                "end": {
+                  "line": 0,
+                  "character": 27
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:20"
+            },
+            "parentId": "System.matcher.group",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "groupcount()": {
-      "id": "System.matcher.groupcount",
+      "id": "System.matcher.method.groupcount()",
       "nodeType": "method",
       "name": "groupCount",
       "startToken": {
@@ -495,6 +821,9 @@
         },
         "id": "declaration.entity.name.function_groupCount_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -502,30 +831,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer groupCount()",
+      "overrideSignature": "public override Integer groupCount()",
       "simplifiedSignature": "groupCount()",
       "datatype": {
-        "id": "System.matcher.groupcount.Integer",
+        "id": "System.matcher.groupcount.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.matcher.groupcount",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the number of capturing groups in this Matching object's pattern. Group zero denotes the entire pattern and is not included in this count.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "hasanchoringbounds()": {
-      "id": "System.matcher.hasanchoringbounds",
+      "id": "System.matcher.method.hasanchoringbounds()",
       "nodeType": "method",
       "name": "hasAnchoringBounds",
       "startToken": {
@@ -547,6 +904,9 @@
         },
         "id": "declaration.entity.name.function_hasAnchoringBounds_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -554,30 +914,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean hasAnchoringBounds()",
+      "overrideSignature": "public override Boolean hasAnchoringBounds()",
       "simplifiedSignature": "hasAnchoringBounds()",
       "datatype": {
-        "id": "System.matcher.hasanchoringbounds.Boolean",
+        "id": "System.matcher.hasanchoringbounds.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.matcher.hasanchoringbounds",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the Matcher object has anchoring bounds, false otherwise. By default, a Matcher object uses anchoring bounds regions.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "hastransparentbounds()": {
-      "id": "System.matcher.hastransparentbounds",
+      "id": "System.matcher.method.hastransparentbounds()",
       "nodeType": "method",
       "name": "hasTransparentBounds",
       "startToken": {
@@ -599,6 +987,9 @@
         },
         "id": "declaration.entity.name.function_hasTransparentBounds_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -606,30 +997,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean hasTransparentBounds()",
+      "overrideSignature": "public override Boolean hasTransparentBounds()",
       "simplifiedSignature": "hasTransparentBounds()",
       "datatype": {
-        "id": "System.matcher.hastransparentbounds.Boolean",
+        "id": "System.matcher.hastransparentbounds.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.matcher.hastransparentbounds",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the Matcher object has transparent bounds, false if it uses opaque bounds. By default, a Matcher object uses opaque region boundaries.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "hitend()": {
-      "id": "System.matcher.hitend",
+      "id": "System.matcher.method.hitend()",
       "nodeType": "method",
       "name": "hitEnd",
       "startToken": {
@@ -651,6 +1070,9 @@
         },
         "id": "declaration.entity.name.function_hitEnd_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 10,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -658,30 +1080,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean hitEnd()",
+      "overrideSignature": "public override Boolean hitEnd()",
       "simplifiedSignature": "hitEnd()",
       "datatype": {
-        "id": "System.matcher.hitend.Boolean",
+        "id": "System.matcher.hitend.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.matcher.hitend",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the end of input was found by the search engine in the last match operation performed by this Matcher object. When this method returns true, it is possible that more input would have changed the result of the last search.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "lookingat()": {
-      "id": "System.matcher.lookingat",
+      "id": "System.matcher.method.lookingat()",
       "nodeType": "method",
       "name": "lookingAt",
       "startToken": {
@@ -703,6 +1153,9 @@
         },
         "id": "declaration.entity.name.function_lookingAt_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 11,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -710,30 +1163,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean lookingAt()",
+      "overrideSignature": "public override Boolean lookingAt()",
       "simplifiedSignature": "lookingAt()",
       "datatype": {
-        "id": "System.matcher.lookingat.Boolean",
+        "id": "System.matcher.lookingat.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.matcher.lookingat",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Attempts to match the input sequence, starting at the beginning of the region, against the pattern.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "matches()": {
-      "id": "System.matcher.matches",
+      "id": "System.matcher.method.matches()",
       "nodeType": "method",
       "name": "matches",
       "startToken": {
@@ -755,6 +1236,9 @@
         },
         "id": "declaration.entity.name.function_matches_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 12,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -762,30 +1246,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean matches()",
+      "overrideSignature": "public override Boolean matches()",
       "simplifiedSignature": "matches()",
       "datatype": {
-        "id": "System.matcher.matches.Boolean",
+        "id": "System.matcher.matches.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.matcher.matches",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Attempts to match the entire region against the pattern.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "pattern()": {
-      "id": "System.matcher.pattern",
+      "id": "System.matcher.method.pattern()",
       "nodeType": "method",
       "name": "pattern",
       "startToken": {
@@ -807,6 +1319,9 @@
         },
         "id": "declaration.entity.name.function_pattern_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 13,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -814,30 +1329,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public System.Pattern pattern()",
+      "signature": "public object pattern()",
+      "overrideSignature": "public override object pattern()",
       "simplifiedSignature": "pattern()",
       "datatype": {
-        "id": "System.matcher.pattern.System.Pattern",
+        "id": "System.matcher.pattern.datatype.object",
         "nodeType": "datatype",
-        "name": "System.Pattern"
+        "name": "object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 15
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_object_0:15"
+        },
+        "parentId": "System.matcher.pattern",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "object"
       },
       "description": "Returns the Pattern object from which this Matcher object was created.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "quotereplacement(string)": {
-      "id": "System.matcher.quotereplacement",
+      "id": "System.matcher.method.quotereplacement(string)",
       "nodeType": "method",
       "name": "quoteReplacement",
       "startToken": {
@@ -859,6 +1402,9 @@
         },
         "id": "declaration.entity.name.function_quoteReplacement_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 14,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -866,17 +1412,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -885,30 +1431,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String quoteReplacement(String inputString)",
+      "overrideSignature": "public static override String quoteReplacement(String inputString)",
       "simplifiedSignature": "quoteReplacement(String)",
       "datatype": {
-        "id": "System.matcher.quotereplacement.String",
+        "id": "System.matcher.quotereplacement.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.matcher.quotereplacement",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns a literal replacement string for the specified string inputString. The characters in the returned string match the sequence of characters in inputString.",
+      "parentName": "Matcher",
+      "variables": {},
       "params": {
-        "inputString": {
-          "id": "System.matcher.quotereplacement.inputstring",
-          "type": "var",
+        "inputstring": {
+          "id": "System.matcher.method.quotereplacement(string).varParam.inputstring",
+          "nodeType": "variable",
           "name": "inputString",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -917,29 +1489,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_inputString_-1:0"
+            "id": "token.type.identifier_inputString_0:45"
           },
-          "signature": "String inputString",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "inputString",
+            "textToLower": "inputstring",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 45
+              },
+              "end": {
+                "line": 0,
+                "character": 56
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_inputString_0:45"
+          },
+          "parentId": "System.matcher.method.quotereplacement(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.matcher.quotereplacement.string",
+            "id": "System.matcher.quotereplacement.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 38
+                },
+                "end": {
+                  "line": 0,
+                  "character": 44
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:38"
+            },
+            "parentId": "System.matcher.quotereplacement",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "region(integer,integer)": {
-      "id": "System.matcher.region",
+      "id": "System.matcher.method.region(integer,integer)",
       "nodeType": "method",
       "name": "region",
       "startToken": {
@@ -961,6 +1581,9 @@
         },
         "id": "declaration.entity.name.function_region_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 15,
+      "memberOrder": 15,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -968,30 +1591,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Matcher region(Integer start, Integer end)",
+      "signature": "public object region(Integer start, Integer end)",
+      "overrideSignature": "public override object region(Integer start, Integer end)",
       "simplifiedSignature": "region(Integer,Integer)",
       "datatype": {
-        "id": "System.matcher.region.Matcher",
+        "id": "System.matcher.region.datatype.object",
         "nodeType": "datatype",
-        "name": "Matcher"
+        "name": "object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 15
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_object_0:15"
+        },
+        "parentId": "System.matcher.region",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "object"
       },
       "description": "Sets the limits of this Matcher object's region. The region is the part of the input sequence that is searched to find a match.",
+      "parentName": "Matcher",
+      "variables": {},
       "params": {
         "start": {
-          "id": "System.matcher.region.start",
-          "type": "var",
+          "id": "System.matcher.method.region(integer,integer).varParam.start",
+          "nodeType": "variable",
           "name": "start",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1000,28 +1649,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_start_-1:0"
+            "id": "token.type.identifier_start_0:37"
           },
-          "signature": "Integer start",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "start",
+            "textToLower": "start",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 42
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_start_0:37"
+          },
+          "parentId": "System.matcher.method.region(integer,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.matcher.region.integer",
+            "id": "System.matcher.region.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 29
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:29"
+            },
+            "parentId": "System.matcher.region",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
         "end": {
-          "id": "System.matcher.region.end",
-          "type": "var",
+          "id": "System.matcher.method.region(integer,integer).varParam.end",
+          "nodeType": "variable",
           "name": "end",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1030,29 +1724,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_end_-1:0"
+            "id": "token.type.identifier_end_0:52"
           },
-          "signature": "Integer end",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "end",
+            "textToLower": "end",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 52
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_end_0:52"
+          },
+          "parentId": "System.matcher.method.region(integer,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.matcher.region.integer",
+            "id": "System.matcher.region.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 44
+                },
+                "end": {
+                  "line": 0,
+                  "character": 51
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:44"
+            },
+            "parentId": "System.matcher.region",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "regionend()": {
-      "id": "System.matcher.regionend",
+      "id": "System.matcher.method.regionend()",
       "nodeType": "method",
       "name": "regionEnd",
       "startToken": {
@@ -1074,6 +1816,9 @@
         },
         "id": "declaration.entity.name.function_regionEnd_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 16,
+      "memberOrder": 16,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1081,30 +1826,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer regionEnd()",
+      "overrideSignature": "public override Integer regionEnd()",
       "simplifiedSignature": "regionEnd()",
       "datatype": {
-        "id": "System.matcher.regionend.Integer",
+        "id": "System.matcher.regionend.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.matcher.regionend",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the end index (exclusive) of this Matcher object's region.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "regionstart()": {
-      "id": "System.matcher.regionstart",
+      "id": "System.matcher.method.regionstart()",
       "nodeType": "method",
       "name": "regionStart",
       "startToken": {
@@ -1126,6 +1899,9 @@
         },
         "id": "declaration.entity.name.function_regionStart_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 17,
+      "memberOrder": 17,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1133,30 +1909,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer regionStart()",
+      "overrideSignature": "public override Integer regionStart()",
       "simplifiedSignature": "regionStart()",
       "datatype": {
-        "id": "System.matcher.regionstart.Integer",
+        "id": "System.matcher.regionstart.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.matcher.regionstart",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the start index (inclusive) of this Matcher object's region.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "replaceall(string)": {
-      "id": "System.matcher.replaceall",
+      "id": "System.matcher.method.replaceall(string)",
       "nodeType": "method",
       "name": "replaceAll",
       "startToken": {
@@ -1178,6 +1982,9 @@
         },
         "id": "declaration.entity.name.function_replaceAll_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 18,
+      "memberOrder": 18,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1185,30 +1992,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String replaceAll(String replacementString)",
+      "overrideSignature": "public override String replaceAll(String replacementString)",
       "simplifiedSignature": "replaceAll(String)",
       "datatype": {
-        "id": "System.matcher.replaceall.String",
+        "id": "System.matcher.replaceall.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.matcher.replaceall",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Replaces every subsequence of the input sequence that matches the pattern with the replacement string.",
+      "parentName": "Matcher",
+      "variables": {},
       "params": {
-        "replacementString": {
-          "id": "System.matcher.replaceall.replacementstring",
-          "type": "var",
+        "replacementstring": {
+          "id": "System.matcher.method.replaceall(string).varParam.replacementstring",
+          "nodeType": "variable",
           "name": "replacementString",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1217,29 +2050,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 32
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_replacementString_-1:0"
+            "id": "token.type.identifier_replacementString_0:32"
           },
-          "signature": "String replacementString",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "replacementString",
+            "textToLower": "replacementstring",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 32
+              },
+              "end": {
+                "line": 0,
+                "character": 49
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_replacementString_0:32"
+          },
+          "parentId": "System.matcher.method.replaceall(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.matcher.replaceall.string",
+            "id": "System.matcher.replaceall.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 31
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:25"
+            },
+            "parentId": "System.matcher.replaceall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "replacefirst(string)": {
-      "id": "System.matcher.replacefirst",
+      "id": "System.matcher.method.replacefirst(string)",
       "nodeType": "method",
       "name": "replaceFirst",
       "startToken": {
@@ -1261,6 +2142,9 @@
         },
         "id": "declaration.entity.name.function_replaceFirst_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 19,
+      "memberOrder": 19,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1268,30 +2152,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String replaceFirst(String replacementString)",
+      "overrideSignature": "public override String replaceFirst(String replacementString)",
       "simplifiedSignature": "replaceFirst(String)",
       "datatype": {
-        "id": "System.matcher.replacefirst.String",
+        "id": "System.matcher.replacefirst.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.matcher.replacefirst",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Replaces the first subsequence of the input sequence that matches the pattern with the replacement string.",
+      "parentName": "Matcher",
+      "variables": {},
       "params": {
-        "replacementString": {
-          "id": "System.matcher.replacefirst.replacementstring",
-          "type": "var",
+        "replacementstring": {
+          "id": "System.matcher.method.replacefirst(string).varParam.replacementstring",
+          "nodeType": "variable",
           "name": "replacementString",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1300,29 +2210,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_replacementString_-1:0"
+            "id": "token.type.identifier_replacementString_0:34"
           },
-          "signature": "String replacementString",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "replacementString",
+            "textToLower": "replacementstring",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 51
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_replacementString_0:34"
+          },
+          "parentId": "System.matcher.method.replacefirst(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.matcher.replacefirst.string",
+            "id": "System.matcher.replacefirst.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 27
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:27"
+            },
+            "parentId": "System.matcher.replacefirst",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "requireend()": {
-      "id": "System.matcher.requireend",
+      "id": "System.matcher.method.requireend()",
       "nodeType": "method",
       "name": "requireEnd",
       "startToken": {
@@ -1344,6 +2302,9 @@
         },
         "id": "declaration.entity.name.function_requireEnd_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 20,
+      "memberOrder": 20,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1351,30 +2312,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean requireEnd()",
+      "overrideSignature": "public override Boolean requireEnd()",
       "simplifiedSignature": "requireEnd()",
       "datatype": {
-        "id": "System.matcher.requireend.Boolean",
+        "id": "System.matcher.requireend.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.matcher.requireend",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if more input could change a positive match into a negative one.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "reset()": {
-      "id": "System.matcher.reset",
+      "id": "System.matcher.method.reset()",
       "nodeType": "method",
       "name": "reset",
       "startToken": {
@@ -1396,6 +2385,9 @@
         },
         "id": "declaration.entity.name.function_reset_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 21,
+      "memberOrder": 21,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1403,30 +2395,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Matcher reset()",
+      "signature": "public object reset()",
+      "overrideSignature": "public override object reset()",
       "simplifiedSignature": "reset()",
       "datatype": {
-        "id": "System.matcher.reset.Matcher",
+        "id": "System.matcher.reset.datatype.object",
         "nodeType": "datatype",
-        "name": "Matcher"
+        "name": "object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 15
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_object_0:15"
+        },
+        "parentId": "System.matcher.reset",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "object"
       },
       "description": "Resets this Matcher object. Resetting a Matcher object discards all of its explicit state information.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "reset(string)": {
-      "id": "System.matcher.reset",
+      "id": "System.matcher.method.reset(string)",
       "nodeType": "method",
       "name": "reset",
       "startToken": {
@@ -1448,6 +2468,9 @@
         },
         "id": "declaration.entity.name.function_reset_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 22,
+      "memberOrder": 22,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1455,30 +2478,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Matcher reset(String inputSequence)",
+      "overrideSignature": "public override Matcher reset(String inputSequence)",
       "simplifiedSignature": "reset(String)",
       "datatype": {
-        "id": "System.matcher.reset.Matcher",
+        "id": "System.matcher.reset.datatype.Matcher",
         "nodeType": "datatype",
-        "name": "Matcher"
+        "name": "Matcher",
+        "startToken": {
+          "type": "datatype.custom.class",
+          "text": "Matcher",
+          "textToLower": "matcher",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Matcher_0:7"
+        },
+        "parentId": "System.matcher.reset",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Matcher"
       },
       "description": "Resets this Matcher object with the new input sequence. Resetting a Matcher object discards all of its explicit state information.",
+      "parentName": "Matcher",
+      "variables": {},
       "params": {
-        "inputSequence": {
-          "id": "System.matcher.reset.inputsequence",
-          "type": "var",
+        "inputsequence": {
+          "id": "System.matcher.method.reset(string).varParam.inputsequence",
+          "nodeType": "variable",
           "name": "inputSequence",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1487,29 +2536,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 28
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_inputSequence_-1:0"
+            "id": "token.type.identifier_inputSequence_0:28"
           },
-          "signature": "String inputSequence",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "inputSequence",
+            "textToLower": "inputsequence",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 28
+              },
+              "end": {
+                "line": 0,
+                "character": 41
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_inputSequence_0:28"
+          },
+          "parentId": "System.matcher.method.reset(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.matcher.reset.string",
+            "id": "System.matcher.reset.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 21
+                },
+                "end": {
+                  "line": 0,
+                  "character": 27
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:21"
+            },
+            "parentId": "System.matcher.reset",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "start()": {
-      "id": "System.matcher.start",
+      "id": "System.matcher.method.start()",
       "nodeType": "method",
       "name": "start",
       "startToken": {
@@ -1531,6 +2628,9 @@
         },
         "id": "declaration.entity.name.function_start_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 23,
+      "memberOrder": 23,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1538,30 +2638,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer start()",
+      "overrideSignature": "public override Integer start()",
       "simplifiedSignature": "start()",
       "datatype": {
-        "id": "System.matcher.start.Integer",
+        "id": "System.matcher.start.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.matcher.start",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the start index of the first character of the previous match.",
-      "params": {}
+      "parentName": "Matcher",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "start(integer)": {
-      "id": "System.matcher.start",
+      "id": "System.matcher.method.start(integer)",
       "nodeType": "method",
       "name": "start",
       "startToken": {
@@ -1583,6 +2711,9 @@
         },
         "id": "declaration.entity.name.function_start_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 24,
+      "memberOrder": 24,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1590,30 +2721,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer start(Integer groupIndex)",
+      "overrideSignature": "public override Integer start(Integer groupIndex)",
       "simplifiedSignature": "start(Integer)",
       "datatype": {
-        "id": "System.matcher.start.Integer",
+        "id": "System.matcher.start.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.matcher.start",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the start index of the subsequence captured by the group specified by the group index during the previous match operation. Captured groups are indexed from left to right, starting at one. Group zero denotes the entire pattern, so the expression m.start(0) is equivalent to m.start().",
+      "parentName": "Matcher",
+      "variables": {},
       "params": {
-        "groupIndex": {
-          "id": "System.matcher.start.groupindex",
-          "type": "var",
+        "groupindex": {
+          "id": "System.matcher.method.start(integer).varParam.groupindex",
+          "nodeType": "variable",
           "name": "groupIndex",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1622,29 +2779,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_groupIndex_-1:0"
+            "id": "token.type.identifier_groupIndex_0:29"
           },
-          "signature": "Integer groupIndex",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "groupIndex",
+            "textToLower": "groupindex",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 39
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_groupIndex_0:29"
+          },
+          "parentId": "System.matcher.method.start(integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.matcher.start.integer",
+            "id": "System.matcher.start.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 21
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:21"
+            },
+            "parentId": "System.matcher.start",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "useanchoringbounds(boolean)": {
-      "id": "System.matcher.useanchoringbounds",
+      "id": "System.matcher.method.useanchoringbounds(boolean)",
       "nodeType": "method",
       "name": "useAnchoringBounds",
       "startToken": {
@@ -1666,6 +2871,9 @@
         },
         "id": "declaration.entity.name.function_useAnchoringBounds_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 25,
+      "memberOrder": 25,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1673,30 +2881,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Matcher useAnchoringBounds(Boolean anchoringBounds)",
+      "signature": "public object useAnchoringBounds(Boolean anchoringBounds)",
+      "overrideSignature": "public override object useAnchoringBounds(Boolean anchoringBounds)",
       "simplifiedSignature": "useAnchoringBounds(Boolean)",
       "datatype": {
-        "id": "System.matcher.useanchoringbounds.Matcher",
+        "id": "System.matcher.useanchoringbounds.datatype.object",
         "nodeType": "datatype",
-        "name": "Matcher"
+        "name": "object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 15
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_object_0:15"
+        },
+        "parentId": "System.matcher.useanchoringbounds",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "object"
       },
       "description": "Sets the anchoring bounds of the region for the Matcher object. By default, a Matcher object uses anchoring bounds regions.",
+      "parentName": "Matcher",
+      "variables": {},
       "params": {
-        "anchoringBounds": {
-          "id": "System.matcher.useanchoringbounds.anchoringbounds",
-          "type": "var",
+        "anchoringbounds": {
+          "id": "System.matcher.method.useanchoringbounds(boolean).varParam.anchoringbounds",
+          "nodeType": "variable",
           "name": "anchoringBounds",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1705,29 +2939,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_anchoringBounds_-1:0"
+            "id": "token.type.identifier_anchoringBounds_0:49"
           },
-          "signature": "Boolean anchoringBounds",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "anchoringBounds",
+            "textToLower": "anchoringbounds",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 64
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_anchoringBounds_0:49"
+          },
+          "parentId": "System.matcher.method.useanchoringbounds(boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.matcher.useanchoringbounds.boolean",
+            "id": "System.matcher.useanchoringbounds.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 41
+                },
+                "end": {
+                  "line": 0,
+                  "character": 48
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:41"
+            },
+            "parentId": "System.matcher.useanchoringbounds",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "If you specify true, the Matcher object uses anchoring bounds. If you specify false, non-anchoring bounds are used.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "usepattern(pattern)": {
-      "id": "System.matcher.usepattern",
+      "id": "System.matcher.method.usepattern(pattern)",
       "nodeType": "method",
       "name": "usePattern",
       "startToken": {
@@ -1749,6 +3031,9 @@
         },
         "id": "declaration.entity.name.function_usePattern_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 26,
+      "memberOrder": 26,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1756,30 +3041,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Matcher usePattern(Pattern pattern)",
+      "signature": "public object usePattern(Pattern pattern)",
+      "overrideSignature": "public override object usePattern(Pattern pattern)",
       "simplifiedSignature": "usePattern(Pattern)",
       "datatype": {
-        "id": "System.matcher.usepattern.Matcher",
+        "id": "System.matcher.usepattern.datatype.object",
         "nodeType": "datatype",
-        "name": "Matcher"
+        "name": "object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 15
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_object_0:15"
+        },
+        "parentId": "System.matcher.usepattern",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "object"
       },
       "description": "Changes the Pattern object that the Matcher object uses to find matches. This method causes the Matcher object to lose information about the groups of the last match that occurred. The Matcher object's position in the input is maintained.",
+      "parentName": "Matcher",
+      "variables": {},
       "params": {
         "pattern": {
-          "id": "System.matcher.usepattern.pattern",
-          "type": "var",
+          "id": "System.matcher.method.usepattern(pattern).varParam.pattern",
+          "nodeType": "variable",
           "name": "pattern",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1788,29 +3099,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pattern_-1:0"
+            "id": "token.type.identifier_pattern_0:41"
           },
-          "signature": "Pattern pattern",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pattern",
+            "textToLower": "pattern",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 41
+              },
+              "end": {
+                "line": 0,
+                "character": 48
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pattern_0:41"
+          },
+          "parentId": "System.matcher.method.usepattern(pattern)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.matcher.usepattern.pattern",
+            "id": "System.matcher.usepattern.datatype.Pattern",
             "nodeType": "datatype",
-            "name": "Pattern"
-          }
+            "name": "Pattern",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "Pattern",
+              "textToLower": "pattern",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 33
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Pattern_0:33"
+            },
+            "parentId": "System.matcher.usepattern",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Pattern"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "usetransparentbounds(boolean)": {
-      "id": "System.matcher.usetransparentbounds",
+      "id": "System.matcher.method.usetransparentbounds(boolean)",
       "nodeType": "method",
       "name": "useTransparentBounds",
       "startToken": {
@@ -1832,6 +3191,9 @@
         },
         "id": "declaration.entity.name.function_useTransparentBounds_-1:0"
       },
+      "parentId": "System.matcher",
+      "order": 27,
+      "memberOrder": 27,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1839,30 +3201,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Matcher useTransparentBounds(Boolean transparentBounds)",
+      "signature": "public object useTransparentBounds(Boolean transparentBounds)",
+      "overrideSignature": "public override object useTransparentBounds(Boolean transparentBounds)",
       "simplifiedSignature": "useTransparentBounds(Boolean)",
       "datatype": {
-        "id": "System.matcher.usetransparentbounds.Matcher",
+        "id": "System.matcher.usetransparentbounds.datatype.object",
         "nodeType": "datatype",
-        "name": "Matcher"
+        "name": "object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 15
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_object_0:15"
+        },
+        "parentId": "System.matcher.usetransparentbounds",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "object"
       },
       "description": "Sets the transparency bounds for this Matcher object. By default, a Matcher object uses anchoring bounds regions.",
+      "parentName": "Matcher",
+      "variables": {},
       "params": {
-        "transparentBounds": {
-          "id": "System.matcher.usetransparentbounds.transparentbounds",
-          "type": "var",
+        "transparentbounds": {
+          "id": "System.matcher.method.usetransparentbounds(boolean).varParam.transparentbounds",
+          "nodeType": "variable",
           "name": "transparentBounds",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1871,30 +3259,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 68
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_transparentBounds_-1:0"
+            "id": "token.type.identifier_transparentBounds_0:51"
           },
-          "signature": "Boolean transparentBounds",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "transparentBounds",
+            "textToLower": "transparentbounds",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 51
+              },
+              "end": {
+                "line": 0,
+                "character": 68
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_transparentBounds_0:51"
+          },
+          "parentId": "System.matcher.method.usetransparentbounds(boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.matcher.usetransparentbounds.boolean",
+            "id": "System.matcher.usetransparentbounds.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 43
+                },
+                "end": {
+                  "line": 0,
+                  "character": 50
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:43"
+            },
+            "parentId": "System.matcher.usetransparentbounds",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "If you specify true, the Matcher object uses transparent bounds. If you specify false, opaque bounds are used.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 27,
+  "queries": []
 }

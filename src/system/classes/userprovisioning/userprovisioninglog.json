@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_UserProvisioningLog_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "log(string,string)": {
-      "id": "UserProvisioning.userprovisioninglog.log",
+      "id": "UserProvisioning.userprovisioninglog.method.log(string,string)",
       "nodeType": "method",
       "name": "log",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_log_-1:0"
       },
+      "parentId": "UserProvisioning.userprovisioninglog",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void log(String userProvisioningRequestId, String details)",
+      "overrideSignature": "public override void log(String userProvisioningRequestId, String details)",
       "simplifiedSignature": "log(String,String)",
       "datatype": {
-        "id": "UserProvisioning.userprovisioninglog.log.void",
+        "id": "UserProvisioning.userprovisioninglog.log.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "UserProvisioning.userprovisioninglog.log",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Writes a specific message, such as an error message, to monitor the progress of a user provisioning request.",
+      "parentName": "UserProvisioningLog",
+      "variables": {},
       "params": {
-        "userProvisioningRequestId": {
-          "id": "UserProvisioning.userprovisioninglog.log.userprovisioningrequestid",
-          "type": "var",
+        "userprovisioningrequestid": {
+          "id": "UserProvisioning.userprovisioninglog.method.log(string,string).varParam.userprovisioningrequestid",
+          "nodeType": "variable",
           "name": "userProvisioningRequestId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,28 +160,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 23
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userProvisioningRequestId_-1:0"
+            "id": "token.type.identifier_userProvisioningRequestId_0:23"
           },
-          "signature": "String userProvisioningRequestId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userProvisioningRequestId",
+            "textToLower": "userprovisioningrequestid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 23
+              },
+              "end": {
+                "line": 0,
+                "character": 48
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userProvisioningRequestId_0:23"
+          },
+          "parentId": "UserProvisioning.userprovisioninglog.method.log(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "UserProvisioning.userprovisioninglog.log.string",
+            "id": "UserProvisioning.userprovisioninglog.log.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 16
+                },
+                "end": {
+                  "line": 0,
+                  "character": 22
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:16"
+            },
+            "parentId": "UserProvisioning.userprovisioninglog.log",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "details": {
-          "id": "UserProvisioning.userprovisioninglog.log.details",
-          "type": "var",
+          "id": "UserProvisioning.userprovisioninglog.method.log(string,string).varParam.details",
+          "nodeType": "variable",
           "name": "details",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -159,29 +235,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_details_-1:0"
+            "id": "token.type.identifier_details_0:57"
           },
-          "signature": "String details",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "details",
+            "textToLower": "details",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 57
+              },
+              "end": {
+                "line": 0,
+                "character": 64
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_details_0:57"
+          },
+          "parentId": "UserProvisioning.userprovisioninglog.method.log(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "UserProvisioning.userprovisioninglog.log.string",
+            "id": "UserProvisioning.userprovisioninglog.log.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 50
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:50"
+            },
+            "parentId": "UserProvisioning.userprovisioninglog.log",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "A unique identifier for the user provisioning request. The text for the message.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "log(string,string,string)": {
-      "id": "UserProvisioning.userprovisioninglog.log",
+      "id": "UserProvisioning.userprovisioninglog.method.log(string,string,string)",
       "nodeType": "method",
       "name": "log",
       "startToken": {
@@ -203,6 +327,9 @@
         },
         "id": "declaration.entity.name.function_log_-1:0"
       },
+      "parentId": "UserProvisioning.userprovisioninglog",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -210,30 +337,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void log(String userProvisioningRequestId, String status, String details)",
+      "overrideSignature": "public override void log(String userProvisioningRequestId, String status, String details)",
       "simplifiedSignature": "log(String,String,String)",
       "datatype": {
-        "id": "UserProvisioning.userprovisioninglog.log.void",
+        "id": "UserProvisioning.userprovisioninglog.log.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "UserProvisioning.userprovisioninglog.log",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Writes a specific status and message, such a status and detailed error message, to monitor the progress of a user provisioning request.",
+      "parentName": "UserProvisioningLog",
+      "variables": {},
       "params": {
-        "userProvisioningRequestId": {
-          "id": "UserProvisioning.userprovisioninglog.log.userprovisioningrequestid",
-          "type": "var",
+        "userprovisioningrequestid": {
+          "id": "UserProvisioning.userprovisioninglog.method.log(string,string,string).varParam.userprovisioningrequestid",
+          "nodeType": "variable",
           "name": "userProvisioningRequestId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -242,28 +395,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 23
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userProvisioningRequestId_-1:0"
+            "id": "token.type.identifier_userProvisioningRequestId_0:23"
           },
-          "signature": "String userProvisioningRequestId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userProvisioningRequestId",
+            "textToLower": "userprovisioningrequestid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 23
+              },
+              "end": {
+                "line": 0,
+                "character": 48
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userProvisioningRequestId_0:23"
+          },
+          "parentId": "UserProvisioning.userprovisioninglog.method.log(string,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "UserProvisioning.userprovisioninglog.log.string",
+            "id": "UserProvisioning.userprovisioninglog.log.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 16
+                },
+                "end": {
+                  "line": 0,
+                  "character": 22
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:16"
+            },
+            "parentId": "UserProvisioning.userprovisioninglog.log",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "status": {
-          "id": "UserProvisioning.userprovisioninglog.log.status",
-          "type": "var",
+          "id": "UserProvisioning.userprovisioninglog.method.log(string,string,string).varParam.status",
+          "nodeType": "variable",
           "name": "status",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -272,28 +470,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 63
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_status_-1:0"
+            "id": "token.type.identifier_status_0:57"
           },
-          "signature": "String status",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "status",
+            "textToLower": "status",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 57
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_status_0:57"
+          },
+          "parentId": "UserProvisioning.userprovisioninglog.method.log(string,string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "UserProvisioning.userprovisioninglog.log.string",
+            "id": "UserProvisioning.userprovisioninglog.log.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 50
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:50"
+            },
+            "parentId": "UserProvisioning.userprovisioninglog.log",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "details": {
-          "id": "UserProvisioning.userprovisioninglog.log.details",
-          "type": "var",
+          "id": "UserProvisioning.userprovisioninglog.method.log(string,string,string).varParam.details",
+          "nodeType": "variable",
           "name": "details",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -302,29 +545,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_details_-1:0"
+            "id": "token.type.identifier_details_0:72"
           },
-          "signature": "String details",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "details",
+            "textToLower": "details",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 72
+              },
+              "end": {
+                "line": 0,
+                "character": 79
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_details_0:72"
+          },
+          "parentId": "UserProvisioning.userprovisioninglog.method.log(string,string,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "UserProvisioning.userprovisioninglog.log.string",
+            "id": "UserProvisioning.userprovisioninglog.log.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:65"
+            },
+            "parentId": "UserProvisioning.userprovisioninglog.log",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "A unique identifier for the user provisioning request. A description of the current state. For example, while invoking a third-party API, the status could be invoke. The text for the message.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "log(string,string,string,string,string)": {
-      "id": "UserProvisioning.userprovisioninglog.log",
+      "id": "UserProvisioning.userprovisioninglog.method.log(string,string,string,string,string)",
       "nodeType": "method",
       "name": "log",
       "startToken": {
@@ -346,6 +637,9 @@
         },
         "id": "declaration.entity.name.function_log_-1:0"
       },
+      "parentId": "UserProvisioning.userprovisioninglog",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -353,30 +647,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void log(String userProvisioningRequestId, String externalUserId, String externalUserName, String userId, String details)",
+      "overrideSignature": "public override void log(String userProvisioningRequestId, String externalUserId, String externalUserName, String userId, String details)",
       "simplifiedSignature": "log(String,String,String,String,String)",
       "datatype": {
-        "id": "UserProvisioning.userprovisioninglog.log.void",
+        "id": "UserProvisioning.userprovisioninglog.log.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "UserProvisioning.userprovisioninglog.log",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Writes a specific message, such as an error message, to monitor the progress of a user provisioning request associated with a specific user.",
+      "parentName": "UserProvisioningLog",
+      "variables": {},
       "params": {
-        "userProvisioningRequestId": {
-          "id": "UserProvisioning.userprovisioninglog.log.userprovisioningrequestid",
-          "type": "var",
+        "userprovisioningrequestid": {
+          "id": "UserProvisioning.userprovisioninglog.method.log(string,string,string,string,string).varParam.userprovisioningrequestid",
+          "nodeType": "variable",
           "name": "userProvisioningRequestId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -385,28 +705,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 23
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userProvisioningRequestId_-1:0"
+            "id": "token.type.identifier_userProvisioningRequestId_0:23"
           },
-          "signature": "String userProvisioningRequestId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userProvisioningRequestId",
+            "textToLower": "userprovisioningrequestid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 23
+              },
+              "end": {
+                "line": 0,
+                "character": 48
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userProvisioningRequestId_0:23"
+          },
+          "parentId": "UserProvisioning.userprovisioninglog.method.log(string,string,string,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "UserProvisioning.userprovisioninglog.log.string",
+            "id": "UserProvisioning.userprovisioninglog.log.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 16
+                },
+                "end": {
+                  "line": 0,
+                  "character": 22
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:16"
+            },
+            "parentId": "UserProvisioning.userprovisioninglog.log",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "externalUserId": {
-          "id": "UserProvisioning.userprovisioninglog.log.externaluserid",
-          "type": "var",
+        "externaluserid": {
+          "id": "UserProvisioning.userprovisioninglog.method.log(string,string,string,string,string).varParam.externaluserid",
+          "nodeType": "variable",
           "name": "externalUserId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -415,28 +780,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_externalUserId_-1:0"
+            "id": "token.type.identifier_externalUserId_0:57"
           },
-          "signature": "String externalUserId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "externalUserId",
+            "textToLower": "externaluserid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 57
+              },
+              "end": {
+                "line": 0,
+                "character": 71
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_externalUserId_0:57"
+          },
+          "parentId": "UserProvisioning.userprovisioninglog.method.log(string,string,string,string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "UserProvisioning.userprovisioninglog.log.string",
+            "id": "UserProvisioning.userprovisioninglog.log.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 50
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:50"
+            },
+            "parentId": "UserProvisioning.userprovisioninglog.log",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "externalUserName": {
-          "id": "UserProvisioning.userprovisioninglog.log.externalusername",
-          "type": "var",
+        "externalusername": {
+          "id": "UserProvisioning.userprovisioninglog.method.log(string,string,string,string,string).varParam.externalusername",
+          "nodeType": "variable",
           "name": "externalUserName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -445,28 +855,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 96
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_externalUserName_-1:0"
+            "id": "token.type.identifier_externalUserName_0:80"
           },
-          "signature": "String externalUserName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "externalUserName",
+            "textToLower": "externalusername",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 80
+              },
+              "end": {
+                "line": 0,
+                "character": 96
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_externalUserName_0:80"
+          },
+          "parentId": "UserProvisioning.userprovisioninglog.method.log(string,string,string,string,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "UserProvisioning.userprovisioninglog.log.string",
+            "id": "UserProvisioning.userprovisioninglog.log.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 73
+                },
+                "end": {
+                  "line": 0,
+                  "character": 79
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:73"
+            },
+            "parentId": "UserProvisioning.userprovisioninglog.log",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "UserProvisioning.userprovisioninglog.log.userid",
-          "type": "var",
+        "userid": {
+          "id": "UserProvisioning.userprovisioninglog.method.log(string,string,string,string,string).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -475,28 +930,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 105
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 111
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:105"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 105
+              },
+              "end": {
+                "line": 0,
+                "character": 111
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:105"
+          },
+          "parentId": "UserProvisioning.userprovisioninglog.method.log(string,string,string,string,string)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "UserProvisioning.userprovisioninglog.log.string",
+            "id": "UserProvisioning.userprovisioninglog.log.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 98
+                },
+                "end": {
+                  "line": 0,
+                  "character": 104
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:98"
+            },
+            "parentId": "UserProvisioning.userprovisioninglog.log",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "details": {
-          "id": "UserProvisioning.userprovisioninglog.log.details",
-          "type": "var",
+          "id": "UserProvisioning.userprovisioninglog.method.log(string,string,string,string,string).varParam.details",
+          "nodeType": "variable",
           "name": "details",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -505,30 +1005,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 120
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 127
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_details_-1:0"
+            "id": "token.type.identifier_details_0:120"
           },
-          "signature": "String details",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "details",
+            "textToLower": "details",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 120
+              },
+              "end": {
+                "line": 0,
+                "character": 127
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_details_0:120"
+          },
+          "parentId": "UserProvisioning.userprovisioninglog.method.log(string,string,string,string,string)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "UserProvisioning.userprovisioninglog.log.string",
+            "id": "UserProvisioning.userprovisioninglog.log.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 113
+                },
+                "end": {
+                  "line": 0,
+                  "character": 119
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:113"
+            },
+            "parentId": "UserProvisioning.userprovisioninglog.log",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "A unique identifier for the user provisioning request. The unique identifier for the user in the target system. The username for the user in the target system. Salesforce ID of the user making the request. The text for the message.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 3,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Set_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "add(object)": {
-      "id": "System.set.add",
+      "id": "System.set.method.add(object)",
       "nodeType": "method",
       "name": "add",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_add_-1:0"
       },
+      "parentId": "System.set",
+      "order": 1,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean add(Object setElement)",
+      "overrideSignature": "public override Boolean add(Object setElement)",
       "simplifiedSignature": "add(Object)",
       "datatype": {
-        "id": "System.set.add.Boolean",
+        "id": "System.set.add.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.set.add",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Adds an element to the set if it is not already present.",
+      "parentName": "Set",
+      "variables": {},
       "params": {
-        "setElement": {
-          "id": "System.set.add.setelement",
-          "type": "var",
+        "setelement": {
+          "id": "System.set.method.add(object).varParam.setelement",
+          "nodeType": "variable",
           "name": "setElement",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,29 +160,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 26
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 36
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_setElement_-1:0"
+            "id": "token.type.identifier_setElement_0:26"
           },
-          "signature": "Object setElement",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "setElement",
+            "textToLower": "setelement",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 26
+              },
+              "end": {
+                "line": 0,
+                "character": 36
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_setElement_0:26"
+          },
+          "parentId": "System.set.method.add(object)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.set.add.object",
+            "id": "System.set.add.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 19
+                },
+                "end": {
+                  "line": 0,
+                  "character": 25
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:19"
+            },
+            "parentId": "System.set.add",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "addall(list)": {
-      "id": "System.set.addall",
+    "addall(list<object>)": {
+      "id": "System.set.method.addall(list<object>)",
       "nodeType": "method",
       "name": "addAll",
       "startToken": {
@@ -173,6 +252,9 @@
         },
         "id": "declaration.entity.name.function_addAll_-1:0"
       },
+      "parentId": "System.set",
+      "order": 2,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -180,61 +262,162 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Boolean addAll(List <Object>)",
-      "simplifiedSignature": "addAll(List)",
+      "signature": "public Boolean addAll(List<Object> fromList)",
+      "overrideSignature": "public override Boolean addAll(List<Object> fromList)",
+      "simplifiedSignature": "addAll(List<Object>)",
       "datatype": {
-        "id": "System.set.addall.Boolean",
+        "id": "System.set.addall.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.set.addall",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Adds all of the elements in the specified list to the set if they are not already present.",
+      "parentName": "Set",
+      "variables": {},
       "params": {
-        "<Object>": {
-          "id": "System.set.addall.<object>",
-          "type": "var",
-          "name": "<Object>",
+        "fromlist": {
+          "id": "System.set.method.addall(list<object>).varParam.fromlist",
+          "nodeType": "variable",
+          "name": "fromList",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Object>",
-            "textToLower": "<object>",
+            "text": "fromList",
+            "textToLower": "fromlist",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 43
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Object>_-1:0"
+            "id": "token.type.identifier_fromList_0:35"
           },
-          "signature": "List <Object>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fromList",
+            "textToLower": "fromlist",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 35
+              },
+              "end": {
+                "line": 0,
+                "character": 43
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fromList_0:35"
+          },
+          "parentId": "System.set.method.addall(list<object>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.set.addall.list",
+            "id": "System.set.addall.datatype.List<Object>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 26
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:22"
+            },
+            "parentId": "System.set.addall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.set.addall.datatype.List<Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 27
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 33
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:27"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            }
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "addall(set)": {
-      "id": "System.set.addall",
+    "addall(set<object>)": {
+      "id": "System.set.method.addall(set<object>)",
       "nodeType": "method",
       "name": "addAll",
       "startToken": {
@@ -256,6 +439,9 @@
         },
         "id": "declaration.entity.name.function_addAll_-1:0"
       },
+      "parentId": "System.set",
+      "order": 3,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -263,61 +449,162 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Boolean addAll(Set <Object>)",
-      "simplifiedSignature": "addAll(Set)",
+      "signature": "public Boolean addAll(Set<Object> fromSet)",
+      "overrideSignature": "public override Boolean addAll(Set<Object> fromSet)",
+      "simplifiedSignature": "addAll(Set<Object>)",
       "datatype": {
-        "id": "System.set.addall.Boolean",
+        "id": "System.set.addall.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.set.addall",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Adds all of the elements in the specified set to the set that calls the method if they are not already present.",
+      "parentName": "Set",
+      "variables": {},
       "params": {
-        "<Object>": {
-          "id": "System.set.addall.<object>",
-          "type": "var",
-          "name": "<Object>",
+        "fromset": {
+          "id": "System.set.method.addall(set<object>).varParam.fromset",
+          "nodeType": "variable",
+          "name": "fromSet",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Object>",
-            "textToLower": "<object>",
+            "text": "fromSet",
+            "textToLower": "fromset",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Object>_-1:0"
+            "id": "token.type.identifier_fromSet_0:34"
           },
-          "signature": "Set <Object>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fromSet",
+            "textToLower": "fromset",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 41
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fromSet_0:34"
+          },
+          "parentId": "System.set.method.addall(set<object>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.set.addall.set",
+            "id": "System.set.addall.datatype.Set<Object>",
             "nodeType": "datatype",
-            "name": "Set"
-          }
+            "name": "Set<Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Set",
+              "textToLower": "set",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 25
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Set_0:22"
+            },
+            "parentId": "System.set.addall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Set",
+            "value": {
+              "id": "System.set.addall.datatype.Set<Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 26
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 32
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:26"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            }
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "clear()": {
-      "id": "System.set.clear",
+      "id": "System.set.method.clear()",
       "nodeType": "method",
       "name": "clear",
       "startToken": {
@@ -339,6 +626,9 @@
         },
         "id": "declaration.entity.name.function_clear_-1:0"
       },
+      "parentId": "System.set",
+      "order": 4,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -346,30 +636,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void clear()",
+      "signature": "public Void clear()",
+      "overrideSignature": "public override Void clear()",
       "simplifiedSignature": "clear()",
       "datatype": {
-        "id": "System.set.clear.void",
+        "id": "System.set.clear.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "System.set.clear",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Removes all of the elements from the set.",
-      "params": {}
+      "parentName": "Set",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "clone()": {
-      "id": "System.set.clone",
+      "id": "System.set.method.clone()",
       "nodeType": "method",
       "name": "clone",
       "startToken": {
@@ -391,6 +709,9 @@
         },
         "id": "declaration.entity.name.function_clone_-1:0"
       },
+      "parentId": "System.set",
+      "order": 5,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -398,30 +719,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Set (of same type) clone()",
+      "signature": "public Set<Object> clone()",
+      "overrideSignature": "public override Set<Object> clone()",
       "simplifiedSignature": "clone()",
       "datatype": {
-        "id": "System.set.clone.Set (of same type)",
+        "id": "System.set.clone.datatype.Set<Object>",
         "nodeType": "datatype",
-        "name": "Set (of same type)"
+        "name": "Set<Object>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Set",
+          "textToLower": "set",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Set_0:7"
+        },
+        "parentId": "System.set.clone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Set",
+        "value": {
+          "id": "System.set.clone.datatype.Set<Object>.value.Object",
+          "nodeType": "datatype",
+          "name": "Object",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Object",
+            "textToLower": "object",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Object_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Object"
+        }
       },
       "description": "Makes a duplicate copy of the set.",
-      "params": {}
+      "parentName": "Set",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "contains(object)": {
-      "id": "System.set.contains",
+      "id": "System.set.method.contains(object)",
       "nodeType": "method",
       "name": "contains",
       "startToken": {
@@ -443,6 +819,9 @@
         },
         "id": "declaration.entity.name.function_contains_-1:0"
       },
+      "parentId": "System.set",
+      "order": 6,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -450,30 +829,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean contains(Object setElement)",
+      "overrideSignature": "public override Boolean contains(Object setElement)",
       "simplifiedSignature": "contains(Object)",
       "datatype": {
-        "id": "System.set.contains.Boolean",
+        "id": "System.set.contains.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.set.contains",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the set contains the specified element.",
+      "parentName": "Set",
+      "variables": {},
       "params": {
-        "setElement": {
-          "id": "System.set.contains.setelement",
-          "type": "var",
+        "setelement": {
+          "id": "System.set.method.contains(object).varParam.setelement",
+          "nodeType": "variable",
           "name": "setElement",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -482,29 +887,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 31
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_setElement_-1:0"
+            "id": "token.type.identifier_setElement_0:31"
           },
-          "signature": "Object setElement",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "setElement",
+            "textToLower": "setelement",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 31
+              },
+              "end": {
+                "line": 0,
+                "character": 41
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_setElement_0:31"
+          },
+          "parentId": "System.set.method.contains(object)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.set.contains.object",
+            "id": "System.set.contains.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 24
+                },
+                "end": {
+                  "line": 0,
+                  "character": 30
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:24"
+            },
+            "parentId": "System.set.contains",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "containsall(list)": {
-      "id": "System.set.containsall",
+    "containsall(list<object>)": {
+      "id": "System.set.method.containsall(list<object>)",
       "nodeType": "method",
       "name": "containsAll",
       "startToken": {
@@ -526,6 +979,9 @@
         },
         "id": "declaration.entity.name.function_containsAll_-1:0"
       },
+      "parentId": "System.set",
+      "order": 7,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -533,61 +989,162 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Boolean containsAll(List <Object>)",
-      "simplifiedSignature": "containsAll(List)",
+      "signature": "public Boolean containsAll(List<Object> listToCompare)",
+      "overrideSignature": "public override Boolean containsAll(List<Object> listToCompare)",
+      "simplifiedSignature": "containsAll(List<Object>)",
       "datatype": {
-        "id": "System.set.containsall.Boolean",
+        "id": "System.set.containsall.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.set.containsall",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the set contains all of the elements in the specified list. The list must be of the same type as the set that calls the method.",
+      "parentName": "Set",
+      "variables": {},
       "params": {
-        "<Object>": {
-          "id": "System.set.containsall.<object>",
-          "type": "var",
-          "name": "<Object>",
+        "listtocompare": {
+          "id": "System.set.method.containsall(list<object>).varParam.listtocompare",
+          "nodeType": "variable",
+          "name": "listToCompare",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Object>",
-            "textToLower": "<object>",
+            "text": "listToCompare",
+            "textToLower": "listtocompare",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 40
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Object>_-1:0"
+            "id": "token.type.identifier_listToCompare_0:40"
           },
-          "signature": "List <Object>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "listToCompare",
+            "textToLower": "listtocompare",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 40
+              },
+              "end": {
+                "line": 0,
+                "character": 53
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_listToCompare_0:40"
+          },
+          "parentId": "System.set.method.containsall(list<object>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.set.containsall.list",
+            "id": "System.set.containsall.datatype.List<Object>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 27
+                },
+                "end": {
+                  "line": 0,
+                  "character": 31
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:27"
+            },
+            "parentId": "System.set.containsall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.set.containsall.datatype.List<Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 32
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 38
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:32"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            }
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "containsall(set)": {
-      "id": "System.set.containsall",
+    "containsall(set<object>)": {
+      "id": "System.set.method.containsall(set<object>)",
       "nodeType": "method",
       "name": "containsAll",
       "startToken": {
@@ -609,6 +1166,9 @@
         },
         "id": "declaration.entity.name.function_containsAll_-1:0"
       },
+      "parentId": "System.set",
+      "order": 8,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -616,61 +1176,162 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Boolean containsAll(Set <Object>)",
-      "simplifiedSignature": "containsAll(Set)",
+      "signature": "public Boolean containsAll(Set<Object> setToCompare)",
+      "overrideSignature": "public override Boolean containsAll(Set<Object> setToCompare)",
+      "simplifiedSignature": "containsAll(Set<Object>)",
       "datatype": {
-        "id": "System.set.containsall.Boolean",
+        "id": "System.set.containsall.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.set.containsall",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the set contains all of the elements in the specified set. The specified set must be of the same type as the original set that calls the method.",
+      "parentName": "Set",
+      "variables": {},
       "params": {
-        "<Object>": {
-          "id": "System.set.containsall.<object>",
-          "type": "var",
-          "name": "<Object>",
+        "settocompare": {
+          "id": "System.set.method.containsall(set<object>).varParam.settocompare",
+          "nodeType": "variable",
+          "name": "setToCompare",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Object>",
-            "textToLower": "<object>",
+            "text": "setToCompare",
+            "textToLower": "settocompare",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Object>_-1:0"
+            "id": "token.type.identifier_setToCompare_0:39"
           },
-          "signature": "Set <Object>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "setToCompare",
+            "textToLower": "settocompare",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 39
+              },
+              "end": {
+                "line": 0,
+                "character": 51
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_setToCompare_0:39"
+          },
+          "parentId": "System.set.method.containsall(set<object>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.set.containsall.set",
+            "id": "System.set.containsall.datatype.Set<Object>",
             "nodeType": "datatype",
-            "name": "Set"
-          }
+            "name": "Set<Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Set",
+              "textToLower": "set",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 27
+                },
+                "end": {
+                  "line": 0,
+                  "character": 30
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Set_0:27"
+            },
+            "parentId": "System.set.containsall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Set",
+            "value": {
+              "id": "System.set.containsall.datatype.Set<Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 31
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 37
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:31"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            }
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "equals(set)": {
-      "id": "System.set.equals",
+    "equals(set<object>)": {
+      "id": "System.set.method.equals(set<object>)",
       "nodeType": "method",
       "name": "equals",
       "startToken": {
@@ -692,6 +1353,9 @@
         },
         "id": "declaration.entity.name.function_equals_-1:0"
       },
+      "parentId": "System.set",
+      "order": 9,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -699,61 +1363,162 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Boolean equals(Set <Object>)",
-      "simplifiedSignature": "equals(Set)",
+      "signature": "public Boolean equals(Set<Object> set2)",
+      "overrideSignature": "public override Boolean equals(Set<Object> set2)",
+      "simplifiedSignature": "equals(Set<Object>)",
       "datatype": {
-        "id": "System.set.equals.Boolean",
+        "id": "System.set.equals.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.set.equals",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Compares this set with the specified set and returns true if both sets are equal; otherwise, returns false.",
+      "parentName": "Set",
+      "variables": {},
       "params": {
-        "<Object>": {
-          "id": "System.set.equals.<object>",
-          "type": "var",
-          "name": "<Object>",
+        "set2": {
+          "id": "System.set.method.equals(set<object>).varParam.set2",
+          "nodeType": "variable",
+          "name": "set2",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Object>",
-            "textToLower": "<object>",
+            "text": "set2",
+            "textToLower": "set2",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Object>_-1:0"
+            "id": "token.type.identifier_set2_0:34"
           },
-          "signature": "Set <Object>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "set2",
+            "textToLower": "set2",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 38
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_set2_0:34"
+          },
+          "parentId": "System.set.method.equals(set<object>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.set.equals.set",
+            "id": "System.set.equals.datatype.Set<Object>",
             "nodeType": "datatype",
-            "name": "Set"
-          }
+            "name": "Set<Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Set",
+              "textToLower": "set",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 25
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Set_0:22"
+            },
+            "parentId": "System.set.equals",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Set",
+            "value": {
+              "id": "System.set.equals.datatype.Set<Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 26
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 32
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:26"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            }
+          },
+          "description": "The set2 argument is the set to compare this set with.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "hashcode()": {
-      "id": "System.set.hashcode",
+      "id": "System.set.method.hashcode()",
       "nodeType": "method",
       "name": "hashCode",
       "startToken": {
@@ -775,6 +1540,9 @@
         },
         "id": "declaration.entity.name.function_hashCode_-1:0"
       },
+      "parentId": "System.set",
+      "order": 10,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -782,30 +1550,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer hashCode()",
+      "overrideSignature": "public override Integer hashCode()",
       "simplifiedSignature": "hashCode()",
       "datatype": {
-        "id": "System.set.hashcode.Integer",
+        "id": "System.set.hashcode.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.set.hashcode",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the hashcode corresponding to this set and its contents.",
-      "params": {}
+      "parentName": "Set",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "isempty()": {
-      "id": "System.set.isempty",
+      "id": "System.set.method.isempty()",
       "nodeType": "method",
       "name": "isEmpty",
       "startToken": {
@@ -827,6 +1623,9 @@
         },
         "id": "declaration.entity.name.function_isEmpty_-1:0"
       },
+      "parentId": "System.set",
+      "order": 11,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -834,30 +1633,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean isEmpty()",
+      "overrideSignature": "public override Boolean isEmpty()",
       "simplifiedSignature": "isEmpty()",
       "datatype": {
-        "id": "System.set.isempty.Boolean",
+        "id": "System.set.isempty.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.set.isempty",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the set has zero elements.",
-      "params": {}
+      "parentName": "Set",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "remove(object)": {
-      "id": "System.set.remove",
+      "id": "System.set.method.remove(object)",
       "nodeType": "method",
       "name": "remove",
       "startToken": {
@@ -879,6 +1706,9 @@
         },
         "id": "declaration.entity.name.function_remove_-1:0"
       },
+      "parentId": "System.set",
+      "order": 12,
+      "memberOrder": 15,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -886,30 +1716,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean remove(Object setElement)",
+      "overrideSignature": "public override Boolean remove(Object setElement)",
       "simplifiedSignature": "remove(Object)",
       "datatype": {
-        "id": "System.set.remove.Boolean",
+        "id": "System.set.remove.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.set.remove",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Removes the specified element from the set if it is present.",
+      "parentName": "Set",
+      "variables": {},
       "params": {
-        "setElement": {
-          "id": "System.set.remove.setelement",
-          "type": "var",
+        "setelement": {
+          "id": "System.set.method.remove(object).varParam.setelement",
+          "nodeType": "variable",
           "name": "setElement",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -918,29 +1774,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_setElement_-1:0"
+            "id": "token.type.identifier_setElement_0:29"
           },
-          "signature": "Object setElement",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "setElement",
+            "textToLower": "setelement",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 39
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_setElement_0:29"
+          },
+          "parentId": "System.set.method.remove(object)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.set.remove.object",
+            "id": "System.set.remove.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:22"
+            },
+            "parentId": "System.set.remove",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "removeall(list)": {
-      "id": "System.set.removeall",
+    "removeall(list<object>)": {
+      "id": "System.set.method.removeall(list<object>)",
       "nodeType": "method",
       "name": "removeAll",
       "startToken": {
@@ -962,6 +1866,9 @@
         },
         "id": "declaration.entity.name.function_removeAll_-1:0"
       },
+      "parentId": "System.set",
+      "order": 13,
+      "memberOrder": 16,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -969,61 +1876,162 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Boolean removeAll(List <Object>)",
-      "simplifiedSignature": "removeAll(List)",
+      "signature": "public Boolean removeAll(List<Object> listOfElementsToRemove)",
+      "overrideSignature": "public override Boolean removeAll(List<Object> listOfElementsToRemove)",
+      "simplifiedSignature": "removeAll(List<Object>)",
       "datatype": {
-        "id": "System.set.removeall.Boolean",
+        "id": "System.set.removeall.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.set.removeall",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Removes the elements in the specified list from the set if they are present.",
+      "parentName": "Set",
+      "variables": {},
       "params": {
-        "<Object>": {
-          "id": "System.set.removeall.<object>",
-          "type": "var",
-          "name": "<Object>",
+        "listofelementstoremove": {
+          "id": "System.set.method.removeall(list<object>).varParam.listofelementstoremove",
+          "nodeType": "variable",
+          "name": "listOfElementsToRemove",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Object>",
-            "textToLower": "<object>",
+            "text": "listOfElementsToRemove",
+            "textToLower": "listofelementstoremove",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Object>_-1:0"
+            "id": "token.type.identifier_listOfElementsToRemove_0:38"
           },
-          "signature": "List <Object>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "listOfElementsToRemove",
+            "textToLower": "listofelementstoremove",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 60
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_listOfElementsToRemove_0:38"
+          },
+          "parentId": "System.set.method.removeall(list<object>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.set.removeall.list",
+            "id": "System.set.removeall.datatype.List<Object>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:25"
+            },
+            "parentId": "System.set.removeall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.set.removeall.datatype.List<Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 30
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 36
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:30"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            }
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "removeall(set)": {
-      "id": "System.set.removeall",
+    "removeall(set<object>)": {
+      "id": "System.set.method.removeall(set<object>)",
       "nodeType": "method",
       "name": "removeAll",
       "startToken": {
@@ -1045,6 +2053,9 @@
         },
         "id": "declaration.entity.name.function_removeAll_-1:0"
       },
+      "parentId": "System.set",
+      "order": 14,
+      "memberOrder": 17,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1052,61 +2063,162 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Boolean removeAll(Set <Object>)",
-      "simplifiedSignature": "removeAll(Set)",
+      "signature": "public Boolean removeAll(Set<Object> setOfElementsToRemove)",
+      "overrideSignature": "public override Boolean removeAll(Set<Object> setOfElementsToRemove)",
+      "simplifiedSignature": "removeAll(Set<Object>)",
       "datatype": {
-        "id": "System.set.removeall.Boolean",
+        "id": "System.set.removeall.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.set.removeall",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Removes the elements in the specified set from the original set if they are present.",
+      "parentName": "Set",
+      "variables": {},
       "params": {
-        "<Object>": {
-          "id": "System.set.removeall.<object>",
-          "type": "var",
-          "name": "<Object>",
+        "setofelementstoremove": {
+          "id": "System.set.method.removeall(set<object>).varParam.setofelementstoremove",
+          "nodeType": "variable",
+          "name": "setOfElementsToRemove",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Object>",
-            "textToLower": "<object>",
+            "text": "setOfElementsToRemove",
+            "textToLower": "setofelementstoremove",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Object>_-1:0"
+            "id": "token.type.identifier_setOfElementsToRemove_0:37"
           },
-          "signature": "Set <Object>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "setOfElementsToRemove",
+            "textToLower": "setofelementstoremove",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_setOfElementsToRemove_0:37"
+          },
+          "parentId": "System.set.method.removeall(set<object>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.set.removeall.set",
+            "id": "System.set.removeall.datatype.Set<Object>",
             "nodeType": "datatype",
-            "name": "Set"
-          }
+            "name": "Set<Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Set",
+              "textToLower": "set",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Set_0:25"
+            },
+            "parentId": "System.set.removeall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Set",
+            "value": {
+              "id": "System.set.removeall.datatype.Set<Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 29
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 35
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:29"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            }
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "retainall(list)": {
-      "id": "System.set.retainall",
+    "retainall(list<object>)": {
+      "id": "System.set.method.retainall(list<object>)",
       "nodeType": "method",
       "name": "retainAll",
       "startToken": {
@@ -1128,6 +2240,9 @@
         },
         "id": "declaration.entity.name.function_retainAll_-1:0"
       },
+      "parentId": "System.set",
+      "order": 15,
+      "memberOrder": 18,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1135,61 +2250,162 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Boolean retainAll(List <Object>)",
-      "simplifiedSignature": "retainAll(List)",
+      "signature": "public Boolean retainAll(List<Object> listOfElementsToRetain)",
+      "overrideSignature": "public override Boolean retainAll(List<Object> listOfElementsToRetain)",
+      "simplifiedSignature": "retainAll(List<Object>)",
       "datatype": {
-        "id": "System.set.retainall.Boolean",
+        "id": "System.set.retainall.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.set.retainall",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Retains only the elements in this set that are contained in the specified list.",
+      "parentName": "Set",
+      "variables": {},
       "params": {
-        "<Object>": {
-          "id": "System.set.retainall.<object>",
-          "type": "var",
-          "name": "<Object>",
+        "listofelementstoretain": {
+          "id": "System.set.method.retainall(list<object>).varParam.listofelementstoretain",
+          "nodeType": "variable",
+          "name": "listOfElementsToRetain",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Object>",
-            "textToLower": "<object>",
+            "text": "listOfElementsToRetain",
+            "textToLower": "listofelementstoretain",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Object>_-1:0"
+            "id": "token.type.identifier_listOfElementsToRetain_0:38"
           },
-          "signature": "List <Object>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "listOfElementsToRetain",
+            "textToLower": "listofelementstoretain",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 60
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_listOfElementsToRetain_0:38"
+          },
+          "parentId": "System.set.method.retainall(list<object>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.set.retainall.list",
+            "id": "System.set.retainall.datatype.List<Object>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:25"
+            },
+            "parentId": "System.set.retainall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.set.retainall.datatype.List<Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 30
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 36
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:30"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            }
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "retainall(set)": {
-      "id": "System.set.retainall",
+      "id": "System.set.method.retainall(set)",
       "nodeType": "method",
       "name": "retainAll",
       "startToken": {
@@ -1211,6 +2427,9 @@
         },
         "id": "declaration.entity.name.function_retainAll_-1:0"
       },
+      "parentId": "System.set",
+      "order": 16,
+      "memberOrder": 19,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1218,30 +2437,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean retainAll(Set setOfElementsToRetain)",
+      "overrideSignature": "public override Boolean retainAll(Set setOfElementsToRetain)",
       "simplifiedSignature": "retainAll(Set)",
       "datatype": {
-        "id": "System.set.retainall.Boolean",
+        "id": "System.set.retainall.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.set.retainall",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Retains only the elements in the original set that are contained in the specified set.",
+      "parentName": "Set",
+      "variables": {},
       "params": {
-        "setOfElementsToRetain": {
-          "id": "System.set.retainall.setofelementstoretain",
-          "type": "var",
+        "setofelementstoretain": {
+          "id": "System.set.method.retainall(set).varParam.setofelementstoretain",
+          "nodeType": "variable",
           "name": "setOfElementsToRetain",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1250,29 +2495,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_setOfElementsToRetain_-1:0"
+            "id": "token.type.identifier_setOfElementsToRetain_0:29"
           },
-          "signature": "Set setOfElementsToRetain",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "setOfElementsToRetain",
+            "textToLower": "setofelementstoretain",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_setOfElementsToRetain_0:29"
+          },
+          "parentId": "System.set.method.retainall(set)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.set.retainall.set",
+            "id": "System.set.retainall.datatype.Set",
             "nodeType": "datatype",
-            "name": "Set"
-          }
+            "name": "Set",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Set",
+              "textToLower": "set",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Set_0:25"
+            },
+            "parentId": "System.set.retainall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Set"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "size()": {
-      "id": "System.set.size",
+      "id": "System.set.method.size()",
       "nodeType": "method",
       "name": "size",
       "startToken": {
@@ -1294,6 +2587,9 @@
         },
         "id": "declaration.entity.name.function_size_-1:0"
       },
+      "parentId": "System.set",
+      "order": 17,
+      "memberOrder": 20,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1301,32 +2597,60 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer size()",
+      "overrideSignature": "public override Integer size()",
       "simplifiedSignature": "size()",
       "datatype": {
-        "id": "System.set.size.Integer",
+        "id": "System.set.size.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.set.size",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the number of elements in the set (its cardinality).",
-      "params": {}
+      "parentName": "Set",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {
     "set&lt;t&gt;()": {
-      "id": "System.set.set&lt;t&gt;",
+      "id": "System.set.method.set&lt;t&gt;()",
       "nodeType": "constructor",
       "name": "Set&lt;T&gt;",
       "startToken": {
@@ -1348,6 +2672,9 @@
         },
         "id": "declaration.entity.name.function_Set&lt;T&gt;_-1:0"
       },
+      "parentId": "System.set",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1355,30 +2682,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Set&lt;T&gt;()",
+      "signature": "public Set<T> Set&lt;T&gt;()",
+      "overrideSignature": "public override Set<T> Set&lt;T&gt;()",
       "simplifiedSignature": "Set&lt;T&gt;()",
       "datatype": {
-        "id": "System.set.set&lt;t&gt;.constructor",
+        "id": "System.set.set&lt;t&gt;.datatype.Set<T>",
         "nodeType": "datatype",
-        "name": "Set"
+        "name": "Set<T>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Set",
+          "textToLower": "set",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Set_0:7"
+        },
+        "parentId": "System.set.set&lt;t&gt;",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Set",
+        "value": {
+          "id": "System.set.set&lt;t&gt;.datatype.Set<T>.value.T",
+          "nodeType": "datatype",
+          "name": "T",
+          "startToken": {
+            "type": "datatype.custom.class",
+            "text": "T",
+            "textToLower": "t",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 12
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_T_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "T"
+        }
       },
       "description": "Creates a new instance of the Set class. A set can hold elements of any data type T.",
-      "params": {}
+      "parentName": "Set",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
-    "set&lt;t&gt;(set)": {
-      "id": "System.set.set&lt;t&gt;",
+    "set&lt;t&gt;(set<t>)": {
+      "id": "System.set.method.set&lt;t&gt;(set<t>)",
       "nodeType": "constructor",
       "name": "Set&lt;T&gt;",
       "startToken": {
@@ -1400,6 +2782,9 @@
         },
         "id": "declaration.entity.name.function_Set&lt;T&gt;_-1:0"
       },
+      "parentId": "System.set",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1407,61 +2792,189 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Set&lt;T&gt;(Set <T>)",
-      "simplifiedSignature": "Set&lt;T&gt;(Set)",
+      "signature": "public Set<T> Set&lt;T&gt;(Set<T> setToCopy)",
+      "overrideSignature": "public override Set<T> Set&lt;T&gt;(Set<T> setToCopy)",
+      "simplifiedSignature": "Set&lt;T&gt;(Set<T>)",
       "datatype": {
-        "id": "System.set.set&lt;t&gt;.constructor",
+        "id": "System.set.set&lt;t&gt;.datatype.Set<T>",
         "nodeType": "datatype",
-        "name": "Set"
+        "name": "Set<T>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Set",
+          "textToLower": "set",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Set_0:7"
+        },
+        "parentId": "System.set.set&lt;t&gt;",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Set",
+        "value": {
+          "id": "System.set.set&lt;t&gt;.datatype.Set<T>.value.T",
+          "nodeType": "datatype",
+          "name": "T",
+          "startToken": {
+            "type": "datatype.custom.class",
+            "text": "T",
+            "textToLower": "t",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 12
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_T_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "T"
+        }
       },
       "description": "Creates a new instance of the Set class by copying the elements of the specified set. T is the data type of the elements in both sets and can be any data type.",
+      "parentName": "Set",
+      "variables": {},
       "params": {
-        "<T>": {
-          "id": "System.set.set&lt;t&gt;.<t>",
-          "type": "var",
-          "name": "<T>",
+        "settocopy": {
+          "id": "System.set.method.set&lt;t&gt;(set<t>).varParam.settocopy",
+          "nodeType": "variable",
+          "name": "setToCopy",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<T>",
-            "textToLower": "<t>",
+            "text": "setToCopy",
+            "textToLower": "settocopy",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 21
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 30
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<T>_-1:0"
+            "id": "token.type.identifier_setToCopy_0:21"
           },
-          "signature": "Set <T>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "setToCopy",
+            "textToLower": "settocopy",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 21
+              },
+              "end": {
+                "line": 0,
+                "character": 30
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_setToCopy_0:21"
+          },
+          "parentId": "System.set.method.set&lt;t&gt;(set<t>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.set.set&lt;t&gt;.set",
+            "id": "System.set.set&lt;t&gt;.datatype.Set<T>",
             "nodeType": "datatype",
-            "name": "Set"
-          }
+            "name": "Set<T>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Set",
+              "textToLower": "set",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 14
+                },
+                "end": {
+                  "line": 0,
+                  "character": 17
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Set_0:14"
+            },
+            "parentId": "System.set.set&lt;t&gt;",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Set",
+            "value": {
+              "id": "System.set.set&lt;t&gt;.datatype.Set<T>.value.T",
+              "nodeType": "datatype",
+              "name": "T",
+              "startToken": {
+                "type": "datatype.custom.class",
+                "text": "T",
+                "textToLower": "t",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 18
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 19
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_T_0:18"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "T"
+            }
+          },
+          "description": "The set to initialize this set with.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "set&lt;t&gt;(list)": {
-      "id": "System.set.set&lt;t&gt;",
+    "set&lt;t&gt;(list<t>)": {
+      "id": "System.set.method.set&lt;t&gt;(list<t>)",
       "nodeType": "constructor",
       "name": "Set&lt;T&gt;",
       "startToken": {
@@ -1483,6 +2996,9 @@
         },
         "id": "declaration.entity.name.function_Set&lt;T&gt;_-1:0"
       },
+      "parentId": "System.set",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1490,61 +3006,191 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Set&lt;T&gt;(List <T>)",
-      "simplifiedSignature": "Set&lt;T&gt;(List)",
+      "signature": "public Set<T> Set&lt;T&gt;(List<T> listToCopy)",
+      "overrideSignature": "public override Set<T> Set&lt;T&gt;(List<T> listToCopy)",
+      "simplifiedSignature": "Set&lt;T&gt;(List<T>)",
       "datatype": {
-        "id": "System.set.set&lt;t&gt;.constructor",
+        "id": "System.set.set&lt;t&gt;.datatype.Set<T>",
         "nodeType": "datatype",
-        "name": "Set"
-      },
-      "description": "Creates a new instance of the Set class by coping the list elements. T is the data type of the elements in the set and list and can be any data type.",
-      "params": {
-        "<T>": {
-          "id": "System.set.set&lt;t&gt;.<t>",
-          "type": "var",
-          "name": "<T>",
+        "name": "Set<T>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Set",
+          "textToLower": "set",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Set_0:7"
+        },
+        "parentId": "System.set.set&lt;t&gt;",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Set",
+        "value": {
+          "id": "System.set.set&lt;t&gt;.datatype.Set<T>.value.T",
+          "nodeType": "datatype",
+          "name": "T",
           "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "<T>",
-            "textToLower": "<t>",
+            "type": "datatype.custom.class",
+            "text": "T",
+            "textToLower": "t",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 11
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 12
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<T>_-1:0"
+            "id": "token.type.identifier_T_0:11"
           },
-          "signature": "List <T>",
-          "datatype": {
-            "id": "System.set.set&lt;t&gt;.list",
-            "nodeType": "datatype",
-            "name": "List"
-          }
+          "order": 0,
+          "memberOrder": 0,
+          "type": "T"
         }
-      }
+      },
+      "description": "Creates a new instance of the Set class by coping the list elements. T is the data type of the elements in the set and list and can be any data type.",
+      "parentName": "Set",
+      "variables": {},
+      "params": {
+        "listtocopy": {
+          "id": "System.set.method.set&lt;t&gt;(list<t>).varParam.listtocopy",
+          "nodeType": "variable",
+          "name": "listToCopy",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "listToCopy",
+            "textToLower": "listtocopy",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 22
+              },
+              "end": {
+                "line": 0,
+                "character": 32
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_listToCopy_0:22"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "listToCopy",
+            "textToLower": "listtocopy",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 22
+              },
+              "end": {
+                "line": 0,
+                "character": 32
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_listToCopy_0:22"
+          },
+          "parentId": "System.set.method.set&lt;t&gt;(list<t>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.set.set&lt;t&gt;.datatype.List<T>",
+            "nodeType": "datatype",
+            "name": "List<T>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 14
+                },
+                "end": {
+                  "line": 0,
+                  "character": 18
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:14"
+            },
+            "parentId": "System.set.set&lt;t&gt;",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.set.set&lt;t&gt;.datatype.List<T>.value.T",
+              "nodeType": "datatype",
+              "name": "T",
+              "startToken": {
+                "type": "datatype.custom.class",
+                "text": "T",
+                "textToLower": "t",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 19
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 20
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_T_0:19"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "T"
+            }
+          },
+          "description": "The list to copy the elements of into this set.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 20,
+  "queries": []
 }

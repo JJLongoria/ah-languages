@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_OpportunityTerritory2AssignmentFilter_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "getopportunityterritory2assignments(list)": {
-      "id": "TerritoryMgmt.opportunityterritory2assignmentfilter.getopportunityterritory2assignments",
+    "getopportunityterritory2assignments(list<id>)": {
+      "id": "TerritoryMgmt.opportunityterritory2assignmentfilter.method.getopportunityterritory2assignments(list<id>)",
       "nodeType": "method",
       "name": "getOpportunityTerritory2Assignments",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getOpportunityTerritory2Assignments_-1:0"
       },
+      "parentId": "TerritoryMgmt.opportunityterritory2assignmentfilter",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,62 +102,219 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Map<Id, Id> getOpportunityTerritory2Assignments(List <Id>)",
-      "simplifiedSignature": "getOpportunityTerritory2Assignments(List)",
+      "signature": "public Map<Id,Id> getOpportunityTerritory2Assignments(List<Id> opportunityIds)",
+      "overrideSignature": "public override Map<Id,Id> getOpportunityTerritory2Assignments(List<Id> opportunityIds)",
+      "simplifiedSignature": "getOpportunityTerritory2Assignments(List<Id>)",
       "datatype": {
-        "id": "TerritoryMgmt.opportunityterritory2assignmentfilter.getopportunityterritory2assignments.Map<Id, Id>",
+        "id": "TerritoryMgmt.opportunityterritory2assignmentfilter.getopportunityterritory2assignments.datatype.Map<Id,Id>",
         "nodeType": "datatype",
-        "name": "Map<Id, Id>"
-      },
-      "description": "Returns the mapping of opportunities to territory IDs. When Salesforce invokes this method, it supplies the list of opportunity IDs, except for opportunities that have been excluded from territory assignment (IsExcludedFromTerritory2Filter=false).",
-      "params": {
-        "<Id>": {
-          "id": "TerritoryMgmt.opportunityterritory2assignmentfilter.getopportunityterritory2assignments.<id>",
-          "type": "var",
-          "name": "<Id>",
+        "name": "Map<Id,Id>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "TerritoryMgmt.opportunityterritory2assignmentfilter.getopportunityterritory2assignments",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "TerritoryMgmt.opportunityterritory2assignmentfilter.getopportunityterritory2assignments.datatype.Map<Id,Id>.value.Id",
+          "nodeType": "datatype",
+          "name": "Id",
           "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "<Id>",
-            "textToLower": "<id>",
+            "type": "datatype.primitive",
+            "text": "Id",
+            "textToLower": "id",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 14
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 16
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Id>_-1:0"
+            "id": "token.type.identifier_Id_0:14"
           },
-          "signature": "List <Id>",
-          "datatype": {
-            "id": "TerritoryMgmt.opportunityterritory2assignmentfilter.getopportunityterritory2assignments.list",
-            "nodeType": "datatype",
-            "name": "List"
-          }
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Id"
+        },
+        "key": {
+          "id": "TerritoryMgmt.opportunityterritory2assignmentfilter.getopportunityterritory2assignments.datatype.Map<Id,Id>.key.Id",
+          "nodeType": "datatype",
+          "name": "Id",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Id",
+            "textToLower": "id",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 13
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Id_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Id"
         }
-      }
+      },
+      "description": "Returns the mapping of opportunities to territory IDs. When Salesforce invokes this method, it supplies the list of opportunity IDs, except for opportunities that have been excluded from territory assignment (IsExcludedFromTerritory2Filter=false).",
+      "parentName": "OpportunityTerritory2AssignmentFilter",
+      "variables": {},
+      "params": {
+        "opportunityids": {
+          "id": "TerritoryMgmt.opportunityterritory2assignmentfilter.method.getopportunityterritory2assignments(list<id>).varParam.opportunityids",
+          "nodeType": "variable",
+          "name": "opportunityIds",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "opportunityIds",
+            "textToLower": "opportunityids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 63
+              },
+              "end": {
+                "line": 0,
+                "character": 77
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_opportunityIds_0:63"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "opportunityIds",
+            "textToLower": "opportunityids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 63
+              },
+              "end": {
+                "line": 0,
+                "character": 77
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_opportunityIds_0:63"
+          },
+          "parentId": "TerritoryMgmt.opportunityterritory2assignmentfilter.method.getopportunityterritory2assignments(list<id>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "TerritoryMgmt.opportunityterritory2assignmentfilter.getopportunityterritory2assignments.datatype.List<Id>",
+            "nodeType": "datatype",
+            "name": "List<Id>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:54"
+            },
+            "parentId": "TerritoryMgmt.opportunityterritory2assignmentfilter.getopportunityterritory2assignments",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "TerritoryMgmt.opportunityterritory2assignmentfilter.getopportunityterritory2assignments.datatype.List<Id>.value.Id",
+              "nodeType": "datatype",
+              "name": "Id",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Id",
+                "textToLower": "id",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 59
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 61
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Id_0:59"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Id"
+            }
+          },
+          "description": "Opportunity IDs.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

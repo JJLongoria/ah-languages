@@ -66,7 +66,7 @@ const symbolTokens = {
 
 class Tokenizer {
 
-    static tokenize(str) {
+    static tokenize(str, virtualLine) {
         const NUM_FORMAT = /[0-9]/;
         const ID_FORMAT = /([a-zA-Z0-9À-ÿ]|_|–)/;
         const tokens = [];
@@ -89,11 +89,11 @@ class Tokenizer {
             let char = str.charAt(charIndex);
             let token;
             if (fourChars.length === 4 && symbolTokens[fourChars] && aBracketsIndex.length === 0) {
-                token = new Token(symbolTokens[fourChars], fourChars, lineNumber, column);
+                token = new Token(symbolTokens[fourChars], fourChars, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
                 charIndex += 3;
                 column += 4;
             } else if (threeChars.length === 3 && symbolTokens[threeChars] && aBracketsIndex.length === 0) {
-                token = new Token(symbolTokens[threeChars], threeChars, lineNumber, column);
+                token = new Token(symbolTokens[threeChars], threeChars, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
                 charIndex += 2;
                 column += 3;
             } else if (twoChars.length === 2 && symbolTokens[twoChars]) {
@@ -101,14 +101,17 @@ class Tokenizer {
                     aBracketsIndex = [];
                 }
                 if (aBracketsIndex.length === 0) {
-                    token = new Token(symbolTokens[twoChars], twoChars, lineNumber, column);
+                    token = new Token(symbolTokens[twoChars], twoChars, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
                     charIndex += 1;
                     column += 2;
                 } else if (symbolTokens[char]) {
-                    token = new Token(symbolTokens[char], char, lineNumber, column);
+                    token = new Token(symbolTokens[char], char, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
+                    column++;
                 }
             } else if (symbolTokens[char]) {
-                token = new Token(symbolTokens[char], char, lineNumber, column);
+                token = new Token(symbolTokens[char], char, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
+                if (mustResetABracketIndex(token))
+                    aBracketsIndex = [];
                 column++;
             } else if (NUM_FORMAT.test(char)) {
                 var numContent = '';
@@ -117,16 +120,16 @@ class Tokenizer {
                     char = str.charAt(++charIndex);
                 }
                 if (numContent.indexOf(':') !== -1 && numContent.indexOf('-') !== -1)
-                    token = new Token(TokenType.LITERAL.DATETIME, numContent, lineNumber, column);
+                    token = new Token(TokenType.LITERAL.DATETIME, numContent, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
                 else if (numContent.indexOf('-') !== -1)
-                    token = new Token(TokenType.LITERAL.DATE, numContent, lineNumber, column);
+                    token = new Token(TokenType.LITERAL.DATE, numContent, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
                 else if (numContent.indexOf(':') !== -1)
-                    token = new Token(TokenType.LITERAL.TIME, numContent, lineNumber, column);
+                    token = new Token(TokenType.LITERAL.TIME, numContent, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
                 else if (numContent.indexOf('.') !== -1) {
-                    token = new Token(TokenType.LITERAL.DOUBLE, numContent, lineNumber, column);
+                    token = new Token(TokenType.LITERAL.DOUBLE, numContent, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
                 }
                 else {
-                    token = new Token(TokenType.LITERAL.INTEGER, numContent, lineNumber, column);
+                    token = new Token(TokenType.LITERAL.INTEGER, numContent, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
                 }
                 charIndex--;
                 column += numContent.length;
@@ -137,7 +140,7 @@ class Tokenizer {
                     char = str.charAt(++charIndex);
                 }
                 charIndex--;
-                token = new Token(TokenType.IDENTIFIER, idContent, lineNumber, column);
+                token = new Token(TokenType.IDENTIFIER, idContent, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
                 column += idContent.length;
             } else if (char === "\n") {
                 if (onCommentLine)
@@ -145,7 +148,7 @@ class Tokenizer {
                 lineNumber++;
                 column = 0;
             } else if (char !== "\t" && char !== " " && char.trim().length != 0) {
-                token = new Token(TokenType.UNKNOWN, char, lineNumber, column);
+                token = new Token(TokenType.UNKNOWN, char, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
                 column++;
             } else if (char === "\t") {
                 column += 4;
@@ -240,4 +243,15 @@ module.exports = Tokenizer;
 
 function isLogicalOperator(symbol) {
     return symbol === TokenType.OPERATOR.LOGICAL.INEQUALITY || symbol === TokenType.OPERATOR.LOGICAL.EQUALITY || symbol === TokenType.OPERATOR.LOGICAL.OR || symbol === TokenType.OPERATOR.LOGICAL.OR_ASSIGN || symbol === TokenType.OPERATOR.LOGICAL.AND || symbol === TokenType.OPERATOR.LOGICAL.AND_ASSIGN;
+}
+
+
+function mustResetABracketIndex(token) {
+    switch (token.type) {
+        case TokenType.PUNCTUATION.SEMICOLON:
+        case TokenType.BRACKET.CURLY_OPEN:
+        case TokenType.BRACKET.CURLY_CLOSE:
+            return true;
+    }
+    return false;
 }

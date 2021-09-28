@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Approval_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "islocked(id)": {
-      "id": "System.approval.islocked",
+      "id": "System.approval.method.islocked(id)",
       "nodeType": "method",
       "name": "isLocked",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_isLocked_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean isLocked(Id id)",
+      "overrideSignature": "public static override Boolean isLocked(Id id)",
       "simplifiedSignature": "isLocked(Id)",
       "datatype": {
-        "id": "System.approval.islocked.Boolean",
+        "id": "System.approval.islocked.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "System.approval.islocked",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the record with the ID id is locked, or false if it’s not.",
+      "parentName": "Approval",
+      "variables": {},
       "params": {
         "id": {
-          "id": "System.approval.islocked.id",
-          "type": "var",
+          "id": "System.approval.method.islocked(id).varParam.id",
+          "nodeType": "variable",
           "name": "id",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,131 +179,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 36
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_id_-1:0"
+            "id": "token.type.identifier_id_0:34"
           },
-          "signature": "Id id",
-          "datatype": {
-            "id": "System.approval.islocked.id",
-            "nodeType": "datatype",
-            "name": "Id"
-          }
-        }
-      }
-    },
-    "islocked(list)": {
-      "id": "System.approval.islocked",
-      "nodeType": "method",
-      "name": "isLocked",
-      "startToken": {
-        "type": "declaration.entity.name.function",
-        "text": "isLocked",
-        "textToLower": "islocked",
-        "isAux": false,
-        "range": {
-          "start": {
-            "line": -1,
-            "character": 0
-          },
-          "end": {
-            "line": -1,
-            "character": 0
-          },
-          "isEmpty": true,
-          "isSingleLine": true
-        },
-        "id": "declaration.entity.name.function_isLocked_-1:0"
-      },
-      "accessModifier": {
-        "type": "keyword.modifier.access",
-        "text": "public",
-        "textToLower": "public",
-        "isAux": false,
-        "range": {
-          "start": {
-            "line": -1,
-            "character": 0
-          },
-          "end": {
-            "line": -1,
-            "character": 0
-          },
-          "isEmpty": true,
-          "isSingleLine": true
-        },
-        "id": "keyword.modifier.access_public_-1:0"
-      },
-      "static": {
-        "type": "keyword.modifier.static",
-        "text": "static",
-        "textToLower": "static",
-        "isAux": false,
-        "range": {
-          "start": {
-            "line": -1,
-            "character": 0
-          },
-          "end": {
-            "line": -1,
-            "character": 0
-          },
-          "isEmpty": true,
-          "isSingleLine": true
-        },
-        "id": "keyword.modifier.static_static_-1:0"
-      },
-      "signature": "public static Map<Id, Boolean> isLocked(List <SObject>)",
-      "simplifiedSignature": "isLocked(List)",
-      "datatype": {
-        "id": "System.approval.islocked.Map<Id, Boolean>",
-        "nodeType": "datatype",
-        "name": "Map<Id, Boolean>"
-      },
-      "description": "Returns a map of record IDs to lock statuses. If the record is locked the status is true. If the record is not locked the status is false.",
-      "params": {
-        "<SObject>": {
-          "id": "System.approval.islocked.<sobject>",
-          "type": "var",
-          "name": "<SObject>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<SObject>",
-            "textToLower": "<sobject>",
+            "text": "id",
+            "textToLower": "id",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 36
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<SObject>_-1:0"
+            "id": "token.type.identifier_id_0:34"
           },
-          "signature": "List <SObject>",
+          "parentId": "System.approval.method.islocked(id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.approval.islocked.list",
+            "id": "System.approval.islocked.datatype.Id",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:31"
+            },
+            "parentId": "System.approval.islocked",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "The ID of the record whose lock or unlock status is in question.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "islocked(sobject)": {
-      "id": "System.approval.islocked",
+    "islocked(list<id>)": {
+      "id": "System.approval.method.islocked(list<id>)",
       "nodeType": "method",
       "name": "isLocked",
       "startToken": {
@@ -294,6 +271,9 @@
         },
         "id": "declaration.entity.name.function_isLocked_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -301,17 +281,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -320,6 +300,225 @@
         "isAux": false,
         "range": {
           "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Map<Id,Boolean> isLocked(List<Id> ids)",
+      "overrideSignature": "public static override Map<Id,Boolean> isLocked(List<Id> ids)",
+      "simplifiedSignature": "isLocked(List<Id>)",
+      "datatype": {
+        "id": "System.approval.islocked.datatype.Map<Id,Boolean>",
+        "nodeType": "datatype",
+        "name": "Map<Id,Boolean>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:14"
+        },
+        "parentId": "System.approval.islocked",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "System.approval.islocked.datatype.Map<Id,Boolean>.value.Boolean",
+          "nodeType": "datatype",
+          "name": "Boolean",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Boolean",
+            "textToLower": "boolean",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 21
+              },
+              "end": {
+                "line": 0,
+                "character": 28
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Boolean_0:21"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Boolean"
+        },
+        "key": {
+          "id": "System.approval.islocked.datatype.Map<Id,Boolean>.key.Id",
+          "nodeType": "datatype",
+          "name": "Id",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Id",
+            "textToLower": "id",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 20
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Id_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Id"
+        }
+      },
+      "description": "Returns a map of record IDs and their lock statuses. If the record is locked the status is true. If the record is not locked the status is false.",
+      "parentName": "Approval",
+      "variables": {},
+      "params": {
+        "ids": {
+          "id": "System.approval.method.islocked(list<id>).varParam.ids",
+          "nodeType": "variable",
+          "name": "ids",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "ids",
+            "textToLower": "ids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 48
+              },
+              "end": {
+                "line": 0,
+                "character": 51
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ids_0:48"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "ids",
+            "textToLower": "ids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 48
+              },
+              "end": {
+                "line": 0,
+                "character": 51
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ids_0:48"
+          },
+          "parentId": "System.approval.method.islocked(list<id>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.approval.islocked.datatype.List<Id>",
+            "nodeType": "datatype",
+            "name": "List<Id>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 43
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:39"
+            },
+            "parentId": "System.approval.islocked",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.approval.islocked.datatype.List<Id>.value.Id",
+              "nodeType": "datatype",
+              "name": "Id",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Id",
+                "textToLower": "id",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 44
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 46
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Id_0:44"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Id"
+            }
+          },
+          "description": "The IDs of the records whose lock or unlock statuses are in question.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "islocked(sobject)": {
+      "id": "System.approval.method.islocked(sobject)",
+      "nodeType": "method",
+      "name": "isLocked",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "isLocked",
+        "textToLower": "islocked",
+        "isAux": false,
+        "range": {
+          "start": {
             "line": -1,
             "character": 0
           },
@@ -330,20 +529,87 @@
           "isEmpty": true,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "declaration.entity.name.function_isLocked_-1:0"
+      },
+      "parentId": "System.approval",
+      "order": 3,
+      "memberOrder": 3,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean isLocked(SObject sobject)",
+      "overrideSignature": "public static override Boolean isLocked(SObject sobject)",
       "simplifiedSignature": "isLocked(SObject)",
       "datatype": {
-        "id": "System.approval.islocked.Boolean",
+        "id": "System.approval.islocked.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "System.approval.islocked",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the sobject record is locked, or false if it’s not.",
+      "parentName": "Approval",
+      "variables": {},
       "params": {
         "sobject": {
-          "id": "System.approval.islocked.sobject",
-          "type": "var",
+          "id": "System.approval.method.islocked(sobject).varParam.sobject",
+          "nodeType": "variable",
           "name": "sobject",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -352,29 +618,337 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_sobject_-1:0"
+            "id": "token.type.identifier_sobject_0:39"
           },
-          "signature": "SObject sobject",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sobject",
+            "textToLower": "sobject",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 39
+              },
+              "end": {
+                "line": 0,
+                "character": 46
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sobject_0:39"
+          },
+          "parentId": "System.approval.method.islocked(sobject)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.approval.islocked.sobject",
+            "id": "System.approval.islocked.datatype.SObject",
             "nodeType": "datatype",
-            "name": "SObject"
-          }
+            "name": "SObject",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "SObject",
+              "textToLower": "sobject",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 38
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_SObject_0:31"
+            },
+            "parentId": "System.approval.islocked",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "SObject"
+          },
+          "description": "The record whose lock or unlock status is in question.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "islocked(list<sobject>)": {
+      "id": "System.approval.method.islocked(list<sobject>)",
+      "nodeType": "method",
+      "name": "isLocked",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "isLocked",
+        "textToLower": "islocked",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_isLocked_-1:0"
+      },
+      "parentId": "System.approval",
+      "order": 4,
+      "memberOrder": 4,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Map<Id,Boolean> isLocked(List<SObject> sobjects)",
+      "overrideSignature": "public static override Map<Id,Boolean> isLocked(List<SObject> sobjects)",
+      "simplifiedSignature": "isLocked(List<SObject>)",
+      "datatype": {
+        "id": "System.approval.islocked.datatype.Map<Id,Boolean>",
+        "nodeType": "datatype",
+        "name": "Map<Id,Boolean>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:14"
+        },
+        "parentId": "System.approval.islocked",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "System.approval.islocked.datatype.Map<Id,Boolean>.value.Boolean",
+          "nodeType": "datatype",
+          "name": "Boolean",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Boolean",
+            "textToLower": "boolean",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 21
+              },
+              "end": {
+                "line": 0,
+                "character": 28
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Boolean_0:21"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Boolean"
+        },
+        "key": {
+          "id": "System.approval.islocked.datatype.Map<Id,Boolean>.key.Id",
+          "nodeType": "datatype",
+          "name": "Id",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Id",
+            "textToLower": "id",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 20
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Id_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Id"
+        }
+      },
+      "description": "Returns a map of record IDs to lock statuses. If the record is locked the status is true. If the record is not locked the status is false.",
+      "parentName": "Approval",
+      "variables": {},
+      "params": {
+        "sobjects": {
+          "id": "System.approval.method.islocked(list<sobject>).varParam.sobjects",
+          "nodeType": "variable",
+          "name": "sobjects",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sobjects",
+            "textToLower": "sobjects",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 61
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sobjects_0:53"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sobjects",
+            "textToLower": "sobjects",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 61
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sobjects_0:53"
+          },
+          "parentId": "System.approval.method.islocked(list<sobject>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.approval.islocked.datatype.List<SObject>",
+            "nodeType": "datatype",
+            "name": "List<SObject>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 43
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:39"
+            },
+            "parentId": "System.approval.islocked",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.approval.islocked.datatype.List<SObject>.value.SObject",
+              "nodeType": "datatype",
+              "name": "SObject",
+              "startToken": {
+                "type": "datatype.support.class",
+                "text": "SObject",
+                "textToLower": "sobject",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 44
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 51
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_SObject_0:44"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "SObject"
+            }
+          },
+          "description": "The records whose lock or unlock statuses are in question.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "lock(id)": {
-      "id": "System.approval.lock",
+      "id": "System.approval.method.lock(id)",
       "nodeType": "method",
       "name": "lock",
       "startToken": {
@@ -396,6 +970,9 @@
         },
         "id": "declaration.entity.name.function_lock_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -403,17 +980,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -422,30 +999,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Approval.LockResult lock(Id recordId)",
+      "overrideSignature": "public static override Approval.LockResult lock(Id recordId)",
       "simplifiedSignature": "lock(Id)",
       "datatype": {
-        "id": "System.approval.lock.Approval.LockResult",
+        "id": "System.approval.lock.datatype.Approval.LockResult",
         "nodeType": "datatype",
-        "name": "Approval.LockResult"
+        "name": "Approval.LockResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Approval",
+          "textToLower": "approval",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Approval_0:14"
+        },
+        "parentId": "System.approval.lock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Approval.LockResult"
       },
       "description": "Locks an object, and returns the lock results.",
+      "parentName": "Approval",
+      "variables": {},
       "params": {
-        "recordId": {
-          "id": "System.approval.lock.recordid",
-          "type": "var",
+        "recordid": {
+          "id": "System.approval.method.lock(id).varParam.recordid",
+          "nodeType": "variable",
           "name": "recordId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -454,29 +1057,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_recordId_-1:0"
+            "id": "token.type.identifier_recordId_0:42"
           },
-          "signature": "Id recordId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordId",
+            "textToLower": "recordid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordId_0:42"
+          },
+          "parentId": "System.approval.method.lock(id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.approval.lock.id",
+            "id": "System.approval.lock.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:39"
+            },
+            "parentId": "System.approval.lock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "ID of the object to lock.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "lock(list)": {
-      "id": "System.approval.lock",
+    "lock(list<id>)": {
+      "id": "System.approval.method.lock(list<id>)",
       "nodeType": "method",
       "name": "lock",
       "startToken": {
@@ -498,6 +1149,9 @@
         },
         "id": "declaration.entity.name.function_lock_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -505,17 +1159,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -524,61 +1178,189 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static List<Approval.LockResult> lock(List <SObject>)",
-      "simplifiedSignature": "lock(List)",
+      "signature": "public static List<Approval.LockResult> lock(List<Id> ids)",
+      "overrideSignature": "public static override List<Approval.LockResult> lock(List<Id> ids)",
+      "simplifiedSignature": "lock(List<Id>)",
       "datatype": {
-        "id": "System.approval.lock.List<Approval.LockResult>",
+        "id": "System.approval.lock.datatype.List<Approval.LockResult>",
         "nodeType": "datatype",
-        "name": "List<Approval.LockResult>"
-      },
-      "description": "Locks a set of objects, with the option for partial success. It returns the lock results, including failures.",
-      "params": {
-        "<SObject>": {
-          "id": "System.approval.lock.<sobject>",
-          "type": "var",
-          "name": "<SObject>",
+        "name": "List<Approval.LockResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "System.approval.lock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.approval.lock.datatype.List<Approval.LockResult>.value.Approval.LockResult",
+          "nodeType": "datatype",
+          "name": "Approval.LockResult",
           "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "<SObject>",
-            "textToLower": "<sobject>",
+            "type": "datatype.support.namespace",
+            "text": "Approval",
+            "textToLower": "approval",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 19
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 27
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<SObject>_-1:0"
+            "id": "token.type.identifier_Approval_0:19"
           },
-          "signature": "List <SObject>",
-          "datatype": {
-            "id": "System.approval.lock.list",
-            "nodeType": "datatype",
-            "name": "List"
-          }
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Approval.LockResult"
         }
-      }
+      },
+      "description": "Locks a set of objects, and returns the lock results, including failures.",
+      "parentName": "Approval",
+      "variables": {},
+      "params": {
+        "ids": {
+          "id": "System.approval.method.lock(list<id>).varParam.ids",
+          "nodeType": "variable",
+          "name": "ids",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "ids",
+            "textToLower": "ids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ids_0:54"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "ids",
+            "textToLower": "ids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ids_0:54"
+          },
+          "parentId": "System.approval.method.lock(list<id>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.approval.lock.datatype.List<Id>",
+            "nodeType": "datatype",
+            "name": "List<Id>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 49
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:45"
+            },
+            "parentId": "System.approval.lock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.approval.lock.datatype.List<Id>.value.Id",
+              "nodeType": "datatype",
+              "name": "Id",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Id",
+                "textToLower": "id",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 50
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 52
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Id_0:50"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Id"
+            }
+          },
+          "description": "IDs of the objects to lock.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "lock(sobject)": {
-      "id": "System.approval.lock",
+      "id": "System.approval.method.lock(sobject)",
       "nodeType": "method",
       "name": "lock",
       "startToken": {
@@ -600,6 +1382,9 @@
         },
         "id": "declaration.entity.name.function_lock_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -607,17 +1392,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -626,30 +1411,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Approval.LockResult lock(SObject recordToLock)",
+      "overrideSignature": "public static override Approval.LockResult lock(SObject recordToLock)",
       "simplifiedSignature": "lock(SObject)",
       "datatype": {
-        "id": "System.approval.lock.Approval.LockResult",
+        "id": "System.approval.lock.datatype.Approval.LockResult",
         "nodeType": "datatype",
-        "name": "Approval.LockResult"
+        "name": "Approval.LockResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Approval",
+          "textToLower": "approval",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Approval_0:14"
+        },
+        "parentId": "System.approval.lock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Approval.LockResult"
       },
       "description": "Locks an object, and returns the lock results.",
+      "parentName": "Approval",
+      "variables": {},
       "params": {
-        "recordToLock": {
-          "id": "System.approval.lock.recordtolock",
-          "type": "var",
+        "recordtolock": {
+          "id": "System.approval.method.lock(sobject).varParam.recordtolock",
+          "nodeType": "variable",
           "name": "recordToLock",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -658,29 +1469,310 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_recordToLock_-1:0"
+            "id": "token.type.identifier_recordToLock_0:47"
           },
-          "signature": "SObject recordToLock",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordToLock",
+            "textToLower": "recordtolock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 59
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordToLock_0:47"
+          },
+          "parentId": "System.approval.method.lock(sobject)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.approval.lock.sobject",
+            "id": "System.approval.lock.datatype.SObject",
             "nodeType": "datatype",
-            "name": "SObject"
-          }
+            "name": "SObject",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "SObject",
+              "textToLower": "sobject",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_SObject_0:39"
+            },
+            "parentId": "System.approval.lock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "SObject"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "lock(list<sobject>)": {
+      "id": "System.approval.method.lock(list<sobject>)",
+      "nodeType": "method",
+      "name": "lock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "lock",
+        "textToLower": "lock",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_lock_-1:0"
+      },
+      "parentId": "System.approval",
+      "order": 8,
+      "memberOrder": 8,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static List<Approval.LockResult> lock(List<SObject> recordsToLock)",
+      "overrideSignature": "public static override List<Approval.LockResult> lock(List<SObject> recordsToLock)",
+      "simplifiedSignature": "lock(List<SObject>)",
+      "datatype": {
+        "id": "System.approval.lock.datatype.List<Approval.LockResult>",
+        "nodeType": "datatype",
+        "name": "List<Approval.LockResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "System.approval.lock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.approval.lock.datatype.List<Approval.LockResult>.value.Approval.LockResult",
+          "nodeType": "datatype",
+          "name": "Approval.LockResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Approval",
+            "textToLower": "approval",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 27
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Approval_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Approval.LockResult"
+        }
+      },
+      "description": "Locks a set of objects, and returns the lock results, including failures.",
+      "parentName": "Approval",
+      "variables": {},
+      "params": {
+        "recordstolock": {
+          "id": "System.approval.method.lock(list<sobject>).varParam.recordstolock",
+          "nodeType": "variable",
+          "name": "recordsToLock",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordsToLock",
+            "textToLower": "recordstolock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordsToLock_0:59"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordsToLock",
+            "textToLower": "recordstolock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordsToLock_0:59"
+          },
+          "parentId": "System.approval.method.lock(list<sobject>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.approval.lock.datatype.List<SObject>",
+            "nodeType": "datatype",
+            "name": "List<SObject>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 49
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:45"
+            },
+            "parentId": "System.approval.lock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.approval.lock.datatype.List<SObject>.value.SObject",
+              "nodeType": "datatype",
+              "name": "SObject",
+              "startToken": {
+                "type": "datatype.support.class",
+                "text": "SObject",
+                "textToLower": "sobject",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 50
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 57
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_SObject_0:50"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "SObject"
+            }
+          },
+          "description": "",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "lock(id,boolean)": {
-      "id": "System.approval.lock",
+      "id": "System.approval.method.lock(id,boolean)",
       "nodeType": "method",
       "name": "lock",
       "startToken": {
@@ -702,6 +1794,9 @@
         },
         "id": "declaration.entity.name.function_lock_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -709,17 +1804,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -728,30 +1823,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Approval.LockResult lock(Id recordId, Boolean allOrNothing)",
+      "overrideSignature": "public static override Approval.LockResult lock(Id recordId, Boolean allOrNothing)",
       "simplifiedSignature": "lock(Id,Boolean)",
       "datatype": {
-        "id": "System.approval.lock.Approval.LockResult",
+        "id": "System.approval.lock.datatype.Approval.LockResult",
         "nodeType": "datatype",
-        "name": "Approval.LockResult"
+        "name": "Approval.LockResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Approval",
+          "textToLower": "approval",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Approval_0:14"
+        },
+        "parentId": "System.approval.lock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Approval.LockResult"
       },
       "description": "Locks an object, with the option for partial success, and returns the lock result.",
+      "parentName": "Approval",
+      "variables": {},
       "params": {
-        "recordId": {
-          "id": "System.approval.lock.recordid",
-          "type": "var",
+        "recordid": {
+          "id": "System.approval.method.lock(id,boolean).varParam.recordid",
+          "nodeType": "variable",
           "name": "recordId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -760,28 +1881,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_recordId_-1:0"
+            "id": "token.type.identifier_recordId_0:42"
           },
-          "signature": "Id recordId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordId",
+            "textToLower": "recordid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordId_0:42"
+          },
+          "parentId": "System.approval.method.lock(id,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.approval.lock.id",
+            "id": "System.approval.lock.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:39"
+            },
+            "parentId": "System.approval.lock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "allOrNothing": {
-          "id": "System.approval.lock.allornothing",
-          "type": "var",
+        "allornothing": {
+          "id": "System.approval.method.lock(id,boolean).varParam.allornothing",
+          "nodeType": "variable",
           "name": "allOrNothing",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -790,29 +1956,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_allOrNothing_-1:0"
+            "id": "token.type.identifier_allOrNothing_0:60"
           },
-          "signature": "Boolean allOrNothing",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 60
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:60"
+          },
+          "parentId": "System.approval.method.lock(id,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.approval.lock.boolean",
+            "id": "System.approval.lock.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 59
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:52"
+            },
+            "parentId": "System.approval.lock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "ID of the object to lock. Specifies whether this operation allows partial success. If you specify false and a record fails, the remainder of the DML operation can still succeed. This method returns a result object that you can use to verify which records succeeded, which failed, and why.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "lock(sobject,boolean)": {
-      "id": "System.approval.lock",
+    "lock(list<id>,boolean)": {
+      "id": "System.approval.method.lock(list<id>,boolean)",
       "nodeType": "method",
       "name": "lock",
       "startToken": {
@@ -834,6 +2048,9 @@
         },
         "id": "declaration.entity.name.function_lock_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 10,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -841,17 +2058,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -860,6 +2077,273 @@
         "isAux": false,
         "range": {
           "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static List<Approval.LockResult> lock(List<Id> recordIds, Boolean allOrNothing)",
+      "overrideSignature": "public static override List<Approval.LockResult> lock(List<Id> recordIds, Boolean allOrNothing)",
+      "simplifiedSignature": "lock(List<Id>,Boolean)",
+      "datatype": {
+        "id": "System.approval.lock.datatype.List<Approval.LockResult>",
+        "nodeType": "datatype",
+        "name": "List<Approval.LockResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "System.approval.lock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.approval.lock.datatype.List<Approval.LockResult>.value.Approval.LockResult",
+          "nodeType": "datatype",
+          "name": "Approval.LockResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Approval",
+            "textToLower": "approval",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 27
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Approval_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Approval.LockResult"
+        }
+      },
+      "description": "Locks a set of objects, with the option for partial success. It returns the lock results, including failures.",
+      "parentName": "Approval",
+      "variables": {},
+      "params": {
+        "recordids": {
+          "id": "System.approval.method.lock(list<id>,boolean).varParam.recordids",
+          "nodeType": "variable",
+          "name": "recordIds",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordIds",
+            "textToLower": "recordids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordIds_0:54"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordIds",
+            "textToLower": "recordids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordIds_0:54"
+          },
+          "parentId": "System.approval.method.lock(list<id>,boolean)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.approval.lock.datatype.List<Id>",
+            "nodeType": "datatype",
+            "name": "List<Id>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 49
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:45"
+            },
+            "parentId": "System.approval.lock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.approval.lock.datatype.List<Id>.value.Id",
+              "nodeType": "datatype",
+              "name": "Id",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Id",
+                "textToLower": "id",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 50
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 52
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Id_0:50"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Id"
+            }
+          },
+          "scope": null
+        },
+        "allornothing": {
+          "id": "System.approval.method.lock(list<id>,boolean).varParam.allornothing",
+          "nodeType": "variable",
+          "name": "allOrNothing",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 85
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:73"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 85
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:73"
+          },
+          "parentId": "System.approval.method.lock(list<id>,boolean)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "System.approval.lock.datatype.Boolean",
+            "nodeType": "datatype",
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 72
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:65"
+            },
+            "parentId": "System.approval.lock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "IDs of the objects to lock. Specifies whether this operation allows partial success. If you specify false and a record fails, the remainder of the DML operation can still succeed. This method returns a result object that you can use to verify which records succeeded, which failed, and why.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "lock(sobject,boolean)": {
+      "id": "System.approval.method.lock(sobject,boolean)",
+      "nodeType": "method",
+      "name": "lock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "lock",
+        "textToLower": "lock",
+        "isAux": false,
+        "range": {
+          "start": {
             "line": -1,
             "character": 0
           },
@@ -870,20 +2354,87 @@
           "isEmpty": true,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "declaration.entity.name.function_lock_-1:0"
+      },
+      "parentId": "System.approval",
+      "order": 11,
+      "memberOrder": 11,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Approval.LockResult lock(SObject recordToLock, Boolean allOrNothing)",
+      "overrideSignature": "public static override Approval.LockResult lock(SObject recordToLock, Boolean allOrNothing)",
       "simplifiedSignature": "lock(SObject,Boolean)",
       "datatype": {
-        "id": "System.approval.lock.Approval.LockResult",
+        "id": "System.approval.lock.datatype.Approval.LockResult",
         "nodeType": "datatype",
-        "name": "Approval.LockResult"
+        "name": "Approval.LockResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Approval",
+          "textToLower": "approval",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Approval_0:14"
+        },
+        "parentId": "System.approval.lock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Approval.LockResult"
       },
       "description": "Locks an object, with the option for partial success, and returns the lock result.",
+      "parentName": "Approval",
+      "variables": {},
       "params": {
-        "recordToLock": {
-          "id": "System.approval.lock.recordtolock",
-          "type": "var",
+        "recordtolock": {
+          "id": "System.approval.method.lock(sobject,boolean).varParam.recordtolock",
+          "nodeType": "variable",
           "name": "recordToLock",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -892,28 +2443,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_recordToLock_-1:0"
+            "id": "token.type.identifier_recordToLock_0:47"
           },
-          "signature": "SObject recordToLock",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordToLock",
+            "textToLower": "recordtolock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 59
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordToLock_0:47"
+          },
+          "parentId": "System.approval.method.lock(sobject,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.approval.lock.sobject",
+            "id": "System.approval.lock.datatype.SObject",
             "nodeType": "datatype",
-            "name": "SObject"
-          }
+            "name": "SObject",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "SObject",
+              "textToLower": "sobject",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_SObject_0:39"
+            },
+            "parentId": "System.approval.lock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "SObject"
+          },
+          "scope": null
         },
-        "allOrNothing": {
-          "id": "System.approval.lock.allornothing",
-          "type": "var",
+        "allornothing": {
+          "id": "System.approval.method.lock(sobject,boolean).varParam.allornothing",
+          "nodeType": "variable",
           "name": "allOrNothing",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -922,29 +2518,385 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_allOrNothing_-1:0"
+            "id": "token.type.identifier_allOrNothing_0:69"
           },
-          "signature": "Boolean allOrNothing",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 69
+              },
+              "end": {
+                "line": 0,
+                "character": 81
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:69"
+          },
+          "parentId": "System.approval.method.lock(sobject,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.approval.lock.boolean",
+            "id": "System.approval.lock.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 61
+                },
+                "end": {
+                  "line": 0,
+                  "character": 68
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:61"
+            },
+            "parentId": "System.approval.lock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "Specifies whether this operation allows partial success. If you specify false and a record fails, the remainder of the DML operation can still succeed. This method returns a result object that you can use to verify which records succeeded, which failed, and why.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "lock(list<sobject>,boolean)": {
+      "id": "System.approval.method.lock(list<sobject>,boolean)",
+      "nodeType": "method",
+      "name": "lock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "lock",
+        "textToLower": "lock",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_lock_-1:0"
+      },
+      "parentId": "System.approval",
+      "order": 12,
+      "memberOrder": 12,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static List<Approval.LockResult> lock(List<SObject> recordsToLock, Boolean allOrNothing)",
+      "overrideSignature": "public static override List<Approval.LockResult> lock(List<SObject> recordsToLock, Boolean allOrNothing)",
+      "simplifiedSignature": "lock(List<SObject>,Boolean)",
+      "datatype": {
+        "id": "System.approval.lock.datatype.List<Approval.LockResult>",
+        "nodeType": "datatype",
+        "name": "List<Approval.LockResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "System.approval.lock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.approval.lock.datatype.List<Approval.LockResult>.value.Approval.LockResult",
+          "nodeType": "datatype",
+          "name": "Approval.LockResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Approval",
+            "textToLower": "approval",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 27
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Approval_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Approval.LockResult"
+        }
+      },
+      "description": "Locks a set of objects, with the option for partial success. It returns the lock results, including failures.",
+      "parentName": "Approval",
+      "variables": {},
+      "params": {
+        "recordstolock": {
+          "id": "System.approval.method.lock(list<sobject>,boolean).varParam.recordstolock",
+          "nodeType": "variable",
+          "name": "recordsToLock",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordsToLock",
+            "textToLower": "recordstolock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordsToLock_0:59"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordsToLock",
+            "textToLower": "recordstolock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordsToLock_0:59"
+          },
+          "parentId": "System.approval.method.lock(list<sobject>,boolean)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.approval.lock.datatype.List<SObject>",
+            "nodeType": "datatype",
+            "name": "List<SObject>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 49
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:45"
+            },
+            "parentId": "System.approval.lock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.approval.lock.datatype.List<SObject>.value.SObject",
+              "nodeType": "datatype",
+              "name": "SObject",
+              "startToken": {
+                "type": "datatype.support.class",
+                "text": "SObject",
+                "textToLower": "sobject",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 50
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 57
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_SObject_0:50"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "SObject"
+            }
+          },
+          "scope": null
+        },
+        "allornothing": {
+          "id": "System.approval.method.lock(list<sobject>,boolean).varParam.allornothing",
+          "nodeType": "variable",
+          "name": "allOrNothing",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 82
+              },
+              "end": {
+                "line": 0,
+                "character": 94
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:82"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 82
+              },
+              "end": {
+                "line": 0,
+                "character": 94
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:82"
+          },
+          "parentId": "System.approval.method.lock(list<sobject>,boolean)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "System.approval.lock.datatype.Boolean",
+            "nodeType": "datatype",
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 81
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:74"
+            },
+            "parentId": "System.approval.lock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "Specifies whether this operation allows partial success. If you specify false and a record fails, the remainder of the DML operation can still succeed. This method returns a result object that you can use to verify which records succeeded, which failed, and why.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "process(approval.processrequest)": {
-      "id": "System.approval.process",
+      "id": "System.approval.method.process(approval.processrequest)",
       "nodeType": "method",
       "name": "process",
       "startToken": {
@@ -966,6 +2918,9 @@
         },
         "id": "declaration.entity.name.function_process_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 13,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -973,17 +2928,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -992,30 +2947,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Approval.ProcessResult process(Approval.ProcessRequest approvalRequest)",
+      "overrideSignature": "public static override Approval.ProcessResult process(Approval.ProcessRequest approvalRequest)",
       "simplifiedSignature": "process(Approval.ProcessRequest)",
       "datatype": {
-        "id": "System.approval.process.Approval.ProcessResult",
+        "id": "System.approval.process.datatype.Approval.ProcessResult",
         "nodeType": "datatype",
-        "name": "Approval.ProcessResult"
+        "name": "Approval.ProcessResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Approval",
+          "textToLower": "approval",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Approval_0:14"
+        },
+        "parentId": "System.approval.process",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Approval.ProcessResult"
       },
       "description": "Submits a new approval request and approves or rejects existing approval requests.",
+      "parentName": "Approval",
+      "variables": {},
       "params": {
-        "approvalRequest": {
-          "id": "System.approval.process.approvalrequest",
-          "type": "var",
+        "approvalrequest": {
+          "id": "System.approval.method.process(approval.processrequest).varParam.approvalrequest",
+          "nodeType": "variable",
           "name": "approvalRequest",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1024,29 +3005,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_approvalRequest_-1:0"
+            "id": "token.type.identifier_approvalRequest_0:69"
           },
-          "signature": "Approval.ProcessRequest approvalRequest",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "approvalRequest",
+            "textToLower": "approvalrequest",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 69
+              },
+              "end": {
+                "line": 0,
+                "character": 84
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_approvalRequest_0:69"
+          },
+          "parentId": "System.approval.method.process(approval.processrequest)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.approval.process.approval.processrequest",
+            "id": "System.approval.process.datatype.Approval.ProcessRequest",
             "nodeType": "datatype",
-            "name": "Approval.ProcessRequest"
-          }
+            "name": "Approval.ProcessRequest",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Approval",
+              "textToLower": "approval",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Approval_0:45"
+            },
+            "parentId": "System.approval.process",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Approval.ProcessRequest"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "process(approval.processrequest,boolean)": {
-      "id": "System.approval.process",
+      "id": "System.approval.method.process(approval.processrequest,boolean)",
       "nodeType": "method",
       "name": "process",
       "startToken": {
@@ -1068,6 +3097,9 @@
         },
         "id": "declaration.entity.name.function_process_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 14,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1075,17 +3107,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1094,30 +3126,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void process(Approval.ProcessRequest approvalRequest, Boolean allOrNone)",
+      "signature": "public static Approval.ProcessResult process(Approval.ProcessRequest approvalRequest, Boolean allOrNone)",
+      "overrideSignature": "public static override Approval.ProcessResult process(Approval.ProcessRequest approvalRequest, Boolean allOrNone)",
       "simplifiedSignature": "process(Approval.ProcessRequest,Boolean)",
       "datatype": {
-        "id": "System.approval.process.void",
+        "id": "System.approval.process.datatype.Approval.ProcessResult",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Approval.ProcessResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Approval",
+          "textToLower": "approval",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Approval_0:14"
+        },
+        "parentId": "System.approval.process",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Approval.ProcessResult"
       },
       "description": "Submits a new approval request and approves or rejects existing approval requests.",
+      "parentName": "Approval",
+      "variables": {},
       "params": {
-        "approvalRequest": {
-          "id": "System.approval.process.approvalrequest",
-          "type": "var",
+        "approvalrequest": {
+          "id": "System.approval.method.process(approval.processrequest,boolean).varParam.approvalrequest",
+          "nodeType": "variable",
           "name": "approvalRequest",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1126,28 +3184,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_approvalRequest_-1:0"
+            "id": "token.type.identifier_approvalRequest_0:69"
           },
-          "signature": "Approval.ProcessRequest approvalRequest",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "approvalRequest",
+            "textToLower": "approvalrequest",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 69
+              },
+              "end": {
+                "line": 0,
+                "character": 84
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_approvalRequest_0:69"
+          },
+          "parentId": "System.approval.method.process(approval.processrequest,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.approval.process.approval.processrequest",
+            "id": "System.approval.process.datatype.Approval.ProcessRequest",
             "nodeType": "datatype",
-            "name": "Approval.ProcessRequest"
-          }
+            "name": "Approval.ProcessRequest",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Approval",
+              "textToLower": "approval",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Approval_0:45"
+            },
+            "parentId": "System.approval.process",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Approval.ProcessRequest"
+          },
+          "scope": null
         },
-        "allOrNone": {
-          "id": "System.approval.process.allornone",
-          "type": "var",
+        "allornone": {
+          "id": "System.approval.method.process(approval.processrequest,boolean).varParam.allornone",
+          "nodeType": "variable",
           "name": "allOrNone",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1156,29 +3259,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 103
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_allOrNone_-1:0"
+            "id": "token.type.identifier_allOrNone_0:94"
           },
-          "signature": "Boolean allOrNone",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNone",
+            "textToLower": "allornone",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 94
+              },
+              "end": {
+                "line": 0,
+                "character": 103
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNone_0:94"
+          },
+          "parentId": "System.approval.method.process(approval.processrequest,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.approval.process.boolean",
+            "id": "System.approval.process.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 86
+                },
+                "end": {
+                  "line": 0,
+                  "character": 93
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:86"
+            },
+            "parentId": "System.approval.process",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "Approval.ProcessRequest The optional allOrNone parameter specifies whether the operation allows for partial success. If you specify false for this parameter and an approval fails, the remainder of the approval processes can still succeed.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "process(approval.processrequest[])": {
-      "id": "System.approval.process",
+      "id": "System.approval.method.process(approval.processrequest[])",
       "nodeType": "method",
       "name": "process",
       "startToken": {
@@ -1200,6 +3351,9 @@
         },
         "id": "declaration.entity.name.function_process_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 15,
+      "memberOrder": 15,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1207,17 +3361,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1226,30 +3380,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void process(Approval.ProcessRequest[] approvalRequests)",
+      "signature": "public static Approval.ProcessResult[] process(Approval.ProcessRequest[] approvalRequests)",
+      "overrideSignature": "public static override Approval.ProcessResult[] process(Approval.ProcessRequest[] approvalRequests)",
       "simplifiedSignature": "process(Approval.ProcessRequest[])",
       "datatype": {
-        "id": "System.approval.process.void",
+        "id": "System.approval.process.datatype.Approval.ProcessResult[]",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Approval.ProcessResult[]",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Approval",
+          "textToLower": "approval",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Approval_0:14"
+        },
+        "parentId": "System.approval.process",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Approval.ProcessResult[]"
       },
       "description": "Submits a list of new approval requests, and approves or rejects existing approval requests.",
+      "parentName": "Approval",
+      "variables": {},
       "params": {
-        "approvalRequests": {
-          "id": "System.approval.process.approvalrequests",
-          "type": "var",
+        "approvalrequests": {
+          "id": "System.approval.method.process(approval.processrequest[]).varParam.approvalrequests",
+          "nodeType": "variable",
           "name": "approvalRequests",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1258,29 +3438,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 74
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 90
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_approvalRequests_-1:0"
+            "id": "token.type.identifier_approvalRequests_0:74"
           },
-          "signature": "Approval.ProcessRequest[] approvalRequests",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "approvalRequests",
+            "textToLower": "approvalrequests",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 74
+              },
+              "end": {
+                "line": 0,
+                "character": 90
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_approvalRequests_0:74"
+          },
+          "parentId": "System.approval.method.process(approval.processrequest[])",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.approval.process.approval.processrequest[]",
+            "id": "System.approval.process.datatype.Approval.ProcessRequest[]",
             "nodeType": "datatype",
-            "name": "Approval.ProcessRequest[]"
-          }
+            "name": "Approval.ProcessRequest[]",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Approval",
+              "textToLower": "approval",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 48
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Approval_0:48"
+            },
+            "parentId": "System.approval.process",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Approval.ProcessRequest[]"
+          },
+          "description": "Approval.ProcessRequest []",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "process(approval.processrequest[],boolean)": {
-      "id": "System.approval.process",
+      "id": "System.approval.method.process(approval.processrequest[],boolean)",
       "nodeType": "method",
       "name": "process",
       "startToken": {
@@ -1302,6 +3530,9 @@
         },
         "id": "declaration.entity.name.function_process_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 16,
+      "memberOrder": 16,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1309,17 +3540,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1328,30 +3559,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void process(Approval.ProcessRequest[] approvalRequests, Boolean allOrNone)",
+      "signature": "public static Approval.ProcessResult[] process(Approval.ProcessRequest[] approvalRequests, Boolean allOrNone)",
+      "overrideSignature": "public static override Approval.ProcessResult[] process(Approval.ProcessRequest[] approvalRequests, Boolean allOrNone)",
       "simplifiedSignature": "process(Approval.ProcessRequest[],Boolean)",
       "datatype": {
-        "id": "System.approval.process.void",
+        "id": "System.approval.process.datatype.Approval.ProcessResult[]",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Approval.ProcessResult[]",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Approval",
+          "textToLower": "approval",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Approval_0:14"
+        },
+        "parentId": "System.approval.process",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Approval.ProcessResult[]"
       },
       "description": "Submits a list of new approval requests, and approves or rejects existing approval requests.",
+      "parentName": "Approval",
+      "variables": {},
       "params": {
-        "approvalRequests": {
-          "id": "System.approval.process.approvalrequests",
-          "type": "var",
+        "approvalrequests": {
+          "id": "System.approval.method.process(approval.processrequest[],boolean).varParam.approvalrequests",
+          "nodeType": "variable",
           "name": "approvalRequests",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1360,28 +3617,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 74
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 90
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_approvalRequests_-1:0"
+            "id": "token.type.identifier_approvalRequests_0:74"
           },
-          "signature": "Approval.ProcessRequest[] approvalRequests",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "approvalRequests",
+            "textToLower": "approvalrequests",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 74
+              },
+              "end": {
+                "line": 0,
+                "character": 90
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_approvalRequests_0:74"
+          },
+          "parentId": "System.approval.method.process(approval.processrequest[],boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.approval.process.approval.processrequest[]",
+            "id": "System.approval.process.datatype.Approval.ProcessRequest[]",
             "nodeType": "datatype",
-            "name": "Approval.ProcessRequest[]"
-          }
+            "name": "Approval.ProcessRequest[]",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Approval",
+              "textToLower": "approval",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 48
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Approval_0:48"
+            },
+            "parentId": "System.approval.process",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Approval.ProcessRequest[]"
+          },
+          "scope": null
         },
-        "allOrNone": {
-          "id": "System.approval.process.allornone",
-          "type": "var",
+        "allornone": {
+          "id": "System.approval.method.process(approval.processrequest[],boolean).varParam.allornone",
+          "nodeType": "variable",
           "name": "allOrNone",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1390,29 +3692,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 100
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 109
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_allOrNone_-1:0"
+            "id": "token.type.identifier_allOrNone_0:100"
           },
-          "signature": "Boolean allOrNone",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNone",
+            "textToLower": "allornone",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 100
+              },
+              "end": {
+                "line": 0,
+                "character": 109
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNone_0:100"
+          },
+          "parentId": "System.approval.method.process(approval.processrequest[],boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.approval.process.boolean",
+            "id": "System.approval.process.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 92
+                },
+                "end": {
+                  "line": 0,
+                  "character": 99
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:92"
+            },
+            "parentId": "System.approval.process",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "Approval.ProcessRequest [] The optional allOrNone parameter specifies whether the operation allows for partial success. If you specify false for this parameter and an approval fails, the remainder of the approval processes can still succeed.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "unlock(id)": {
-      "id": "System.approval.unlock",
+      "id": "System.approval.method.unlock(id)",
       "nodeType": "method",
       "name": "unlock",
       "startToken": {
@@ -1434,6 +3784,9 @@
         },
         "id": "declaration.entity.name.function_unlock_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 17,
+      "memberOrder": 17,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1441,17 +3794,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1460,30 +3813,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Approval.UnlockResult unlock(Id recordId)",
+      "overrideSignature": "public static override Approval.UnlockResult unlock(Id recordId)",
       "simplifiedSignature": "unlock(Id)",
       "datatype": {
-        "id": "System.approval.unlock.Approval.UnlockResult",
+        "id": "System.approval.unlock.datatype.Approval.UnlockResult",
         "nodeType": "datatype",
-        "name": "Approval.UnlockResult"
+        "name": "Approval.UnlockResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Approval",
+          "textToLower": "approval",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Approval_0:14"
+        },
+        "parentId": "System.approval.unlock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Approval.UnlockResult"
       },
       "description": "Unlocks an object, and returns the unlock results.",
+      "parentName": "Approval",
+      "variables": {},
       "params": {
-        "recordId": {
-          "id": "System.approval.unlock.recordid",
-          "type": "var",
+        "recordid": {
+          "id": "System.approval.method.unlock(id).varParam.recordid",
+          "nodeType": "variable",
           "name": "recordId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1492,29 +3871,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_recordId_-1:0"
+            "id": "token.type.identifier_recordId_0:46"
           },
-          "signature": "Id recordId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordId",
+            "textToLower": "recordid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 54
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordId_0:46"
+          },
+          "parentId": "System.approval.method.unlock(id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.approval.unlock.id",
+            "id": "System.approval.unlock.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 43
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:43"
+            },
+            "parentId": "System.approval.unlock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "ID of the object to unlock.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "unlock(list)": {
-      "id": "System.approval.unlock",
+    "unlock(list<id>)": {
+      "id": "System.approval.method.unlock(list<id>)",
       "nodeType": "method",
       "name": "unlock",
       "startToken": {
@@ -1536,6 +3963,9 @@
         },
         "id": "declaration.entity.name.function_unlock_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 18,
+      "memberOrder": 18,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1543,17 +3973,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1562,61 +3992,189 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static List<Approval.UnlockResult> unlock(List <SObject>)",
-      "simplifiedSignature": "unlock(List)",
+      "signature": "public static List<Approval.UnlockResult> unlock(List<Id> recordIds)",
+      "overrideSignature": "public static override List<Approval.UnlockResult> unlock(List<Id> recordIds)",
+      "simplifiedSignature": "unlock(List<Id>)",
       "datatype": {
-        "id": "System.approval.unlock.List<Approval.UnlockResult>",
+        "id": "System.approval.unlock.datatype.List<Approval.UnlockResult>",
         "nodeType": "datatype",
-        "name": "List<Approval.UnlockResult>"
-      },
-      "description": "Unlocks a set of objects, with the option for partial success. It returns the unlock results, including failures.",
-      "params": {
-        "<SObject>": {
-          "id": "System.approval.unlock.<sobject>",
-          "type": "var",
-          "name": "<SObject>",
+        "name": "List<Approval.UnlockResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "System.approval.unlock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.approval.unlock.datatype.List<Approval.UnlockResult>.value.Approval.UnlockResult",
+          "nodeType": "datatype",
+          "name": "Approval.UnlockResult",
           "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "<SObject>",
-            "textToLower": "<sobject>",
+            "type": "datatype.support.namespace",
+            "text": "Approval",
+            "textToLower": "approval",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 19
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 27
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<SObject>_-1:0"
+            "id": "token.type.identifier_Approval_0:19"
           },
-          "signature": "List <SObject>",
-          "datatype": {
-            "id": "System.approval.unlock.list",
-            "nodeType": "datatype",
-            "name": "List"
-          }
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Approval.UnlockResult"
         }
-      }
+      },
+      "description": "Unlocks a set of objects, and returns the unlock results, including failures.",
+      "parentName": "Approval",
+      "variables": {},
+      "params": {
+        "recordids": {
+          "id": "System.approval.method.unlock(list<id>).varParam.recordids",
+          "nodeType": "variable",
+          "name": "recordIds",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordIds",
+            "textToLower": "recordids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 67
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordIds_0:58"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordIds",
+            "textToLower": "recordids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 67
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordIds_0:58"
+          },
+          "parentId": "System.approval.method.unlock(list<id>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.approval.unlock.datatype.List<Id>",
+            "nodeType": "datatype",
+            "name": "List<Id>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:49"
+            },
+            "parentId": "System.approval.unlock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.approval.unlock.datatype.List<Id>.value.Id",
+              "nodeType": "datatype",
+              "name": "Id",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Id",
+                "textToLower": "id",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 54
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 56
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Id_0:54"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Id"
+            }
+          },
+          "description": "IDs of the objects to unlock.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "unlock(sobject)": {
-      "id": "System.approval.unlock",
+      "id": "System.approval.method.unlock(sobject)",
       "nodeType": "method",
       "name": "unlock",
       "startToken": {
@@ -1638,6 +4196,9 @@
         },
         "id": "declaration.entity.name.function_unlock_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 19,
+      "memberOrder": 19,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1645,17 +4206,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1664,30 +4225,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Approval.UnlockResult unlock(SObject recordToUnlock)",
+      "overrideSignature": "public static override Approval.UnlockResult unlock(SObject recordToUnlock)",
       "simplifiedSignature": "unlock(SObject)",
       "datatype": {
-        "id": "System.approval.unlock.Approval.UnlockResult",
+        "id": "System.approval.unlock.datatype.Approval.UnlockResult",
         "nodeType": "datatype",
-        "name": "Approval.UnlockResult"
+        "name": "Approval.UnlockResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Approval",
+          "textToLower": "approval",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Approval_0:14"
+        },
+        "parentId": "System.approval.unlock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Approval.UnlockResult"
       },
       "description": "Unlocks an object, and returns the unlock results.",
+      "parentName": "Approval",
+      "variables": {},
       "params": {
-        "recordToUnlock": {
-          "id": "System.approval.unlock.recordtounlock",
-          "type": "var",
+        "recordtounlock": {
+          "id": "System.approval.method.unlock(sobject).varParam.recordtounlock",
+          "nodeType": "variable",
           "name": "recordToUnlock",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1696,29 +4283,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_recordToUnlock_-1:0"
+            "id": "token.type.identifier_recordToUnlock_0:51"
           },
-          "signature": "SObject recordToUnlock",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordToUnlock",
+            "textToLower": "recordtounlock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 51
+              },
+              "end": {
+                "line": 0,
+                "character": 65
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordToUnlock_0:51"
+          },
+          "parentId": "System.approval.method.unlock(sobject)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.approval.unlock.sobject",
+            "id": "System.approval.unlock.datatype.SObject",
             "nodeType": "datatype",
-            "name": "SObject"
-          }
+            "name": "SObject",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "SObject",
+              "textToLower": "sobject",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 43
+                },
+                "end": {
+                  "line": 0,
+                  "character": 50
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_SObject_0:43"
+            },
+            "parentId": "System.approval.unlock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "SObject"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "unlock(id,boolean)": {
-      "id": "System.approval.unlock",
+    "unlock(list<sobject>)": {
+      "id": "System.approval.method.unlock(list<sobject>)",
       "nodeType": "method",
       "name": "unlock",
       "startToken": {
@@ -1740,6 +4375,9 @@
         },
         "id": "declaration.entity.name.function_unlock_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 20,
+      "memberOrder": 20,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1747,17 +4385,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1766,6 +4404,198 @@
         "isAux": false,
         "range": {
           "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static List<Approval.UnlockResult> unlock(List<SObject> recordsToUnlock)",
+      "overrideSignature": "public static override List<Approval.UnlockResult> unlock(List<SObject> recordsToUnlock)",
+      "simplifiedSignature": "unlock(List<SObject>)",
+      "datatype": {
+        "id": "System.approval.unlock.datatype.List<Approval.UnlockResult>",
+        "nodeType": "datatype",
+        "name": "List<Approval.UnlockResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "System.approval.unlock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.approval.unlock.datatype.List<Approval.UnlockResult>.value.Approval.UnlockResult",
+          "nodeType": "datatype",
+          "name": "Approval.UnlockResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Approval",
+            "textToLower": "approval",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 27
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Approval_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Approval.UnlockResult"
+        }
+      },
+      "description": "Unlocks a set of objects, and returns the unlock results, including failures.",
+      "parentName": "Approval",
+      "variables": {},
+      "params": {
+        "recordstounlock": {
+          "id": "System.approval.method.unlock(list<sobject>).varParam.recordstounlock",
+          "nodeType": "variable",
+          "name": "recordsToUnlock",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordsToUnlock",
+            "textToLower": "recordstounlock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 63
+              },
+              "end": {
+                "line": 0,
+                "character": 78
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordsToUnlock_0:63"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordsToUnlock",
+            "textToLower": "recordstounlock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 63
+              },
+              "end": {
+                "line": 0,
+                "character": 78
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordsToUnlock_0:63"
+          },
+          "parentId": "System.approval.method.unlock(list<sobject>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.approval.unlock.datatype.List<SObject>",
+            "nodeType": "datatype",
+            "name": "List<SObject>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:49"
+            },
+            "parentId": "System.approval.unlock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.approval.unlock.datatype.List<SObject>.value.SObject",
+              "nodeType": "datatype",
+              "name": "SObject",
+              "startToken": {
+                "type": "datatype.support.class",
+                "text": "SObject",
+                "textToLower": "sobject",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 54
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 61
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_SObject_0:54"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "SObject"
+            }
+          },
+          "description": "",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "unlock(id,boolean)": {
+      "id": "System.approval.method.unlock(id,boolean)",
+      "nodeType": "method",
+      "name": "unlock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "unlock",
+        "textToLower": "unlock",
+        "isAux": false,
+        "range": {
+          "start": {
             "line": -1,
             "character": 0
           },
@@ -1776,20 +4606,87 @@
           "isEmpty": true,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "declaration.entity.name.function_unlock_-1:0"
+      },
+      "parentId": "System.approval",
+      "order": 21,
+      "memberOrder": 21,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Approval.UnlockResult unlock(Id recordId, Boolean allOrNothing)",
+      "overrideSignature": "public static override Approval.UnlockResult unlock(Id recordId, Boolean allOrNothing)",
       "simplifiedSignature": "unlock(Id,Boolean)",
       "datatype": {
-        "id": "System.approval.unlock.Approval.UnlockResult",
+        "id": "System.approval.unlock.datatype.Approval.UnlockResult",
         "nodeType": "datatype",
-        "name": "Approval.UnlockResult"
+        "name": "Approval.UnlockResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Approval",
+          "textToLower": "approval",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Approval_0:14"
+        },
+        "parentId": "System.approval.unlock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Approval.UnlockResult"
       },
       "description": "Unlocks an object, with the option for partial success, and returns the unlock result.",
+      "parentName": "Approval",
+      "variables": {},
       "params": {
-        "recordId": {
-          "id": "System.approval.unlock.recordid",
-          "type": "var",
+        "recordid": {
+          "id": "System.approval.method.unlock(id,boolean).varParam.recordid",
+          "nodeType": "variable",
           "name": "recordId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1798,28 +4695,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_recordId_-1:0"
+            "id": "token.type.identifier_recordId_0:46"
           },
-          "signature": "Id recordId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordId",
+            "textToLower": "recordid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 54
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordId_0:46"
+          },
+          "parentId": "System.approval.method.unlock(id,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.approval.unlock.id",
+            "id": "System.approval.unlock.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 43
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:43"
+            },
+            "parentId": "System.approval.unlock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "allOrNothing": {
-          "id": "System.approval.unlock.allornothing",
-          "type": "var",
+        "allornothing": {
+          "id": "System.approval.method.unlock(id,boolean).varParam.allornothing",
+          "nodeType": "variable",
           "name": "allOrNothing",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1828,29 +4770,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 76
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_allOrNothing_-1:0"
+            "id": "token.type.identifier_allOrNothing_0:64"
           },
-          "signature": "Boolean allOrNothing",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 76
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:64"
+          },
+          "parentId": "System.approval.method.unlock(id,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.approval.unlock.boolean",
+            "id": "System.approval.unlock.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 56
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:56"
+            },
+            "parentId": "System.approval.unlock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "ID of the object to lock. Specifies whether this operation allows partial success. If you specify false and a record fails, the remainder of the DML operation can still succeed. This method returns a result object that you can use to verify which records succeeded, which failed, and why.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "unlock(sobject,boolean)": {
-      "id": "System.approval.unlock",
+    "unlock(list<id>,boolean)": {
+      "id": "System.approval.method.unlock(list<id>,boolean)",
       "nodeType": "method",
       "name": "unlock",
       "startToken": {
@@ -1872,6 +4862,9 @@
         },
         "id": "declaration.entity.name.function_unlock_-1:0"
       },
+      "parentId": "System.approval",
+      "order": 22,
+      "memberOrder": 22,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1879,17 +4872,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1898,6 +4891,273 @@
         "isAux": false,
         "range": {
           "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static List<Approval.UnlockResult> unlock(List<Id> recordIds, Boolean allOrNothing)",
+      "overrideSignature": "public static override List<Approval.UnlockResult> unlock(List<Id> recordIds, Boolean allOrNothing)",
+      "simplifiedSignature": "unlock(List<Id>,Boolean)",
+      "datatype": {
+        "id": "System.approval.unlock.datatype.List<Approval.UnlockResult>",
+        "nodeType": "datatype",
+        "name": "List<Approval.UnlockResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "System.approval.unlock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.approval.unlock.datatype.List<Approval.UnlockResult>.value.Approval.UnlockResult",
+          "nodeType": "datatype",
+          "name": "Approval.UnlockResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Approval",
+            "textToLower": "approval",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 27
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Approval_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Approval.UnlockResult"
+        }
+      },
+      "description": "Unlocks a set of objects, with the option for partial success. It returns the unlock results, including failures.",
+      "parentName": "Approval",
+      "variables": {},
+      "params": {
+        "recordids": {
+          "id": "System.approval.method.unlock(list<id>,boolean).varParam.recordids",
+          "nodeType": "variable",
+          "name": "recordIds",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordIds",
+            "textToLower": "recordids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 67
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordIds_0:58"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordIds",
+            "textToLower": "recordids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 67
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordIds_0:58"
+          },
+          "parentId": "System.approval.method.unlock(list<id>,boolean)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.approval.unlock.datatype.List<Id>",
+            "nodeType": "datatype",
+            "name": "List<Id>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:49"
+            },
+            "parentId": "System.approval.unlock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.approval.unlock.datatype.List<Id>.value.Id",
+              "nodeType": "datatype",
+              "name": "Id",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Id",
+                "textToLower": "id",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 54
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 56
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Id_0:54"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Id"
+            }
+          },
+          "scope": null
+        },
+        "allornothing": {
+          "id": "System.approval.method.unlock(list<id>,boolean).varParam.allornothing",
+          "nodeType": "variable",
+          "name": "allOrNothing",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 77
+              },
+              "end": {
+                "line": 0,
+                "character": 89
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:77"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 77
+              },
+              "end": {
+                "line": 0,
+                "character": 89
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:77"
+          },
+          "parentId": "System.approval.method.unlock(list<id>,boolean)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "System.approval.unlock.datatype.Boolean",
+            "nodeType": "datatype",
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 69
+                },
+                "end": {
+                  "line": 0,
+                  "character": 76
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:69"
+            },
+            "parentId": "System.approval.unlock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "IDs of the objects to unlock. Specifies whether this operation allows partial success. If you specify false and a record fails, the remainder of the DML operation can still succeed. This method returns a result object that you can use to verify which records succeeded, which failed, and why.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "unlock(sobject,boolean)": {
+      "id": "System.approval.method.unlock(sobject,boolean)",
+      "nodeType": "method",
+      "name": "unlock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "unlock",
+        "textToLower": "unlock",
+        "isAux": false,
+        "range": {
+          "start": {
             "line": -1,
             "character": 0
           },
@@ -1908,20 +5168,87 @@
           "isEmpty": true,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "declaration.entity.name.function_unlock_-1:0"
+      },
+      "parentId": "System.approval",
+      "order": 23,
+      "memberOrder": 23,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Approval.UnlockResult unlock(SObject recordToUnlock, Boolean allOrNothing)",
+      "overrideSignature": "public static override Approval.UnlockResult unlock(SObject recordToUnlock, Boolean allOrNothing)",
       "simplifiedSignature": "unlock(SObject,Boolean)",
       "datatype": {
-        "id": "System.approval.unlock.Approval.UnlockResult",
+        "id": "System.approval.unlock.datatype.Approval.UnlockResult",
         "nodeType": "datatype",
-        "name": "Approval.UnlockResult"
+        "name": "Approval.UnlockResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Approval",
+          "textToLower": "approval",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Approval_0:14"
+        },
+        "parentId": "System.approval.unlock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Approval.UnlockResult"
       },
       "description": "Unlocks an object, with the option for partial success, and returns the unlock result.",
+      "parentName": "Approval",
+      "variables": {},
       "params": {
-        "recordToUnlock": {
-          "id": "System.approval.unlock.recordtounlock",
-          "type": "var",
+        "recordtounlock": {
+          "id": "System.approval.method.unlock(sobject,boolean).varParam.recordtounlock",
+          "nodeType": "variable",
           "name": "recordToUnlock",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1930,28 +5257,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_recordToUnlock_-1:0"
+            "id": "token.type.identifier_recordToUnlock_0:51"
           },
-          "signature": "SObject recordToUnlock",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordToUnlock",
+            "textToLower": "recordtounlock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 51
+              },
+              "end": {
+                "line": 0,
+                "character": 65
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordToUnlock_0:51"
+          },
+          "parentId": "System.approval.method.unlock(sobject,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.approval.unlock.sobject",
+            "id": "System.approval.unlock.datatype.SObject",
             "nodeType": "datatype",
-            "name": "SObject"
-          }
+            "name": "SObject",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "SObject",
+              "textToLower": "sobject",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 43
+                },
+                "end": {
+                  "line": 0,
+                  "character": 50
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_SObject_0:43"
+            },
+            "parentId": "System.approval.unlock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "SObject"
+          },
+          "scope": null
         },
-        "allOrNothing": {
-          "id": "System.approval.unlock.allornothing",
-          "type": "var",
+        "allornothing": {
+          "id": "System.approval.method.unlock(sobject,boolean).varParam.allornothing",
+          "nodeType": "variable",
           "name": "allOrNothing",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1960,30 +5332,388 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 75
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 87
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_allOrNothing_-1:0"
+            "id": "token.type.identifier_allOrNothing_0:75"
           },
-          "signature": "Boolean allOrNothing",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 75
+              },
+              "end": {
+                "line": 0,
+                "character": 87
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:75"
+          },
+          "parentId": "System.approval.method.unlock(sobject,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.approval.unlock.boolean",
+            "id": "System.approval.unlock.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 67
+                },
+                "end": {
+                  "line": 0,
+                  "character": 74
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:67"
+            },
+            "parentId": "System.approval.unlock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "Specifies whether this operation allows partial success. If you specify false and a record fails, the remainder of the DML operation can still succeed. This method returns a result object that you can use to verify which records succeeded, which failed, and why.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "unlock(list<sobject>,boolean)": {
+      "id": "System.approval.method.unlock(list<sobject>,boolean)",
+      "nodeType": "method",
+      "name": "unlock",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "unlock",
+        "textToLower": "unlock",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function_unlock_-1:0"
+      },
+      "parentId": "System.approval",
+      "order": 24,
+      "memberOrder": 24,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static List<Approval.UnlockResult> unlock(List<SObject> recordsToUnlock, Boolean allOrNothing)",
+      "overrideSignature": "public static override List<Approval.UnlockResult> unlock(List<SObject> recordsToUnlock, Boolean allOrNothing)",
+      "simplifiedSignature": "unlock(List<SObject>,Boolean)",
+      "datatype": {
+        "id": "System.approval.unlock.datatype.List<Approval.UnlockResult>",
+        "nodeType": "datatype",
+        "name": "List<Approval.UnlockResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "System.approval.unlock",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.approval.unlock.datatype.List<Approval.UnlockResult>.value.Approval.UnlockResult",
+          "nodeType": "datatype",
+          "name": "Approval.UnlockResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Approval",
+            "textToLower": "approval",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 27
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Approval_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Approval.UnlockResult"
+        }
+      },
+      "description": "Unlocks a set of objects, with the option for partial success. It returns the unlock results, including failures.",
+      "parentName": "Approval",
+      "variables": {},
+      "params": {
+        "recordstounlock": {
+          "id": "System.approval.method.unlock(list<sobject>,boolean).varParam.recordstounlock",
+          "nodeType": "variable",
+          "name": "recordsToUnlock",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordsToUnlock",
+            "textToLower": "recordstounlock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 63
+              },
+              "end": {
+                "line": 0,
+                "character": 78
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordsToUnlock_0:63"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordsToUnlock",
+            "textToLower": "recordstounlock",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 63
+              },
+              "end": {
+                "line": 0,
+                "character": 78
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordsToUnlock_0:63"
+          },
+          "parentId": "System.approval.method.unlock(list<sobject>,boolean)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.approval.unlock.datatype.List<SObject>",
+            "nodeType": "datatype",
+            "name": "List<SObject>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:49"
+            },
+            "parentId": "System.approval.unlock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.approval.unlock.datatype.List<SObject>.value.SObject",
+              "nodeType": "datatype",
+              "name": "SObject",
+              "startToken": {
+                "type": "datatype.support.class",
+                "text": "SObject",
+                "textToLower": "sobject",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 54
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 61
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_SObject_0:54"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "SObject"
+            }
+          },
+          "scope": null
+        },
+        "allornothing": {
+          "id": "System.approval.method.unlock(list<sobject>,boolean).varParam.allornothing",
+          "nodeType": "variable",
+          "name": "allOrNothing",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 88
+              },
+              "end": {
+                "line": 0,
+                "character": 100
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:88"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 88
+              },
+              "end": {
+                "line": 0,
+                "character": 100
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:88"
+          },
+          "parentId": "System.approval.method.unlock(list<sobject>,boolean)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "System.approval.unlock.datatype.Boolean",
+            "nodeType": "datatype",
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 80
+                },
+                "end": {
+                  "line": 0,
+                  "character": 87
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:80"
+            },
+            "parentId": "System.approval.unlock",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "Specifies whether this operation allows partial success. If you specify false and a record fails, the remainder of the DML operation can still succeed. This method returns a result object that you can use to verify which records succeeded, which failed, and why.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 24,
+  "queries": []
 }

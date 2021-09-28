@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Records_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getmotif(string,string)": {
-      "id": "ConnectApi.records.getmotif",
+      "id": "ConnectApi.records.method.getmotif(string,string)",
       "nodeType": "method",
       "name": "getMotif",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getMotif_-1:0"
       },
+      "parentId": "ConnectApi.records",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.​Motif getMotif(String communityId, String idOrPrefix)",
+      "signature": "public static ConnectApi.Motif getMotif(String communityId, String idOrPrefix)",
+      "overrideSignature": "public static override ConnectApi.Motif getMotif(String communityId, String idOrPrefix)",
       "simplifiedSignature": "getMotif(String,String)",
       "datatype": {
-        "id": "ConnectApi.records.getmotif.ConnectApi.​Motif",
+        "id": "ConnectApi.records.getmotif.datatype.ConnectApi.Motif",
         "nodeType": "datatype",
-        "name": "ConnectApi.​Motif"
+        "name": "ConnectApi.Motif",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.records.getmotif",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.Motif"
       },
       "description": "Get a motif that contains the URLs for a set of small, medium, and large motif icons for a record. It can also contain a base color for the record.",
+      "parentName": "Records",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.records.getmotif.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.records.method.getmotif(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:47"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:47"
+          },
+          "parentId": "ConnectApi.records.method.getmotif(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.records.getmotif.string",
+            "id": "ConnectApi.records.getmotif.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 40
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:40"
+            },
+            "parentId": "ConnectApi.records.getmotif",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "idOrPrefix": {
-          "id": "ConnectApi.records.getmotif.idorprefix",
-          "type": "var",
+        "idorprefix": {
+          "id": "ConnectApi.records.method.getmotif(string,string).varParam.idorprefix",
+          "nodeType": "variable",
           "name": "idOrPrefix",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,31 +254,79 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_idOrPrefix_-1:0"
+            "id": "token.type.identifier_idOrPrefix_0:67"
           },
-          "signature": "String idOrPrefix",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "idOrPrefix",
+            "textToLower": "idorprefix",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 77
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_idOrPrefix_0:67"
+          },
+          "parentId": "ConnectApi.records.method.getmotif(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.records.getmotif.string",
+            "id": "ConnectApi.records.getmotif.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 60
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:60"
+            },
+            "parentId": "ConnectApi.records.getmotif",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. An ID or key prefix.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "(string,list)": {
-      "id": "ConnectApi.records.",
+    "getmotifbatch(string,list<string>)": {
+      "id": "ConnectApi.records.method.getmotifbatch(string,list<string>)",
       "nodeType": "method",
-      "name": "",
+      "name": "getMotifBatch",
       "startToken": {
         "type": "declaration.entity.name.function",
         "text": "",
@@ -222,6 +346,9 @@
         },
         "id": "declaration.entity.name.function__-1:0"
       },
+      "parentId": "ConnectApi.records",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -229,17 +356,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -248,30 +375,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.BatchResult[] (String communityId, List <String>)",
-      "simplifiedSignature": "(String,List)",
+      "signature": "public static ConnectApi.BatchResult[] getMotifBatch(String communityId, List<String> idOrPrefixList)",
+      "overrideSignature": "public static override ConnectApi.BatchResult[] getMotifBatch(String communityId, List<String> idOrPrefixList)",
+      "simplifiedSignature": "getMotifBatch(String,List<String>)",
       "datatype": {
-        "id": "ConnectApi.records..ConnectApi.BatchResult[]",
+        "id": "ConnectApi.records..datatype.ConnectApi.BatchResult[]",
         "nodeType": "datatype",
-        "name": "ConnectApi.BatchResult[]"
+        "name": "ConnectApi.BatchResult[]",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.records.",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.BatchResult[]"
       },
       "description": "Get a motif for a list of objects.",
+      "parentName": "Records",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.records..communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.records.method.getmotifbatch(string,list<string>).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -280,60 +433,182 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:60"
           },
-          "signature": "String communityId",
-          "datatype": {
-            "id": "ConnectApi.records..string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String>": {
-          "id": "ConnectApi.records..<string>",
-          "type": "var",
-          "name": "<String>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "communityId",
+            "textToLower": "communityid",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_communityId_0:60"
           },
-          "signature": "List <String>",
+          "parentId": "ConnectApi.records.method.getmotifbatch(string,list<string>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.records..list",
+            "id": "ConnectApi.records..datatype.String",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 53
+                },
+                "end": {
+                  "line": 0,
+                  "character": 59
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:53"
+            },
+            "parentId": "ConnectApi.records.",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "idorprefixlist": {
+          "id": "ConnectApi.records.method.getmotifbatch(string,list<string>).varParam.idorprefixlist",
+          "nodeType": "variable",
+          "name": "idOrPrefixList",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "idOrPrefixList",
+            "textToLower": "idorprefixlist",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 86
+              },
+              "end": {
+                "line": 0,
+                "character": 100
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_idOrPrefixList_0:86"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "idOrPrefixList",
+            "textToLower": "idorprefixlist",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 86
+              },
+              "end": {
+                "line": 0,
+                "character": 100
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_idOrPrefixList_0:86"
+          },
+          "parentId": "ConnectApi.records.method.getmotifbatch(string,list<string>)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "ConnectApi.records..datatype.List<String>",
+            "nodeType": "datatype",
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 73
+                },
+                "end": {
+                  "line": 0,
+                  "character": 77
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:73"
+            },
+            "parentId": "ConnectApi.records.",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "ConnectApi.records..datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 78
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 84
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:78"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "Use either the ID for a community, internal, or null. A list of object IDs or prefixes.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

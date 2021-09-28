@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_WebServiceMock_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "doinvoke(object,object,map,object>)": {
-      "id": "System.webservicemock.doinvoke",
+    "doinvoke(object,object,map<string,object>,string,string,string,string,string,string)": {
+      "id": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string)",
       "nodeType": "method",
       "name": "doInvoke",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_doInvoke_-1:0"
       },
+      "parentId": "System.webservicemock",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void doInvoke(Object stub, Object soapRequest, Map <String, Object> responseMap,)",
-      "simplifiedSignature": "doInvoke(Object,Object,Map,Object>)",
+      "signature": "public Void doInvoke(Object stub, Object soapRequest, Map<String,Object> responseMap, String endpoint, String soapAction, String requestName, String responseNamespace, String responseName, String responseType)",
+      "overrideSignature": "public override Void doInvoke(Object stub, Object soapRequest, Map<String,Object> responseMap, String endpoint, String soapAction, String requestName, String responseNamespace, String responseName, String responseType)",
+      "simplifiedSignature": "doInvoke(Object,Object,Map<String,Object>,String,String,String,String,String,String)",
       "datatype": {
-        "id": "System.webservicemock.doinvoke.void",
+        "id": "System.webservicemock.doinvoke.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "System.webservicemock.doinvoke",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "The implementation of this method is called by the Apex runtime to send a fake response when a Web service callout is made after Test.setMock has been called.",
+      "parentName": "WebServiceMock",
+      "variables": {},
       "params": {
         "stub": {
-          "id": "System.webservicemock.doinvoke.stub",
-          "type": "var",
+          "id": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string).varParam.stub",
+          "nodeType": "variable",
           "name": "stub",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,28 +160,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 28
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 32
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_stub_-1:0"
+            "id": "token.type.identifier_stub_0:28"
           },
-          "signature": "Object stub",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "stub",
+            "textToLower": "stub",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 28
+              },
+              "end": {
+                "line": 0,
+                "character": 32
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_stub_0:28"
+          },
+          "parentId": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.webservicemock.doinvoke.object",
+            "id": "System.webservicemock.doinvoke.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 21
+                },
+                "end": {
+                  "line": 0,
+                  "character": 27
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:21"
+            },
+            "parentId": "System.webservicemock.doinvoke",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "scope": null
         },
-        "soapRequest": {
-          "id": "System.webservicemock.doinvoke.soaprequest",
-          "type": "var",
+        "soaprequest": {
+          "id": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string).varParam.soaprequest",
+          "nodeType": "variable",
           "name": "soapRequest",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -159,90 +235,659 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_soapRequest_-1:0"
+            "id": "token.type.identifier_soapRequest_0:41"
           },
-          "signature": "Object soapRequest",
-          "datatype": {
-            "id": "System.webservicemock.doinvoke.object",
-            "nodeType": "datatype",
-            "name": "Object"
-          }
-        },
-        "<String": {
-          "id": "System.webservicemock.doinvoke.<string",
-          "type": "var",
-          "name": "<String",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "soapRequest",
+            "textToLower": "soaprequest",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_soapRequest_0:41"
           },
-          "signature": "Map <String",
+          "parentId": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.webservicemock.doinvoke.map",
+            "id": "System.webservicemock.doinvoke.datatype.Object",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:34"
+            },
+            "parentId": "System.webservicemock.doinvoke",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "scope": null
         },
-        "responseMap,": {
-          "id": "System.webservicemock.doinvoke.responsemap,",
-          "type": "var",
-          "name": "responseMap,",
+        "responsemap": {
+          "id": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string).varParam.responsemap",
+          "nodeType": "variable",
+          "name": "responseMap",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "responseMap,",
-            "textToLower": "responsemap,",
+            "text": "responseMap",
+            "textToLower": "responsemap",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_responseMap,_-1:0"
+            "id": "token.type.identifier_responseMap_0:73"
           },
-          "signature": "Object> responseMap,",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "responseMap",
+            "textToLower": "responsemap",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 84
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_responseMap_0:73"
+          },
+          "parentId": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.webservicemock.doinvoke.object>",
+            "id": "System.webservicemock.doinvoke.datatype.Map<String,Object>",
             "nodeType": "datatype",
-            "name": "Object>"
-          }
+            "name": "Map<String,Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 57
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:54"
+            },
+            "parentId": "System.webservicemock.doinvoke",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "System.webservicemock.doinvoke.datatype.Map<String,Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 65
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 71
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:65"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            },
+            "key": {
+              "id": "System.webservicemock.doinvoke.datatype.Map<String,Object>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 58
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 64
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:58"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
+        },
+        "endpoint": {
+          "id": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string).varParam.endpoint",
+          "nodeType": "variable",
+          "name": "endpoint",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "endpoint",
+            "textToLower": "endpoint",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 93
+              },
+              "end": {
+                "line": 0,
+                "character": 101
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_endpoint_0:93"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "endpoint",
+            "textToLower": "endpoint",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 93
+              },
+              "end": {
+                "line": 0,
+                "character": 101
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_endpoint_0:93"
+          },
+          "parentId": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string)",
+          "order": 4,
+          "memberOrder": 4,
+          "datatype": {
+            "id": "System.webservicemock.doinvoke.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 86
+                },
+                "end": {
+                  "line": 0,
+                  "character": 92
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:86"
+            },
+            "parentId": "System.webservicemock.doinvoke",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "soapaction": {
+          "id": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string).varParam.soapaction",
+          "nodeType": "variable",
+          "name": "soapAction",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "soapAction",
+            "textToLower": "soapaction",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 110
+              },
+              "end": {
+                "line": 0,
+                "character": 120
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_soapAction_0:110"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "soapAction",
+            "textToLower": "soapaction",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 110
+              },
+              "end": {
+                "line": 0,
+                "character": 120
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_soapAction_0:110"
+          },
+          "parentId": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string)",
+          "order": 5,
+          "memberOrder": 5,
+          "datatype": {
+            "id": "System.webservicemock.doinvoke.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 103
+                },
+                "end": {
+                  "line": 0,
+                  "character": 109
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:103"
+            },
+            "parentId": "System.webservicemock.doinvoke",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "requestname": {
+          "id": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string).varParam.requestname",
+          "nodeType": "variable",
+          "name": "requestName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "requestName",
+            "textToLower": "requestname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 129
+              },
+              "end": {
+                "line": 0,
+                "character": 140
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_requestName_0:129"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "requestName",
+            "textToLower": "requestname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 129
+              },
+              "end": {
+                "line": 0,
+                "character": 140
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_requestName_0:129"
+          },
+          "parentId": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string)",
+          "order": 6,
+          "memberOrder": 6,
+          "datatype": {
+            "id": "System.webservicemock.doinvoke.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 122
+                },
+                "end": {
+                  "line": 0,
+                  "character": 128
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:122"
+            },
+            "parentId": "System.webservicemock.doinvoke",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "responsenamespace": {
+          "id": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string).varParam.responsenamespace",
+          "nodeType": "variable",
+          "name": "responseNamespace",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "responseNamespace",
+            "textToLower": "responsenamespace",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 149
+              },
+              "end": {
+                "line": 0,
+                "character": 166
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_responseNamespace_0:149"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "responseNamespace",
+            "textToLower": "responsenamespace",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 149
+              },
+              "end": {
+                "line": 0,
+                "character": 166
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_responseNamespace_0:149"
+          },
+          "parentId": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string)",
+          "order": 7,
+          "memberOrder": 7,
+          "datatype": {
+            "id": "System.webservicemock.doinvoke.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 142
+                },
+                "end": {
+                  "line": 0,
+                  "character": 148
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:142"
+            },
+            "parentId": "System.webservicemock.doinvoke",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "responsename": {
+          "id": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string).varParam.responsename",
+          "nodeType": "variable",
+          "name": "responseName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "responseName",
+            "textToLower": "responsename",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 175
+              },
+              "end": {
+                "line": 0,
+                "character": 187
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_responseName_0:175"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "responseName",
+            "textToLower": "responsename",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 175
+              },
+              "end": {
+                "line": 0,
+                "character": 187
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_responseName_0:175"
+          },
+          "parentId": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string)",
+          "order": 8,
+          "memberOrder": 8,
+          "datatype": {
+            "id": "System.webservicemock.doinvoke.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 168
+                },
+                "end": {
+                  "line": 0,
+                  "character": 174
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:168"
+            },
+            "parentId": "System.webservicemock.doinvoke",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "responsetype": {
+          "id": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string).varParam.responsetype",
+          "nodeType": "variable",
+          "name": "responseType",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "responseType",
+            "textToLower": "responsetype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 196
+              },
+              "end": {
+                "line": 0,
+                "character": 208
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_responseType_0:196"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "responseType",
+            "textToLower": "responsetype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 196
+              },
+              "end": {
+                "line": 0,
+                "character": 208
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_responseType_0:196"
+          },
+          "parentId": "System.webservicemock.method.doinvoke(object,object,map<string,object>,string,string,string,string,string,string)",
+          "order": 9,
+          "memberOrder": 9,
+          "datatype": {
+            "id": "System.webservicemock.doinvoke.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 189
+                },
+                "end": {
+                  "line": 0,
+                  "character": 195
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:189"
+            },
+            "parentId": "System.webservicemock.doinvoke",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "An instance of the auto-generated class. The SOAP Web service request being invoked. A collection of key/value pairs representing the response to send for the request. When implementing this interface, set the responseMap argument to a key/value pair representing the response desired. The endpoint URL for the request. The requested SOAP operation. The requested SOAP operation name. The response namespace. The name of the response element as defined in the WSDL. The class for the response as defined in the auto-generated class.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

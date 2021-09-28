@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_AccountCreator_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "createaccount(string,string,id)": {
-      "id": "ChatterAnswers.accountcreator.createaccount",
+      "id": "ChatterAnswers.accountcreator.method.createaccount(string,string,id)",
       "nodeType": "method",
       "name": "createAccount",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_createAccount_-1:0"
       },
+      "parentId": "ChatterAnswers.accountcreator",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String createAccount(String firstName, String lastName, Id siteAdminId)",
+      "overrideSignature": "public override String createAccount(String firstName, String lastName, Id siteAdminId)",
       "simplifiedSignature": "createAccount(String,String,Id)",
       "datatype": {
-        "id": "ChatterAnswers.accountcreator.createaccount.String",
+        "id": "ChatterAnswers.accountcreator.createaccount.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "ChatterAnswers.accountcreator.createaccount",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Accepts basic user information and creates an Account record. The implementation of this method returns the account ID.",
+      "parentName": "AccountCreator",
+      "variables": {},
       "params": {
-        "firstName": {
-          "id": "ChatterAnswers.accountcreator.createaccount.firstname",
-          "type": "var",
+        "firstname": {
+          "id": "ChatterAnswers.accountcreator.method.createaccount(string,string,id).varParam.firstname",
+          "nodeType": "variable",
           "name": "firstName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,28 +160,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_firstName_-1:0"
+            "id": "token.type.identifier_firstName_0:35"
           },
-          "signature": "String firstName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "firstName",
+            "textToLower": "firstname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 35
+              },
+              "end": {
+                "line": 0,
+                "character": 44
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_firstName_0:35"
+          },
+          "parentId": "ChatterAnswers.accountcreator.method.createaccount(string,string,id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ChatterAnswers.accountcreator.createaccount.string",
+            "id": "ChatterAnswers.accountcreator.createaccount.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 28
+                },
+                "end": {
+                  "line": 0,
+                  "character": 34
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:28"
+            },
+            "parentId": "ChatterAnswers.accountcreator.createaccount",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "lastName": {
-          "id": "ChatterAnswers.accountcreator.createaccount.lastname",
-          "type": "var",
+        "lastname": {
+          "id": "ChatterAnswers.accountcreator.method.createaccount(string,string,id).varParam.lastname",
+          "nodeType": "variable",
           "name": "lastName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -159,28 +235,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_lastName_-1:0"
+            "id": "token.type.identifier_lastName_0:53"
           },
-          "signature": "String lastName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "lastName",
+            "textToLower": "lastname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 61
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_lastName_0:53"
+          },
+          "parentId": "ChatterAnswers.accountcreator.method.createaccount(string,string,id)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ChatterAnswers.accountcreator.createaccount.string",
+            "id": "ChatterAnswers.accountcreator.createaccount.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 46
+                },
+                "end": {
+                  "line": 0,
+                  "character": 52
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:46"
+            },
+            "parentId": "ChatterAnswers.accountcreator.createaccount",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "siteAdminId": {
-          "id": "ChatterAnswers.accountcreator.createaccount.siteadminid",
-          "type": "var",
+        "siteadminid": {
+          "id": "ChatterAnswers.accountcreator.method.createaccount(string,string,id).varParam.siteadminid",
+          "nodeType": "variable",
           "name": "siteAdminId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -189,30 +310,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_siteAdminId_-1:0"
+            "id": "token.type.identifier_siteAdminId_0:66"
           },
-          "signature": "Id siteAdminId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "siteAdminId",
+            "textToLower": "siteadminid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 66
+              },
+              "end": {
+                "line": 0,
+                "character": 77
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_siteAdminId_0:66"
+          },
+          "parentId": "ChatterAnswers.accountcreator.method.createaccount(string,string,id)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ChatterAnswers.accountcreator.createaccount.id",
+            "id": "ChatterAnswers.accountcreator.createaccount.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 63
+                },
+                "end": {
+                  "line": 0,
+                  "character": 65
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:63"
+            },
+            "parentId": "ChatterAnswers.accountcreator.createaccount",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "The first name of the user who is registering. The last name of the user who is registering. The user ID of the Site administrator, used for notification if any exceptions occur.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

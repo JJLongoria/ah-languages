@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_RestRequest_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,7 +69,7 @@
   "enums": {},
   "variables": {
     "headers": {
-      "id": "System.restrequest.headers",
+      "id": "System.restrequest.method.map<string,string> headers{get;set;}",
       "nodeType": "property",
       "name": "headers",
       "startToken": {
@@ -89,6 +91,9 @@
         },
         "id": "declaration.entity.name.property_headers_-1:0"
       },
+      "parentId": "System.restrequest",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -96,77 +101,126 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Map<String, String> headers {get; set;}",
-      "simplifiedSignature": "String> headers { get; set; }",
+      "signature": "public Map<String, String> headers { get; set; }",
+      "simplifiedSignature": "Map<String,String> headers{get;set;}",
       "datatype": {
-        "id": "System.restrequest.headers.string>",
+        "id": ".datatype.Map<String,String>",
         "nodeType": "datatype",
-        "name": "String>"
+        "name": "Map<String,String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": ".datatype.Map<String,String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 25
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        },
+        "key": {
+          "id": ".datatype.Map<String,String>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
-      "description": "Returns the headers that are received by the request.",
+      "parentName": "RestRequest",
       "getter": {
-        "id": "System.restrequest.headers.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "System.restrequest.headers.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "httpmethod": {
-      "id": "System.restrequest.httpmethod",
+      "id": "System.restrequest.method.string httpmethod{get;set;}",
       "nodeType": "property",
       "name": "httpMethod",
       "startToken": {
@@ -188,6 +242,9 @@
         },
         "id": "declaration.entity.name.property_httpMethod_-1:0"
       },
+      "parentId": "System.restrequest",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -195,77 +252,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String httpMethod {get; set;}",
-      "simplifiedSignature": "String httpMethod { get; set; }",
+      "signature": "public String httpMethod { get; set; }",
+      "simplifiedSignature": "String httpMethod{get;set;}",
       "datatype": {
-        "id": "System.restrequest.httpmethod.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "Returns one of the supported HTTP request methods.",
+      "parentName": "RestRequest",
       "getter": {
-        "id": "System.restrequest.httpmethod.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "System.restrequest.httpmethod.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "params": {
-      "id": "System.restrequest.params",
+      "id": "System.restrequest.method.map<string,string> params{get;set;}",
       "nodeType": "property",
       "name": "params",
       "startToken": {
@@ -287,6 +339,9 @@
         },
         "id": "declaration.entity.name.property_params_-1:0"
       },
+      "parentId": "System.restrequest",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -294,77 +349,126 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Map<String, String> params {get; set;}",
-      "simplifiedSignature": "String> params { get; set; }",
+      "signature": "public Map<String, String> params { get; set; }",
+      "simplifiedSignature": "Map<String,String> params{get;set;}",
       "datatype": {
-        "id": "System.restrequest.params.string>",
+        "id": ".datatype.Map<String,String>",
         "nodeType": "datatype",
-        "name": "String>"
+        "name": "Map<String,String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": ".datatype.Map<String,String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 20
+              },
+              "end": {
+                "line": 0,
+                "character": 26
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:20"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        },
+        "key": {
+          "id": ".datatype.Map<String,String>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 18
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
-      "description": "Returns the parameters that are received by the request.",
+      "parentName": "RestRequest",
       "getter": {
-        "id": "System.restrequest.params.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "System.restrequest.params.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "remoteaddress": {
-      "id": "System.restrequest.remoteaddress",
+      "id": "System.restrequest.method.string remoteaddress{get;set;}",
       "nodeType": "property",
       "name": "remoteAddress",
       "startToken": {
@@ -386,6 +490,9 @@
         },
         "id": "declaration.entity.name.property_remoteAddress_-1:0"
       },
+      "parentId": "System.restrequest",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -393,77 +500,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String remoteAddress {get; set;}",
-      "simplifiedSignature": "String remoteAddress { get; set; }",
+      "signature": "public String remoteAddress { get; set; }",
+      "simplifiedSignature": "String remoteAddress{get;set;}",
       "datatype": {
-        "id": "System.restrequest.remoteaddress.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "Returns the IP address of the client making the request.",
+      "parentName": "RestRequest",
       "getter": {
-        "id": "System.restrequest.remoteaddress.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "System.restrequest.remoteaddress.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "requestbody": {
-      "id": "System.restrequest.requestbody",
+      "id": "System.restrequest.method.blob requestbody{get;set;}",
       "nodeType": "property",
       "name": "requestBody",
       "startToken": {
@@ -485,6 +587,9 @@
         },
         "id": "declaration.entity.name.property_requestBody_-1:0"
       },
+      "parentId": "System.restrequest",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -492,77 +597,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Blob requestBody {get; set;}",
-      "simplifiedSignature": "Blob requestBody { get; set; }",
+      "signature": "public Blob requestBody { get; set; }",
+      "simplifiedSignature": "Blob requestBody{get;set;}",
       "datatype": {
-        "id": "System.restrequest.requestbody.blob",
+        "id": ".datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
-      "description": "Returns or sets the body of the request.",
+      "parentName": "RestRequest",
       "getter": {
-        "id": "System.restrequest.requestbody.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "System.restrequest.requestbody.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "requesturi": {
-      "id": "System.restrequest.requesturi",
+      "id": "System.restrequest.method.string requesturi{get;set;}",
       "nodeType": "property",
       "name": "requestURI",
       "startToken": {
@@ -584,6 +684,9 @@
         },
         "id": "declaration.entity.name.property_requestURI_-1:0"
       },
+      "parentId": "System.restrequest",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -591,77 +694,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String requestURI {get; set;}",
-      "simplifiedSignature": "String requestURI { get; set; }",
+      "signature": "public String requestURI { get; set; }",
+      "simplifiedSignature": "String requestURI{get;set;}",
       "datatype": {
-        "id": "System.restrequest.requesturi.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "Returns or sets everything after the host in the HTTP request string.",
+      "parentName": "RestRequest",
       "getter": {
-        "id": "System.restrequest.requesturi.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "System.restrequest.requesturi.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "resourcepath": {
-      "id": "System.restrequest.resourcepath",
+      "id": "System.restrequest.method.string resourcepath{get;set;}",
       "nodeType": "property",
       "name": "resourcePath",
       "startToken": {
@@ -683,6 +781,9 @@
         },
         "id": "declaration.entity.name.property_resourcePath_-1:0"
       },
+      "parentId": "System.restrequest",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -690,79 +791,74 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String resourcePath {get; set;}",
-      "simplifiedSignature": "String resourcePath { get; set; }",
+      "signature": "public String resourcePath { get; set; }",
+      "simplifiedSignature": "String resourcePath{get;set;}",
       "datatype": {
-        "id": "System.restrequest.resourcepath.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "Returns the REST resource path for the request.",
+      "parentName": "RestRequest",
       "getter": {
-        "id": "System.restrequest.resourcepath.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "System.restrequest.resourcepath.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     }
   },
   "methods": {
     "addheader(string,string)": {
-      "id": "System.restrequest.addheader",
+      "id": "System.restrequest.method.addheader(string,string)",
       "nodeType": "method",
       "name": "addHeader",
       "startToken": {
@@ -784,6 +880,9 @@
         },
         "id": "declaration.entity.name.function_addHeader_-1:0"
       },
+      "parentId": "System.restrequest",
+      "order": 1,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -791,30 +890,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void addHeader(String name, String value)",
+      "signature": "public Void addHeader(String name, String value)",
+      "overrideSignature": "public override Void addHeader(String name, String value)",
       "simplifiedSignature": "addHeader(String,String)",
       "datatype": {
-        "id": "System.restrequest.addheader.void",
+        "id": "System.restrequest.addheader.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "System.restrequest.addheader",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Adds a header to the request header map.",
+      "parentName": "RestRequest",
+      "variables": {},
       "params": {
         "name": {
-          "id": "System.restrequest.addheader.name",
-          "type": "var",
+          "id": "System.restrequest.method.addheader(string,string).varParam.name",
+          "nodeType": "variable",
           "name": "name",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -823,28 +948,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 33
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_name_-1:0"
+            "id": "token.type.identifier_name_0:29"
           },
-          "signature": "String name",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "name",
+            "textToLower": "name",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 33
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_name_0:29"
+          },
+          "parentId": "System.restrequest.method.addheader(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.restrequest.addheader.string",
+            "id": "System.restrequest.addheader.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:22"
+            },
+            "parentId": "System.restrequest.addheader",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "value": {
-          "id": "System.restrequest.addheader.value",
-          "type": "var",
+          "id": "System.restrequest.method.addheader(string,string).varParam.value",
+          "nodeType": "variable",
           "name": "value",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -853,29 +1023,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_value_-1:0"
+            "id": "token.type.identifier_value_0:42"
           },
-          "signature": "String value",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "value",
+            "textToLower": "value",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_value_0:42"
+          },
+          "parentId": "System.restrequest.method.addheader(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.restrequest.addheader.string",
+            "id": "System.restrequest.addheader.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:35"
+            },
+            "parentId": "System.restrequest.addheader",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "addparameter(string,string)": {
-      "id": "System.restrequest.addparameter",
+      "id": "System.restrequest.method.addparameter(string,string)",
       "nodeType": "method",
       "name": "addParameter",
       "startToken": {
@@ -897,6 +1115,9 @@
         },
         "id": "declaration.entity.name.function_addParameter_-1:0"
       },
+      "parentId": "System.restrequest",
+      "order": 2,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -904,30 +1125,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void addParameter(String name, String value)",
+      "signature": "public Void addParameter(String name, String value)",
+      "overrideSignature": "public override Void addParameter(String name, String value)",
       "simplifiedSignature": "addParameter(String,String)",
       "datatype": {
-        "id": "System.restrequest.addparameter.void",
+        "id": "System.restrequest.addparameter.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "System.restrequest.addparameter",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Adds a parameter to the request params map.",
+      "parentName": "RestRequest",
+      "variables": {},
       "params": {
         "name": {
-          "id": "System.restrequest.addparameter.name",
-          "type": "var",
+          "id": "System.restrequest.method.addparameter(string,string).varParam.name",
+          "nodeType": "variable",
           "name": "name",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -936,28 +1183,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 32
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 36
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_name_-1:0"
+            "id": "token.type.identifier_name_0:32"
           },
-          "signature": "String name",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "name",
+            "textToLower": "name",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 32
+              },
+              "end": {
+                "line": 0,
+                "character": 36
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_name_0:32"
+          },
+          "parentId": "System.restrequest.method.addparameter(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.restrequest.addparameter.string",
+            "id": "System.restrequest.addparameter.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 31
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:25"
+            },
+            "parentId": "System.restrequest.addparameter",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "value": {
-          "id": "System.restrequest.addparameter.value",
-          "type": "var",
+          "id": "System.restrequest.method.addparameter(string,string).varParam.value",
+          "nodeType": "variable",
           "name": "value",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -966,31 +1258,79 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_value_-1:0"
+            "id": "token.type.identifier_value_0:45"
           },
-          "signature": "String value",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "value",
+            "textToLower": "value",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 45
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_value_0:45"
+          },
+          "parentId": "System.restrequest.method.addparameter(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.restrequest.addparameter.string",
+            "id": "System.restrequest.addparameter.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 38
+                },
+                "end": {
+                  "line": 0,
+                  "character": 44
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:38"
+            },
+            "parentId": "System.restrequest.addparameter",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {
     "restrequest()": {
-      "id": "System.restrequest.restrequest",
+      "id": "System.restrequest.method.restrequest()",
       "nodeType": "constructor",
       "name": "RestRequest",
       "startToken": {
@@ -1012,6 +1352,9 @@
         },
         "id": "declaration.entity.name.function_RestRequest_-1:0"
       },
+      "parentId": "System.restrequest",
+      "order": 1,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1019,30 +1362,32 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public RestRequest()",
+      "overrideSignature": "public override RestRequest()",
       "simplifiedSignature": "RestRequest()",
-      "datatype": {
-        "id": "System.restrequest.restrequest.constructor",
-        "nodeType": "datatype",
-        "name": "RestRequest"
-      },
       "description": "Creates a new instance of the System.RestRequest class.",
-      "params": {}
+      "parentName": "RestRequest",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 10,
+  "queries": []
 }

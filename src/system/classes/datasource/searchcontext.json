@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_SearchContext_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,7 +69,7 @@
   "enums": {},
   "variables": {
     "searchphrase": {
-      "id": "Datasource.searchcontext.searchphrase",
+      "id": "Datasource.searchcontext.method.string searchphrase{get;set;}",
       "nodeType": "property",
       "name": "searchPhrase",
       "startToken": {
@@ -89,6 +91,9 @@
         },
         "id": "declaration.entity.name.property_searchPhrase_-1:0"
       },
+      "parentId": "Datasource.searchcontext",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -96,80 +101,75 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String searchPhrase {get; set;}",
-      "simplifiedSignature": "String searchPhrase { get; set; }",
+      "signature": "public String searchPhrase { get; set; }",
+      "simplifiedSignature": "String searchPhrase{get;set;}",
       "datatype": {
-        "id": "Datasource.searchcontext.searchphrase.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "The user-entered search string as a case-sensitive single phrase, with all non-alphanumeric characters removed.",
+      "parentName": "SearchContext",
       "getter": {
-        "id": "Datasource.searchcontext.searchphrase.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Datasource.searchcontext.searchphrase.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     }
   },
   "methods": {},
   "constructors": {
-    "searchcontext(list)": {
-      "id": "Datasource.searchcontext.searchcontext",
+    "searchcontext(list<datasource.table>,integer,integer,list<datasource.tableselection>,string)": {
+      "id": "Datasource.searchcontext.method.searchcontext(list<datasource.table>,integer,integer,list<datasource.tableselection>,string)",
       "nodeType": "constructor",
       "name": "SearchContext",
       "startToken": {
@@ -191,6 +191,9 @@
         },
         "id": "declaration.entity.name.function_SearchContext_-1:0"
       },
+      "parentId": "Datasource.searchcontext",
+      "order": 1,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -198,61 +201,461 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public SearchContext(List <DataSource.Table>)",
-      "simplifiedSignature": "SearchContext(List)",
-      "datatype": {
-        "id": "Datasource.searchcontext.searchcontext.constructor",
-        "nodeType": "datatype",
-        "name": "SearchContext"
-      },
+      "signature": "public SearchContext(List<DataSource.Table> metadata, Integer offset, Integer maxResults, List<DataSource.TableSelection> tableSelections, String searchPhrase)",
+      "overrideSignature": "public override SearchContext(List<DataSource.Table> metadata, Integer offset, Integer maxResults, List<DataSource.TableSelection> tableSelections, String searchPhrase)",
+      "simplifiedSignature": "SearchContext(List<DataSource.Table>,Integer,Integer,List<DataSource.TableSelection>,String)",
       "description": "Creates an instance of the SearchContext class with the specified parameter values.",
+      "parentName": "SearchContext",
+      "variables": {},
       "params": {
-        "<DataSource.Table>": {
-          "id": "Datasource.searchcontext.searchcontext.<datasource.table>",
-          "type": "var",
-          "name": "<DataSource.Table>",
+        "metadata": {
+          "id": "Datasource.searchcontext.method.searchcontext(list<datasource.table>,integer,integer,list<datasource.tableselection>,string).varParam.metadata",
+          "nodeType": "variable",
+          "name": "metadata",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<DataSource.Table>",
-            "textToLower": "<datasource.table>",
+            "text": "metadata",
+            "textToLower": "metadata",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<DataSource.Table>_-1:0"
+            "id": "token.type.identifier_metadata_0:44"
           },
-          "signature": "List <DataSource.Table>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "metadata",
+            "textToLower": "metadata",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 44
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_metadata_0:44"
+          },
+          "parentId": "Datasource.searchcontext.method.searchcontext(list<datasource.table>,integer,integer,list<datasource.tableselection>,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Datasource.searchcontext.searchcontext.list",
+            "id": "Datasource.searchcontext.searchcontext.datatype.List<DataSource.Table>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<DataSource.Table>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 21
+                },
+                "end": {
+                  "line": 0,
+                  "character": 25
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:21"
+            },
+            "parentId": "Datasource.searchcontext.searchcontext",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Datasource.searchcontext.searchcontext.datatype.List<DataSource.Table>.value.DataSource.Table",
+              "nodeType": "datatype",
+              "name": "DataSource.Table",
+              "startToken": {
+                "type": "datatype.support.namespace",
+                "text": "DataSource",
+                "textToLower": "datasource",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 26
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 36
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_DataSource_0:26"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "DataSource.Table"
+            }
+          },
+          "scope": null
+        },
+        "offset": {
+          "id": "Datasource.searchcontext.method.searchcontext(list<datasource.table>,integer,integer,list<datasource.tableselection>,string).varParam.offset",
+          "nodeType": "variable",
+          "name": "offset",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "offset",
+            "textToLower": "offset",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 62
+              },
+              "end": {
+                "line": 0,
+                "character": 68
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_offset_0:62"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "offset",
+            "textToLower": "offset",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 62
+              },
+              "end": {
+                "line": 0,
+                "character": 68
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_offset_0:62"
+          },
+          "parentId": "Datasource.searchcontext.method.searchcontext(list<datasource.table>,integer,integer,list<datasource.tableselection>,string)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "Datasource.searchcontext.searchcontext.datatype.Integer",
+            "nodeType": "datatype",
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 61
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:54"
+            },
+            "parentId": "Datasource.searchcontext.searchcontext",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
+        },
+        "maxresults": {
+          "id": "Datasource.searchcontext.method.searchcontext(list<datasource.table>,integer,integer,list<datasource.tableselection>,string).varParam.maxresults",
+          "nodeType": "variable",
+          "name": "maxResults",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "maxResults",
+            "textToLower": "maxresults",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 78
+              },
+              "end": {
+                "line": 0,
+                "character": 88
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_maxResults_0:78"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "maxResults",
+            "textToLower": "maxresults",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 78
+              },
+              "end": {
+                "line": 0,
+                "character": 88
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_maxResults_0:78"
+          },
+          "parentId": "Datasource.searchcontext.method.searchcontext(list<datasource.table>,integer,integer,list<datasource.tableselection>,string)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "Datasource.searchcontext.searchcontext.datatype.Integer",
+            "nodeType": "datatype",
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 70
+                },
+                "end": {
+                  "line": 0,
+                  "character": 77
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:70"
+            },
+            "parentId": "Datasource.searchcontext.searchcontext",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
+        },
+        "tableselections": {
+          "id": "Datasource.searchcontext.method.searchcontext(list<datasource.table>,integer,integer,list<datasource.tableselection>,string).varParam.tableselections",
+          "nodeType": "variable",
+          "name": "tableSelections",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "tableSelections",
+            "textToLower": "tableselections",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 122
+              },
+              "end": {
+                "line": 0,
+                "character": 137
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_tableSelections_0:122"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "tableSelections",
+            "textToLower": "tableselections",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 122
+              },
+              "end": {
+                "line": 0,
+                "character": 137
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_tableSelections_0:122"
+          },
+          "parentId": "Datasource.searchcontext.method.searchcontext(list<datasource.table>,integer,integer,list<datasource.tableselection>,string)",
+          "order": 4,
+          "memberOrder": 4,
+          "datatype": {
+            "id": "Datasource.searchcontext.searchcontext.datatype.List<DataSource.TableSelection>",
+            "nodeType": "datatype",
+            "name": "List<DataSource.TableSelection>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 90
+                },
+                "end": {
+                  "line": 0,
+                  "character": 94
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:90"
+            },
+            "parentId": "Datasource.searchcontext.searchcontext",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Datasource.searchcontext.searchcontext.datatype.List<DataSource.TableSelection>.value.DataSource.TableSelection",
+              "nodeType": "datatype",
+              "name": "DataSource.TableSelection",
+              "startToken": {
+                "type": "datatype.support.namespace",
+                "text": "DataSource",
+                "textToLower": "datasource",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 95
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 105
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_DataSource_0:95"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "DataSource.TableSelection"
+            }
+          },
+          "scope": null
+        },
+        "searchphrase": {
+          "id": "Datasource.searchcontext.method.searchcontext(list<datasource.table>,integer,integer,list<datasource.tableselection>,string).varParam.searchphrase",
+          "nodeType": "variable",
+          "name": "searchPhrase",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "searchPhrase",
+            "textToLower": "searchphrase",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 146
+              },
+              "end": {
+                "line": 0,
+                "character": 158
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_searchPhrase_0:146"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "searchPhrase",
+            "textToLower": "searchphrase",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 146
+              },
+              "end": {
+                "line": 0,
+                "character": 158
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_searchPhrase_0:146"
+          },
+          "parentId": "Datasource.searchcontext.method.searchcontext(list<datasource.table>,integer,integer,list<datasource.tableselection>,string)",
+          "order": 5,
+          "memberOrder": 5,
+          "datatype": {
+            "id": "Datasource.searchcontext.searchcontext.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 139
+                },
+                "end": {
+                  "line": 0,
+                  "character": 145
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:139"
+            },
+            "parentId": "Datasource.searchcontext.searchcontext",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "List of table metadata that describes the external system’s tables to query. Specifies the starting row offset into the query’s result set. Specifies the maximum number of rows to return in each batch. List of queries and their details. The details represent the FROM, ORDER BY, SELECT, and WHERE clauses in each SOQL or SOSL query. The user-entered search string as a case-sensitive single phrase, with all non-alphanumeric characters removed.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "searchcontext()": {
-      "id": "Datasource.searchcontext.searchcontext",
+      "id": "Datasource.searchcontext.method.searchcontext()",
       "nodeType": "constructor",
       "name": "SearchContext",
       "startToken": {
@@ -274,6 +677,9 @@
         },
         "id": "declaration.entity.name.function_SearchContext_-1:0"
       },
+      "parentId": "Datasource.searchcontext",
+      "order": 2,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -281,30 +687,32 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public SearchContext()",
+      "overrideSignature": "public override SearchContext()",
       "simplifiedSignature": "SearchContext()",
-      "datatype": {
-        "id": "Datasource.searchcontext.searchcontext.constructor",
-        "nodeType": "datatype",
-        "name": "SearchContext"
-      },
       "description": "Creates an instance of the SearchContext class.",
-      "params": {}
+      "parentName": "SearchContext",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 3,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_ManagedContent_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getallmanagedcontent(string,integer,integer,string,string)": {
-      "id": "ConnectApi.managedcontent.getallmanagedcontent",
+      "id": "ConnectApi.managedcontent.method.getallmanagedcontent(string,integer,integer,string,string)",
       "nodeType": "method",
       "name": "getAllManagedContent",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getAllManagedContent_-1:0"
       },
+      "parentId": "ConnectApi.managedcontent",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedContentVersionCollection getAllManagedContent(String communityId, Integer pageParam, Integer pageSize, String language, String managedContentType)",
+      "overrideSignature": "public static override ConnectApi.ManagedContentVersionCollection getAllManagedContent(String communityId, Integer pageParam, Integer pageSize, String language, String managedContentType)",
       "simplifiedSignature": "getAllManagedContent(String,Integer,Integer,String,String)",
       "datatype": {
-        "id": "ConnectApi.managedcontent.getallmanagedcontent.ConnectApi.ManagedContentVersionCollection",
+        "id": "ConnectApi.managedcontent.getallmanagedcontent.datatype.ConnectApi.ManagedContentVersionCollection",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedContentVersionCollection"
+        "name": "ConnectApi.ManagedContentVersionCollection",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedcontent.getallmanagedcontent",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedContentVersionCollection"
       },
       "description": "Get all managed content versions for a community.",
+      "parentName": "ManagedContent",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedcontent.getallmanagedcontent.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedcontent.method.getallmanagedcontent(string,integer,integer,string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 85
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 96
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:85"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 85
+              },
+              "end": {
+                "line": 0,
+                "character": 96
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:85"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getallmanagedcontent(string,integer,integer,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedcontent.getallmanagedcontent.string",
+            "id": "ConnectApi.managedcontent.getallmanagedcontent.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 78
+                },
+                "end": {
+                  "line": 0,
+                  "character": 84
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:78"
+            },
+            "parentId": "ConnectApi.managedcontent.getallmanagedcontent",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "pageParam": {
-          "id": "ConnectApi.managedcontent.getallmanagedcontent.pageparam",
-          "type": "var",
+        "pageparam": {
+          "id": "ConnectApi.managedcontent.method.getallmanagedcontent(string,integer,integer,string,string).varParam.pageparam",
+          "nodeType": "variable",
           "name": "pageParam",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,28 +254,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 106
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 115
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageParam_-1:0"
+            "id": "token.type.identifier_pageParam_0:106"
           },
-          "signature": "Integer pageParam",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 106
+              },
+              "end": {
+                "line": 0,
+                "character": 115
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:106"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getallmanagedcontent(string,integer,integer,string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.managedcontent.getallmanagedcontent.integer",
+            "id": "ConnectApi.managedcontent.getallmanagedcontent.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 98
+                },
+                "end": {
+                  "line": 0,
+                  "character": 105
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:98"
+            },
+            "parentId": "ConnectApi.managedcontent.getallmanagedcontent",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
-        "pageSize": {
-          "id": "ConnectApi.managedcontent.getallmanagedcontent.pagesize",
-          "type": "var",
+        "pagesize": {
+          "id": "ConnectApi.managedcontent.method.getallmanagedcontent(string,integer,integer,string,string).varParam.pagesize",
+          "nodeType": "variable",
           "name": "pageSize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -208,28 +329,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 125
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 133
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageSize_-1:0"
+            "id": "token.type.identifier_pageSize_0:125"
           },
-          "signature": "Integer pageSize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 125
+              },
+              "end": {
+                "line": 0,
+                "character": 133
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:125"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getallmanagedcontent(string,integer,integer,string,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.managedcontent.getallmanagedcontent.integer",
+            "id": "ConnectApi.managedcontent.getallmanagedcontent.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 117
+                },
+                "end": {
+                  "line": 0,
+                  "character": 124
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:117"
+            },
+            "parentId": "ConnectApi.managedcontent.getallmanagedcontent",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
         "language": {
-          "id": "ConnectApi.managedcontent.getallmanagedcontent.language",
-          "type": "var",
+          "id": "ConnectApi.managedcontent.method.getallmanagedcontent(string,integer,integer,string,string).varParam.language",
+          "nodeType": "variable",
           "name": "language",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -238,28 +404,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 142
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 150
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_language_-1:0"
+            "id": "token.type.identifier_language_0:142"
           },
-          "signature": "String language",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "language",
+            "textToLower": "language",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 142
+              },
+              "end": {
+                "line": 0,
+                "character": 150
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_language_0:142"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getallmanagedcontent(string,integer,integer,string,string)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.managedcontent.getallmanagedcontent.string",
+            "id": "ConnectApi.managedcontent.getallmanagedcontent.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 135
+                },
+                "end": {
+                  "line": 0,
+                  "character": 141
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:135"
+            },
+            "parentId": "ConnectApi.managedcontent.getallmanagedcontent",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "managedContentType": {
-          "id": "ConnectApi.managedcontent.getallmanagedcontent.managedcontenttype",
-          "type": "var",
+        "managedcontenttype": {
+          "id": "ConnectApi.managedcontent.method.getallmanagedcontent(string,integer,integer,string,string).varParam.managedcontenttype",
+          "nodeType": "variable",
           "name": "managedContentType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -268,29 +479,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 159
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 177
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_managedContentType_-1:0"
+            "id": "token.type.identifier_managedContentType_0:159"
           },
-          "signature": "String managedContentType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedContentType",
+            "textToLower": "managedcontenttype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 159
+              },
+              "end": {
+                "line": 0,
+                "character": 177
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedContentType_0:159"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getallmanagedcontent(string,integer,integer,string,string)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "ConnectApi.managedcontent.getallmanagedcontent.string",
+            "id": "ConnectApi.managedcontent.getallmanagedcontent.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 152
+                },
+                "end": {
+                  "line": 0,
+                  "character": 158
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:152"
+            },
+            "parentId": "ConnectApi.managedcontent.getallmanagedcontent",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the community. Specifies the number of the page you want returned. Starts at 0. If you pass in null or 0, the first page is returned. Specifies the number of items per page. Valid values are from 1 through 250. If you pass in null, the default size is 25. Language locale for the managed content, for example, en_US. If the requested translation isn’t available, the language defaults to the context user’s language. If the context user’s language isn’t available, the language defaults to the content type’s original language. The developer name of the content version.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "getmanagedcontentbyids(string,list)": {
-      "id": "ConnectApi.managedcontent.getmanagedcontentbyids",
+    "getmanagedcontentbyids(string,list<string>,integer,integer,string,string)": {
+      "id": "ConnectApi.managedcontent.method.getmanagedcontentbyids(string,list<string>,integer,integer,string,string)",
       "nodeType": "method",
       "name": "getManagedContentByIds",
       "startToken": {
@@ -312,6 +571,9 @@
         },
         "id": "declaration.entity.name.function_getManagedContentByIds_-1:0"
       },
+      "parentId": "ConnectApi.managedcontent",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -319,17 +581,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -338,30 +600,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.ManagedContentVersionCollection getManagedContentByIds(String communityId, List <String>)",
-      "simplifiedSignature": "getManagedContentByIds(String,List)",
+      "signature": "public static ConnectApi.ManagedContentVersionCollection getManagedContentByIds(String communityId, List<String> managedContentIds, Integer pageParam, Integer pageSize, String language, String managedContentType)",
+      "overrideSignature": "public static override ConnectApi.ManagedContentVersionCollection getManagedContentByIds(String communityId, List<String> managedContentIds, Integer pageParam, Integer pageSize, String language, String managedContentType)",
+      "simplifiedSignature": "getManagedContentByIds(String,List<String>,Integer,Integer,String,String)",
       "datatype": {
-        "id": "ConnectApi.managedcontent.getmanagedcontentbyids.ConnectApi.ManagedContentVersionCollection",
+        "id": "ConnectApi.managedcontent.getmanagedcontentbyids.datatype.ConnectApi.ManagedContentVersionCollection",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedContentVersionCollection"
+        "name": "ConnectApi.ManagedContentVersionCollection",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedcontent.getmanagedcontentbyids",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedContentVersionCollection"
       },
       "description": "Get managed content versions using a list of managed content IDs.",
+      "parentName": "ManagedContent",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedcontent.getmanagedcontentbyids.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbyids(string,list<string>,integer,integer,string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -370,59 +658,479 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 87
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:87"
           },
-          "signature": "String communityId",
-          "datatype": {
-            "id": "ConnectApi.managedcontent.getmanagedcontentbyids.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String>": {
-          "id": "ConnectApi.managedcontent.getmanagedcontentbyids.<string>",
-          "type": "var",
-          "name": "<String>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "communityId",
+            "textToLower": "communityid",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 87
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_communityId_0:87"
           },
-          "signature": "List <String>",
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbyids(string,list<string>,integer,integer,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedcontent.getmanagedcontentbyids.list",
+            "id": "ConnectApi.managedcontent.getmanagedcontentbyids.datatype.String",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 80
+                },
+                "end": {
+                  "line": 0,
+                  "character": 86
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:80"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbyids",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "managedcontentids": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbyids(string,list<string>,integer,integer,string,string).varParam.managedcontentids",
+          "nodeType": "variable",
+          "name": "managedContentIds",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedContentIds",
+            "textToLower": "managedcontentids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 113
+              },
+              "end": {
+                "line": 0,
+                "character": 130
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedContentIds_0:113"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedContentIds",
+            "textToLower": "managedcontentids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 113
+              },
+              "end": {
+                "line": 0,
+                "character": 130
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedContentIds_0:113"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbyids(string,list<string>,integer,integer,string,string)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbyids.datatype.List<String>",
+            "nodeType": "datatype",
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 100
+                },
+                "end": {
+                  "line": 0,
+                  "character": 104
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:100"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbyids",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "ConnectApi.managedcontent.getmanagedcontentbyids.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 105
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 111
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:105"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
+        },
+        "pageparam": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbyids(string,list<string>,integer,integer,string,string).varParam.pageparam",
+          "nodeType": "variable",
+          "name": "pageParam",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 140
+              },
+              "end": {
+                "line": 0,
+                "character": 149
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:140"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 140
+              },
+              "end": {
+                "line": 0,
+                "character": 149
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:140"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbyids(string,list<string>,integer,integer,string,string)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbyids.datatype.Integer",
+            "nodeType": "datatype",
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 132
+                },
+                "end": {
+                  "line": 0,
+                  "character": 139
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:132"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbyids",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
+        },
+        "pagesize": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbyids(string,list<string>,integer,integer,string,string).varParam.pagesize",
+          "nodeType": "variable",
+          "name": "pageSize",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 159
+              },
+              "end": {
+                "line": 0,
+                "character": 167
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:159"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 159
+              },
+              "end": {
+                "line": 0,
+                "character": 167
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:159"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbyids(string,list<string>,integer,integer,string,string)",
+          "order": 4,
+          "memberOrder": 4,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbyids.datatype.Integer",
+            "nodeType": "datatype",
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 151
+                },
+                "end": {
+                  "line": 0,
+                  "character": 158
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:151"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbyids",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
+        },
+        "language": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbyids(string,list<string>,integer,integer,string,string).varParam.language",
+          "nodeType": "variable",
+          "name": "language",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "language",
+            "textToLower": "language",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 176
+              },
+              "end": {
+                "line": 0,
+                "character": 184
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_language_0:176"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "language",
+            "textToLower": "language",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 176
+              },
+              "end": {
+                "line": 0,
+                "character": 184
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_language_0:176"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbyids(string,list<string>,integer,integer,string,string)",
+          "order": 5,
+          "memberOrder": 5,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbyids.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 169
+                },
+                "end": {
+                  "line": 0,
+                  "character": 175
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:169"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbyids",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "managedcontenttype": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbyids(string,list<string>,integer,integer,string,string).varParam.managedcontenttype",
+          "nodeType": "variable",
+          "name": "managedContentType",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedContentType",
+            "textToLower": "managedcontenttype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 193
+              },
+              "end": {
+                "line": 0,
+                "character": 211
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedContentType_0:193"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedContentType",
+            "textToLower": "managedcontenttype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 193
+              },
+              "end": {
+                "line": 0,
+                "character": 211
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedContentType_0:193"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbyids(string,list<string>,integer,integer,string,string)",
+          "order": 6,
+          "memberOrder": 6,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbyids.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 186
+                },
+                "end": {
+                  "line": 0,
+                  "character": 192
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:186"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbyids",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the community. Comma-separated list of up to 200 managed content IDs. Specifies the number of the page you want returned. Starts at 0. If you pass in null or 0, the first page is returned. Specifies the number of items per page. Valid values are from 1 through 250. If you pass in null, the default size is 25. Language locale for the managed content, for example, en_US. If the requested translation isn’t available, the language defaults to the context user’s language. If the context user’s language isn’t available, the language defaults to the content type’s original language. The developer name of the content version.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "getmanagedcontentbytopics(string,list)": {
-      "id": "ConnectApi.managedcontent.getmanagedcontentbytopics",
+    "getmanagedcontentbytopics(string,list<string>,integer,integer,string,string)": {
+      "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopics(string,list<string>,integer,integer,string,string)",
       "nodeType": "method",
       "name": "getManagedContentByTopics",
       "startToken": {
@@ -444,6 +1152,9 @@
         },
         "id": "declaration.entity.name.function_getManagedContentByTopics_-1:0"
       },
+      "parentId": "ConnectApi.managedcontent",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -451,17 +1162,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -470,30 +1181,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.ManagedContentVersionCollection getManagedContentByTopics(String communityId, List <String>)",
-      "simplifiedSignature": "getManagedContentByTopics(String,List)",
+      "signature": "public static ConnectApi.ManagedContentVersionCollection getManagedContentByTopics(String communityId, List<String> topics, Integer pageParam, Integer pageSize, String language, String managedContentType)",
+      "overrideSignature": "public static override ConnectApi.ManagedContentVersionCollection getManagedContentByTopics(String communityId, List<String> topics, Integer pageParam, Integer pageSize, String language, String managedContentType)",
+      "simplifiedSignature": "getManagedContentByTopics(String,List<String>,Integer,Integer,String,String)",
       "datatype": {
-        "id": "ConnectApi.managedcontent.getmanagedcontentbytopics.ConnectApi.ManagedContentVersionCollection",
+        "id": "ConnectApi.managedcontent.getmanagedcontentbytopics.datatype.ConnectApi.ManagedContentVersionCollection",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedContentVersionCollection"
+        "name": "ConnectApi.ManagedContentVersionCollection",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopics",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedContentVersionCollection"
       },
       "description": "Get managed content versions using a list of content topic names.",
+      "parentName": "ManagedContent",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedcontent.getmanagedcontentbytopics.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopics(string,list<string>,integer,integer,string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -502,59 +1239,479 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 90
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 101
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:90"
           },
-          "signature": "String communityId",
-          "datatype": {
-            "id": "ConnectApi.managedcontent.getmanagedcontentbytopics.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String>": {
-          "id": "ConnectApi.managedcontent.getmanagedcontentbytopics.<string>",
-          "type": "var",
-          "name": "<String>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "communityId",
+            "textToLower": "communityid",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 90
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 101
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_communityId_0:90"
           },
-          "signature": "List <String>",
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbytopics(string,list<string>,integer,integer,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedcontent.getmanagedcontentbytopics.list",
+            "id": "ConnectApi.managedcontent.getmanagedcontentbytopics.datatype.String",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 83
+                },
+                "end": {
+                  "line": 0,
+                  "character": 89
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:83"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "topics": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopics(string,list<string>,integer,integer,string,string).varParam.topics",
+          "nodeType": "variable",
+          "name": "topics",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "topics",
+            "textToLower": "topics",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 116
+              },
+              "end": {
+                "line": 0,
+                "character": 122
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_topics_0:116"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "topics",
+            "textToLower": "topics",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 116
+              },
+              "end": {
+                "line": 0,
+                "character": 122
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_topics_0:116"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbytopics(string,list<string>,integer,integer,string,string)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbytopics.datatype.List<String>",
+            "nodeType": "datatype",
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 103
+                },
+                "end": {
+                  "line": 0,
+                  "character": 107
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:103"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "ConnectApi.managedcontent.getmanagedcontentbytopics.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 108
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 114
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:108"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
+        },
+        "pageparam": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopics(string,list<string>,integer,integer,string,string).varParam.pageparam",
+          "nodeType": "variable",
+          "name": "pageParam",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 132
+              },
+              "end": {
+                "line": 0,
+                "character": 141
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:132"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 132
+              },
+              "end": {
+                "line": 0,
+                "character": 141
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:132"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbytopics(string,list<string>,integer,integer,string,string)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbytopics.datatype.Integer",
+            "nodeType": "datatype",
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 124
+                },
+                "end": {
+                  "line": 0,
+                  "character": 131
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:124"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
+        },
+        "pagesize": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopics(string,list<string>,integer,integer,string,string).varParam.pagesize",
+          "nodeType": "variable",
+          "name": "pageSize",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 151
+              },
+              "end": {
+                "line": 0,
+                "character": 159
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:151"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 151
+              },
+              "end": {
+                "line": 0,
+                "character": 159
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:151"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbytopics(string,list<string>,integer,integer,string,string)",
+          "order": 4,
+          "memberOrder": 4,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbytopics.datatype.Integer",
+            "nodeType": "datatype",
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 143
+                },
+                "end": {
+                  "line": 0,
+                  "character": 150
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:143"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
+        },
+        "language": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopics(string,list<string>,integer,integer,string,string).varParam.language",
+          "nodeType": "variable",
+          "name": "language",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "language",
+            "textToLower": "language",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 168
+              },
+              "end": {
+                "line": 0,
+                "character": 176
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_language_0:168"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "language",
+            "textToLower": "language",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 168
+              },
+              "end": {
+                "line": 0,
+                "character": 176
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_language_0:168"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbytopics(string,list<string>,integer,integer,string,string)",
+          "order": 5,
+          "memberOrder": 5,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbytopics.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 161
+                },
+                "end": {
+                  "line": 0,
+                  "character": 167
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:161"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "managedcontenttype": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopics(string,list<string>,integer,integer,string,string).varParam.managedcontenttype",
+          "nodeType": "variable",
+          "name": "managedContentType",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedContentType",
+            "textToLower": "managedcontenttype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 185
+              },
+              "end": {
+                "line": 0,
+                "character": 203
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedContentType_0:185"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedContentType",
+            "textToLower": "managedcontenttype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 185
+              },
+              "end": {
+                "line": 0,
+                "character": 203
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedContentType_0:185"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbytopics(string,list<string>,integer,integer,string,string)",
+          "order": 6,
+          "memberOrder": 6,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbytopics.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 178
+                },
+                "end": {
+                  "line": 0,
+                  "character": 184
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:178"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the community. Comma-separated list of up to 15 content topic names. Specifies the number of the page you want returned. Starts at 0. If you pass in null or 0, the first page is returned. Specifies the number of items per page. Valid values are from 1 through 250. If you pass in null, the default size is 25. Language locale for the managed content, for example, en_US. If the requested translation isn’t available, the language defaults to the context user’s language. If the context user’s language isn’t available, the language defaults to the content type’s original language. The developer name of the content version.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "getmanagedcontentbytopicsandids(string,list)": {
-      "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids",
+    "getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string)": {
+      "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string)",
       "nodeType": "method",
       "name": "getManagedContentByTopicsAndIds",
       "startToken": {
@@ -576,6 +1733,9 @@
         },
         "id": "declaration.entity.name.function_getManagedContentByTopicsAndIds_-1:0"
       },
+      "parentId": "ConnectApi.managedcontent",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -583,17 +1743,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -602,30 +1762,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.ManagedContentVersionCollection getManagedContentByTopicsAndIds(String communityId, List <String>)",
-      "simplifiedSignature": "getManagedContentByTopicsAndIds(String,List)",
+      "signature": "public static ConnectApi.ManagedContentVersionCollection getManagedContentByTopicsAndIds(String communityId, List<String> managedContentIds, List<String> topics, Integer pageParam, Integer pageSize, String language, String managedContentType)",
+      "overrideSignature": "public static override ConnectApi.ManagedContentVersionCollection getManagedContentByTopicsAndIds(String communityId, List<String> managedContentIds, List<String> topics, Integer pageParam, Integer pageSize, String language, String managedContentType)",
+      "simplifiedSignature": "getManagedContentByTopicsAndIds(String,List<String>,List<String>,Integer,Integer,String,String)",
       "datatype": {
-        "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.ConnectApi.ManagedContentVersionCollection",
+        "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.datatype.ConnectApi.ManagedContentVersionCollection",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedContentVersionCollection"
+        "name": "ConnectApi.ManagedContentVersionCollection",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedContentVersionCollection"
       },
       "description": "Get managed content versions using a list of managed content IDs and content topic names.",
+      "parentName": "ManagedContent",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -634,60 +1820,584 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 96
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 107
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:96"
           },
-          "signature": "String communityId",
-          "datatype": {
-            "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String>": {
-          "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.<string>",
-          "type": "var",
-          "name": "<String>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "communityId",
+            "textToLower": "communityid",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 96
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 107
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_communityId_0:96"
           },
-          "signature": "List <String>",
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.list",
+            "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.datatype.String",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 89
+                },
+                "end": {
+                  "line": 0,
+                  "character": 95
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:89"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "managedcontentids": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string).varParam.managedcontentids",
+          "nodeType": "variable",
+          "name": "managedContentIds",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedContentIds",
+            "textToLower": "managedcontentids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 122
+              },
+              "end": {
+                "line": 0,
+                "character": 139
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedContentIds_0:122"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedContentIds",
+            "textToLower": "managedcontentids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 122
+              },
+              "end": {
+                "line": 0,
+                "character": 139
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedContentIds_0:122"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.datatype.List<String>",
+            "nodeType": "datatype",
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 109
+                },
+                "end": {
+                  "line": 0,
+                  "character": 113
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:109"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 114
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 120
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:114"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
+        },
+        "topics": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string).varParam.topics",
+          "nodeType": "variable",
+          "name": "topics",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "topics",
+            "textToLower": "topics",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 154
+              },
+              "end": {
+                "line": 0,
+                "character": 160
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_topics_0:154"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "topics",
+            "textToLower": "topics",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 154
+              },
+              "end": {
+                "line": 0,
+                "character": 160
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_topics_0:154"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.datatype.List<String>",
+            "nodeType": "datatype",
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 141
+                },
+                "end": {
+                  "line": 0,
+                  "character": 145
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:141"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 146
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 152
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:146"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
+        },
+        "pageparam": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string).varParam.pageparam",
+          "nodeType": "variable",
+          "name": "pageParam",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 170
+              },
+              "end": {
+                "line": 0,
+                "character": 179
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:170"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 170
+              },
+              "end": {
+                "line": 0,
+                "character": 179
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:170"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string)",
+          "order": 4,
+          "memberOrder": 4,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.datatype.Integer",
+            "nodeType": "datatype",
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 162
+                },
+                "end": {
+                  "line": 0,
+                  "character": 169
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:162"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
+        },
+        "pagesize": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string).varParam.pagesize",
+          "nodeType": "variable",
+          "name": "pageSize",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 189
+              },
+              "end": {
+                "line": 0,
+                "character": 197
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:189"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 189
+              },
+              "end": {
+                "line": 0,
+                "character": 197
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:189"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string)",
+          "order": 5,
+          "memberOrder": 5,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.datatype.Integer",
+            "nodeType": "datatype",
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 181
+                },
+                "end": {
+                  "line": 0,
+                  "character": 188
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:181"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
+        },
+        "language": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string).varParam.language",
+          "nodeType": "variable",
+          "name": "language",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "language",
+            "textToLower": "language",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 206
+              },
+              "end": {
+                "line": 0,
+                "character": 214
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_language_0:206"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "language",
+            "textToLower": "language",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 206
+              },
+              "end": {
+                "line": 0,
+                "character": 214
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_language_0:206"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string)",
+          "order": 6,
+          "memberOrder": 6,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 199
+                },
+                "end": {
+                  "line": 0,
+                  "character": 205
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:199"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "managedcontenttype": {
+          "id": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string).varParam.managedcontenttype",
+          "nodeType": "variable",
+          "name": "managedContentType",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedContentType",
+            "textToLower": "managedcontenttype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 223
+              },
+              "end": {
+                "line": 0,
+                "character": 241
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedContentType_0:223"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedContentType",
+            "textToLower": "managedcontenttype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 223
+              },
+              "end": {
+                "line": 0,
+                "character": 241
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedContentType_0:223"
+          },
+          "parentId": "ConnectApi.managedcontent.method.getmanagedcontentbytopicsandids(string,list<string>,list<string>,integer,integer,string,string)",
+          "order": 7,
+          "memberOrder": 7,
+          "datatype": {
+            "id": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 216
+                },
+                "end": {
+                  "line": 0,
+                  "character": 222
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:216"
+            },
+            "parentId": "ConnectApi.managedcontent.getmanagedcontentbytopicsandids",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of the community. Comma-separated list of up to 200 managed content IDs. Comma-separated list of up to 15 content topic names. Specifies the number of the page you want returned. Starts at 0. If you pass in null or 0, the first page is returned. Specifies the number of items per page. Valid values are from 1 through 250. If you pass in null, the default size is 25. Language locale for the managed content, for example, en_US. If the requested translation isn’t available, the language defaults to the context user’s language. If the context user’s language isn’t available, the language defaults to the content type’s original language. The developer name of the content version.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 4,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_CaptureRequest_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,11 +69,11 @@
   "enums": {},
   "variables": {
     "accountid": {
-      "id": "commercepayments.capturerequest.accountid",
-      "type": "var",
+      "id": "commercepayments.capturerequest.method.string accountid{get;set;}",
+      "nodeType": "property",
       "name": "accountId",
       "startToken": {
-        "type": "declaration.entity.name.variable",
+        "type": "declaration.entity.name.property",
         "text": "accountId",
         "textToLower": "accountid",
         "isAux": false,
@@ -87,23 +89,88 @@
           "isEmpty": true,
           "isSingleLine": true
         },
-        "id": "declaration.entity.name.variable_accountId_-1:0"
+        "id": "declaration.entity.name.property_accountId_-1:0"
       },
-      "signature": "",
-      "simplifiedSignature": " accountId",
+      "parentId": "commercepayments.capturerequest",
+      "order": 1,
+      "memberOrder": 1,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public String accountId { get; set; }",
+      "simplifiedSignature": "String accountId{get;set;}",
       "datatype": {
-        "id": "commercepayments.capturerequest.accountid.",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": ""
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "Account ID value. References an account record."
+      "parentName": "CaptureRequest",
+      "getter": {
+        "id": ".getter.get",
+        "nodeType": "getter",
+        "name": "get",
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
+      },
+      "setter": {
+        "id": ".getter.set",
+        "nodeType": "setter",
+        "name": "set",
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
+      }
     },
     "amount": {
-      "id": "commercepayments.capturerequest.amount",
-      "type": "var",
+      "id": "commercepayments.capturerequest.method.double amount{get;set;}",
+      "nodeType": "property",
       "name": "amount",
       "startToken": {
-        "type": "declaration.entity.name.variable",
+        "type": "declaration.entity.name.property",
         "text": "amount",
         "textToLower": "amount",
         "isAux": false,
@@ -119,22 +186,184 @@
           "isEmpty": true,
           "isSingleLine": true
         },
-        "id": "declaration.entity.name.variable_amount_-1:0"
+        "id": "declaration.entity.name.property_amount_-1:0"
       },
-      "signature": "",
-      "simplifiedSignature": " amount",
+      "parentId": "commercepayments.capturerequest",
+      "order": 2,
+      "memberOrder": 2,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public Double amount { get; set; }",
+      "simplifiedSignature": "Double amount{get;set;}",
       "datatype": {
-        "id": "commercepayments.capturerequest.amount.",
+        "id": ".datatype.Double",
         "nodeType": "datatype",
-        "name": ""
+        "name": "Double",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Double",
+          "textToLower": "double",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Double_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Double"
       },
-      "description": "Amount of currency that needs to be captured."
+      "parentName": "CaptureRequest",
+      "getter": {
+        "id": ".getter.get",
+        "nodeType": "getter",
+        "name": "get",
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
+      },
+      "setter": {
+        "id": ".getter.set",
+        "nodeType": "setter",
+        "name": "set",
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
+      }
+    },
+    "paymentauthorizationid": {
+      "id": "commercepayments.capturerequest.method.string paymentauthorizationid{get;set;}",
+      "nodeType": "property",
+      "name": "paymentAuthorizationId",
+      "startToken": {
+        "type": "declaration.entity.name.property",
+        "text": "paymentAuthorizationId",
+        "textToLower": "paymentauthorizationid",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.property_paymentAuthorizationId_-1:0"
+      },
+      "parentId": "commercepayments.capturerequest",
+      "order": 3,
+      "memberOrder": 3,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public String paymentAuthorizationId { get; set; }",
+      "simplifiedSignature": "String paymentAuthorizationId{get;set;}",
+      "datatype": {
+        "id": ".datatype.String",
+        "nodeType": "datatype",
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
+      },
+      "parentName": "CaptureRequest",
+      "getter": {
+        "id": ".getter.get",
+        "nodeType": "getter",
+        "name": "get",
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
+      },
+      "setter": {
+        "id": ".getter.set",
+        "nodeType": "setter",
+        "name": "set",
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
+      }
     }
   },
   "methods": {},
   "constructors": {
-    "capturerequest()": {
-      "id": "commercepayments.capturerequest.capturerequest",
+    "capturerequest(double,string)": {
+      "id": "commercepayments.capturerequest.method.capturerequest(double,string)",
       "nodeType": "constructor",
       "name": "CaptureRequest",
       "startToken": {
@@ -156,18 +385,194 @@
         },
         "id": "declaration.entity.name.function_CaptureRequest_-1:0"
       },
-      "signature": "CaptureRequest()",
-      "simplifiedSignature": "CaptureRequest()",
-      "datatype": {
-        "id": "commercepayments.capturerequest.capturerequest.constructor",
-        "nodeType": "datatype",
-        "name": "CaptureRequest"
+      "parentId": "commercepayments.capturerequest",
+      "order": 1,
+      "memberOrder": 4,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
       },
+      "signature": "public CaptureRequest(Double amount, String authorizationId)",
+      "overrideSignature": "public override CaptureRequest(Double amount, String authorizationId)",
+      "simplifiedSignature": "CaptureRequest(Double,String)",
       "description": "This method is used only for testing.",
-      "params": {}
+      "parentName": "CaptureRequest",
+      "variables": {},
+      "params": {
+        "amount": {
+          "id": "commercepayments.capturerequest.method.capturerequest(double,string).varParam.amount",
+          "nodeType": "variable",
+          "name": "amount",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "amount",
+            "textToLower": "amount",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 35
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_amount_0:29"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "amount",
+            "textToLower": "amount",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 35
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_amount_0:29"
+          },
+          "parentId": "commercepayments.capturerequest.method.capturerequest(double,string)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "commercepayments.capturerequest.capturerequest.datatype.Double",
+            "nodeType": "datatype",
+            "name": "Double",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Double",
+              "textToLower": "double",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Double_0:22"
+            },
+            "parentId": "commercepayments.capturerequest.capturerequest",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Double"
+          },
+          "scope": null
+        },
+        "authorizationid": {
+          "id": "commercepayments.capturerequest.method.capturerequest(double,string).varParam.authorizationid",
+          "nodeType": "variable",
+          "name": "authorizationId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "authorizationId",
+            "textToLower": "authorizationid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 44
+              },
+              "end": {
+                "line": 0,
+                "character": 59
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_authorizationId_0:44"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "authorizationId",
+            "textToLower": "authorizationid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 44
+              },
+              "end": {
+                "line": 0,
+                "character": 59
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_authorizationId_0:44"
+          },
+          "parentId": "commercepayments.capturerequest.method.capturerequest(double,string)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "commercepayments.capturerequest.capturerequest.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 43
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:37"
+            },
+            "parentId": "commercepayments.capturerequest.capturerequest",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Represents a payment authorization record.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 4,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_DMLOptions_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -87,6 +89,8 @@
         },
         "id": "declaration.entity.name.class_AssignmentRuleHeader_-1:0"
       },
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "global",
@@ -127,12 +131,13 @@
       },
       "description": "Enables setting assignment rule options.",
       "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_class_Database_AssignmentRuleHeader.htm",
+      "parentName": "DMLOptions",
       "classes": {},
       "interfaces": {},
       "enums": {},
-      "params": {
+      "variables": {
         "assignmentruleid": {
-          "id": "Database.dmloptions.assignmentruleheader.assignmentruleid",
+          "id": "Database.dmloptions.assignmentruleheader.method.id assignmentruleid{get;set;}",
           "nodeType": "property",
           "name": "assignmentRuleID",
           "startToken": {
@@ -154,6 +159,9 @@
             },
             "id": "declaration.entity.name.property_assignmentRuleID_-1:0"
           },
+          "parentId": "Database.dmloptions.assignmentruleheader",
+          "order": 1,
+          "memberOrder": 1,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -161,73 +169,68 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public Id assignmentRuleID {get; set;}",
-          "simplifiedSignature": "Id assignmentRuleID { get; set; }",
+          "signature": "public Id assignmentRuleID { get; set; }",
+          "simplifiedSignature": "Id assignmentRuleID{get;set;}",
           "datatype": {
-            "id": "Database.dmloptions.assignmentruleheader.assignmentruleid.id",
+            "id": ".datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 0,
+                  "character": 9
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:7"
+            },
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
           },
-          "description": "Specifies the ID of a specific assignment rule to run for the case or lead. The assignment rule can be active or inactive.",
+          "parentName": "AssignmentRuleHeader",
           "getter": {
-            "id": "Database.dmloptions.assignmentruleheader.assignmentruleid.get",
+            "id": ".getter.get",
             "nodeType": "getter",
             "name": "get",
-            "startToken": {
-              "type": "keyword.declaration.property.getter",
-              "text": "get",
-              "textToLower": "get",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.getter_get_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           },
           "setter": {
-            "id": "Database.dmloptions.assignmentruleheader.assignmentruleid.set",
+            "id": ".getter.set",
             "nodeType": "setter",
             "name": "set",
-            "startToken": {
-              "type": "keyword.declaration.property.setter",
-              "text": "set",
-              "textToLower": "set",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.setter_set_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           }
         }
       },
@@ -235,7 +238,9 @@
       "constructors": {},
       "extendsType": "",
       "implementTypes": [],
-      "implements": {}
+      "implements": {},
+      "totalMembers": 1,
+      "queries": []
     },
     "duplicateruleheader": {
       "id": "Database.dmloptions.duplicateruleheader",
@@ -261,6 +266,8 @@
         },
         "id": "declaration.entity.name.class_DuplicateRuleHeader_-1:0"
       },
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "global",
@@ -301,12 +308,13 @@
       },
       "description": "Determines options for using duplicate rules to detect duplicate records. Duplicate rules are part of the Duplicate Management feature.",
       "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_class_Database_DMLOptions_DuplicateRuleHeader.htm",
+      "parentName": "DMLOptions",
       "classes": {},
       "interfaces": {},
       "enums": {},
-      "params": {
+      "variables": {
         "allowsave": {
-          "id": "Database.dmloptions.duplicateruleheader.allowsave",
+          "id": "Database.dmloptions.duplicateruleheader.method.boolean allowsave{get;set;}",
           "nodeType": "property",
           "name": "allowSave",
           "startToken": {
@@ -328,6 +336,9 @@
             },
             "id": "declaration.entity.name.property_allowSave_-1:0"
           },
+          "parentId": "Database.dmloptions.duplicateruleheader",
+          "order": 1,
+          "memberOrder": 1,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -335,73 +346,68 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public Boolean allowSave {get; set;}",
-          "simplifiedSignature": "Boolean allowSave { get; set; }",
+          "signature": "public Boolean allowSave { get; set; }",
+          "simplifiedSignature": "Boolean allowSave{get;set;}",
           "datatype": {
-            "id": "Database.dmloptions.duplicateruleheader.allowsave.boolean",
+            "id": ".datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 0,
+                  "character": 14
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:7"
+            },
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
           },
-          "description": "For a duplicate rule, when the Alert option is enabled, bypass alerts and save duplicate records by setting this property to true. Prevent duplicate records from being saved by setting this property to false.",
+          "parentName": "DuplicateRuleHeader",
           "getter": {
-            "id": "Database.dmloptions.duplicateruleheader.allowsave.get",
+            "id": ".getter.get",
             "nodeType": "getter",
             "name": "get",
-            "startToken": {
-              "type": "keyword.declaration.property.getter",
-              "text": "get",
-              "textToLower": "get",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.getter_get_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           },
           "setter": {
-            "id": "Database.dmloptions.duplicateruleheader.allowsave.set",
+            "id": ".getter.set",
             "nodeType": "setter",
             "name": "set",
-            "startToken": {
-              "type": "keyword.declaration.property.setter",
-              "text": "set",
-              "textToLower": "set",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.setter_set_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           }
         }
       },
@@ -409,7 +415,9 @@
       "constructors": {},
       "extendsType": "",
       "implementTypes": [],
-      "implements": {}
+      "implements": {},
+      "totalMembers": 1,
+      "queries": []
     },
     "emailheader": {
       "id": "Database.dmloptions.emailheader",
@@ -435,6 +443,8 @@
         },
         "id": "declaration.entity.name.class_EmailHeader_-1:0"
       },
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "global",
@@ -475,12 +485,13 @@
       },
       "description": "Enables setting email options.",
       "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_class_Database_EmailHeader.htm",
+      "parentName": "DMLOptions",
       "classes": {},
       "interfaces": {},
       "enums": {},
-      "params": {
+      "variables": {
         "triggerautoresponseemail": {
-          "id": "Database.dmloptions.emailheader.triggerautoresponseemail",
+          "id": "Database.dmloptions.emailheader.method.boolean triggerautoresponseemail{get;set;}",
           "nodeType": "property",
           "name": "triggerAutoResponseEmail",
           "startToken": {
@@ -502,6 +513,9 @@
             },
             "id": "declaration.entity.name.property_triggerAutoResponseEmail_-1:0"
           },
+          "parentId": "Database.dmloptions.emailheader",
+          "order": 1,
+          "memberOrder": 1,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -509,77 +523,72 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public Boolean triggerAutoResponseEmail {get; set;}",
-          "simplifiedSignature": "Boolean triggerAutoResponseEmail { get; set; }",
+          "signature": "public Boolean triggerAutoResponseEmail { get; set; }",
+          "simplifiedSignature": "Boolean triggerAutoResponseEmail{get;set;}",
           "datatype": {
-            "id": "Database.dmloptions.emailheader.triggerautoresponseemail.boolean",
+            "id": ".datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 0,
+                  "character": 14
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:7"
+            },
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
           },
-          "description": "Indicates whether to trigger auto-response rules (true) or not (false), for leads and cases.",
+          "parentName": "EmailHeader",
           "getter": {
-            "id": "Database.dmloptions.emailheader.triggerautoresponseemail.get",
+            "id": ".getter.get",
             "nodeType": "getter",
             "name": "get",
-            "startToken": {
-              "type": "keyword.declaration.property.getter",
-              "text": "get",
-              "textToLower": "get",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.getter_get_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           },
           "setter": {
-            "id": "Database.dmloptions.emailheader.triggerautoresponseemail.set",
+            "id": ".getter.set",
             "nodeType": "setter",
             "name": "set",
-            "startToken": {
-              "type": "keyword.declaration.property.setter",
-              "text": "set",
-              "textToLower": "set",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.setter_set_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           }
         },
         "triggerotheremail": {
-          "id": "Database.dmloptions.emailheader.triggerotheremail",
+          "id": "Database.dmloptions.emailheader.method.boolean triggerotheremail{get;set;}",
           "nodeType": "property",
           "name": "triggerOtherEmail",
           "startToken": {
@@ -601,6 +610,9 @@
             },
             "id": "declaration.entity.name.property_triggerOtherEmail_-1:0"
           },
+          "parentId": "Database.dmloptions.emailheader",
+          "order": 2,
+          "memberOrder": 2,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -608,73 +620,68 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public Boolean triggerOtherEmail {get; set;}",
-          "simplifiedSignature": "Boolean triggerOtherEmail { get; set; }",
+          "signature": "public Boolean triggerOtherEmail { get; set; }",
+          "simplifiedSignature": "Boolean triggerOtherEmail{get;set;}",
           "datatype": {
-            "id": "Database.dmloptions.emailheader.triggerotheremail.boolean",
+            "id": ".datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 0,
+                  "character": 14
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:7"
+            },
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
           },
-          "description": "Indicates whether to trigger email outside the organization (true) or not (false).",
+          "parentName": "EmailHeader",
           "getter": {
-            "id": "Database.dmloptions.emailheader.triggerotheremail.get",
+            "id": ".getter.get",
             "nodeType": "getter",
             "name": "get",
-            "startToken": {
-              "type": "keyword.declaration.property.getter",
-              "text": "get",
-              "textToLower": "get",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.getter_get_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           },
           "setter": {
-            "id": "Database.dmloptions.emailheader.triggerotheremail.set",
+            "id": ".getter.set",
             "nodeType": "setter",
             "name": "set",
-            "startToken": {
-              "type": "keyword.declaration.property.setter",
-              "text": "set",
-              "textToLower": "set",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.setter_set_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           }
         }
       },
@@ -682,14 +689,16 @@
       "constructors": {},
       "extendsType": "",
       "implementTypes": [],
-      "implements": {}
+      "implements": {},
+      "totalMembers": 2,
+      "queries": []
     }
   },
   "interfaces": {},
   "enums": {},
   "variables": {
     "allowfieldtruncation": {
-      "id": "Database.dmloptions.allowfieldtruncation",
+      "id": "Database.dmloptions.method.boolean allowfieldtruncation{get;set;}",
       "nodeType": "property",
       "name": "allowFieldTruncation",
       "startToken": {
@@ -711,6 +720,9 @@
         },
         "id": "declaration.entity.name.property_allowFieldTruncation_-1:0"
       },
+      "parentId": "Database.dmloptions",
+      "order": 1,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -718,77 +730,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Boolean allowFieldTruncation {get; set;}",
-      "simplifiedSignature": "Boolean allowFieldTruncation { get; set; }",
+      "signature": "public Boolean allowFieldTruncation { get; set; }",
+      "simplifiedSignature": "Boolean allowFieldTruncation{get;set;}",
       "datatype": {
-        "id": "Database.dmloptions.allowfieldtruncation.boolean",
+        "id": ".datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
-      "description": "Specifies the truncation behavior of large strings.",
+      "parentName": "DMLOptions",
       "getter": {
-        "id": "Database.dmloptions.allowfieldtruncation.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Database.dmloptions.allowfieldtruncation.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "assignmentruleheader": {
-      "id": "Database.dmloptions.assignmentruleheader",
+      "id": "Database.dmloptions.method.database.dmloptions.assignmentruleheader assignmentruleheader{get;set;}",
       "nodeType": "property",
       "name": "assignmentRuleHeader",
       "startToken": {
@@ -810,6 +817,9 @@
         },
         "id": "declaration.entity.name.property_assignmentRuleHeader_-1:0"
       },
+      "parentId": "Database.dmloptions",
+      "order": 2,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -817,77 +827,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Database.DmlOptions.Assignmentruleheader assignmentRuleHeader {get; set;}",
-      "simplifiedSignature": "Database.DmlOptions.Assignmentruleheader assignmentRuleHeader { get; set; }",
+      "signature": "public Database.DmlOptions.Assignmentruleheader assignmentRuleHeader { get; set; }",
+      "simplifiedSignature": "Database.DmlOptions.Assignmentruleheader assignmentRuleHeader{get;set;}",
       "datatype": {
-        "id": "Database.dmloptions.assignmentruleheader.database.dmloptions.assignmentruleheader",
+        "id": ".datatype.Database.DmlOptions.Assignmentruleheader",
         "nodeType": "datatype",
-        "name": "Database.DmlOptions.Assignmentruleheader"
+        "name": "Database.DmlOptions.Assignmentruleheader",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Database",
+          "textToLower": "database",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 15
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Database_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Database.DmlOptions.Assignmentruleheader"
       },
-      "description": "Specifies the assignment rule to be used when creating a case or lead.",
+      "parentName": "DMLOptions",
       "getter": {
-        "id": "Database.dmloptions.assignmentruleheader.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Database.dmloptions.assignmentruleheader.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "emailheader": {
-      "id": "Database.dmloptions.emailheader",
+      "id": "Database.dmloptions.method.database.dmloptions.emailheader emailheader{get;set;}",
       "nodeType": "property",
       "name": "emailHeader",
       "startToken": {
@@ -909,6 +914,9 @@
         },
         "id": "declaration.entity.name.property_emailHeader_-1:0"
       },
+      "parentId": "Database.dmloptions",
+      "order": 3,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -916,77 +924,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Database.DmlOptions.EmailHeader emailHeader {get; set;}",
-      "simplifiedSignature": "Database.DmlOptions.EmailHeader emailHeader { get; set; }",
+      "signature": "public Database.DmlOptions.EmailHeader emailHeader { get; set; }",
+      "simplifiedSignature": "Database.DmlOptions.EmailHeader emailHeader{get;set;}",
       "datatype": {
-        "id": "Database.dmloptions.emailheader.database.dmloptions.emailheader",
+        "id": ".datatype.Database.DmlOptions.EmailHeader",
         "nodeType": "datatype",
-        "name": "Database.DmlOptions.EmailHeader"
+        "name": "Database.DmlOptions.EmailHeader",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Database",
+          "textToLower": "database",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 15
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Database_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Database.DmlOptions.EmailHeader"
       },
-      "description": "Specifies additional information regarding the automatic email that gets sent when an events occurs.",
+      "parentName": "DMLOptions",
       "getter": {
-        "id": "Database.dmloptions.emailheader.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Database.dmloptions.emailheader.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "localeoptions": {
-      "id": "Database.dmloptions.localeoptions",
+      "id": "Database.dmloptions.method.database.dmloptions.localeoptions localeoptions{get;set;}",
       "nodeType": "property",
       "name": "localeOptions",
       "startToken": {
@@ -1008,6 +1011,9 @@
         },
         "id": "declaration.entity.name.property_localeOptions_-1:0"
       },
+      "parentId": "Database.dmloptions",
+      "order": 4,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1015,77 +1021,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Database.DmlOptions.LocaleOptions localeOptions {get; set;}",
-      "simplifiedSignature": "Database.DmlOptions.LocaleOptions localeOptions { get; set; }",
+      "signature": "public Database.DmlOptions.LocaleOptions localeOptions { get; set; }",
+      "simplifiedSignature": "Database.DmlOptions.LocaleOptions localeOptions{get;set;}",
       "datatype": {
-        "id": "Database.dmloptions.localeoptions.database.dmloptions.localeoptions",
+        "id": ".datatype.Database.DmlOptions.LocaleOptions",
         "nodeType": "datatype",
-        "name": "Database.DmlOptions.LocaleOptions"
+        "name": "Database.DmlOptions.LocaleOptions",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Database",
+          "textToLower": "database",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 15
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Database_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Database.DmlOptions.LocaleOptions"
       },
-      "description": "Specifies the language of any labels that are returned by Apex.",
+      "parentName": "DMLOptions",
       "getter": {
-        "id": "Database.dmloptions.localeoptions.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Database.dmloptions.localeoptions.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "optallornone": {
-      "id": "Database.dmloptions.optallornone",
+      "id": "Database.dmloptions.method.boolean optallornone{get;set;}",
       "nodeType": "property",
       "name": "optAllOrNone",
       "startToken": {
@@ -1107,6 +1108,9 @@
         },
         "id": "declaration.entity.name.property_optAllOrNone_-1:0"
       },
+      "parentId": "Database.dmloptions",
+      "order": 5,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1114,73 +1118,68 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Boolean optAllOrNone {get; set;}",
-      "simplifiedSignature": "Boolean optAllOrNone { get; set; }",
+      "signature": "public Boolean optAllOrNone { get; set; }",
+      "simplifiedSignature": "Boolean optAllOrNone{get;set;}",
       "datatype": {
-        "id": "Database.dmloptions.optallornone.boolean",
+        "id": ".datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
-      "description": "Specifies whether the operation allows for partial success.",
+      "parentName": "DMLOptions",
       "getter": {
-        "id": "Database.dmloptions.optallornone.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Database.dmloptions.optallornone.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     }
   },
@@ -1188,5 +1187,7 @@
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 8,
+  "queries": []
 }

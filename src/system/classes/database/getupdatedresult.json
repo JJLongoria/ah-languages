@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_GetUpdatedResult_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getids()": {
-      "id": "Database.getupdatedresult.getids",
+      "id": "Database.getupdatedresult.method.getids()",
       "nodeType": "method",
       "name": "getIds",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getIds_-1:0"
       },
+      "parentId": "Database.getupdatedresult",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public List<ID> getIds()",
+      "signature": "public List<Id> getIds()",
+      "overrideSignature": "public override List<Id> getIds()",
       "simplifiedSignature": "getIds()",
       "datatype": {
-        "id": "Database.getupdatedresult.getids.List<ID>",
+        "id": "Database.getupdatedresult.getids.datatype.List<Id>",
         "nodeType": "datatype",
-        "name": "List<ID>"
+        "name": "List<Id>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Database.getupdatedresult.getids",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Database.getupdatedresult.getids.datatype.List<Id>.value.Id",
+          "nodeType": "datatype",
+          "name": "Id",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Id",
+            "textToLower": "id",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 14
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Id_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Id"
+        }
       },
       "description": "Returns the IDs of records updated within the time window specified in the Database.getUpdated method.",
-      "params": {}
+      "parentName": "GetUpdatedResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getlatestdatecovered()": {
-      "id": "Database.getupdatedresult.getlatestdatecovered",
+      "id": "Database.getupdatedresult.method.getlatestdatecovered()",
       "nodeType": "method",
       "name": "getLatestDateCovered",
       "startToken": {
@@ -142,6 +202,9 @@
         },
         "id": "declaration.entity.name.function_getLatestDateCovered_-1:0"
       },
+      "parentId": "Database.getupdatedresult",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,31 +212,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Date getLatestDateCovered()",
+      "overrideSignature": "public override Date getLatestDateCovered()",
       "simplifiedSignature": "getLatestDateCovered()",
       "datatype": {
-        "id": "Database.getupdatedresult.getlatestdatecovered.Date",
+        "id": "Database.getupdatedresult.getlatestdatecovered.datatype.Date",
         "nodeType": "datatype",
-        "name": "Date"
+        "name": "Date",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Date",
+          "textToLower": "date",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Date_0:7"
+        },
+        "parentId": "Database.getupdatedresult.getlatestdatecovered",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Date"
       },
       "description": "Returns the date in Coordinated Universal Time (UTC) of the last date covered in the Database.getUpdated call.",
-      "params": {}
+      "parentName": "GetUpdatedResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

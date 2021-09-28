@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_SearchResult_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getsobject()": {
-      "id": "Search.searchresult.getsobject",
+      "id": "Search.searchresult.method.getsobject()",
       "nodeType": "method",
       "name": "getSObject",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getSObject_-1:0"
       },
+      "parentId": "Search.searchresult",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public SObject getSObject()",
+      "overrideSignature": "public override SObject getSObject()",
       "simplifiedSignature": "getSObject()",
       "datatype": {
-        "id": "Search.searchresult.getsobject.SObject",
+        "id": "Search.searchresult.getsobject.datatype.SObject",
         "nodeType": "datatype",
-        "name": "SObject"
+        "name": "SObject",
+        "startToken": {
+          "type": "datatype.custom.class",
+          "text": "SObject",
+          "textToLower": "sobject",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_SObject_0:7"
+        },
+        "parentId": "Search.searchresult.getsobject",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "SObject"
       },
       "description": "Returns an sObject from a SearchResult object.",
-      "params": {}
+      "parentName": "SearchResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getsnippet(string)": {
-      "id": "Search.searchresult.getsnippet",
+      "id": "Search.searchresult.method.getsnippet(string)",
       "nodeType": "method",
       "name": "getSnippet",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_getSnippet_-1:0"
       },
+      "parentId": "Search.searchresult",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,30 +185,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getSnippet(String fieldName)",
+      "overrideSignature": "public override String getSnippet(String fieldName)",
       "simplifiedSignature": "getSnippet(String)",
       "datatype": {
-        "id": "Search.searchresult.getsnippet.String",
+        "id": "Search.searchresult.getsnippet.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Search.searchresult.getsnippet",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns a snippet from a Case, Feed, or Knowledge Article SearchResult object based on the specified field name.",
+      "parentName": "SearchResult",
+      "variables": {},
       "params": {
-        "fieldName": {
-          "id": "Search.searchresult.getsnippet.fieldname",
-          "type": "var",
+        "fieldname": {
+          "id": "Search.searchresult.method.getsnippet(string).varParam.fieldname",
+          "nodeType": "variable",
           "name": "fieldName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -181,29 +243,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 32
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_fieldName_-1:0"
+            "id": "token.type.identifier_fieldName_0:32"
           },
-          "signature": "String fieldName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fieldName",
+            "textToLower": "fieldname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 32
+              },
+              "end": {
+                "line": 0,
+                "character": 41
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fieldName_0:32"
+          },
+          "parentId": "Search.searchresult.method.getsnippet(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Search.searchresult.getsnippet.string",
+            "id": "Search.searchresult.getsnippet.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 31
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:25"
+            },
+            "parentId": "Search.searchresult.getsnippet",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The field name to use for creating the snippet. Valid values: Case.Casenumber, FeedPost.Title, KnowledgeArticleVersion.Title",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getsnippet()": {
-      "id": "Search.searchresult.getsnippet",
+      "id": "Search.searchresult.method.getsnippet()",
       "nodeType": "method",
       "name": "getSnippet",
       "startToken": {
@@ -225,6 +335,9 @@
         },
         "id": "declaration.entity.name.function_getSnippet_-1:0"
       },
+      "parentId": "Search.searchresult",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -232,31 +345,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getSnippet()",
+      "overrideSignature": "public override String getSnippet()",
       "simplifiedSignature": "getSnippet()",
       "datatype": {
-        "id": "Search.searchresult.getsnippet.String",
+        "id": "Search.searchresult.getsnippet.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Search.searchresult.getsnippet",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns a snippet from a SearchResult object based on the default field.",
-      "params": {}
+      "parentName": "SearchResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 3,
+  "queries": []
 }

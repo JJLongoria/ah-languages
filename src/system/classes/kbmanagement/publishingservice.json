@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_PublishingService_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "archiveonlinearticle(string,datetime)": {
-      "id": "KbManagement.publishingservice.archiveonlinearticle",
+      "id": "KbManagement.publishingservice.method.archiveonlinearticle(string,datetime)",
       "nodeType": "method",
       "name": "archiveOnlineArticle",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_archiveOnlineArticle_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void archiveOnlineArticle(String articleId, Datetime scheduledDate)",
+      "signature": "public static Void archiveOnlineArticle(String articleId, Datetime scheduledDate)",
+      "overrideSignature": "public static override Void archiveOnlineArticle(String articleId, Datetime scheduledDate)",
       "simplifiedSignature": "archiveOnlineArticle(String,Datetime)",
       "datatype": {
-        "id": "KbManagement.publishingservice.archiveonlinearticle.void",
+        "id": "KbManagement.publishingservice.archiveonlinearticle.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.archiveonlinearticle",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Archives an online version of an article. If the specified scheduledDate is null, the article is archived immediately. Otherwise, it archives the article on the scheduled date.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleId": {
-          "id": "KbManagement.publishingservice.archiveonlinearticle.articleid",
-          "type": "var",
+        "articleid": {
+          "id": "KbManagement.publishingservice.method.archiveonlinearticle(string,datetime).varParam.articleid",
+          "nodeType": "variable",
           "name": "articleId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleId_-1:0"
+            "id": "token.type.identifier_articleId_0:47"
           },
-          "signature": "String articleId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleId",
+            "textToLower": "articleid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 56
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleId_0:47"
+          },
+          "parentId": "KbManagement.publishingservice.method.archiveonlinearticle(string,datetime)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.archiveonlinearticle.string",
+            "id": "KbManagement.publishingservice.archiveonlinearticle.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 40
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:40"
+            },
+            "parentId": "KbManagement.publishingservice.archiveonlinearticle",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "scheduledDate": {
-          "id": "KbManagement.publishingservice.archiveonlinearticle.scheduleddate",
-          "type": "var",
+        "scheduleddate": {
+          "id": "KbManagement.publishingservice.method.archiveonlinearticle(string,datetime).varParam.scheduleddate",
+          "nodeType": "variable",
           "name": "scheduledDate",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,29 +254,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_scheduledDate_-1:0"
+            "id": "token.type.identifier_scheduledDate_0:67"
           },
-          "signature": "Datetime scheduledDate",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "scheduledDate",
+            "textToLower": "scheduleddate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 80
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_scheduledDate_0:67"
+          },
+          "parentId": "KbManagement.publishingservice.method.archiveonlinearticle(string,datetime)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "KbManagement.publishingservice.archiveonlinearticle.datetime",
+            "id": "KbManagement.publishingservice.archiveonlinearticle.datatype.Datetime",
             "nodeType": "datatype",
-            "name": "Datetime"
-          }
+            "name": "Datetime",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Datetime",
+              "textToLower": "datetime",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 58
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Datetime_0:58"
+            },
+            "parentId": "KbManagement.publishingservice.archiveonlinearticle",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Datetime"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "assigndraftarticletask(string,string,string,datetime,boolean)": {
-      "id": "KbManagement.publishingservice.assigndraftarticletask",
+      "id": "KbManagement.publishingservice.method.assigndraftarticletask(string,string,string,datetime,boolean)",
       "nodeType": "method",
       "name": "assignDraftArticleTask",
       "startToken": {
@@ -222,6 +346,9 @@
         },
         "id": "declaration.entity.name.function_assignDraftArticleTask_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -229,17 +356,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -248,30 +375,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void assignDraftArticleTask(String articleId, String assigneeId, String instructions, Datetime dueDate, Boolean sendEmailNotification)",
+      "signature": "public static Void assignDraftArticleTask(String articleId, String assigneeId, String instructions, Datetime dueDate, Boolean sendEmailNotification)",
+      "overrideSignature": "public static override Void assignDraftArticleTask(String articleId, String assigneeId, String instructions, Datetime dueDate, Boolean sendEmailNotification)",
       "simplifiedSignature": "assignDraftArticleTask(String,String,String,Datetime,Boolean)",
       "datatype": {
-        "id": "KbManagement.publishingservice.assigndraftarticletask.void",
+        "id": "KbManagement.publishingservice.assigndraftarticletask.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.assigndraftarticletask",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Assigns a review task related to a draft article.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleId": {
-          "id": "KbManagement.publishingservice.assigndraftarticletask.articleid",
-          "type": "var",
+        "articleid": {
+          "id": "KbManagement.publishingservice.method.assigndraftarticletask(string,string,string,datetime,boolean).varParam.articleid",
+          "nodeType": "variable",
           "name": "articleId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -280,28 +433,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleId_-1:0"
+            "id": "token.type.identifier_articleId_0:49"
           },
-          "signature": "String articleId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleId",
+            "textToLower": "articleid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleId_0:49"
+          },
+          "parentId": "KbManagement.publishingservice.method.assigndraftarticletask(string,string,string,datetime,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.assigndraftarticletask.string",
+            "id": "KbManagement.publishingservice.assigndraftarticletask.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 48
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:42"
+            },
+            "parentId": "KbManagement.publishingservice.assigndraftarticletask",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "assigneeId": {
-          "id": "KbManagement.publishingservice.assigndraftarticletask.assigneeid",
-          "type": "var",
+        "assigneeid": {
+          "id": "KbManagement.publishingservice.method.assigndraftarticletask(string,string,string,datetime,boolean).varParam.assigneeid",
+          "nodeType": "variable",
           "name": "assigneeId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,28 +508,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_assigneeId_-1:0"
+            "id": "token.type.identifier_assigneeId_0:67"
           },
-          "signature": "String assigneeId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "assigneeId",
+            "textToLower": "assigneeid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 77
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_assigneeId_0:67"
+          },
+          "parentId": "KbManagement.publishingservice.method.assigndraftarticletask(string,string,string,datetime,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "KbManagement.publishingservice.assigndraftarticletask.string",
+            "id": "KbManagement.publishingservice.assigndraftarticletask.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 60
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:60"
+            },
+            "parentId": "KbManagement.publishingservice.assigndraftarticletask",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "instructions": {
-          "id": "KbManagement.publishingservice.assigndraftarticletask.instructions",
-          "type": "var",
+          "id": "KbManagement.publishingservice.method.assigndraftarticletask(string,string,string,datetime,boolean).varParam.instructions",
+          "nodeType": "variable",
           "name": "instructions",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -340,28 +583,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_instructions_-1:0"
+            "id": "token.type.identifier_instructions_0:86"
           },
-          "signature": "String instructions",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "instructions",
+            "textToLower": "instructions",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 86
+              },
+              "end": {
+                "line": 0,
+                "character": 98
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_instructions_0:86"
+          },
+          "parentId": "KbManagement.publishingservice.method.assigndraftarticletask(string,string,string,datetime,boolean)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "KbManagement.publishingservice.assigndraftarticletask.string",
+            "id": "KbManagement.publishingservice.assigndraftarticletask.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 79
+                },
+                "end": {
+                  "line": 0,
+                  "character": 85
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:79"
+            },
+            "parentId": "KbManagement.publishingservice.assigndraftarticletask",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "dueDate": {
-          "id": "KbManagement.publishingservice.assigndraftarticletask.duedate",
-          "type": "var",
+        "duedate": {
+          "id": "KbManagement.publishingservice.method.assigndraftarticletask(string,string,string,datetime,boolean).varParam.duedate",
+          "nodeType": "variable",
           "name": "dueDate",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -370,28 +658,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 109
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 116
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_dueDate_-1:0"
+            "id": "token.type.identifier_dueDate_0:109"
           },
-          "signature": "Datetime dueDate",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "dueDate",
+            "textToLower": "duedate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 109
+              },
+              "end": {
+                "line": 0,
+                "character": 116
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_dueDate_0:109"
+          },
+          "parentId": "KbManagement.publishingservice.method.assigndraftarticletask(string,string,string,datetime,boolean)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "KbManagement.publishingservice.assigndraftarticletask.datetime",
+            "id": "KbManagement.publishingservice.assigndraftarticletask.datatype.Datetime",
             "nodeType": "datatype",
-            "name": "Datetime"
-          }
+            "name": "Datetime",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Datetime",
+              "textToLower": "datetime",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 100
+                },
+                "end": {
+                  "line": 0,
+                  "character": 108
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Datetime_0:100"
+            },
+            "parentId": "KbManagement.publishingservice.assigndraftarticletask",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Datetime"
+          },
+          "scope": null
         },
-        "sendEmailNotification": {
-          "id": "KbManagement.publishingservice.assigndraftarticletask.sendemailnotification",
-          "type": "var",
+        "sendemailnotification": {
+          "id": "KbManagement.publishingservice.method.assigndraftarticletask(string,string,string,datetime,boolean).varParam.sendemailnotification",
+          "nodeType": "variable",
           "name": "sendEmailNotification",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -400,29 +733,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 126
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 147
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_sendEmailNotification_-1:0"
+            "id": "token.type.identifier_sendEmailNotification_0:126"
           },
-          "signature": "Boolean sendEmailNotification",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sendEmailNotification",
+            "textToLower": "sendemailnotification",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 126
+              },
+              "end": {
+                "line": 0,
+                "character": 147
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sendEmailNotification_0:126"
+          },
+          "parentId": "KbManagement.publishingservice.method.assigndraftarticletask(string,string,string,datetime,boolean)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "KbManagement.publishingservice.assigndraftarticletask.boolean",
+            "id": "KbManagement.publishingservice.assigndraftarticletask.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 118
+                },
+                "end": {
+                  "line": 0,
+                  "character": 125
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:118"
+            },
+            "parentId": "KbManagement.publishingservice.assigndraftarticletask",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "assigndrafttranslationtask(string,string,string,datetime,boolean)": {
-      "id": "KbManagement.publishingservice.assigndrafttranslationtask",
+      "id": "KbManagement.publishingservice.method.assigndrafttranslationtask(string,string,string,datetime,boolean)",
       "nodeType": "method",
       "name": "assignDraftTranslationTask",
       "startToken": {
@@ -444,6 +825,9 @@
         },
         "id": "declaration.entity.name.function_assignDraftTranslationTask_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -451,17 +835,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -470,30 +854,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void assignDraftTranslationTask(String articleVersionId, String assigneeId, String instructions, Datetime dueDate, Boolean sendEmailNotification)",
+      "signature": "public static Void assignDraftTranslationTask(String articleVersionId, String assigneeId, String instructions, Datetime dueDate, Boolean sendEmailNotification)",
+      "overrideSignature": "public static override Void assignDraftTranslationTask(String articleVersionId, String assigneeId, String instructions, Datetime dueDate, Boolean sendEmailNotification)",
       "simplifiedSignature": "assignDraftTranslationTask(String,String,String,Datetime,Boolean)",
       "datatype": {
-        "id": "KbManagement.publishingservice.assigndrafttranslationtask.void",
+        "id": "KbManagement.publishingservice.assigndrafttranslationtask.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.assigndrafttranslationtask",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Assigns a review task related to a draft translation.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleVersionId": {
-          "id": "KbManagement.publishingservice.assigndrafttranslationtask.articleversionid",
-          "type": "var",
+        "articleversionid": {
+          "id": "KbManagement.publishingservice.method.assigndrafttranslationtask(string,string,string,datetime,boolean).varParam.articleversionid",
+          "nodeType": "variable",
           "name": "articleVersionId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -502,28 +912,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleVersionId_-1:0"
+            "id": "token.type.identifier_articleVersionId_0:53"
           },
-          "signature": "String articleVersionId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleVersionId",
+            "textToLower": "articleversionid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleVersionId_0:53"
+          },
+          "parentId": "KbManagement.publishingservice.method.assigndrafttranslationtask(string,string,string,datetime,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.assigndrafttranslationtask.string",
+            "id": "KbManagement.publishingservice.assigndrafttranslationtask.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 46
+                },
+                "end": {
+                  "line": 0,
+                  "character": 52
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:46"
+            },
+            "parentId": "KbManagement.publishingservice.assigndrafttranslationtask",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "assigneeId": {
-          "id": "KbManagement.publishingservice.assigndrafttranslationtask.assigneeid",
-          "type": "var",
+        "assigneeid": {
+          "id": "KbManagement.publishingservice.method.assigndrafttranslationtask(string,string,string,datetime,boolean).varParam.assigneeid",
+          "nodeType": "variable",
           "name": "assigneeId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -532,28 +987,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 88
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_assigneeId_-1:0"
+            "id": "token.type.identifier_assigneeId_0:78"
           },
-          "signature": "String assigneeId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "assigneeId",
+            "textToLower": "assigneeid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 78
+              },
+              "end": {
+                "line": 0,
+                "character": 88
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_assigneeId_0:78"
+          },
+          "parentId": "KbManagement.publishingservice.method.assigndrafttranslationtask(string,string,string,datetime,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "KbManagement.publishingservice.assigndrafttranslationtask.string",
+            "id": "KbManagement.publishingservice.assigndrafttranslationtask.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 71
+                },
+                "end": {
+                  "line": 0,
+                  "character": 77
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:71"
+            },
+            "parentId": "KbManagement.publishingservice.assigndrafttranslationtask",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "instructions": {
-          "id": "KbManagement.publishingservice.assigndrafttranslationtask.instructions",
-          "type": "var",
+          "id": "KbManagement.publishingservice.method.assigndrafttranslationtask(string,string,string,datetime,boolean).varParam.instructions",
+          "nodeType": "variable",
           "name": "instructions",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -562,28 +1062,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 97
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 109
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_instructions_-1:0"
+            "id": "token.type.identifier_instructions_0:97"
           },
-          "signature": "String instructions",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "instructions",
+            "textToLower": "instructions",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 97
+              },
+              "end": {
+                "line": 0,
+                "character": 109
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_instructions_0:97"
+          },
+          "parentId": "KbManagement.publishingservice.method.assigndrafttranslationtask(string,string,string,datetime,boolean)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "KbManagement.publishingservice.assigndrafttranslationtask.string",
+            "id": "KbManagement.publishingservice.assigndrafttranslationtask.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 90
+                },
+                "end": {
+                  "line": 0,
+                  "character": 96
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:90"
+            },
+            "parentId": "KbManagement.publishingservice.assigndrafttranslationtask",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "dueDate": {
-          "id": "KbManagement.publishingservice.assigndrafttranslationtask.duedate",
-          "type": "var",
+        "duedate": {
+          "id": "KbManagement.publishingservice.method.assigndrafttranslationtask(string,string,string,datetime,boolean).varParam.duedate",
+          "nodeType": "variable",
           "name": "dueDate",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -592,28 +1137,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 120
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 127
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_dueDate_-1:0"
+            "id": "token.type.identifier_dueDate_0:120"
           },
-          "signature": "Datetime dueDate",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "dueDate",
+            "textToLower": "duedate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 120
+              },
+              "end": {
+                "line": 0,
+                "character": 127
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_dueDate_0:120"
+          },
+          "parentId": "KbManagement.publishingservice.method.assigndrafttranslationtask(string,string,string,datetime,boolean)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "KbManagement.publishingservice.assigndrafttranslationtask.datetime",
+            "id": "KbManagement.publishingservice.assigndrafttranslationtask.datatype.Datetime",
             "nodeType": "datatype",
-            "name": "Datetime"
-          }
+            "name": "Datetime",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Datetime",
+              "textToLower": "datetime",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 111
+                },
+                "end": {
+                  "line": 0,
+                  "character": 119
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Datetime_0:111"
+            },
+            "parentId": "KbManagement.publishingservice.assigndrafttranslationtask",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Datetime"
+          },
+          "scope": null
         },
-        "sendEmailNotification": {
-          "id": "KbManagement.publishingservice.assigndrafttranslationtask.sendemailnotification",
-          "type": "var",
+        "sendemailnotification": {
+          "id": "KbManagement.publishingservice.method.assigndrafttranslationtask(string,string,string,datetime,boolean).varParam.sendemailnotification",
+          "nodeType": "variable",
           "name": "sendEmailNotification",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -622,29 +1212,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 137
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 158
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_sendEmailNotification_-1:0"
+            "id": "token.type.identifier_sendEmailNotification_0:137"
           },
-          "signature": "Boolean sendEmailNotification",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sendEmailNotification",
+            "textToLower": "sendemailnotification",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 137
+              },
+              "end": {
+                "line": 0,
+                "character": 158
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sendEmailNotification_0:137"
+          },
+          "parentId": "KbManagement.publishingservice.method.assigndrafttranslationtask(string,string,string,datetime,boolean)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "KbManagement.publishingservice.assigndrafttranslationtask.boolean",
+            "id": "KbManagement.publishingservice.assigndrafttranslationtask.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 129
+                },
+                "end": {
+                  "line": 0,
+                  "character": 136
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:129"
+            },
+            "parentId": "KbManagement.publishingservice.assigndrafttranslationtask",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "cancelscheduledarchivingofarticle(string)": {
-      "id": "KbManagement.publishingservice.cancelscheduledarchivingofarticle",
+      "id": "KbManagement.publishingservice.method.cancelscheduledarchivingofarticle(string)",
       "nodeType": "method",
       "name": "cancelScheduledArchivingOfArticle",
       "startToken": {
@@ -666,6 +1304,9 @@
         },
         "id": "declaration.entity.name.function_cancelScheduledArchivingOfArticle_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -673,17 +1314,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -692,30 +1333,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void cancelScheduledArchivingOfArticle(String articleId)",
+      "signature": "public static Void cancelScheduledArchivingOfArticle(String articleId)",
+      "overrideSignature": "public static override Void cancelScheduledArchivingOfArticle(String articleId)",
       "simplifiedSignature": "cancelScheduledArchivingOfArticle(String)",
       "datatype": {
-        "id": "KbManagement.publishingservice.cancelscheduledarchivingofarticle.void",
+        "id": "KbManagement.publishingservice.cancelscheduledarchivingofarticle.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.cancelscheduledarchivingofarticle",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Cancels the scheduled archiving of an online article.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleId": {
-          "id": "KbManagement.publishingservice.cancelscheduledarchivingofarticle.articleid",
-          "type": "var",
+        "articleid": {
+          "id": "KbManagement.publishingservice.method.cancelscheduledarchivingofarticle(string).varParam.articleid",
+          "nodeType": "variable",
           "name": "articleId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -724,29 +1391,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleId_-1:0"
+            "id": "token.type.identifier_articleId_0:60"
           },
-          "signature": "String articleId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleId",
+            "textToLower": "articleid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 60
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleId_0:60"
+          },
+          "parentId": "KbManagement.publishingservice.method.cancelscheduledarchivingofarticle(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.cancelscheduledarchivingofarticle.string",
+            "id": "KbManagement.publishingservice.cancelscheduledarchivingofarticle.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 53
+                },
+                "end": {
+                  "line": 0,
+                  "character": 59
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:53"
+            },
+            "parentId": "KbManagement.publishingservice.cancelscheduledarchivingofarticle",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "cancelscheduledpublicationofarticle(string)": {
-      "id": "KbManagement.publishingservice.cancelscheduledpublicationofarticle",
+      "id": "KbManagement.publishingservice.method.cancelscheduledpublicationofarticle(string)",
       "nodeType": "method",
       "name": "cancelScheduledPublicationOfArticle",
       "startToken": {
@@ -768,6 +1483,9 @@
         },
         "id": "declaration.entity.name.function_cancelScheduledPublicationOfArticle_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -775,17 +1493,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -794,30 +1512,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void cancelScheduledPublicationOfArticle(String articleId)",
+      "signature": "public static Void cancelScheduledPublicationOfArticle(String articleId)",
+      "overrideSignature": "public static override Void cancelScheduledPublicationOfArticle(String articleId)",
       "simplifiedSignature": "cancelScheduledPublicationOfArticle(String)",
       "datatype": {
-        "id": "KbManagement.publishingservice.cancelscheduledpublicationofarticle.void",
+        "id": "KbManagement.publishingservice.cancelscheduledpublicationofarticle.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.cancelscheduledpublicationofarticle",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Cancels the scheduled publication of a draft article.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleId": {
-          "id": "KbManagement.publishingservice.cancelscheduledpublicationofarticle.articleid",
-          "type": "var",
+        "articleid": {
+          "id": "KbManagement.publishingservice.method.cancelscheduledpublicationofarticle(string).varParam.articleid",
+          "nodeType": "variable",
           "name": "articleId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -826,29 +1570,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 62
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleId_-1:0"
+            "id": "token.type.identifier_articleId_0:62"
           },
-          "signature": "String articleId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleId",
+            "textToLower": "articleid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 62
+              },
+              "end": {
+                "line": 0,
+                "character": 71
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleId_0:62"
+          },
+          "parentId": "KbManagement.publishingservice.method.cancelscheduledpublicationofarticle(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.cancelscheduledpublicationofarticle.string",
+            "id": "KbManagement.publishingservice.cancelscheduledpublicationofarticle.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 55
+                },
+                "end": {
+                  "line": 0,
+                  "character": 61
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:55"
+            },
+            "parentId": "KbManagement.publishingservice.cancelscheduledpublicationofarticle",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "completetranslation(string)": {
-      "id": "KbManagement.publishingservice.completetranslation",
+      "id": "KbManagement.publishingservice.method.completetranslation(string)",
       "nodeType": "method",
       "name": "completeTranslation",
       "startToken": {
@@ -870,6 +1662,9 @@
         },
         "id": "declaration.entity.name.function_completeTranslation_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -877,17 +1672,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -896,30 +1691,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void completeTranslation(String articleVersionId)",
+      "signature": "public static Void completeTranslation(String articleVersionId)",
+      "overrideSignature": "public static override Void completeTranslation(String articleVersionId)",
       "simplifiedSignature": "completeTranslation(String)",
       "datatype": {
-        "id": "KbManagement.publishingservice.completetranslation.void",
+        "id": "KbManagement.publishingservice.completetranslation.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.completetranslation",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Puts a translation in a completed state that is ready to publish.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleVersionId": {
-          "id": "KbManagement.publishingservice.completetranslation.articleversionid",
-          "type": "var",
+        "articleversionid": {
+          "id": "KbManagement.publishingservice.method.completetranslation(string).varParam.articleversionid",
+          "nodeType": "variable",
           "name": "articleVersionId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -928,29 +1749,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 62
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleVersionId_-1:0"
+            "id": "token.type.identifier_articleVersionId_0:46"
           },
-          "signature": "String articleVersionId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleVersionId",
+            "textToLower": "articleversionid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 62
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleVersionId_0:46"
+          },
+          "parentId": "KbManagement.publishingservice.method.completetranslation(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.completetranslation.string",
+            "id": "KbManagement.publishingservice.completetranslation.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:39"
+            },
+            "parentId": "KbManagement.publishingservice.completetranslation",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "deletearchivedarticle(string)": {
-      "id": "KbManagement.publishingservice.deletearchivedarticle",
+      "id": "KbManagement.publishingservice.method.deletearchivedarticle(string)",
       "nodeType": "method",
       "name": "deleteArchivedArticle",
       "startToken": {
@@ -972,6 +1841,9 @@
         },
         "id": "declaration.entity.name.function_deleteArchivedArticle_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -979,17 +1851,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -998,30 +1870,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void deleteArchivedArticle(String articleId)",
+      "signature": "public static Void deleteArchivedArticle(String articleId)",
+      "overrideSignature": "public static override Void deleteArchivedArticle(String articleId)",
       "simplifiedSignature": "deleteArchivedArticle(String)",
       "datatype": {
-        "id": "KbManagement.publishingservice.deletearchivedarticle.void",
+        "id": "KbManagement.publishingservice.deletearchivedarticle.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.deletearchivedarticle",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Deletes an archived article.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleId": {
-          "id": "KbManagement.publishingservice.deletearchivedarticle.articleid",
-          "type": "var",
+        "articleid": {
+          "id": "KbManagement.publishingservice.method.deletearchivedarticle(string).varParam.articleid",
+          "nodeType": "variable",
           "name": "articleId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1030,29 +1928,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleId_-1:0"
+            "id": "token.type.identifier_articleId_0:48"
           },
-          "signature": "String articleId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleId",
+            "textToLower": "articleid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 48
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleId_0:48"
+          },
+          "parentId": "KbManagement.publishingservice.method.deletearchivedarticle(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.deletearchivedarticle.string",
+            "id": "KbManagement.publishingservice.deletearchivedarticle.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 41
+                },
+                "end": {
+                  "line": 0,
+                  "character": 47
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:41"
+            },
+            "parentId": "KbManagement.publishingservice.deletearchivedarticle",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "deletearchivedarticleversion(string,integer)": {
-      "id": "KbManagement.publishingservice.deletearchivedarticleversion",
+      "id": "KbManagement.publishingservice.method.deletearchivedarticleversion(string,integer)",
       "nodeType": "method",
       "name": "deleteArchivedArticleVersion",
       "startToken": {
@@ -1074,6 +2020,9 @@
         },
         "id": "declaration.entity.name.function_deleteArchivedArticleVersion_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1081,17 +2030,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1100,30 +2049,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void deleteArchivedArticleVersion(String articleId, Integer versionNumber)",
+      "signature": "public static Void deleteArchivedArticleVersion(String articleId, Integer versionNumber)",
+      "overrideSignature": "public static override Void deleteArchivedArticleVersion(String articleId, Integer versionNumber)",
       "simplifiedSignature": "deleteArchivedArticleVersion(String,Integer)",
       "datatype": {
-        "id": "KbManagement.publishingservice.deletearchivedarticleversion.void",
+        "id": "KbManagement.publishingservice.deletearchivedarticleversion.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.deletearchivedarticleversion",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Deletes a specific version of an archived article.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleId": {
-          "id": "KbManagement.publishingservice.deletearchivedarticleversion.articleid",
-          "type": "var",
+        "articleid": {
+          "id": "KbManagement.publishingservice.method.deletearchivedarticleversion(string,integer).varParam.articleid",
+          "nodeType": "variable",
           "name": "articleId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1132,28 +2107,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleId_-1:0"
+            "id": "token.type.identifier_articleId_0:55"
           },
-          "signature": "String articleId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleId",
+            "textToLower": "articleid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 55
+              },
+              "end": {
+                "line": 0,
+                "character": 64
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleId_0:55"
+          },
+          "parentId": "KbManagement.publishingservice.method.deletearchivedarticleversion(string,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.deletearchivedarticleversion.string",
+            "id": "KbManagement.publishingservice.deletearchivedarticleversion.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 48
+                },
+                "end": {
+                  "line": 0,
+                  "character": 54
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:48"
+            },
+            "parentId": "KbManagement.publishingservice.deletearchivedarticleversion",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "versionNumber": {
-          "id": "KbManagement.publishingservice.deletearchivedarticleversion.versionnumber",
-          "type": "var",
+        "versionnumber": {
+          "id": "KbManagement.publishingservice.method.deletearchivedarticleversion(string,integer).varParam.versionnumber",
+          "nodeType": "variable",
           "name": "versionNumber",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1162,29 +2182,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 74
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 87
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_versionNumber_-1:0"
+            "id": "token.type.identifier_versionNumber_0:74"
           },
-          "signature": "Integer versionNumber",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "versionNumber",
+            "textToLower": "versionnumber",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 74
+              },
+              "end": {
+                "line": 0,
+                "character": 87
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_versionNumber_0:74"
+          },
+          "parentId": "KbManagement.publishingservice.method.deletearchivedarticleversion(string,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "KbManagement.publishingservice.deletearchivedarticleversion.integer",
+            "id": "KbManagement.publishingservice.deletearchivedarticleversion.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 66
+                },
+                "end": {
+                  "line": 0,
+                  "character": 73
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:66"
+            },
+            "parentId": "KbManagement.publishingservice.deletearchivedarticleversion",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "deletedraftarticle(string)": {
-      "id": "KbManagement.publishingservice.deletedraftarticle",
+      "id": "KbManagement.publishingservice.method.deletedraftarticle(string)",
       "nodeType": "method",
       "name": "deleteDraftArticle",
       "startToken": {
@@ -1206,6 +2274,9 @@
         },
         "id": "declaration.entity.name.function_deleteDraftArticle_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1213,17 +2284,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1232,30 +2303,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void deleteDraftArticle(String articleId)",
+      "signature": "public static Void deleteDraftArticle(String articleId)",
+      "overrideSignature": "public static override Void deleteDraftArticle(String articleId)",
       "simplifiedSignature": "deleteDraftArticle(String)",
       "datatype": {
-        "id": "KbManagement.publishingservice.deletedraftarticle.void",
+        "id": "KbManagement.publishingservice.deletedraftarticle.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.deletedraftarticle",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Deletes a draft article.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleId": {
-          "id": "KbManagement.publishingservice.deletedraftarticle.articleid",
-          "type": "var",
+        "articleid": {
+          "id": "KbManagement.publishingservice.method.deletedraftarticle(string).varParam.articleid",
+          "nodeType": "variable",
           "name": "articleId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1264,29 +2361,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleId_-1:0"
+            "id": "token.type.identifier_articleId_0:45"
           },
-          "signature": "String articleId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleId",
+            "textToLower": "articleid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 45
+              },
+              "end": {
+                "line": 0,
+                "character": 54
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleId_0:45"
+          },
+          "parentId": "KbManagement.publishingservice.method.deletedraftarticle(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.deletedraftarticle.string",
+            "id": "KbManagement.publishingservice.deletedraftarticle.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 38
+                },
+                "end": {
+                  "line": 0,
+                  "character": 44
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:38"
+            },
+            "parentId": "KbManagement.publishingservice.deletedraftarticle",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "deletedrafttranslation(string)": {
-      "id": "KbManagement.publishingservice.deletedrafttranslation",
+      "id": "KbManagement.publishingservice.method.deletedrafttranslation(string)",
       "nodeType": "method",
       "name": "deleteDraftTranslation",
       "startToken": {
@@ -1308,6 +2453,9 @@
         },
         "id": "declaration.entity.name.function_deleteDraftTranslation_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 10,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1315,17 +2463,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1334,30 +2482,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void deleteDraftTranslation(String articleVersionId)",
+      "signature": "public static Void deleteDraftTranslation(String articleVersionId)",
+      "overrideSignature": "public static override Void deleteDraftTranslation(String articleVersionId)",
       "simplifiedSignature": "deleteDraftTranslation(String)",
       "datatype": {
-        "id": "KbManagement.publishingservice.deletedrafttranslation.void",
+        "id": "KbManagement.publishingservice.deletedrafttranslation.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.deletedrafttranslation",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Deletes a draft translation.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleVersionId": {
-          "id": "KbManagement.publishingservice.deletedrafttranslation.articleversionid",
-          "type": "var",
+        "articleversionid": {
+          "id": "KbManagement.publishingservice.method.deletedrafttranslation(string).varParam.articleversionid",
+          "nodeType": "variable",
           "name": "articleVersionId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1366,29 +2540,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleVersionId_-1:0"
+            "id": "token.type.identifier_articleVersionId_0:49"
           },
-          "signature": "String articleVersionId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleVersionId",
+            "textToLower": "articleversionid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 65
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleVersionId_0:49"
+          },
+          "parentId": "KbManagement.publishingservice.method.deletedrafttranslation(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.deletedrafttranslation.string",
+            "id": "KbManagement.publishingservice.deletedrafttranslation.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 48
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:42"
+            },
+            "parentId": "KbManagement.publishingservice.deletedrafttranslation",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "editarchivedarticle(string)": {
-      "id": "KbManagement.publishingservice.editarchivedarticle",
+      "id": "KbManagement.publishingservice.method.editarchivedarticle(string)",
       "nodeType": "method",
       "name": "editArchivedArticle",
       "startToken": {
@@ -1410,6 +2632,9 @@
         },
         "id": "declaration.entity.name.function_editArchivedArticle_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 11,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1417,17 +2642,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1436,30 +2661,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String editArchivedArticle(String articleId)",
+      "overrideSignature": "public static override String editArchivedArticle(String articleId)",
       "simplifiedSignature": "editArchivedArticle(String)",
       "datatype": {
-        "id": "KbManagement.publishingservice.editarchivedarticle.String",
+        "id": "KbManagement.publishingservice.editarchivedarticle.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.editarchivedarticle",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Creates a draft article from the archived master version and returns the new draft master version ID of the article.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleId": {
-          "id": "KbManagement.publishingservice.editarchivedarticle.articleid",
-          "type": "var",
+        "articleid": {
+          "id": "KbManagement.publishingservice.method.editarchivedarticle(string).varParam.articleid",
+          "nodeType": "variable",
           "name": "articleId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1468,29 +2719,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleId_-1:0"
+            "id": "token.type.identifier_articleId_0:48"
           },
-          "signature": "String articleId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleId",
+            "textToLower": "articleid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 48
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleId_0:48"
+          },
+          "parentId": "KbManagement.publishingservice.method.editarchivedarticle(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.editarchivedarticle.string",
+            "id": "KbManagement.publishingservice.editarchivedarticle.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 41
+                },
+                "end": {
+                  "line": 0,
+                  "character": 47
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:41"
+            },
+            "parentId": "KbManagement.publishingservice.editarchivedarticle",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "editonlinearticle(string,boolean)": {
-      "id": "KbManagement.publishingservice.editonlinearticle",
+      "id": "KbManagement.publishingservice.method.editonlinearticle(string,boolean)",
       "nodeType": "method",
       "name": "editOnlineArticle",
       "startToken": {
@@ -1512,6 +2811,9 @@
         },
         "id": "declaration.entity.name.function_editOnlineArticle_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 12,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1519,17 +2821,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1538,30 +2840,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String editOnlineArticle(String articleId, Boolean unpublish)",
+      "overrideSignature": "public static override String editOnlineArticle(String articleId, Boolean unpublish)",
       "simplifiedSignature": "editOnlineArticle(String,Boolean)",
       "datatype": {
-        "id": "KbManagement.publishingservice.editonlinearticle.String",
+        "id": "KbManagement.publishingservice.editonlinearticle.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.editonlinearticle",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Creates a draft article from the online version and  returns the new draft master version ID of the article. Also, unpublishes the online article, if unpublish is set to true.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleId": {
-          "id": "KbManagement.publishingservice.editonlinearticle.articleid",
-          "type": "var",
+        "articleid": {
+          "id": "KbManagement.publishingservice.method.editonlinearticle(string,boolean).varParam.articleid",
+          "nodeType": "variable",
           "name": "articleId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1570,28 +2898,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleId_-1:0"
+            "id": "token.type.identifier_articleId_0:46"
           },
-          "signature": "String articleId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleId",
+            "textToLower": "articleid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleId_0:46"
+          },
+          "parentId": "KbManagement.publishingservice.method.editonlinearticle(string,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.editonlinearticle.string",
+            "id": "KbManagement.publishingservice.editonlinearticle.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:39"
+            },
+            "parentId": "KbManagement.publishingservice.editonlinearticle",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "unpublish": {
-          "id": "KbManagement.publishingservice.editonlinearticle.unpublish",
-          "type": "var",
+          "id": "KbManagement.publishingservice.method.editonlinearticle(string,boolean).varParam.unpublish",
+          "nodeType": "variable",
           "name": "unpublish",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1600,29 +2973,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 74
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_unpublish_-1:0"
+            "id": "token.type.identifier_unpublish_0:65"
           },
-          "signature": "Boolean unpublish",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "unpublish",
+            "textToLower": "unpublish",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 65
+              },
+              "end": {
+                "line": 0,
+                "character": 74
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_unpublish_0:65"
+          },
+          "parentId": "KbManagement.publishingservice.method.editonlinearticle(string,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "KbManagement.publishingservice.editonlinearticle.boolean",
+            "id": "KbManagement.publishingservice.editonlinearticle.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 57
+                },
+                "end": {
+                  "line": 0,
+                  "character": 64
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:57"
+            },
+            "parentId": "KbManagement.publishingservice.editonlinearticle",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "editpublishedtranslation(string,string,boolean)": {
-      "id": "KbManagement.publishingservice.editpublishedtranslation",
+      "id": "KbManagement.publishingservice.method.editpublishedtranslation(string,string,boolean)",
       "nodeType": "method",
       "name": "editPublishedTranslation",
       "startToken": {
@@ -1644,6 +3065,9 @@
         },
         "id": "declaration.entity.name.function_editPublishedTranslation_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 13,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1651,17 +3075,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1670,30 +3094,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String editPublishedTranslation(String articleId, String language, Boolean unpublish)",
+      "overrideSignature": "public static override String editPublishedTranslation(String articleId, String language, Boolean unpublish)",
       "simplifiedSignature": "editPublishedTranslation(String,String,Boolean)",
       "datatype": {
-        "id": "KbManagement.publishingservice.editpublishedtranslation.String",
+        "id": "KbManagement.publishingservice.editpublishedtranslation.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.editpublishedtranslation",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Creates a draft version of the online translation for a specific language and returns the new draft master version ID of the article. Also, unpublishes the article, if set to true.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleId": {
-          "id": "KbManagement.publishingservice.editpublishedtranslation.articleid",
-          "type": "var",
+        "articleid": {
+          "id": "KbManagement.publishingservice.method.editpublishedtranslation(string,string,boolean).varParam.articleid",
+          "nodeType": "variable",
           "name": "articleId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1702,28 +3152,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 62
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleId_-1:0"
+            "id": "token.type.identifier_articleId_0:53"
           },
-          "signature": "String articleId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleId",
+            "textToLower": "articleid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 62
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleId_0:53"
+          },
+          "parentId": "KbManagement.publishingservice.method.editpublishedtranslation(string,string,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.editpublishedtranslation.string",
+            "id": "KbManagement.publishingservice.editpublishedtranslation.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 46
+                },
+                "end": {
+                  "line": 0,
+                  "character": 52
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:46"
+            },
+            "parentId": "KbManagement.publishingservice.editpublishedtranslation",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "language": {
-          "id": "KbManagement.publishingservice.editpublishedtranslation.language",
-          "type": "var",
+          "id": "KbManagement.publishingservice.method.editpublishedtranslation(string,string,boolean).varParam.language",
+          "nodeType": "variable",
           "name": "language",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1732,28 +3227,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_language_-1:0"
+            "id": "token.type.identifier_language_0:71"
           },
-          "signature": "String language",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "language",
+            "textToLower": "language",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 71
+              },
+              "end": {
+                "line": 0,
+                "character": 79
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_language_0:71"
+          },
+          "parentId": "KbManagement.publishingservice.method.editpublishedtranslation(string,string,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "KbManagement.publishingservice.editpublishedtranslation.string",
+            "id": "KbManagement.publishingservice.editpublishedtranslation.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 64
+                },
+                "end": {
+                  "line": 0,
+                  "character": 70
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:64"
+            },
+            "parentId": "KbManagement.publishingservice.editpublishedtranslation",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "unpublish": {
-          "id": "KbManagement.publishingservice.editpublishedtranslation.unpublish",
-          "type": "var",
+          "id": "KbManagement.publishingservice.method.editpublishedtranslation(string,string,boolean).varParam.unpublish",
+          "nodeType": "variable",
           "name": "unpublish",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1762,29 +3302,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 89
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_unpublish_-1:0"
+            "id": "token.type.identifier_unpublish_0:89"
           },
-          "signature": "Boolean unpublish",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "unpublish",
+            "textToLower": "unpublish",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 89
+              },
+              "end": {
+                "line": 0,
+                "character": 98
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_unpublish_0:89"
+          },
+          "parentId": "KbManagement.publishingservice.method.editpublishedtranslation(string,string,boolean)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "KbManagement.publishingservice.editpublishedtranslation.boolean",
+            "id": "KbManagement.publishingservice.editpublishedtranslation.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 81
+                },
+                "end": {
+                  "line": 0,
+                  "character": 88
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:81"
+            },
+            "parentId": "KbManagement.publishingservice.editpublishedtranslation",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "publisharticle(string,boolean)": {
-      "id": "KbManagement.publishingservice.publisharticle",
+      "id": "KbManagement.publishingservice.method.publisharticle(string,boolean)",
       "nodeType": "method",
       "name": "publishArticle",
       "startToken": {
@@ -1806,6 +3394,9 @@
         },
         "id": "declaration.entity.name.function_publishArticle_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 14,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1813,17 +3404,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1832,30 +3423,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void publishArticle(String articleId, Boolean flagAsNew)",
+      "signature": "public static Void publishArticle(String articleId, Boolean flagAsNew)",
+      "overrideSignature": "public static override Void publishArticle(String articleId, Boolean flagAsNew)",
       "simplifiedSignature": "publishArticle(String,Boolean)",
       "datatype": {
-        "id": "KbManagement.publishingservice.publisharticle.void",
+        "id": "KbManagement.publishingservice.publisharticle.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.publisharticle",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Publishes an article. If flagAsNew is set to true, the article is published as a major version.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleId": {
-          "id": "KbManagement.publishingservice.publisharticle.articleid",
-          "type": "var",
+        "articleid": {
+          "id": "KbManagement.publishingservice.method.publisharticle(string,boolean).varParam.articleid",
+          "nodeType": "variable",
           "name": "articleId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1864,28 +3481,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleId_-1:0"
+            "id": "token.type.identifier_articleId_0:41"
           },
-          "signature": "String articleId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleId",
+            "textToLower": "articleid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 41
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleId_0:41"
+          },
+          "parentId": "KbManagement.publishingservice.method.publisharticle(string,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.publisharticle.string",
+            "id": "KbManagement.publishingservice.publisharticle.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:34"
+            },
+            "parentId": "KbManagement.publishingservice.publisharticle",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "flagAsNew": {
-          "id": "KbManagement.publishingservice.publisharticle.flagasnew",
-          "type": "var",
+        "flagasnew": {
+          "id": "KbManagement.publishingservice.method.publisharticle(string,boolean).varParam.flagasnew",
+          "nodeType": "variable",
           "name": "flagAsNew",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1894,29 +3556,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_flagAsNew_-1:0"
+            "id": "token.type.identifier_flagAsNew_0:60"
           },
-          "signature": "Boolean flagAsNew",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "flagAsNew",
+            "textToLower": "flagasnew",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 60
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_flagAsNew_0:60"
+          },
+          "parentId": "KbManagement.publishingservice.method.publisharticle(string,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "KbManagement.publishingservice.publisharticle.boolean",
+            "id": "KbManagement.publishingservice.publisharticle.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 59
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:52"
+            },
+            "parentId": "KbManagement.publishingservice.publisharticle",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "restoreoldversion(string,integer)": {
-      "id": "KbManagement.publishingservice.restoreoldversion",
+      "id": "KbManagement.publishingservice.method.restoreoldversion(string,integer)",
       "nodeType": "method",
       "name": "restoreOldVersion",
       "startToken": {
@@ -1938,6 +3648,9 @@
         },
         "id": "declaration.entity.name.function_restoreOldVersion_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 15,
+      "memberOrder": 15,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1945,17 +3658,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1964,30 +3677,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String restoreOldVersion(String articleId, Integer versionNumber)",
+      "overrideSignature": "public static override String restoreOldVersion(String articleId, Integer versionNumber)",
       "simplifiedSignature": "restoreOldVersion(String,Integer)",
       "datatype": {
-        "id": "KbManagement.publishingservice.restoreoldversion.String",
+        "id": "KbManagement.publishingservice.restoreoldversion.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.restoreoldversion",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Creates a draft article from an existing online article based on the specified archived version of the article and returns the article version ID.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleId": {
-          "id": "KbManagement.publishingservice.restoreoldversion.articleid",
-          "type": "var",
+        "articleid": {
+          "id": "KbManagement.publishingservice.method.restoreoldversion(string,integer).varParam.articleid",
+          "nodeType": "variable",
           "name": "articleId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1996,28 +3735,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleId_-1:0"
+            "id": "token.type.identifier_articleId_0:46"
           },
-          "signature": "String articleId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleId",
+            "textToLower": "articleid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleId_0:46"
+          },
+          "parentId": "KbManagement.publishingservice.method.restoreoldversion(string,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.restoreoldversion.string",
+            "id": "KbManagement.publishingservice.restoreoldversion.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:39"
+            },
+            "parentId": "KbManagement.publishingservice.restoreoldversion",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "versionNumber": {
-          "id": "KbManagement.publishingservice.restoreoldversion.versionnumber",
-          "type": "var",
+        "versionnumber": {
+          "id": "KbManagement.publishingservice.method.restoreoldversion(string,integer).varParam.versionnumber",
+          "nodeType": "variable",
           "name": "versionNumber",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2026,29 +3810,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_versionNumber_-1:0"
+            "id": "token.type.identifier_versionNumber_0:65"
           },
-          "signature": "Integer versionNumber",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "versionNumber",
+            "textToLower": "versionnumber",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 65
+              },
+              "end": {
+                "line": 0,
+                "character": 78
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_versionNumber_0:65"
+          },
+          "parentId": "KbManagement.publishingservice.method.restoreoldversion(string,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "KbManagement.publishingservice.restoreoldversion.integer",
+            "id": "KbManagement.publishingservice.restoreoldversion.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 57
+                },
+                "end": {
+                  "line": 0,
+                  "character": 64
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:57"
+            },
+            "parentId": "KbManagement.publishingservice.restoreoldversion",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "scheduleforpublication(string,datetime)": {
-      "id": "KbManagement.publishingservice.scheduleforpublication",
+      "id": "KbManagement.publishingservice.method.scheduleforpublication(string,datetime)",
       "nodeType": "method",
       "name": "scheduleForPublication",
       "startToken": {
@@ -2070,6 +3902,9 @@
         },
         "id": "declaration.entity.name.function_scheduleForPublication_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 16,
+      "memberOrder": 16,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -2077,17 +3912,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -2096,30 +3931,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void scheduleForPublication(String articleId, Datetime scheduledDate)",
+      "signature": "public static Void scheduleForPublication(String articleId, Datetime scheduledDate)",
+      "overrideSignature": "public static override Void scheduleForPublication(String articleId, Datetime scheduledDate)",
       "simplifiedSignature": "scheduleForPublication(String,Datetime)",
       "datatype": {
-        "id": "KbManagement.publishingservice.scheduleforpublication.void",
+        "id": "KbManagement.publishingservice.scheduleforpublication.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.scheduleforpublication",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Schedules the article for publication as a major version. If the specified date is null, the article is published immediately.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleId": {
-          "id": "KbManagement.publishingservice.scheduleforpublication.articleid",
-          "type": "var",
+        "articleid": {
+          "id": "KbManagement.publishingservice.method.scheduleforpublication(string,datetime).varParam.articleid",
+          "nodeType": "variable",
           "name": "articleId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2128,28 +3989,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleId_-1:0"
+            "id": "token.type.identifier_articleId_0:49"
           },
-          "signature": "String articleId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleId",
+            "textToLower": "articleid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleId_0:49"
+          },
+          "parentId": "KbManagement.publishingservice.method.scheduleforpublication(string,datetime)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.scheduleforpublication.string",
+            "id": "KbManagement.publishingservice.scheduleforpublication.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 48
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:42"
+            },
+            "parentId": "KbManagement.publishingservice.scheduleforpublication",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "scheduledDate": {
-          "id": "KbManagement.publishingservice.scheduleforpublication.scheduleddate",
-          "type": "var",
+        "scheduleddate": {
+          "id": "KbManagement.publishingservice.method.scheduleforpublication(string,datetime).varParam.scheduleddate",
+          "nodeType": "variable",
           "name": "scheduledDate",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2158,29 +4064,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_scheduledDate_-1:0"
+            "id": "token.type.identifier_scheduledDate_0:69"
           },
-          "signature": "Datetime scheduledDate",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "scheduledDate",
+            "textToLower": "scheduleddate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 69
+              },
+              "end": {
+                "line": 0,
+                "character": 82
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_scheduledDate_0:69"
+          },
+          "parentId": "KbManagement.publishingservice.method.scheduleforpublication(string,datetime)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "KbManagement.publishingservice.scheduleforpublication.datetime",
+            "id": "KbManagement.publishingservice.scheduleforpublication.datatype.Datetime",
             "nodeType": "datatype",
-            "name": "Datetime"
-          }
+            "name": "Datetime",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Datetime",
+              "textToLower": "datetime",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 60
+                },
+                "end": {
+                  "line": 0,
+                  "character": 68
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Datetime_0:60"
+            },
+            "parentId": "KbManagement.publishingservice.scheduleforpublication",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Datetime"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settranslationtoincomplete(string)": {
-      "id": "KbManagement.publishingservice.settranslationtoincomplete",
+      "id": "KbManagement.publishingservice.method.settranslationtoincomplete(string)",
       "nodeType": "method",
       "name": "setTranslationToIncomplete",
       "startToken": {
@@ -2202,6 +4156,9 @@
         },
         "id": "declaration.entity.name.function_setTranslationToIncomplete_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 17,
+      "memberOrder": 17,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -2209,17 +4166,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -2228,30 +4185,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void setTranslationToIncomplete(String articleVersionId)",
+      "signature": "public static Void setTranslationToIncomplete(String articleVersionId)",
+      "overrideSignature": "public static override Void setTranslationToIncomplete(String articleVersionId)",
       "simplifiedSignature": "setTranslationToIncomplete(String)",
       "datatype": {
-        "id": "KbManagement.publishingservice.settranslationtoincomplete.void",
+        "id": "KbManagement.publishingservice.settranslationtoincomplete.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.settranslationtoincomplete",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Sets a draft translation that is ready for publication back to “in progress” status.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleVersionId": {
-          "id": "KbManagement.publishingservice.settranslationtoincomplete.articleversionid",
-          "type": "var",
+        "articleversionid": {
+          "id": "KbManagement.publishingservice.method.settranslationtoincomplete(string).varParam.articleversionid",
+          "nodeType": "variable",
           "name": "articleVersionId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2260,29 +4243,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleVersionId_-1:0"
+            "id": "token.type.identifier_articleVersionId_0:53"
           },
-          "signature": "String articleVersionId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleVersionId",
+            "textToLower": "articleversionid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleVersionId_0:53"
+          },
+          "parentId": "KbManagement.publishingservice.method.settranslationtoincomplete(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.settranslationtoincomplete.string",
+            "id": "KbManagement.publishingservice.settranslationtoincomplete.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 46
+                },
+                "end": {
+                  "line": 0,
+                  "character": 52
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:46"
+            },
+            "parentId": "KbManagement.publishingservice.settranslationtoincomplete",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "submitfortranslation(string,string,string,datetime)": {
-      "id": "KbManagement.publishingservice.submitfortranslation",
+      "id": "KbManagement.publishingservice.method.submitfortranslation(string,string,string,datetime)",
       "nodeType": "method",
       "name": "submitForTranslation",
       "startToken": {
@@ -2304,6 +4335,9 @@
         },
         "id": "declaration.entity.name.function_submitForTranslation_-1:0"
       },
+      "parentId": "KbManagement.publishingservice",
+      "order": 18,
+      "memberOrder": 18,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -2311,17 +4345,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -2330,30 +4364,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String submitForTranslation(String articleId, String language, String assigneeId, Datetime dueDate)",
+      "overrideSignature": "public static override String submitForTranslation(String articleId, String language, String assigneeId, Datetime dueDate)",
       "simplifiedSignature": "submitForTranslation(String,String,String,Datetime)",
       "datatype": {
-        "id": "KbManagement.publishingservice.submitfortranslation.String",
+        "id": "KbManagement.publishingservice.submitfortranslation.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "KbManagement.publishingservice.submitfortranslation",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Submits an article for translation to the specified language. Also assigns the specified user and due date to the submittal and returns new ID of the draft translation.",
+      "parentName": "PublishingService",
+      "variables": {},
       "params": {
-        "articleId": {
-          "id": "KbManagement.publishingservice.submitfortranslation.articleid",
-          "type": "var",
+        "articleid": {
+          "id": "KbManagement.publishingservice.method.submitfortranslation(string,string,string,datetime).varParam.articleid",
+          "nodeType": "variable",
           "name": "articleId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2362,28 +4422,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_articleId_-1:0"
+            "id": "token.type.identifier_articleId_0:49"
           },
-          "signature": "String articleId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "articleId",
+            "textToLower": "articleid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_articleId_0:49"
+          },
+          "parentId": "KbManagement.publishingservice.method.submitfortranslation(string,string,string,datetime)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "KbManagement.publishingservice.submitfortranslation.string",
+            "id": "KbManagement.publishingservice.submitfortranslation.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 48
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:42"
+            },
+            "parentId": "KbManagement.publishingservice.submitfortranslation",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "language": {
-          "id": "KbManagement.publishingservice.submitfortranslation.language",
-          "type": "var",
+          "id": "KbManagement.publishingservice.method.submitfortranslation(string,string,string,datetime).varParam.language",
+          "nodeType": "variable",
           "name": "language",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2392,28 +4497,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 75
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_language_-1:0"
+            "id": "token.type.identifier_language_0:67"
           },
-          "signature": "String language",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "language",
+            "textToLower": "language",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 75
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_language_0:67"
+          },
+          "parentId": "KbManagement.publishingservice.method.submitfortranslation(string,string,string,datetime)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "KbManagement.publishingservice.submitfortranslation.string",
+            "id": "KbManagement.publishingservice.submitfortranslation.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 60
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:60"
+            },
+            "parentId": "KbManagement.publishingservice.submitfortranslation",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "assigneeId": {
-          "id": "KbManagement.publishingservice.submitfortranslation.assigneeid",
-          "type": "var",
+        "assigneeid": {
+          "id": "KbManagement.publishingservice.method.submitfortranslation(string,string,string,datetime).varParam.assigneeid",
+          "nodeType": "variable",
           "name": "assigneeId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2422,28 +4572,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_assigneeId_-1:0"
+            "id": "token.type.identifier_assigneeId_0:84"
           },
-          "signature": "String assigneeId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "assigneeId",
+            "textToLower": "assigneeid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 84
+              },
+              "end": {
+                "line": 0,
+                "character": 94
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_assigneeId_0:84"
+          },
+          "parentId": "KbManagement.publishingservice.method.submitfortranslation(string,string,string,datetime)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "KbManagement.publishingservice.submitfortranslation.string",
+            "id": "KbManagement.publishingservice.submitfortranslation.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 77
+                },
+                "end": {
+                  "line": 0,
+                  "character": 83
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:77"
+            },
+            "parentId": "KbManagement.publishingservice.submitfortranslation",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "dueDate": {
-          "id": "KbManagement.publishingservice.submitfortranslation.duedate",
-          "type": "var",
+        "duedate": {
+          "id": "KbManagement.publishingservice.method.submitfortranslation(string,string,string,datetime).varParam.duedate",
+          "nodeType": "variable",
           "name": "dueDate",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2452,30 +4647,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 105
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 112
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_dueDate_-1:0"
+            "id": "token.type.identifier_dueDate_0:105"
           },
-          "signature": "Datetime dueDate",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "dueDate",
+            "textToLower": "duedate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 105
+              },
+              "end": {
+                "line": 0,
+                "character": 112
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_dueDate_0:105"
+          },
+          "parentId": "KbManagement.publishingservice.method.submitfortranslation(string,string,string,datetime)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "KbManagement.publishingservice.submitfortranslation.datetime",
+            "id": "KbManagement.publishingservice.submitfortranslation.datatype.Datetime",
             "nodeType": "datatype",
-            "name": "Datetime"
-          }
+            "name": "Datetime",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Datetime",
+              "textToLower": "datetime",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 96
+                },
+                "end": {
+                  "line": 0,
+                  "character": 104
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Datetime_0:96"
+            },
+            "parentId": "KbManagement.publishingservice.submitfortranslation",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Datetime"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 18,
+  "queries": []
 }

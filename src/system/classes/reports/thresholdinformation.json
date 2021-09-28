@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_ThresholdInformation_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getevaluatedconditions()": {
-      "id": "Reports.thresholdinformation.getevaluatedconditions",
+      "id": "Reports.thresholdinformation.method.getevaluatedconditions()",
       "nodeType": "method",
       "name": "getEvaluatedConditions",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getEvaluatedConditions_-1:0"
       },
+      "parentId": "Reports.thresholdinformation",
+      "order": 1,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,32 +102,87 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<Reports.EvaluatedCondition> getEvaluatedConditions()",
+      "overrideSignature": "public override List<Reports.EvaluatedCondition> getEvaluatedConditions()",
       "simplifiedSignature": "getEvaluatedConditions()",
       "datatype": {
-        "id": "Reports.thresholdinformation.getevaluatedconditions.List<Reports.EvaluatedCondition>",
+        "id": "Reports.thresholdinformation.getevaluatedconditions.datatype.List<Reports.EvaluatedCondition>",
         "nodeType": "datatype",
-        "name": "List<Reports.EvaluatedCondition>"
+        "name": "List<Reports.EvaluatedCondition>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Reports.thresholdinformation.getevaluatedconditions",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Reports.thresholdinformation.getevaluatedconditions.datatype.List<Reports.EvaluatedCondition>.value.Reports.EvaluatedCondition",
+          "nodeType": "datatype",
+          "name": "Reports.EvaluatedCondition",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Reports",
+            "textToLower": "reports",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 19
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Reports_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Reports.EvaluatedCondition"
+        }
       },
       "description": "Returns a list of evaluated conditions for a report notification.",
-      "params": {}
+      "parentName": "ThresholdInformation",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {
-    "thresholdinformation(list)": {
-      "id": "Reports.thresholdinformation.thresholdinformation",
+    "thresholdinformation(list<reports.evaluatedcondition>)": {
+      "id": "Reports.thresholdinformation.method.thresholdinformation(list<reports.evaluatedcondition>)",
       "nodeType": "constructor",
       "name": "ThresholdInformation",
       "startToken": {
@@ -144,6 +204,9 @@
         },
         "id": "declaration.entity.name.function_ThresholdInformation_-1:0"
       },
+      "parentId": "Reports.thresholdinformation",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -151,61 +214,136 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public ThresholdInformation(List <Reports.EvaluatedCondition>)",
-      "simplifiedSignature": "ThresholdInformation(List)",
-      "datatype": {
-        "id": "Reports.thresholdinformation.thresholdinformation.constructor",
-        "nodeType": "datatype",
-        "name": "ThresholdInformation"
-      },
+      "signature": "public ThresholdInformation(List<Reports.EvaluatedCondition> evaluatedConditions)",
+      "overrideSignature": "public override ThresholdInformation(List<Reports.EvaluatedCondition> evaluatedConditions)",
+      "simplifiedSignature": "ThresholdInformation(List<Reports.EvaluatedCondition>)",
       "description": "Creates a new instance of the Reports.EvaluatedCondition class.",
+      "parentName": "ThresholdInformation",
+      "variables": {},
       "params": {
-        "<Reports.EvaluatedCondition>": {
-          "id": "Reports.thresholdinformation.thresholdinformation.<reports.evaluatedcondition>",
-          "type": "var",
-          "name": "<Reports.EvaluatedCondition>",
+        "evaluatedconditions": {
+          "id": "Reports.thresholdinformation.method.thresholdinformation(list<reports.evaluatedcondition>).varParam.evaluatedconditions",
+          "nodeType": "variable",
+          "name": "evaluatedConditions",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Reports.EvaluatedCondition>",
-            "textToLower": "<reports.evaluatedcondition>",
+            "text": "evaluatedConditions",
+            "textToLower": "evaluatedconditions",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Reports.EvaluatedCondition>_-1:0"
+            "id": "token.type.identifier_evaluatedConditions_0:61"
           },
-          "signature": "List <Reports.EvaluatedCondition>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "evaluatedConditions",
+            "textToLower": "evaluatedconditions",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 80
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_evaluatedConditions_0:61"
+          },
+          "parentId": "Reports.thresholdinformation.method.thresholdinformation(list<reports.evaluatedcondition>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Reports.thresholdinformation.thresholdinformation.list",
+            "id": "Reports.thresholdinformation.thresholdinformation.datatype.List<Reports.EvaluatedCondition>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<Reports.EvaluatedCondition>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 28
+                },
+                "end": {
+                  "line": 0,
+                  "character": 32
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:28"
+            },
+            "parentId": "Reports.thresholdinformation.thresholdinformation",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Reports.thresholdinformation.thresholdinformation.datatype.List<Reports.EvaluatedCondition>.value.Reports.EvaluatedCondition",
+              "nodeType": "datatype",
+              "name": "Reports.EvaluatedCondition",
+              "startToken": {
+                "type": "datatype.support.namespace",
+                "text": "Reports",
+                "textToLower": "reports",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 33
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 40
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Reports_0:33"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Reports.EvaluatedCondition"
+            }
+          },
+          "description": "A list of Reports.EvaluatedCondition objects.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

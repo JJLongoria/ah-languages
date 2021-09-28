@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_QueryNode_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "build(string)": {
-      "id": "Wave.querynode.build",
+      "id": "Wave.querynode.method.build(string)",
       "nodeType": "method",
       "name": "build",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_build_-1:0"
       },
+      "parentId": "Wave.querynode",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String build(String streamName)",
+      "overrideSignature": "public override String build(String streamName)",
       "simplifiedSignature": "build(String)",
       "datatype": {
-        "id": "Wave.querynode.build.String",
+        "id": "Wave.querynode.build.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Wave.querynode.build",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Build the query string represented by this QueryNode and assign it to a stream name.",
+      "parentName": "QueryNode",
+      "variables": {},
       "params": {
-        "streamName": {
-          "id": "Wave.querynode.build.streamname",
-          "type": "var",
+        "streamname": {
+          "id": "Wave.querynode.method.build(string).varParam.streamname",
+          "nodeType": "variable",
           "name": "streamName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,29 +160,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 27
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_streamName_-1:0"
+            "id": "token.type.identifier_streamName_0:27"
           },
-          "signature": "String streamName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "streamName",
+            "textToLower": "streamname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 27
+              },
+              "end": {
+                "line": 0,
+                "character": 37
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_streamName_0:27"
+          },
+          "parentId": "Wave.querynode.method.build(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Wave.querynode.build.string",
+            "id": "Wave.querynode.build.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 20
+                },
+                "end": {
+                  "line": 0,
+                  "character": 26
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:20"
+            },
+            "parentId": "Wave.querynode.build",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The identifier for the stream - for example, “q”.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "foreach(list)": {
-      "id": "Wave.querynode.foreach",
+    "foreach(list<wave.projectionnode>)": {
+      "id": "Wave.querynode.method.foreach(list<wave.projectionnode>)",
       "nodeType": "method",
       "name": "foreach",
       "startToken": {
@@ -173,6 +252,9 @@
         },
         "id": "declaration.entity.name.function_foreach_-1:0"
       },
+      "parentId": "Wave.querynode",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -180,198 +262,164 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public wave.QueryNode foreach(List <wave.ProjectionNode>)",
-      "simplifiedSignature": "foreach(List)",
+      "signature": "public wave.QueryNode foreach(List<wave.ProjectionNode> projections)",
+      "overrideSignature": "public override wave.QueryNode foreach(List<wave.ProjectionNode> projections)",
+      "simplifiedSignature": "foreach(List<wave.ProjectionNode>)",
       "datatype": {
-        "id": "Wave.querynode.foreach.wave.QueryNode",
+        "id": "Wave.querynode.foreach.datatype.wave.QueryNode",
         "nodeType": "datatype",
-        "name": "wave.QueryNode"
+        "name": "wave.QueryNode",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "wave",
+          "textToLower": "wave",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_wave_0:7"
+        },
+        "parentId": "Wave.querynode.foreach",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "wave.QueryNode"
       },
       "description": "Applies a set of expressions to every row in a dataset. This action is often referred to as projection.",
+      "parentName": "QueryNode",
+      "variables": {},
       "params": {
-        "<wave.ProjectionNode>": {
-          "id": "Wave.querynode.foreach.<wave.projectionnode>",
-          "type": "var",
-          "name": "<wave.ProjectionNode>",
+        "projections": {
+          "id": "Wave.querynode.method.foreach(list<wave.projectionnode>).varParam.projections",
+          "nodeType": "variable",
+          "name": "projections",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<wave.ProjectionNode>",
-            "textToLower": "<wave.projectionnode>",
+            "text": "projections",
+            "textToLower": "projections",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<wave.ProjectionNode>_-1:0"
+            "id": "token.type.identifier_projections_0:56"
           },
-          "signature": "List <wave.ProjectionNode>",
-          "datatype": {
-            "id": "Wave.querynode.foreach.list",
-            "nodeType": "datatype",
-            "name": "List"
-          }
-        }
-      }
-    },
-    "group(list)": {
-      "id": "Wave.querynode.group",
-      "nodeType": "method",
-      "name": "group",
-      "startToken": {
-        "type": "declaration.entity.name.function",
-        "text": "group",
-        "textToLower": "group",
-        "isAux": false,
-        "range": {
-          "start": {
-            "line": -1,
-            "character": 0
-          },
-          "end": {
-            "line": -1,
-            "character": 0
-          },
-          "isEmpty": true,
-          "isSingleLine": true
-        },
-        "id": "declaration.entity.name.function_group_-1:0"
-      },
-      "accessModifier": {
-        "type": "keyword.modifier.access",
-        "text": "public",
-        "textToLower": "public",
-        "isAux": false,
-        "range": {
-          "start": {
-            "line": -1,
-            "character": 0
-          },
-          "end": {
-            "line": -1,
-            "character": 0
-          },
-          "isEmpty": true,
-          "isSingleLine": true
-        },
-        "id": "keyword.modifier.access_public_-1:0"
-      },
-      "signature": "public wave.QueryNode group(List <String>)",
-      "simplifiedSignature": "group(List)",
-      "datatype": {
-        "id": "Wave.querynode.group.wave.QueryNode",
-        "nodeType": "datatype",
-        "name": "wave.QueryNode"
-      },
-      "description": "Groups matched records (group by specific dataset attributes).",
-      "params": {
-        "<String>": {
-          "id": "Wave.querynode.group.<string>",
-          "type": "var",
-          "name": "<String>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "projections",
+            "textToLower": "projections",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_projections_0:56"
           },
-          "signature": "List <String>",
+          "parentId": "Wave.querynode.method.foreach(list<wave.projectionnode>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Wave.querynode.group.list",
+            "id": "Wave.querynode.foreach.datatype.List<wave.ProjectionNode>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<wave.ProjectionNode>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 34
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:30"
+            },
+            "parentId": "Wave.querynode.foreach",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Wave.querynode.foreach.datatype.List<wave.ProjectionNode>.value.wave.ProjectionNode",
+              "nodeType": "datatype",
+              "name": "wave.ProjectionNode",
+              "startToken": {
+                "type": "datatype.support.namespace",
+                "text": "wave",
+                "textToLower": "wave",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 35
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 39
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_wave_0:35"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "wave.ProjectionNode"
+            }
+          },
+          "description": "A list of ProjectionNodes to be added to this QueryNode.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "group()": {
-      "id": "Wave.querynode.group",
+    "group(list<string>)": {
+      "id": "Wave.querynode.method.group(list<string>)",
       "nodeType": "method",
       "name": "group",
-      "startToken": {
-        "type": "declaration.entity.name.function",
-        "text": "group",
-        "textToLower": "group",
-        "isAux": false,
-        "range": {
-          "start": {
-            "line": -1,
-            "character": 0
-          },
-          "end": {
-            "line": -1,
-            "character": 0
-          },
-          "isEmpty": true,
-          "isSingleLine": true
-        },
-        "id": "declaration.entity.name.function_group_-1:0"
-      },
-      "accessModifier": {
-        "type": "keyword.modifier.access",
-        "text": "public",
-        "textToLower": "public",
-        "isAux": false,
-        "range": {
-          "start": {
-            "line": -1,
-            "character": 0
-          },
-          "end": {
-            "line": -1,
-            "character": 0
-          },
-          "isEmpty": true,
-          "isSingleLine": true
-        },
-        "id": "keyword.modifier.access_public_-1:0"
-      },
-      "signature": "public wave.QueryNode group()",
-      "simplifiedSignature": "group()",
-      "datatype": {
-        "id": "Wave.querynode.group.wave.QueryNode",
-        "nodeType": "datatype",
-        "name": "wave.QueryNode"
-      },
-      "description": "Groups matched records (group by all).",
-      "params": {}
-    },
-    "order(list)": {
-      "id": "Wave.querynode.order",
-      "nodeType": "method",
-      "name": "order",
       "startToken": {
         "type": "declaration.entity.name.function",
         "text": "order",
@@ -391,10 +439,178 @@
         },
         "id": "declaration.entity.name.function_order_-1:0"
       },
+      "parentId": "Wave.querynode",
+      "order": 4,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
         "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public wave.QueryNode group(List<String> groups)",
+      "overrideSignature": "public override wave.QueryNode group(List<String> groups)",
+      "simplifiedSignature": "group(List<String>)",
+      "datatype": {
+        "id": "Wave.querynode.order.datatype.wave.QueryNode",
+        "nodeType": "datatype",
+        "name": "wave.QueryNode",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "wave",
+          "textToLower": "wave",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_wave_0:7"
+        },
+        "parentId": "Wave.querynode.order",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "wave.QueryNode"
+      },
+      "description": "Sorts in ascending or descending order on one or more fields.",
+      "parentName": "QueryNode",
+      "variables": {},
+      "params": {
+        "groups": {
+          "id": "Wave.querynode.method.group(list<string>).varParam.groups",
+          "nodeType": "variable",
+          "name": "groups",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "groups",
+            "textToLower": "groups",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 41
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_groups_0:41"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "groups",
+            "textToLower": "groups",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 41
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_groups_0:41"
+          },
+          "parentId": "Wave.querynode.method.group(list<string>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Wave.querynode.order.datatype.List<String>",
+            "nodeType": "datatype",
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 28
+                },
+                "end": {
+                  "line": 0,
+                  "character": 32
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:28"
+            },
+            "parentId": "Wave.querynode.order",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Wave.querynode.order.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 33
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 39
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:33"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "A list of column names and associated ascending or descending keywords, for example List&lt;List&lt;String&gt;&gt;{new List&lt;String&gt;{'Name', 'asc'}, new List&lt;String&gt;{'Revenue', 'desc'}}",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "group()": {
+      "id": "Wave.querynode.method.group()",
+      "nodeType": "method",
+      "name": "group",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "group",
+        "textToLower": "group",
         "isAux": false,
         "range": {
           "start": {
@@ -408,51 +624,70 @@
           "isEmpty": true,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "declaration.entity.name.function_group_-1:0"
       },
-      "signature": "public wave.QueryNode order(List <String>)",
-      "simplifiedSignature": "order(List)",
-      "datatype": {
-        "id": "Wave.querynode.order.wave.QueryNode",
-        "nodeType": "datatype",
-        "name": "wave.QueryNode"
-      },
-      "description": "Sorts in ascending or descending order on one or more fields.",
-      "params": {
-        "<String>": {
-          "id": "Wave.querynode.order.<string>",
-          "type": "var",
-          "name": "<String>",
-          "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
-            "isAux": false,
-            "range": {
-              "start": {
-                "line": -1,
-                "character": 0
-              },
-              "end": {
-                "line": -1,
-                "character": 0
-              },
-              "isEmpty": true,
-              "isSingleLine": true
-            },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+      "parentId": "Wave.querynode",
+      "order": 4,
+      "memberOrder": 4,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
           },
-          "signature": "List <String>",
-          "datatype": {
-            "id": "Wave.querynode.order.list",
-            "nodeType": "datatype",
-            "name": "List"
-          }
-        }
-      }
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public wave.QueryNode group()",
+      "overrideSignature": "public override wave.QueryNode group()",
+      "simplifiedSignature": "group()",
+      "datatype": {
+        "id": "Wave.querynode.group.datatype.wave.QueryNode",
+        "nodeType": "datatype",
+        "name": "wave.QueryNode",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "wave",
+          "textToLower": "wave",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_wave_0:7"
+        },
+        "parentId": "Wave.querynode.group",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "wave.QueryNode"
+      },
+      "description": "Groups matched records (group by all).",
+      "parentName": "QueryNode",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "cap(integer)": {
-      "id": "Wave.querynode.cap",
+      "id": "Wave.querynode.method.cap(integer)",
       "nodeType": "method",
       "name": "cap",
       "startToken": {
@@ -474,6 +709,9 @@
         },
         "id": "declaration.entity.name.function_cap_-1:0"
       },
+      "parentId": "Wave.querynode",
+      "order": 5,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "global",
@@ -481,30 +719,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_global_-1:0"
+        "id": "token.type.identifier_global_0:0"
       },
-      "signature": "global wave.QueryNode cap(Integer cap)",
+      "signature": "global Wave.QueryNode cap(Integer cap)",
+      "overrideSignature": "global override Wave.QueryNode cap(Integer cap)",
       "simplifiedSignature": "cap(Integer)",
       "datatype": {
-        "id": "Wave.querynode.cap.wave.QueryNode",
+        "id": "Wave.querynode.cap.datatype.Wave.QueryNode",
         "nodeType": "datatype",
-        "name": "wave.QueryNode"
+        "name": "Wave.QueryNode",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Wave",
+          "textToLower": "wave",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Wave_0:7"
+        },
+        "parentId": "Wave.querynode.cap",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Wave.QueryNode"
       },
       "description": "Limits the number of results that are returned.",
+      "parentName": "QueryNode",
+      "variables": {},
       "params": {
         "cap": {
-          "id": "Wave.querynode.cap.cap",
-          "type": "var",
+          "id": "Wave.querynode.method.cap(integer).varParam.cap",
+          "nodeType": "variable",
           "name": "cap",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -513,29 +777,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_cap_-1:0"
+            "id": "token.type.identifier_cap_0:34"
           },
-          "signature": "Integer cap",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "cap",
+            "textToLower": "cap",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 37
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_cap_0:34"
+          },
+          "parentId": "Wave.querynode.method.cap(integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Wave.querynode.cap.integer",
+            "id": "Wave.querynode.cap.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 26
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:26"
+            },
+            "parentId": "Wave.querynode.cap",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "The maximum number of rows to return.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "filter(string)": {
-      "id": "Wave.querynode.filter",
+      "id": "Wave.querynode.method.filter(string)",
       "nodeType": "method",
       "name": "filter",
       "startToken": {
@@ -557,6 +869,9 @@
         },
         "id": "declaration.entity.name.function_filter_-1:0"
       },
+      "parentId": "Wave.querynode",
+      "order": 6,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -564,30 +879,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public wave.QueryNode filter(String filterCondition)",
+      "overrideSignature": "public override wave.QueryNode filter(String filterCondition)",
       "simplifiedSignature": "filter(String)",
       "datatype": {
-        "id": "Wave.querynode.filter.wave.QueryNode",
+        "id": "Wave.querynode.filter.datatype.wave.QueryNode",
         "nodeType": "datatype",
-        "name": "wave.QueryNode"
+        "name": "wave.QueryNode",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "wave",
+          "textToLower": "wave",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_wave_0:7"
+        },
+        "parentId": "Wave.querynode.filter",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "wave.QueryNode"
       },
       "description": "Selects rows from a dataset based on a filter condition (a predicate).",
+      "parentName": "QueryNode",
+      "variables": {},
       "params": {
-        "filterCondition": {
-          "id": "Wave.querynode.filter.filtercondition",
-          "type": "var",
+        "filtercondition": {
+          "id": "Wave.querynode.method.filter(string).varParam.filtercondition",
+          "nodeType": "variable",
           "name": "filterCondition",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -596,29 +937,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 36
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_filterCondition_-1:0"
+            "id": "token.type.identifier_filterCondition_0:36"
           },
-          "signature": "String filterCondition",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "filterCondition",
+            "textToLower": "filtercondition",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 36
+              },
+              "end": {
+                "line": 0,
+                "character": 51
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_filterCondition_0:36"
+          },
+          "parentId": "Wave.querynode.method.filter(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Wave.querynode.filter.string",
+            "id": "Wave.querynode.filter.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 29
+                },
+                "end": {
+                  "line": 0,
+                  "character": 35
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:29"
+            },
+            "parentId": "Wave.querynode.filter",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "For example: filter('Name != \\'My Name\\'')",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "filter(list)": {
-      "id": "Wave.querynode.filter",
+    "filter(list<string>)": {
+      "id": "Wave.querynode.method.filter(list<string>)",
       "nodeType": "method",
       "name": "filter",
       "startToken": {
@@ -640,6 +1029,9 @@
         },
         "id": "declaration.entity.name.function_filter_-1:0"
       },
+      "parentId": "Wave.querynode",
+      "order": 7,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -647,61 +1039,162 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public wave.QueryNode filter(List <String>)",
-      "simplifiedSignature": "filter(List)",
+      "signature": "public wave.QueryNode filter(List<String> filterCondition)",
+      "overrideSignature": "public override wave.QueryNode filter(List<String> filterCondition)",
+      "simplifiedSignature": "filter(List<String>)",
       "datatype": {
-        "id": "Wave.querynode.filter.wave.QueryNode",
+        "id": "Wave.querynode.filter.datatype.wave.QueryNode",
         "nodeType": "datatype",
-        "name": "wave.QueryNode"
+        "name": "wave.QueryNode",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "wave",
+          "textToLower": "wave",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_wave_0:7"
+        },
+        "parentId": "Wave.querynode.filter",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "wave.QueryNode"
       },
       "description": "Selects rows from a dataset based on multiple filter conditions (predicates).",
+      "parentName": "QueryNode",
+      "variables": {},
       "params": {
-        "<String>": {
-          "id": "Wave.querynode.filter.<string>",
-          "type": "var",
-          "name": "<String>",
+        "filtercondition": {
+          "id": "Wave.querynode.method.filter(list<string>).varParam.filtercondition",
+          "nodeType": "variable",
+          "name": "filterCondition",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "filterCondition",
+            "textToLower": "filtercondition",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_filterCondition_0:42"
           },
-          "signature": "List <String>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "filterCondition",
+            "textToLower": "filtercondition",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_filterCondition_0:42"
+          },
+          "parentId": "Wave.querynode.method.filter(list<string>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Wave.querynode.filter.list",
+            "id": "Wave.querynode.filter.datatype.List<String>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 29
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:29"
+            },
+            "parentId": "Wave.querynode.filter",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Wave.querynode.filter.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 34
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 40
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:34"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "A list of filter conditions.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "execute(string)": {
-      "id": "Wave.querynode.execute",
+      "id": "Wave.querynode.method.execute(string)",
       "nodeType": "method",
       "name": "execute",
       "startToken": {
@@ -723,6 +1216,9 @@
         },
         "id": "declaration.entity.name.function_execute_-1:0"
       },
+      "parentId": "Wave.querynode",
+      "order": 8,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "global",
@@ -730,30 +1226,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_global_-1:0"
+        "id": "token.type.identifier_global_0:0"
       },
       "signature": "global ConnectApi.LiteralJson execute(String streamName)",
+      "overrideSignature": "global override ConnectApi.LiteralJson execute(String streamName)",
       "simplifiedSignature": "execute(String)",
       "datatype": {
-        "id": "Wave.querynode.execute.ConnectApi.LiteralJson",
+        "id": "Wave.querynode.execute.datatype.ConnectApi.LiteralJson",
         "nodeType": "datatype",
-        "name": "ConnectApi.LiteralJson"
+        "name": "ConnectApi.LiteralJson",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:7"
+        },
+        "parentId": "Wave.querynode.execute",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.LiteralJson"
       },
       "description": "Execute the query and return rows as JSON.",
+      "parentName": "QueryNode",
+      "variables": {},
       "params": {
-        "streamName": {
-          "id": "Wave.querynode.execute.streamname",
-          "type": "var",
+        "streamname": {
+          "id": "Wave.querynode.method.execute(string).varParam.streamname",
+          "nodeType": "variable",
           "name": "streamName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -762,30 +1284,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_streamName_-1:0"
+            "id": "token.type.identifier_streamName_0:45"
           },
-          "signature": "String streamName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "streamName",
+            "textToLower": "streamname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 45
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_streamName_0:45"
+          },
+          "parentId": "Wave.querynode.method.execute(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Wave.querynode.execute.string",
+            "id": "Wave.querynode.execute.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 38
+                },
+                "end": {
+                  "line": 0,
+                  "character": 44
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:38"
+            },
+            "parentId": "Wave.querynode.execute",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The query stream to execute. For example:ConnectApi.LiteralJson result = Wave.QueryBuilder.load('datasetId', 'datasetVersionId').group().foreach(projs).execute('q');",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 9,
+  "queries": []
 }

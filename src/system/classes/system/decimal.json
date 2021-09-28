@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Decimal_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "abs()": {
-      "id": "System.decimal.abs",
+      "id": "System.decimal.method.abs()",
       "nodeType": "method",
       "name": "abs",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_abs_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Decimal abs()",
+      "overrideSignature": "public override Decimal abs()",
       "simplifiedSignature": "abs()",
       "datatype": {
-        "id": "System.decimal.abs.Decimal",
+        "id": "System.decimal.abs.datatype.Decimal",
         "nodeType": "datatype",
-        "name": "Decimal"
+        "name": "Decimal",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Decimal",
+          "textToLower": "decimal",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Decimal_0:7"
+        },
+        "parentId": "System.decimal.abs",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Decimal"
       },
       "description": "Returns the absolute value of the Decimal.",
-      "params": {}
+      "parentName": "Decimal",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "divide(decimal,integer)": {
-      "id": "System.decimal.divide",
+      "id": "System.decimal.method.divide(decimal,integer)",
       "nodeType": "method",
       "name": "divide",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_divide_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,30 +185,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Decimal divide(Decimal divisor, Integer scale)",
+      "overrideSignature": "public override Decimal divide(Decimal divisor, Integer scale)",
       "simplifiedSignature": "divide(Decimal,Integer)",
       "datatype": {
-        "id": "System.decimal.divide.Decimal",
+        "id": "System.decimal.divide.datatype.Decimal",
         "nodeType": "datatype",
-        "name": "Decimal"
+        "name": "Decimal",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Decimal",
+          "textToLower": "decimal",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Decimal_0:7"
+        },
+        "parentId": "System.decimal.divide",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Decimal"
       },
       "description": "Divides this Decimal by the specified divisor, and sets the scale, that is, the number of decimal places, of the result using the specified scale.",
+      "parentName": "Decimal",
+      "variables": {},
       "params": {
         "divisor": {
-          "id": "System.decimal.divide.divisor",
-          "type": "var",
+          "id": "System.decimal.method.divide(decimal,integer).varParam.divisor",
+          "nodeType": "variable",
           "name": "divisor",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -181,28 +243,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 30
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_divisor_-1:0"
+            "id": "token.type.identifier_divisor_0:30"
           },
-          "signature": "Decimal divisor",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "divisor",
+            "textToLower": "divisor",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 30
+              },
+              "end": {
+                "line": 0,
+                "character": 37
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_divisor_0:30"
+          },
+          "parentId": "System.decimal.method.divide(decimal,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.decimal.divide.decimal",
+            "id": "System.decimal.divide.datatype.Decimal",
             "nodeType": "datatype",
-            "name": "Decimal"
-          }
+            "name": "Decimal",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Decimal",
+              "textToLower": "decimal",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Decimal_0:22"
+            },
+            "parentId": "System.decimal.divide",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Decimal"
+          },
+          "scope": null
         },
         "scale": {
-          "id": "System.decimal.divide.scale",
-          "type": "var",
+          "id": "System.decimal.method.divide(decimal,integer).varParam.scale",
+          "nodeType": "variable",
           "name": "scale",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -211,29 +318,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_scale_-1:0"
+            "id": "token.type.identifier_scale_0:47"
           },
-          "signature": "Integer scale",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "scale",
+            "textToLower": "scale",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_scale_0:47"
+          },
+          "parentId": "System.decimal.method.divide(decimal,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.decimal.divide.integer",
+            "id": "System.decimal.divide.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:39"
+            },
+            "parentId": "System.decimal.divide",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "divide(decimal,integer,system.roundingmode)": {
-      "id": "System.decimal.divide",
+      "id": "System.decimal.method.divide(decimal,integer,system.roundingmode)",
       "nodeType": "method",
       "name": "divide",
       "startToken": {
@@ -255,6 +410,9 @@
         },
         "id": "declaration.entity.name.function_divide_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -262,30 +420,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Decimal divide(Decimal divisor, Integer scale, System.RoundingMode roundingMode)",
+      "overrideSignature": "public override Decimal divide(Decimal divisor, Integer scale, System.RoundingMode roundingMode)",
       "simplifiedSignature": "divide(Decimal,Integer,System.RoundingMode)",
       "datatype": {
-        "id": "System.decimal.divide.Decimal",
+        "id": "System.decimal.divide.datatype.Decimal",
         "nodeType": "datatype",
-        "name": "Decimal"
+        "name": "Decimal",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Decimal",
+          "textToLower": "decimal",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Decimal_0:7"
+        },
+        "parentId": "System.decimal.divide",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Decimal"
       },
       "description": "Divides this Decimal by the specified divisor, sets the scale, that is, the number of decimal places, of the result using the specified scale, and if necessary, rounds the value using the rounding mode.",
+      "parentName": "Decimal",
+      "variables": {},
       "params": {
         "divisor": {
-          "id": "System.decimal.divide.divisor",
-          "type": "var",
+          "id": "System.decimal.method.divide(decimal,integer,system.roundingmode).varParam.divisor",
+          "nodeType": "variable",
           "name": "divisor",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -294,28 +478,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 30
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_divisor_-1:0"
+            "id": "token.type.identifier_divisor_0:30"
           },
-          "signature": "Decimal divisor",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "divisor",
+            "textToLower": "divisor",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 30
+              },
+              "end": {
+                "line": 0,
+                "character": 37
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_divisor_0:30"
+          },
+          "parentId": "System.decimal.method.divide(decimal,integer,system.roundingmode)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.decimal.divide.decimal",
+            "id": "System.decimal.divide.datatype.Decimal",
             "nodeType": "datatype",
-            "name": "Decimal"
-          }
+            "name": "Decimal",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Decimal",
+              "textToLower": "decimal",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Decimal_0:22"
+            },
+            "parentId": "System.decimal.divide",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Decimal"
+          },
+          "scope": null
         },
         "scale": {
-          "id": "System.decimal.divide.scale",
-          "type": "var",
+          "id": "System.decimal.method.divide(decimal,integer,system.roundingmode).varParam.scale",
+          "nodeType": "variable",
           "name": "scale",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -324,28 +553,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_scale_-1:0"
+            "id": "token.type.identifier_scale_0:47"
           },
-          "signature": "Integer scale",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "scale",
+            "textToLower": "scale",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_scale_0:47"
+          },
+          "parentId": "System.decimal.method.divide(decimal,integer,system.roundingmode)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.decimal.divide.integer",
+            "id": "System.decimal.divide.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:39"
+            },
+            "parentId": "System.decimal.divide",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
-        "roundingMode": {
-          "id": "System.decimal.divide.roundingmode",
-          "type": "var",
+        "roundingmode": {
+          "id": "System.decimal.method.divide(decimal,integer,system.roundingmode).varParam.roundingmode",
+          "nodeType": "variable",
           "name": "roundingMode",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -354,29 +628,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 74
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_roundingMode_-1:0"
+            "id": "token.type.identifier_roundingMode_0:74"
           },
-          "signature": "System.RoundingMode roundingMode",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "roundingMode",
+            "textToLower": "roundingmode",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 74
+              },
+              "end": {
+                "line": 0,
+                "character": 86
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_roundingMode_0:74"
+          },
+          "parentId": "System.decimal.method.divide(decimal,integer,system.roundingmode)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.decimal.divide.system.roundingmode",
+            "id": "System.decimal.divide.datatype.System.RoundingMode",
             "nodeType": "datatype",
-            "name": "System.RoundingMode"
-          }
+            "name": "System.RoundingMode",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:54"
+            },
+            "parentId": "System.decimal.divide",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.RoundingMode"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "doublevalue()": {
-      "id": "System.decimal.doublevalue",
+      "id": "System.decimal.method.doublevalue()",
       "nodeType": "method",
       "name": "doubleValue",
       "startToken": {
@@ -398,6 +720,9 @@
         },
         "id": "declaration.entity.name.function_doubleValue_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -405,30 +730,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Double doubleValue()",
+      "overrideSignature": "public override Double doubleValue()",
       "simplifiedSignature": "doubleValue()",
       "datatype": {
-        "id": "System.decimal.doublevalue.Double",
+        "id": "System.decimal.doublevalue.datatype.Double",
         "nodeType": "datatype",
-        "name": "Double"
+        "name": "Double",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Double",
+          "textToLower": "double",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Double_0:7"
+        },
+        "parentId": "System.decimal.doublevalue",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Double"
       },
       "description": "Returns the Double value of this Decimal.",
-      "params": {}
+      "parentName": "Decimal",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "format()": {
-      "id": "System.decimal.format",
+      "id": "System.decimal.method.format()",
       "nodeType": "method",
       "name": "format",
       "startToken": {
@@ -450,6 +803,9 @@
         },
         "id": "declaration.entity.name.function_format_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -457,30 +813,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String format()",
+      "overrideSignature": "public override String format()",
       "simplifiedSignature": "format()",
       "datatype": {
-        "id": "System.decimal.format.String",
+        "id": "System.decimal.format.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.decimal.format",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the String value of this Decimal using the locale of the context user.",
-      "params": {}
+      "parentName": "Decimal",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "intvalue()": {
-      "id": "System.decimal.intvalue",
+      "id": "System.decimal.method.intvalue()",
       "nodeType": "method",
       "name": "intValue",
       "startToken": {
@@ -502,6 +886,9 @@
         },
         "id": "declaration.entity.name.function_intValue_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -509,30 +896,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer intValue()",
+      "overrideSignature": "public override Integer intValue()",
       "simplifiedSignature": "intValue()",
       "datatype": {
-        "id": "System.decimal.intvalue.Integer",
+        "id": "System.decimal.intvalue.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.decimal.intvalue",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the Integer value of this Decimal.",
-      "params": {}
+      "parentName": "Decimal",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "longvalue()": {
-      "id": "System.decimal.longvalue",
+      "id": "System.decimal.method.longvalue()",
       "nodeType": "method",
       "name": "longValue",
       "startToken": {
@@ -554,6 +969,9 @@
         },
         "id": "declaration.entity.name.function_longValue_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -561,30 +979,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Long longValue()",
+      "overrideSignature": "public override Long longValue()",
       "simplifiedSignature": "longValue()",
       "datatype": {
-        "id": "System.decimal.longvalue.Long",
+        "id": "System.decimal.longvalue.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:7"
+        },
+        "parentId": "System.decimal.longvalue",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns the Long value of this Decimal.",
-      "params": {}
+      "parentName": "Decimal",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "pow(integer)": {
-      "id": "System.decimal.pow",
+      "id": "System.decimal.method.pow(integer)",
       "nodeType": "method",
       "name": "pow",
       "startToken": {
@@ -606,6 +1052,9 @@
         },
         "id": "declaration.entity.name.function_pow_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -613,30 +1062,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Decimal pow(Integer exponent)",
+      "overrideSignature": "public override Decimal pow(Integer exponent)",
       "simplifiedSignature": "pow(Integer)",
       "datatype": {
-        "id": "System.decimal.pow.Decimal",
+        "id": "System.decimal.pow.datatype.Decimal",
         "nodeType": "datatype",
-        "name": "Decimal"
+        "name": "Decimal",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Decimal",
+          "textToLower": "decimal",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Decimal_0:7"
+        },
+        "parentId": "System.decimal.pow",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Decimal"
       },
       "description": "Returns the value of this decimal raised to the power of the specified exponent.",
+      "parentName": "Decimal",
+      "variables": {},
       "params": {
         "exponent": {
-          "id": "System.decimal.pow.exponent",
-          "type": "var",
+          "id": "System.decimal.method.pow(integer).varParam.exponent",
+          "nodeType": "variable",
           "name": "exponent",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -645,29 +1120,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 27
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_exponent_-1:0"
+            "id": "token.type.identifier_exponent_0:27"
           },
-          "signature": "Integer exponent",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "exponent",
+            "textToLower": "exponent",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 27
+              },
+              "end": {
+                "line": 0,
+                "character": 35
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_exponent_0:27"
+          },
+          "parentId": "System.decimal.method.pow(integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.decimal.pow.integer",
+            "id": "System.decimal.pow.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 19
+                },
+                "end": {
+                  "line": 0,
+                  "character": 26
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:19"
+            },
+            "parentId": "System.decimal.pow",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "The value of exponent must  be between 0 and 32,767.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "precision()": {
-      "id": "System.decimal.precision",
+      "id": "System.decimal.method.precision()",
       "nodeType": "method",
       "name": "precision",
       "startToken": {
@@ -689,6 +1212,9 @@
         },
         "id": "declaration.entity.name.function_precision_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -696,30 +1222,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer precision()",
+      "overrideSignature": "public override Integer precision()",
       "simplifiedSignature": "precision()",
       "datatype": {
-        "id": "System.decimal.precision.Integer",
+        "id": "System.decimal.precision.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.decimal.precision",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the total number of digits for the Decimal.",
-      "params": {}
+      "parentName": "Decimal",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "round()": {
-      "id": "System.decimal.round",
+      "id": "System.decimal.method.round()",
       "nodeType": "method",
       "name": "round",
       "startToken": {
@@ -741,6 +1295,9 @@
         },
         "id": "declaration.entity.name.function_round_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 10,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -748,30 +1305,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Long round()",
+      "overrideSignature": "public override Long round()",
       "simplifiedSignature": "round()",
       "datatype": {
-        "id": "System.decimal.round.Long",
+        "id": "System.decimal.round.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:7"
+        },
+        "parentId": "System.decimal.round",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns the rounded approximation of this Decimal. The number  is rounded to zero decimal places using half-even rounding mode, that  is, it rounds towards the “nearest neighbor” unless both neighbors are equidistant, in which case, this mode rounds towards the even neighbor.",
-      "params": {}
+      "parentName": "Decimal",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "round(system.roundingmode)": {
-      "id": "System.decimal.round",
+      "id": "System.decimal.method.round(system.roundingmode)",
       "nodeType": "method",
       "name": "round",
       "startToken": {
@@ -793,6 +1378,9 @@
         },
         "id": "declaration.entity.name.function_round_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 11,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -800,30 +1388,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Long round(System.RoundingMode roundingMode)",
+      "overrideSignature": "public override Long round(System.RoundingMode roundingMode)",
       "simplifiedSignature": "round(System.RoundingMode)",
       "datatype": {
-        "id": "System.decimal.round.Long",
+        "id": "System.decimal.round.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:7"
+        },
+        "parentId": "System.decimal.round",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns the rounded approximation of this Decimal. The number  is rounded to zero decimal places using the rounding mode specified by the rounding mode.",
+      "parentName": "Decimal",
+      "variables": {},
       "params": {
-        "roundingMode": {
-          "id": "System.decimal.round.roundingmode",
-          "type": "var",
+        "roundingmode": {
+          "id": "System.decimal.method.round(system.roundingmode).varParam.roundingmode",
+          "nodeType": "variable",
           "name": "roundingMode",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -832,29 +1446,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_roundingMode_-1:0"
+            "id": "token.type.identifier_roundingMode_0:38"
           },
-          "signature": "System.RoundingMode roundingMode",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "roundingMode",
+            "textToLower": "roundingmode",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_roundingMode_0:38"
+          },
+          "parentId": "System.decimal.method.round(system.roundingmode)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.decimal.round.system.roundingmode",
+            "id": "System.decimal.round.datatype.System.RoundingMode",
             "nodeType": "datatype",
-            "name": "System.RoundingMode"
-          }
+            "name": "System.RoundingMode",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 18
+                },
+                "end": {
+                  "line": 0,
+                  "character": 24
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:18"
+            },
+            "parentId": "System.decimal.round",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.RoundingMode"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "scale()": {
-      "id": "System.decimal.scale",
+      "id": "System.decimal.method.scale()",
       "nodeType": "method",
       "name": "scale",
       "startToken": {
@@ -876,6 +1538,9 @@
         },
         "id": "declaration.entity.name.function_scale_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 12,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -883,30 +1548,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer scale()",
+      "overrideSignature": "public override Integer scale()",
       "simplifiedSignature": "scale()",
       "datatype": {
-        "id": "System.decimal.scale.Integer",
+        "id": "System.decimal.scale.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.decimal.scale",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the scale of the Decimal, that is, the number of decimal  places.",
-      "params": {}
+      "parentName": "Decimal",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "setscale(integer)": {
-      "id": "System.decimal.setscale",
+      "id": "System.decimal.method.setscale(integer)",
       "nodeType": "method",
       "name": "setScale",
       "startToken": {
@@ -928,6 +1621,9 @@
         },
         "id": "declaration.entity.name.function_setScale_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 13,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -935,30 +1631,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Decimal setScale(Integer scale)",
+      "overrideSignature": "public override Decimal setScale(Integer scale)",
       "simplifiedSignature": "setScale(Integer)",
       "datatype": {
-        "id": "System.decimal.setscale.Decimal",
+        "id": "System.decimal.setscale.datatype.Decimal",
         "nodeType": "datatype",
-        "name": "Decimal"
+        "name": "Decimal",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Decimal",
+          "textToLower": "decimal",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Decimal_0:7"
+        },
+        "parentId": "System.decimal.setscale",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Decimal"
       },
       "description": "Returns the Decimal scaled to the specified number of decimal places, using half-even rounding, if necessary. Half-even rounding mode rounds toward the “nearest neighbor.” If both neighbors are equidistant, the number is rounded toward the even neighbor.",
+      "parentName": "Decimal",
+      "variables": {},
       "params": {
         "scale": {
-          "id": "System.decimal.setscale.scale",
-          "type": "var",
+          "id": "System.decimal.method.setscale(integer).varParam.scale",
+          "nodeType": "variable",
           "name": "scale",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -967,29 +1689,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 32
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_scale_-1:0"
+            "id": "token.type.identifier_scale_0:32"
           },
-          "signature": "Integer scale",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "scale",
+            "textToLower": "scale",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 32
+              },
+              "end": {
+                "line": 0,
+                "character": 37
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_scale_0:32"
+          },
+          "parentId": "System.decimal.method.setscale(integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.decimal.setscale.integer",
+            "id": "System.decimal.setscale.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 24
+                },
+                "end": {
+                  "line": 0,
+                  "character": 31
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:24"
+            },
+            "parentId": "System.decimal.setscale",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setscale(integer,system.roundingmode)": {
-      "id": "System.decimal.setscale",
+      "id": "System.decimal.method.setscale(integer,system.roundingmode)",
       "nodeType": "method",
       "name": "setScale",
       "startToken": {
@@ -1011,6 +1781,9 @@
         },
         "id": "declaration.entity.name.function_setScale_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 14,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1018,30 +1791,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Decimal setScale(Integer scale, System.RoundingMode roundingMode)",
+      "overrideSignature": "public override Decimal setScale(Integer scale, System.RoundingMode roundingMode)",
       "simplifiedSignature": "setScale(Integer,System.RoundingMode)",
       "datatype": {
-        "id": "System.decimal.setscale.Decimal",
+        "id": "System.decimal.setscale.datatype.Decimal",
         "nodeType": "datatype",
-        "name": "Decimal"
+        "name": "Decimal",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Decimal",
+          "textToLower": "decimal",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Decimal_0:7"
+        },
+        "parentId": "System.decimal.setscale",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Decimal"
       },
       "description": "Returns the Decimal scaled to the specified number of decimal places, using the specified rounding mode, if necessary.",
+      "parentName": "Decimal",
+      "variables": {},
       "params": {
         "scale": {
-          "id": "System.decimal.setscale.scale",
-          "type": "var",
+          "id": "System.decimal.method.setscale(integer,system.roundingmode).varParam.scale",
+          "nodeType": "variable",
           "name": "scale",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1050,28 +1849,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 32
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_scale_-1:0"
+            "id": "token.type.identifier_scale_0:32"
           },
-          "signature": "Integer scale",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "scale",
+            "textToLower": "scale",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 32
+              },
+              "end": {
+                "line": 0,
+                "character": 37
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_scale_0:32"
+          },
+          "parentId": "System.decimal.method.setscale(integer,system.roundingmode)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.decimal.setscale.integer",
+            "id": "System.decimal.setscale.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 24
+                },
+                "end": {
+                  "line": 0,
+                  "character": 31
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:24"
+            },
+            "parentId": "System.decimal.setscale",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
-        "roundingMode": {
-          "id": "System.decimal.setscale.roundingmode",
-          "type": "var",
+        "roundingmode": {
+          "id": "System.decimal.method.setscale(integer,system.roundingmode).varParam.roundingmode",
+          "nodeType": "variable",
           "name": "roundingMode",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1080,29 +1924,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_roundingMode_-1:0"
+            "id": "token.type.identifier_roundingMode_0:59"
           },
-          "signature": "System.RoundingMode roundingMode",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "roundingMode",
+            "textToLower": "roundingmode",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 71
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_roundingMode_0:59"
+          },
+          "parentId": "System.decimal.method.setscale(integer,system.roundingmode)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.decimal.setscale.system.roundingmode",
+            "id": "System.decimal.setscale.datatype.System.RoundingMode",
             "nodeType": "datatype",
-            "name": "System.RoundingMode"
-          }
+            "name": "System.RoundingMode",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:39"
+            },
+            "parentId": "System.decimal.setscale",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.RoundingMode"
+          },
+          "description": "The value of scale must be between –33 and 33. If the value of scale is negative, your unscaled value is multiplied by 10 to the power of the negation of scale. For example, after this operation, the value of d is 4*10^3.Decimal d = 4000; d = d.setScale(-3);",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "striptrailingzeros()": {
-      "id": "System.decimal.striptrailingzeros",
+      "id": "System.decimal.method.striptrailingzeros()",
       "nodeType": "method",
       "name": "stripTrailingZeros",
       "startToken": {
@@ -1124,6 +2016,9 @@
         },
         "id": "declaration.entity.name.function_stripTrailingZeros_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 15,
+      "memberOrder": 15,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1131,30 +2026,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Decimal stripTrailingZeros()",
+      "overrideSignature": "public override Decimal stripTrailingZeros()",
       "simplifiedSignature": "stripTrailingZeros()",
       "datatype": {
-        "id": "System.decimal.striptrailingzeros.Decimal",
+        "id": "System.decimal.striptrailingzeros.datatype.Decimal",
         "nodeType": "datatype",
-        "name": "Decimal"
+        "name": "Decimal",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Decimal",
+          "textToLower": "decimal",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Decimal_0:7"
+        },
+        "parentId": "System.decimal.striptrailingzeros",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Decimal"
       },
       "description": "Returns the Decimal with any trailing zeros removed.",
-      "params": {}
+      "parentName": "Decimal",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "toplainstring()": {
-      "id": "System.decimal.toplainstring",
+      "id": "System.decimal.method.toplainstring()",
       "nodeType": "method",
       "name": "toPlainString",
       "startToken": {
@@ -1176,6 +2099,9 @@
         },
         "id": "declaration.entity.name.function_toPlainString_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 16,
+      "memberOrder": 16,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1183,30 +2109,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String toPlainString()",
+      "overrideSignature": "public override String toPlainString()",
       "simplifiedSignature": "toPlainString()",
       "datatype": {
-        "id": "System.decimal.toplainstring.String",
+        "id": "System.decimal.toplainstring.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.decimal.toplainstring",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the String value of this Decimal, without using scientific notation.",
-      "params": {}
+      "parentName": "Decimal",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "valueof(double)": {
-      "id": "System.decimal.valueof",
+      "id": "System.decimal.method.valueof(double)",
       "nodeType": "method",
       "name": "valueOf",
       "startToken": {
@@ -1228,6 +2182,9 @@
         },
         "id": "declaration.entity.name.function_valueOf_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 17,
+      "memberOrder": 17,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1235,17 +2192,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1254,30 +2211,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Decimal valueOf(Double doubleToDecimal)",
+      "overrideSignature": "public static override Decimal valueOf(Double doubleToDecimal)",
       "simplifiedSignature": "valueOf(Double)",
       "datatype": {
-        "id": "System.decimal.valueof.Decimal",
+        "id": "System.decimal.valueof.datatype.Decimal",
         "nodeType": "datatype",
-        "name": "Decimal"
+        "name": "Decimal",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Decimal",
+          "textToLower": "decimal",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Decimal_0:14"
+        },
+        "parentId": "System.decimal.valueof",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Decimal"
       },
       "description": "Returns a Decimal that contains the value of the specified Double.",
+      "parentName": "Decimal",
+      "variables": {},
       "params": {
-        "doubleToDecimal": {
-          "id": "System.decimal.valueof.doubletodecimal",
-          "type": "var",
+        "doubletodecimal": {
+          "id": "System.decimal.method.valueof(double).varParam.doubletodecimal",
+          "nodeType": "variable",
           "name": "doubleToDecimal",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1286,29 +2269,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_doubleToDecimal_-1:0"
+            "id": "token.type.identifier_doubleToDecimal_0:37"
           },
-          "signature": "Double doubleToDecimal",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "doubleToDecimal",
+            "textToLower": "doubletodecimal",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_doubleToDecimal_0:37"
+          },
+          "parentId": "System.decimal.method.valueof(double)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.decimal.valueof.double",
+            "id": "System.decimal.valueof.datatype.Double",
             "nodeType": "datatype",
-            "name": "Double"
-          }
+            "name": "Double",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Double",
+              "textToLower": "double",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Double_0:30"
+            },
+            "parentId": "System.decimal.valueof",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Double"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "valueof(long)": {
-      "id": "System.decimal.valueof",
+      "id": "System.decimal.method.valueof(long)",
       "nodeType": "method",
       "name": "valueOf",
       "startToken": {
@@ -1330,6 +2361,9 @@
         },
         "id": "declaration.entity.name.function_valueOf_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 18,
+      "memberOrder": 18,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1337,17 +2371,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1356,30 +2390,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Decimal valueOf(Long longToDecimal)",
+      "overrideSignature": "public static override Decimal valueOf(Long longToDecimal)",
       "simplifiedSignature": "valueOf(Long)",
       "datatype": {
-        "id": "System.decimal.valueof.Decimal",
+        "id": "System.decimal.valueof.datatype.Decimal",
         "nodeType": "datatype",
-        "name": "Decimal"
+        "name": "Decimal",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Decimal",
+          "textToLower": "decimal",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Decimal_0:14"
+        },
+        "parentId": "System.decimal.valueof",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Decimal"
       },
       "description": "Returns a Decimal that contains the value of the specified Long.",
+      "parentName": "Decimal",
+      "variables": {},
       "params": {
-        "longToDecimal": {
-          "id": "System.decimal.valueof.longtodecimal",
-          "type": "var",
+        "longtodecimal": {
+          "id": "System.decimal.method.valueof(long).varParam.longtodecimal",
+          "nodeType": "variable",
           "name": "longToDecimal",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1388,29 +2448,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_longToDecimal_-1:0"
+            "id": "token.type.identifier_longToDecimal_0:35"
           },
-          "signature": "Long longToDecimal",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "longToDecimal",
+            "textToLower": "longtodecimal",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 35
+              },
+              "end": {
+                "line": 0,
+                "character": 48
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_longToDecimal_0:35"
+          },
+          "parentId": "System.decimal.method.valueof(long)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.decimal.valueof.long",
+            "id": "System.decimal.valueof.datatype.Long",
             "nodeType": "datatype",
-            "name": "Long"
-          }
+            "name": "Long",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Long",
+              "textToLower": "long",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 34
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Long_0:30"
+            },
+            "parentId": "System.decimal.valueof",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Long"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "valueof(string)": {
-      "id": "System.decimal.valueof",
+      "id": "System.decimal.method.valueof(string)",
       "nodeType": "method",
       "name": "valueOf",
       "startToken": {
@@ -1432,6 +2540,9 @@
         },
         "id": "declaration.entity.name.function_valueOf_-1:0"
       },
+      "parentId": "System.decimal",
+      "order": 19,
+      "memberOrder": 19,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1439,17 +2550,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1458,30 +2569,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Decimal valueOf(String stringToDecimal)",
+      "overrideSignature": "public static override Decimal valueOf(String stringToDecimal)",
       "simplifiedSignature": "valueOf(String)",
       "datatype": {
-        "id": "System.decimal.valueof.Decimal",
+        "id": "System.decimal.valueof.datatype.Decimal",
         "nodeType": "datatype",
-        "name": "Decimal"
+        "name": "Decimal",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Decimal",
+          "textToLower": "decimal",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Decimal_0:14"
+        },
+        "parentId": "System.decimal.valueof",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Decimal"
       },
       "description": "Returns a Decimal that contains the value of the specified String. As in Java, the string is interpreted as representing a signed Decimal.",
+      "parentName": "Decimal",
+      "variables": {},
       "params": {
-        "stringToDecimal": {
-          "id": "System.decimal.valueof.stringtodecimal",
-          "type": "var",
+        "stringtodecimal": {
+          "id": "System.decimal.method.valueof(string).varParam.stringtodecimal",
+          "nodeType": "variable",
           "name": "stringToDecimal",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1490,30 +2627,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_stringToDecimal_-1:0"
+            "id": "token.type.identifier_stringToDecimal_0:37"
           },
-          "signature": "String stringToDecimal",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "stringToDecimal",
+            "textToLower": "stringtodecimal",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_stringToDecimal_0:37"
+          },
+          "parentId": "System.decimal.method.valueof(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.decimal.valueof.string",
+            "id": "System.decimal.valueof.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:30"
+            },
+            "parentId": "System.decimal.valueof",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 19,
+  "queries": []
 }

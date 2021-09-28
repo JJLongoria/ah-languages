@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_FeatureManagement_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "changeprotection(string,string,string)": {
-      "id": "System.featuremanagement.changeprotection",
+      "id": "System.featuremanagement.method.changeprotection(string,string,string)",
       "nodeType": "method",
       "name": "changeProtection",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_changeProtection_-1:0"
       },
+      "parentId": "System.featuremanagement",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void changeProtection(String apiName, String typeApiName, String protection)",
+      "overrideSignature": "public static override void changeProtection(String apiName, String typeApiName, String protection)",
       "simplifiedSignature": "changeProtection(String,String,String)",
       "datatype": {
-        "id": "System.featuremanagement.changeprotection.void",
+        "id": "System.featuremanagement.changeprotection.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "System.featuremanagement.changeprotection",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Hides or reveals custom permissions, or reveals custom objects, in your subscriber’s org.",
+      "parentName": "FeatureManagement",
+      "variables": {},
       "params": {
-        "apiName": {
-          "id": "System.featuremanagement.changeprotection.apiname",
-          "type": "var",
+        "apiname": {
+          "id": "System.featuremanagement.method.changeprotection(string,string,string).varParam.apiname",
+          "nodeType": "variable",
           "name": "apiName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 43
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_apiName_-1:0"
+            "id": "token.type.identifier_apiName_0:43"
           },
-          "signature": "String apiName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "apiName",
+            "textToLower": "apiname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 43
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_apiName_0:43"
+          },
+          "parentId": "System.featuremanagement.method.changeprotection(string,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.featuremanagement.changeprotection.string",
+            "id": "System.featuremanagement.changeprotection.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 36
+                },
+                "end": {
+                  "line": 0,
+                  "character": 42
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:36"
+            },
+            "parentId": "System.featuremanagement.changeprotection",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "typeApiName": {
-          "id": "System.featuremanagement.changeprotection.typeapiname",
-          "type": "var",
+        "typeapiname": {
+          "id": "System.featuremanagement.method.changeprotection(string,string,string).varParam.typeapiname",
+          "nodeType": "variable",
           "name": "typeApiName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,28 +254,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_typeApiName_-1:0"
+            "id": "token.type.identifier_typeApiName_0:59"
           },
-          "signature": "String typeApiName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "typeApiName",
+            "textToLower": "typeapiname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 70
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_typeApiName_0:59"
+          },
+          "parentId": "System.featuremanagement.method.changeprotection(string,string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.featuremanagement.changeprotection.string",
+            "id": "System.featuremanagement.changeprotection.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:52"
+            },
+            "parentId": "System.featuremanagement.changeprotection",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "protection": {
-          "id": "System.featuremanagement.changeprotection.protection",
-          "type": "var",
+          "id": "System.featuremanagement.method.changeprotection(string,string,string).varParam.protection",
+          "nodeType": "variable",
           "name": "protection",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -208,29 +329,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 89
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_protection_-1:0"
+            "id": "token.type.identifier_protection_0:79"
           },
-          "signature": "String protection",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "protection",
+            "textToLower": "protection",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 79
+              },
+              "end": {
+                "line": 0,
+                "character": 89
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_protection_0:79"
+          },
+          "parentId": "System.featuremanagement.method.changeprotection(string,string,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.featuremanagement.changeprotection.string",
+            "id": "System.featuremanagement.changeprotection.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 72
+                },
+                "end": {
+                  "line": 0,
+                  "character": 78
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:72"
+            },
+            "parentId": "System.featuremanagement.changeprotection",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The API name of the custom object or custom permission to show or hide—for example, 'MyCustomObject__c' or 'MyCustomPermission'. The API name of the type that you want to show or hide: 'CustomObject' or 'CustomPermission'.  To show a custom object or custom permission, 'Unprotected'.  To hide a custom permission, 'Protected'.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "checkpackagebooleanvalue(string)": {
-      "id": "System.featuremanagement.checkpackagebooleanvalue",
+      "id": "System.featuremanagement.method.checkpackagebooleanvalue(string)",
       "nodeType": "method",
       "name": "checkPackageBooleanValue",
       "startToken": {
@@ -252,6 +421,9 @@
         },
         "id": "declaration.entity.name.function_checkPackageBooleanValue_-1:0"
       },
+      "parentId": "System.featuremanagement",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -259,17 +431,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -278,30 +450,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean checkPackageBooleanValue(String apiName)",
+      "overrideSignature": "public static override Boolean checkPackageBooleanValue(String apiName)",
       "simplifiedSignature": "checkPackageBooleanValue(String)",
       "datatype": {
-        "id": "System.featuremanagement.checkpackagebooleanvalue.Boolean",
+        "id": "System.featuremanagement.checkpackagebooleanvalue.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "System.featuremanagement.checkpackagebooleanvalue",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Checks the value__c value of the FeatureParameterBoolean__c record for a feature parameter in your subscriber’s org. You set the record’s value using setPackageBooleanValue(apiName, value).",
+      "parentName": "FeatureManagement",
+      "variables": {},
       "params": {
-        "apiName": {
-          "id": "System.featuremanagement.checkpackagebooleanvalue.apiname",
-          "type": "var",
+        "apiname": {
+          "id": "System.featuremanagement.method.checkpackagebooleanvalue(string).varParam.apiname",
+          "nodeType": "variable",
           "name": "apiName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,29 +508,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_apiName_-1:0"
+            "id": "token.type.identifier_apiName_0:54"
           },
-          "signature": "String apiName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "apiName",
+            "textToLower": "apiname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 61
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_apiName_0:54"
+          },
+          "parentId": "System.featuremanagement.method.checkpackagebooleanvalue(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.featuremanagement.checkpackagebooleanvalue.string",
+            "id": "System.featuremanagement.checkpackagebooleanvalue.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 47
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:47"
+            },
+            "parentId": "System.featuremanagement.checkpackagebooleanvalue",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The fullName__c value of the feature parameter whose value you want to check—for example, 'SpecialAccessAvailable'.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "checkpackagedatevalue(string)": {
-      "id": "System.featuremanagement.checkpackagedatevalue",
+      "id": "System.featuremanagement.method.checkpackagedatevalue(string)",
       "nodeType": "method",
       "name": "checkPackageDateValue",
       "startToken": {
@@ -354,6 +600,9 @@
         },
         "id": "declaration.entity.name.function_checkPackageDateValue_-1:0"
       },
+      "parentId": "System.featuremanagement",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -361,17 +610,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -380,30 +629,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Date checkPackageDateValue(String apiName)",
+      "overrideSignature": "public static override Date checkPackageDateValue(String apiName)",
       "simplifiedSignature": "checkPackageDateValue(String)",
       "datatype": {
-        "id": "System.featuremanagement.checkpackagedatevalue.Date",
+        "id": "System.featuremanagement.checkpackagedatevalue.datatype.Date",
         "nodeType": "datatype",
-        "name": "Date"
+        "name": "Date",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Date",
+          "textToLower": "date",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Date_0:14"
+        },
+        "parentId": "System.featuremanagement.checkpackagedatevalue",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Date"
       },
       "description": "Checks the value__c value of the FeatureParameterDate__c record for a feature parameter in your subscriber’s org. You can set the record’s value using setPackageDateValue(apiName, value).",
+      "parentName": "FeatureManagement",
+      "variables": {},
       "params": {
-        "apiName": {
-          "id": "System.featuremanagement.checkpackagedatevalue.apiname",
-          "type": "var",
+        "apiname": {
+          "id": "System.featuremanagement.method.checkpackagedatevalue(string).varParam.apiname",
+          "nodeType": "variable",
           "name": "apiName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -412,29 +687,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_apiName_-1:0"
+            "id": "token.type.identifier_apiName_0:48"
           },
-          "signature": "String apiName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "apiName",
+            "textToLower": "apiname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 48
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_apiName_0:48"
+          },
+          "parentId": "System.featuremanagement.method.checkpackagedatevalue(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.featuremanagement.checkpackagedatevalue.string",
+            "id": "System.featuremanagement.checkpackagedatevalue.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 41
+                },
+                "end": {
+                  "line": 0,
+                  "character": 47
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:41"
+            },
+            "parentId": "System.featuremanagement.checkpackagedatevalue",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The fullName__c value of the feature parameter whose value you want to check—for example, 'TrialExpirationDate'.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "checkpackageintegervalue(string)": {
-      "id": "System.featuremanagement.checkpackageintegervalue",
+      "id": "System.featuremanagement.method.checkpackageintegervalue(string)",
       "nodeType": "method",
       "name": "checkPackageIntegerValue",
       "startToken": {
@@ -456,6 +779,9 @@
         },
         "id": "declaration.entity.name.function_checkPackageIntegerValue_-1:0"
       },
+      "parentId": "System.featuremanagement",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -463,17 +789,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -482,30 +808,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Integer checkPackageIntegerValue(String apiName)",
+      "overrideSignature": "public static override Integer checkPackageIntegerValue(String apiName)",
       "simplifiedSignature": "checkPackageIntegerValue(String)",
       "datatype": {
-        "id": "System.featuremanagement.checkpackageintegervalue.Integer",
+        "id": "System.featuremanagement.checkpackageintegervalue.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:14"
+        },
+        "parentId": "System.featuremanagement.checkpackageintegervalue",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Checks the value__c value of the FeatureParameterInteger__c record for a feature parameter in your subscriber’s org. You can set the record’s value using setPackageIntegerValue(apiName, value).",
+      "parentName": "FeatureManagement",
+      "variables": {},
       "params": {
-        "apiName": {
-          "id": "System.featuremanagement.checkpackageintegervalue.apiname",
-          "type": "var",
+        "apiname": {
+          "id": "System.featuremanagement.method.checkpackageintegervalue(string).varParam.apiname",
+          "nodeType": "variable",
           "name": "apiName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -514,29 +866,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_apiName_-1:0"
+            "id": "token.type.identifier_apiName_0:54"
           },
-          "signature": "String apiName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "apiName",
+            "textToLower": "apiname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 61
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_apiName_0:54"
+          },
+          "parentId": "System.featuremanagement.method.checkpackageintegervalue(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.featuremanagement.checkpackageintegervalue.string",
+            "id": "System.featuremanagement.checkpackageintegervalue.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 47
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:47"
+            },
+            "parentId": "System.featuremanagement.checkpackageintegervalue",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The fullName__c value of the feature parameter whose value you want to check—for example, 'NumberOfLicenses'.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "checkpermission(string)": {
-      "id": "System.featuremanagement.checkpermission",
+      "id": "System.featuremanagement.method.checkpermission(string)",
       "nodeType": "method",
       "name": "checkPermission",
       "startToken": {
@@ -558,6 +958,9 @@
         },
         "id": "declaration.entity.name.function_checkPermission_-1:0"
       },
+      "parentId": "System.featuremanagement",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -565,17 +968,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -584,30 +987,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean checkPermission(String apiName)",
+      "overrideSignature": "public static override Boolean checkPermission(String apiName)",
       "simplifiedSignature": "checkPermission(String)",
       "datatype": {
-        "id": "System.featuremanagement.checkpermission.Boolean",
+        "id": "System.featuremanagement.checkpermission.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "System.featuremanagement.checkpermission",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Checks whether a custom permission is enabled.",
+      "parentName": "FeatureManagement",
+      "variables": {},
       "params": {
-        "apiName": {
-          "id": "System.featuremanagement.checkpermission.apiname",
-          "type": "var",
+        "apiname": {
+          "id": "System.featuremanagement.method.checkpermission(string).varParam.apiname",
+          "nodeType": "variable",
           "name": "apiName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -616,29 +1045,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_apiName_-1:0"
+            "id": "token.type.identifier_apiName_0:45"
           },
-          "signature": "String apiName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "apiName",
+            "textToLower": "apiname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 45
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_apiName_0:45"
+          },
+          "parentId": "System.featuremanagement.method.checkpermission(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.featuremanagement.checkpermission.string",
+            "id": "System.featuremanagement.checkpermission.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 38
+                },
+                "end": {
+                  "line": 0,
+                  "character": 44
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:38"
+            },
+            "parentId": "System.featuremanagement.checkpermission",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The API name of the custom permission to check the value of—for example, 'MyCustomPermission'.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setpackagebooleanvalue(string,boolean)": {
-      "id": "System.featuremanagement.setpackagebooleanvalue",
+      "id": "System.featuremanagement.method.setpackagebooleanvalue(string,boolean)",
       "nodeType": "method",
       "name": "setPackageBooleanValue",
       "startToken": {
@@ -660,6 +1137,9 @@
         },
         "id": "declaration.entity.name.function_setPackageBooleanValue_-1:0"
       },
+      "parentId": "System.featuremanagement",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -667,17 +1147,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -686,30 +1166,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void setPackageBooleanValue(String apiName, Boolean value)",
+      "overrideSignature": "public static override void setPackageBooleanValue(String apiName, Boolean value)",
       "simplifiedSignature": "setPackageBooleanValue(String,Boolean)",
       "datatype": {
-        "id": "System.featuremanagement.setpackagebooleanvalue.void",
+        "id": "System.featuremanagement.setpackagebooleanvalue.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "System.featuremanagement.setpackagebooleanvalue",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Sets the value__c value of the FeatureParameterBoolean__c record for a subscriber-to-LMO feature parameter in your subscriber’s org. You can check the record’s value using checkPackageBooleanValue(apiName).",
+      "parentName": "FeatureManagement",
+      "variables": {},
       "params": {
-        "apiName": {
-          "id": "System.featuremanagement.setpackagebooleanvalue.apiname",
-          "type": "var",
+        "apiname": {
+          "id": "System.featuremanagement.method.setpackagebooleanvalue(string,boolean).varParam.apiname",
+          "nodeType": "variable",
           "name": "apiName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -718,28 +1224,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_apiName_-1:0"
+            "id": "token.type.identifier_apiName_0:49"
           },
-          "signature": "String apiName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "apiName",
+            "textToLower": "apiname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 56
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_apiName_0:49"
+          },
+          "parentId": "System.featuremanagement.method.setpackagebooleanvalue(string,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.featuremanagement.setpackagebooleanvalue.string",
+            "id": "System.featuremanagement.setpackagebooleanvalue.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 48
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:42"
+            },
+            "parentId": "System.featuremanagement.setpackagebooleanvalue",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "value": {
-          "id": "System.featuremanagement.setpackagebooleanvalue.value",
-          "type": "var",
+          "id": "System.featuremanagement.method.setpackagebooleanvalue(string,boolean).varParam.value",
+          "nodeType": "variable",
           "name": "value",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -748,29 +1299,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_value_-1:0"
+            "id": "token.type.identifier_value_0:66"
           },
-          "signature": "Boolean value",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "value",
+            "textToLower": "value",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 66
+              },
+              "end": {
+                "line": 0,
+                "character": 71
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_value_0:66"
+          },
+          "parentId": "System.featuremanagement.method.setpackagebooleanvalue(string,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.featuremanagement.setpackagebooleanvalue.boolean",
+            "id": "System.featuremanagement.setpackagebooleanvalue.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 58
+                },
+                "end": {
+                  "line": 0,
+                  "character": 65
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:58"
+            },
+            "parentId": "System.featuremanagement.setpackagebooleanvalue",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "The fullName__c value of the feature parameter whose value you want to set—for example, 'SpecialAccessAvailable'. The value to assign to the value__c field on the FeatureParameterBoolean__c record that associates the feature parameter with its related license.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setpackagedatevalue(string,date)": {
-      "id": "System.featuremanagement.setpackagedatevalue",
+      "id": "System.featuremanagement.method.setpackagedatevalue(string,date)",
       "nodeType": "method",
       "name": "setPackageDateValue",
       "startToken": {
@@ -792,6 +1391,9 @@
         },
         "id": "declaration.entity.name.function_setPackageDateValue_-1:0"
       },
+      "parentId": "System.featuremanagement",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -799,17 +1401,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -818,30 +1420,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void setPackageDateValue(String apiName, Date value)",
+      "overrideSignature": "public static override void setPackageDateValue(String apiName, Date value)",
       "simplifiedSignature": "setPackageDateValue(String,Date)",
       "datatype": {
-        "id": "System.featuremanagement.setpackagedatevalue.void",
+        "id": "System.featuremanagement.setpackagedatevalue.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "System.featuremanagement.setpackagedatevalue",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Sets the value__c value of the FeatureParameterDate__c record for a subscriber-to-LMO feature parameter in your subscriber’s org. You can check the record’s value using checkPackageDateValue(apiName).",
+      "parentName": "FeatureManagement",
+      "variables": {},
       "params": {
-        "apiName": {
-          "id": "System.featuremanagement.setpackagedatevalue.apiname",
-          "type": "var",
+        "apiname": {
+          "id": "System.featuremanagement.method.setpackagedatevalue(string,date).varParam.apiname",
+          "nodeType": "variable",
           "name": "apiName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -850,28 +1478,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_apiName_-1:0"
+            "id": "token.type.identifier_apiName_0:46"
           },
-          "signature": "String apiName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "apiName",
+            "textToLower": "apiname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 53
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_apiName_0:46"
+          },
+          "parentId": "System.featuremanagement.method.setpackagedatevalue(string,date)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.featuremanagement.setpackagedatevalue.string",
+            "id": "System.featuremanagement.setpackagedatevalue.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:39"
+            },
+            "parentId": "System.featuremanagement.setpackagedatevalue",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "value": {
-          "id": "System.featuremanagement.setpackagedatevalue.value",
-          "type": "var",
+          "id": "System.featuremanagement.method.setpackagedatevalue(string,date).varParam.value",
+          "nodeType": "variable",
           "name": "value",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -880,29 +1553,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_value_-1:0"
+            "id": "token.type.identifier_value_0:60"
           },
-          "signature": "Date value",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "value",
+            "textToLower": "value",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 60
+              },
+              "end": {
+                "line": 0,
+                "character": 65
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_value_0:60"
+          },
+          "parentId": "System.featuremanagement.method.setpackagedatevalue(string,date)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.featuremanagement.setpackagedatevalue.date",
+            "id": "System.featuremanagement.setpackagedatevalue.datatype.Date",
             "nodeType": "datatype",
-            "name": "Date"
-          }
+            "name": "Date",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Date",
+              "textToLower": "date",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 55
+                },
+                "end": {
+                  "line": 0,
+                  "character": 59
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Date_0:55"
+            },
+            "parentId": "System.featuremanagement.setpackagedatevalue",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Date"
+          },
+          "description": "The fullName__c value of the feature parameter whose value you want to set—for example, 'TrialExpirationDate'. The value to assign to the value__c field on the FeatureParameterDate__c record that associates the feature parameter with its related license.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setpackageintegervalue(string,integer)": {
-      "id": "System.featuremanagement.setpackageintegervalue",
+      "id": "System.featuremanagement.method.setpackageintegervalue(string,integer)",
       "nodeType": "method",
       "name": "setPackageIntegerValue",
       "startToken": {
@@ -924,6 +1645,9 @@
         },
         "id": "declaration.entity.name.function_setPackageIntegerValue_-1:0"
       },
+      "parentId": "System.featuremanagement",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -931,17 +1655,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -950,30 +1674,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void setPackageIntegerValue(String apiName, Integer value)",
+      "overrideSignature": "public static override void setPackageIntegerValue(String apiName, Integer value)",
       "simplifiedSignature": "setPackageIntegerValue(String,Integer)",
       "datatype": {
-        "id": "System.featuremanagement.setpackageintegervalue.void",
+        "id": "System.featuremanagement.setpackageintegervalue.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "System.featuremanagement.setpackageintegervalue",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Sets the value__c value of the FeatureParameterInteger__c record for a subscriber-to-LMO feature parameter in your subscriber’s org. You can check the record’s value using checkPackageIntegerValue(apiName).",
+      "parentName": "FeatureManagement",
+      "variables": {},
       "params": {
-        "apiName": {
-          "id": "System.featuremanagement.setpackageintegervalue.apiname",
-          "type": "var",
+        "apiname": {
+          "id": "System.featuremanagement.method.setpackageintegervalue(string,integer).varParam.apiname",
+          "nodeType": "variable",
           "name": "apiName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -982,28 +1732,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_apiName_-1:0"
+            "id": "token.type.identifier_apiName_0:49"
           },
-          "signature": "String apiName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "apiName",
+            "textToLower": "apiname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 56
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_apiName_0:49"
+          },
+          "parentId": "System.featuremanagement.method.setpackageintegervalue(string,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.featuremanagement.setpackageintegervalue.string",
+            "id": "System.featuremanagement.setpackageintegervalue.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 48
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:42"
+            },
+            "parentId": "System.featuremanagement.setpackageintegervalue",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "value": {
-          "id": "System.featuremanagement.setpackageintegervalue.value",
-          "type": "var",
+          "id": "System.featuremanagement.method.setpackageintegervalue(string,integer).varParam.value",
+          "nodeType": "variable",
           "name": "value",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1012,30 +1807,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_value_-1:0"
+            "id": "token.type.identifier_value_0:66"
           },
-          "signature": "Integer value",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "value",
+            "textToLower": "value",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 66
+              },
+              "end": {
+                "line": 0,
+                "character": 71
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_value_0:66"
+          },
+          "parentId": "System.featuremanagement.method.setpackageintegervalue(string,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.featuremanagement.setpackageintegervalue.integer",
+            "id": "System.featuremanagement.setpackageintegervalue.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 58
+                },
+                "end": {
+                  "line": 0,
+                  "character": 65
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:58"
+            },
+            "parentId": "System.featuremanagement.setpackageintegervalue",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "The fullName__c value of the feature parameter whose value you want to set—for example, 'NumberOfLicenses'. The value to assign to the value__c field on the FeatureParameterInteger__c record that associates the feature parameter with its related license.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 8,
+  "queries": []
 }

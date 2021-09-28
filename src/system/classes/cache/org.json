@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Org_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "contains(string)": {
-      "id": "Cache.org.contains",
+      "id": "Cache.org.method.contains(string)",
       "nodeType": "method",
       "name": "contains",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_contains_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean contains(String key)",
+      "overrideSignature": "public static override Boolean contains(String key)",
       "simplifiedSignature": "contains(String)",
       "datatype": {
-        "id": "Cache.org.contains.Boolean",
+        "id": "Cache.org.contains.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "Cache.org.contains",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the org cache contains a cached value corresponding to the specified key.",
+      "parentName": "Org",
+      "variables": {},
       "params": {
         "key": {
-          "id": "Cache.org.contains.key",
-          "type": "var",
+          "id": "Cache.org.method.contains(string).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,29 +179,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:38"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 41
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:38"
+          },
+          "parentId": "Cache.org.method.contains(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.org.contains.string",
+            "id": "Cache.org.contains.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:31"
+            },
+            "parentId": "Cache.org.contains",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "A case-sensitive string value that uniquely identifies a cached value. For information about the format of the key name, see Usage.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "contains(set)": {
-      "id": "Cache.org.contains",
+    "contains(set<string>)": {
+      "id": "Cache.org.method.contains(set<string>)",
       "nodeType": "method",
       "name": "contains",
       "startToken": {
@@ -192,6 +271,9 @@
         },
         "id": "declaration.entity.name.function_contains_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -199,17 +281,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -218,61 +300,189 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static List<Boolean> contains(Set <String>)",
-      "simplifiedSignature": "contains(Set)",
+      "signature": "public static List<Boolean> contains(Set<String> keys)",
+      "overrideSignature": "public static override List<Boolean> contains(Set<String> keys)",
+      "simplifiedSignature": "contains(Set<String>)",
       "datatype": {
-        "id": "Cache.org.contains.List<Boolean>",
+        "id": "Cache.org.contains.datatype.List<Boolean>",
         "nodeType": "datatype",
-        "name": "List<Boolean>"
-      },
-      "description": "Returns true if the org cache contains the specified key entries.",
-      "params": {
-        "<String>": {
-          "id": "Cache.org.contains.<string>",
-          "type": "var",
-          "name": "<String>",
+        "name": "List<Boolean>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "Cache.org.contains",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Cache.org.contains.datatype.List<Boolean>.value.Boolean",
+          "nodeType": "datatype",
+          "name": "Boolean",
           "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "type": "datatype.primitive",
+            "text": "Boolean",
+            "textToLower": "boolean",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 19
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 26
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_Boolean_0:19"
           },
-          "signature": "Set <String>",
-          "datatype": {
-            "id": "Cache.org.contains.set",
-            "nodeType": "datatype",
-            "name": "Set"
-          }
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Boolean"
         }
-      }
+      },
+      "description": "Returns true if the org cache contains the specified key entries.",
+      "parentName": "Org",
+      "variables": {},
+      "params": {
+        "keys": {
+          "id": "Cache.org.method.contains(set<string>).varParam.keys",
+          "nodeType": "variable",
+          "name": "keys",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "keys",
+            "textToLower": "keys",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 53
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_keys_0:49"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "keys",
+            "textToLower": "keys",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 53
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_keys_0:49"
+          },
+          "parentId": "Cache.org.method.contains(set<string>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Cache.org.contains.datatype.Set<String>",
+            "nodeType": "datatype",
+            "name": "Set<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Set",
+              "textToLower": "set",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Set_0:37"
+            },
+            "parentId": "Cache.org.contains",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Set",
+            "value": {
+              "id": "Cache.org.contains.datatype.Set<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 41
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 47
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:41"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "A set of keys that uniquely identifies cached values. For information about the format of the key name, see Usage.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "get(string)": {
-      "id": "Cache.org.get",
+      "id": "Cache.org.method.get(string)",
       "nodeType": "method",
       "name": "get",
       "startToken": {
@@ -294,6 +504,9 @@
         },
         "id": "declaration.entity.name.function_get_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -301,17 +514,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -320,30 +533,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Object get(String key)",
+      "overrideSignature": "public static override Object get(String key)",
       "simplifiedSignature": "get(String)",
       "datatype": {
-        "id": "Cache.org.get.Object",
+        "id": "Cache.org.get.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:14"
+        },
+        "parentId": "Cache.org.get",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Returns the cached value corresponding to the specified key from the org cache.",
+      "parentName": "Org",
+      "variables": {},
       "params": {
         "key": {
-          "id": "Cache.org.get.key",
-          "type": "var",
+          "id": "Cache.org.method.get(string).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -352,29 +591,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 32
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:32"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 32
+              },
+              "end": {
+                "line": 0,
+                "character": 35
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:32"
+          },
+          "parentId": "Cache.org.method.get(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.org.get.string",
+            "id": "Cache.org.get.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 31
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:25"
+            },
+            "parentId": "Cache.org.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "A case-sensitive string value that uniquely identifies a cached value. For information about the format of the key name, see Usage.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "get(system.type,string)": {
-      "id": "Cache.org.get",
+      "id": "Cache.org.method.get(system.type,string)",
       "nodeType": "method",
       "name": "get",
       "startToken": {
@@ -396,6 +683,9 @@
         },
         "id": "declaration.entity.name.function_get_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -403,17 +693,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -422,30 +712,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Object get(System.Type cacheBuilder, String key)",
+      "overrideSignature": "public static override Object get(System.Type cacheBuilder, String key)",
       "simplifiedSignature": "get(System.Type,String)",
       "datatype": {
-        "id": "Cache.org.get.Object",
+        "id": "Cache.org.get.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:14"
+        },
+        "parentId": "Cache.org.get",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Returns the cached value corresponding to the specified key from the org cache. Use this method if your cached value is a class that implements the CacheBuilder interface.",
+      "parentName": "Org",
+      "variables": {},
       "params": {
-        "cacheBuilder": {
-          "id": "Cache.org.get.cachebuilder",
-          "type": "var",
+        "cachebuilder": {
+          "id": "Cache.org.method.get(system.type,string).varParam.cachebuilder",
+          "nodeType": "variable",
           "name": "cacheBuilder",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -454,28 +770,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_cacheBuilder_-1:0"
+            "id": "token.type.identifier_cacheBuilder_0:37"
           },
-          "signature": "System.Type cacheBuilder",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "cacheBuilder",
+            "textToLower": "cachebuilder",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 49
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_cacheBuilder_0:37"
+          },
+          "parentId": "Cache.org.method.get(system.type,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.org.get.system.type",
+            "id": "Cache.org.get.datatype.System.Type",
             "nodeType": "datatype",
-            "name": "System.Type"
-          }
+            "name": "System.Type",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 31
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:25"
+            },
+            "parentId": "Cache.org.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.Type"
+          },
+          "scope": null
         },
         "key": {
-          "id": "Cache.org.get.key",
-          "type": "var",
+          "id": "Cache.org.method.get(system.type,string).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -484,29 +845,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:58"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 61
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:58"
+          },
+          "parentId": "Cache.org.method.get(system.type,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Cache.org.get.string",
+            "id": "Cache.org.get.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 51
+                },
+                "end": {
+                  "line": 0,
+                  "character": 57
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:51"
+            },
+            "parentId": "Cache.org.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The Apex class that implements the CacheBuilder interface. A case-sensitive string value that, combined with the class name corresponding to the cacheBuilder parameter, uniquely identifies a cached value.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getavggettime()": {
-      "id": "Cache.org.getavggettime",
+      "id": "Cache.org.method.getavggettime()",
       "nodeType": "method",
       "name": "getAvgGetTime",
       "startToken": {
@@ -528,6 +937,9 @@
         },
         "id": "declaration.entity.name.function_getAvgGetTime_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -535,17 +947,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -554,30 +966,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Long getAvgGetTime()",
+      "overrideSignature": "public static override Long getAvgGetTime()",
       "simplifiedSignature": "getAvgGetTime()",
       "datatype": {
-        "id": "Cache.org.getavggettime.Long",
+        "id": "Cache.org.getavggettime.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:14"
+        },
+        "parentId": "Cache.org.getavggettime",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns the average time taken to get a key from the org cache, in nanoseconds.",
-      "params": {}
+      "parentName": "Org",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getavgvaluesize()": {
-      "id": "Cache.org.getavgvaluesize",
+      "id": "Cache.org.method.getavgvaluesize()",
       "nodeType": "method",
       "name": "getAvgValueSize",
       "startToken": {
@@ -599,6 +1039,9 @@
         },
         "id": "declaration.entity.name.function_getAvgValueSize_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -606,17 +1049,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -625,30 +1068,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Long getAvgValueSize()",
+      "overrideSignature": "public static override Long getAvgValueSize()",
       "simplifiedSignature": "getAvgValueSize()",
       "datatype": {
-        "id": "Cache.org.getavgvaluesize.Long",
+        "id": "Cache.org.getavgvaluesize.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:14"
+        },
+        "parentId": "Cache.org.getavgvaluesize",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns the average item size for keys in the org cache, in bytes.",
-      "params": {}
+      "parentName": "Org",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getcapacity()": {
-      "id": "Cache.org.getcapacity",
+      "id": "Cache.org.method.getcapacity()",
       "nodeType": "method",
       "name": "getCapacity",
       "startToken": {
@@ -670,6 +1141,9 @@
         },
         "id": "declaration.entity.name.function_getCapacity_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -677,17 +1151,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -696,30 +1170,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Double getCapacity()",
+      "overrideSignature": "public static override Double getCapacity()",
       "simplifiedSignature": "getCapacity()",
       "datatype": {
-        "id": "Cache.org.getcapacity.Double",
+        "id": "Cache.org.getcapacity.datatype.Double",
         "nodeType": "datatype",
-        "name": "Double"
+        "name": "Double",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Double",
+          "textToLower": "double",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Double_0:14"
+        },
+        "parentId": "Cache.org.getcapacity",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Double"
       },
       "description": "Returns the percentage of org cache capacity that has been used.",
-      "params": {}
+      "parentName": "Org",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getkeys()": {
-      "id": "Cache.org.getkeys",
+      "id": "Cache.org.method.getkeys()",
       "nodeType": "method",
       "name": "getKeys",
       "startToken": {
@@ -741,6 +1243,9 @@
         },
         "id": "declaration.entity.name.function_getKeys_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -748,17 +1253,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -767,30 +1272,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Set<String> getKeys()",
+      "overrideSignature": "public static override Set<String> getKeys()",
       "simplifiedSignature": "getKeys()",
       "datatype": {
-        "id": "Cache.org.getkeys.Set<String>",
+        "id": "Cache.org.getkeys.datatype.Set<String>",
         "nodeType": "datatype",
-        "name": "Set<String>"
+        "name": "Set<String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Set",
+          "textToLower": "set",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Set_0:14"
+        },
+        "parentId": "Cache.org.getkeys",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Set",
+        "value": {
+          "id": "Cache.org.getkeys.datatype.Set<String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 24
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Returns a set of all keys that are stored in the org cache and visible to the invoking namespace.",
-      "params": {}
+      "parentName": "Org",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getmaxgettime()": {
-      "id": "Cache.org.getmaxgettime",
+      "id": "Cache.org.method.getmaxgettime()",
       "nodeType": "method",
       "name": "getMaxGetTime",
       "startToken": {
@@ -812,6 +1372,9 @@
         },
         "id": "declaration.entity.name.function_getMaxGetTime_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -819,17 +1382,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -838,30 +1401,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Long getMaxGetTime()",
+      "overrideSignature": "public static override Long getMaxGetTime()",
       "simplifiedSignature": "getMaxGetTime()",
       "datatype": {
-        "id": "Cache.org.getmaxgettime.Long",
+        "id": "Cache.org.getmaxgettime.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:14"
+        },
+        "parentId": "Cache.org.getmaxgettime",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns the maximum time taken to get a key from the org cache, in nanoseconds.",
-      "params": {}
+      "parentName": "Org",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getmaxvaluesize()": {
-      "id": "Cache.org.getmaxvaluesize",
+      "id": "Cache.org.method.getmaxvaluesize()",
       "nodeType": "method",
       "name": "getMaxValueSize",
       "startToken": {
@@ -883,6 +1474,9 @@
         },
         "id": "declaration.entity.name.function_getMaxValueSize_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 10,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -890,17 +1484,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -909,30 +1503,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Long getMaxValueSize()",
+      "overrideSignature": "public static override Long getMaxValueSize()",
       "simplifiedSignature": "getMaxValueSize()",
       "datatype": {
-        "id": "Cache.org.getmaxvaluesize.Long",
+        "id": "Cache.org.getmaxvaluesize.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:14"
+        },
+        "parentId": "Cache.org.getmaxvaluesize",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns the maximum item size for keys in the org cache, in bytes.",
-      "params": {}
+      "parentName": "Org",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getmissrate()": {
-      "id": "Cache.org.getmissrate",
+      "id": "Cache.org.method.getmissrate()",
       "nodeType": "method",
       "name": "getMissRate",
       "startToken": {
@@ -954,6 +1576,9 @@
         },
         "id": "declaration.entity.name.function_getMissRate_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 11,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -961,17 +1586,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -980,30 +1605,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Double getMissRate()",
+      "overrideSignature": "public static override Double getMissRate()",
       "simplifiedSignature": "getMissRate()",
       "datatype": {
-        "id": "Cache.org.getmissrate.Double",
+        "id": "Cache.org.getmissrate.datatype.Double",
         "nodeType": "datatype",
-        "name": "Double"
+        "name": "Double",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Double",
+          "textToLower": "double",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Double_0:14"
+        },
+        "parentId": "Cache.org.getmissrate",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Double"
       },
       "description": "Returns the miss rate in the org cache.",
-      "params": {}
+      "parentName": "Org",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getname()": {
-      "id": "Cache.org.getname",
+      "id": "Cache.org.method.getname()",
       "nodeType": "method",
       "name": "getName",
       "startToken": {
@@ -1025,6 +1678,9 @@
         },
         "id": "declaration.entity.name.function_getName_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 12,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1032,30 +1688,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getName()",
+      "overrideSignature": "public override String getName()",
       "simplifiedSignature": "getName()",
       "datatype": {
-        "id": "Cache.org.getname.String",
+        "id": "Cache.org.getname.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Cache.org.getname",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the name of the default cache partition.",
-      "params": {}
+      "parentName": "Org",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getnumkeys()": {
-      "id": "Cache.org.getnumkeys",
+      "id": "Cache.org.method.getnumkeys()",
       "nodeType": "method",
       "name": "getNumKeys",
       "startToken": {
@@ -1077,6 +1761,9 @@
         },
         "id": "declaration.entity.name.function_getNumKeys_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 13,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1084,17 +1771,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1103,30 +1790,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Long getNumKeys()",
+      "overrideSignature": "public static override Long getNumKeys()",
       "simplifiedSignature": "getNumKeys()",
       "datatype": {
-        "id": "Cache.org.getnumkeys.Long",
+        "id": "Cache.org.getnumkeys.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:14"
+        },
+        "parentId": "Cache.org.getnumkeys",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns the total number of keys in the org cache.",
-      "params": {}
+      "parentName": "Org",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getpartition(string)": {
-      "id": "Cache.org.getpartition",
+      "id": "Cache.org.method.getpartition(string)",
       "nodeType": "method",
       "name": "getPartition",
       "startToken": {
@@ -1148,6 +1863,9 @@
         },
         "id": "declaration.entity.name.function_getPartition_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 14,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1155,17 +1873,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1174,30 +1892,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static Cache.OrgPartition getPartition(String partitionName)",
+      "signature": "public static cache.OrgPartition getPartition(String partitionName)",
+      "overrideSignature": "public static override cache.OrgPartition getPartition(String partitionName)",
       "simplifiedSignature": "getPartition(String)",
       "datatype": {
-        "id": "Cache.org.getpartition.Cache.OrgPartition",
+        "id": "Cache.org.getpartition.datatype.cache.OrgPartition",
         "nodeType": "datatype",
-        "name": "Cache.OrgPartition"
+        "name": "cache.OrgPartition",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "cache",
+          "textToLower": "cache",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 19
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_cache_0:14"
+        },
+        "parentId": "Cache.org.getpartition",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "cache.OrgPartition"
       },
       "description": "Returns a partition from the org cache that corresponds to the specified partition name.",
+      "parentName": "Org",
+      "variables": {},
       "params": {
-        "partitionName": {
-          "id": "Cache.org.getpartition.partitionname",
-          "type": "var",
+        "partitionname": {
+          "id": "Cache.org.method.getpartition(string).varParam.partitionname",
+          "nodeType": "variable",
           "name": "partitionName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1206,29 +1950,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_partitionName_-1:0"
+            "id": "token.type.identifier_partitionName_0:53"
           },
-          "signature": "String partitionName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "partitionName",
+            "textToLower": "partitionname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 66
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_partitionName_0:53"
+          },
+          "parentId": "Cache.org.method.getpartition(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.org.getpartition.string",
+            "id": "Cache.org.getpartition.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 46
+                },
+                "end": {
+                  "line": 0,
+                  "character": 52
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:46"
+            },
+            "parentId": "Cache.org.getpartition",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "A partition name that is qualified by the namespace, for example, namespace.partition.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "put(string,object)": {
-      "id": "Cache.org.put",
+      "id": "Cache.org.method.put(string,object)",
       "nodeType": "method",
       "name": "put",
       "startToken": {
@@ -1250,6 +2042,9 @@
         },
         "id": "declaration.entity.name.function_put_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 15,
+      "memberOrder": 15,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1257,17 +2052,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1276,30 +2071,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void put(String key, Object value)",
+      "overrideSignature": "public static override void put(String key, Object value)",
       "simplifiedSignature": "put(String,Object)",
       "datatype": {
-        "id": "Cache.org.put.void",
+        "id": "Cache.org.put.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "Cache.org.put",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Stores the specified key/value pair as a cached entry in the org cache. The put method can write only to the cache in your org’s namespace.",
+      "parentName": "Org",
+      "variables": {},
       "params": {
         "key": {
-          "id": "Cache.org.put.key",
-          "type": "var",
+          "id": "Cache.org.method.put(string,object).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1308,28 +2129,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 30
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 33
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:30"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 30
+              },
+              "end": {
+                "line": 0,
+                "character": 33
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:30"
+          },
+          "parentId": "Cache.org.method.put(string,object)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.org.put.string",
+            "id": "Cache.org.put.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:23"
+            },
+            "parentId": "Cache.org.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "value": {
-          "id": "Cache.org.put.value",
-          "type": "var",
+          "id": "Cache.org.method.put(string,object).varParam.value",
+          "nodeType": "variable",
           "name": "value",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1338,29 +2204,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_value_-1:0"
+            "id": "token.type.identifier_value_0:42"
           },
-          "signature": "Object value",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "value",
+            "textToLower": "value",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_value_0:42"
+          },
+          "parentId": "Cache.org.method.put(string,object)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Cache.org.put.object",
+            "id": "Cache.org.put.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:35"
+            },
+            "parentId": "Cache.org.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "description": "A case-sensitive string value that uniquely identifies a cached value. For information about the format of the key name, see Usage. The value to store in the cache. The cached value must be serializable.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "put(string,object,cache.visibility)": {
-      "id": "Cache.org.put",
+      "id": "Cache.org.method.put(string,object,cache.visibility)",
       "nodeType": "method",
       "name": "put",
       "startToken": {
@@ -1382,6 +2296,9 @@
         },
         "id": "declaration.entity.name.function_put_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 16,
+      "memberOrder": 16,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1389,17 +2306,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1408,30 +2325,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void put(String key, Object value, Cache.Visibility visibility)",
+      "overrideSignature": "public static override void put(String key, Object value, Cache.Visibility visibility)",
       "simplifiedSignature": "put(String,Object,Cache.Visibility)",
       "datatype": {
-        "id": "Cache.org.put.void",
+        "id": "Cache.org.put.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "Cache.org.put",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Stores the specified key/value pair as a cached entry in the org cache and sets the cached value’s visibility.",
+      "parentName": "Org",
+      "variables": {},
       "params": {
         "key": {
-          "id": "Cache.org.put.key",
-          "type": "var",
+          "id": "Cache.org.method.put(string,object,cache.visibility).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1440,28 +2383,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 30
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 33
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:30"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 30
+              },
+              "end": {
+                "line": 0,
+                "character": 33
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:30"
+          },
+          "parentId": "Cache.org.method.put(string,object,cache.visibility)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.org.put.string",
+            "id": "Cache.org.put.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:23"
+            },
+            "parentId": "Cache.org.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "value": {
-          "id": "Cache.org.put.value",
-          "type": "var",
+          "id": "Cache.org.method.put(string,object,cache.visibility).varParam.value",
+          "nodeType": "variable",
           "name": "value",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1470,28 +2458,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_value_-1:0"
+            "id": "token.type.identifier_value_0:42"
           },
-          "signature": "Object value",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "value",
+            "textToLower": "value",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_value_0:42"
+          },
+          "parentId": "Cache.org.method.put(string,object,cache.visibility)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Cache.org.put.object",
+            "id": "Cache.org.put.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:35"
+            },
+            "parentId": "Cache.org.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "scope": null
         },
         "visibility": {
-          "id": "Cache.org.put.visibility",
-          "type": "var",
+          "id": "Cache.org.method.put(string,object,cache.visibility).varParam.visibility",
+          "nodeType": "variable",
           "name": "visibility",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1500,29 +2533,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 76
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_visibility_-1:0"
+            "id": "token.type.identifier_visibility_0:66"
           },
-          "signature": "Cache.Visibility visibility",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "visibility",
+            "textToLower": "visibility",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 66
+              },
+              "end": {
+                "line": 0,
+                "character": 76
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_visibility_0:66"
+          },
+          "parentId": "Cache.org.method.put(string,object,cache.visibility)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Cache.org.put.cache.visibility",
+            "id": "Cache.org.put.datatype.Cache.Visibility",
             "nodeType": "datatype",
-            "name": "Cache.Visibility"
-          }
+            "name": "Cache.Visibility",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Cache",
+              "textToLower": "cache",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 54
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Cache_0:49"
+            },
+            "parentId": "Cache.org.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Cache.Visibility"
+          },
+          "description": "A case-sensitive string value that uniquely identifies a cached value. For information about the format of the key name, see Usage. The value to store in the cache. The cached value must be serializable. Indicates whether the cached value is available only to Apex code that is executing in the same namespace or to Apex code executing from any namespace.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "put(string,object,integer)": {
-      "id": "Cache.org.put",
+      "id": "Cache.org.method.put(string,object,integer)",
       "nodeType": "method",
       "name": "put",
       "startToken": {
@@ -1544,6 +2625,9 @@
         },
         "id": "declaration.entity.name.function_put_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 17,
+      "memberOrder": 17,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1551,17 +2635,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1570,30 +2654,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void put(String key, Object value, Integer ttlSecs)",
+      "overrideSignature": "public static override void put(String key, Object value, Integer ttlSecs)",
       "simplifiedSignature": "put(String,Object,Integer)",
       "datatype": {
-        "id": "Cache.org.put.void",
+        "id": "Cache.org.put.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "Cache.org.put",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Stores the specified key/value pair as a cached entry in the org cache and sets the cached value’s lifetime.",
+      "parentName": "Org",
+      "variables": {},
       "params": {
         "key": {
-          "id": "Cache.org.put.key",
-          "type": "var",
+          "id": "Cache.org.method.put(string,object,integer).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1602,28 +2712,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 30
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 33
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:30"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 30
+              },
+              "end": {
+                "line": 0,
+                "character": 33
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:30"
+          },
+          "parentId": "Cache.org.method.put(string,object,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.org.put.string",
+            "id": "Cache.org.put.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:23"
+            },
+            "parentId": "Cache.org.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "value": {
-          "id": "Cache.org.put.value",
-          "type": "var",
+          "id": "Cache.org.method.put(string,object,integer).varParam.value",
+          "nodeType": "variable",
           "name": "value",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1632,28 +2787,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_value_-1:0"
+            "id": "token.type.identifier_value_0:42"
           },
-          "signature": "Object value",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "value",
+            "textToLower": "value",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_value_0:42"
+          },
+          "parentId": "Cache.org.method.put(string,object,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Cache.org.put.object",
+            "id": "Cache.org.put.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:35"
+            },
+            "parentId": "Cache.org.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "scope": null
         },
-        "ttlSecs": {
-          "id": "Cache.org.put.ttlsecs",
-          "type": "var",
+        "ttlsecs": {
+          "id": "Cache.org.method.put(string,object,integer).varParam.ttlsecs",
+          "nodeType": "variable",
           "name": "ttlSecs",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1662,29 +2862,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_ttlSecs_-1:0"
+            "id": "token.type.identifier_ttlSecs_0:57"
           },
-          "signature": "Integer ttlSecs",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "ttlSecs",
+            "textToLower": "ttlsecs",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 57
+              },
+              "end": {
+                "line": 0,
+                "character": 64
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ttlSecs_0:57"
+          },
+          "parentId": "Cache.org.method.put(string,object,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Cache.org.put.integer",
+            "id": "Cache.org.put.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:49"
+            },
+            "parentId": "Cache.org.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "A case-sensitive string value that uniquely identifies a cached value. For information about the format of the key name, see Usage. The value to store in the cache. The cached value must be serializable. The amount of time, in seconds, to keep the cached value in the org cache. The maximum is 172,800 seconds (48 hours). The minimum value is 300 seconds or 5 minutes. The default value is 86,400 seconds (24 hours).",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "put(string,object,integer,cache.visibility,boolean)": {
-      "id": "Cache.org.put",
+      "id": "Cache.org.method.put(string,object,integer,cache.visibility,boolean)",
       "nodeType": "method",
       "name": "put",
       "startToken": {
@@ -1706,6 +2954,9 @@
         },
         "id": "declaration.entity.name.function_put_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 18,
+      "memberOrder": 18,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1713,17 +2964,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1732,30 +2983,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void put(String key, Object value, Integer ttlSecs, cache.Visibility visibility, Boolean immutable)",
+      "overrideSignature": "public static override void put(String key, Object value, Integer ttlSecs, cache.Visibility visibility, Boolean immutable)",
       "simplifiedSignature": "put(String,Object,Integer,cache.Visibility,Boolean)",
       "datatype": {
-        "id": "Cache.org.put.void",
+        "id": "Cache.org.put.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "Cache.org.put",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Stores the specified key/value pair as a cached entry in the org cache. This method also sets the cached value’s lifetime, visibility, and whether it can be overwritten by another namespace.",
+      "parentName": "Org",
+      "variables": {},
       "params": {
         "key": {
-          "id": "Cache.org.put.key",
-          "type": "var",
+          "id": "Cache.org.method.put(string,object,integer,cache.visibility,boolean).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1764,28 +3041,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 30
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 33
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:30"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 30
+              },
+              "end": {
+                "line": 0,
+                "character": 33
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:30"
+          },
+          "parentId": "Cache.org.method.put(string,object,integer,cache.visibility,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.org.put.string",
+            "id": "Cache.org.put.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:23"
+            },
+            "parentId": "Cache.org.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "value": {
-          "id": "Cache.org.put.value",
-          "type": "var",
+          "id": "Cache.org.method.put(string,object,integer,cache.visibility,boolean).varParam.value",
+          "nodeType": "variable",
           "name": "value",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1794,28 +3116,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_value_-1:0"
+            "id": "token.type.identifier_value_0:42"
           },
-          "signature": "Object value",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "value",
+            "textToLower": "value",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_value_0:42"
+          },
+          "parentId": "Cache.org.method.put(string,object,integer,cache.visibility,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Cache.org.put.object",
+            "id": "Cache.org.put.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:35"
+            },
+            "parentId": "Cache.org.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "scope": null
         },
-        "ttlSecs": {
-          "id": "Cache.org.put.ttlsecs",
-          "type": "var",
+        "ttlsecs": {
+          "id": "Cache.org.method.put(string,object,integer,cache.visibility,boolean).varParam.ttlsecs",
+          "nodeType": "variable",
           "name": "ttlSecs",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1824,28 +3191,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_ttlSecs_-1:0"
+            "id": "token.type.identifier_ttlSecs_0:57"
           },
-          "signature": "Integer ttlSecs",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "ttlSecs",
+            "textToLower": "ttlsecs",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 57
+              },
+              "end": {
+                "line": 0,
+                "character": 64
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ttlSecs_0:57"
+          },
+          "parentId": "Cache.org.method.put(string,object,integer,cache.visibility,boolean)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Cache.org.put.integer",
+            "id": "Cache.org.put.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:49"
+            },
+            "parentId": "Cache.org.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
         "visibility": {
-          "id": "Cache.org.put.visibility",
-          "type": "var",
+          "id": "Cache.org.method.put(string,object,integer,cache.visibility,boolean).varParam.visibility",
+          "nodeType": "variable",
           "name": "visibility",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1854,28 +3266,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 93
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_visibility_-1:0"
+            "id": "token.type.identifier_visibility_0:83"
           },
-          "signature": "cache.Visibility visibility",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "visibility",
+            "textToLower": "visibility",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 83
+              },
+              "end": {
+                "line": 0,
+                "character": 93
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_visibility_0:83"
+          },
+          "parentId": "Cache.org.method.put(string,object,integer,cache.visibility,boolean)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "Cache.org.put.cache.visibility",
+            "id": "Cache.org.put.datatype.cache.Visibility",
             "nodeType": "datatype",
-            "name": "cache.Visibility"
-          }
+            "name": "cache.Visibility",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "cache",
+              "textToLower": "cache",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 66
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_cache_0:66"
+            },
+            "parentId": "Cache.org.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "cache.Visibility"
+          },
+          "scope": null
         },
         "immutable": {
-          "id": "Cache.org.put.immutable",
-          "type": "var",
+          "id": "Cache.org.method.put(string,object,integer,cache.visibility,boolean).varParam.immutable",
+          "nodeType": "variable",
           "name": "immutable",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1884,29 +3341,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 103
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 112
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_immutable_-1:0"
+            "id": "token.type.identifier_immutable_0:103"
           },
-          "signature": "Boolean immutable",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "immutable",
+            "textToLower": "immutable",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 103
+              },
+              "end": {
+                "line": 0,
+                "character": 112
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_immutable_0:103"
+          },
+          "parentId": "Cache.org.method.put(string,object,integer,cache.visibility,boolean)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "Cache.org.put.boolean",
+            "id": "Cache.org.put.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 95
+                },
+                "end": {
+                  "line": 0,
+                  "character": 102
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:95"
+            },
+            "parentId": "Cache.org.put",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "A case-sensitive string value that uniquely identifies a cached value. For information about the format of the key name, see Usage. The value to store in the cache. The cached value must be serializable. The amount of time, in seconds, to keep the cached value in the org cache. The maximum is 172,800 seconds (48 hours). The minimum value is 300 seconds or 5 minutes. The default value is 86,400 seconds (24 hours). Indicates whether the cached value is available only to Apex code that is executing in the same namespace or to Apex code executing from any namespace. Indicates whether the cached value can be overwritten by another namespace (false) or not (true).",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "remove(string)": {
-      "id": "Cache.org.remove",
+      "id": "Cache.org.method.remove(string)",
       "nodeType": "method",
       "name": "remove",
       "startToken": {
@@ -1928,6 +3433,9 @@
         },
         "id": "declaration.entity.name.function_remove_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 19,
+      "memberOrder": 19,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1935,17 +3443,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1954,30 +3462,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean remove(String key)",
+      "overrideSignature": "public static override Boolean remove(String key)",
       "simplifiedSignature": "remove(String)",
       "datatype": {
-        "id": "Cache.org.remove.Boolean",
+        "id": "Cache.org.remove.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "Cache.org.remove",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Deletes the cached value corresponding to the specified key from the org cache.",
+      "parentName": "Org",
+      "variables": {},
       "params": {
         "key": {
-          "id": "Cache.org.remove.key",
-          "type": "var",
+          "id": "Cache.org.method.remove(string).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1986,29 +3520,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 36
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:36"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 36
+              },
+              "end": {
+                "line": 0,
+                "character": 39
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:36"
+          },
+          "parentId": "Cache.org.method.remove(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.org.remove.string",
+            "id": "Cache.org.remove.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 29
+                },
+                "end": {
+                  "line": 0,
+                  "character": 35
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:29"
+            },
+            "parentId": "Cache.org.remove",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "A case-sensitive string value that uniquely identifies a cached value. For information about the format of the key name, see Usage.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "remove(system.type,string)": {
-      "id": "Cache.org.remove",
+      "id": "Cache.org.method.remove(system.type,string)",
       "nodeType": "method",
       "name": "remove",
       "startToken": {
@@ -2030,6 +3612,9 @@
         },
         "id": "declaration.entity.name.function_remove_-1:0"
       },
+      "parentId": "Cache.org",
+      "order": 20,
+      "memberOrder": 20,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -2037,17 +3622,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -2056,30 +3641,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean remove(System.Type cacheBuilder, String key)",
+      "overrideSignature": "public static override Boolean remove(System.Type cacheBuilder, String key)",
       "simplifiedSignature": "remove(System.Type,String)",
       "datatype": {
-        "id": "Cache.org.remove.Boolean",
+        "id": "Cache.org.remove.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "Cache.org.remove",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Deletes the cached value corresponding to the specified key from the org cache. Use this method if your cached value is a class that implements the CacheBuilder interface.",
+      "parentName": "Org",
+      "variables": {},
       "params": {
-        "cacheBuilder": {
-          "id": "Cache.org.remove.cachebuilder",
-          "type": "var",
+        "cachebuilder": {
+          "id": "Cache.org.method.remove(system.type,string).varParam.cachebuilder",
+          "nodeType": "variable",
           "name": "cacheBuilder",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2088,28 +3699,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_cacheBuilder_-1:0"
+            "id": "token.type.identifier_cacheBuilder_0:41"
           },
-          "signature": "System.Type cacheBuilder",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "cacheBuilder",
+            "textToLower": "cachebuilder",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 41
+              },
+              "end": {
+                "line": 0,
+                "character": 53
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_cacheBuilder_0:41"
+          },
+          "parentId": "Cache.org.method.remove(system.type,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Cache.org.remove.system.type",
+            "id": "Cache.org.remove.datatype.System.Type",
             "nodeType": "datatype",
-            "name": "System.Type"
-          }
+            "name": "System.Type",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 29
+                },
+                "end": {
+                  "line": 0,
+                  "character": 35
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:29"
+            },
+            "parentId": "Cache.org.remove",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.Type"
+          },
+          "scope": null
         },
         "key": {
-          "id": "Cache.org.remove.key",
-          "type": "var",
+          "id": "Cache.org.method.remove(system.type,string).varParam.key",
+          "nodeType": "variable",
           "name": "key",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2118,30 +3774,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 62
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_key_-1:0"
+            "id": "token.type.identifier_key_0:62"
           },
-          "signature": "String key",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "key",
+            "textToLower": "key",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 62
+              },
+              "end": {
+                "line": 0,
+                "character": 65
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_key_0:62"
+          },
+          "parentId": "Cache.org.method.remove(system.type,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Cache.org.remove.string",
+            "id": "Cache.org.remove.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 55
+                },
+                "end": {
+                  "line": 0,
+                  "character": 61
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:55"
+            },
+            "parentId": "Cache.org.remove",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The Apex class that implements the CacheBuilder interface. A case-sensitive string value that, combined with the class name corresponding to the cacheBuilder parameter, uniquely identifies a cached value.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 20,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_WebServiceCallout_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "invoke(object,object,map,object>)": {
-      "id": "System.webservicecallout.invoke",
+    "invoke(object,object,map<string,object>,list<string>)": {
+      "id": "System.webservicecallout.method.invoke(object,object,map<string,object>,list<string>)",
       "nodeType": "method",
       "name": "invoke",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_invoke_-1:0"
       },
+      "parentId": "System.webservicecallout",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void invoke(Object stub, Object request, Map <String, Object> response,)",
-      "simplifiedSignature": "invoke(Object,Object,Map,Object>)",
+      "signature": "public static void invoke(Object stub, Object request, Map<String,Object> response, List<String> infoArray)",
+      "overrideSignature": "public static override void invoke(Object stub, Object request, Map<String,Object> response, List<String> infoArray)",
+      "simplifiedSignature": "invoke(Object,Object,Map<String,Object>,List<String>)",
       "datatype": {
-        "id": "System.webservicecallout.invoke.void",
+        "id": "System.webservicecallout.invoke.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "System.webservicecallout.invoke",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Invokes an external SOAP web service operation based on an Apex class that is auto-generated from a WSDL.",
+      "parentName": "WebServiceCallout",
+      "variables": {},
       "params": {
         "stub": {
-          "id": "System.webservicecallout.invoke.stub",
-          "type": "var",
+          "id": "System.webservicecallout.method.invoke(object,object,map<string,object>,list<string>).varParam.stub",
+          "nodeType": "variable",
           "name": "stub",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 33
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_stub_-1:0"
+            "id": "token.type.identifier_stub_0:33"
           },
-          "signature": "Object stub",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "stub",
+            "textToLower": "stub",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 33
+              },
+              "end": {
+                "line": 0,
+                "character": 37
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_stub_0:33"
+          },
+          "parentId": "System.webservicecallout.method.invoke(object,object,map<string,object>,list<string>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.webservicecallout.invoke.object",
+            "id": "System.webservicecallout.invoke.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 26
+                },
+                "end": {
+                  "line": 0,
+                  "character": 32
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:26"
+            },
+            "parentId": "System.webservicecallout.invoke",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "scope": null
         },
         "request": {
-          "id": "System.webservicecallout.invoke.request",
-          "type": "var",
+          "id": "System.webservicecallout.method.invoke(object,object,map<string,object>,list<string>).varParam.request",
+          "nodeType": "variable",
           "name": "request",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,90 +254,311 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_request_-1:0"
+            "id": "token.type.identifier_request_0:46"
           },
-          "signature": "Object request",
-          "datatype": {
-            "id": "System.webservicecallout.invoke.object",
-            "nodeType": "datatype",
-            "name": "Object"
-          }
-        },
-        "<String": {
-          "id": "System.webservicecallout.invoke.<string",
-          "type": "var",
-          "name": "<String",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "request",
+            "textToLower": "request",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_request_0:46"
           },
-          "signature": "Map <String",
+          "parentId": "System.webservicecallout.method.invoke(object,object,map<string,object>,list<string>)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.webservicecallout.invoke.map",
+            "id": "System.webservicecallout.invoke.datatype.Object",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:39"
+            },
+            "parentId": "System.webservicecallout.invoke",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "scope": null
         },
-        "response,": {
-          "id": "System.webservicecallout.invoke.response,",
-          "type": "var",
-          "name": "response,",
+        "response": {
+          "id": "System.webservicecallout.method.invoke(object,object,map<string,object>,list<string>).varParam.response",
+          "nodeType": "variable",
+          "name": "response",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "response,",
-            "textToLower": "response,",
+            "text": "response",
+            "textToLower": "response",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 74
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_response,_-1:0"
+            "id": "token.type.identifier_response_0:74"
           },
-          "signature": "Object> response,",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "response",
+            "textToLower": "response",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 74
+              },
+              "end": {
+                "line": 0,
+                "character": 82
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_response_0:74"
+          },
+          "parentId": "System.webservicecallout.method.invoke(object,object,map<string,object>,list<string>)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.webservicecallout.invoke.object>",
+            "id": "System.webservicecallout.invoke.datatype.Map<String,Object>",
             "nodeType": "datatype",
-            "name": "Object>"
-          }
+            "name": "Map<String,Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 55
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:55"
+            },
+            "parentId": "System.webservicecallout.invoke",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "System.webservicecallout.invoke.datatype.Map<String,Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 66
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 72
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:66"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            },
+            "key": {
+              "id": "System.webservicecallout.invoke.datatype.Map<String,Object>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 59
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 65
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:59"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
+        },
+        "infoarray": {
+          "id": "System.webservicecallout.method.invoke(object,object,map<string,object>,list<string>).varParam.infoarray",
+          "nodeType": "variable",
+          "name": "infoArray",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "infoArray",
+            "textToLower": "infoarray",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 97
+              },
+              "end": {
+                "line": 0,
+                "character": 106
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_infoArray_0:97"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "infoArray",
+            "textToLower": "infoarray",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 97
+              },
+              "end": {
+                "line": 0,
+                "character": 106
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_infoArray_0:97"
+          },
+          "parentId": "System.webservicecallout.method.invoke(object,object,map<string,object>,list<string>)",
+          "order": 4,
+          "memberOrder": 4,
+          "datatype": {
+            "id": "System.webservicecallout.invoke.datatype.List<String>",
+            "nodeType": "datatype",
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 84
+                },
+                "end": {
+                  "line": 0,
+                  "character": 88
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:84"
+            },
+            "parentId": "System.webservicecallout.invoke",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.webservicecallout.invoke.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 89
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 95
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:89"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "An instance of the Apex class that is auto-generated from a WSDL (the stub class). The request to the external service. The request is an instance of a type that is created as part of the auto-generated stub class. A map of key-value pairs that represent the response that the external service sends after receiving the request. In each pair, the key is a response identifier. The value is the response object, which is an instance of a type that is created as part of the auto-generated stub class. An array of strings that contains information about the callout—web service endpoint, SOAP action, request, and response. The order of the elements in the array matters. Element at index 0 ([0]): One of the following options for identifying the URL of the external web service. Endpoint URL. For example: 'http://YourServer/YourService'   Named credential URL, which contains the scheme callout, the name of the named credential, and optionally, an appended path. For example: 'callout:MyNamedCredential/some/path'      Element at index 1 ([1]): The SOAP action. For example: 'urn:dotnet.callouttest.soap.sforce.com/EchoString'   Element at index 2 ([2]): The request namespace. For example: 'http://doc.sample.com/docSample'   Element at index 3 ([3]): The request name. For example: 'EchoString'   Element at index 4 ([4]): The response namespace. For example: 'http://doc.sample.com/docSample'   Element at index 5 ([5]): The response name. For example: 'EchoStringResponse'   Element at index 6 ([6]): The response type. For example: 'docSample.EchoStringResponse_element'",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

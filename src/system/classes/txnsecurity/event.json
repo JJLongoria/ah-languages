@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Event_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,7 +69,7 @@
   "enums": {},
   "variables": {
     "action": {
-      "id": "TxnSecurity.event.action",
+      "id": "TxnSecurity.event.method.string action{get;set;}",
       "nodeType": "property",
       "name": "action",
       "startToken": {
@@ -89,6 +91,9 @@
         },
         "id": "declaration.entity.name.property_action_-1:0"
       },
+      "parentId": "TxnSecurity.event",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -96,77 +101,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String action {get; set;}",
-      "simplifiedSignature": "String action { get; set; }",
+      "signature": "public String action { get; set; }",
+      "simplifiedSignature": "String action{get;set;}",
       "datatype": {
-        "id": "TxnSecurity.event.action.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "Specifies the action being taken on the resource for an Entity event. For example, a Login IP resource for an Entity event could have an action of create. The action attribute is not used by any other event type.",
+      "parentName": "Event",
       "getter": {
-        "id": "TxnSecurity.event.action.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "TxnSecurity.event.action.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "data": {
-      "id": "TxnSecurity.event.data",
+      "id": "TxnSecurity.event.method.map<string,string> data{get;set;}",
       "nodeType": "property",
       "name": "data",
       "startToken": {
@@ -188,6 +188,9 @@
         },
         "id": "declaration.entity.name.property_data_-1:0"
       },
+      "parentId": "TxnSecurity.event",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -195,77 +198,126 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Map<String,String> data {get; set;}",
-      "simplifiedSignature": "Map<String,String> data { get; set; }",
+      "signature": "public Map<String, String> data { get; set; }",
+      "simplifiedSignature": "Map<String,String> data{get;set;}",
       "datatype": {
-        "id": "TxnSecurity.event.data.map<string,string>",
+        "id": ".datatype.Map<String,String>",
         "nodeType": "datatype",
-        "name": "Map<String,String>"
+        "name": "Map<String,String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": ".datatype.Map<String,String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 24
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        },
+        "key": {
+          "id": ".datatype.Map<String,String>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
-      "description": "Contains data used by actions. For example, data for a login event includes the login history ID. Returns a map whose keys are the type of event data, like SourceIp.",
+      "parentName": "Event",
       "getter": {
-        "id": "TxnSecurity.event.data.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "TxnSecurity.event.data.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "entityid": {
-      "id": "TxnSecurity.event.entityid",
+      "id": "TxnSecurity.event.method.string entityid{get;set;}",
       "nodeType": "property",
       "name": "entityId",
       "startToken": {
@@ -287,6 +339,9 @@
         },
         "id": "declaration.entity.name.property_entityId_-1:0"
       },
+      "parentId": "TxnSecurity.event",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -294,77 +349,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String entityId {get; set;}",
-      "simplifiedSignature": "String entityId { get; set; }",
+      "signature": "public String entityId { get; set; }",
+      "simplifiedSignature": "String entityId{get;set;}",
       "datatype": {
-        "id": "TxnSecurity.event.entityid.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "The ID of any entity associated with the event. For example, the entityId of a DataExport event for an Account object contains the Account ID.",
+      "parentName": "Event",
       "getter": {
-        "id": "TxnSecurity.event.entityid.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "TxnSecurity.event.entityid.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "entityname": {
-      "id": "TxnSecurity.event.entityname",
+      "id": "TxnSecurity.event.method.string entityname{get;set;}",
       "nodeType": "property",
       "name": "entityName",
       "startToken": {
@@ -386,6 +436,9 @@
         },
         "id": "declaration.entity.name.property_entityName_-1:0"
       },
+      "parentId": "TxnSecurity.event",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -393,77 +446,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String entityName {get; set;}",
-      "simplifiedSignature": "String entityName { get; set; }",
+      "signature": "public String entityName { get; set; }",
+      "simplifiedSignature": "String entityName{get;set;}",
       "datatype": {
-        "id": "TxnSecurity.event.entityname.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "The name of the object the event acts on.",
+      "parentName": "Event",
       "getter": {
-        "id": "TxnSecurity.event.entityname.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "TxnSecurity.event.entityname.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "organizationid": {
-      "id": "TxnSecurity.event.organizationid",
+      "id": "TxnSecurity.event.method.string organizationid{get;set;}",
       "nodeType": "property",
       "name": "organizationId",
       "startToken": {
@@ -485,6 +533,9 @@
         },
         "id": "declaration.entity.name.property_organizationId_-1:0"
       },
+      "parentId": "TxnSecurity.event",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -492,77 +543,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String organizationId {get; set;}",
-      "simplifiedSignature": "String organizationId { get; set; }",
+      "signature": "public String organizationId { get; set; }",
+      "simplifiedSignature": "String organizationId{get;set;}",
       "datatype": {
-        "id": "TxnSecurity.event.organizationid.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "The ID of the Salesforce org where the event occurred.",
+      "parentName": "Event",
       "getter": {
-        "id": "TxnSecurity.event.organizationid.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "TxnSecurity.event.organizationid.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "resourcetype": {
-      "id": "TxnSecurity.event.resourcetype",
+      "id": "TxnSecurity.event.method.string resourcetype{get;set;}",
       "nodeType": "property",
       "name": "resourceType",
       "startToken": {
@@ -584,6 +630,9 @@
         },
         "id": "declaration.entity.name.property_resourceType_-1:0"
       },
+      "parentId": "TxnSecurity.event",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -591,77 +640,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String resourceType {get; set;}",
-      "simplifiedSignature": "String resourceType { get; set; }",
+      "signature": "public String resourceType { get; set; }",
+      "simplifiedSignature": "String resourceType{get;set;}",
       "datatype": {
-        "id": "TxnSecurity.event.resourcetype.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "The type of resource for the event. For example, an AccessResource event could have a Connected Application as a resource type. Not all event types have resources.",
+      "parentName": "Event",
       "getter": {
-        "id": "TxnSecurity.event.resourcetype.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "TxnSecurity.event.resourcetype.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "timestamp": {
-      "id": "TxnSecurity.event.timestamp",
+      "id": "TxnSecurity.event.method.datetime timestamp{get;set;}",
       "nodeType": "property",
       "name": "timeStamp",
       "startToken": {
@@ -683,6 +727,9 @@
         },
         "id": "declaration.entity.name.property_timeStamp_-1:0"
       },
+      "parentId": "TxnSecurity.event",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -690,80 +737,75 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Datetime timeStamp {get; set;}",
-      "simplifiedSignature": "Datetime timeStamp { get; set; }",
+      "signature": "public Datetime timeStamp { get; set; }",
+      "simplifiedSignature": "Datetime timeStamp{get;set;}",
       "datatype": {
-        "id": "TxnSecurity.event.timestamp.datetime",
+        "id": ".datatype.Datetime",
         "nodeType": "datatype",
-        "name": "Datetime"
+        "name": "Datetime",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Datetime",
+          "textToLower": "datetime",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 15
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Datetime_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Datetime"
       },
-      "description": "The time the event occurred.",
+      "parentName": "Event",
       "getter": {
-        "id": "TxnSecurity.event.timestamp.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "TxnSecurity.event.timestamp.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     }
   },
   "methods": {},
   "constructors": {
     "event()": {
-      "id": "TxnSecurity.event.event",
+      "id": "TxnSecurity.event.method.event()",
       "nodeType": "constructor",
       "name": "Event",
       "startToken": {
@@ -785,6 +827,9 @@
         },
         "id": "declaration.entity.name.function_Event_-1:0"
       },
+      "parentId": "TxnSecurity.event",
+      "order": 1,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -792,30 +837,60 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Event()",
+      "signature": "public Event Event()",
+      "overrideSignature": "public override Event Event()",
       "simplifiedSignature": "Event()",
       "datatype": {
-        "id": "TxnSecurity.event.event.constructor",
+        "id": "TxnSecurity.event.event.datatype.Event",
         "nodeType": "datatype",
-        "name": "Event"
+        "name": "Event",
+        "startToken": {
+          "type": "datatype.support.sobject",
+          "text": "Event",
+          "textToLower": "event",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 12
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Event_0:7"
+        },
+        "parentId": "TxnSecurity.event.event",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Event"
       },
       "description": "Creates an instance of the TxnSecurity.Event class.",
-      "params": {}
+      "parentName": "Event",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 8,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_DuplicateError_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getduplicateresult()": {
-      "id": "Database.duplicateerror.getduplicateresult",
+      "id": "Database.duplicateerror.method.getduplicateresult()",
       "nodeType": "method",
       "name": "getDuplicateResult",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getDuplicateResult_-1:0"
       },
+      "parentId": "Database.duplicateerror",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Datacloud.DuplicateResult getDuplicateResult()",
+      "overrideSignature": "public override Datacloud.DuplicateResult getDuplicateResult()",
       "simplifiedSignature": "getDuplicateResult()",
       "datatype": {
-        "id": "Database.duplicateerror.getduplicateresult.Datacloud.DuplicateResult",
+        "id": "Database.duplicateerror.getduplicateresult.datatype.Datacloud.DuplicateResult",
         "nodeType": "datatype",
-        "name": "Datacloud.DuplicateResult"
+        "name": "Datacloud.DuplicateResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Datacloud",
+          "textToLower": "datacloud",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 16
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Datacloud_0:7"
+        },
+        "parentId": "Database.duplicateerror.getduplicateresult",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Datacloud.DuplicateResult"
       },
       "description": "Returns the details of a duplicate rule and duplicate records found by the duplicate rule.",
-      "params": {}
+      "parentName": "DuplicateError",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getfields()": {
-      "id": "Database.duplicateerror.getfields",
+      "id": "Database.duplicateerror.method.getfields()",
       "nodeType": "method",
       "name": "getFields",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_getFields_-1:0"
       },
+      "parentId": "Database.duplicateerror",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,30 +185,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<String> getFields()",
+      "overrideSignature": "public override List<String> getFields()",
       "simplifiedSignature": "getFields()",
       "datatype": {
-        "id": "Database.duplicateerror.getfields.List<String>",
+        "id": "Database.duplicateerror.getfields.datatype.List<String>",
         "nodeType": "datatype",
-        "name": "List<String>"
+        "name": "List<String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Database.duplicateerror.getfields",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Database.duplicateerror.getfields.datatype.List<String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 18
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Returns an array of one or more field names. Identifies which fields in the object, if any, affected the error condition.",
-      "params": {}
+      "parentName": "DuplicateError",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getmessage()": {
-      "id": "Database.duplicateerror.getmessage",
+      "id": "Database.duplicateerror.method.getmessage()",
       "nodeType": "method",
       "name": "getMessage",
       "startToken": {
@@ -194,6 +285,9 @@
         },
         "id": "declaration.entity.name.function_getMessage_-1:0"
       },
+      "parentId": "Database.duplicateerror",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -201,30 +295,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getMessage()",
+      "overrideSignature": "public override String getMessage()",
       "simplifiedSignature": "getMessage()",
       "datatype": {
-        "id": "Database.duplicateerror.getmessage.String",
+        "id": "Database.duplicateerror.getmessage.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Database.duplicateerror.getmessage",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the error message text.",
-      "params": {}
+      "parentName": "DuplicateError",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getstatuscode()": {
-      "id": "Database.duplicateerror.getstatuscode",
+      "id": "Database.duplicateerror.method.getstatuscode()",
       "nodeType": "method",
       "name": "getStatusCode",
       "startToken": {
@@ -246,6 +368,9 @@
         },
         "id": "declaration.entity.name.function_getStatusCode_-1:0"
       },
+      "parentId": "Database.duplicateerror",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -253,31 +378,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public StatusCode getStatusCode()",
+      "overrideSignature": "public override StatusCode getStatusCode()",
       "simplifiedSignature": "getStatusCode()",
       "datatype": {
-        "id": "Database.duplicateerror.getstatuscode.StatusCode",
+        "id": "Database.duplicateerror.getstatuscode.datatype.StatusCode",
         "nodeType": "datatype",
-        "name": "StatusCode"
+        "name": "StatusCode",
+        "startToken": {
+          "type": "datatype.custom.class",
+          "text": "StatusCode",
+          "textToLower": "statuscode",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_StatusCode_0:7"
+        },
+        "parentId": "Database.duplicateerror.getstatuscode",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "StatusCode"
       },
       "description": "Returns a code that characterizes the error.",
-      "params": {}
+      "parentName": "DuplicateError",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 4,
+  "queries": []
 }

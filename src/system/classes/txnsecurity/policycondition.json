@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_PolicyCondition_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "evaluate(txnsecurity.event)": {
-      "id": "TxnSecurity.policycondition.evaluate",
+      "id": "TxnSecurity.policycondition.method.evaluate(txnsecurity.event)",
       "nodeType": "method",
       "name": "evaluate",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_evaluate_-1:0"
       },
+      "parentId": "TxnSecurity.policycondition",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean evaluate(TxnSecurity.Event event)",
+      "overrideSignature": "public override Boolean evaluate(TxnSecurity.Event event)",
       "simplifiedSignature": "evaluate(TxnSecurity.Event)",
       "datatype": {
-        "id": "TxnSecurity.policycondition.evaluate.Boolean",
+        "id": "TxnSecurity.policycondition.evaluate.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "TxnSecurity.policycondition.evaluate",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Evaluates an event against a transaction security policy. If the event triggers the policy, true is returned.",
+      "parentName": "PolicyCondition",
+      "variables": {},
       "params": {
         "event": {
-          "id": "TxnSecurity.policycondition.evaluate.event",
-          "type": "var",
+          "id": "TxnSecurity.policycondition.method.evaluate(txnsecurity.event).varParam.event",
+          "nodeType": "variable",
           "name": "event",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,30 +160,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_event_-1:0"
+            "id": "token.type.identifier_event_0:42"
           },
-          "signature": "TxnSecurity.Event event",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "event",
+            "textToLower": "event",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_event_0:42"
+          },
+          "parentId": "TxnSecurity.policycondition.method.evaluate(txnsecurity.event)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "TxnSecurity.policycondition.evaluate.txnsecurity.event",
+            "id": "TxnSecurity.policycondition.evaluate.datatype.TxnSecurity.Event",
             "nodeType": "datatype",
-            "name": "TxnSecurity.Event"
-          }
+            "name": "TxnSecurity.Event",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "TxnSecurity",
+              "textToLower": "txnsecurity",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 24
+                },
+                "end": {
+                  "line": 0,
+                  "character": 35
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_TxnSecurity_0:24"
+            },
+            "parentId": "TxnSecurity.policycondition.evaluate",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "TxnSecurity.Event"
+          },
+          "description": "The event to check against the transaction security policy.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

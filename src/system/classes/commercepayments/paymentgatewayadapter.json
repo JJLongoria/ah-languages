@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_PaymentGatewayAdapter_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "processrequest(commercepayments.paymentgatewaycontext)": {
-      "id": "commercepayments.paymentgatewayadapter.processrequest",
+      "id": "commercepayments.paymentgatewayadapter.method.processrequest(commercepayments.paymentgatewaycontext)",
       "nodeType": "method",
       "name": "processRequest",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_processRequest_-1:0"
       },
+      "parentId": "commercepayments.paymentgatewayadapter",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "global",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_global_-1:0"
+        "id": "token.type.identifier_global_0:0"
       },
       "signature": "global commercepayments.GatewayResponse processRequest(commercepayments.PaymentGatewayContext var1)",
+      "overrideSignature": "global override commercepayments.GatewayResponse processRequest(commercepayments.PaymentGatewayContext var1)",
       "simplifiedSignature": "processRequest(commercepayments.PaymentGatewayContext)",
       "datatype": {
-        "id": "commercepayments.paymentgatewayadapter.processrequest.commercepayments.GatewayResponse",
+        "id": "commercepayments.paymentgatewayadapter.processrequest.datatype.commercepayments.GatewayResponse",
         "nodeType": "datatype",
-        "name": "commercepayments.GatewayResponse"
+        "name": "commercepayments.GatewayResponse",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "commercepayments",
+          "textToLower": "commercepayments",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 23
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_commercepayments_0:7"
+        },
+        "parentId": "commercepayments.paymentgatewayadapter.processrequest",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "commercepayments.GatewayResponse"
       },
       "description": "The entry point for processing payment requests. Returns the response from the payment gateway.",
+      "parentName": "PaymentGatewayAdapter",
+      "variables": {},
       "params": {
         "var1": {
-          "id": "commercepayments.paymentgatewayadapter.processrequest.var1",
-          "type": "var",
+          "id": "commercepayments.paymentgatewayadapter.method.processrequest(commercepayments.paymentgatewaycontext).varParam.var1",
+          "nodeType": "variable",
           "name": "var1",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,30 +160,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_var1_-1:0"
+            "id": "token.type.identifier_var1_0:94"
           },
-          "signature": "commercepayments.PaymentGatewayContext var1",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "var1",
+            "textToLower": "var1",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 94
+              },
+              "end": {
+                "line": 0,
+                "character": 98
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_var1_0:94"
+          },
+          "parentId": "commercepayments.paymentgatewayadapter.method.processrequest(commercepayments.paymentgatewaycontext)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "commercepayments.paymentgatewayadapter.processrequest.commercepayments.paymentgatewaycontext",
+            "id": "commercepayments.paymentgatewayadapter.processrequest.datatype.commercepayments.PaymentGatewayContext",
             "nodeType": "datatype",
-            "name": "commercepayments.PaymentGatewayContext"
-          }
+            "name": "commercepayments.PaymentGatewayContext",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "commercepayments",
+              "textToLower": "commercepayments",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 55
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_commercepayments_0:55"
+            },
+            "parentId": "commercepayments.paymentgatewayadapter.processrequest",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "commercepayments.PaymentGatewayContext"
+          },
+          "description": "You can retrieve the request type and the request from the Context object.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }
