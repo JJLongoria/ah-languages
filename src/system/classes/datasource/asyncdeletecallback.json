@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_AsyncDeleteCallback_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "processdelete(database.deleteresult)": {
-      "id": "Datasource.asyncdeletecallback.processdelete",
+      "id": "Datasource.asyncdeletecallback.method.processdelete(database.deleteresult)",
       "nodeType": "method",
       "name": "processDelete",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_processDelete_-1:0"
       },
+      "parentId": "Datasource.asyncdeletecallback",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void processDelete(Database.DeleteResult deleteResult)",
+      "overrideSignature": "public override void processDelete(Database.DeleteResult deleteResult)",
       "simplifiedSignature": "processDelete(Database.DeleteResult)",
       "datatype": {
-        "id": "Datasource.asyncdeletecallback.processdelete.void",
+        "id": "Datasource.asyncdeletecallback.processdelete.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Datasource.asyncdeletecallback.processdelete",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Override this method to define actions that Salesforce executes after a remote Database.deleteAsync operation is completed. For example, based on the results of the remote operation, you can update custom object data or other data that's stored in the Salesforce org..",
+      "parentName": "AsyncDeleteCallback",
+      "variables": {},
       "params": {
-        "deleteResult": {
-          "id": "Datasource.asyncdeletecallback.processdelete.deleteresult",
-          "type": "var",
+        "deleteresult": {
+          "id": "Datasource.asyncdeletecallback.method.processdelete(database.deleteresult).varParam.deleteresult",
+          "nodeType": "variable",
           "name": "deleteResult",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,30 +160,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_deleteResult_-1:0"
+            "id": "token.type.identifier_deleteResult_0:48"
           },
-          "signature": "Database.DeleteResult deleteResult",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "deleteResult",
+            "textToLower": "deleteresult",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 48
+              },
+              "end": {
+                "line": 0,
+                "character": 60
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_deleteResult_0:48"
+          },
+          "parentId": "Datasource.asyncdeletecallback.method.processdelete(database.deleteresult)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Datasource.asyncdeletecallback.processdelete.database.deleteresult",
+            "id": "Datasource.asyncdeletecallback.processdelete.datatype.Database.DeleteResult",
             "nodeType": "datatype",
-            "name": "Database.DeleteResult"
-          }
+            "name": "Database.DeleteResult",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Database",
+              "textToLower": "database",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 26
+                },
+                "end": {
+                  "line": 0,
+                  "character": 34
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Database_0:26"
+            },
+            "parentId": "Datasource.asyncdeletecallback.processdelete",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Database.DeleteResult"
+          },
+          "description": "The result of the asynchronous delete operation.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

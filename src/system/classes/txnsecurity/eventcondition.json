@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_EventCondition_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "evaluate(sobject)": {
-      "id": "TxnSecurity.eventcondition.evaluate",
+      "id": "TxnSecurity.eventcondition.method.evaluate(sobject)",
       "nodeType": "method",
       "name": "evaluate",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_evaluate_-1:0"
       },
+      "parentId": "TxnSecurity.eventcondition",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean evaluate(SObject event)",
+      "overrideSignature": "public override Boolean evaluate(SObject event)",
       "simplifiedSignature": "evaluate(SObject)",
       "datatype": {
-        "id": "TxnSecurity.eventcondition.evaluate.Boolean",
+        "id": "TxnSecurity.eventcondition.evaluate.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "TxnSecurity.eventcondition.evaluate",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Evaluates an event against a transaction security policy created in Real-Time Event Monitoring. If the event triggers the policy, the method returns true.",
+      "parentName": "EventCondition",
+      "variables": {},
       "params": {
         "event": {
-          "id": "TxnSecurity.eventcondition.evaluate.event",
-          "type": "var",
+          "id": "TxnSecurity.eventcondition.method.evaluate(sobject).varParam.event",
+          "nodeType": "variable",
           "name": "event",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,30 +160,79 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 32
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_event_-1:0"
+            "id": "token.type.identifier_event_0:32"
           },
-          "signature": "SObject event",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "event",
+            "textToLower": "event",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 32
+              },
+              "end": {
+                "line": 0,
+                "character": 37
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_event_0:32"
+          },
+          "parentId": "TxnSecurity.eventcondition.method.evaluate(sobject)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "TxnSecurity.eventcondition.evaluate.sobject",
+            "id": "TxnSecurity.eventcondition.evaluate.datatype.SObject",
             "nodeType": "datatype",
-            "name": "SObject"
-          }
+            "name": "SObject",
+            "startToken": {
+              "type": "datatype.custom.class",
+              "text": "SObject",
+              "textToLower": "sobject",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 24
+                },
+                "end": {
+                  "line": 0,
+                  "character": 31
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_SObject_0:24"
+            },
+            "parentId": "TxnSecurity.eventcondition.evaluate",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "SObject"
+          },
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

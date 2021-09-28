@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_UrlRewriter_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "generateurlfor(system.pagereference[])": {
-      "id": "Site.urlrewriter.generateurlfor",
+      "id": "Site.urlrewriter.method.generateurlfor(system.pagereference[])",
       "nodeType": "method",
       "name": "generateUrlFor",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_generateUrlFor_-1:0"
       },
+      "parentId": "Site.urlrewriter",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public System.PageReference[] generateUrlFor(System.PageReference[] salesforceUrls)",
+      "overrideSignature": "public override System.PageReference[] generateUrlFor(System.PageReference[] salesforceUrls)",
       "simplifiedSignature": "generateUrlFor(System.PageReference[])",
       "datatype": {
-        "id": "Site.urlrewriter.generateurlfor.System.PageReference[]",
+        "id": "Site.urlrewriter.generateurlfor.datatype.System.PageReference[]",
         "nodeType": "datatype",
-        "name": "System.PageReference[]"
+        "name": "System.PageReference[]",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:7"
+        },
+        "parentId": "Site.urlrewriter.generateurlfor",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference[]"
       },
       "description": "Maps a list of Salesforce URLs to a list of user-friendly URLs.",
+      "parentName": "UrlRewriter",
+      "variables": {},
       "params": {
-        "salesforceUrls": {
-          "id": "Site.urlrewriter.generateurlfor.salesforceurls",
-          "type": "var",
+        "salesforceurls": {
+          "id": "Site.urlrewriter.method.generateurlfor(system.pagereference[]).varParam.salesforceurls",
+          "nodeType": "variable",
           "name": "salesforceUrls",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,29 +160,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 68
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_salesforceUrls_-1:0"
+            "id": "token.type.identifier_salesforceUrls_0:68"
           },
-          "signature": "System.PageReference[] salesforceUrls",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "salesforceUrls",
+            "textToLower": "salesforceurls",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 68
+              },
+              "end": {
+                "line": 0,
+                "character": 82
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_salesforceUrls_0:68"
+          },
+          "parentId": "Site.urlrewriter.method.generateurlfor(system.pagereference[])",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Site.urlrewriter.generateurlfor.system.pagereference[]",
+            "id": "Site.urlrewriter.generateurlfor.datatype.System.PageReference[]",
             "nodeType": "datatype",
-            "name": "System.PageReference[]"
-          }
+            "name": "System.PageReference[]",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 51
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:45"
+            },
+            "parentId": "Site.urlrewriter.generateurlfor",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.PageReference[]"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "maprequesturl(system.pagereference)": {
-      "id": "Site.urlrewriter.maprequesturl",
+      "id": "Site.urlrewriter.method.maprequesturl(system.pagereference)",
       "nodeType": "method",
       "name": "mapRequestUrl",
       "startToken": {
@@ -173,6 +252,9 @@
         },
         "id": "declaration.entity.name.function_mapRequestUrl_-1:0"
       },
+      "parentId": "Site.urlrewriter",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -180,30 +262,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public System.PageReference mapRequestUrl(System.PageReference userFriendlyUrl)",
+      "overrideSignature": "public override System.PageReference mapRequestUrl(System.PageReference userFriendlyUrl)",
       "simplifiedSignature": "mapRequestUrl(System.PageReference)",
       "datatype": {
-        "id": "Site.urlrewriter.maprequesturl.System.PageReference",
+        "id": "Site.urlrewriter.maprequesturl.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:7"
+        },
+        "parentId": "Site.urlrewriter.maprequesturl",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Maps a user-friendly URL to a Salesforce URL.",
+      "parentName": "UrlRewriter",
+      "variables": {},
       "params": {
-        "userFriendlyUrl": {
-          "id": "Site.urlrewriter.maprequesturl.userfriendlyurl",
-          "type": "var",
+        "userfriendlyurl": {
+          "id": "Site.urlrewriter.method.maprequesturl(system.pagereference).varParam.userfriendlyurl",
+          "nodeType": "variable",
           "name": "userFriendlyUrl",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -212,30 +320,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 63
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userFriendlyUrl_-1:0"
+            "id": "token.type.identifier_userFriendlyUrl_0:63"
           },
-          "signature": "System.PageReference userFriendlyUrl",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userFriendlyUrl",
+            "textToLower": "userfriendlyurl",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 63
+              },
+              "end": {
+                "line": 0,
+                "character": 78
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userFriendlyUrl_0:63"
+          },
+          "parentId": "Site.urlrewriter.method.maprequesturl(system.pagereference)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Site.urlrewriter.maprequesturl.system.pagereference",
+            "id": "Site.urlrewriter.maprequesturl.datatype.System.PageReference",
             "nodeType": "datatype",
-            "name": "System.PageReference"
-          }
+            "name": "System.PageReference",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 48
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:42"
+            },
+            "parentId": "Site.urlrewriter.maprequesturl",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.PageReference"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

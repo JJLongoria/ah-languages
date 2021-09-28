@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Announcements_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "deleteannouncement(string,string)": {
-      "id": "ConnectApi.announcements.deleteannouncement",
+      "id": "ConnectApi.announcements.method.deleteannouncement(string,string)",
       "nodeType": "method",
       "name": "deleteAnnouncement",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_deleteAnnouncement_-1:0"
       },
+      "parentId": "ConnectApi.announcements",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void deleteAnnouncement(String communityId, String announcementId)",
+      "overrideSignature": "public static override void deleteAnnouncement(String communityId, String announcementId)",
       "simplifiedSignature": "deleteAnnouncement(String,String)",
       "datatype": {
-        "id": "ConnectApi.announcements.deleteannouncement.void",
+        "id": "ConnectApi.announcements.deleteannouncement.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "ConnectApi.announcements.deleteannouncement",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Delete an announcement.",
+      "parentName": "Announcements",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.announcements.deleteannouncement.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.announcements.method.deleteannouncement(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:45"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 45
+              },
+              "end": {
+                "line": 0,
+                "character": 56
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:45"
+          },
+          "parentId": "ConnectApi.announcements.method.deleteannouncement(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.announcements.deleteannouncement.string",
+            "id": "ConnectApi.announcements.deleteannouncement.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 38
+                },
+                "end": {
+                  "line": 0,
+                  "character": 44
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:38"
+            },
+            "parentId": "ConnectApi.announcements.deleteannouncement",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "announcementId": {
-          "id": "ConnectApi.announcements.deleteannouncement.announcementid",
-          "type": "var",
+        "announcementid": {
+          "id": "ConnectApi.announcements.method.deleteannouncement(string,string).varParam.announcementid",
+          "nodeType": "variable",
           "name": "announcementId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,29 +254,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_announcementId_-1:0"
+            "id": "token.type.identifier_announcementId_0:65"
           },
-          "signature": "String announcementId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "announcementId",
+            "textToLower": "announcementid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 65
+              },
+              "end": {
+                "line": 0,
+                "character": 79
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_announcementId_0:65"
+          },
+          "parentId": "ConnectApi.announcements.method.deleteannouncement(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.announcements.deleteannouncement.string",
+            "id": "ConnectApi.announcements.deleteannouncement.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 58
+                },
+                "end": {
+                  "line": 0,
+                  "character": 64
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:58"
+            },
+            "parentId": "ConnectApi.announcements.deleteannouncement",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. An announcement ID, which has a prefix of 0BT.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getannouncement(string,string)": {
-      "id": "ConnectApi.announcements.getannouncement",
+      "id": "ConnectApi.announcements.method.getannouncement(string,string)",
       "nodeType": "method",
       "name": "getAnnouncement",
       "startToken": {
@@ -222,6 +346,9 @@
         },
         "id": "declaration.entity.name.function_getAnnouncement_-1:0"
       },
+      "parentId": "ConnectApi.announcements",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -229,17 +356,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -248,30 +375,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.Announcement getAnnouncement(String communityId, String announcementId)",
+      "overrideSignature": "public static override ConnectApi.Announcement getAnnouncement(String communityId, String announcementId)",
       "simplifiedSignature": "getAnnouncement(String,String)",
       "datatype": {
-        "id": "ConnectApi.announcements.getannouncement.ConnectApi.Announcement",
+        "id": "ConnectApi.announcements.getannouncement.datatype.ConnectApi.Announcement",
         "nodeType": "datatype",
-        "name": "ConnectApi.Announcement"
+        "name": "ConnectApi.Announcement",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.announcements.getannouncement",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.Announcement"
       },
       "description": "Get an announcement.",
+      "parentName": "Announcements",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.announcements.getannouncement.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.announcements.method.getannouncement(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -280,28 +433,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:61"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:61"
+          },
+          "parentId": "ConnectApi.announcements.method.getannouncement(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.announcements.getannouncement.string",
+            "id": "ConnectApi.announcements.getannouncement.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:54"
+            },
+            "parentId": "ConnectApi.announcements.getannouncement",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "announcementId": {
-          "id": "ConnectApi.announcements.getannouncement.announcementid",
-          "type": "var",
+        "announcementid": {
+          "id": "ConnectApi.announcements.method.getannouncement(string,string).varParam.announcementid",
+          "nodeType": "variable",
           "name": "announcementId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,29 +508,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_announcementId_-1:0"
+            "id": "token.type.identifier_announcementId_0:81"
           },
-          "signature": "String announcementId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "announcementId",
+            "textToLower": "announcementid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 95
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_announcementId_0:81"
+          },
+          "parentId": "ConnectApi.announcements.method.getannouncement(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.announcements.getannouncement.string",
+            "id": "ConnectApi.announcements.getannouncement.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 80
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:74"
+            },
+            "parentId": "ConnectApi.announcements.getannouncement",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. An announcement ID, which has a prefix of 0BT.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getannouncements(string,string)": {
-      "id": "ConnectApi.announcements.getannouncements",
+      "id": "ConnectApi.announcements.method.getannouncements(string,string)",
       "nodeType": "method",
       "name": "getAnnouncements",
       "startToken": {
@@ -354,6 +600,9 @@
         },
         "id": "declaration.entity.name.function_getAnnouncements_-1:0"
       },
+      "parentId": "ConnectApi.announcements",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -361,17 +610,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -380,30 +629,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.AnnouncementPage getAnnouncements(String communityId, String parentId)",
+      "overrideSignature": "public static override ConnectApi.AnnouncementPage getAnnouncements(String communityId, String parentId)",
       "simplifiedSignature": "getAnnouncements(String,String)",
       "datatype": {
-        "id": "ConnectApi.announcements.getannouncements.ConnectApi.AnnouncementPage",
+        "id": "ConnectApi.announcements.getannouncements.datatype.ConnectApi.AnnouncementPage",
         "nodeType": "datatype",
-        "name": "ConnectApi.AnnouncementPage"
+        "name": "ConnectApi.AnnouncementPage",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.announcements.getannouncements",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.AnnouncementPage"
       },
       "description": "Get the first page of announcements.",
+      "parentName": "Announcements",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.announcements.getannouncements.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.announcements.method.getannouncements(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -412,28 +687,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:66"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 66
+              },
+              "end": {
+                "line": 0,
+                "character": 77
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:66"
+          },
+          "parentId": "ConnectApi.announcements.method.getannouncements(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.announcements.getannouncements.string",
+            "id": "ConnectApi.announcements.getannouncements.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 65
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:59"
+            },
+            "parentId": "ConnectApi.announcements.getannouncements",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "parentId": {
-          "id": "ConnectApi.announcements.getannouncements.parentid",
-          "type": "var",
+        "parentid": {
+          "id": "ConnectApi.announcements.method.getannouncements(string,string).varParam.parentid",
+          "nodeType": "variable",
           "name": "parentId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -442,29 +762,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_parentId_-1:0"
+            "id": "token.type.identifier_parentId_0:86"
           },
-          "signature": "String parentId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "parentId",
+            "textToLower": "parentid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 86
+              },
+              "end": {
+                "line": 0,
+                "character": 94
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_parentId_0:86"
+          },
+          "parentId": "ConnectApi.announcements.method.getannouncements(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.announcements.getannouncements.string",
+            "id": "ConnectApi.announcements.getannouncements.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 79
+                },
+                "end": {
+                  "line": 0,
+                  "character": 85
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:79"
+            },
+            "parentId": "ConnectApi.announcements.getannouncements",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of the parent entity for the announcement, that is, a group ID when the announcement appears in a group.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getannouncements(string,string,integer,integer)": {
-      "id": "ConnectApi.announcements.getannouncements",
+      "id": "ConnectApi.announcements.method.getannouncements(string,string,integer,integer)",
       "nodeType": "method",
       "name": "getAnnouncements",
       "startToken": {
@@ -486,6 +854,9 @@
         },
         "id": "declaration.entity.name.function_getAnnouncements_-1:0"
       },
+      "parentId": "ConnectApi.announcements",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -493,17 +864,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -512,30 +883,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.AnnouncementPage getAnnouncements(String communityId, String parentId, Integer pageParam, Integer pageSize)",
+      "overrideSignature": "public static override ConnectApi.AnnouncementPage getAnnouncements(String communityId, String parentId, Integer pageParam, Integer pageSize)",
       "simplifiedSignature": "getAnnouncements(String,String,Integer,Integer)",
       "datatype": {
-        "id": "ConnectApi.announcements.getannouncements.ConnectApi.AnnouncementPage",
+        "id": "ConnectApi.announcements.getannouncements.datatype.ConnectApi.AnnouncementPage",
         "nodeType": "datatype",
-        "name": "ConnectApi.AnnouncementPage"
+        "name": "ConnectApi.AnnouncementPage",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.announcements.getannouncements",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.AnnouncementPage"
       },
       "description": "Get a page of announcements.",
+      "parentName": "Announcements",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.announcements.getannouncements.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.announcements.method.getannouncements(string,string,integer,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -544,28 +941,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:66"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 66
+              },
+              "end": {
+                "line": 0,
+                "character": 77
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:66"
+          },
+          "parentId": "ConnectApi.announcements.method.getannouncements(string,string,integer,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.announcements.getannouncements.string",
+            "id": "ConnectApi.announcements.getannouncements.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 65
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:59"
+            },
+            "parentId": "ConnectApi.announcements.getannouncements",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "parentId": {
-          "id": "ConnectApi.announcements.getannouncements.parentid",
-          "type": "var",
+        "parentid": {
+          "id": "ConnectApi.announcements.method.getannouncements(string,string,integer,integer).varParam.parentid",
+          "nodeType": "variable",
           "name": "parentId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -574,28 +1016,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_parentId_-1:0"
+            "id": "token.type.identifier_parentId_0:86"
           },
-          "signature": "String parentId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "parentId",
+            "textToLower": "parentid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 86
+              },
+              "end": {
+                "line": 0,
+                "character": 94
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_parentId_0:86"
+          },
+          "parentId": "ConnectApi.announcements.method.getannouncements(string,string,integer,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.announcements.getannouncements.string",
+            "id": "ConnectApi.announcements.getannouncements.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 79
+                },
+                "end": {
+                  "line": 0,
+                  "character": 85
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:79"
+            },
+            "parentId": "ConnectApi.announcements.getannouncements",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "pageParam": {
-          "id": "ConnectApi.announcements.getannouncements.pageparam",
-          "type": "var",
+        "pageparam": {
+          "id": "ConnectApi.announcements.method.getannouncements(string,string,integer,integer).varParam.pageparam",
+          "nodeType": "variable",
           "name": "pageParam",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -604,28 +1091,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 104
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 113
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageParam_-1:0"
+            "id": "token.type.identifier_pageParam_0:104"
           },
-          "signature": "Integer pageParam",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 104
+              },
+              "end": {
+                "line": 0,
+                "character": 113
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:104"
+          },
+          "parentId": "ConnectApi.announcements.method.getannouncements(string,string,integer,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.announcements.getannouncements.integer",
+            "id": "ConnectApi.announcements.getannouncements.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 96
+                },
+                "end": {
+                  "line": 0,
+                  "character": 103
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:96"
+            },
+            "parentId": "ConnectApi.announcements.getannouncements",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
-        "pageSize": {
-          "id": "ConnectApi.announcements.getannouncements.pagesize",
-          "type": "var",
+        "pagesize": {
+          "id": "ConnectApi.announcements.method.getannouncements(string,string,integer,integer).varParam.pagesize",
+          "nodeType": "variable",
           "name": "pageSize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -634,29 +1166,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 123
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 131
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageSize_-1:0"
+            "id": "token.type.identifier_pageSize_0:123"
           },
-          "signature": "Integer pageSize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 123
+              },
+              "end": {
+                "line": 0,
+                "character": 131
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:123"
+          },
+          "parentId": "ConnectApi.announcements.method.getannouncements(string,string,integer,integer)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.announcements.getannouncements.integer",
+            "id": "ConnectApi.announcements.getannouncements.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 115
+                },
+                "end": {
+                  "line": 0,
+                  "character": 122
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:115"
+            },
+            "parentId": "ConnectApi.announcements.getannouncements",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of the parent entity for the announcement, that is, a group ID when the announcement appears in a group. Specifies the number of the page you want returned. Starts at 0. If you pass in null or 0, the first page is returned. Specifies the number of announcements per page.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "postannouncement(string,connectapi.announcementinput)": {
-      "id": "ConnectApi.announcements.postannouncement",
+      "id": "ConnectApi.announcements.method.postannouncement(string,connectapi.announcementinput)",
       "nodeType": "method",
       "name": "postAnnouncement",
       "startToken": {
@@ -678,6 +1258,9 @@
         },
         "id": "declaration.entity.name.function_postAnnouncement_-1:0"
       },
+      "parentId": "ConnectApi.announcements",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -685,17 +1268,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -704,30 +1287,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.Announcement postAnnouncement(String communityId, ConnectApi.AnnouncementInput announcement)",
+      "overrideSignature": "public static override ConnectApi.Announcement postAnnouncement(String communityId, ConnectApi.AnnouncementInput announcement)",
       "simplifiedSignature": "postAnnouncement(String,ConnectApi.AnnouncementInput)",
       "datatype": {
-        "id": "ConnectApi.announcements.postannouncement.ConnectApi.Announcement",
+        "id": "ConnectApi.announcements.postannouncement.datatype.ConnectApi.Announcement",
         "nodeType": "datatype",
-        "name": "ConnectApi.Announcement"
+        "name": "ConnectApi.Announcement",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.announcements.postannouncement",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.Announcement"
       },
       "description": "Post an announcement.",
+      "parentName": "Announcements",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.announcements.postannouncement.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.announcements.method.postannouncement(string,connectapi.announcementinput).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -736,28 +1345,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 62
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:62"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 62
+              },
+              "end": {
+                "line": 0,
+                "character": 73
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:62"
+          },
+          "parentId": "ConnectApi.announcements.method.postannouncement(string,connectapi.announcementinput)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.announcements.postannouncement.string",
+            "id": "ConnectApi.announcements.postannouncement.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 55
+                },
+                "end": {
+                  "line": 0,
+                  "character": 61
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:55"
+            },
+            "parentId": "ConnectApi.announcements.postannouncement",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "announcement": {
-          "id": "ConnectApi.announcements.postannouncement.announcement",
-          "type": "var",
+          "id": "ConnectApi.announcements.method.postannouncement(string,connectapi.announcementinput).varParam.announcement",
+          "nodeType": "variable",
           "name": "announcement",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -766,29 +1420,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 104
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 116
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_announcement_-1:0"
+            "id": "token.type.identifier_announcement_0:104"
           },
-          "signature": "ConnectApi.AnnouncementInput announcement",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "announcement",
+            "textToLower": "announcement",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 104
+              },
+              "end": {
+                "line": 0,
+                "character": 116
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_announcement_0:104"
+          },
+          "parentId": "ConnectApi.announcements.method.postannouncement(string,connectapi.announcementinput)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.announcements.postannouncement.connectapi.announcementinput",
+            "id": "ConnectApi.announcements.postannouncement.datatype.ConnectApi.AnnouncementInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.AnnouncementInput"
-          }
+            "name": "ConnectApi.AnnouncementInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 75
+                },
+                "end": {
+                  "line": 0,
+                  "character": 85
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:75"
+            },
+            "parentId": "ConnectApi.announcements.postannouncement",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.AnnouncementInput"
+          },
+          "description": "Use either the ID for a community, internal, or null. A ConnectApi.AnnouncementInput object.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "updateannouncement(string,string,datetime)": {
-      "id": "ConnectApi.announcements.updateannouncement",
+      "id": "ConnectApi.announcements.method.updateannouncement(string,string,datetime)",
       "nodeType": "method",
       "name": "updateAnnouncement",
       "startToken": {
@@ -810,6 +1512,9 @@
         },
         "id": "declaration.entity.name.function_updateAnnouncement_-1:0"
       },
+      "parentId": "ConnectApi.announcements",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -817,17 +1522,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -836,30 +1541,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.Announcement updateAnnouncement(String communityId, String announcementId, Datetime expirationDate)",
+      "overrideSignature": "public static override ConnectApi.Announcement updateAnnouncement(String communityId, String announcementId, Datetime expirationDate)",
       "simplifiedSignature": "updateAnnouncement(String,String,Datetime)",
       "datatype": {
-        "id": "ConnectApi.announcements.updateannouncement.ConnectApi.Announcement",
+        "id": "ConnectApi.announcements.updateannouncement.datatype.ConnectApi.Announcement",
         "nodeType": "datatype",
-        "name": "ConnectApi.Announcement"
+        "name": "ConnectApi.Announcement",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.announcements.updateannouncement",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.Announcement"
       },
       "description": "Update the expiration date of an announcement.",
+      "parentName": "Announcements",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.announcements.updateannouncement.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.announcements.method.updateannouncement(string,string,datetime).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -868,28 +1599,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 75
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:64"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 75
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:64"
+          },
+          "parentId": "ConnectApi.announcements.method.updateannouncement(string,string,datetime)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.announcements.updateannouncement.string",
+            "id": "ConnectApi.announcements.updateannouncement.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 57
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:57"
+            },
+            "parentId": "ConnectApi.announcements.updateannouncement",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "announcementId": {
-          "id": "ConnectApi.announcements.updateannouncement.announcementid",
-          "type": "var",
+        "announcementid": {
+          "id": "ConnectApi.announcements.method.updateannouncement(string,string,datetime).varParam.announcementid",
+          "nodeType": "variable",
           "name": "announcementId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -898,28 +1674,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_announcementId_-1:0"
+            "id": "token.type.identifier_announcementId_0:84"
           },
-          "signature": "String announcementId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "announcementId",
+            "textToLower": "announcementid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 84
+              },
+              "end": {
+                "line": 0,
+                "character": 98
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_announcementId_0:84"
+          },
+          "parentId": "ConnectApi.announcements.method.updateannouncement(string,string,datetime)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.announcements.updateannouncement.string",
+            "id": "ConnectApi.announcements.updateannouncement.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 77
+                },
+                "end": {
+                  "line": 0,
+                  "character": 83
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:77"
+            },
+            "parentId": "ConnectApi.announcements.updateannouncement",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "expirationDate": {
-          "id": "ConnectApi.announcements.updateannouncement.expirationdate",
-          "type": "var",
+        "expirationdate": {
+          "id": "ConnectApi.announcements.method.updateannouncement(string,string,datetime).varParam.expirationdate",
+          "nodeType": "variable",
           "name": "expirationDate",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -928,30 +1749,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 109
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 123
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_expirationDate_-1:0"
+            "id": "token.type.identifier_expirationDate_0:109"
           },
-          "signature": "Datetime expirationDate",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "expirationDate",
+            "textToLower": "expirationdate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 109
+              },
+              "end": {
+                "line": 0,
+                "character": 123
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_expirationDate_0:109"
+          },
+          "parentId": "ConnectApi.announcements.method.updateannouncement(string,string,datetime)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.announcements.updateannouncement.datetime",
+            "id": "ConnectApi.announcements.updateannouncement.datatype.Datetime",
             "nodeType": "datatype",
-            "name": "Datetime"
-          }
+            "name": "Datetime",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Datetime",
+              "textToLower": "datetime",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 100
+                },
+                "end": {
+                  "line": 0,
+                  "character": 108
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Datetime_0:100"
+            },
+            "parentId": "ConnectApi.announcements.updateannouncement",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Datetime"
+          },
+          "description": "Use either the ID for a community, internal, or null. An announcement ID, which has a prefix of 0BT. The Salesforce UI displays an announcement until 11:59 p.m. on this date unless another announcement is posted first. The Salesforce UI ignores the time value in the expirationDate. However, you can use the time value to create your own display logic in your own UI.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 6,
+  "queries": []
 }

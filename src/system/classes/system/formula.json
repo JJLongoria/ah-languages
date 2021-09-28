@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Formula_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "recalculateformulas(list)": {
-      "id": "System.formula.recalculateformulas",
+    "recalculateformulas(list<sobject>)": {
+      "id": "System.formula.method.recalculateformulas(list<sobject>)",
       "nodeType": "method",
       "name": "recalculateFormulas",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_recalculateFormulas_-1:0"
       },
+      "parentId": "System.formula",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,62 +121,192 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static List<FormulaRecalcResult Class> recalculateFormulas(List <SObject>)",
-      "simplifiedSignature": "recalculateFormulas(List)",
+      "signature": "public static List<System.FormulaRecalcResult> recalculateFormulas(List<SObject> sobjects)",
+      "overrideSignature": "public static override List<System.FormulaRecalcResult> recalculateFormulas(List<SObject> sobjects)",
+      "simplifiedSignature": "recalculateFormulas(List<SObject>)",
       "datatype": {
-        "id": "System.formula.recalculateformulas.List<FormulaRecalcResult Class>",
+        "id": "System.formula.recalculateformulas.datatype.List<System.FormulaRecalcResult>",
         "nodeType": "datatype",
-        "name": "List<FormulaRecalcResult Class>"
-      },
-      "description": "Updates (recalculates) all formula fields on the input sObjects",
-      "params": {
-        "<SObject>": {
-          "id": "System.formula.recalculateformulas.<sobject>",
-          "type": "var",
-          "name": "<SObject>",
+        "name": "List<System.FormulaRecalcResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "System.formula.recalculateformulas",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.formula.recalculateformulas.datatype.List<System.FormulaRecalcResult>.value.System.FormulaRecalcResult",
+          "nodeType": "datatype",
+          "name": "System.FormulaRecalcResult",
           "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "<SObject>",
-            "textToLower": "<sobject>",
+            "type": "datatype.support.class",
+            "text": "System",
+            "textToLower": "system",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 19
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 25
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<SObject>_-1:0"
+            "id": "token.type.identifier_System_0:19"
           },
-          "signature": "List <SObject>",
-          "datatype": {
-            "id": "System.formula.recalculateformulas.list",
-            "nodeType": "datatype",
-            "name": "List"
-          }
+          "order": 0,
+          "memberOrder": 0,
+          "type": "System.FormulaRecalcResult"
         }
-      }
+      },
+      "description": "Updates (recalculates) all formula fields on the input sObjects",
+      "parentName": "Formula",
+      "variables": {},
+      "params": {
+        "sobjects": {
+          "id": "System.formula.method.recalculateformulas(list<sobject>).varParam.sobjects",
+          "nodeType": "variable",
+          "name": "sobjects",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sobjects",
+            "textToLower": "sobjects",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 89
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sobjects_0:81"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sobjects",
+            "textToLower": "sobjects",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 89
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sobjects_0:81"
+          },
+          "parentId": "System.formula.method.recalculateformulas(list<sobject>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.formula.recalculateformulas.datatype.List<SObject>",
+            "nodeType": "datatype",
+            "name": "List<SObject>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 67
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:67"
+            },
+            "parentId": "System.formula.recalculateformulas",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.formula.recalculateformulas.datatype.List<SObject>.value.SObject",
+              "nodeType": "datatype",
+              "name": "SObject",
+              "startToken": {
+                "type": "datatype.support.class",
+                "text": "SObject",
+                "textToLower": "sobject",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 72
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 79
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_SObject_0:72"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "SObject"
+            }
+          },
+          "description": "List of sObjects whose Formula fields are to be recalculated.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

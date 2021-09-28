@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_StubProvider_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "handlemethodcall(object,string,system.type,list)": {
-      "id": "System.stubprovider.handlemethodcall",
+    "handlemethodcall(object,string,system.type,list<system.type>,list<string>,list<object>)": {
+      "id": "System.stubprovider.method.handlemethodcall(object,string,system.type,list<system.type>,list<string>,list<object>)",
       "nodeType": "method",
       "name": "handleMethodCall",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_handleMethodCall_-1:0"
       },
+      "parentId": "System.stubprovider",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Object handleMethodCall(Object stubbedObject, String stubbedMethodName, System.Type returnType, List <System.Type>)",
-      "simplifiedSignature": "handleMethodCall(Object,String,System.Type,List)",
+      "signature": "public Object handleMethodCall(Object stubbedObject, String stubbedMethodName, System.Type returnType, List<System.Type> listOfParamTypes, List<String> listOfParamNames, List<Object> listOfArgs)",
+      "overrideSignature": "public override Object handleMethodCall(Object stubbedObject, String stubbedMethodName, System.Type returnType, List<System.Type> listOfParamTypes, List<String> listOfParamNames, List<Object> listOfArgs)",
+      "simplifiedSignature": "handleMethodCall(Object,String,System.Type,List<System.Type>,List<String>,List<Object>)",
       "datatype": {
-        "id": "System.stubprovider.handlemethodcall.Object",
+        "id": "System.stubprovider.handlemethodcall.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:7"
+        },
+        "parentId": "System.stubprovider.handlemethodcall",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Use this method to define the behavior of each method of a stubbed class.",
+      "parentName": "StubProvider",
+      "variables": {},
       "params": {
-        "stubbedObject": {
-          "id": "System.stubprovider.handlemethodcall.stubbedobject",
-          "type": "var",
+        "stubbedobject": {
+          "id": "System.stubprovider.method.handlemethodcall(object,string,system.type,list<system.type>,list<string>,list<object>).varParam.stubbedobject",
+          "nodeType": "variable",
           "name": "stubbedObject",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,28 +160,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_stubbedObject_-1:0"
+            "id": "token.type.identifier_stubbedObject_0:38"
           },
-          "signature": "Object stubbedObject",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "stubbedObject",
+            "textToLower": "stubbedobject",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 51
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_stubbedObject_0:38"
+          },
+          "parentId": "System.stubprovider.method.handlemethodcall(object,string,system.type,list<system.type>,list<string>,list<object>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.stubprovider.handlemethodcall.object",
+            "id": "System.stubprovider.handlemethodcall.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:31"
+            },
+            "parentId": "System.stubprovider.handlemethodcall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "scope": null
         },
-        "stubbedMethodName": {
-          "id": "System.stubprovider.handlemethodcall.stubbedmethodname",
-          "type": "var",
+        "stubbedmethodname": {
+          "id": "System.stubprovider.method.handlemethodcall(object,string,system.type,list<system.type>,list<string>,list<object>).varParam.stubbedmethodname",
+          "nodeType": "variable",
           "name": "stubbedMethodName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -159,28 +235,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_stubbedMethodName_-1:0"
+            "id": "token.type.identifier_stubbedMethodName_0:60"
           },
-          "signature": "String stubbedMethodName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "stubbedMethodName",
+            "textToLower": "stubbedmethodname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 60
+              },
+              "end": {
+                "line": 0,
+                "character": 77
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_stubbedMethodName_0:60"
+          },
+          "parentId": "System.stubprovider.method.handlemethodcall(object,string,system.type,list<system.type>,list<string>,list<object>)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.stubprovider.handlemethodcall.string",
+            "id": "System.stubprovider.handlemethodcall.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 53
+                },
+                "end": {
+                  "line": 0,
+                  "character": 59
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:53"
+            },
+            "parentId": "System.stubprovider.handlemethodcall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "returnType": {
-          "id": "System.stubprovider.handlemethodcall.returntype",
-          "type": "var",
+        "returntype": {
+          "id": "System.stubprovider.method.handlemethodcall(object,string,system.type,list<system.type>,list<string>,list<object>).varParam.returntype",
+          "nodeType": "variable",
           "name": "returnType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -189,60 +310,386 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 91
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 101
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_returnType_-1:0"
+            "id": "token.type.identifier_returnType_0:91"
           },
-          "signature": "System.Type returnType",
-          "datatype": {
-            "id": "System.stubprovider.handlemethodcall.system.type",
-            "nodeType": "datatype",
-            "name": "System.Type"
-          }
-        },
-        "<System.Type>": {
-          "id": "System.stubprovider.handlemethodcall.<system.type>",
-          "type": "var",
-          "name": "<System.Type>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<System.Type>",
-            "textToLower": "<system.type>",
+            "text": "returnType",
+            "textToLower": "returntype",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 91
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 101
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<System.Type>_-1:0"
+            "id": "token.type.identifier_returnType_0:91"
           },
-          "signature": "List <System.Type>",
+          "parentId": "System.stubprovider.method.handlemethodcall(object,string,system.type,list<system.type>,list<string>,list<object>)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.stubprovider.handlemethodcall.list",
+            "id": "System.stubprovider.handlemethodcall.datatype.System.Type",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "System.Type",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 79
+                },
+                "end": {
+                  "line": 0,
+                  "character": 85
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:79"
+            },
+            "parentId": "System.stubprovider.handlemethodcall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.Type"
+          },
+          "scope": null
+        },
+        "listofparamtypes": {
+          "id": "System.stubprovider.method.handlemethodcall(object,string,system.type,list<system.type>,list<string>,list<object>).varParam.listofparamtypes",
+          "nodeType": "variable",
+          "name": "listOfParamTypes",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "listOfParamTypes",
+            "textToLower": "listofparamtypes",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 121
+              },
+              "end": {
+                "line": 0,
+                "character": 137
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_listOfParamTypes_0:121"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "listOfParamTypes",
+            "textToLower": "listofparamtypes",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 121
+              },
+              "end": {
+                "line": 0,
+                "character": 137
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_listOfParamTypes_0:121"
+          },
+          "parentId": "System.stubprovider.method.handlemethodcall(object,string,system.type,list<system.type>,list<string>,list<object>)",
+          "order": 4,
+          "memberOrder": 4,
+          "datatype": {
+            "id": "System.stubprovider.handlemethodcall.datatype.List<System.Type>",
+            "nodeType": "datatype",
+            "name": "List<System.Type>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 103
+                },
+                "end": {
+                  "line": 0,
+                  "character": 107
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:103"
+            },
+            "parentId": "System.stubprovider.handlemethodcall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.stubprovider.handlemethodcall.datatype.List<System.Type>.value.System.Type",
+              "nodeType": "datatype",
+              "name": "System.Type",
+              "startToken": {
+                "type": "datatype.support.class",
+                "text": "System",
+                "textToLower": "system",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 108
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 114
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_System_0:108"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "System.Type"
+            }
+          },
+          "scope": null
+        },
+        "listofparamnames": {
+          "id": "System.stubprovider.method.handlemethodcall(object,string,system.type,list<system.type>,list<string>,list<object>).varParam.listofparamnames",
+          "nodeType": "variable",
+          "name": "listOfParamNames",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "listOfParamNames",
+            "textToLower": "listofparamnames",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 152
+              },
+              "end": {
+                "line": 0,
+                "character": 168
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_listOfParamNames_0:152"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "listOfParamNames",
+            "textToLower": "listofparamnames",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 152
+              },
+              "end": {
+                "line": 0,
+                "character": 168
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_listOfParamNames_0:152"
+          },
+          "parentId": "System.stubprovider.method.handlemethodcall(object,string,system.type,list<system.type>,list<string>,list<object>)",
+          "order": 5,
+          "memberOrder": 5,
+          "datatype": {
+            "id": "System.stubprovider.handlemethodcall.datatype.List<String>",
+            "nodeType": "datatype",
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 139
+                },
+                "end": {
+                  "line": 0,
+                  "character": 143
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:139"
+            },
+            "parentId": "System.stubprovider.handlemethodcall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.stubprovider.handlemethodcall.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 144
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 150
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:144"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
+        },
+        "listofargs": {
+          "id": "System.stubprovider.method.handlemethodcall(object,string,system.type,list<system.type>,list<string>,list<object>).varParam.listofargs",
+          "nodeType": "variable",
+          "name": "listOfArgs",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "listOfArgs",
+            "textToLower": "listofargs",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 183
+              },
+              "end": {
+                "line": 0,
+                "character": 193
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_listOfArgs_0:183"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "listOfArgs",
+            "textToLower": "listofargs",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 183
+              },
+              "end": {
+                "line": 0,
+                "character": 193
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_listOfArgs_0:183"
+          },
+          "parentId": "System.stubprovider.method.handlemethodcall(object,string,system.type,list<system.type>,list<string>,list<object>)",
+          "order": 6,
+          "memberOrder": 6,
+          "datatype": {
+            "id": "System.stubprovider.handlemethodcall.datatype.List<Object>",
+            "nodeType": "datatype",
+            "name": "List<Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 170
+                },
+                "end": {
+                  "line": 0,
+                  "character": 174
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:170"
+            },
+            "parentId": "System.stubprovider.handlemethodcall",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.stubprovider.handlemethodcall.datatype.List<Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 175
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 181
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:175"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            }
+          },
+          "description": "The stubbed object. The name of the invoked method. The return type of the invoked method. A list of the parameter types of the invoked method. A list of the parameter names of the invoked method. The actual argument values passed into this method at runtime.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

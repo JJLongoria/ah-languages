@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Crypto_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "decrypt(string,blob,blob,blob)": {
-      "id": "System.crypto.decrypt",
+      "id": "System.crypto.method.decrypt(string,blob,blob,blob)",
       "nodeType": "method",
       "name": "decrypt",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_decrypt_-1:0"
       },
+      "parentId": "System.crypto",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Blob decrypt(String algorithmName, Blob privateKey, Blob initializationVector, Blob cipherText)",
+      "overrideSignature": "public static override Blob decrypt(String algorithmName, Blob privateKey, Blob initializationVector, Blob cipherText)",
       "simplifiedSignature": "decrypt(String,Blob,Blob,Blob)",
       "datatype": {
-        "id": "System.crypto.decrypt.Blob",
+        "id": "System.crypto.decrypt.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.crypto.decrypt",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Decrypts the Blob cipherText using the specified algorithm, private key, and initialization vector. Use this method to decrypt blobs encrypted using a third party application or the encrypt method.",
+      "parentName": "Crypto",
+      "variables": {},
       "params": {
-        "algorithmName": {
-          "id": "System.crypto.decrypt.algorithmname",
-          "type": "var",
+        "algorithmname": {
+          "id": "System.crypto.method.decrypt(string,blob,blob,blob).varParam.algorithmname",
+          "nodeType": "variable",
           "name": "algorithmName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+            "id": "token.type.identifier_algorithmName_0:34"
           },
-          "signature": "String algorithmName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_algorithmName_0:34"
+          },
+          "parentId": "System.crypto.method.decrypt(string,blob,blob,blob)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.crypto.decrypt.string",
+            "id": "System.crypto.decrypt.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 27
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:27"
+            },
+            "parentId": "System.crypto.decrypt",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "privateKey": {
-          "id": "System.crypto.decrypt.privatekey",
-          "type": "var",
+        "privatekey": {
+          "id": "System.crypto.method.decrypt(string,blob,blob,blob).varParam.privatekey",
+          "nodeType": "variable",
           "name": "privateKey",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,28 +254,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_privateKey_-1:0"
+            "id": "token.type.identifier_privateKey_0:54"
           },
-          "signature": "Blob privateKey",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 64
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_privateKey_0:54"
+          },
+          "parentId": "System.crypto.method.decrypt(string,blob,blob,blob)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.crypto.decrypt.blob",
+            "id": "System.crypto.decrypt.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:49"
+            },
+            "parentId": "System.crypto.decrypt",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
         },
-        "initializationVector": {
-          "id": "System.crypto.decrypt.initializationvector",
-          "type": "var",
+        "initializationvector": {
+          "id": "System.crypto.method.decrypt(string,blob,blob,blob).varParam.initializationvector",
+          "nodeType": "variable",
           "name": "initializationVector",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -208,28 +329,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 91
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_initializationVector_-1:0"
+            "id": "token.type.identifier_initializationVector_0:71"
           },
-          "signature": "Blob initializationVector",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "initializationVector",
+            "textToLower": "initializationvector",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 71
+              },
+              "end": {
+                "line": 0,
+                "character": 91
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_initializationVector_0:71"
+          },
+          "parentId": "System.crypto.method.decrypt(string,blob,blob,blob)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.crypto.decrypt.blob",
+            "id": "System.crypto.decrypt.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 66
+                },
+                "end": {
+                  "line": 0,
+                  "character": 70
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:66"
+            },
+            "parentId": "System.crypto.decrypt",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
         },
-        "cipherText": {
-          "id": "System.crypto.decrypt.ciphertext",
-          "type": "var",
+        "ciphertext": {
+          "id": "System.crypto.method.decrypt(string,blob,blob,blob).varParam.ciphertext",
+          "nodeType": "variable",
           "name": "cipherText",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -238,29 +404,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 108
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_cipherText_-1:0"
+            "id": "token.type.identifier_cipherText_0:98"
           },
-          "signature": "Blob cipherText",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "cipherText",
+            "textToLower": "ciphertext",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 98
+              },
+              "end": {
+                "line": 0,
+                "character": 108
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_cipherText_0:98"
+          },
+          "parentId": "System.crypto.method.decrypt(string,blob,blob,blob)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "System.crypto.decrypt.blob",
+            "id": "System.crypto.decrypt.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 93
+                },
+                "end": {
+                  "line": 0,
+                  "character": 97
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:93"
+            },
+            "parentId": "System.crypto.decrypt",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "decryptwithmanagediv(string,blob,blob)": {
-      "id": "System.crypto.decryptwithmanagediv",
+      "id": "System.crypto.method.decryptwithmanagediv(string,blob,blob)",
       "nodeType": "method",
       "name": "decryptWithManagedIV",
       "startToken": {
@@ -282,6 +496,9 @@
         },
         "id": "declaration.entity.name.function_decryptWithManagedIV_-1:0"
       },
+      "parentId": "System.crypto",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -289,17 +506,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -308,30 +525,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Blob decryptWithManagedIV(String algorithmName, Blob privateKey, Blob IVAndCipherText)",
+      "overrideSignature": "public static override Blob decryptWithManagedIV(String algorithmName, Blob privateKey, Blob IVAndCipherText)",
       "simplifiedSignature": "decryptWithManagedIV(String,Blob,Blob)",
       "datatype": {
-        "id": "System.crypto.decryptwithmanagediv.Blob",
+        "id": "System.crypto.decryptwithmanagediv.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.crypto.decryptwithmanagediv",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Decrypts the Blob IVAndCipherText using the specified algorithm and private key. Use this method to decrypt blobs encrypted using a third party application or the encryptWithManagedIV method.",
+      "parentName": "Crypto",
+      "variables": {},
       "params": {
-        "algorithmName": {
-          "id": "System.crypto.decryptwithmanagediv.algorithmname",
-          "type": "var",
+        "algorithmname": {
+          "id": "System.crypto.method.decryptwithmanagediv(string,blob,blob).varParam.algorithmname",
+          "nodeType": "variable",
           "name": "algorithmName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -340,28 +583,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+            "id": "token.type.identifier_algorithmName_0:47"
           },
-          "signature": "String algorithmName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 60
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_algorithmName_0:47"
+          },
+          "parentId": "System.crypto.method.decryptwithmanagediv(string,blob,blob)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.crypto.decryptwithmanagediv.string",
+            "id": "System.crypto.decryptwithmanagediv.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 40
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:40"
+            },
+            "parentId": "System.crypto.decryptwithmanagediv",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "privateKey": {
-          "id": "System.crypto.decryptwithmanagediv.privatekey",
-          "type": "var",
+        "privatekey": {
+          "id": "System.crypto.method.decryptwithmanagediv(string,blob,blob).varParam.privatekey",
+          "nodeType": "variable",
           "name": "privateKey",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -370,28 +658,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_privateKey_-1:0"
+            "id": "token.type.identifier_privateKey_0:67"
           },
-          "signature": "Blob privateKey",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 77
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_privateKey_0:67"
+          },
+          "parentId": "System.crypto.method.decryptwithmanagediv(string,blob,blob)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.crypto.decryptwithmanagediv.blob",
+            "id": "System.crypto.decryptwithmanagediv.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 62
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:62"
+            },
+            "parentId": "System.crypto.decryptwithmanagediv",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
         },
-        "IVAndCipherText": {
-          "id": "System.crypto.decryptwithmanagediv.ivandciphertext",
-          "type": "var",
+        "ivandciphertext": {
+          "id": "System.crypto.method.decryptwithmanagediv(string,blob,blob).varParam.ivandciphertext",
+          "nodeType": "variable",
           "name": "IVAndCipherText",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -400,29 +733,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 99
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_IVAndCipherText_-1:0"
+            "id": "token.type.identifier_IVAndCipherText_0:84"
           },
-          "signature": "Blob IVAndCipherText",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "IVAndCipherText",
+            "textToLower": "ivandciphertext",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 84
+              },
+              "end": {
+                "line": 0,
+                "character": 99
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_IVAndCipherText_0:84"
+          },
+          "parentId": "System.crypto.method.decryptwithmanagediv(string,blob,blob)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.crypto.decryptwithmanagediv.blob",
+            "id": "System.crypto.decryptwithmanagediv.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 79
+                },
+                "end": {
+                  "line": 0,
+                  "character": 83
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:79"
+            },
+            "parentId": "System.crypto.decryptwithmanagediv",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "description": "The first 128 bits (16 bytes) of IVAndCipherText must contain the initialization vector.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "encrypt(string,blob,blob,blob)": {
-      "id": "System.crypto.encrypt",
+      "id": "System.crypto.method.encrypt(string,blob,blob,blob)",
       "nodeType": "method",
       "name": "encrypt",
       "startToken": {
@@ -444,6 +825,9 @@
         },
         "id": "declaration.entity.name.function_encrypt_-1:0"
       },
+      "parentId": "System.crypto",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -451,17 +835,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -470,30 +854,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Blob encrypt(String algorithmName, Blob privateKey, Blob initializationVector, Blob clearText)",
+      "overrideSignature": "public static override Blob encrypt(String algorithmName, Blob privateKey, Blob initializationVector, Blob clearText)",
       "simplifiedSignature": "encrypt(String,Blob,Blob,Blob)",
       "datatype": {
-        "id": "System.crypto.encrypt.Blob",
+        "id": "System.crypto.encrypt.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.crypto.encrypt",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Encrypts the Blob clearText using the specified algorithm, private key and initialization vector. Use this method when you want to specify your own initialization vector.",
+      "parentName": "Crypto",
+      "variables": {},
       "params": {
-        "algorithmName": {
-          "id": "System.crypto.encrypt.algorithmname",
-          "type": "var",
+        "algorithmname": {
+          "id": "System.crypto.method.encrypt(string,blob,blob,blob).varParam.algorithmname",
+          "nodeType": "variable",
           "name": "algorithmName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -502,28 +912,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+            "id": "token.type.identifier_algorithmName_0:34"
           },
-          "signature": "String algorithmName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_algorithmName_0:34"
+          },
+          "parentId": "System.crypto.method.encrypt(string,blob,blob,blob)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.crypto.encrypt.string",
+            "id": "System.crypto.encrypt.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 27
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:27"
+            },
+            "parentId": "System.crypto.encrypt",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "privateKey": {
-          "id": "System.crypto.encrypt.privatekey",
-          "type": "var",
+        "privatekey": {
+          "id": "System.crypto.method.encrypt(string,blob,blob,blob).varParam.privatekey",
+          "nodeType": "variable",
           "name": "privateKey",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -532,28 +987,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_privateKey_-1:0"
+            "id": "token.type.identifier_privateKey_0:54"
           },
-          "signature": "Blob privateKey",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 64
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_privateKey_0:54"
+          },
+          "parentId": "System.crypto.method.encrypt(string,blob,blob,blob)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.crypto.encrypt.blob",
+            "id": "System.crypto.encrypt.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:49"
+            },
+            "parentId": "System.crypto.encrypt",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
         },
-        "initializationVector": {
-          "id": "System.crypto.encrypt.initializationvector",
-          "type": "var",
+        "initializationvector": {
+          "id": "System.crypto.method.encrypt(string,blob,blob,blob).varParam.initializationvector",
+          "nodeType": "variable",
           "name": "initializationVector",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -562,28 +1062,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 91
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_initializationVector_-1:0"
+            "id": "token.type.identifier_initializationVector_0:71"
           },
-          "signature": "Blob initializationVector",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "initializationVector",
+            "textToLower": "initializationvector",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 71
+              },
+              "end": {
+                "line": 0,
+                "character": 91
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_initializationVector_0:71"
+          },
+          "parentId": "System.crypto.method.encrypt(string,blob,blob,blob)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.crypto.encrypt.blob",
+            "id": "System.crypto.encrypt.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 66
+                },
+                "end": {
+                  "line": 0,
+                  "character": 70
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:66"
+            },
+            "parentId": "System.crypto.encrypt",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
         },
-        "clearText": {
-          "id": "System.crypto.encrypt.cleartext",
-          "type": "var",
+        "cleartext": {
+          "id": "System.crypto.method.encrypt(string,blob,blob,blob).varParam.cleartext",
+          "nodeType": "variable",
           "name": "clearText",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -592,29 +1137,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 107
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_clearText_-1:0"
+            "id": "token.type.identifier_clearText_0:98"
           },
-          "signature": "Blob clearText",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "clearText",
+            "textToLower": "cleartext",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 98
+              },
+              "end": {
+                "line": 0,
+                "character": 107
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_clearText_0:98"
+          },
+          "parentId": "System.crypto.method.encrypt(string,blob,blob,blob)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "System.crypto.encrypt.blob",
+            "id": "System.crypto.encrypt.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 93
+                },
+                "end": {
+                  "line": 0,
+                  "character": 97
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:93"
+            },
+            "parentId": "System.crypto.encrypt",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "encryptwithmanagediv(string,blob,blob)": {
-      "id": "System.crypto.encryptwithmanagediv",
+      "id": "System.crypto.method.encryptwithmanagediv(string,blob,blob)",
       "nodeType": "method",
       "name": "encryptWithManagedIV",
       "startToken": {
@@ -636,6 +1229,9 @@
         },
         "id": "declaration.entity.name.function_encryptWithManagedIV_-1:0"
       },
+      "parentId": "System.crypto",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -643,17 +1239,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -662,30 +1258,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Blob encryptWithManagedIV(String algorithmName, Blob privateKey, Blob clearText)",
+      "overrideSignature": "public static override Blob encryptWithManagedIV(String algorithmName, Blob privateKey, Blob clearText)",
       "simplifiedSignature": "encryptWithManagedIV(String,Blob,Blob)",
       "datatype": {
-        "id": "System.crypto.encryptwithmanagediv.Blob",
+        "id": "System.crypto.encryptwithmanagediv.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.crypto.encryptwithmanagediv",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Encrypts the Blob clearText using the specified algorithm and private key. Use this method when you want Salesforce to generate the initialization vector for you.",
+      "parentName": "Crypto",
+      "variables": {},
       "params": {
-        "algorithmName": {
-          "id": "System.crypto.encryptwithmanagediv.algorithmname",
-          "type": "var",
+        "algorithmname": {
+          "id": "System.crypto.method.encryptwithmanagediv(string,blob,blob).varParam.algorithmname",
+          "nodeType": "variable",
           "name": "algorithmName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -694,28 +1316,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+            "id": "token.type.identifier_algorithmName_0:47"
           },
-          "signature": "String algorithmName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 60
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_algorithmName_0:47"
+          },
+          "parentId": "System.crypto.method.encryptwithmanagediv(string,blob,blob)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.crypto.encryptwithmanagediv.string",
+            "id": "System.crypto.encryptwithmanagediv.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 40
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:40"
+            },
+            "parentId": "System.crypto.encryptwithmanagediv",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "privateKey": {
-          "id": "System.crypto.encryptwithmanagediv.privatekey",
-          "type": "var",
+        "privatekey": {
+          "id": "System.crypto.method.encryptwithmanagediv(string,blob,blob).varParam.privatekey",
+          "nodeType": "variable",
           "name": "privateKey",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -724,28 +1391,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_privateKey_-1:0"
+            "id": "token.type.identifier_privateKey_0:67"
           },
-          "signature": "Blob privateKey",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 77
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_privateKey_0:67"
+          },
+          "parentId": "System.crypto.method.encryptwithmanagediv(string,blob,blob)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.crypto.encryptwithmanagediv.blob",
+            "id": "System.crypto.encryptwithmanagediv.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 62
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:62"
+            },
+            "parentId": "System.crypto.encryptwithmanagediv",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
         },
-        "clearText": {
-          "id": "System.crypto.encryptwithmanagediv.cleartext",
-          "type": "var",
+        "cleartext": {
+          "id": "System.crypto.method.encryptwithmanagediv(string,blob,blob).varParam.cleartext",
+          "nodeType": "variable",
           "name": "clearText",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -754,29 +1466,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 93
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_clearText_-1:0"
+            "id": "token.type.identifier_clearText_0:84"
           },
-          "signature": "Blob clearText",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "clearText",
+            "textToLower": "cleartext",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 84
+              },
+              "end": {
+                "line": 0,
+                "character": 93
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_clearText_0:84"
+          },
+          "parentId": "System.crypto.method.encryptwithmanagediv(string,blob,blob)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.crypto.encryptwithmanagediv.blob",
+            "id": "System.crypto.encryptwithmanagediv.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 79
+                },
+                "end": {
+                  "line": 0,
+                  "character": 83
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:79"
+            },
+            "parentId": "System.crypto.encryptwithmanagediv",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "generateaeskey()": {
-      "id": "System.crypto.generateaeskey",
+    "generateaeskey(integer)": {
+      "id": "System.crypto.method.generateaeskey(integer)",
       "nodeType": "method",
       "name": "generateAesKey",
       "startToken": {
@@ -798,18 +1558,164 @@
         },
         "id": "declaration.entity.name.function_generateAesKey_-1:0"
       },
-      "signature": "Blob generateAesKey()",
-      "simplifiedSignature": "generateAesKey()",
+      "parentId": "System.crypto",
+      "order": 5,
+      "memberOrder": 5,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Blob generateAesKey(Integer size)",
+      "overrideSignature": "public static override Blob generateAesKey(Integer size)",
+      "simplifiedSignature": "generateAesKey(Integer)",
       "datatype": {
-        "id": "System.crypto.generateaeskey.Blob",
+        "id": "System.crypto.generateaeskey.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.crypto.generateaeskey",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Generates an Advanced Encryption Standard (AES) key.",
-      "params": {}
+      "parentName": "Crypto",
+      "variables": {},
+      "params": {
+        "size": {
+          "id": "System.crypto.method.generateaeskey(integer).varParam.size",
+          "nodeType": "variable",
+          "name": "size",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "size",
+            "textToLower": "size",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 46
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_size_0:42"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "size",
+            "textToLower": "size",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 46
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_size_0:42"
+          },
+          "parentId": "System.crypto.method.generateaeskey(integer)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.crypto.generateaeskey.datatype.Integer",
+            "nodeType": "datatype",
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:34"
+            },
+            "parentId": "System.crypto.generateaeskey",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "The key's size in bits. Valid values are: 128, 192, 256",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "generatedigest(string,blob)": {
-      "id": "System.crypto.generatedigest",
+      "id": "System.crypto.method.generatedigest(string,blob)",
       "nodeType": "method",
       "name": "generateDigest",
       "startToken": {
@@ -831,6 +1737,9 @@
         },
         "id": "declaration.entity.name.function_generateDigest_-1:0"
       },
+      "parentId": "System.crypto",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -838,17 +1747,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -857,30 +1766,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Blob generateDigest(String algorithmName, Blob input)",
+      "overrideSignature": "public static override Blob generateDigest(String algorithmName, Blob input)",
       "simplifiedSignature": "generateDigest(String,Blob)",
       "datatype": {
-        "id": "System.crypto.generatedigest.Blob",
+        "id": "System.crypto.generatedigest.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.crypto.generatedigest",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Computes a secure, one-way hash digest based on the supplied input string and algorithm name.",
+      "parentName": "Crypto",
+      "variables": {},
       "params": {
-        "algorithmName": {
-          "id": "System.crypto.generatedigest.algorithmname",
-          "type": "var",
+        "algorithmname": {
+          "id": "System.crypto.method.generatedigest(string,blob).varParam.algorithmname",
+          "nodeType": "variable",
           "name": "algorithmName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -889,28 +1824,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+            "id": "token.type.identifier_algorithmName_0:41"
           },
-          "signature": "String algorithmName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 41
+              },
+              "end": {
+                "line": 0,
+                "character": 54
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_algorithmName_0:41"
+          },
+          "parentId": "System.crypto.method.generatedigest(string,blob)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.crypto.generatedigest.string",
+            "id": "System.crypto.generatedigest.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:34"
+            },
+            "parentId": "System.crypto.generatedigest",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "input": {
-          "id": "System.crypto.generatedigest.input",
-          "type": "var",
+          "id": "System.crypto.method.generatedigest(string,blob).varParam.input",
+          "nodeType": "variable",
           "name": "input",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -919,29 +1899,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_input_-1:0"
+            "id": "token.type.identifier_input_0:61"
           },
-          "signature": "Blob input",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "input",
+            "textToLower": "input",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 66
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_input_0:61"
+          },
+          "parentId": "System.crypto.method.generatedigest(string,blob)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.crypto.generatedigest.blob",
+            "id": "System.crypto.generatedigest.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 56
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:56"
+            },
+            "parentId": "System.crypto.generatedigest",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "description": "Valid values for algorithmName are: MD5  SHA1  SHA-256  SHA-512",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "generatemac(string,blob,blob)": {
-      "id": "System.crypto.generatemac",
+      "id": "System.crypto.method.generatemac(string,blob,blob)",
       "nodeType": "method",
       "name": "generateMac",
       "startToken": {
@@ -963,6 +1991,9 @@
         },
         "id": "declaration.entity.name.function_generateMac_-1:0"
       },
+      "parentId": "System.crypto",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -970,17 +2001,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -989,30 +2020,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Blob generateMac(String algorithmName, Blob input, Blob privateKey)",
+      "overrideSignature": "public static override Blob generateMac(String algorithmName, Blob input, Blob privateKey)",
       "simplifiedSignature": "generateMac(String,Blob,Blob)",
       "datatype": {
-        "id": "System.crypto.generatemac.Blob",
+        "id": "System.crypto.generatemac.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.crypto.generatemac",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Computes a message authentication code (MAC) for the input string, using the private key and the specified algorithm.",
+      "parentName": "Crypto",
+      "variables": {},
       "params": {
-        "algorithmName": {
-          "id": "System.crypto.generatemac.algorithmname",
-          "type": "var",
+        "algorithmname": {
+          "id": "System.crypto.method.generatemac(string,blob,blob).varParam.algorithmname",
+          "nodeType": "variable",
           "name": "algorithmName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1021,28 +2078,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+            "id": "token.type.identifier_algorithmName_0:38"
           },
-          "signature": "String algorithmName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 51
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_algorithmName_0:38"
+          },
+          "parentId": "System.crypto.method.generatemac(string,blob,blob)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.crypto.generatemac.string",
+            "id": "System.crypto.generatemac.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:31"
+            },
+            "parentId": "System.crypto.generatemac",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "input": {
-          "id": "System.crypto.generatemac.input",
-          "type": "var",
+          "id": "System.crypto.method.generatemac(string,blob,blob).varParam.input",
+          "nodeType": "variable",
           "name": "input",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1051,28 +2153,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 63
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_input_-1:0"
+            "id": "token.type.identifier_input_0:58"
           },
-          "signature": "Blob input",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "input",
+            "textToLower": "input",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_input_0:58"
+          },
+          "parentId": "System.crypto.method.generatemac(string,blob,blob)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.crypto.generatemac.blob",
+            "id": "System.crypto.generatemac.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 53
+                },
+                "end": {
+                  "line": 0,
+                  "character": 57
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:53"
+            },
+            "parentId": "System.crypto.generatemac",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
         },
-        "privateKey": {
-          "id": "System.crypto.generatemac.privatekey",
-          "type": "var",
+        "privatekey": {
+          "id": "System.crypto.method.generatemac(string,blob,blob).varParam.privatekey",
+          "nodeType": "variable",
           "name": "privateKey",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1081,29 +2228,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_privateKey_-1:0"
+            "id": "token.type.identifier_privateKey_0:70"
           },
-          "signature": "Blob privateKey",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 70
+              },
+              "end": {
+                "line": 0,
+                "character": 80
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_privateKey_0:70"
+          },
+          "parentId": "System.crypto.method.generatemac(string,blob,blob)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.crypto.generatemac.blob",
+            "id": "System.crypto.generatemac.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 69
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:65"
+            },
+            "parentId": "System.crypto.generatemac",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "description": "The valid values for algorithmName are: hmacMD5  hmacSHA1  hmacSHA256  hmacSHA512    The value of privateKey does not need to be in decoded form.  The value cannot exceed 4 KB.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getrandominteger()": {
-      "id": "System.crypto.getrandominteger",
+      "id": "System.crypto.method.getrandominteger()",
       "nodeType": "method",
       "name": "getRandomInteger",
       "startToken": {
@@ -1125,6 +2320,9 @@
         },
         "id": "declaration.entity.name.function_getRandomInteger_-1:0"
       },
+      "parentId": "System.crypto",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1132,17 +2330,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1151,30 +2349,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Integer getRandomInteger()",
+      "overrideSignature": "public static override Integer getRandomInteger()",
       "simplifiedSignature": "getRandomInteger()",
       "datatype": {
-        "id": "System.crypto.getrandominteger.Integer",
+        "id": "System.crypto.getrandominteger.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:14"
+        },
+        "parentId": "System.crypto.getrandominteger",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns a random Integer.",
-      "params": {}
+      "parentName": "Crypto",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getrandomlong()": {
-      "id": "System.crypto.getrandomlong",
+      "id": "System.crypto.method.getrandomlong()",
       "nodeType": "method",
       "name": "getRandomLong",
       "startToken": {
@@ -1196,6 +2422,9 @@
         },
         "id": "declaration.entity.name.function_getRandomLong_-1:0"
       },
+      "parentId": "System.crypto",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1203,17 +2432,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1222,30 +2451,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Long getRandomLong()",
+      "overrideSignature": "public static override Long getRandomLong()",
       "simplifiedSignature": "getRandomLong()",
       "datatype": {
-        "id": "System.crypto.getrandomlong.Long",
+        "id": "System.crypto.getrandomlong.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:14"
+        },
+        "parentId": "System.crypto.getrandomlong",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns a random Long.",
-      "params": {}
+      "parentName": "Crypto",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "sign(string,blob,blob)": {
-      "id": "System.crypto.sign",
+      "id": "System.crypto.method.sign(string,blob,blob)",
       "nodeType": "method",
       "name": "sign",
       "startToken": {
@@ -1267,6 +2524,9 @@
         },
         "id": "declaration.entity.name.function_sign_-1:0"
       },
+      "parentId": "System.crypto",
+      "order": 10,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1274,17 +2534,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1293,30 +2553,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Blob sign(String algorithmName, Blob input, Blob privateKey)",
+      "overrideSignature": "public static override Blob sign(String algorithmName, Blob input, Blob privateKey)",
       "simplifiedSignature": "sign(String,Blob,Blob)",
       "datatype": {
-        "id": "System.crypto.sign.Blob",
+        "id": "System.crypto.sign.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.crypto.sign",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Computes a unique digital signature for the input string, using the specified algorithm and the supplied private key.",
+      "parentName": "Crypto",
+      "variables": {},
       "params": {
-        "algorithmName": {
-          "id": "System.crypto.sign.algorithmname",
-          "type": "var",
+        "algorithmname": {
+          "id": "System.crypto.method.sign(string,blob,blob).varParam.algorithmname",
+          "nodeType": "variable",
           "name": "algorithmName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1325,28 +2611,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 31
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+            "id": "token.type.identifier_algorithmName_0:31"
           },
-          "signature": "String algorithmName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 31
+              },
+              "end": {
+                "line": 0,
+                "character": 44
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_algorithmName_0:31"
+          },
+          "parentId": "System.crypto.method.sign(string,blob,blob)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.crypto.sign.string",
+            "id": "System.crypto.sign.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 24
+                },
+                "end": {
+                  "line": 0,
+                  "character": 30
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:24"
+            },
+            "parentId": "System.crypto.sign",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "input": {
-          "id": "System.crypto.sign.input",
-          "type": "var",
+          "id": "System.crypto.method.sign(string,blob,blob).varParam.input",
+          "nodeType": "variable",
           "name": "input",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1355,28 +2686,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_input_-1:0"
+            "id": "token.type.identifier_input_0:51"
           },
-          "signature": "Blob input",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "input",
+            "textToLower": "input",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 51
+              },
+              "end": {
+                "line": 0,
+                "character": 56
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_input_0:51"
+          },
+          "parentId": "System.crypto.method.sign(string,blob,blob)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.crypto.sign.blob",
+            "id": "System.crypto.sign.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 46
+                },
+                "end": {
+                  "line": 0,
+                  "character": 50
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:46"
+            },
+            "parentId": "System.crypto.sign",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
         },
-        "privateKey": {
-          "id": "System.crypto.sign.privatekey",
-          "type": "var",
+        "privatekey": {
+          "id": "System.crypto.method.sign(string,blob,blob).varParam.privatekey",
+          "nodeType": "variable",
           "name": "privateKey",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1385,29 +2761,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 63
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_privateKey_-1:0"
+            "id": "token.type.identifier_privateKey_0:63"
           },
-          "signature": "Blob privateKey",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 63
+              },
+              "end": {
+                "line": 0,
+                "character": 73
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_privateKey_0:63"
+          },
+          "parentId": "System.crypto.method.sign(string,blob,blob)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.crypto.sign.blob",
+            "id": "System.crypto.sign.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 58
+                },
+                "end": {
+                  "line": 0,
+                  "character": 62
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:58"
+            },
+            "parentId": "System.crypto.sign",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "description": "The algorithm name. The valid values for algorithmName are RSA-SHA1, RSA-SHA256, or RSA.RSA-SHA1 is an RSA signature (with an asymmetric key pair) of a SHA1 hash. RSA-SHA256 is an RSA signature of a SHA256 hash. RSA is the same as RSA-SHA1.  The data to sign. The value of privateKey must be decoded using the EncodingUtilbase64Decode method, and should be in RSA's PKCS #8 (1.2) Private-Key Information Syntax Standard form. The value cannot exceed 4 KB.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "signwithcertificate(string,blob,string)": {
-      "id": "System.crypto.signwithcertificate",
+      "id": "System.crypto.method.signwithcertificate(string,blob,string)",
       "nodeType": "method",
       "name": "signWithCertificate",
       "startToken": {
@@ -1429,6 +2853,9 @@
         },
         "id": "declaration.entity.name.function_signWithCertificate_-1:0"
       },
+      "parentId": "System.crypto",
+      "order": 11,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1436,17 +2863,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1455,30 +2882,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Blob signWithCertificate(String algorithmName, Blob input, String certDevName)",
+      "overrideSignature": "public static override Blob signWithCertificate(String algorithmName, Blob input, String certDevName)",
       "simplifiedSignature": "signWithCertificate(String,Blob,String)",
       "datatype": {
-        "id": "System.crypto.signwithcertificate.Blob",
+        "id": "System.crypto.signwithcertificate.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.crypto.signwithcertificate",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Computes a unique digital signature for the input string, using the specified algorithm and the supplied certificate and key pair.",
+      "parentName": "Crypto",
+      "variables": {},
       "params": {
-        "algorithmName": {
-          "id": "System.crypto.signwithcertificate.algorithmname",
-          "type": "var",
+        "algorithmname": {
+          "id": "System.crypto.method.signwithcertificate(string,blob,string).varParam.algorithmname",
+          "nodeType": "variable",
           "name": "algorithmName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1487,28 +2940,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+            "id": "token.type.identifier_algorithmName_0:46"
           },
-          "signature": "String algorithmName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 59
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_algorithmName_0:46"
+          },
+          "parentId": "System.crypto.method.signwithcertificate(string,blob,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.crypto.signwithcertificate.string",
+            "id": "System.crypto.signwithcertificate.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:39"
+            },
+            "parentId": "System.crypto.signwithcertificate",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "input": {
-          "id": "System.crypto.signwithcertificate.input",
-          "type": "var",
+          "id": "System.crypto.method.signwithcertificate(string,blob,string).varParam.input",
+          "nodeType": "variable",
           "name": "input",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1517,28 +3015,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_input_-1:0"
+            "id": "token.type.identifier_input_0:66"
           },
-          "signature": "Blob input",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "input",
+            "textToLower": "input",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 66
+              },
+              "end": {
+                "line": 0,
+                "character": 71
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_input_0:66"
+          },
+          "parentId": "System.crypto.method.signwithcertificate(string,blob,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.crypto.signwithcertificate.blob",
+            "id": "System.crypto.signwithcertificate.datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 61
+                },
+                "end": {
+                  "line": 0,
+                  "character": 65
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:61"
+            },
+            "parentId": "System.crypto.signwithcertificate",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
         },
-        "certDevName": {
-          "id": "System.crypto.signwithcertificate.certdevname",
-          "type": "var",
+        "certdevname": {
+          "id": "System.crypto.method.signwithcertificate(string,blob,string).varParam.certdevname",
+          "nodeType": "variable",
           "name": "certDevName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1547,29 +3090,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 91
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_certDevName_-1:0"
+            "id": "token.type.identifier_certDevName_0:80"
           },
-          "signature": "String certDevName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "certDevName",
+            "textToLower": "certdevname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 80
+              },
+              "end": {
+                "line": 0,
+                "character": 91
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_certDevName_0:80"
+          },
+          "parentId": "System.crypto.method.signwithcertificate(string,blob,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.crypto.signwithcertificate.string",
+            "id": "System.crypto.signwithcertificate.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 73
+                },
+                "end": {
+                  "line": 0,
+                  "character": 79
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:73"
+            },
+            "parentId": "System.crypto.signwithcertificate",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The algorithm name. The valid values for algorithmName are RSA-SHA1, RSA-SHA256, or RSA.RSA-SHA1 is an RSA signature (with an asymmetric key pair) of a SHA1 hash. RSA-SHA256 is an RSA signature of a SHA256 hash. RSA is the same as RSA-SHA1.  The data to sign. The Unique Name for a certificate stored in the Salesforce organization’s Certificate and Key Management page to use for signing.To access the Certificate and Key Management page from Setup, enter Certificate and Key Management in the Quick Find box, then select Certificate and Key Management.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "signxml(string,dom.xmlnode,string,string)": {
-      "id": "System.crypto.signxml",
+      "id": "System.crypto.method.signxml(string,dom.xmlnode,string,string)",
       "nodeType": "method",
       "name": "signXML",
       "startToken": {
@@ -1591,6 +3182,9 @@
         },
         "id": "declaration.entity.name.function_signXML_-1:0"
       },
+      "parentId": "System.crypto",
+      "order": 12,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1598,30 +3192,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void signXML(String algorithmName, Dom.XmlNode node, String idAttributeName, String certDevName)",
+      "signature": "public Void signXML(String algorithmName, Dom.XmlNode node, String idAttributeName, String certDevName)",
+      "overrideSignature": "public override Void signXML(String algorithmName, Dom.XmlNode node, String idAttributeName, String certDevName)",
       "simplifiedSignature": "signXML(String,Dom.XmlNode,String,String)",
       "datatype": {
-        "id": "System.crypto.signxml.void",
+        "id": "System.crypto.signxml.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "System.crypto.signxml",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Envelops the signature into an XML document.",
+      "parentName": "Crypto",
+      "variables": {},
       "params": {
-        "algorithmName": {
-          "id": "System.crypto.signxml.algorithmname",
-          "type": "var",
+        "algorithmname": {
+          "id": "System.crypto.method.signxml(string,dom.xmlnode,string,string).varParam.algorithmname",
+          "nodeType": "variable",
           "name": "algorithmName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1630,28 +3250,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 27
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 40
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+            "id": "token.type.identifier_algorithmName_0:27"
           },
-          "signature": "String algorithmName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 27
+              },
+              "end": {
+                "line": 0,
+                "character": 40
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_algorithmName_0:27"
+          },
+          "parentId": "System.crypto.method.signxml(string,dom.xmlnode,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.crypto.signxml.string",
+            "id": "System.crypto.signxml.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 20
+                },
+                "end": {
+                  "line": 0,
+                  "character": 26
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:20"
+            },
+            "parentId": "System.crypto.signxml",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "node": {
-          "id": "System.crypto.signxml.node",
-          "type": "var",
+          "id": "System.crypto.method.signxml(string,dom.xmlnode,string,string).varParam.node",
+          "nodeType": "variable",
           "name": "node",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1660,28 +3325,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_node_-1:0"
+            "id": "token.type.identifier_node_0:54"
           },
-          "signature": "Dom.XmlNode node",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "node",
+            "textToLower": "node",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_node_0:54"
+          },
+          "parentId": "System.crypto.method.signxml(string,dom.xmlnode,string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.crypto.signxml.dom.xmlnode",
+            "id": "System.crypto.signxml.datatype.Dom.XmlNode",
             "nodeType": "datatype",
-            "name": "Dom.XmlNode"
-          }
+            "name": "Dom.XmlNode",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Dom",
+              "textToLower": "dom",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Dom_0:42"
+            },
+            "parentId": "System.crypto.signxml",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Dom.XmlNode"
+          },
+          "scope": null
         },
-        "idAttributeName": {
-          "id": "System.crypto.signxml.idattributename",
-          "type": "var",
+        "idattributename": {
+          "id": "System.crypto.method.signxml(string,dom.xmlnode,string,string).varParam.idattributename",
+          "nodeType": "variable",
           "name": "idAttributeName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1690,28 +3400,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_idAttributeName_-1:0"
+            "id": "token.type.identifier_idAttributeName_0:67"
           },
-          "signature": "String idAttributeName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "idAttributeName",
+            "textToLower": "idattributename",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 82
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_idAttributeName_0:67"
+          },
+          "parentId": "System.crypto.method.signxml(string,dom.xmlnode,string,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.crypto.signxml.string",
+            "id": "System.crypto.signxml.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 60
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:60"
+            },
+            "parentId": "System.crypto.signxml",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "certDevName": {
-          "id": "System.crypto.signxml.certdevname",
-          "type": "var",
+        "certdevname": {
+          "id": "System.crypto.method.signxml(string,dom.xmlnode,string,string).varParam.certdevname",
+          "nodeType": "variable",
           "name": "certDevName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1720,31 +3475,79 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 91
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 102
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_certDevName_-1:0"
+            "id": "token.type.identifier_certDevName_0:91"
           },
-          "signature": "String certDevName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "certDevName",
+            "textToLower": "certdevname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 91
+              },
+              "end": {
+                "line": 0,
+                "character": 102
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_certDevName_0:91"
+          },
+          "parentId": "System.crypto.method.signxml(string,dom.xmlnode,string,string)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "System.crypto.signxml.string",
+            "id": "System.crypto.signxml.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 84
+                },
+                "end": {
+                  "line": 0,
+                  "character": 90
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:84"
+            },
+            "parentId": "System.crypto.signxml",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The algorithm name. Valid names are RSA-SHA1, RSA-SHA256, or RSA. RSA-SHA1 is an RSA signature (with an asymmetric key pair) of an SHA1 hash. RSA-SHA256 is an RSA signature of an SHA256 hash. RSA is the same as RSA-SHA1.  The XML node to sign and insert the signature into. The full name (including the namespace) of the attribute on the node (XmlNode) to use as the reference ID. If null, this method uses the ID attribute on the node. If there is no ID attribute, Salesforce generates a new ID and adds it to the node. The unique name for a certificate stored in the Salesforce org’s Certificate and Key Management page to use for signing.To access the Certificate and Key Management page from Setup, enter Certificate and Key Management in the Quick Find box, then select Certificate and Key Management.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "signxml(string,dom.xmlnode,string,string,dom.xmlnode)": {
-      "id": "System.crypto.signxml",
+      "id": "System.crypto.method.signxml(string,dom.xmlnode,string,string,dom.xmlnode)",
       "nodeType": "method",
-      "name": "signXML",
+      "name": "signXml",
       "startToken": {
         "type": "declaration.entity.name.function",
         "text": "signXML",
@@ -1764,6 +3567,9 @@
         },
         "id": "declaration.entity.name.function_signXML_-1:0"
       },
+      "parentId": "System.crypto",
+      "order": 13,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1771,17 +3577,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1790,30 +3596,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void signXML(String algorithmName, Dom.XmlNode node, String idAttributeName, String certDevName, Dom.XmlNode refChild)",
-      "simplifiedSignature": "signXML(String,Dom.XmlNode,String,String,Dom.XmlNode)",
+      "signature": "public static void signXml(String algorithmName, Dom.XmlNode node, String idAttributeName, String certDevName, Dom.XmlNode refChild)",
+      "overrideSignature": "public static override void signXml(String algorithmName, Dom.XmlNode node, String idAttributeName, String certDevName, Dom.XmlNode refChild)",
+      "simplifiedSignature": "signXml(String,Dom.XmlNode,String,String,Dom.XmlNode)",
       "datatype": {
-        "id": "System.crypto.signxml.void",
+        "id": "System.crypto.signxml.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "System.crypto.signxml",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Inserts the signature envelope before the specified child node.",
+      "parentName": "Crypto",
+      "variables": {},
       "params": {
-        "algorithmName": {
-          "id": "System.crypto.signxml.algorithmname",
-          "type": "var",
+        "algorithmname": {
+          "id": "System.crypto.method.signxml(string,dom.xmlnode,string,string,dom.xmlnode).varParam.algorithmname",
+          "nodeType": "variable",
           "name": "algorithmName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1822,28 +3654,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+            "id": "token.type.identifier_algorithmName_0:34"
           },
-          "signature": "String algorithmName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_algorithmName_0:34"
+          },
+          "parentId": "System.crypto.method.signxml(string,dom.xmlnode,string,string,dom.xmlnode)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.crypto.signxml.string",
+            "id": "System.crypto.signxml.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 27
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:27"
+            },
+            "parentId": "System.crypto.signxml",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "node": {
-          "id": "System.crypto.signxml.node",
-          "type": "var",
+          "id": "System.crypto.method.signxml(string,dom.xmlnode,string,string,dom.xmlnode).varParam.node",
+          "nodeType": "variable",
           "name": "node",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1852,28 +3729,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_node_-1:0"
+            "id": "token.type.identifier_node_0:61"
           },
-          "signature": "Dom.XmlNode node",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "node",
+            "textToLower": "node",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 65
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_node_0:61"
+          },
+          "parentId": "System.crypto.method.signxml(string,dom.xmlnode,string,string,dom.xmlnode)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.crypto.signxml.dom.xmlnode",
+            "id": "System.crypto.signxml.datatype.Dom.XmlNode",
             "nodeType": "datatype",
-            "name": "Dom.XmlNode"
-          }
+            "name": "Dom.XmlNode",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Dom",
+              "textToLower": "dom",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 52
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Dom_0:49"
+            },
+            "parentId": "System.crypto.signxml",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Dom.XmlNode"
+          },
+          "scope": null
         },
-        "idAttributeName": {
-          "id": "System.crypto.signxml.idattributename",
-          "type": "var",
+        "idattributename": {
+          "id": "System.crypto.method.signxml(string,dom.xmlnode,string,string,dom.xmlnode).varParam.idattributename",
+          "nodeType": "variable",
           "name": "idAttributeName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1882,28 +3804,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 74
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 89
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_idAttributeName_-1:0"
+            "id": "token.type.identifier_idAttributeName_0:74"
           },
-          "signature": "String idAttributeName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "idAttributeName",
+            "textToLower": "idattributename",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 74
+              },
+              "end": {
+                "line": 0,
+                "character": 89
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_idAttributeName_0:74"
+          },
+          "parentId": "System.crypto.method.signxml(string,dom.xmlnode,string,string,dom.xmlnode)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.crypto.signxml.string",
+            "id": "System.crypto.signxml.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 67
+                },
+                "end": {
+                  "line": 0,
+                  "character": 73
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:67"
+            },
+            "parentId": "System.crypto.signxml",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "certDevName": {
-          "id": "System.crypto.signxml.certdevname",
-          "type": "var",
+        "certdevname": {
+          "id": "System.crypto.method.signxml(string,dom.xmlnode,string,string,dom.xmlnode).varParam.certdevname",
+          "nodeType": "variable",
           "name": "certDevName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1912,28 +3879,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 109
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_certDevName_-1:0"
+            "id": "token.type.identifier_certDevName_0:98"
           },
-          "signature": "String certDevName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "certDevName",
+            "textToLower": "certdevname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 98
+              },
+              "end": {
+                "line": 0,
+                "character": 109
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_certDevName_0:98"
+          },
+          "parentId": "System.crypto.method.signxml(string,dom.xmlnode,string,string,dom.xmlnode)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "System.crypto.signxml.string",
+            "id": "System.crypto.signxml.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 91
+                },
+                "end": {
+                  "line": 0,
+                  "character": 97
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:91"
+            },
+            "parentId": "System.crypto.signxml",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "refChild": {
-          "id": "System.crypto.signxml.refchild",
-          "type": "var",
+        "refchild": {
+          "id": "System.crypto.method.signxml(string,dom.xmlnode,string,string,dom.xmlnode).varParam.refchild",
+          "nodeType": "variable",
           "name": "refChild",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1942,31 +3954,79 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 123
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 131
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_refChild_-1:0"
+            "id": "token.type.identifier_refChild_0:123"
           },
-          "signature": "Dom.XmlNode refChild",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "refChild",
+            "textToLower": "refchild",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 123
+              },
+              "end": {
+                "line": 0,
+                "character": 131
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_refChild_0:123"
+          },
+          "parentId": "System.crypto.method.signxml(string,dom.xmlnode,string,string,dom.xmlnode)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "System.crypto.signxml.dom.xmlnode",
+            "id": "System.crypto.signxml.datatype.Dom.XmlNode",
             "nodeType": "datatype",
-            "name": "Dom.XmlNode"
-          }
+            "name": "Dom.XmlNode",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Dom",
+              "textToLower": "dom",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 111
+                },
+                "end": {
+                  "line": 0,
+                  "character": 114
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Dom_0:111"
+            },
+            "parentId": "System.crypto.signxml",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Dom.XmlNode"
+          },
+          "description": "The RSA encryption algorithm name. Valid names are RSA-SHA1, RSA-SHA256, or RSA. RSA-SHA1 is an RSA signature (with an asymmetric key pair) of an SHA1 hash. RSA-SHA256 is an RSA signature of an SHA256 hash. RSA is the same as RSA-SHA1.  The XML node to sign and insert the signature into. The full name (including the namespace) of the attribute on the node (XmlNode) to use as the reference ID. If null, this method uses the ID attribute on the node. If there is no ID attribute, Salesforce generates a new ID and adds it to the node. The unique name for a certificate stored in the Salesforce org’s Certificate and Key Management page to use for signing.To access the Certificate and Key Management page from Setup, enter Certificate and Key Management in the Quick Find box, then select Certificate and Key Management.  Dom.XmlNode The XML node before which to insert the signature. If refChild is null, the signature is added at the end.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "(string,blob,blob,blob)": {
-      "id": "System.crypto.",
+    "verify(string,blob,blob,blob)": {
+      "id": "System.crypto.method.verify(string,blob,blob,blob)",
       "nodeType": "method",
-      "name": "",
+      "name": "verify",
       "startToken": {
         "type": "declaration.entity.name.function",
         "text": "",
@@ -1986,6 +4046,9 @@
         },
         "id": "declaration.entity.name.function__-1:0"
       },
+      "parentId": "System.crypto",
+      "order": 14,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1993,17 +4056,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -2012,30 +4075,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static Boolean (String algorithmName, Blob input, Blob privateKey, Blob macToVerify)",
-      "simplifiedSignature": "(String,Blob,Blob,Blob)",
+      "signature": "public static Blob verify(String algorithmName, Blob data, Blob signature, Blob publicKey)",
+      "overrideSignature": "public static override Blob verify(String algorithmName, Blob data, Blob signature, Blob publicKey)",
+      "simplifiedSignature": "verify(String,Blob,Blob,Blob)",
       "datatype": {
-        "id": "System.crypto..Boolean",
+        "id": "System.crypto..datatype.Blob",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.crypto.",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
-      "description": "Verifies the HMAC signature for Blob data using the specified algorithm, input data, privateKey, and the mac. Use this method to verify a Blob signed by a digital signature created using a third-party application or the sign method.",
+      "description": "Verifies the digital signature for the Blob data using the specified algorithm and the supplied public key. Use this method to verify a Blob signed by a digital signature created using a third-party application or the sign method.",
+      "parentName": "Crypto",
+      "variables": {},
       "params": {
-        "algorithmName": {
-          "id": "System.crypto..algorithmname",
-          "type": "var",
+        "algorithmname": {
+          "id": "System.crypto.method.verify(string,blob,blob,blob).varParam.algorithmname",
+          "nodeType": "variable",
           "name": "algorithmName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2044,220 +4133,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 33
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+            "id": "token.type.identifier_algorithmName_0:33"
           },
-          "signature": "String algorithmName",
-          "datatype": {
-            "id": "System.crypto..string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "input": {
-          "id": "System.crypto..input",
-          "type": "var",
-          "name": "input",
-          "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "input",
-            "textToLower": "input",
-            "isAux": false,
-            "range": {
-              "start": {
-                "line": -1,
-                "character": 0
-              },
-              "end": {
-                "line": -1,
-                "character": 0
-              },
-              "isEmpty": true,
-              "isSingleLine": true
-            },
-            "id": "declaration.entity.name.variable_input_-1:0"
-          },
-          "signature": "Blob input",
-          "datatype": {
-            "id": "System.crypto..blob",
-            "nodeType": "datatype",
-            "name": "Blob"
-          }
-        },
-        "privateKey": {
-          "id": "System.crypto..privatekey",
-          "type": "var",
-          "name": "privateKey",
-          "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "privateKey",
-            "textToLower": "privatekey",
-            "isAux": false,
-            "range": {
-              "start": {
-                "line": -1,
-                "character": 0
-              },
-              "end": {
-                "line": -1,
-                "character": 0
-              },
-              "isEmpty": true,
-              "isSingleLine": true
-            },
-            "id": "declaration.entity.name.variable_privateKey_-1:0"
-          },
-          "signature": "Blob privateKey",
-          "datatype": {
-            "id": "System.crypto..blob",
-            "nodeType": "datatype",
-            "name": "Blob"
-          }
-        },
-        "macToVerify": {
-          "id": "System.crypto..mactoverify",
-          "type": "var",
-          "name": "macToVerify",
-          "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "macToVerify",
-            "textToLower": "mactoverify",
-            "isAux": false,
-            "range": {
-              "start": {
-                "line": -1,
-                "character": 0
-              },
-              "end": {
-                "line": -1,
-                "character": 0
-              },
-              "isEmpty": true,
-              "isSingleLine": true
-            },
-            "id": "declaration.entity.name.variable_macToVerify_-1:0"
-          },
-          "signature": "Blob macToVerify",
-          "datatype": {
-            "id": "System.crypto..blob",
-            "nodeType": "datatype",
-            "name": "Blob"
-          }
-        }
-      }
-    },
-    "(string,blob,blob,string)": {
-      "id": "System.crypto.",
-      "nodeType": "method",
-      "name": "",
-      "startToken": {
-        "type": "declaration.entity.name.function",
-        "text": "",
-        "textToLower": "",
-        "isAux": false,
-        "range": {
-          "start": {
-            "line": -1,
-            "character": 0
-          },
-          "end": {
-            "line": -1,
-            "character": 0
-          },
-          "isEmpty": true,
-          "isSingleLine": true
-        },
-        "id": "declaration.entity.name.function__-1:0"
-      },
-      "accessModifier": {
-        "type": "keyword.modifier.access",
-        "text": "public",
-        "textToLower": "public",
-        "isAux": false,
-        "range": {
-          "start": {
-            "line": -1,
-            "character": 0
-          },
-          "end": {
-            "line": -1,
-            "character": 0
-          },
-          "isEmpty": true,
-          "isSingleLine": true
-        },
-        "id": "keyword.modifier.access_public_-1:0"
-      },
-      "static": {
-        "type": "keyword.modifier.static",
-        "text": "static",
-        "textToLower": "static",
-        "isAux": false,
-        "range": {
-          "start": {
-            "line": -1,
-            "character": 0
-          },
-          "end": {
-            "line": -1,
-            "character": 0
-          },
-          "isEmpty": true,
-          "isSingleLine": true
-        },
-        "id": "keyword.modifier.static_static_-1:0"
-      },
-      "signature": "public static Blob (String algorithmName, Blob data, Blob signature, String certDevName)",
-      "simplifiedSignature": "(String,Blob,Blob,String)",
-      "datatype": {
-        "id": "System.crypto..Blob",
-        "nodeType": "datatype",
-        "name": "Blob"
-      },
-      "description": "Verifies the digital signature for the Blob data using the specified algorithm and the public key associated with the certDevName. Use this method to verify a Blob signed by a digital signature created using a third-party application or the sign method.",
-      "params": {
-        "algorithmName": {
-          "id": "System.crypto..algorithmname",
-          "type": "var",
-          "name": "algorithmName",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
             "text": "algorithmName",
             "textToLower": "algorithmname",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 33
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_algorithmName_-1:0"
+            "id": "token.type.identifier_algorithmName_0:33"
           },
-          "signature": "String algorithmName",
+          "parentId": "System.crypto.method.verify(string,blob,blob,blob)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.crypto..string",
+            "id": "System.crypto..datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 26
+                },
+                "end": {
+                  "line": 0,
+                  "character": 32
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:26"
+            },
+            "parentId": "System.crypto.",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "data": {
-          "id": "System.crypto..data",
-          "type": "var",
+          "id": "System.crypto.method.verify(string,blob,blob,blob).varParam.data",
+          "nodeType": "variable",
           "name": "data",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2266,28 +4208,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_data_-1:0"
+            "id": "token.type.identifier_data_0:53"
           },
-          "signature": "Blob data",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "data",
+            "textToLower": "data",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_data_0:53"
+          },
+          "parentId": "System.crypto.method.verify(string,blob,blob,blob)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.crypto..blob",
+            "id": "System.crypto..datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 48
+                },
+                "end": {
+                  "line": 0,
+                  "character": 52
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:48"
+            },
+            "parentId": "System.crypto.",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
         },
         "signature": {
-          "id": "System.crypto..signature",
-          "type": "var",
+          "id": "System.crypto.method.verify(string,blob,blob,blob).varParam.signature",
+          "nodeType": "variable",
           "name": "signature",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2296,28 +4283,477 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_signature_-1:0"
+            "id": "token.type.identifier_signature_0:64"
           },
-          "signature": "Blob signature",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "signature",
+            "textToLower": "signature",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 73
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_signature_0:64"
+          },
+          "parentId": "System.crypto.method.verify(string,blob,blob,blob)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.crypto..blob",
+            "id": "System.crypto..datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
-          }
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:59"
+            },
+            "parentId": "System.crypto.",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
         },
-        "certDevName": {
-          "id": "System.crypto..certdevname",
-          "type": "var",
+        "publickey": {
+          "id": "System.crypto.method.verify(string,blob,blob,blob).varParam.publickey",
+          "nodeType": "variable",
+          "name": "publicKey",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "publicKey",
+            "textToLower": "publickey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 80
+              },
+              "end": {
+                "line": 0,
+                "character": 89
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_publicKey_0:80"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "publicKey",
+            "textToLower": "publickey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 80
+              },
+              "end": {
+                "line": 0,
+                "character": 89
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_publicKey_0:80"
+          },
+          "parentId": "System.crypto.method.verify(string,blob,blob,blob)",
+          "order": 4,
+          "memberOrder": 4,
+          "datatype": {
+            "id": "System.crypto..datatype.Blob",
+            "nodeType": "datatype",
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 75
+                },
+                "end": {
+                  "line": 0,
+                  "character": 79
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:75"
+            },
+            "parentId": "System.crypto.",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "description": "The algorithm name. The valid values for algorithmName are RSA-SHA1, RSA-SHA256, or RSA.RSA-SHA1 is an RSA signature (with an asymmetric key pair) of an SHA1 hash. RSA-SHA256 is an RSA signature of an SHA256 hash. RSA is the same as RSA-SHA1.  The data to sign. Blob The RSA signature. The value of publicKey must be decoded using the EncodingUtilbase64Decode method, and be in X.509 standard.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "verify(string,blob,blob,string)": {
+      "id": "System.crypto.method.verify(string,blob,blob,string)",
+      "nodeType": "method",
+      "name": "verify",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "",
+        "textToLower": "",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function__-1:0"
+      },
+      "parentId": "System.crypto",
+      "order": 15,
+      "memberOrder": 15,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Blob verify(String algorithmName, Blob data, Blob signature, String certDevName)",
+      "overrideSignature": "public static override Blob verify(String algorithmName, Blob data, Blob signature, String certDevName)",
+      "simplifiedSignature": "verify(String,Blob,Blob,String)",
+      "datatype": {
+        "id": "System.crypto..datatype.Blob",
+        "nodeType": "datatype",
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.crypto.",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
+      },
+      "description": "Verifies the digital signature for the Blob data using the specified algorithm and the public key associated with the certDevName. Use this method to verify a Blob signed by a digital signature created using a third-party application or the sign method.",
+      "parentName": "Crypto",
+      "variables": {},
+      "params": {
+        "algorithmname": {
+          "id": "System.crypto.method.verify(string,blob,blob,string).varParam.algorithmname",
+          "nodeType": "variable",
+          "name": "algorithmName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 33
+              },
+              "end": {
+                "line": 0,
+                "character": 46
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_algorithmName_0:33"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 33
+              },
+              "end": {
+                "line": 0,
+                "character": 46
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_algorithmName_0:33"
+          },
+          "parentId": "System.crypto.method.verify(string,blob,blob,string)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.crypto..datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 26
+                },
+                "end": {
+                  "line": 0,
+                  "character": 32
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:26"
+            },
+            "parentId": "System.crypto.",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "data": {
+          "id": "System.crypto.method.verify(string,blob,blob,string).varParam.data",
+          "nodeType": "variable",
+          "name": "data",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "data",
+            "textToLower": "data",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_data_0:53"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "data",
+            "textToLower": "data",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 57
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_data_0:53"
+          },
+          "parentId": "System.crypto.method.verify(string,blob,blob,string)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "System.crypto..datatype.Blob",
+            "nodeType": "datatype",
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 48
+                },
+                "end": {
+                  "line": 0,
+                  "character": 52
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:48"
+            },
+            "parentId": "System.crypto.",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
+        },
+        "signature": {
+          "id": "System.crypto.method.verify(string,blob,blob,string).varParam.signature",
+          "nodeType": "variable",
+          "name": "signature",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "signature",
+            "textToLower": "signature",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 73
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_signature_0:64"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "signature",
+            "textToLower": "signature",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 73
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_signature_0:64"
+          },
+          "parentId": "System.crypto.method.verify(string,blob,blob,string)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "System.crypto..datatype.Blob",
+            "nodeType": "datatype",
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:59"
+            },
+            "parentId": "System.crypto.",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
+        },
+        "certdevname": {
+          "id": "System.crypto.method.verify(string,blob,blob,string).varParam.certdevname",
+          "nodeType": "variable",
           "name": "certDevName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2326,30 +4762,483 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 93
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_certDevName_-1:0"
+            "id": "token.type.identifier_certDevName_0:82"
           },
-          "signature": "String certDevName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "certDevName",
+            "textToLower": "certdevname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 82
+              },
+              "end": {
+                "line": 0,
+                "character": 93
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_certDevName_0:82"
+          },
+          "parentId": "System.crypto.method.verify(string,blob,blob,string)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "System.crypto..string",
+            "id": "System.crypto..datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 75
+                },
+                "end": {
+                  "line": 0,
+                  "character": 81
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:75"
+            },
+            "parentId": "System.crypto.",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The algorithm name. The valid values for algorithmName are RSA-SHA1, RSA-SHA256, or RSA.RSA-SHA1 is an RSA signature (with an asymmetric key pair) of an SHA1 hash. RSA-SHA256 is an RSA signature of an SHA256 hash. RSA is the same as RSA-SHA1.  The data to sign. Blob The RSA signature. The Unique Name for a certificate stored in the Salesforce organization’s Certificate and Key Management page to use for signing.To access the Certificate and Key Management page from Setup, enter Certificate and Key Management in the Quick Find box, then select Certificate and Key Management.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "verifyhmac(string,blob,blob,blob)": {
+      "id": "System.crypto.method.verifyhmac(string,blob,blob,blob)",
+      "nodeType": "method",
+      "name": "verifyHMac",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "",
+        "textToLower": "",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": -1,
+            "character": 0
+          },
+          "end": {
+            "line": -1,
+            "character": 0
+          },
+          "isEmpty": true,
+          "isSingleLine": true
+        },
+        "id": "declaration.entity.name.function__-1:0"
+      },
+      "parentId": "System.crypto",
+      "order": 16,
+      "memberOrder": 16,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static Blob verifyHMac(String algorithmName, Blob input, Blob privateKey, Blob macToVerify)",
+      "overrideSignature": "public static override Blob verifyHMac(String algorithmName, Blob input, Blob privateKey, Blob macToVerify)",
+      "simplifiedSignature": "verifyHMac(String,Blob,Blob,Blob)",
+      "datatype": {
+        "id": "System.crypto..datatype.Blob",
+        "nodeType": "datatype",
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:14"
+        },
+        "parentId": "System.crypto.",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
+      },
+      "description": "Verifies the HMAC signature for Blob data using the specified algorithm, input data, privateKey, and the mac. Use this method to verify a Blob signed by a digital signature created using a third-party application or the sign method.",
+      "parentName": "Crypto",
+      "variables": {},
+      "params": {
+        "algorithmname": {
+          "id": "System.crypto.method.verifyhmac(string,blob,blob,blob).varParam.algorithmname",
+          "nodeType": "variable",
+          "name": "algorithmName",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_algorithmName_0:37"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "algorithmName",
+            "textToLower": "algorithmname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_algorithmName_0:37"
+          },
+          "parentId": "System.crypto.method.verifyhmac(string,blob,blob,blob)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.crypto..datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:30"
+            },
+            "parentId": "System.crypto.",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "input": {
+          "id": "System.crypto.method.verifyhmac(string,blob,blob,blob).varParam.input",
+          "nodeType": "variable",
+          "name": "input",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "input",
+            "textToLower": "input",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 57
+              },
+              "end": {
+                "line": 0,
+                "character": 62
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_input_0:57"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "input",
+            "textToLower": "input",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 57
+              },
+              "end": {
+                "line": 0,
+                "character": 62
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_input_0:57"
+          },
+          "parentId": "System.crypto.method.verifyhmac(string,blob,blob,blob)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "System.crypto..datatype.Blob",
+            "nodeType": "datatype",
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:52"
+            },
+            "parentId": "System.crypto.",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
+        },
+        "privatekey": {
+          "id": "System.crypto.method.verifyhmac(string,blob,blob,blob).varParam.privatekey",
+          "nodeType": "variable",
+          "name": "privateKey",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 69
+              },
+              "end": {
+                "line": 0,
+                "character": 79
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_privateKey_0:69"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "privateKey",
+            "textToLower": "privatekey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 69
+              },
+              "end": {
+                "line": 0,
+                "character": 79
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_privateKey_0:69"
+          },
+          "parentId": "System.crypto.method.verifyhmac(string,blob,blob,blob)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "System.crypto..datatype.Blob",
+            "nodeType": "datatype",
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 64
+                },
+                "end": {
+                  "line": 0,
+                  "character": 68
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:64"
+            },
+            "parentId": "System.crypto.",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
+        },
+        "mactoverify": {
+          "id": "System.crypto.method.verifyhmac(string,blob,blob,blob).varParam.mactoverify",
+          "nodeType": "variable",
+          "name": "macToVerify",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "macToVerify",
+            "textToLower": "mactoverify",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 86
+              },
+              "end": {
+                "line": 0,
+                "character": 97
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_macToVerify_0:86"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "macToVerify",
+            "textToLower": "mactoverify",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 86
+              },
+              "end": {
+                "line": 0,
+                "character": 97
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_macToVerify_0:86"
+          },
+          "parentId": "System.crypto.method.verifyhmac(string,blob,blob,blob)",
+          "order": 4,
+          "memberOrder": 4,
+          "datatype": {
+            "id": "System.crypto..datatype.Blob",
+            "nodeType": "datatype",
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 81
+                },
+                "end": {
+                  "line": 0,
+                  "character": 85
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:81"
+            },
+            "parentId": "System.crypto.",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
+          },
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 16,
+  "queries": []
 }

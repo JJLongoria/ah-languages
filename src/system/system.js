@@ -1,6 +1,7 @@
 const { FileReader, FileChecker, PathUtils } = require('@aurahelper/core').FileSystem;
 const { StrUtils, Utils } = require('@aurahelper/core').CoreUtils;
-
+const { ApexNodeTypes } = require('@aurahelper/core').Values;
+const { ApexClass, ApexInterface, ApexEnum } = require('@aurahelper/core').Types;
 const systemClassPath = __dirname + '/classes';
 const auraDataPath = __dirname + '/aura';
 const nsData = {};
@@ -24,7 +25,14 @@ class System {
             const nsFiles = FileReader.readDirSync(nsFolder);
             for (const classFile of nsFiles) {
                 const className = StrUtils.replace(classFile, '.json', '');
-                nsData[className] = JSON.parse(FileReader.readFileSync(nsFolder + '/' + classFile));
+                const obj = JSON.parse(FileReader.readFileSync(nsFolder + '/' + classFile));
+                if(obj.nodeType === ApexNodeTypes.CLASS){
+                    nsData[className] = new ApexClass(obj);
+                } else if(obj.nodeType === ApexNodeTypes.INTERFACE){
+                    nsData[className] = new ApexInterface(obj);
+                } else {
+                    nsData[className] = new ApexEnum(obj);
+                }
             }
             return nsData;
         } else {
@@ -78,7 +86,15 @@ class System {
         if (FileChecker.isExists(nsFolder)) {
             const classFile = nsFolder + '/' + className.toLowerCase() + '.json';
             if (FileChecker.isExists(classFile)) {
-                return JSON.parse(FileReader.readFileSync(classFile));
+                let obj = JSON.parse(FileReader.readFileSync(classFile));
+                if(obj.nodeType === ApexNodeTypes.CLASS){
+                    obj = new ApexClass(obj);
+                } else if(obj.nodeType === ApexNodeTypes.INTERFACE){
+                    obj = new ApexInterface(obj);
+                } else {
+                    obj = new ApexEnum(obj);
+                }
+                return obj;
             } else {
                 return undefined;
             }

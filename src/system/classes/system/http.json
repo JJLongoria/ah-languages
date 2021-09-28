@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Http_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "send(httprequest)": {
-      "id": "System.http.send",
+      "id": "System.http.method.send(httprequest)",
       "nodeType": "method",
       "name": "send",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_send_-1:0"
       },
+      "parentId": "System.http",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public System.HttpResponse send(HttpRequest request)",
+      "signature": "public HttpResponse send(HttpRequest request)",
+      "overrideSignature": "public override HttpResponse send(HttpRequest request)",
       "simplifiedSignature": "send(HttpRequest)",
       "datatype": {
-        "id": "System.http.send.System.HttpResponse",
+        "id": "System.http.send.datatype.HttpResponse",
         "nodeType": "datatype",
-        "name": "System.HttpResponse"
+        "name": "HttpResponse",
+        "startToken": {
+          "type": "datatype.custom.class",
+          "text": "HttpResponse",
+          "textToLower": "httpresponse",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 19
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_HttpResponse_0:7"
+        },
+        "parentId": "System.http.send",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "HttpResponse"
       },
       "description": "Sends an HttpRequest and returns the response.",
+      "parentName": "Http",
+      "variables": {},
       "params": {
         "request": {
-          "id": "System.http.send.request",
-          "type": "var",
+          "id": "System.http.method.send(httprequest).varParam.request",
+          "nodeType": "variable",
           "name": "request",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,29 +160,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_request_-1:0"
+            "id": "token.type.identifier_request_0:37"
           },
-          "signature": "HttpRequest request",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "request",
+            "textToLower": "request",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 44
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_request_0:37"
+          },
+          "parentId": "System.http.method.send(httprequest)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.http.send.httprequest",
+            "id": "System.http.send.datatype.HttpRequest",
             "nodeType": "datatype",
-            "name": "HttpRequest"
-          }
+            "name": "HttpRequest",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "HttpRequest",
+              "textToLower": "httprequest",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_HttpRequest_0:25"
+            },
+            "parentId": "System.http.send",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "HttpRequest"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "tostring()": {
-      "id": "System.http.tostring",
+      "id": "System.http.method.tostring()",
       "nodeType": "method",
       "name": "toString",
       "startToken": {
@@ -173,6 +252,9 @@
         },
         "id": "declaration.entity.name.function_toString_-1:0"
       },
+      "parentId": "System.http",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -180,31 +262,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String toString()",
+      "overrideSignature": "public override String toString()",
       "simplifiedSignature": "toString()",
       "datatype": {
-        "id": "System.http.tostring.String",
+        "id": "System.http.tostring.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.http.tostring",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns a string that displays and identifies the object's properties.",
-      "params": {}
+      "parentName": "Http",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

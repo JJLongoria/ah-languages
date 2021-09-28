@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Security_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "stripinaccessible(system.accesstype,list)": {
-      "id": "System.security.stripinaccessible",
+    "stripinaccessible(system.accesstype,list<sobject>,boolean)": {
+      "id": "System.security.method.stripinaccessible(system.accesstype,list<sobject>,boolean)",
       "nodeType": "method",
       "name": "stripInaccessible",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_stripInaccessible_-1:0"
       },
+      "parentId": "System.security",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,6 +121,321 @@
         "isAux": false,
         "range": {
           "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static System.SObjectAccessDecision stripInaccessible(System.AccessType accessCheckType, List<SObject> sourceRecords, Boolean enforceRootObjectCRUD)",
+      "overrideSignature": "public static override System.SObjectAccessDecision stripInaccessible(System.AccessType accessCheckType, List<SObject> sourceRecords, Boolean enforceRootObjectCRUD)",
+      "simplifiedSignature": "stripInaccessible(System.AccessType,List<SObject>,Boolean)",
+      "datatype": {
+        "id": "System.security.stripinaccessible.datatype.System.SObjectAccessDecision",
+        "nodeType": "datatype",
+        "name": "System.SObjectAccessDecision",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:14"
+        },
+        "parentId": "System.security.stripinaccessible",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.SObjectAccessDecision"
+      },
+      "description": "Creates a list of sObjects from the source records, which are stripped of fields that fail the field-level security checks for the current user. The method also provides an option to enforce an object-level access check.",
+      "parentName": "Security",
+      "variables": {},
+      "params": {
+        "accesschecktype": {
+          "id": "System.security.method.stripinaccessible(system.accesstype,list<sobject>,boolean).varParam.accesschecktype",
+          "nodeType": "variable",
+          "name": "accessCheckType",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "accessCheckType",
+            "textToLower": "accesschecktype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 79
+              },
+              "end": {
+                "line": 0,
+                "character": 94
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_accessCheckType_0:79"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "accessCheckType",
+            "textToLower": "accesschecktype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 79
+              },
+              "end": {
+                "line": 0,
+                "character": 94
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_accessCheckType_0:79"
+          },
+          "parentId": "System.security.method.stripinaccessible(system.accesstype,list<sobject>,boolean)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.security.stripinaccessible.datatype.System.AccessType",
+            "nodeType": "datatype",
+            "name": "System.AccessType",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 61
+                },
+                "end": {
+                  "line": 0,
+                  "character": 67
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:61"
+            },
+            "parentId": "System.security.stripinaccessible",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.AccessType"
+          },
+          "scope": null
+        },
+        "sourcerecords": {
+          "id": "System.security.method.stripinaccessible(system.accesstype,list<sobject>,boolean).varParam.sourcerecords",
+          "nodeType": "variable",
+          "name": "sourceRecords",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sourceRecords",
+            "textToLower": "sourcerecords",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 110
+              },
+              "end": {
+                "line": 0,
+                "character": 123
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sourceRecords_0:110"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sourceRecords",
+            "textToLower": "sourcerecords",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 110
+              },
+              "end": {
+                "line": 0,
+                "character": 123
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sourceRecords_0:110"
+          },
+          "parentId": "System.security.method.stripinaccessible(system.accesstype,list<sobject>,boolean)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "System.security.stripinaccessible.datatype.List<SObject>",
+            "nodeType": "datatype",
+            "name": "List<SObject>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 96
+                },
+                "end": {
+                  "line": 0,
+                  "character": 100
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:96"
+            },
+            "parentId": "System.security.stripinaccessible",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.security.stripinaccessible.datatype.List<SObject>.value.SObject",
+              "nodeType": "datatype",
+              "name": "SObject",
+              "startToken": {
+                "type": "datatype.support.class",
+                "text": "SObject",
+                "textToLower": "sobject",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 101
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 108
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_SObject_0:101"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "SObject"
+            }
+          },
+          "scope": null
+        },
+        "enforcerootobjectcrud": {
+          "id": "System.security.method.stripinaccessible(system.accesstype,list<sobject>,boolean).varParam.enforcerootobjectcrud",
+          "nodeType": "variable",
+          "name": "enforceRootObjectCRUD",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "enforceRootObjectCRUD",
+            "textToLower": "enforcerootobjectcrud",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 133
+              },
+              "end": {
+                "line": 0,
+                "character": 154
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_enforceRootObjectCRUD_0:133"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "enforceRootObjectCRUD",
+            "textToLower": "enforcerootobjectcrud",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 133
+              },
+              "end": {
+                "line": 0,
+                "character": 154
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_enforceRootObjectCRUD_0:133"
+          },
+          "parentId": "System.security.method.stripinaccessible(system.accesstype,list<sobject>,boolean)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "System.security.stripinaccessible.datatype.Boolean",
+            "nodeType": "datatype",
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 125
+                },
+                "end": {
+                  "line": 0,
+                  "character": 132
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:125"
+            },
+            "parentId": "System.security.stripinaccessible",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "Uses values from the AccessType enum. This parameter determines the type of field-level access check to be performed. To check the current user's field-level access, use the Schema.DescribeFieldResult methods —isCreatable(), isAccessible(), or isUpdatable(). A list of sObjects to be checked for fields that aren’t accessible in the context of the current user’s operation. Indicates whether an object-level access check is performed. If this parameter is set to true and the access check fails, the method throws an exception. The default value of this optional parameter is true.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "stripinaccessible(system.accesstype,list<sobject>)": {
+      "id": "System.security.method.stripinaccessible(system.accesstype,list<sobject>)",
+      "nodeType": "method",
+      "name": "stripInaccessible",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "stripInaccessible",
+        "textToLower": "stripinaccessible",
+        "isAux": false,
+        "range": {
+          "start": {
             "line": -1,
             "character": 0
           },
@@ -126,20 +446,87 @@
           "isEmpty": true,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "declaration.entity.name.function_stripInaccessible_-1:0"
       },
-      "signature": "public static System.SObjectAccessDecision stripInaccessible(System.AccessType accessCheckType, List <SObject>)",
-      "simplifiedSignature": "stripInaccessible(System.AccessType,List)",
+      "parentId": "System.security",
+      "order": 2,
+      "memberOrder": 2,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static System.SObjectAccessDecision stripInaccessible(System.AccessType accessCheckType, List<SObject> sourceRecords)",
+      "overrideSignature": "public static override System.SObjectAccessDecision stripInaccessible(System.AccessType accessCheckType, List<SObject> sourceRecords)",
+      "simplifiedSignature": "stripInaccessible(System.AccessType,List<SObject>)",
       "datatype": {
-        "id": "System.security.stripinaccessible.System.SObjectAccessDecision",
+        "id": "System.security.stripinaccessible.datatype.System.SObjectAccessDecision",
         "nodeType": "datatype",
-        "name": "System.SObjectAccessDecision"
+        "name": "System.SObjectAccessDecision",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:14"
+        },
+        "parentId": "System.security.stripinaccessible",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.SObjectAccessDecision"
       },
       "description": "Creates a list of sObjects from the source records, which are stripped of fields that fail the field-level security checks for the current user.",
+      "parentName": "Security",
+      "variables": {},
       "params": {
-        "accessCheckType": {
-          "id": "System.security.stripinaccessible.accesschecktype",
-          "type": "var",
+        "accesschecktype": {
+          "id": "System.security.method.stripinaccessible(system.accesstype,list<sobject>).varParam.accesschecktype",
+          "nodeType": "variable",
           "name": "accessCheckType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,60 +535,182 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_accessCheckType_-1:0"
+            "id": "token.type.identifier_accessCheckType_0:79"
           },
-          "signature": "System.AccessType accessCheckType",
-          "datatype": {
-            "id": "System.security.stripinaccessible.system.accesstype",
-            "nodeType": "datatype",
-            "name": "System.AccessType"
-          }
-        },
-        "<SObject>": {
-          "id": "System.security.stripinaccessible.<sobject>",
-          "type": "var",
-          "name": "<SObject>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<SObject>",
-            "textToLower": "<sobject>",
+            "text": "accessCheckType",
+            "textToLower": "accesschecktype",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<SObject>_-1:0"
+            "id": "token.type.identifier_accessCheckType_0:79"
           },
-          "signature": "List <SObject>",
+          "parentId": "System.security.method.stripinaccessible(system.accesstype,list<sobject>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.security.stripinaccessible.list",
+            "id": "System.security.stripinaccessible.datatype.System.AccessType",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "System.AccessType",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 61
+                },
+                "end": {
+                  "line": 0,
+                  "character": 67
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:61"
+            },
+            "parentId": "System.security.stripinaccessible",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.AccessType"
+          },
+          "scope": null
+        },
+        "sourcerecords": {
+          "id": "System.security.method.stripinaccessible(system.accesstype,list<sobject>).varParam.sourcerecords",
+          "nodeType": "variable",
+          "name": "sourceRecords",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sourceRecords",
+            "textToLower": "sourcerecords",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 110
+              },
+              "end": {
+                "line": 0,
+                "character": 123
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sourceRecords_0:110"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sourceRecords",
+            "textToLower": "sourcerecords",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 110
+              },
+              "end": {
+                "line": 0,
+                "character": 123
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sourceRecords_0:110"
+          },
+          "parentId": "System.security.method.stripinaccessible(system.accesstype,list<sobject>)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "System.security.stripinaccessible.datatype.List<SObject>",
+            "nodeType": "datatype",
+            "name": "List<SObject>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 96
+                },
+                "end": {
+                  "line": 0,
+                  "character": 100
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:96"
+            },
+            "parentId": "System.security.stripinaccessible",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.security.stripinaccessible.datatype.List<SObject>.value.SObject",
+              "nodeType": "datatype",
+              "name": "SObject",
+              "startToken": {
+                "type": "datatype.support.class",
+                "text": "SObject",
+                "textToLower": "sobject",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 101
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 108
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_SObject_0:101"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "SObject"
+            }
+          },
+          "description": "Uses values from the AccessType enum. This parameter determines the type of field-level access check to be performed. To check the current user's field-level access, use the Schema.DescribeFieldResult methods —isCreatable(), isAccessible(), or isUpdatable(). A list of sObjects to be checked for fields that aren’t accessible in the context of the current user’s operation.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

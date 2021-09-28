@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Knowledge_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "gettopviewedarticlesfortopic(string,string,integer)": {
-      "id": "ConnectApi.knowledge.gettopviewedarticlesfortopic",
+      "id": "ConnectApi.knowledge.method.gettopviewedarticlesfortopic(string,string,integer)",
       "nodeType": "method",
       "name": "getTopViewedArticlesForTopic",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getTopViewedArticlesForTopic_-1:0"
       },
+      "parentId": "ConnectApi.knowledge",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.KnowledgeArticleVersionCollection getTopViewedArticlesForTopic(String communityId, String topicId, Integer maxResults)",
+      "overrideSignature": "public static override ConnectApi.KnowledgeArticleVersionCollection getTopViewedArticlesForTopic(String communityId, String topicId, Integer maxResults)",
       "simplifiedSignature": "getTopViewedArticlesForTopic(String,String,Integer)",
       "datatype": {
-        "id": "ConnectApi.knowledge.gettopviewedarticlesfortopic.ConnectApi.KnowledgeArticleVersionCollection",
+        "id": "ConnectApi.knowledge.gettopviewedarticlesfortopic.datatype.ConnectApi.KnowledgeArticleVersionCollection",
         "nodeType": "datatype",
-        "name": "ConnectApi.KnowledgeArticleVersionCollection"
+        "name": "ConnectApi.KnowledgeArticleVersionCollection",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.knowledge.gettopviewedarticlesfortopic",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.KnowledgeArticleVersionCollection"
       },
       "description": "Get the top viewed articles for a topic.",
+      "parentName": "Knowledge",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.knowledge.gettopviewedarticlesfortopic.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.knowledge.method.gettopviewedarticlesfortopic(string,string,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 106
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:95"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 95
+              },
+              "end": {
+                "line": 0,
+                "character": 106
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:95"
+          },
+          "parentId": "ConnectApi.knowledge.method.gettopviewedarticlesfortopic(string,string,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.knowledge.gettopviewedarticlesfortopic.string",
+            "id": "ConnectApi.knowledge.gettopviewedarticlesfortopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 88
+                },
+                "end": {
+                  "line": 0,
+                  "character": 94
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:88"
+            },
+            "parentId": "ConnectApi.knowledge.gettopviewedarticlesfortopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "topicId": {
-          "id": "ConnectApi.knowledge.gettopviewedarticlesfortopic.topicid",
-          "type": "var",
+        "topicid": {
+          "id": "ConnectApi.knowledge.method.gettopviewedarticlesfortopic(string,string,integer).varParam.topicid",
+          "nodeType": "variable",
           "name": "topicId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,28 +254,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 115
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 122
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_topicId_-1:0"
+            "id": "token.type.identifier_topicId_0:115"
           },
-          "signature": "String topicId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "topicId",
+            "textToLower": "topicid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 115
+              },
+              "end": {
+                "line": 0,
+                "character": 122
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_topicId_0:115"
+          },
+          "parentId": "ConnectApi.knowledge.method.gettopviewedarticlesfortopic(string,string,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.knowledge.gettopviewedarticlesfortopic.string",
+            "id": "ConnectApi.knowledge.gettopviewedarticlesfortopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 108
+                },
+                "end": {
+                  "line": 0,
+                  "character": 114
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:108"
+            },
+            "parentId": "ConnectApi.knowledge.gettopviewedarticlesfortopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "maxResults": {
-          "id": "ConnectApi.knowledge.gettopviewedarticlesfortopic.maxresults",
-          "type": "var",
+        "maxresults": {
+          "id": "ConnectApi.knowledge.method.gettopviewedarticlesfortopic(string,string,integer).varParam.maxresults",
+          "nodeType": "variable",
           "name": "maxResults",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -208,29 +329,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 132
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 142
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_maxResults_-1:0"
+            "id": "token.type.identifier_maxResults_0:132"
           },
-          "signature": "Integer maxResults",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "maxResults",
+            "textToLower": "maxresults",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 132
+              },
+              "end": {
+                "line": 0,
+                "character": 142
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_maxResults_0:132"
+          },
+          "parentId": "ConnectApi.knowledge.method.gettopviewedarticlesfortopic(string,string,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.knowledge.gettopviewedarticlesfortopic.integer",
+            "id": "ConnectApi.knowledge.gettopviewedarticlesfortopic.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 124
+                },
+                "end": {
+                  "line": 0,
+                  "character": 131
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:124"
+            },
+            "parentId": "ConnectApi.knowledge.gettopviewedarticlesfortopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of the topic. The maximum number of articles returned for each topic ID. Values can be from 1 to 25. The default value is 5.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "gettrendingarticles(string,integer)": {
-      "id": "ConnectApi.knowledge.gettrendingarticles",
+      "id": "ConnectApi.knowledge.method.gettrendingarticles(string,integer)",
       "nodeType": "method",
       "name": "getTrendingArticles",
       "startToken": {
@@ -252,6 +421,9 @@
         },
         "id": "declaration.entity.name.function_getTrendingArticles_-1:0"
       },
+      "parentId": "ConnectApi.knowledge",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -259,17 +431,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -278,30 +450,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.KnowledgeArticleVersionCollection getTrendingArticles(String communityId, Integer maxResults)",
+      "overrideSignature": "public static override ConnectApi.KnowledgeArticleVersionCollection getTrendingArticles(String communityId, Integer maxResults)",
       "simplifiedSignature": "getTrendingArticles(String,Integer)",
       "datatype": {
-        "id": "ConnectApi.knowledge.gettrendingarticles.ConnectApi.KnowledgeArticleVersionCollection",
+        "id": "ConnectApi.knowledge.gettrendingarticles.datatype.ConnectApi.KnowledgeArticleVersionCollection",
         "nodeType": "datatype",
-        "name": "ConnectApi.KnowledgeArticleVersionCollection"
+        "name": "ConnectApi.KnowledgeArticleVersionCollection",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.knowledge.gettrendingarticles",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.KnowledgeArticleVersionCollection"
       },
       "description": "Get trending articles for a community.",
+      "parentName": "Knowledge",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.knowledge.gettrendingarticles.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.knowledge.method.gettrendingarticles(string,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,28 +508,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 97
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:86"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 86
+              },
+              "end": {
+                "line": 0,
+                "character": 97
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:86"
+          },
+          "parentId": "ConnectApi.knowledge.method.gettrendingarticles(string,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.knowledge.gettrendingarticles.string",
+            "id": "ConnectApi.knowledge.gettrendingarticles.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 79
+                },
+                "end": {
+                  "line": 0,
+                  "character": 85
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:79"
+            },
+            "parentId": "ConnectApi.knowledge.gettrendingarticles",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "maxResults": {
-          "id": "ConnectApi.knowledge.gettrendingarticles.maxresults",
-          "type": "var",
+        "maxresults": {
+          "id": "ConnectApi.knowledge.method.gettrendingarticles(string,integer).varParam.maxresults",
+          "nodeType": "variable",
           "name": "maxResults",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -340,29 +583,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 107
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 117
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_maxResults_-1:0"
+            "id": "token.type.identifier_maxResults_0:107"
           },
-          "signature": "Integer maxResults",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "maxResults",
+            "textToLower": "maxresults",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 107
+              },
+              "end": {
+                "line": 0,
+                "character": 117
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_maxResults_0:107"
+          },
+          "parentId": "ConnectApi.knowledge.method.gettrendingarticles(string,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.knowledge.gettrendingarticles.integer",
+            "id": "ConnectApi.knowledge.gettrendingarticles.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 99
+                },
+                "end": {
+                  "line": 0,
+                  "character": 106
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:99"
+            },
+            "parentId": "ConnectApi.knowledge.gettrendingarticles",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. The maximum number of articles returned. Values can be from 0 to 25. Default is 5.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "gettrendingarticlesfortopic(string,string,integer)": {
-      "id": "ConnectApi.knowledge.gettrendingarticlesfortopic",
+      "id": "ConnectApi.knowledge.method.gettrendingarticlesfortopic(string,string,integer)",
       "nodeType": "method",
       "name": "getTrendingArticlesForTopic",
       "startToken": {
@@ -384,6 +675,9 @@
         },
         "id": "declaration.entity.name.function_getTrendingArticlesForTopic_-1:0"
       },
+      "parentId": "ConnectApi.knowledge",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -391,17 +685,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -410,30 +704,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.KnowledgeArticleVersionCollection getTrendingArticlesForTopic(String communityId, String topicId, Integer maxResults)",
+      "overrideSignature": "public static override ConnectApi.KnowledgeArticleVersionCollection getTrendingArticlesForTopic(String communityId, String topicId, Integer maxResults)",
       "simplifiedSignature": "getTrendingArticlesForTopic(String,String,Integer)",
       "datatype": {
-        "id": "ConnectApi.knowledge.gettrendingarticlesfortopic.ConnectApi.KnowledgeArticleVersionCollection",
+        "id": "ConnectApi.knowledge.gettrendingarticlesfortopic.datatype.ConnectApi.KnowledgeArticleVersionCollection",
         "nodeType": "datatype",
-        "name": "ConnectApi.KnowledgeArticleVersionCollection"
+        "name": "ConnectApi.KnowledgeArticleVersionCollection",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.knowledge.gettrendingarticlesfortopic",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.KnowledgeArticleVersionCollection"
       },
       "description": "Get the trending articles for a topic in a community.",
+      "parentName": "Knowledge",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.knowledge.gettrendingarticlesfortopic.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.knowledge.method.gettrendingarticlesfortopic(string,string,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -442,28 +762,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 105
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:94"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 94
+              },
+              "end": {
+                "line": 0,
+                "character": 105
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:94"
+          },
+          "parentId": "ConnectApi.knowledge.method.gettrendingarticlesfortopic(string,string,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.knowledge.gettrendingarticlesfortopic.string",
+            "id": "ConnectApi.knowledge.gettrendingarticlesfortopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 87
+                },
+                "end": {
+                  "line": 0,
+                  "character": 93
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:87"
+            },
+            "parentId": "ConnectApi.knowledge.gettrendingarticlesfortopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "topicId": {
-          "id": "ConnectApi.knowledge.gettrendingarticlesfortopic.topicid",
-          "type": "var",
+        "topicid": {
+          "id": "ConnectApi.knowledge.method.gettrendingarticlesfortopic(string,string,integer).varParam.topicid",
+          "nodeType": "variable",
           "name": "topicId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -472,28 +837,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 114
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 121
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_topicId_-1:0"
+            "id": "token.type.identifier_topicId_0:114"
           },
-          "signature": "String topicId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "topicId",
+            "textToLower": "topicid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 114
+              },
+              "end": {
+                "line": 0,
+                "character": 121
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_topicId_0:114"
+          },
+          "parentId": "ConnectApi.knowledge.method.gettrendingarticlesfortopic(string,string,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.knowledge.gettrendingarticlesfortopic.string",
+            "id": "ConnectApi.knowledge.gettrendingarticlesfortopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 107
+                },
+                "end": {
+                  "line": 0,
+                  "character": 113
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:107"
+            },
+            "parentId": "ConnectApi.knowledge.gettrendingarticlesfortopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "maxResults": {
-          "id": "ConnectApi.knowledge.gettrendingarticlesfortopic.maxresults",
-          "type": "var",
+        "maxresults": {
+          "id": "ConnectApi.knowledge.method.gettrendingarticlesfortopic(string,string,integer).varParam.maxresults",
+          "nodeType": "variable",
           "name": "maxResults",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -502,29 +912,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 131
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 141
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_maxResults_-1:0"
+            "id": "token.type.identifier_maxResults_0:131"
           },
-          "signature": "Integer maxResults",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "maxResults",
+            "textToLower": "maxresults",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 131
+              },
+              "end": {
+                "line": 0,
+                "character": 141
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_maxResults_0:131"
+          },
+          "parentId": "ConnectApi.knowledge.method.gettrendingarticlesfortopic(string,string,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.knowledge.gettrendingarticlesfortopic.integer",
+            "id": "ConnectApi.knowledge.gettrendingarticlesfortopic.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 123
+                },
+                "end": {
+                  "line": 0,
+                  "character": 130
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:123"
+            },
+            "parentId": "ConnectApi.knowledge.gettrendingarticlesfortopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of the topic. The maximum number of articles returned. Values can be from 0 to 25. Default is 5.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settestgettrendingarticles(string,integer,connectapi.knowledgearticleversioncollection)": {
-      "id": "ConnectApi.knowledge.settestgettrendingarticles",
+      "id": "ConnectApi.knowledge.method.settestgettrendingarticles(string,integer,connectapi.knowledgearticleversioncollection)",
       "nodeType": "method",
       "name": "setTestGetTrendingArticles",
       "startToken": {
@@ -546,6 +1004,9 @@
         },
         "id": "declaration.entity.name.function_setTestGetTrendingArticles_-1:0"
       },
+      "parentId": "ConnectApi.knowledge",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -553,17 +1014,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -572,30 +1033,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void setTestGetTrendingArticles(String communityId, Integer maxResults, ConnectApi.KnowledgeArticleVersionCollection result)",
+      "signature": "public static Void setTestGetTrendingArticles(String communityId, Integer maxResults, ConnectApi.KnowledgeArticleVersionCollection result)",
+      "overrideSignature": "public static override Void setTestGetTrendingArticles(String communityId, Integer maxResults, ConnectApi.KnowledgeArticleVersionCollection result)",
       "simplifiedSignature": "setTestGetTrendingArticles(String,Integer,ConnectApi.KnowledgeArticleVersionCollection)",
       "datatype": {
-        "id": "ConnectApi.knowledge.settestgettrendingarticles.void",
+        "id": "ConnectApi.knowledge.settestgettrendingarticles.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.knowledge.settestgettrendingarticles",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Register a ConnectApi.KnowledgeVersionArticleCollection object to be returned when the matching ConnectApi.getTrendingArticles method is called in a test context. Use the method with the same parameters or you receive an exception.",
+      "parentName": "Knowledge",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.knowledge.settestgettrendingarticles.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.knowledge.method.settestgettrendingarticles(string,integer,connectapi.knowledgearticleversioncollection).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -604,28 +1091,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:53"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 53
+              },
+              "end": {
+                "line": 0,
+                "character": 64
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:53"
+          },
+          "parentId": "ConnectApi.knowledge.method.settestgettrendingarticles(string,integer,connectapi.knowledgearticleversioncollection)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.knowledge.settestgettrendingarticles.string",
+            "id": "ConnectApi.knowledge.settestgettrendingarticles.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 46
+                },
+                "end": {
+                  "line": 0,
+                  "character": 52
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:46"
+            },
+            "parentId": "ConnectApi.knowledge.settestgettrendingarticles",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "maxResults": {
-          "id": "ConnectApi.knowledge.settestgettrendingarticles.maxresults",
-          "type": "var",
+        "maxresults": {
+          "id": "ConnectApi.knowledge.method.settestgettrendingarticles(string,integer,connectapi.knowledgearticleversioncollection).varParam.maxresults",
+          "nodeType": "variable",
           "name": "maxResults",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -634,28 +1166,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 74
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_maxResults_-1:0"
+            "id": "token.type.identifier_maxResults_0:74"
           },
-          "signature": "Integer maxResults",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "maxResults",
+            "textToLower": "maxresults",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 74
+              },
+              "end": {
+                "line": 0,
+                "character": 84
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_maxResults_0:74"
+          },
+          "parentId": "ConnectApi.knowledge.method.settestgettrendingarticles(string,integer,connectapi.knowledgearticleversioncollection)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.knowledge.settestgettrendingarticles.integer",
+            "id": "ConnectApi.knowledge.settestgettrendingarticles.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 66
+                },
+                "end": {
+                  "line": 0,
+                  "character": 73
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:66"
+            },
+            "parentId": "ConnectApi.knowledge.settestgettrendingarticles",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
         "result": {
-          "id": "ConnectApi.knowledge.settestgettrendingarticles.result",
-          "type": "var",
+          "id": "ConnectApi.knowledge.method.settestgettrendingarticles(string,integer,connectapi.knowledgearticleversioncollection).varParam.result",
+          "nodeType": "variable",
           "name": "result",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -664,29 +1241,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 131
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 137
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_result_-1:0"
+            "id": "token.type.identifier_result_0:131"
           },
-          "signature": "ConnectApi.KnowledgeArticleVersionCollection result",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "result",
+            "textToLower": "result",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 131
+              },
+              "end": {
+                "line": 0,
+                "character": 137
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_result_0:131"
+          },
+          "parentId": "ConnectApi.knowledge.method.settestgettrendingarticles(string,integer,connectapi.knowledgearticleversioncollection)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.knowledge.settestgettrendingarticles.connectapi.knowledgearticleversioncollection",
+            "id": "ConnectApi.knowledge.settestgettrendingarticles.datatype.ConnectApi.KnowledgeArticleVersionCollection",
             "nodeType": "datatype",
-            "name": "ConnectApi.KnowledgeArticleVersionCollection"
-          }
+            "name": "ConnectApi.KnowledgeArticleVersionCollection",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 86
+                },
+                "end": {
+                  "line": 0,
+                  "character": 96
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:86"
+            },
+            "parentId": "ConnectApi.knowledge.settestgettrendingarticles",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.KnowledgeArticleVersionCollection"
+          },
+          "description": "Use either the ID for a community, internal, or null. The maximum number of articles returned. Values can be from 0 to 25. Default is 5. The object containing test data.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settestgettrendingarticlesfortopic(string,string,integer,connectapi.knowledgearticleversioncollection)": {
-      "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic",
+      "id": "ConnectApi.knowledge.method.settestgettrendingarticlesfortopic(string,string,integer,connectapi.knowledgearticleversioncollection)",
       "nodeType": "method",
       "name": "setTestGetTrendingArticlesForTopic",
       "startToken": {
@@ -708,6 +1333,9 @@
         },
         "id": "declaration.entity.name.function_setTestGetTrendingArticlesForTopic_-1:0"
       },
+      "parentId": "ConnectApi.knowledge",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -715,17 +1343,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -734,30 +1362,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void setTestGetTrendingArticlesForTopic(String communityId, String topicId, Integer maxResults, ConnectApi.KnowledgeArticleVersionCollection result)",
+      "signature": "public static Void setTestGetTrendingArticlesForTopic(String communityId, String topicId, Integer maxResults, ConnectApi.KnowledgeArticleVersionCollection result)",
+      "overrideSignature": "public static override Void setTestGetTrendingArticlesForTopic(String communityId, String topicId, Integer maxResults, ConnectApi.KnowledgeArticleVersionCollection result)",
       "simplifiedSignature": "setTestGetTrendingArticlesForTopic(String,String,Integer,ConnectApi.KnowledgeArticleVersionCollection)",
       "datatype": {
-        "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic.void",
+        "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.knowledge.settestgettrendingarticlesfortopic",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Register a ConnectApi.KnowledgeVersionArticleCollection object to be returned when the matching ConnectApi.getTrendingArticlesForTopic method is called in a test context. Use the method with the same parameters or you receive an exception.",
+      "parentName": "Knowledge",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.knowledge.method.settestgettrendingarticlesfortopic(string,string,integer,connectapi.knowledgearticleversioncollection).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -766,28 +1420,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:61"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:61"
+          },
+          "parentId": "ConnectApi.knowledge.method.settestgettrendingarticlesfortopic(string,string,integer,connectapi.knowledgearticleversioncollection)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic.string",
+            "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:54"
+            },
+            "parentId": "ConnectApi.knowledge.settestgettrendingarticlesfortopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "topicId": {
-          "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic.topicid",
-          "type": "var",
+        "topicid": {
+          "id": "ConnectApi.knowledge.method.settestgettrendingarticlesfortopic(string,string,integer,connectapi.knowledgearticleversioncollection).varParam.topicid",
+          "nodeType": "variable",
           "name": "topicId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -796,28 +1495,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 88
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_topicId_-1:0"
+            "id": "token.type.identifier_topicId_0:81"
           },
-          "signature": "String topicId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "topicId",
+            "textToLower": "topicid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 88
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_topicId_0:81"
+          },
+          "parentId": "ConnectApi.knowledge.method.settestgettrendingarticlesfortopic(string,string,integer,connectapi.knowledgearticleversioncollection)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic.string",
+            "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 80
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:74"
+            },
+            "parentId": "ConnectApi.knowledge.settestgettrendingarticlesfortopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "maxResults": {
-          "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic.maxresults",
-          "type": "var",
+        "maxresults": {
+          "id": "ConnectApi.knowledge.method.settestgettrendingarticlesfortopic(string,string,integer,connectapi.knowledgearticleversioncollection).varParam.maxresults",
+          "nodeType": "variable",
           "name": "maxResults",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -826,28 +1570,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 108
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_maxResults_-1:0"
+            "id": "token.type.identifier_maxResults_0:98"
           },
-          "signature": "Integer maxResults",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "maxResults",
+            "textToLower": "maxresults",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 98
+              },
+              "end": {
+                "line": 0,
+                "character": 108
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_maxResults_0:98"
+          },
+          "parentId": "ConnectApi.knowledge.method.settestgettrendingarticlesfortopic(string,string,integer,connectapi.knowledgearticleversioncollection)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic.integer",
+            "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 90
+                },
+                "end": {
+                  "line": 0,
+                  "character": 97
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:90"
+            },
+            "parentId": "ConnectApi.knowledge.settestgettrendingarticlesfortopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
         "result": {
-          "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic.result",
-          "type": "var",
+          "id": "ConnectApi.knowledge.method.settestgettrendingarticlesfortopic(string,string,integer,connectapi.knowledgearticleversioncollection).varParam.result",
+          "nodeType": "variable",
           "name": "result",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -856,30 +1645,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 155
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 161
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_result_-1:0"
+            "id": "token.type.identifier_result_0:155"
           },
-          "signature": "ConnectApi.KnowledgeArticleVersionCollection result",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "result",
+            "textToLower": "result",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 155
+              },
+              "end": {
+                "line": 0,
+                "character": 161
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_result_0:155"
+          },
+          "parentId": "ConnectApi.knowledge.method.settestgettrendingarticlesfortopic(string,string,integer,connectapi.knowledgearticleversioncollection)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic.connectapi.knowledgearticleversioncollection",
+            "id": "ConnectApi.knowledge.settestgettrendingarticlesfortopic.datatype.ConnectApi.KnowledgeArticleVersionCollection",
             "nodeType": "datatype",
-            "name": "ConnectApi.KnowledgeArticleVersionCollection"
-          }
+            "name": "ConnectApi.KnowledgeArticleVersionCollection",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 110
+                },
+                "end": {
+                  "line": 0,
+                  "character": 120
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:110"
+            },
+            "parentId": "ConnectApi.knowledge.settestgettrendingarticlesfortopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.KnowledgeArticleVersionCollection"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of the topic. The maximum number of articles returned. Values can be from 0 to 25. Default is 5. The object containing test data.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 5,
+  "queries": []
 }

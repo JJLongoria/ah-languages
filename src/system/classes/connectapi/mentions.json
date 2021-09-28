@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Mentions_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getmentioncompletions(string,string,string)": {
-      "id": "ConnectApi.mentions.getmentioncompletions",
+      "id": "ConnectApi.mentions.method.getmentioncompletions(string,string,string)",
       "nodeType": "method",
       "name": "getMentionCompletions",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getMentionCompletions_-1:0"
       },
+      "parentId": "ConnectApi.mentions",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.​MentionCompletion​Page getMentionCompletions(String communityId, String q, String contextId)",
+      "signature": "public static ConnectApi.MentionCompletionPage getMentionCompletions(String communityId, String q, String contextId)",
+      "overrideSignature": "public static override ConnectApi.MentionCompletionPage getMentionCompletions(String communityId, String q, String contextId)",
       "simplifiedSignature": "getMentionCompletions(String,String,String)",
       "datatype": {
-        "id": "ConnectApi.mentions.getmentioncompletions.ConnectApi.​MentionCompletion​Page",
+        "id": "ConnectApi.mentions.getmentioncompletions.datatype.ConnectApi.MentionCompletionPage",
         "nodeType": "datatype",
-        "name": "ConnectApi.​MentionCompletion​Page"
+        "name": "ConnectApi.MentionCompletionPage",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.mentions.getmentioncompletions",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.MentionCompletionPage"
       },
       "description": "Get the first page of possible users and groups to mention in a feed item body or comment body.",
+      "parentName": "Mentions",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.mentions.getmentioncompletions.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.mentions.method.getmentioncompletions(string,string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 88
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:77"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 77
+              },
+              "end": {
+                "line": 0,
+                "character": 88
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:77"
+          },
+          "parentId": "ConnectApi.mentions.method.getmentioncompletions(string,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.mentions.getmentioncompletions.string",
+            "id": "ConnectApi.mentions.getmentioncompletions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 70
+                },
+                "end": {
+                  "line": 0,
+                  "character": 76
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:70"
+            },
+            "parentId": "ConnectApi.mentions.getmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "q": {
-          "id": "ConnectApi.mentions.getmentioncompletions.q",
-          "type": "var",
+          "id": "ConnectApi.mentions.method.getmentioncompletions(string,string,string).varParam.q",
+          "nodeType": "variable",
           "name": "q",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,28 +254,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 97
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_q_-1:0"
+            "id": "token.type.identifier_q_0:97"
           },
-          "signature": "String q",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "q",
+            "textToLower": "q",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 97
+              },
+              "end": {
+                "line": 0,
+                "character": 98
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_q_0:97"
+          },
+          "parentId": "ConnectApi.mentions.method.getmentioncompletions(string,string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.mentions.getmentioncompletions.string",
+            "id": "ConnectApi.mentions.getmentioncompletions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 90
+                },
+                "end": {
+                  "line": 0,
+                  "character": 96
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:90"
+            },
+            "parentId": "ConnectApi.mentions.getmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "contextId": {
-          "id": "ConnectApi.mentions.getmentioncompletions.contextid",
-          "type": "var",
+        "contextid": {
+          "id": "ConnectApi.mentions.method.getmentioncompletions(string,string,string).varParam.contextid",
+          "nodeType": "variable",
           "name": "contextId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -208,29 +329,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 107
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 116
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_contextId_-1:0"
+            "id": "token.type.identifier_contextId_0:107"
           },
-          "signature": "String contextId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "contextId",
+            "textToLower": "contextid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 107
+              },
+              "end": {
+                "line": 0,
+                "character": 116
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_contextId_0:107"
+          },
+          "parentId": "ConnectApi.mentions.method.getmentioncompletions(string,string,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.mentions.getmentioncompletions.string",
+            "id": "ConnectApi.mentions.getmentioncompletions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 100
+                },
+                "end": {
+                  "line": 0,
+                  "character": 106
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:100"
+            },
+            "parentId": "ConnectApi.mentions.getmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. A search term for matching user and group names. Searching for a group requires a minimum of 2 characters. Searching for a user doesn’t require a minimum number of characters. This parameter does not support wildcards. A feed item ID (for a mention in a comment) or a feed subject ID (for a mention in a feed item) that narrows search results, with more useful results listed first. Use a group ID for groups that allow customers to ensure mention completion results include customers.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer)": {
-      "id": "ConnectApi.mentions.getmentioncompletions",
+      "id": "ConnectApi.mentions.method.getmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer)",
       "nodeType": "method",
       "name": "getMentionCompletions",
       "startToken": {
@@ -252,6 +421,9 @@
         },
         "id": "declaration.entity.name.function_getMentionCompletions_-1:0"
       },
+      "parentId": "ConnectApi.mentions",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -259,17 +431,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -278,30 +450,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.​MentionCompletion​Page getMentionCompletions(String communityId, String q, String contextId, ConnectApi.MentionCompletionType type, Integer pageParam, Integer pageSize)",
+      "signature": "public static ConnectApi.Mentions getMentionCompletions(String communityId, String q, String contextId, ConnectApi.MentionCompletionType type, Integer pageParam, Integer pageSize)",
+      "overrideSignature": "public static override ConnectApi.Mentions getMentionCompletions(String communityId, String q, String contextId, ConnectApi.MentionCompletionType type, Integer pageParam, Integer pageSize)",
       "simplifiedSignature": "getMentionCompletions(String,String,String,ConnectApi.MentionCompletionType,Integer,Integer)",
       "datatype": {
-        "id": "ConnectApi.mentions.getmentioncompletions.ConnectApi.​MentionCompletion​Page",
+        "id": "ConnectApi.mentions.getmentioncompletions.datatype.ConnectApi.Mentions",
         "nodeType": "datatype",
-        "name": "ConnectApi.​MentionCompletion​Page"
+        "name": "ConnectApi.Mentions",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.mentions.getmentioncompletions",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.Mentions"
       },
       "description": "Get a page of possible mention proposals of the specified type.",
+      "parentName": "Mentions",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.mentions.getmentioncompletions.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.mentions.method.getmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,28 +508,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 75
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:64"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 75
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:64"
+          },
+          "parentId": "ConnectApi.mentions.method.getmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.mentions.getmentioncompletions.string",
+            "id": "ConnectApi.mentions.getmentioncompletions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 57
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:57"
+            },
+            "parentId": "ConnectApi.mentions.getmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "q": {
-          "id": "ConnectApi.mentions.getmentioncompletions.q",
-          "type": "var",
+          "id": "ConnectApi.mentions.method.getmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer).varParam.q",
+          "nodeType": "variable",
           "name": "q",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -340,28 +583,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 85
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_q_-1:0"
+            "id": "token.type.identifier_q_0:84"
           },
-          "signature": "String q",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "q",
+            "textToLower": "q",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 84
+              },
+              "end": {
+                "line": 0,
+                "character": 85
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_q_0:84"
+          },
+          "parentId": "ConnectApi.mentions.method.getmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.mentions.getmentioncompletions.string",
+            "id": "ConnectApi.mentions.getmentioncompletions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 77
+                },
+                "end": {
+                  "line": 0,
+                  "character": 83
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:77"
+            },
+            "parentId": "ConnectApi.mentions.getmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "contextId": {
-          "id": "ConnectApi.mentions.getmentioncompletions.contextid",
-          "type": "var",
+        "contextid": {
+          "id": "ConnectApi.mentions.method.getmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer).varParam.contextid",
+          "nodeType": "variable",
           "name": "contextId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -370,28 +658,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 103
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_contextId_-1:0"
+            "id": "token.type.identifier_contextId_0:94"
           },
-          "signature": "String contextId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "contextId",
+            "textToLower": "contextid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 94
+              },
+              "end": {
+                "line": 0,
+                "character": 103
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_contextId_0:94"
+          },
+          "parentId": "ConnectApi.mentions.method.getmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.mentions.getmentioncompletions.string",
+            "id": "ConnectApi.mentions.getmentioncompletions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 87
+                },
+                "end": {
+                  "line": 0,
+                  "character": 93
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:87"
+            },
+            "parentId": "ConnectApi.mentions.getmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "type": {
-          "id": "ConnectApi.mentions.getmentioncompletions.type",
-          "type": "var",
+          "id": "ConnectApi.mentions.method.getmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer).varParam.type",
+          "nodeType": "variable",
           "name": "type",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -400,28 +733,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 138
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 142
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_type_-1:0"
+            "id": "token.type.identifier_type_0:138"
           },
-          "signature": "ConnectApi.MentionCompletionType type",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "type",
+            "textToLower": "type",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 138
+              },
+              "end": {
+                "line": 0,
+                "character": 142
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_type_0:138"
+          },
+          "parentId": "ConnectApi.mentions.method.getmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.mentions.getmentioncompletions.connectapi.mentioncompletiontype",
+            "id": "ConnectApi.mentions.getmentioncompletions.datatype.ConnectApi.MentionCompletionType",
             "nodeType": "datatype",
-            "name": "ConnectApi.MentionCompletionType"
-          }
+            "name": "ConnectApi.MentionCompletionType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 105
+                },
+                "end": {
+                  "line": 0,
+                  "character": 115
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:105"
+            },
+            "parentId": "ConnectApi.mentions.getmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.MentionCompletionType"
+          },
+          "scope": null
         },
-        "pageParam": {
-          "id": "ConnectApi.mentions.getmentioncompletions.pageparam",
-          "type": "var",
+        "pageparam": {
+          "id": "ConnectApi.mentions.method.getmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer).varParam.pageparam",
+          "nodeType": "variable",
           "name": "pageParam",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -430,28 +808,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 152
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 161
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageParam_-1:0"
+            "id": "token.type.identifier_pageParam_0:152"
           },
-          "signature": "Integer pageParam",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 152
+              },
+              "end": {
+                "line": 0,
+                "character": 161
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:152"
+          },
+          "parentId": "ConnectApi.mentions.method.getmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "ConnectApi.mentions.getmentioncompletions.integer",
+            "id": "ConnectApi.mentions.getmentioncompletions.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 144
+                },
+                "end": {
+                  "line": 0,
+                  "character": 151
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:144"
+            },
+            "parentId": "ConnectApi.mentions.getmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
-        "pageSize": {
-          "id": "ConnectApi.mentions.getmentioncompletions.pagesize",
-          "type": "var",
+        "pagesize": {
+          "id": "ConnectApi.mentions.method.getmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer).varParam.pagesize",
+          "nodeType": "variable",
           "name": "pageSize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -460,29 +883,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 171
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 179
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageSize_-1:0"
+            "id": "token.type.identifier_pageSize_0:171"
           },
-          "signature": "Integer pageSize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 171
+              },
+              "end": {
+                "line": 0,
+                "character": 179
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:171"
+          },
+          "parentId": "ConnectApi.mentions.method.getmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer)",
+          "order": 6,
+          "memberOrder": 6,
           "datatype": {
-            "id": "ConnectApi.mentions.getmentioncompletions.integer",
+            "id": "ConnectApi.mentions.getmentioncompletions.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 163
+                },
+                "end": {
+                  "line": 0,
+                  "character": 170
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:163"
+            },
+            "parentId": "ConnectApi.mentions.getmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. A search term for matching user and group names. Searching for a group requires a minimum of 2 characters. Searching for a user doesn’t require a minimum number of characters. This parameter does not support wildcards. A feed item ID (for a mention in a comment) or a feed subject ID (for a mention in a feed item) that narrows search results, with more useful results listed first. Use a group ID for groups that allow customers to ensure mention completion results include customers. Type of mention completion.  All—All mention completions, regardless of the type of record to which the mention refers.   Group—Mention completions for groups.   User—Mention completions for users.    Specifies the number of the page you want returned. Starts at 0. If you pass in null or 0, the first page is returned. Specifies the number of items per page. Valid values are from 1 through 100. If you pass in null, the default size is 25.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "getmentionvalidations(string,string,list)": {
-      "id": "ConnectApi.mentions.getmentionvalidations",
+    "getmentionvalidations(string,string,list<string>,connectapi.feeditemvisibilitytype)": {
+      "id": "ConnectApi.mentions.method.getmentionvalidations(string,string,list<string>,connectapi.feeditemvisibilitytype)",
       "nodeType": "method",
       "name": "getMentionValidations",
       "startToken": {
@@ -504,6 +975,9 @@
         },
         "id": "declaration.entity.name.function_getMentionValidations_-1:0"
       },
+      "parentId": "ConnectApi.mentions",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -511,17 +985,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -530,30 +1004,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.​​Mention​Validations getMentionValidations(String communityId, String parentId, List <String>)",
-      "simplifiedSignature": "getMentionValidations(String,String,List)",
+      "signature": "public static ConnectApi.Mentions getMentionValidations(String communityId, String parentId, List<String> recordIds, ConnectApi.FeedItemVisibilityType visibility)",
+      "overrideSignature": "public static override ConnectApi.Mentions getMentionValidations(String communityId, String parentId, List<String> recordIds, ConnectApi.FeedItemVisibilityType visibility)",
+      "simplifiedSignature": "getMentionValidations(String,String,List<String>,ConnectApi.FeedItemVisibilityType)",
       "datatype": {
-        "id": "ConnectApi.mentions.getmentionvalidations.ConnectApi.​​Mention​Validations",
+        "id": "ConnectApi.mentions.getmentionvalidations.datatype.ConnectApi.Mentions",
         "nodeType": "datatype",
-        "name": "ConnectApi.​​Mention​Validations"
+        "name": "ConnectApi.Mentions",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.mentions.getmentionvalidations",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.Mentions"
       },
       "description": "Get information about whether the mentions are valid for the context user.",
+      "parentName": "Mentions",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.mentions.getmentionvalidations.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.mentions.method.getmentionvalidations(string,string,list<string>,connectapi.feeditemvisibilitytype).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -562,28 +1062,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 63
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 74
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:63"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 63
+              },
+              "end": {
+                "line": 0,
+                "character": 74
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:63"
+          },
+          "parentId": "ConnectApi.mentions.method.getmentionvalidations(string,string,list<string>,connectapi.feeditemvisibilitytype)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.mentions.getmentionvalidations.string",
+            "id": "ConnectApi.mentions.getmentionvalidations.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 56
+                },
+                "end": {
+                  "line": 0,
+                  "character": 62
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:56"
+            },
+            "parentId": "ConnectApi.mentions.getmentionvalidations",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "parentId": {
-          "id": "ConnectApi.mentions.getmentionvalidations.parentid",
-          "type": "var",
+        "parentid": {
+          "id": "ConnectApi.mentions.method.getmentionvalidations(string,string,list<string>,connectapi.feeditemvisibilitytype).varParam.parentid",
+          "nodeType": "variable",
           "name": "parentId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -592,59 +1137,254 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 91
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_parentId_-1:0"
+            "id": "token.type.identifier_parentId_0:83"
           },
-          "signature": "String parentId",
-          "datatype": {
-            "id": "ConnectApi.mentions.getmentionvalidations.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String>": {
-          "id": "ConnectApi.mentions.getmentionvalidations.<string>",
-          "type": "var",
-          "name": "<String>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "parentId",
+            "textToLower": "parentid",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 91
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_parentId_0:83"
           },
-          "signature": "List <String>",
+          "parentId": "ConnectApi.mentions.method.getmentionvalidations(string,string,list<string>,connectapi.feeditemvisibilitytype)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.mentions.getmentionvalidations.list",
+            "id": "ConnectApi.mentions.getmentionvalidations.datatype.String",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 76
+                },
+                "end": {
+                  "line": 0,
+                  "character": 82
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:76"
+            },
+            "parentId": "ConnectApi.mentions.getmentionvalidations",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "recordids": {
+          "id": "ConnectApi.mentions.method.getmentionvalidations(string,string,list<string>,connectapi.feeditemvisibilitytype).varParam.recordids",
+          "nodeType": "variable",
+          "name": "recordIds",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordIds",
+            "textToLower": "recordids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 106
+              },
+              "end": {
+                "line": 0,
+                "character": 115
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordIds_0:106"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordIds",
+            "textToLower": "recordids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 106
+              },
+              "end": {
+                "line": 0,
+                "character": 115
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordIds_0:106"
+          },
+          "parentId": "ConnectApi.mentions.method.getmentionvalidations(string,string,list<string>,connectapi.feeditemvisibilitytype)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "ConnectApi.mentions.getmentionvalidations.datatype.List<String>",
+            "nodeType": "datatype",
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 93
+                },
+                "end": {
+                  "line": 0,
+                  "character": 97
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:93"
+            },
+            "parentId": "ConnectApi.mentions.getmentionvalidations",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "ConnectApi.mentions.getmentionvalidations.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 98
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 104
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:98"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
+        },
+        "visibility": {
+          "id": "ConnectApi.mentions.method.getmentionvalidations(string,string,list<string>,connectapi.feeditemvisibilitytype).varParam.visibility",
+          "nodeType": "variable",
+          "name": "visibility",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "visibility",
+            "textToLower": "visibility",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 151
+              },
+              "end": {
+                "line": 0,
+                "character": 161
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_visibility_0:151"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "visibility",
+            "textToLower": "visibility",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 151
+              },
+              "end": {
+                "line": 0,
+                "character": 161
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_visibility_0:151"
+          },
+          "parentId": "ConnectApi.mentions.method.getmentionvalidations(string,string,list<string>,connectapi.feeditemvisibilitytype)",
+          "order": 4,
+          "memberOrder": 4,
+          "datatype": {
+            "id": "ConnectApi.mentions.getmentionvalidations.datatype.ConnectApi.FeedItemVisibilityType",
+            "nodeType": "datatype",
+            "name": "ConnectApi.FeedItemVisibilityType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 117
+                },
+                "end": {
+                  "line": 0,
+                  "character": 127
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:117"
+            },
+            "parentId": "ConnectApi.mentions.getmentionvalidations",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.FeedItemVisibilityType"
+          },
+          "description": "Use either the ID for a community, internal, or null. The feed item parent ID. A comma separated list of IDs to be mentioned. The maximum value is 25. Type of users who can see a feed item.  AllUsers—Visibility is not limited to internal users.   InternalUsers—Visibility is limited to internal users.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settestgetmentioncompletions(string,string,string,connectapi.mentioncompletionpage)": {
-      "id": "ConnectApi.mentions.settestgetmentioncompletions",
+      "id": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletionpage)",
       "nodeType": "method",
       "name": "setTestGetMentionCompletions",
       "startToken": {
@@ -666,6 +1406,9 @@
         },
         "id": "declaration.entity.name.function_setTestGetMentionCompletions_-1:0"
       },
+      "parentId": "ConnectApi.mentions",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -673,17 +1416,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -692,30 +1435,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void setTestGetMentionCompletions(String communityId, String q, String contextId, ConnectApi.MentionCompletionPage result)",
+      "signature": "public static Void setTestGetMentionCompletions(String communityId, String q, String contextId, ConnectApi.MentionCompletionPage result)",
+      "overrideSignature": "public static override Void setTestGetMentionCompletions(String communityId, String q, String contextId, ConnectApi.MentionCompletionPage result)",
       "simplifiedSignature": "setTestGetMentionCompletions(String,String,String,ConnectApi.MentionCompletionPage)",
       "datatype": {
-        "id": "ConnectApi.mentions.settestgetmentioncompletions.void",
+        "id": "ConnectApi.mentions.settestgetmentioncompletions.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.mentions.settestgetmentioncompletions",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Register a ConnectApi.MentionCompletionPage object to be returned when getMentionCompletions(String, String, String) is called in a test context.",
+      "parentName": "Mentions",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.mentions.settestgetmentioncompletions.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletionpage).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -724,28 +1493,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:56"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 56
+              },
+              "end": {
+                "line": 0,
+                "character": 67
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:56"
+          },
+          "parentId": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletionpage)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.mentions.settestgetmentioncompletions.string",
+            "id": "ConnectApi.mentions.settestgetmentioncompletions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 55
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:49"
+            },
+            "parentId": "ConnectApi.mentions.settestgetmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "q": {
-          "id": "ConnectApi.mentions.settestgetmentioncompletions.q",
-          "type": "var",
+          "id": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletionpage).varParam.q",
+          "nodeType": "variable",
           "name": "q",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -754,28 +1568,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 76
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_q_-1:0"
+            "id": "token.type.identifier_q_0:76"
           },
-          "signature": "String q",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "q",
+            "textToLower": "q",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 76
+              },
+              "end": {
+                "line": 0,
+                "character": 77
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_q_0:76"
+          },
+          "parentId": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletionpage)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.mentions.settestgetmentioncompletions.string",
+            "id": "ConnectApi.mentions.settestgetmentioncompletions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 69
+                },
+                "end": {
+                  "line": 0,
+                  "character": 75
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:69"
+            },
+            "parentId": "ConnectApi.mentions.settestgetmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "contextId": {
-          "id": "ConnectApi.mentions.settestgetmentioncompletions.contextid",
-          "type": "var",
+        "contextid": {
+          "id": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletionpage).varParam.contextid",
+          "nodeType": "variable",
           "name": "contextId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -784,28 +1643,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_contextId_-1:0"
+            "id": "token.type.identifier_contextId_0:86"
           },
-          "signature": "String contextId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "contextId",
+            "textToLower": "contextid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 86
+              },
+              "end": {
+                "line": 0,
+                "character": 95
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_contextId_0:86"
+          },
+          "parentId": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletionpage)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.mentions.settestgetmentioncompletions.string",
+            "id": "ConnectApi.mentions.settestgetmentioncompletions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 79
+                },
+                "end": {
+                  "line": 0,
+                  "character": 85
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:79"
+            },
+            "parentId": "ConnectApi.mentions.settestgetmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "result": {
-          "id": "ConnectApi.mentions.settestgetmentioncompletions.result",
-          "type": "var",
+          "id": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletionpage).varParam.result",
+          "nodeType": "variable",
           "name": "result",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -814,29 +1718,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 130
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 136
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_result_-1:0"
+            "id": "token.type.identifier_result_0:130"
           },
-          "signature": "ConnectApi.MentionCompletionPage result",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "result",
+            "textToLower": "result",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 130
+              },
+              "end": {
+                "line": 0,
+                "character": 136
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_result_0:130"
+          },
+          "parentId": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletionpage)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.mentions.settestgetmentioncompletions.connectapi.mentioncompletionpage",
+            "id": "ConnectApi.mentions.settestgetmentioncompletions.datatype.ConnectApi.MentionCompletionPage",
             "nodeType": "datatype",
-            "name": "ConnectApi.MentionCompletionPage"
-          }
+            "name": "ConnectApi.MentionCompletionPage",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 97
+                },
+                "end": {
+                  "line": 0,
+                  "character": 107
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:97"
+            },
+            "parentId": "ConnectApi.mentions.settestgetmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.MentionCompletionPage"
+          },
+          "description": "Use either the ID for a community, internal, or null. A search term for matching user and group names. Searching for a group requires a minimum of 2 characters. Searching for a user doesn’t require a minimum number of characters. This parameter does not support wildcards. A feed item ID (for a mention in a comment) or a feed subject ID (for a mention in a feed item) that narrows search results, with more useful results listed first. Use a group ID for groups that allow customers to ensure mention completion results include customers. A ConnectApi.MentionCompletionPage object containing test data.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage)": {
-      "id": "ConnectApi.mentions.settestgetmentioncompletions",
+      "id": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage)",
       "nodeType": "method",
       "name": "setTestGetMentionCompletions",
       "startToken": {
@@ -858,6 +1810,9 @@
         },
         "id": "declaration.entity.name.function_setTestGetMentionCompletions_-1:0"
       },
+      "parentId": "ConnectApi.mentions",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -865,17 +1820,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -884,30 +1839,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void setTestGetMentionCompletions(String communityId, String q, String contextId, ConnectApi.MentionCompletionType type, Integer pageParam, Integer pageSize, ConnectApi.MentionCompletionPage result)",
+      "signature": "public static Void setTestGetMentionCompletions(String communityId, String q, String contextId, ConnectApi.MentionCompletionType type, Integer pageParam, Integer pageSize, ConnectApi.MentionCompletionPage result)",
+      "overrideSignature": "public static override Void setTestGetMentionCompletions(String communityId, String q, String contextId, ConnectApi.MentionCompletionType type, Integer pageParam, Integer pageSize, ConnectApi.MentionCompletionPage result)",
       "simplifiedSignature": "setTestGetMentionCompletions(String,String,String,ConnectApi.MentionCompletionType,Integer,Integer,ConnectApi.MentionCompletionPage)",
       "datatype": {
-        "id": "ConnectApi.mentions.settestgetmentioncompletions.void",
+        "id": "ConnectApi.mentions.settestgetmentioncompletions.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.mentions.settestgetmentioncompletions",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Register a ConnectApi.MentionCompletionPage object to be returned when getMentionCompletions(String, String, String, ConnectApi.MentionCompletionType, Integer, Integer) is called in a test context.",
+      "parentName": "Mentions",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.mentions.settestgetmentioncompletions.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -916,28 +1897,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:56"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 56
+              },
+              "end": {
+                "line": 0,
+                "character": 67
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:56"
+          },
+          "parentId": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.mentions.settestgetmentioncompletions.string",
+            "id": "ConnectApi.mentions.settestgetmentioncompletions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 55
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:49"
+            },
+            "parentId": "ConnectApi.mentions.settestgetmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "q": {
-          "id": "ConnectApi.mentions.settestgetmentioncompletions.q",
-          "type": "var",
+          "id": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage).varParam.q",
+          "nodeType": "variable",
           "name": "q",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -946,28 +1972,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 76
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_q_-1:0"
+            "id": "token.type.identifier_q_0:76"
           },
-          "signature": "String q",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "q",
+            "textToLower": "q",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 76
+              },
+              "end": {
+                "line": 0,
+                "character": 77
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_q_0:76"
+          },
+          "parentId": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.mentions.settestgetmentioncompletions.string",
+            "id": "ConnectApi.mentions.settestgetmentioncompletions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 69
+                },
+                "end": {
+                  "line": 0,
+                  "character": 75
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:69"
+            },
+            "parentId": "ConnectApi.mentions.settestgetmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "contextId": {
-          "id": "ConnectApi.mentions.settestgetmentioncompletions.contextid",
-          "type": "var",
+        "contextid": {
+          "id": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage).varParam.contextid",
+          "nodeType": "variable",
           "name": "contextId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -976,28 +2047,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_contextId_-1:0"
+            "id": "token.type.identifier_contextId_0:86"
           },
-          "signature": "String contextId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "contextId",
+            "textToLower": "contextid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 86
+              },
+              "end": {
+                "line": 0,
+                "character": 95
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_contextId_0:86"
+          },
+          "parentId": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.mentions.settestgetmentioncompletions.string",
+            "id": "ConnectApi.mentions.settestgetmentioncompletions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 79
+                },
+                "end": {
+                  "line": 0,
+                  "character": 85
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:79"
+            },
+            "parentId": "ConnectApi.mentions.settestgetmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "type": {
-          "id": "ConnectApi.mentions.settestgetmentioncompletions.type",
-          "type": "var",
+          "id": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage).varParam.type",
+          "nodeType": "variable",
           "name": "type",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1006,28 +2122,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 130
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 134
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_type_-1:0"
+            "id": "token.type.identifier_type_0:130"
           },
-          "signature": "ConnectApi.MentionCompletionType type",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "type",
+            "textToLower": "type",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 130
+              },
+              "end": {
+                "line": 0,
+                "character": 134
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_type_0:130"
+          },
+          "parentId": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.mentions.settestgetmentioncompletions.connectapi.mentioncompletiontype",
+            "id": "ConnectApi.mentions.settestgetmentioncompletions.datatype.ConnectApi.MentionCompletionType",
             "nodeType": "datatype",
-            "name": "ConnectApi.MentionCompletionType"
-          }
+            "name": "ConnectApi.MentionCompletionType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 97
+                },
+                "end": {
+                  "line": 0,
+                  "character": 107
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:97"
+            },
+            "parentId": "ConnectApi.mentions.settestgetmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.MentionCompletionType"
+          },
+          "scope": null
         },
-        "pageParam": {
-          "id": "ConnectApi.mentions.settestgetmentioncompletions.pageparam",
-          "type": "var",
+        "pageparam": {
+          "id": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage).varParam.pageparam",
+          "nodeType": "variable",
           "name": "pageParam",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1036,28 +2197,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 144
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 153
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageParam_-1:0"
+            "id": "token.type.identifier_pageParam_0:144"
           },
-          "signature": "Integer pageParam",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 144
+              },
+              "end": {
+                "line": 0,
+                "character": 153
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:144"
+          },
+          "parentId": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "ConnectApi.mentions.settestgetmentioncompletions.integer",
+            "id": "ConnectApi.mentions.settestgetmentioncompletions.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 136
+                },
+                "end": {
+                  "line": 0,
+                  "character": 143
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:136"
+            },
+            "parentId": "ConnectApi.mentions.settestgetmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
-        "pageSize": {
-          "id": "ConnectApi.mentions.settestgetmentioncompletions.pagesize",
-          "type": "var",
+        "pagesize": {
+          "id": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage).varParam.pagesize",
+          "nodeType": "variable",
           "name": "pageSize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1066,28 +2272,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 163
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 171
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageSize_-1:0"
+            "id": "token.type.identifier_pageSize_0:163"
           },
-          "signature": "Integer pageSize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 163
+              },
+              "end": {
+                "line": 0,
+                "character": 171
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:163"
+          },
+          "parentId": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage)",
+          "order": 6,
+          "memberOrder": 6,
           "datatype": {
-            "id": "ConnectApi.mentions.settestgetmentioncompletions.integer",
+            "id": "ConnectApi.mentions.settestgetmentioncompletions.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 155
+                },
+                "end": {
+                  "line": 0,
+                  "character": 162
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:155"
+            },
+            "parentId": "ConnectApi.mentions.settestgetmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
         "result": {
-          "id": "ConnectApi.mentions.settestgetmentioncompletions.result",
-          "type": "var",
+          "id": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage).varParam.result",
+          "nodeType": "variable",
           "name": "result",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1096,30 +2347,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 206
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 212
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_result_-1:0"
+            "id": "token.type.identifier_result_0:206"
           },
-          "signature": "ConnectApi.MentionCompletionPage result",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "result",
+            "textToLower": "result",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 206
+              },
+              "end": {
+                "line": 0,
+                "character": 212
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_result_0:206"
+          },
+          "parentId": "ConnectApi.mentions.method.settestgetmentioncompletions(string,string,string,connectapi.mentioncompletiontype,integer,integer,connectapi.mentioncompletionpage)",
+          "order": 7,
+          "memberOrder": 7,
           "datatype": {
-            "id": "ConnectApi.mentions.settestgetmentioncompletions.connectapi.mentioncompletionpage",
+            "id": "ConnectApi.mentions.settestgetmentioncompletions.datatype.ConnectApi.MentionCompletionPage",
             "nodeType": "datatype",
-            "name": "ConnectApi.MentionCompletionPage"
-          }
+            "name": "ConnectApi.MentionCompletionPage",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 173
+                },
+                "end": {
+                  "line": 0,
+                  "character": 183
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:173"
+            },
+            "parentId": "ConnectApi.mentions.settestgetmentioncompletions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.MentionCompletionPage"
+          },
+          "description": "Use either the ID for a community, internal, or null. A search term for matching user and group names. Searching for a group requires a minimum of 2 characters. Searching for a user doesn’t require a minimum number of characters. This parameter does not support wildcards. A feed item ID (for a mention in a comment) or a feed subject ID (for a mention in a feed item) that narrows search results, with more useful results listed first. Use a group ID for groups that allow customers to ensure mention completion results include customers. Type of mention completion.  All—All mention completions, regardless of the type of record to which the mention refers.   Group—Mention completions for groups.   User—Mention completions for users.    Specifies the number of the page you want returned. Starts at 0. If you pass in null or 0, the first page is returned. Specifies the number of items per page. Valid values are from 1 through 100. If you pass in null, the default size is 25. A ConnectApi.MentionCompletionPage object containing test data.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 5,
+  "queries": []
 }

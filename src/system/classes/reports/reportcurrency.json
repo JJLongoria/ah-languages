@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_ReportCurrency_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getamount()": {
-      "id": "Reports.reportcurrency.getamount",
+      "id": "Reports.reportcurrency.method.getamount()",
       "nodeType": "method",
       "name": "getAmount",
       "startToken": {
@@ -90,18 +92,68 @@
         },
         "id": "declaration.entity.name.function_getAmount_-1:0"
       },
-      "signature": "Decimal getAmount()",
+      "parentId": "Reports.reportcurrency",
+      "order": 1,
+      "memberOrder": 1,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public Decimal getAmount()",
+      "overrideSignature": "public override Decimal getAmount()",
       "simplifiedSignature": "getAmount()",
       "datatype": {
-        "id": "Reports.reportcurrency.getamount.Decimal",
+        "id": "Reports.reportcurrency.getamount.datatype.Decimal",
         "nodeType": "datatype",
-        "name": "Decimal"
+        "name": "Decimal",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Decimal",
+          "textToLower": "decimal",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Decimal_0:7"
+        },
+        "parentId": "Reports.reportcurrency.getamount",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Decimal"
       },
       "description": "Returns the amount of the currency value.",
-      "params": {}
+      "parentName": "ReportCurrency",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getcurrencycode()": {
-      "id": "Reports.reportcurrency.getcurrencycode",
+      "id": "Reports.reportcurrency.method.getcurrencycode()",
       "nodeType": "method",
       "name": "getCurrencyCode",
       "startToken": {
@@ -123,19 +175,71 @@
         },
         "id": "declaration.entity.name.function_getCurrencyCode_-1:0"
       },
-      "signature": "String getCurrencyCode()",
+      "parentId": "Reports.reportcurrency",
+      "order": 2,
+      "memberOrder": 2,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public String getCurrencyCode()",
+      "overrideSignature": "public override String getCurrencyCode()",
       "simplifiedSignature": "getCurrencyCode()",
       "datatype": {
-        "id": "Reports.reportcurrency.getcurrencycode.String",
+        "id": "Reports.reportcurrency.getcurrencycode.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Reports.reportcurrency.getcurrencycode",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the report currency code, such as USD, EUR, or GBP, for an organization that has multicurrency enabled. The value is null if the organization does not have multicurrency enabled.",
-      "params": {}
+      "parentName": "ReportCurrency",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

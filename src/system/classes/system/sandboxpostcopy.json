@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_SandboxPostCopy_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "runapexclass(system.sandboxcontext)": {
-      "id": "System.sandboxpostcopy.runapexclass",
+      "id": "System.sandboxpostcopy.method.runapexclass(system.sandboxcontext)",
       "nodeType": "method",
       "name": "runApexClass",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_runApexClass_-1:0"
       },
+      "parentId": "System.sandboxpostcopy",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void runApexClass(System.SandboxContext context)",
+      "overrideSignature": "public override void runApexClass(System.SandboxContext context)",
       "simplifiedSignature": "runApexClass(System.SandboxContext)",
       "datatype": {
-        "id": "System.sandboxpostcopy.runapexclass.void",
+        "id": "System.sandboxpostcopy.runapexclass.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "System.sandboxpostcopy.runapexclass",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Executes actions in a new sandbox to prepare it for use. For example, add logic to this method to create users, run sanitizing code on records, and perform other setup tasks.",
+      "parentName": "SandboxPostCopy",
+      "variables": {},
       "params": {
         "context": {
-          "id": "System.sandboxpostcopy.runapexclass.context",
-          "type": "var",
+          "id": "System.sandboxpostcopy.method.runapexclass(system.sandboxcontext).varParam.context",
+          "nodeType": "variable",
           "name": "context",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,30 +160,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_context_-1:0"
+            "id": "token.type.identifier_context_0:47"
           },
-          "signature": "System.SandboxContext context",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "context",
+            "textToLower": "context",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 54
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_context_0:47"
+          },
+          "parentId": "System.sandboxpostcopy.method.runapexclass(system.sandboxcontext)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.sandboxpostcopy.runapexclass.system.sandboxcontext",
+            "id": "System.sandboxpostcopy.runapexclass.datatype.System.SandboxContext",
             "nodeType": "datatype",
-            "name": "System.SandboxContext"
-          }
+            "name": "System.SandboxContext",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "System",
+              "textToLower": "system",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 25
+                },
+                "end": {
+                  "line": 0,
+                  "character": 31
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_System_0:25"
+            },
+            "parentId": "System.sandboxpostcopy.runapexclass",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "System.SandboxContext"
+          },
+          "description": "The org ID, sandbox ID, and sandbox name for your sandbox. To work with these values, reference context.organizationId(), context.sandboxId(), and context.sandboxName() in your code.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

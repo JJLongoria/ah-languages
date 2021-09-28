@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_EmailMergeFieldService_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "getmergefields(list)": {
-      "id": "ConnectApi.emailmergefieldservice.getmergefields",
+    "getmergefields(list<string>)": {
+      "id": "ConnectApi.emailmergefieldservice.method.getmergefields(list<string>)",
       "nodeType": "method",
       "name": "getMergeFields",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getMergeFields_-1:0"
       },
+      "parentId": "ConnectApi.emailmergefieldservice",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,62 +121,165 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.EmailMergeFieldInfo getMergeFields(List <String>)",
-      "simplifiedSignature": "getMergeFields(List)",
+      "signature": "public static ConnectApi.EmailMergeFieldInfo getMergeFields(List<String> objectApiNames)",
+      "overrideSignature": "public static override ConnectApi.EmailMergeFieldInfo getMergeFields(List<String> objectApiNames)",
+      "simplifiedSignature": "getMergeFields(List<String>)",
       "datatype": {
-        "id": "ConnectApi.emailmergefieldservice.getmergefields.ConnectApi.EmailMergeFieldInfo",
+        "id": "ConnectApi.emailmergefieldservice.getmergefields.datatype.ConnectApi.EmailMergeFieldInfo",
         "nodeType": "datatype",
-        "name": "ConnectApi.EmailMergeFieldInfo"
+        "name": "ConnectApi.EmailMergeFieldInfo",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.emailmergefieldservice.getmergefields",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.EmailMergeFieldInfo"
       },
       "description": "Extract the merge fields for a specific object.",
+      "parentName": "EmailMergeFieldService",
+      "variables": {},
       "params": {
-        "<String>": {
-          "id": "ConnectApi.emailmergefieldservice.getmergefields.<string>",
-          "type": "var",
-          "name": "<String>",
+        "objectapinames": {
+          "id": "ConnectApi.emailmergefieldservice.method.getmergefields(list<string>).varParam.objectapinames",
+          "nodeType": "variable",
+          "name": "objectApiNames",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "objectApiNames",
+            "textToLower": "objectapinames",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 87
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_objectApiNames_0:73"
           },
-          "signature": "List <String>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "objectApiNames",
+            "textToLower": "objectapinames",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 87
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_objectApiNames_0:73"
+          },
+          "parentId": "ConnectApi.emailmergefieldservice.method.getmergefields(list<string>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.emailmergefieldservice.getmergefields.list",
+            "id": "ConnectApi.emailmergefieldservice.getmergefields.datatype.List<String>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 60
+                },
+                "end": {
+                  "line": 0,
+                  "character": 64
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:60"
+            },
+            "parentId": "ConnectApi.emailmergefieldservice.getmergefields",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "ConnectApi.emailmergefieldservice.getmergefields.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 65
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 71
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:65"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "The API names for the objects being referenced.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

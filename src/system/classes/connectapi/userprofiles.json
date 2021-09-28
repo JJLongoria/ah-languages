@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_UserProfiles_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "deletebannerphoto(string,string)": {
-      "id": "ConnectApi.userprofiles.deletebannerphoto",
+      "id": "ConnectApi.userprofiles.method.deletebannerphoto(string,string)",
       "nodeType": "method",
       "name": "deleteBannerPhoto",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_deleteBannerPhoto_-1:0"
       },
+      "parentId": "ConnectApi.userprofiles",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void deleteBannerPhoto(String communityId, String userId)",
+      "signature": "public static Void deleteBannerPhoto(String communityId, String userId)",
+      "overrideSignature": "public static override Void deleteBannerPhoto(String communityId, String userId)",
       "simplifiedSignature": "deleteBannerPhoto(String,String)",
       "datatype": {
-        "id": "ConnectApi.userprofiles.deletebannerphoto.void",
+        "id": "ConnectApi.userprofiles.deletebannerphoto.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.userprofiles.deletebannerphoto",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Delete a user’s banner photo.",
+      "parentName": "UserProfiles",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.userprofiles.deletebannerphoto.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.userprofiles.method.deletebannerphoto(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:44"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 44
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:44"
+          },
+          "parentId": "ConnectApi.userprofiles.method.deletebannerphoto(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.userprofiles.deletebannerphoto.string",
+            "id": "ConnectApi.userprofiles.deletebannerphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 43
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:37"
+            },
+            "parentId": "ConnectApi.userprofiles.deletebannerphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "ConnectApi.userprofiles.deletebannerphoto.userid",
-          "type": "var",
+        "userid": {
+          "id": "ConnectApi.userprofiles.method.deletebannerphoto(string,string).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,29 +254,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:64"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 70
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:64"
+          },
+          "parentId": "ConnectApi.userprofiles.method.deletebannerphoto(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.userprofiles.deletebannerphoto.string",
+            "id": "ConnectApi.userprofiles.deletebannerphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 57
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:57"
+            },
+            "parentId": "ConnectApi.userprofiles.deletebannerphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of the user.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "deletephoto(string,string)": {
-      "id": "ConnectApi.userprofiles.deletephoto",
+      "id": "ConnectApi.userprofiles.method.deletephoto(string,string)",
       "nodeType": "method",
       "name": "deletePhoto",
       "startToken": {
@@ -222,6 +346,9 @@
         },
         "id": "declaration.entity.name.function_deletePhoto_-1:0"
       },
+      "parentId": "ConnectApi.userprofiles",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -229,17 +356,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -248,30 +375,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void deletePhoto(String communityId, String userId)",
+      "signature": "public static Void deletePhoto(String communityId, String userId)",
+      "overrideSignature": "public static override Void deletePhoto(String communityId, String userId)",
       "simplifiedSignature": "deletePhoto(String,String)",
       "datatype": {
-        "id": "ConnectApi.userprofiles.deletephoto.void",
+        "id": "ConnectApi.userprofiles.deletephoto.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "ConnectApi.userprofiles.deletephoto",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Delete a user’s photo.",
+      "parentName": "UserProfiles",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.userprofiles.deletephoto.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.userprofiles.method.deletephoto(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -280,28 +433,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:38"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 49
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:38"
+          },
+          "parentId": "ConnectApi.userprofiles.method.deletephoto(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.userprofiles.deletephoto.string",
+            "id": "ConnectApi.userprofiles.deletephoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:31"
+            },
+            "parentId": "ConnectApi.userprofiles.deletephoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "ConnectApi.userprofiles.deletephoto.userid",
-          "type": "var",
+        "userid": {
+          "id": "ConnectApi.userprofiles.method.deletephoto(string,string).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,29 +508,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:58"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 64
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:58"
+          },
+          "parentId": "ConnectApi.userprofiles.method.deletephoto(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.userprofiles.deletephoto.string",
+            "id": "ConnectApi.userprofiles.deletephoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 51
+                },
+                "end": {
+                  "line": 0,
+                  "character": 57
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:51"
+            },
+            "parentId": "ConnectApi.userprofiles.deletephoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID for the context user or the keyword me.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getbannerphoto(string,string)": {
-      "id": "ConnectApi.userprofiles.getbannerphoto",
+      "id": "ConnectApi.userprofiles.method.getbannerphoto(string,string)",
       "nodeType": "method",
       "name": "getBannerPhoto",
       "startToken": {
@@ -354,6 +600,9 @@
         },
         "id": "declaration.entity.name.function_getBannerPhoto_-1:0"
       },
+      "parentId": "ConnectApi.userprofiles",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -361,17 +610,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -380,30 +629,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.BannerPhoto getBannerPhoto(String communityId, String userId)",
+      "overrideSignature": "public static override ConnectApi.BannerPhoto getBannerPhoto(String communityId, String userId)",
       "simplifiedSignature": "getBannerPhoto(String,String)",
       "datatype": {
-        "id": "ConnectApi.userprofiles.getbannerphoto.ConnectApi.BannerPhoto",
+        "id": "ConnectApi.userprofiles.getbannerphoto.datatype.ConnectApi.BannerPhoto",
         "nodeType": "datatype",
-        "name": "ConnectApi.BannerPhoto"
+        "name": "ConnectApi.BannerPhoto",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.userprofiles.getbannerphoto",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.BannerPhoto"
       },
       "description": "Get a user’s banner photo.",
+      "parentName": "UserProfiles",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.userprofiles.getbannerphoto.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.userprofiles.method.getbannerphoto(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -412,28 +687,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:59"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 70
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:59"
+          },
+          "parentId": "ConnectApi.userprofiles.method.getbannerphoto(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.userprofiles.getbannerphoto.string",
+            "id": "ConnectApi.userprofiles.getbannerphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:52"
+            },
+            "parentId": "ConnectApi.userprofiles.getbannerphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "ConnectApi.userprofiles.getbannerphoto.userid",
-          "type": "var",
+        "userid": {
+          "id": "ConnectApi.userprofiles.method.getbannerphoto(string,string).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -442,29 +762,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 85
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:79"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 79
+              },
+              "end": {
+                "line": 0,
+                "character": 85
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:79"
+          },
+          "parentId": "ConnectApi.userprofiles.method.getbannerphoto(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.userprofiles.getbannerphoto.string",
+            "id": "ConnectApi.userprofiles.getbannerphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 72
+                },
+                "end": {
+                  "line": 0,
+                  "character": 78
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:72"
+            },
+            "parentId": "ConnectApi.userprofiles.getbannerphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of the user.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getphoto(string,string)": {
-      "id": "ConnectApi.userprofiles.getphoto",
+      "id": "ConnectApi.userprofiles.method.getphoto(string,string)",
       "nodeType": "method",
       "name": "getPhoto",
       "startToken": {
@@ -486,6 +854,9 @@
         },
         "id": "declaration.entity.name.function_getPhoto_-1:0"
       },
+      "parentId": "ConnectApi.userprofiles",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -493,17 +864,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -512,30 +883,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.Photo getPhoto(String communityId, String userId)",
+      "overrideSignature": "public static override ConnectApi.Photo getPhoto(String communityId, String userId)",
       "simplifiedSignature": "getPhoto(String,String)",
       "datatype": {
-        "id": "ConnectApi.userprofiles.getphoto.ConnectApi.Photo",
+        "id": "ConnectApi.userprofiles.getphoto.datatype.ConnectApi.Photo",
         "nodeType": "datatype",
-        "name": "ConnectApi.Photo"
+        "name": "ConnectApi.Photo",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.userprofiles.getphoto",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.Photo"
       },
       "description": "Get a user’s photo.",
+      "parentName": "UserProfiles",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.userprofiles.getphoto.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.userprofiles.method.getphoto(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -544,28 +941,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:47"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:47"
+          },
+          "parentId": "ConnectApi.userprofiles.method.getphoto(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.userprofiles.getphoto.string",
+            "id": "ConnectApi.userprofiles.getphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 40
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:40"
+            },
+            "parentId": "ConnectApi.userprofiles.getphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "ConnectApi.userprofiles.getphoto.userid",
-          "type": "var",
+        "userid": {
+          "id": "ConnectApi.userprofiles.method.getphoto(string,string).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -574,29 +1016,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:67"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 73
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:67"
+          },
+          "parentId": "ConnectApi.userprofiles.method.getphoto(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.userprofiles.getphoto.string",
+            "id": "ConnectApi.userprofiles.getphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 60
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:60"
+            },
+            "parentId": "ConnectApi.userprofiles.getphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID for a user.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getuserprofile(string,string)": {
-      "id": "ConnectApi.userprofiles.getuserprofile",
+      "id": "ConnectApi.userprofiles.method.getuserprofile(string,string)",
       "nodeType": "method",
       "name": "getUserProfile",
       "startToken": {
@@ -618,6 +1108,9 @@
         },
         "id": "declaration.entity.name.function_getUserProfile_-1:0"
       },
+      "parentId": "ConnectApi.userprofiles",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -625,17 +1118,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -644,30 +1137,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.UserProfile getUserProfile(String communityId, String userId)",
+      "overrideSignature": "public static override ConnectApi.UserProfile getUserProfile(String communityId, String userId)",
       "simplifiedSignature": "getUserProfile(String,String)",
       "datatype": {
-        "id": "ConnectApi.userprofiles.getuserprofile.ConnectApi.UserProfile",
+        "id": "ConnectApi.userprofiles.getuserprofile.datatype.ConnectApi.UserProfile",
         "nodeType": "datatype",
-        "name": "ConnectApi.UserProfile"
+        "name": "ConnectApi.UserProfile",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.userprofiles.getuserprofile",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.UserProfile"
       },
       "description": "Get the user profile of the context user.",
+      "parentName": "UserProfiles",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.userprofiles.getuserprofile.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.userprofiles.method.getuserprofile(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -676,28 +1195,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:59"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 70
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:59"
+          },
+          "parentId": "ConnectApi.userprofiles.method.getuserprofile(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.userprofiles.getuserprofile.string",
+            "id": "ConnectApi.userprofiles.getuserprofile.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:52"
+            },
+            "parentId": "ConnectApi.userprofiles.getuserprofile",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "ConnectApi.userprofiles.getuserprofile.userid",
-          "type": "var",
+        "userid": {
+          "id": "ConnectApi.userprofiles.method.getuserprofile(string,string).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -706,29 +1270,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 85
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:79"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 79
+              },
+              "end": {
+                "line": 0,
+                "character": 85
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:79"
+          },
+          "parentId": "ConnectApi.userprofiles.method.getuserprofile(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.userprofiles.getuserprofile.string",
+            "id": "ConnectApi.userprofiles.getuserprofile.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 72
+                },
+                "end": {
+                  "line": 0,
+                  "character": 78
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:72"
+            },
+            "parentId": "ConnectApi.userprofiles.getuserprofile",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID for a user.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setbannerphoto(string,string,string,integer)": {
-      "id": "ConnectApi.userprofiles.setbannerphoto",
+      "id": "ConnectApi.userprofiles.method.setbannerphoto(string,string,string,integer)",
       "nodeType": "method",
       "name": "setBannerPhoto",
       "startToken": {
@@ -750,6 +1362,9 @@
         },
         "id": "declaration.entity.name.function_setBannerPhoto_-1:0"
       },
+      "parentId": "ConnectApi.userprofiles",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -757,17 +1372,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -776,30 +1391,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.BannerPhoto setBannerPhoto(String communityId, String userId, String fileId, Integer versionNumber)",
+      "overrideSignature": "public static override ConnectApi.BannerPhoto setBannerPhoto(String communityId, String userId, String fileId, Integer versionNumber)",
       "simplifiedSignature": "setBannerPhoto(String,String,String,Integer)",
       "datatype": {
-        "id": "ConnectApi.userprofiles.setbannerphoto.ConnectApi.BannerPhoto",
+        "id": "ConnectApi.userprofiles.setbannerphoto.datatype.ConnectApi.BannerPhoto",
         "nodeType": "datatype",
-        "name": "ConnectApi.BannerPhoto"
+        "name": "ConnectApi.BannerPhoto",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.userprofiles.setbannerphoto",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.BannerPhoto"
       },
       "description": "Set an uploaded file as a user’s banner photo.",
+      "parentName": "UserProfiles",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.userprofiles.setbannerphoto.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.userprofiles.method.setbannerphoto(string,string,string,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -808,28 +1449,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:59"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 70
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:59"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setbannerphoto(string,string,string,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setbannerphoto.string",
+            "id": "ConnectApi.userprofiles.setbannerphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:52"
+            },
+            "parentId": "ConnectApi.userprofiles.setbannerphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "ConnectApi.userprofiles.setbannerphoto.userid",
-          "type": "var",
+        "userid": {
+          "id": "ConnectApi.userprofiles.method.setbannerphoto(string,string,string,integer).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -838,28 +1524,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 85
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:79"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 79
+              },
+              "end": {
+                "line": 0,
+                "character": 85
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:79"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setbannerphoto(string,string,string,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setbannerphoto.string",
+            "id": "ConnectApi.userprofiles.setbannerphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 72
+                },
+                "end": {
+                  "line": 0,
+                  "character": 78
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:72"
+            },
+            "parentId": "ConnectApi.userprofiles.setbannerphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "fileId": {
-          "id": "ConnectApi.userprofiles.setbannerphoto.fileid",
-          "type": "var",
+        "fileid": {
+          "id": "ConnectApi.userprofiles.method.setbannerphoto(string,string,string,integer).varParam.fileid",
+          "nodeType": "variable",
           "name": "fileId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -868,28 +1599,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 100
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_fileId_-1:0"
+            "id": "token.type.identifier_fileId_0:94"
           },
-          "signature": "String fileId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fileId",
+            "textToLower": "fileid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 94
+              },
+              "end": {
+                "line": 0,
+                "character": 100
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fileId_0:94"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setbannerphoto(string,string,string,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setbannerphoto.string",
+            "id": "ConnectApi.userprofiles.setbannerphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 87
+                },
+                "end": {
+                  "line": 0,
+                  "character": 93
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:87"
+            },
+            "parentId": "ConnectApi.userprofiles.setbannerphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "versionNumber": {
-          "id": "ConnectApi.userprofiles.setbannerphoto.versionnumber",
-          "type": "var",
+        "versionnumber": {
+          "id": "ConnectApi.userprofiles.method.setbannerphoto(string,string,string,integer).varParam.versionnumber",
+          "nodeType": "variable",
           "name": "versionNumber",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -898,29 +1674,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 110
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 123
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_versionNumber_-1:0"
+            "id": "token.type.identifier_versionNumber_0:110"
           },
-          "signature": "Integer versionNumber",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "versionNumber",
+            "textToLower": "versionnumber",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 110
+              },
+              "end": {
+                "line": 0,
+                "character": 123
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_versionNumber_0:110"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setbannerphoto(string,string,string,integer)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setbannerphoto.integer",
+            "id": "ConnectApi.userprofiles.setbannerphoto.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 102
+                },
+                "end": {
+                  "line": 0,
+                  "character": 109
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:102"
+            },
+            "parentId": "ConnectApi.userprofiles.setbannerphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of the user. ID of the uploaded file to use as the user banner. The key prefix must be 069, and the image must be smaller than 8 MB. Version number of the file. Specify an existing version number or, to get the latest version, specify null.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setbannerphoto(string,string,connectapi.binaryinput)": {
-      "id": "ConnectApi.userprofiles.setbannerphoto",
+      "id": "ConnectApi.userprofiles.method.setbannerphoto(string,string,connectapi.binaryinput)",
       "nodeType": "method",
       "name": "setBannerPhoto",
       "startToken": {
@@ -942,6 +1766,9 @@
         },
         "id": "declaration.entity.name.function_setBannerPhoto_-1:0"
       },
+      "parentId": "ConnectApi.userprofiles",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -949,17 +1776,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -968,30 +1795,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.BannerPhoto setBannerPhoto(String communityId, String userId, ConnectApi.BinaryInput fileUpload)",
+      "overrideSignature": "public static override ConnectApi.BannerPhoto setBannerPhoto(String communityId, String userId, ConnectApi.BinaryInput fileUpload)",
       "simplifiedSignature": "setBannerPhoto(String,String,ConnectApi.BinaryInput)",
       "datatype": {
-        "id": "ConnectApi.userprofiles.setbannerphoto.ConnectApi.BannerPhoto",
+        "id": "ConnectApi.userprofiles.setbannerphoto.datatype.ConnectApi.BannerPhoto",
         "nodeType": "datatype",
-        "name": "ConnectApi.BannerPhoto"
+        "name": "ConnectApi.BannerPhoto",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.userprofiles.setbannerphoto",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.BannerPhoto"
       },
       "description": "Set a file that hasn’t been uploaded as a user’s banner photo.",
+      "parentName": "UserProfiles",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.userprofiles.setbannerphoto.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.userprofiles.method.setbannerphoto(string,string,connectapi.binaryinput).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1000,28 +1853,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:59"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 70
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:59"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setbannerphoto(string,string,connectapi.binaryinput)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setbannerphoto.string",
+            "id": "ConnectApi.userprofiles.setbannerphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:52"
+            },
+            "parentId": "ConnectApi.userprofiles.setbannerphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "ConnectApi.userprofiles.setbannerphoto.userid",
-          "type": "var",
+        "userid": {
+          "id": "ConnectApi.userprofiles.method.setbannerphoto(string,string,connectapi.binaryinput).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1030,28 +1928,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 85
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:79"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 79
+              },
+              "end": {
+                "line": 0,
+                "character": 85
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:79"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setbannerphoto(string,string,connectapi.binaryinput)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setbannerphoto.string",
+            "id": "ConnectApi.userprofiles.setbannerphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 72
+                },
+                "end": {
+                  "line": 0,
+                  "character": 78
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:72"
+            },
+            "parentId": "ConnectApi.userprofiles.setbannerphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "fileUpload": {
-          "id": "ConnectApi.userprofiles.setbannerphoto.fileupload",
-          "type": "var",
+        "fileupload": {
+          "id": "ConnectApi.userprofiles.method.setbannerphoto(string,string,connectapi.binaryinput).varParam.fileupload",
+          "nodeType": "variable",
           "name": "fileUpload",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1060,29 +2003,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 110
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 120
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_fileUpload_-1:0"
+            "id": "token.type.identifier_fileUpload_0:110"
           },
-          "signature": "ConnectApi.BinaryInput fileUpload",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fileUpload",
+            "textToLower": "fileupload",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 110
+              },
+              "end": {
+                "line": 0,
+                "character": 120
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fileUpload_0:110"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setbannerphoto(string,string,connectapi.binaryinput)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setbannerphoto.connectapi.binaryinput",
+            "id": "ConnectApi.userprofiles.setbannerphoto.datatype.ConnectApi.BinaryInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.BinaryInput"
-          }
+            "name": "ConnectApi.BinaryInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 87
+                },
+                "end": {
+                  "line": 0,
+                  "character": 97
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:87"
+            },
+            "parentId": "ConnectApi.userprofiles.setbannerphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.BinaryInput"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of the user. A file to use as the photo. The content type must be usable as an image.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setbannerphotowithattributes(string,string,connectapi.bannerphotoinput)": {
-      "id": "ConnectApi.userprofiles.setbannerphotowithattributes",
+      "id": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput)",
       "nodeType": "method",
       "name": "setBannerPhotoWithAttributes",
       "startToken": {
@@ -1104,6 +2095,9 @@
         },
         "id": "declaration.entity.name.function_setBannerPhotoWithAttributes_-1:0"
       },
+      "parentId": "ConnectApi.userprofiles",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1111,17 +2105,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1130,30 +2124,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.BannerPhoto setBannerPhotoWithAttributes(String communityId, String userId, ConnectApi.BannerPhotoInput bannerPhoto)",
+      "overrideSignature": "public static override ConnectApi.BannerPhoto setBannerPhotoWithAttributes(String communityId, String userId, ConnectApi.BannerPhotoInput bannerPhoto)",
       "simplifiedSignature": "setBannerPhotoWithAttributes(String,String,ConnectApi.BannerPhotoInput)",
       "datatype": {
-        "id": "ConnectApi.userprofiles.setbannerphotowithattributes.ConnectApi.BannerPhoto",
+        "id": "ConnectApi.userprofiles.setbannerphotowithattributes.datatype.ConnectApi.BannerPhoto",
         "nodeType": "datatype",
-        "name": "ConnectApi.BannerPhoto"
+        "name": "ConnectApi.BannerPhoto",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.userprofiles.setbannerphotowithattributes",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.BannerPhoto"
       },
       "description": "Set and crop an uploaded file as a user’s banner photo.",
+      "parentName": "UserProfiles",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.userprofiles.setbannerphotowithattributes.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1162,28 +2182,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:73"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 84
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:73"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setbannerphotowithattributes.string",
+            "id": "ConnectApi.userprofiles.setbannerphotowithattributes.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 66
+                },
+                "end": {
+                  "line": 0,
+                  "character": 72
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:66"
+            },
+            "parentId": "ConnectApi.userprofiles.setbannerphotowithattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "ConnectApi.userprofiles.setbannerphotowithattributes.userid",
-          "type": "var",
+        "userid": {
+          "id": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1192,28 +2257,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 93
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 99
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:93"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 93
+              },
+              "end": {
+                "line": 0,
+                "character": 99
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:93"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setbannerphotowithattributes.string",
+            "id": "ConnectApi.userprofiles.setbannerphotowithattributes.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 86
+                },
+                "end": {
+                  "line": 0,
+                  "character": 92
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:86"
+            },
+            "parentId": "ConnectApi.userprofiles.setbannerphotowithattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "bannerPhoto": {
-          "id": "ConnectApi.userprofiles.setbannerphotowithattributes.bannerphoto",
-          "type": "var",
+        "bannerphoto": {
+          "id": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput).varParam.bannerphoto",
+          "nodeType": "variable",
           "name": "bannerPhoto",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1222,29 +2332,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 129
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 140
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_bannerPhoto_-1:0"
+            "id": "token.type.identifier_bannerPhoto_0:129"
           },
-          "signature": "ConnectApi.BannerPhotoInput bannerPhoto",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "bannerPhoto",
+            "textToLower": "bannerphoto",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 129
+              },
+              "end": {
+                "line": 0,
+                "character": 140
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_bannerPhoto_0:129"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setbannerphotowithattributes.connectapi.bannerphotoinput",
+            "id": "ConnectApi.userprofiles.setbannerphotowithattributes.datatype.ConnectApi.BannerPhotoInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.BannerPhotoInput"
-          }
+            "name": "ConnectApi.BannerPhotoInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 101
+                },
+                "end": {
+                  "line": 0,
+                  "character": 111
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:101"
+            },
+            "parentId": "ConnectApi.userprofiles.setbannerphotowithattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.BannerPhotoInput"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of the user. A ConnectApi.BannerPhotoInput object that specifies the ID and version of the file, and how to crop the file.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setbannerphotowithattributes(string,string,connectapi.bannerphotoinput,connectapi.binaryinput)": {
-      "id": "ConnectApi.userprofiles.setbannerphotowithattributes",
+      "id": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput,connectapi.binaryinput)",
       "nodeType": "method",
       "name": "setBannerPhotoWithAttributes",
       "startToken": {
@@ -1266,6 +2424,9 @@
         },
         "id": "declaration.entity.name.function_setBannerPhotoWithAttributes_-1:0"
       },
+      "parentId": "ConnectApi.userprofiles",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1273,17 +2434,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1292,30 +2453,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.BannerPhoto setBannerPhotoWithAttributes(String communityId, String userId, ConnectApi.BannerPhotoInput bannerPhoto, ConnectApi.BinaryInput fileUpload)",
+      "overrideSignature": "public static override ConnectApi.BannerPhoto setBannerPhotoWithAttributes(String communityId, String userId, ConnectApi.BannerPhotoInput bannerPhoto, ConnectApi.BinaryInput fileUpload)",
       "simplifiedSignature": "setBannerPhotoWithAttributes(String,String,ConnectApi.BannerPhotoInput,ConnectApi.BinaryInput)",
       "datatype": {
-        "id": "ConnectApi.userprofiles.setbannerphotowithattributes.ConnectApi.BannerPhoto",
+        "id": "ConnectApi.userprofiles.setbannerphotowithattributes.datatype.ConnectApi.BannerPhoto",
         "nodeType": "datatype",
-        "name": "ConnectApi.BannerPhoto"
+        "name": "ConnectApi.BannerPhoto",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.userprofiles.setbannerphotowithattributes",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.BannerPhoto"
       },
       "description": "Set and crop a file that hasn’t been uploaded as a user’s banner photo.",
+      "parentName": "UserProfiles",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.userprofiles.setbannerphotowithattributes.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput,connectapi.binaryinput).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1324,28 +2511,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:73"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 84
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:73"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput,connectapi.binaryinput)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setbannerphotowithattributes.string",
+            "id": "ConnectApi.userprofiles.setbannerphotowithattributes.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 66
+                },
+                "end": {
+                  "line": 0,
+                  "character": 72
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:66"
+            },
+            "parentId": "ConnectApi.userprofiles.setbannerphotowithattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "ConnectApi.userprofiles.setbannerphotowithattributes.userid",
-          "type": "var",
+        "userid": {
+          "id": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput,connectapi.binaryinput).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1354,28 +2586,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 93
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 99
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:93"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 93
+              },
+              "end": {
+                "line": 0,
+                "character": 99
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:93"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput,connectapi.binaryinput)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setbannerphotowithattributes.string",
+            "id": "ConnectApi.userprofiles.setbannerphotowithattributes.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 86
+                },
+                "end": {
+                  "line": 0,
+                  "character": 92
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:86"
+            },
+            "parentId": "ConnectApi.userprofiles.setbannerphotowithattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "bannerPhoto": {
-          "id": "ConnectApi.userprofiles.setbannerphotowithattributes.bannerphoto",
-          "type": "var",
+        "bannerphoto": {
+          "id": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput,connectapi.binaryinput).varParam.bannerphoto",
+          "nodeType": "variable",
           "name": "bannerPhoto",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1384,28 +2661,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 129
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 140
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_bannerPhoto_-1:0"
+            "id": "token.type.identifier_bannerPhoto_0:129"
           },
-          "signature": "ConnectApi.BannerPhotoInput bannerPhoto",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "bannerPhoto",
+            "textToLower": "bannerphoto",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 129
+              },
+              "end": {
+                "line": 0,
+                "character": 140
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_bannerPhoto_0:129"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput,connectapi.binaryinput)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setbannerphotowithattributes.connectapi.bannerphotoinput",
+            "id": "ConnectApi.userprofiles.setbannerphotowithattributes.datatype.ConnectApi.BannerPhotoInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.BannerPhotoInput"
-          }
+            "name": "ConnectApi.BannerPhotoInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 101
+                },
+                "end": {
+                  "line": 0,
+                  "character": 111
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:101"
+            },
+            "parentId": "ConnectApi.userprofiles.setbannerphotowithattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.BannerPhotoInput"
+          },
+          "scope": null
         },
-        "fileUpload": {
-          "id": "ConnectApi.userprofiles.setbannerphotowithattributes.fileupload",
-          "type": "var",
+        "fileupload": {
+          "id": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput,connectapi.binaryinput).varParam.fileupload",
+          "nodeType": "variable",
           "name": "fileUpload",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1414,29 +2736,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 165
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 175
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_fileUpload_-1:0"
+            "id": "token.type.identifier_fileUpload_0:165"
           },
-          "signature": "ConnectApi.BinaryInput fileUpload",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fileUpload",
+            "textToLower": "fileupload",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 165
+              },
+              "end": {
+                "line": 0,
+                "character": 175
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fileUpload_0:165"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setbannerphotowithattributes(string,string,connectapi.bannerphotoinput,connectapi.binaryinput)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setbannerphotowithattributes.connectapi.binaryinput",
+            "id": "ConnectApi.userprofiles.setbannerphotowithattributes.datatype.ConnectApi.BinaryInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.BinaryInput"
-          }
+            "name": "ConnectApi.BinaryInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 142
+                },
+                "end": {
+                  "line": 0,
+                  "character": 152
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:142"
+            },
+            "parentId": "ConnectApi.userprofiles.setbannerphotowithattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.BinaryInput"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of the user. A ConnectApi.BannerPhotoInput object specifying the cropping parameters. A file to use as the photo. The content type must be usable as an image.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setphoto(string,string,string,integer)": {
-      "id": "ConnectApi.userprofiles.setphoto",
+      "id": "ConnectApi.userprofiles.method.setphoto(string,string,string,integer)",
       "nodeType": "method",
       "name": "setPhoto",
       "startToken": {
@@ -1458,6 +2828,9 @@
         },
         "id": "declaration.entity.name.function_setPhoto_-1:0"
       },
+      "parentId": "ConnectApi.userprofiles",
+      "order": 10,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1465,17 +2838,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1484,30 +2857,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.Photo setPhoto(String communityId, String userId, String fileId, Integer versionNumber)",
+      "overrideSignature": "public static override ConnectApi.Photo setPhoto(String communityId, String userId, String fileId, Integer versionNumber)",
       "simplifiedSignature": "setPhoto(String,String,String,Integer)",
       "datatype": {
-        "id": "ConnectApi.userprofiles.setphoto.ConnectApi.Photo",
+        "id": "ConnectApi.userprofiles.setphoto.datatype.ConnectApi.Photo",
         "nodeType": "datatype",
-        "name": "ConnectApi.Photo"
+        "name": "ConnectApi.Photo",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.userprofiles.setphoto",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.Photo"
       },
       "description": "Set an uploaded file as a user’s photo.",
+      "parentName": "UserProfiles",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.userprofiles.setphoto.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.userprofiles.method.setphoto(string,string,string,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1516,28 +2915,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:47"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:47"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setphoto(string,string,string,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setphoto.string",
+            "id": "ConnectApi.userprofiles.setphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 40
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:40"
+            },
+            "parentId": "ConnectApi.userprofiles.setphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "ConnectApi.userprofiles.setphoto.userid",
-          "type": "var",
+        "userid": {
+          "id": "ConnectApi.userprofiles.method.setphoto(string,string,string,integer).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1546,28 +2990,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:67"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 73
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:67"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setphoto(string,string,string,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setphoto.string",
+            "id": "ConnectApi.userprofiles.setphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 60
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:60"
+            },
+            "parentId": "ConnectApi.userprofiles.setphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "fileId": {
-          "id": "ConnectApi.userprofiles.setphoto.fileid",
-          "type": "var",
+        "fileid": {
+          "id": "ConnectApi.userprofiles.method.setphoto(string,string,string,integer).varParam.fileid",
+          "nodeType": "variable",
           "name": "fileId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1576,28 +3065,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 88
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_fileId_-1:0"
+            "id": "token.type.identifier_fileId_0:82"
           },
-          "signature": "String fileId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fileId",
+            "textToLower": "fileid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 82
+              },
+              "end": {
+                "line": 0,
+                "character": 88
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fileId_0:82"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setphoto(string,string,string,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setphoto.string",
+            "id": "ConnectApi.userprofiles.setphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 75
+                },
+                "end": {
+                  "line": 0,
+                  "character": 81
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:75"
+            },
+            "parentId": "ConnectApi.userprofiles.setphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "versionNumber": {
-          "id": "ConnectApi.userprofiles.setphoto.versionnumber",
-          "type": "var",
+        "versionnumber": {
+          "id": "ConnectApi.userprofiles.method.setphoto(string,string,string,integer).varParam.versionnumber",
+          "nodeType": "variable",
           "name": "versionNumber",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1606,29 +3140,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 111
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_versionNumber_-1:0"
+            "id": "token.type.identifier_versionNumber_0:98"
           },
-          "signature": "Integer versionNumber",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "versionNumber",
+            "textToLower": "versionnumber",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 98
+              },
+              "end": {
+                "line": 0,
+                "character": 111
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_versionNumber_0:98"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setphoto(string,string,string,integer)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setphoto.integer",
+            "id": "ConnectApi.userprofiles.setphoto.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 90
+                },
+                "end": {
+                  "line": 0,
+                  "character": 97
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:90"
+            },
+            "parentId": "ConnectApi.userprofiles.setphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID for the context user or the keyword me. ID of an uploaded file. The file must be an image, and be smaller than 2 GB. Version number of the existing file. Specify either an existing version number, or null to get the latest version.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setphoto(string,string,connectapi.binaryinput)": {
-      "id": "ConnectApi.userprofiles.setphoto",
+      "id": "ConnectApi.userprofiles.method.setphoto(string,string,connectapi.binaryinput)",
       "nodeType": "method",
       "name": "setPhoto",
       "startToken": {
@@ -1650,6 +3232,9 @@
         },
         "id": "declaration.entity.name.function_setPhoto_-1:0"
       },
+      "parentId": "ConnectApi.userprofiles",
+      "order": 11,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1657,17 +3242,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1676,30 +3261,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.Photo setPhoto(String communityId, String userId, ConnectApi.BinaryInput fileUpload)",
+      "overrideSignature": "public static override ConnectApi.Photo setPhoto(String communityId, String userId, ConnectApi.BinaryInput fileUpload)",
       "simplifiedSignature": "setPhoto(String,String,ConnectApi.BinaryInput)",
       "datatype": {
-        "id": "ConnectApi.userprofiles.setphoto.ConnectApi.Photo",
+        "id": "ConnectApi.userprofiles.setphoto.datatype.ConnectApi.Photo",
         "nodeType": "datatype",
-        "name": "ConnectApi.Photo"
+        "name": "ConnectApi.Photo",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.userprofiles.setphoto",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.Photo"
       },
       "description": "Set a file that hasn’t been uploaded as a user’s photo.",
+      "parentName": "UserProfiles",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.userprofiles.setphoto.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.userprofiles.method.setphoto(string,string,connectapi.binaryinput).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1708,28 +3319,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:47"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:47"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setphoto(string,string,connectapi.binaryinput)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setphoto.string",
+            "id": "ConnectApi.userprofiles.setphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 40
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:40"
+            },
+            "parentId": "ConnectApi.userprofiles.setphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "ConnectApi.userprofiles.setphoto.userid",
-          "type": "var",
+        "userid": {
+          "id": "ConnectApi.userprofiles.method.setphoto(string,string,connectapi.binaryinput).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1738,28 +3394,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:67"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 73
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:67"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setphoto(string,string,connectapi.binaryinput)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setphoto.string",
+            "id": "ConnectApi.userprofiles.setphoto.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 60
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:60"
+            },
+            "parentId": "ConnectApi.userprofiles.setphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "fileUpload": {
-          "id": "ConnectApi.userprofiles.setphoto.fileupload",
-          "type": "var",
+        "fileupload": {
+          "id": "ConnectApi.userprofiles.method.setphoto(string,string,connectapi.binaryinput).varParam.fileupload",
+          "nodeType": "variable",
           "name": "fileUpload",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1768,29 +3469,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 98
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 108
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_fileUpload_-1:0"
+            "id": "token.type.identifier_fileUpload_0:98"
           },
-          "signature": "ConnectApi.BinaryInput fileUpload",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fileUpload",
+            "textToLower": "fileupload",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 98
+              },
+              "end": {
+                "line": 0,
+                "character": 108
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fileUpload_0:98"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setphoto(string,string,connectapi.binaryinput)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setphoto.connectapi.binaryinput",
+            "id": "ConnectApi.userprofiles.setphoto.datatype.ConnectApi.BinaryInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.BinaryInput"
-          }
+            "name": "ConnectApi.BinaryInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 75
+                },
+                "end": {
+                  "line": 0,
+                  "character": 85
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:75"
+            },
+            "parentId": "ConnectApi.userprofiles.setphoto",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.BinaryInput"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID for the context user or the keyword me. A file to use as the photo. The content type must be usable as an image.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setphotowithattributes(string,string,connectapi.photoinput)": {
-      "id": "ConnectApi.userprofiles.setphotowithattributes",
+      "id": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput)",
       "nodeType": "method",
       "name": "setPhotoWithAttributes",
       "startToken": {
@@ -1812,6 +3561,9 @@
         },
         "id": "declaration.entity.name.function_setPhotoWithAttributes_-1:0"
       },
+      "parentId": "ConnectApi.userprofiles",
+      "order": 12,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1819,17 +3571,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1838,30 +3590,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.Photo setPhotoWithAttributes(String communityId, String userId, ConnectApi.PhotoInput photo)",
+      "overrideSignature": "public static override ConnectApi.Photo setPhotoWithAttributes(String communityId, String userId, ConnectApi.PhotoInput photo)",
       "simplifiedSignature": "setPhotoWithAttributes(String,String,ConnectApi.PhotoInput)",
       "datatype": {
-        "id": "ConnectApi.userprofiles.setphotowithattributes.ConnectApi.Photo",
+        "id": "ConnectApi.userprofiles.setphotowithattributes.datatype.ConnectApi.Photo",
         "nodeType": "datatype",
-        "name": "ConnectApi.Photo"
+        "name": "ConnectApi.Photo",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.userprofiles.setphotowithattributes",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.Photo"
       },
       "description": "Set and crop an uploaded file as a user’s photo.",
+      "parentName": "UserProfiles",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.userprofiles.setphotowithattributes.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1870,28 +3648,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:61"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:61"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setphotowithattributes.string",
+            "id": "ConnectApi.userprofiles.setphotowithattributes.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:54"
+            },
+            "parentId": "ConnectApi.userprofiles.setphotowithattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "ConnectApi.userprofiles.setphotowithattributes.userid",
-          "type": "var",
+        "userid": {
+          "id": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1900,28 +3723,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 87
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:81"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 87
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:81"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setphotowithattributes.string",
+            "id": "ConnectApi.userprofiles.setphotowithattributes.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 80
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:74"
+            },
+            "parentId": "ConnectApi.userprofiles.setphotowithattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "photo": {
-          "id": "ConnectApi.userprofiles.setphotowithattributes.photo",
-          "type": "var",
+          "id": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput).varParam.photo",
+          "nodeType": "variable",
           "name": "photo",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1930,29 +3798,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 111
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 116
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_photo_-1:0"
+            "id": "token.type.identifier_photo_0:111"
           },
-          "signature": "ConnectApi.PhotoInput photo",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "photo",
+            "textToLower": "photo",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 111
+              },
+              "end": {
+                "line": 0,
+                "character": 116
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_photo_0:111"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setphotowithattributes.connectapi.photoinput",
+            "id": "ConnectApi.userprofiles.setphotowithattributes.datatype.ConnectApi.PhotoInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.PhotoInput"
-          }
+            "name": "ConnectApi.PhotoInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 89
+                },
+                "end": {
+                  "line": 0,
+                  "character": 99
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:89"
+            },
+            "parentId": "ConnectApi.userprofiles.setphotowithattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.PhotoInput"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID for the context user or the keyword me. A ConnectApi.PhotoInput object specifying the file ID, version number, and cropping parameters.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setphotowithattributes(string,string,connectapi.photoinput,connectapi.binaryinput)": {
-      "id": "ConnectApi.userprofiles.setphotowithattributes",
+      "id": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput,connectapi.binaryinput)",
       "nodeType": "method",
       "name": "setPhotoWithAttributes",
       "startToken": {
@@ -1974,6 +3890,9 @@
         },
         "id": "declaration.entity.name.function_setPhotoWithAttributes_-1:0"
       },
+      "parentId": "ConnectApi.userprofiles",
+      "order": 13,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1981,17 +3900,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -2000,30 +3919,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.Photo setPhotoWithAttributes(String communityId, String userId, ConnectApi.PhotoInput photo, ConnectApi.BinaryInput fileUpload)",
+      "overrideSignature": "public static override ConnectApi.Photo setPhotoWithAttributes(String communityId, String userId, ConnectApi.PhotoInput photo, ConnectApi.BinaryInput fileUpload)",
       "simplifiedSignature": "setPhotoWithAttributes(String,String,ConnectApi.PhotoInput,ConnectApi.BinaryInput)",
       "datatype": {
-        "id": "ConnectApi.userprofiles.setphotowithattributes.ConnectApi.Photo",
+        "id": "ConnectApi.userprofiles.setphotowithattributes.datatype.ConnectApi.Photo",
         "nodeType": "datatype",
-        "name": "ConnectApi.Photo"
+        "name": "ConnectApi.Photo",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.userprofiles.setphotowithattributes",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.Photo"
       },
       "description": "Set and crop a file that hasn’t been uploaded as a user’s photo.",
+      "parentName": "UserProfiles",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.userprofiles.setphotowithattributes.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput,connectapi.binaryinput).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2032,28 +3977,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:61"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:61"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput,connectapi.binaryinput)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setphotowithattributes.string",
+            "id": "ConnectApi.userprofiles.setphotowithattributes.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:54"
+            },
+            "parentId": "ConnectApi.userprofiles.setphotowithattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "userId": {
-          "id": "ConnectApi.userprofiles.setphotowithattributes.userid",
-          "type": "var",
+        "userid": {
+          "id": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput,connectapi.binaryinput).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2062,28 +4052,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 87
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:81"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 87
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:81"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput,connectapi.binaryinput)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setphotowithattributes.string",
+            "id": "ConnectApi.userprofiles.setphotowithattributes.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 80
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:74"
+            },
+            "parentId": "ConnectApi.userprofiles.setphotowithattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "photo": {
-          "id": "ConnectApi.userprofiles.setphotowithattributes.photo",
-          "type": "var",
+          "id": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput,connectapi.binaryinput).varParam.photo",
+          "nodeType": "variable",
           "name": "photo",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2092,28 +4127,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 111
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 116
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_photo_-1:0"
+            "id": "token.type.identifier_photo_0:111"
           },
-          "signature": "ConnectApi.PhotoInput photo",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "photo",
+            "textToLower": "photo",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 111
+              },
+              "end": {
+                "line": 0,
+                "character": 116
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_photo_0:111"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput,connectapi.binaryinput)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setphotowithattributes.connectapi.photoinput",
+            "id": "ConnectApi.userprofiles.setphotowithattributes.datatype.ConnectApi.PhotoInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.PhotoInput"
-          }
+            "name": "ConnectApi.PhotoInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 89
+                },
+                "end": {
+                  "line": 0,
+                  "character": 99
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:89"
+            },
+            "parentId": "ConnectApi.userprofiles.setphotowithattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.PhotoInput"
+          },
+          "scope": null
         },
-        "fileUpload": {
-          "id": "ConnectApi.userprofiles.setphotowithattributes.fileupload",
-          "type": "var",
+        "fileupload": {
+          "id": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput,connectapi.binaryinput).varParam.fileupload",
+          "nodeType": "variable",
           "name": "fileUpload",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2122,30 +4202,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 141
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 151
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_fileUpload_-1:0"
+            "id": "token.type.identifier_fileUpload_0:141"
           },
-          "signature": "ConnectApi.BinaryInput fileUpload",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fileUpload",
+            "textToLower": "fileupload",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 141
+              },
+              "end": {
+                "line": 0,
+                "character": 151
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fileUpload_0:141"
+          },
+          "parentId": "ConnectApi.userprofiles.method.setphotowithattributes(string,string,connectapi.photoinput,connectapi.binaryinput)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.userprofiles.setphotowithattributes.connectapi.binaryinput",
+            "id": "ConnectApi.userprofiles.setphotowithattributes.datatype.ConnectApi.BinaryInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.BinaryInput"
-          }
+            "name": "ConnectApi.BinaryInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 118
+                },
+                "end": {
+                  "line": 0,
+                  "character": 128
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:118"
+            },
+            "parentId": "ConnectApi.userprofiles.setphotowithattributes",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.BinaryInput"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID for the context user or the keyword me. A ConnectApi.PhotoInput object specifying the cropping parameters. A file to use as the photo. The content type must be usable as an image.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 13,
+  "queries": []
 }

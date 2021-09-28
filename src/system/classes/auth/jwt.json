@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_JWT_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "clone()": {
-      "id": "Auth.jwt.clone",
+      "id": "Auth.jwt.method.clone()",
       "nodeType": "method",
       "name": "clone",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_clone_-1:0"
       },
+      "parentId": "Auth.jwt",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public JWT clone()",
+      "signature": "public Object clone()",
+      "overrideSignature": "public override Object clone()",
       "simplifiedSignature": "clone()",
       "datatype": {
-        "id": "Auth.jwt.clone.JWT",
+        "id": "Auth.jwt.clone.datatype.Object",
         "nodeType": "datatype",
-        "name": "JWT"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:7"
+        },
+        "parentId": "Auth.jwt.clone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Makes a duplicate copy of the JWT object.",
-      "params": {}
+      "parentName": "JWT",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getadditionalclaims()": {
-      "id": "Auth.jwt.getadditionalclaims",
+      "id": "Auth.jwt.method.getadditionalclaims()",
       "nodeType": "method",
       "name": "getAdditionalClaims",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_getAdditionalClaims_-1:0"
       },
+      "parentId": "Auth.jwt",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,30 +185,112 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Map<String, ANY> getAdditionalClaims()",
+      "signature": "public Map<String,ANY> getAdditionalClaims()",
+      "overrideSignature": "public override Map<String,ANY> getAdditionalClaims()",
       "simplifiedSignature": "getAdditionalClaims()",
       "datatype": {
-        "id": "Auth.jwt.getadditionalclaims.Map<String, ANY>",
+        "id": "Auth.jwt.getadditionalclaims.datatype.Map<String,ANY>",
         "nodeType": "datatype",
-        "name": "Map<String, ANY>"
+        "name": "Map<String,ANY>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "Auth.jwt.getadditionalclaims",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "Auth.jwt.getadditionalclaims.datatype.Map<String,ANY>.value.ANY",
+          "nodeType": "datatype",
+          "name": "ANY",
+          "startToken": {
+            "type": "datatype.custom.class",
+            "text": "ANY",
+            "textToLower": "any",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 21
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ANY_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "ANY"
+        },
+        "key": {
+          "id": "Auth.jwt.getadditionalclaims.datatype.Map<String,ANY>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Returns a map of additional claims in the JWT, where the key string contains the name of the claim, and the value contains the value of the claim.",
-      "params": {}
+      "parentName": "JWT",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getaud()": {
-      "id": "Auth.jwt.getaud",
+      "id": "Auth.jwt.method.getaud()",
       "nodeType": "method",
       "name": "getAud",
       "startToken": {
@@ -194,6 +312,9 @@
         },
         "id": "declaration.entity.name.function_getAud_-1:0"
       },
+      "parentId": "Auth.jwt",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -201,30 +322,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getAud()",
+      "overrideSignature": "public override String getAud()",
       "simplifiedSignature": "getAud()",
       "datatype": {
-        "id": "Auth.jwt.getaud.String",
+        "id": "Auth.jwt.getaud.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Auth.jwt.getaud",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the audience claim that identifies the intended recipients of the JWT.",
-      "params": {}
+      "parentName": "JWT",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getiss()": {
-      "id": "Auth.jwt.getiss",
+      "id": "Auth.jwt.method.getiss()",
       "nodeType": "method",
       "name": "getIss",
       "startToken": {
@@ -246,6 +395,9 @@
         },
         "id": "declaration.entity.name.function_getIss_-1:0"
       },
+      "parentId": "Auth.jwt",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -253,30 +405,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getIss()",
+      "overrideSignature": "public override String getIss()",
       "simplifiedSignature": "getIss()",
       "datatype": {
-        "id": "Auth.jwt.getiss.String",
+        "id": "Auth.jwt.getiss.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Auth.jwt.getiss",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the issuer claim that identifies the issuer of the JWT.",
-      "params": {}
+      "parentName": "JWT",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getnbfclockskew()": {
-      "id": "Auth.jwt.getnbfclockskew",
+      "id": "Auth.jwt.method.getnbfclockskew()",
       "nodeType": "method",
       "name": "getNbfClockSkew",
       "startToken": {
@@ -298,6 +478,9 @@
         },
         "id": "declaration.entity.name.function_getNbfClockSkew_-1:0"
       },
+      "parentId": "Auth.jwt",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -305,30 +488,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer getNbfClockSkew()",
+      "overrideSignature": "public override Integer getNbfClockSkew()",
       "simplifiedSignature": "getNbfClockSkew()",
       "datatype": {
-        "id": "Auth.jwt.getnbfclockskew.Integer",
+        "id": "Auth.jwt.getnbfclockskew.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "Auth.jwt.getnbfclockskew",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the not before claim that identifies the time before which the JWT must not be accepted for processing, while allowing some leeway for clock skew.",
-      "params": {}
+      "parentName": "JWT",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getsub()": {
-      "id": "Auth.jwt.getsub",
+      "id": "Auth.jwt.method.getsub()",
       "nodeType": "method",
       "name": "getSub",
       "startToken": {
@@ -350,6 +561,9 @@
         },
         "id": "declaration.entity.name.function_getSub_-1:0"
       },
+      "parentId": "Auth.jwt",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -357,30 +571,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getSub()",
+      "overrideSignature": "public override String getSub()",
       "simplifiedSignature": "getSub()",
       "datatype": {
-        "id": "Auth.jwt.getsub.String",
+        "id": "Auth.jwt.getsub.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Auth.jwt.getsub",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the subject claim that identifies the current user of the JWT.",
-      "params": {}
+      "parentName": "JWT",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getvaliditylength()": {
-      "id": "Auth.jwt.getvaliditylength",
+      "id": "Auth.jwt.method.getvaliditylength()",
       "nodeType": "method",
       "name": "getValidityLength",
       "startToken": {
@@ -402,6 +644,9 @@
         },
         "id": "declaration.entity.name.function_getValidityLength_-1:0"
       },
+      "parentId": "Auth.jwt",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -409,30 +654,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer getValidityLength()",
+      "overrideSignature": "public override Integer getValidityLength()",
       "simplifiedSignature": "getValidityLength()",
       "datatype": {
-        "id": "Auth.jwt.getvaliditylength.Integer",
+        "id": "Auth.jwt.getvaliditylength.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "Auth.jwt.getvaliditylength",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the length of time that the JWT is valid, which affects the expiration claim.",
-      "params": {}
+      "parentName": "JWT",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
-    "setadditionalclaims(map,any>)": {
-      "id": "Auth.jwt.setadditionalclaims",
+    "setadditionalclaims(map<string,any>)": {
+      "id": "Auth.jwt.method.setadditionalclaims(map<string,any>)",
       "nodeType": "method",
       "name": "setAdditionalClaims",
       "startToken": {
@@ -454,6 +727,9 @@
         },
         "id": "declaration.entity.name.function_setAdditionalClaims_-1:0"
       },
+      "parentId": "Auth.jwt",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -461,60 +737,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void setAdditionalClaims(Map <String, ANY> additionalClaims)",
-      "simplifiedSignature": "setAdditionalClaims(Map,ANY>)",
+      "signature": "public void setAdditionalClaims(Map<String,ANY> additionalClaims)",
+      "overrideSignature": "public override void setAdditionalClaims(Map<String,ANY> additionalClaims)",
+      "simplifiedSignature": "setAdditionalClaims(Map<String,ANY>)",
       "datatype": {
-        "id": "Auth.jwt.setadditionalclaims.void",
+        "id": "Auth.jwt.setadditionalclaims.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Auth.jwt.setadditionalclaims",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Sets the additional claims in the JWT. Returned by the getAdditionalClaims() method.",
+      "parentName": "JWT",
+      "variables": {},
       "params": {
-        "<String": {
-          "id": "Auth.jwt.setadditionalclaims.<string",
-          "type": "var",
-          "name": "<String",
-          "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
-            "isAux": false,
-            "range": {
-              "start": {
-                "line": -1,
-                "character": 0
-              },
-              "end": {
-                "line": -1,
-                "character": 0
-              },
-              "isEmpty": true,
-              "isSingleLine": true
-            },
-            "id": "declaration.entity.name.variable_<String_-1:0"
-          },
-          "signature": "Map <String",
-          "datatype": {
-            "id": "Auth.jwt.setadditionalclaims.map",
-            "nodeType": "datatype",
-            "name": "Map"
-          }
-        },
-        "additionalClaims": {
-          "id": "Auth.jwt.setadditionalclaims.additionalclaims",
-          "type": "var",
+        "additionalclaims": {
+          "id": "Auth.jwt.method.setadditionalclaims(map<string,any>).varParam.additionalclaims",
+          "nodeType": "variable",
           "name": "additionalClaims",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -523,29 +795,131 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_additionalClaims_-1:0"
+            "id": "token.type.identifier_additionalClaims_0:48"
           },
-          "signature": "ANY> additionalClaims",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "additionalClaims",
+            "textToLower": "additionalclaims",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 48
+              },
+              "end": {
+                "line": 0,
+                "character": 64
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_additionalClaims_0:48"
+          },
+          "parentId": "Auth.jwt.method.setadditionalclaims(map<string,any>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.jwt.setadditionalclaims.any>",
+            "id": "Auth.jwt.setadditionalclaims.datatype.Map<String,ANY>",
             "nodeType": "datatype",
-            "name": "ANY>"
-          }
+            "name": "Map<String,ANY>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 32
+                },
+                "end": {
+                  "line": 0,
+                  "character": 35
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:32"
+            },
+            "parentId": "Auth.jwt.setadditionalclaims",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "Auth.jwt.setadditionalclaims.datatype.Map<String,ANY>.value.ANY",
+              "nodeType": "datatype",
+              "name": "ANY",
+              "startToken": {
+                "type": "datatype.custom.class",
+                "text": "ANY",
+                "textToLower": "any",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 43
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 46
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_ANY_0:43"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "ANY"
+            },
+            "key": {
+              "id": "Auth.jwt.setadditionalclaims.datatype.Map<String,ANY>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 36
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 42
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:36"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setaud(string)": {
-      "id": "Auth.jwt.setaud",
+      "id": "Auth.jwt.method.setaud(string)",
       "nodeType": "method",
       "name": "setAud",
       "startToken": {
@@ -567,6 +941,9 @@
         },
         "id": "declaration.entity.name.function_setAud_-1:0"
       },
+      "parentId": "Auth.jwt",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -574,30 +951,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setAud(String aud)",
+      "overrideSignature": "public override void setAud(String aud)",
       "simplifiedSignature": "setAud(String)",
       "datatype": {
-        "id": "Auth.jwt.setaud.void",
+        "id": "Auth.jwt.setaud.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Auth.jwt.setaud",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Sets the audience claim in the JWT. Returned by the getAud() method.",
+      "parentName": "JWT",
+      "variables": {},
       "params": {
         "aud": {
-          "id": "Auth.jwt.setaud.aud",
-          "type": "var",
+          "id": "Auth.jwt.method.setaud(string).varParam.aud",
+          "nodeType": "variable",
           "name": "aud",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -606,29 +1009,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 26
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_aud_-1:0"
+            "id": "token.type.identifier_aud_0:26"
           },
-          "signature": "String aud",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "aud",
+            "textToLower": "aud",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 26
+              },
+              "end": {
+                "line": 0,
+                "character": 29
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_aud_0:26"
+          },
+          "parentId": "Auth.jwt.method.setaud(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.jwt.setaud.string",
+            "id": "Auth.jwt.setaud.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 19
+                },
+                "end": {
+                  "line": 0,
+                  "character": 25
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:19"
+            },
+            "parentId": "Auth.jwt.setaud",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setiss(string)": {
-      "id": "Auth.jwt.setiss",
+      "id": "Auth.jwt.method.setiss(string)",
       "nodeType": "method",
       "name": "setIss",
       "startToken": {
@@ -650,6 +1101,9 @@
         },
         "id": "declaration.entity.name.function_setIss_-1:0"
       },
+      "parentId": "Auth.jwt",
+      "order": 10,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -657,30 +1111,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setIss(String iss)",
+      "overrideSignature": "public override void setIss(String iss)",
       "simplifiedSignature": "setIss(String)",
       "datatype": {
-        "id": "Auth.jwt.setiss.void",
+        "id": "Auth.jwt.setiss.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Auth.jwt.setiss",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Sets the issuer claim in the JWT. Returned by the getIss() method.",
+      "parentName": "JWT",
+      "variables": {},
       "params": {
         "iss": {
-          "id": "Auth.jwt.setiss.iss",
-          "type": "var",
+          "id": "Auth.jwt.method.setiss(string).varParam.iss",
+          "nodeType": "variable",
           "name": "iss",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -689,29 +1169,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 26
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_iss_-1:0"
+            "id": "token.type.identifier_iss_0:26"
           },
-          "signature": "String iss",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "iss",
+            "textToLower": "iss",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 26
+              },
+              "end": {
+                "line": 0,
+                "character": 29
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_iss_0:26"
+          },
+          "parentId": "Auth.jwt.method.setiss(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.jwt.setiss.string",
+            "id": "Auth.jwt.setiss.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 19
+                },
+                "end": {
+                  "line": 0,
+                  "character": 25
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:19"
+            },
+            "parentId": "Auth.jwt.setiss",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setnbfclockskew(integer)": {
-      "id": "Auth.jwt.setnbfclockskew",
+      "id": "Auth.jwt.method.setnbfclockskew(integer)",
       "nodeType": "method",
       "name": "setNbfClockSkew",
       "startToken": {
@@ -733,6 +1261,9 @@
         },
         "id": "declaration.entity.name.function_setNbfClockSkew_-1:0"
       },
+      "parentId": "Auth.jwt",
+      "order": 11,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -740,30 +1271,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setNbfClockSkew(Integer nbfClockSkew)",
+      "overrideSignature": "public override void setNbfClockSkew(Integer nbfClockSkew)",
       "simplifiedSignature": "setNbfClockSkew(Integer)",
       "datatype": {
-        "id": "Auth.jwt.setnbfclockskew.void",
+        "id": "Auth.jwt.setnbfclockskew.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Auth.jwt.setnbfclockskew",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Sets the not before claim in the JWT. Returned by the getNbfClockSkew() method.",
+      "parentName": "JWT",
+      "variables": {},
       "params": {
-        "nbfClockSkew": {
-          "id": "Auth.jwt.setnbfclockskew.nbfclockskew",
-          "type": "var",
+        "nbfclockskew": {
+          "id": "Auth.jwt.method.setnbfclockskew(integer).varParam.nbfclockskew",
+          "nodeType": "variable",
           "name": "nbfClockSkew",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -772,29 +1329,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 36
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_nbfClockSkew_-1:0"
+            "id": "token.type.identifier_nbfClockSkew_0:36"
           },
-          "signature": "Integer nbfClockSkew",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "nbfClockSkew",
+            "textToLower": "nbfclockskew",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 36
+              },
+              "end": {
+                "line": 0,
+                "character": 48
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_nbfClockSkew_0:36"
+          },
+          "parentId": "Auth.jwt.method.setnbfclockskew(integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.jwt.setnbfclockskew.integer",
+            "id": "Auth.jwt.setnbfclockskew.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 28
+                },
+                "end": {
+                  "line": 0,
+                  "character": 35
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:28"
+            },
+            "parentId": "Auth.jwt.setnbfclockskew",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setsub(string)": {
-      "id": "Auth.jwt.setsub",
+      "id": "Auth.jwt.method.setsub(string)",
       "nodeType": "method",
       "name": "setSub",
       "startToken": {
@@ -816,6 +1421,9 @@
         },
         "id": "declaration.entity.name.function_setSub_-1:0"
       },
+      "parentId": "Auth.jwt",
+      "order": 12,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -823,30 +1431,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setSub(String sub)",
+      "overrideSignature": "public override void setSub(String sub)",
       "simplifiedSignature": "setSub(String)",
       "datatype": {
-        "id": "Auth.jwt.setsub.void",
+        "id": "Auth.jwt.setsub.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Auth.jwt.setsub",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Sets the subject claim in the JWT. Returned by the getSub() method.",
+      "parentName": "JWT",
+      "variables": {},
       "params": {
         "sub": {
-          "id": "Auth.jwt.setsub.sub",
-          "type": "var",
+          "id": "Auth.jwt.method.setsub(string).varParam.sub",
+          "nodeType": "variable",
           "name": "sub",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -855,29 +1489,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 26
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_sub_-1:0"
+            "id": "token.type.identifier_sub_0:26"
           },
-          "signature": "String sub",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sub",
+            "textToLower": "sub",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 26
+              },
+              "end": {
+                "line": 0,
+                "character": 29
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sub_0:26"
+          },
+          "parentId": "Auth.jwt.method.setsub(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.jwt.setsub.string",
+            "id": "Auth.jwt.setsub.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 19
+                },
+                "end": {
+                  "line": 0,
+                  "character": 25
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:19"
+            },
+            "parentId": "Auth.jwt.setsub",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setvaliditylength(integer)": {
-      "id": "Auth.jwt.setvaliditylength",
+      "id": "Auth.jwt.method.setvaliditylength(integer)",
       "nodeType": "method",
       "name": "setValidityLength",
       "startToken": {
@@ -899,6 +1581,9 @@
         },
         "id": "declaration.entity.name.function_setValidityLength_-1:0"
       },
+      "parentId": "Auth.jwt",
+      "order": 13,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -906,30 +1591,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setValidityLength(Integer validityLength)",
+      "overrideSignature": "public override void setValidityLength(Integer validityLength)",
       "simplifiedSignature": "setValidityLength(Integer)",
       "datatype": {
-        "id": "Auth.jwt.setvaliditylength.void",
+        "id": "Auth.jwt.setvaliditylength.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Auth.jwt.setvaliditylength",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Sets the length of time that the JWT is valid, which affects the expiration claim. Returned by the getValidityLength() method.",
+      "parentName": "JWT",
+      "variables": {},
       "params": {
-        "validityLength": {
-          "id": "Auth.jwt.setvaliditylength.validitylength",
-          "type": "var",
+        "validitylength": {
+          "id": "Auth.jwt.method.setvaliditylength(integer).varParam.validitylength",
+          "nodeType": "variable",
           "name": "validityLength",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -938,29 +1649,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_validityLength_-1:0"
+            "id": "token.type.identifier_validityLength_0:38"
           },
-          "signature": "Integer validityLength",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "validityLength",
+            "textToLower": "validitylength",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_validityLength_0:38"
+          },
+          "parentId": "Auth.jwt.method.setvaliditylength(integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.jwt.setvaliditylength.integer",
+            "id": "Auth.jwt.setvaliditylength.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:30"
+            },
+            "parentId": "Auth.jwt.setvaliditylength",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "tojsonstring()": {
-      "id": "Auth.jwt.tojsonstring",
+      "id": "Auth.jwt.method.tojsonstring()",
       "nodeType": "method",
       "name": "toJSONString",
       "startToken": {
@@ -982,6 +1741,9 @@
         },
         "id": "declaration.entity.name.function_toJSONString_-1:0"
       },
+      "parentId": "Auth.jwt",
+      "order": 14,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -989,31 +1751,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String toJSONString()",
+      "overrideSignature": "public override String toJSONString()",
       "simplifiedSignature": "toJSONString()",
       "datatype": {
-        "id": "Auth.jwt.tojsonstring.String",
+        "id": "Auth.jwt.tojsonstring.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Auth.jwt.tojsonstring",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Generates the JSON object representation of the Claims Set as an encoded JWT payload.",
-      "params": {}
+      "parentName": "JWT",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 14,
+  "queries": []
 }

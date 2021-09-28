@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_MatchResult_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getentitytype()": {
-      "id": "Datacloud.matchresult.getentitytype",
+      "id": "Datacloud.matchresult.method.getentitytype()",
       "nodeType": "method",
       "name": "getEntityType",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getEntityType_-1:0"
       },
+      "parentId": "Datacloud.matchresult",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getEntityType()",
+      "overrideSignature": "public override String getEntityType()",
       "simplifiedSignature": "getEntityType()",
       "datatype": {
-        "id": "Datacloud.matchresult.getentitytype.String",
+        "id": "Datacloud.matchresult.getentitytype.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Datacloud.matchresult.getentitytype",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the entity type of the matching rule.",
-      "params": {}
+      "parentName": "MatchResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "geterrors()": {
-      "id": "Datacloud.matchresult.geterrors",
+      "id": "Datacloud.matchresult.method.geterrors()",
       "nodeType": "method",
       "name": "getErrors",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_getErrors_-1:0"
       },
+      "parentId": "Datacloud.matchresult",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,30 +185,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<Database.Error> getErrors()",
+      "overrideSignature": "public override List<Database.Error> getErrors()",
       "simplifiedSignature": "getErrors()",
       "datatype": {
-        "id": "Datacloud.matchresult.geterrors.List<Database.Error>",
+        "id": "Datacloud.matchresult.geterrors.datatype.List<Database.Error>",
         "nodeType": "datatype",
-        "name": "List<Database.Error>"
+        "name": "List<Database.Error>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Datacloud.matchresult.geterrors",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Datacloud.matchresult.geterrors.datatype.List<Database.Error>.value.Database.Error",
+          "nodeType": "datatype",
+          "name": "Database.Error",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Database",
+            "textToLower": "database",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 20
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Database_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Database.Error"
+        }
       },
       "description": "Returns errors that occurred during matching for the matching rule.",
-      "params": {}
+      "parentName": "MatchResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getmatchengine()": {
-      "id": "Datacloud.matchresult.getmatchengine",
+      "id": "Datacloud.matchresult.method.getmatchengine()",
       "nodeType": "method",
       "name": "getMatchEngine",
       "startToken": {
@@ -194,6 +285,9 @@
         },
         "id": "declaration.entity.name.function_getMatchEngine_-1:0"
       },
+      "parentId": "Datacloud.matchresult",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -201,30 +295,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getMatchEngine()",
+      "overrideSignature": "public override String getMatchEngine()",
       "simplifiedSignature": "getMatchEngine()",
       "datatype": {
-        "id": "Datacloud.matchresult.getmatchengine.String",
+        "id": "Datacloud.matchresult.getmatchengine.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Datacloud.matchresult.getmatchengine",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the match engine for the matching rule.",
-      "params": {}
+      "parentName": "MatchResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getmatchrecords()": {
-      "id": "Datacloud.matchresult.getmatchrecords",
+      "id": "Datacloud.matchresult.method.getmatchrecords()",
       "nodeType": "method",
       "name": "getMatchRecords",
       "startToken": {
@@ -246,6 +368,9 @@
         },
         "id": "declaration.entity.name.function_getMatchRecords_-1:0"
       },
+      "parentId": "Datacloud.matchresult",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -253,30 +378,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<Datacloud.MatchRecord> getMatchRecords()",
+      "overrideSignature": "public override List<Datacloud.MatchRecord> getMatchRecords()",
       "simplifiedSignature": "getMatchRecords()",
       "datatype": {
-        "id": "Datacloud.matchresult.getmatchrecords.List<Datacloud.MatchRecord>",
+        "id": "Datacloud.matchresult.getmatchrecords.datatype.List<Datacloud.MatchRecord>",
         "nodeType": "datatype",
-        "name": "List<Datacloud.MatchRecord>"
+        "name": "List<Datacloud.MatchRecord>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Datacloud.matchresult.getmatchrecords",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Datacloud.matchresult.getmatchrecords.datatype.List<Datacloud.MatchRecord>.value.Datacloud.MatchRecord",
+          "nodeType": "datatype",
+          "name": "Datacloud.MatchRecord",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Datacloud",
+            "textToLower": "datacloud",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 21
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Datacloud_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Datacloud.MatchRecord"
+        }
       },
       "description": "Returns information about the duplicates for the matching rule.",
-      "params": {}
+      "parentName": "MatchResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getrule()": {
-      "id": "Datacloud.matchresult.getrule",
+      "id": "Datacloud.matchresult.method.getrule()",
       "nodeType": "method",
       "name": "getRule",
       "startToken": {
@@ -298,6 +478,9 @@
         },
         "id": "declaration.entity.name.function_getRule_-1:0"
       },
+      "parentId": "Datacloud.matchresult",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -305,30 +488,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getRule()",
+      "overrideSignature": "public override String getRule()",
       "simplifiedSignature": "getRule()",
       "datatype": {
-        "id": "Datacloud.matchresult.getrule.String",
+        "id": "Datacloud.matchresult.getrule.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Datacloud.matchresult.getrule",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the developer name of the matching rule.",
-      "params": {}
+      "parentName": "MatchResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getsize()": {
-      "id": "Datacloud.matchresult.getsize",
+      "id": "Datacloud.matchresult.method.getsize()",
       "nodeType": "method",
       "name": "getSize",
       "startToken": {
@@ -350,6 +561,9 @@
         },
         "id": "declaration.entity.name.function_getSize_-1:0"
       },
+      "parentId": "Datacloud.matchresult",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -357,30 +571,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer getSize()",
+      "overrideSignature": "public override Integer getSize()",
       "simplifiedSignature": "getSize()",
       "datatype": {
-        "id": "Datacloud.matchresult.getsize.Integer",
+        "id": "Datacloud.matchresult.getsize.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "Datacloud.matchresult.getsize",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns the number of duplicates detected by the matching rule.",
-      "params": {}
+      "parentName": "MatchResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "issuccess()": {
-      "id": "Datacloud.matchresult.issuccess",
+      "id": "Datacloud.matchresult.method.issuccess()",
       "nodeType": "method",
       "name": "isSuccess",
       "startToken": {
@@ -402,6 +644,9 @@
         },
         "id": "declaration.entity.name.function_isSuccess_-1:0"
       },
+      "parentId": "Datacloud.matchresult",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -409,31 +654,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean isSuccess()",
+      "overrideSignature": "public override Boolean isSuccess()",
       "simplifiedSignature": "isSuccess()",
       "datatype": {
-        "id": "Datacloud.matchresult.issuccess.Boolean",
+        "id": "Datacloud.matchresult.issuccess.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Datacloud.matchresult.issuccess",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns false if there’s an error with the matching rule, and true if the matching rule successfully ran.",
-      "params": {}
+      "parentName": "MatchResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 7,
+  "queries": []
 }

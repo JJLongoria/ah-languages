@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Pattern_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "compile(string)": {
-      "id": "System.pattern.compile",
+      "id": "System.pattern.method.compile(string)",
       "nodeType": "method",
       "name": "compile",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_compile_-1:0"
       },
+      "parentId": "System.pattern",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static System.Pattern compile(String regExp)",
+      "signature": "public static Pattern compile(String regExp)",
+      "overrideSignature": "public static override Pattern compile(String regExp)",
       "simplifiedSignature": "compile(String)",
       "datatype": {
-        "id": "System.pattern.compile.System.Pattern",
+        "id": "System.pattern.compile.datatype.Pattern",
         "nodeType": "datatype",
-        "name": "System.Pattern"
+        "name": "Pattern",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "Pattern",
+          "textToLower": "pattern",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Pattern_0:14"
+        },
+        "parentId": "System.pattern.compile",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Pattern"
       },
       "description": "Compiles the regular expression into a Pattern object.",
+      "parentName": "Pattern",
+      "variables": {},
       "params": {
-        "regExp": {
-          "id": "System.pattern.compile.regexp",
-          "type": "var",
+        "regexp": {
+          "id": "System.pattern.method.compile(string).varParam.regexp",
+          "nodeType": "variable",
           "name": "regExp",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,29 +179,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 43
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_regExp_-1:0"
+            "id": "token.type.identifier_regExp_0:37"
           },
-          "signature": "String regExp",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "regExp",
+            "textToLower": "regexp",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 43
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_regExp_0:37"
+          },
+          "parentId": "System.pattern.method.compile(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.pattern.compile.string",
+            "id": "System.pattern.compile.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:30"
+            },
+            "parentId": "System.pattern.compile",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "matcher(string)": {
-      "id": "System.pattern.matcher",
+    "matcher()": {
+      "id": "System.pattern.method.matcher()",
       "nodeType": "method",
       "name": "matcher",
       "startToken": {
@@ -192,6 +271,9 @@
         },
         "id": "declaration.entity.name.function_matcher_-1:0"
       },
+      "parentId": "System.pattern",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -199,61 +281,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Matcher matcher(String regExp)",
-      "simplifiedSignature": "matcher(String)",
+      "signature": "public String matcher()",
+      "overrideSignature": "public override String matcher()",
+      "simplifiedSignature": "matcher()",
       "datatype": {
-        "id": "System.pattern.matcher.Matcher",
+        "id": "System.pattern.matcher.datatype.String",
         "nodeType": "datatype",
-        "name": "Matcher"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 23
+            },
+            "end": {
+              "line": 0,
+              "character": 29
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:23"
+        },
+        "parentId": "System.pattern.matcher",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Creates a Matcher object that matches the input string regExp against this Pattern object.",
-      "params": {
-        "regExp": {
-          "id": "System.pattern.matcher.regexp",
-          "type": "var",
-          "name": "regExp",
-          "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "regExp",
-            "textToLower": "regexp",
-            "isAux": false,
-            "range": {
-              "start": {
-                "line": -1,
-                "character": 0
-              },
-              "end": {
-                "line": -1,
-                "character": 0
-              },
-              "isEmpty": true,
-              "isSingleLine": true
-            },
-            "id": "declaration.entity.name.variable_regExp_-1:0"
-          },
-          "signature": "String regExp",
-          "datatype": {
-            "id": "System.pattern.matcher.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        }
-      }
+      "parentName": "Pattern",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "matches(string,string)": {
-      "id": "System.pattern.matches",
+      "id": "System.pattern.method.matches(string,string)",
       "nodeType": "method",
       "name": "matches",
       "startToken": {
@@ -275,6 +354,9 @@
         },
         "id": "declaration.entity.name.function_matches_-1:0"
       },
+      "parentId": "System.pattern",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -282,17 +364,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -301,30 +383,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean matches(String regExp, String stringtoMatch)",
+      "overrideSignature": "public static override Boolean matches(String regExp, String stringtoMatch)",
       "simplifiedSignature": "matches(String,String)",
       "datatype": {
-        "id": "System.pattern.matches.Boolean",
+        "id": "System.pattern.matches.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "System.pattern.matches",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Compiles the regular expression regExp and tries to match it against the specified string. This method returns true if the specified string matches the regular expression, false otherwise.",
+      "parentName": "Pattern",
+      "variables": {},
       "params": {
-        "regExp": {
-          "id": "System.pattern.matches.regexp",
-          "type": "var",
+        "regexp": {
+          "id": "System.pattern.method.matches(string,string).varParam.regexp",
+          "nodeType": "variable",
           "name": "regExp",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -333,28 +441,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 43
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_regExp_-1:0"
+            "id": "token.type.identifier_regExp_0:37"
           },
-          "signature": "String regExp",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "regExp",
+            "textToLower": "regexp",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 43
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_regExp_0:37"
+          },
+          "parentId": "System.pattern.method.matches(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.pattern.matches.string",
+            "id": "System.pattern.matches.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:30"
+            },
+            "parentId": "System.pattern.matches",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "stringtoMatch": {
-          "id": "System.pattern.matches.stringtomatch",
-          "type": "var",
+        "stringtomatch": {
+          "id": "System.pattern.method.matches(string,string).varParam.stringtomatch",
+          "nodeType": "variable",
           "name": "stringtoMatch",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -363,29 +516,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_stringtoMatch_-1:0"
+            "id": "token.type.identifier_stringtoMatch_0:52"
           },
-          "signature": "String stringtoMatch",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "stringtoMatch",
+            "textToLower": "stringtomatch",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 52
+              },
+              "end": {
+                "line": 0,
+                "character": 65
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_stringtoMatch_0:52"
+          },
+          "parentId": "System.pattern.method.matches(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.pattern.matches.string",
+            "id": "System.pattern.matches.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 51
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:45"
+            },
+            "parentId": "System.pattern.matches",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "pattern()": {
-      "id": "System.pattern.pattern",
+      "id": "System.pattern.method.pattern()",
       "nodeType": "method",
       "name": "pattern",
       "startToken": {
@@ -407,6 +608,9 @@
         },
         "id": "declaration.entity.name.function_pattern_-1:0"
       },
+      "parentId": "System.pattern",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -414,30 +618,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String pattern()",
+      "overrideSignature": "public override String pattern()",
       "simplifiedSignature": "pattern()",
       "datatype": {
-        "id": "System.pattern.pattern.String",
+        "id": "System.pattern.pattern.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.pattern.pattern",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the regular expression from which this Pattern object was compiled.",
-      "params": {}
+      "parentName": "Pattern",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "quote(string)": {
-      "id": "System.pattern.quote",
+      "id": "System.pattern.method.quote(string)",
       "nodeType": "method",
       "name": "quote",
       "startToken": {
@@ -459,6 +691,9 @@
         },
         "id": "declaration.entity.name.function_quote_-1:0"
       },
+      "parentId": "System.pattern",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -466,17 +701,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -485,30 +720,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String quote(String yourString)",
+      "overrideSignature": "public static override String quote(String yourString)",
       "simplifiedSignature": "quote(String)",
       "datatype": {
-        "id": "System.pattern.quote.String",
+        "id": "System.pattern.quote.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.custom.class",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.pattern.quote",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns a string that can be used to create a pattern that matches the string yourString as if it were a literal pattern.",
+      "parentName": "Pattern",
+      "variables": {},
       "params": {
-        "yourString": {
-          "id": "System.pattern.quote.yourstring",
-          "type": "var",
+        "yourstring": {
+          "id": "System.pattern.method.quote(string).varParam.yourstring",
+          "nodeType": "variable",
           "name": "yourString",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -517,29 +778,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_yourString_-1:0"
+            "id": "token.type.identifier_yourString_0:34"
           },
-          "signature": "String yourString",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "yourString",
+            "textToLower": "yourstring",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 44
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_yourString_0:34"
+          },
+          "parentId": "System.pattern.method.quote(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.pattern.quote.string",
+            "id": "System.pattern.quote.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 27
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:27"
+            },
+            "parentId": "System.pattern.quote",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "split(string)": {
-      "id": "System.pattern.split",
+      "id": "System.pattern.method.split(string)",
       "nodeType": "method",
       "name": "split",
       "startToken": {
@@ -561,6 +870,9 @@
         },
         "id": "declaration.entity.name.function_split_-1:0"
       },
+      "parentId": "System.pattern",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -568,30 +880,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String[] split(String regExp)",
+      "overrideSignature": "public override String[] split(String regExp)",
       "simplifiedSignature": "split(String)",
       "datatype": {
-        "id": "System.pattern.split.String[]",
+        "id": "System.pattern.split.datatype.String[]",
         "nodeType": "datatype",
-        "name": "String[]"
+        "name": "String[]",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.pattern.split",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String[]"
       },
       "description": "Returns a list that contains each substring of the String that matches this pattern.",
+      "parentName": "Pattern",
+      "variables": {},
       "params": {
-        "regExp": {
-          "id": "System.pattern.split.regexp",
-          "type": "var",
+        "regexp": {
+          "id": "System.pattern.method.split(string).varParam.regexp",
+          "nodeType": "variable",
           "name": "regExp",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -600,29 +938,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_regExp_-1:0"
+            "id": "token.type.identifier_regExp_0:29"
           },
-          "signature": "String regExp",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "regExp",
+            "textToLower": "regexp",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 35
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_regExp_0:29"
+          },
+          "parentId": "System.pattern.method.split(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.pattern.split.string",
+            "id": "System.pattern.split.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:22"
+            },
+            "parentId": "System.pattern.split",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "split(string,integer)": {
-      "id": "System.pattern.split",
+      "id": "System.pattern.method.split(string,integer)",
       "nodeType": "method",
       "name": "split",
       "startToken": {
@@ -644,6 +1030,9 @@
         },
         "id": "declaration.entity.name.function_split_-1:0"
       },
+      "parentId": "System.pattern",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -651,30 +1040,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String[] split(String regExp, Integer limit)",
+      "overrideSignature": "public override String[] split(String regExp, Integer limit)",
       "simplifiedSignature": "split(String,Integer)",
       "datatype": {
-        "id": "System.pattern.split.String[]",
+        "id": "System.pattern.split.datatype.String[]",
         "nodeType": "datatype",
-        "name": "String[]"
+        "name": "String[]",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.pattern.split",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String[]"
       },
       "description": "Returns a list that contains each substring of the String that is terminated either by the regular expression regExp that matches this pattern, or by the end of the String.",
+      "parentName": "Pattern",
+      "variables": {},
       "params": {
-        "regExp": {
-          "id": "System.pattern.split.regexp",
-          "type": "var",
+        "regexp": {
+          "id": "System.pattern.method.split(string,integer).varParam.regexp",
+          "nodeType": "variable",
           "name": "regExp",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -683,28 +1098,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_regExp_-1:0"
+            "id": "token.type.identifier_regExp_0:29"
           },
-          "signature": "String regExp",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "regExp",
+            "textToLower": "regexp",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 35
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_regExp_0:29"
+          },
+          "parentId": "System.pattern.method.split(string,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.pattern.split.string",
+            "id": "System.pattern.split.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:22"
+            },
+            "parentId": "System.pattern.split",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "limit": {
-          "id": "System.pattern.split.limit",
-          "type": "var",
+          "id": "System.pattern.method.split(string,integer).varParam.limit",
+          "nodeType": "variable",
           "name": "limit",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -713,30 +1173,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_limit_-1:0"
+            "id": "token.type.identifier_limit_0:45"
           },
-          "signature": "Integer limit",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "limit",
+            "textToLower": "limit",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 45
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_limit_0:45"
+          },
+          "parentId": "System.pattern.method.split(string,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.pattern.split.integer",
+            "id": "System.pattern.split.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 44
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:37"
+            },
+            "parentId": "System.pattern.split",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "(Optional) Controls the number of times the pattern is applied and therefore affects the length of the list. If limit is greater than zero: The pattern is applied a maximum of (limit – 1) times.  The list’s length is no greater than limit.  The list’s last entry contains all input beyond the last matched delimiter.     If limit is non-positive, the pattern is applied as many times as possible, and the list can have any length.  If limit is zero, the pattern is applied as many times as possible, the list can have any length, and trailing empty strings are discarded.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 7,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_BaseRequest_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "baserequest(string,map,string>)": {
-      "id": "commercepayments.baserequest.baserequest",
+    "baserequest(string,map<string,string>)": {
+      "id": "commercepayments.baserequest.method.baserequest(string,map<string,string>)",
       "nodeType": "method",
       "name": "BaseRequest",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_BaseRequest_-1:0"
       },
+      "parentId": "commercepayments.baserequest",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "global",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_global_-1:0"
+        "id": "token.type.identifier_global_0:0"
       },
-      "signature": "global void BaseRequest(String AdditionalData, Map <String, String> IdempotencyKey)",
-      "simplifiedSignature": "BaseRequest(String,Map,String>)",
+      "signature": "global Void BaseRequest(String AdditionalData, Map<String,String> IdempotencyKey)",
+      "overrideSignature": "global override Void BaseRequest(String AdditionalData, Map<String,String> IdempotencyKey)",
+      "simplifiedSignature": "BaseRequest(String,Map<String,String>)",
       "datatype": {
-        "id": "commercepayments.baserequest.baserequest.void",
+        "id": "commercepayments.baserequest.baserequest.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "commercepayments.baserequest.baserequest",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Used for testing.",
+      "parentName": "BaseRequest",
+      "variables": {},
       "params": {
-        "AdditionalData": {
-          "id": "commercepayments.baserequest.baserequest.additionaldata",
-          "type": "var",
+        "additionaldata": {
+          "id": "commercepayments.baserequest.method.baserequest(string,map<string,string>).varParam.additionaldata",
+          "nodeType": "variable",
           "name": "AdditionalData",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,58 +160,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 31
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_AdditionalData_-1:0"
+            "id": "token.type.identifier_AdditionalData_0:31"
           },
-          "signature": "String AdditionalData",
-          "datatype": {
-            "id": "commercepayments.baserequest.baserequest.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String": {
-          "id": "commercepayments.baserequest.baserequest.<string",
-          "type": "var",
-          "name": "<String",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "AdditionalData",
+            "textToLower": "additionaldata",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 31
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_AdditionalData_0:31"
           },
-          "signature": "Map <String",
+          "parentId": "commercepayments.baserequest.method.baserequest(string,map<string,string>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "commercepayments.baserequest.baserequest.map",
+            "id": "commercepayments.baserequest.baserequest.datatype.String",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 24
+                },
+                "end": {
+                  "line": 0,
+                  "character": 30
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:24"
+            },
+            "parentId": "commercepayments.baserequest.baserequest",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "IdempotencyKey": {
-          "id": "commercepayments.baserequest.baserequest.idempotencykey",
-          "type": "var",
+        "idempotencykey": {
+          "id": "commercepayments.baserequest.method.baserequest(string,map<string,string>).varParam.idempotencykey",
+          "nodeType": "variable",
           "name": "IdempotencyKey",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -189,30 +235,134 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_IdempotencyKey_-1:0"
+            "id": "token.type.identifier_IdempotencyKey_0:67"
           },
-          "signature": "String> IdempotencyKey",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "IdempotencyKey",
+            "textToLower": "idempotencykey",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 81
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_IdempotencyKey_0:67"
+          },
+          "parentId": "commercepayments.baserequest.method.baserequest(string,map<string,string>)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "commercepayments.baserequest.baserequest.string>",
+            "id": "commercepayments.baserequest.baserequest.datatype.Map<String,String>",
             "nodeType": "datatype",
-            "name": "String>"
-          }
+            "name": "Map<String,String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 47
+                },
+                "end": {
+                  "line": 0,
+                  "character": 50
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:47"
+            },
+            "parentId": "commercepayments.baserequest.baserequest",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "commercepayments.baserequest.baserequest.datatype.Map<String,String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 59
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 65
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:59"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            },
+            "key": {
+              "id": "commercepayments.baserequest.baserequest.datatype.Map<String,String>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 51
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 57
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:51"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "Contains additional data that may be required for a payment request. The additionalData object consists of key-value pairs. You can retrieve the additionalData object from the request object: Map&lt;String, String&gt; additionalData=request.additionalData  Unique value that's generated by a client and sent to the server in the  request. The server stores the value and uses the it to keep track of the request status.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

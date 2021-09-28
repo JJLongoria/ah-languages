@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_EventBus_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getoperationid(object)": {
-      "id": "System.eventbus.getoperationid",
+      "id": "System.eventbus.method.getoperationid(object)",
       "nodeType": "method",
       "name": "getOperationId",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getOperationId_-1:0"
       },
+      "parentId": "System.eventbus",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static String getOperationId(Object result)",
+      "overrideSignature": "public static override String getOperationId(Object result)",
       "simplifiedSignature": "getOperationId(Object)",
       "datatype": {
-        "id": "System.eventbus.getoperationid.String",
+        "id": "System.eventbus.getoperationid.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:14"
+        },
+        "parentId": "System.eventbus.getoperationid",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the ID of the asynchronous event publishing operation based on the passed-in SaveResult. Use this ID to correlate the asynchronous publishing result sent on the /event/AsyncOperationEvent channel.",
+      "parentName": "EventBus",
+      "variables": {},
       "params": {
         "result": {
-          "id": "System.eventbus.getoperationid.result",
-          "type": "var",
+          "id": "System.eventbus.method.getoperationid(object).varParam.result",
+          "nodeType": "variable",
           "name": "result",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,29 +179,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 43
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_result_-1:0"
+            "id": "token.type.identifier_result_0:43"
           },
-          "signature": "Object result",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "result",
+            "textToLower": "result",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 43
+              },
+              "end": {
+                "line": 0,
+                "character": 49
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_result_0:43"
+          },
+          "parentId": "System.eventbus.method.getoperationid(object)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.eventbus.getoperationid.object",
+            "id": "System.eventbus.getoperationid.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 36
+                },
+                "end": {
+                  "line": 0,
+                  "character": 42
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:36"
+            },
+            "parentId": "System.eventbus.getoperationid",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "description": "The SaveResult that is returned by the EventBus.publish call.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "publish(sobject)": {
-      "id": "System.eventbus.publish",
+      "id": "System.eventbus.method.publish(sobject)",
       "nodeType": "method",
       "name": "publish",
       "startToken": {
@@ -192,6 +271,9 @@
         },
         "id": "declaration.entity.name.function_publish_-1:0"
       },
+      "parentId": "System.eventbus",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -199,17 +281,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -218,30 +300,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Database.SaveResult publish(SObject event)",
+      "overrideSignature": "public static override Database.SaveResult publish(SObject event)",
       "simplifiedSignature": "publish(SObject)",
       "datatype": {
-        "id": "System.eventbus.publish.Database.SaveResult",
+        "id": "System.eventbus.publish.datatype.Database.SaveResult",
         "nodeType": "datatype",
-        "name": "Database.SaveResult"
+        "name": "Database.SaveResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Database",
+          "textToLower": "database",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Database_0:14"
+        },
+        "parentId": "System.eventbus.publish",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Database.SaveResult"
       },
       "description": "Publishes the given platform event.",
+      "parentName": "EventBus",
+      "variables": {},
       "params": {
         "event": {
-          "id": "System.eventbus.publish.event",
-          "type": "var",
+          "id": "System.eventbus.method.publish(sobject).varParam.event",
+          "nodeType": "variable",
           "name": "event",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -250,29 +358,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_event_-1:0"
+            "id": "token.type.identifier_event_0:50"
           },
-          "signature": "SObject event",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "event",
+            "textToLower": "event",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 50
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_event_0:50"
+          },
+          "parentId": "System.eventbus.method.publish(sobject)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.eventbus.publish.sobject",
+            "id": "System.eventbus.publish.datatype.SObject",
             "nodeType": "datatype",
-            "name": "SObject"
-          }
+            "name": "SObject",
+            "startToken": {
+              "type": "datatype.custom.class",
+              "text": "SObject",
+              "textToLower": "sobject",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 49
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_SObject_0:42"
+            },
+            "parentId": "System.eventbus.publish",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "SObject"
+          },
+          "description": "An instance of a platform event. For example, an instance of MyEvent__e. You must first define your platform event object in your org.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "publish(list)": {
-      "id": "System.eventbus.publish",
+    "publish(list<sobject>)": {
+      "id": "System.eventbus.method.publish(list<sobject>)",
       "nodeType": "method",
       "name": "publish",
       "startToken": {
@@ -294,6 +450,9 @@
         },
         "id": "declaration.entity.name.function_publish_-1:0"
       },
+      "parentId": "System.eventbus",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -301,17 +460,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -320,62 +479,192 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static List<Database.SaveResult> publish(List <SObject>)",
-      "simplifiedSignature": "publish(List)",
+      "signature": "public static List<Database.SaveResult> publish(List<SObject> events)",
+      "overrideSignature": "public static override List<Database.SaveResult> publish(List<SObject> events)",
+      "simplifiedSignature": "publish(List<SObject>)",
       "datatype": {
-        "id": "System.eventbus.publish.List<Database.SaveResult>",
+        "id": "System.eventbus.publish.datatype.List<Database.SaveResult>",
         "nodeType": "datatype",
-        "name": "List<Database.SaveResult>"
-      },
-      "description": "Publishes the given list of platform events.",
-      "params": {
-        "<SObject>": {
-          "id": "System.eventbus.publish.<sobject>",
-          "type": "var",
-          "name": "<SObject>",
+        "name": "List<Database.SaveResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "System.eventbus.publish",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.eventbus.publish.datatype.List<Database.SaveResult>.value.Database.SaveResult",
+          "nodeType": "datatype",
+          "name": "Database.SaveResult",
           "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "<SObject>",
-            "textToLower": "<sobject>",
+            "type": "datatype.support.namespace",
+            "text": "Database",
+            "textToLower": "database",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 19
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 27
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<SObject>_-1:0"
+            "id": "token.type.identifier_Database_0:19"
           },
-          "signature": "List <SObject>",
-          "datatype": {
-            "id": "System.eventbus.publish.list",
-            "nodeType": "datatype",
-            "name": "List"
-          }
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Database.SaveResult"
         }
-      }
+      },
+      "description": "Publishes the given list of platform events.",
+      "parentName": "EventBus",
+      "variables": {},
+      "params": {
+        "events": {
+          "id": "System.eventbus.method.publish(list<sobject>).varParam.events",
+          "nodeType": "variable",
+          "name": "events",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "events",
+            "textToLower": "events",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 62
+              },
+              "end": {
+                "line": 0,
+                "character": 68
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_events_0:62"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "events",
+            "textToLower": "events",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 62
+              },
+              "end": {
+                "line": 0,
+                "character": 68
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_events_0:62"
+          },
+          "parentId": "System.eventbus.method.publish(list<sobject>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.eventbus.publish.datatype.List<SObject>",
+            "nodeType": "datatype",
+            "name": "List<SObject>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 48
+                },
+                "end": {
+                  "line": 0,
+                  "character": 52
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:48"
+            },
+            "parentId": "System.eventbus.publish",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.eventbus.publish.datatype.List<SObject>.value.SObject",
+              "nodeType": "datatype",
+              "name": "SObject",
+              "startToken": {
+                "type": "datatype.support.class",
+                "text": "SObject",
+                "textToLower": "sobject",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 53
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 60
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_SObject_0:53"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "SObject"
+            }
+          },
+          "description": "A list of platform event instances. For example, a list of MyEvent__e objects. You must first define your platform event object in your org.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 3,
+  "queries": []
 }

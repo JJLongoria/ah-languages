@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_FlexQueue_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "moveafterjob(id,id)": {
-      "id": "System.flexqueue.moveafterjob",
+      "id": "System.flexqueue.method.moveafterjob(id,id)",
       "nodeType": "method",
       "name": "moveAfterJob",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_moveAfterJob_-1:0"
       },
+      "parentId": "System.flexqueue",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean moveAfterJob(Id jobToMoveId, Id jobInQueueId)",
+      "overrideSignature": "public static override Boolean moveAfterJob(Id jobToMoveId, Id jobInQueueId)",
       "simplifiedSignature": "moveAfterJob(Id,Id)",
       "datatype": {
-        "id": "System.flexqueue.moveafterjob.Boolean",
+        "id": "System.flexqueue.moveafterjob.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "System.flexqueue.moveafterjob",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Moves the job with the ID jobToMoveId immediately after the job with the ID jobInQueueId in the flex queue. You can move jobToMoveId forward or backward in the queue. If either job isn’t in the queue, it throws an element-not-found exception. Returns true if the job is moved, or false if jobToMoveId is already immediately after jobInQueueId, so no change is made.",
+      "parentName": "FlexQueue",
+      "variables": {},
       "params": {
-        "jobToMoveId": {
-          "id": "System.flexqueue.moveafterjob.jobtomoveid",
-          "type": "var",
+        "jobtomoveid": {
+          "id": "System.flexqueue.method.moveafterjob(id,id).varParam.jobtomoveid",
+          "nodeType": "variable",
           "name": "jobToMoveId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_jobToMoveId_-1:0"
+            "id": "token.type.identifier_jobToMoveId_0:38"
           },
-          "signature": "Id jobToMoveId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobToMoveId",
+            "textToLower": "jobtomoveid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 49
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_jobToMoveId_0:38"
+          },
+          "parentId": "System.flexqueue.method.moveafterjob(id,id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.flexqueue.moveafterjob.id",
+            "id": "System.flexqueue.moveafterjob.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:35"
+            },
+            "parentId": "System.flexqueue.moveafterjob",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "jobInQueueId": {
-          "id": "System.flexqueue.moveafterjob.jobinqueueid",
-          "type": "var",
+        "jobinqueueid": {
+          "id": "System.flexqueue.method.moveafterjob(id,id).varParam.jobinqueueid",
+          "nodeType": "variable",
           "name": "jobInQueueId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,29 +254,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_jobInQueueId_-1:0"
+            "id": "token.type.identifier_jobInQueueId_0:54"
           },
-          "signature": "Id jobInQueueId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobInQueueId",
+            "textToLower": "jobinqueueid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 66
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_jobInQueueId_0:54"
+          },
+          "parentId": "System.flexqueue.method.moveafterjob(id,id)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.flexqueue.moveafterjob.id",
+            "id": "System.flexqueue.moveafterjob.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 51
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:51"
+            },
+            "parentId": "System.flexqueue.moveafterjob",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "The ID of the job to move. The ID of the job to move after.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "movebeforejob(id,id)": {
-      "id": "System.flexqueue.movebeforejob",
+      "id": "System.flexqueue.method.movebeforejob(id,id)",
       "nodeType": "method",
       "name": "moveBeforeJob",
       "startToken": {
@@ -222,6 +346,9 @@
         },
         "id": "declaration.entity.name.function_moveBeforeJob_-1:0"
       },
+      "parentId": "System.flexqueue",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -229,17 +356,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -248,30 +375,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean moveBeforeJob(Id jobToMoveId, Id jobInQueueId)",
+      "overrideSignature": "public static override Boolean moveBeforeJob(Id jobToMoveId, Id jobInQueueId)",
       "simplifiedSignature": "moveBeforeJob(Id,Id)",
       "datatype": {
-        "id": "System.flexqueue.movebeforejob.Boolean",
+        "id": "System.flexqueue.movebeforejob.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "System.flexqueue.movebeforejob",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Moves the job with the ID jobToMoveId immediately before the job with the ID jobInQueueId in the flex queue. You can move jobToMoveId forward or backward in the queue. If either job isn’t in the queue, it throws an element-not-found exception. Returns true if the job is moved, or false if jobToMoveId is already immediately before jobInQueueId, so no change is made.",
+      "parentName": "FlexQueue",
+      "variables": {},
       "params": {
-        "jobToMoveId": {
-          "id": "System.flexqueue.movebeforejob.jobtomoveid",
-          "type": "var",
+        "jobtomoveid": {
+          "id": "System.flexqueue.method.movebeforejob(id,id).varParam.jobtomoveid",
+          "nodeType": "variable",
           "name": "jobToMoveId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -280,28 +433,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_jobToMoveId_-1:0"
+            "id": "token.type.identifier_jobToMoveId_0:39"
           },
-          "signature": "Id jobToMoveId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobToMoveId",
+            "textToLower": "jobtomoveid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 39
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_jobToMoveId_0:39"
+          },
+          "parentId": "System.flexqueue.method.movebeforejob(id,id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.flexqueue.movebeforejob.id",
+            "id": "System.flexqueue.movebeforejob.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 36
+                },
+                "end": {
+                  "line": 0,
+                  "character": 38
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:36"
+            },
+            "parentId": "System.flexqueue.movebeforejob",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "jobInQueueId": {
-          "id": "System.flexqueue.movebeforejob.jobinqueueid",
-          "type": "var",
+        "jobinqueueid": {
+          "id": "System.flexqueue.method.movebeforejob(id,id).varParam.jobinqueueid",
+          "nodeType": "variable",
           "name": "jobInQueueId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,29 +508,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 67
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_jobInQueueId_-1:0"
+            "id": "token.type.identifier_jobInQueueId_0:55"
           },
-          "signature": "Id jobInQueueId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobInQueueId",
+            "textToLower": "jobinqueueid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 55
+              },
+              "end": {
+                "line": 0,
+                "character": 67
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_jobInQueueId_0:55"
+          },
+          "parentId": "System.flexqueue.method.movebeforejob(id,id)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.flexqueue.movebeforejob.id",
+            "id": "System.flexqueue.movebeforejob.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 54
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:52"
+            },
+            "parentId": "System.flexqueue.movebeforejob",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "The ID of the job to move. The ID of the job to use as a reference point.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "movejobtoend(id)": {
-      "id": "System.flexqueue.movejobtoend",
+      "id": "System.flexqueue.method.movejobtoend(id)",
       "nodeType": "method",
       "name": "moveJobToEnd",
       "startToken": {
@@ -354,6 +600,9 @@
         },
         "id": "declaration.entity.name.function_moveJobToEnd_-1:0"
       },
+      "parentId": "System.flexqueue",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -361,17 +610,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -380,30 +629,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean moveJobToEnd(Id jobId)",
+      "overrideSignature": "public static override Boolean moveJobToEnd(Id jobId)",
       "simplifiedSignature": "moveJobToEnd(Id)",
       "datatype": {
-        "id": "System.flexqueue.movejobtoend.Boolean",
+        "id": "System.flexqueue.movejobtoend.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "System.flexqueue.movejobtoend",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Moves the specified job the end of the flex queue, to index position (size - 1). All jobs after the job’s starting position move one spot forward. If the job isn’t in the queue, it throws an element-not-found exception. Returns true if the job is moved, or false if the job is already at the end of the queue, so no change is made.",
+      "parentName": "FlexQueue",
+      "variables": {},
       "params": {
-        "jobId": {
-          "id": "System.flexqueue.movejobtoend.jobid",
-          "type": "var",
+        "jobid": {
+          "id": "System.flexqueue.method.movejobtoend(id).varParam.jobid",
+          "nodeType": "variable",
           "name": "jobId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -412,29 +687,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 43
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_jobId_-1:0"
+            "id": "token.type.identifier_jobId_0:38"
           },
-          "signature": "Id jobId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobId",
+            "textToLower": "jobid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 43
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_jobId_0:38"
+          },
+          "parentId": "System.flexqueue.method.movejobtoend(id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.flexqueue.movejobtoend.id",
+            "id": "System.flexqueue.movejobtoend.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:35"
+            },
+            "parentId": "System.flexqueue.movejobtoend",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "The ID of the job to move.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "movejobtofront(id)": {
-      "id": "System.flexqueue.movejobtofront",
+      "id": "System.flexqueue.method.movejobtofront(id)",
       "nodeType": "method",
       "name": "moveJobToFront",
       "startToken": {
@@ -456,6 +779,9 @@
         },
         "id": "declaration.entity.name.function_moveJobToFront_-1:0"
       },
+      "parentId": "System.flexqueue",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -463,17 +789,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -482,30 +808,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean moveJobToFront(Id jobId)",
+      "overrideSignature": "public static override Boolean moveJobToFront(Id jobId)",
       "simplifiedSignature": "moveJobToFront(Id)",
       "datatype": {
-        "id": "System.flexqueue.movejobtofront.Boolean",
+        "id": "System.flexqueue.movejobtofront.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "System.flexqueue.movejobtofront",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Moves the specified job to the front of the flex queue, to index position 0. All other jobs move back one spot. If the job isn’t in the queue, it throws an element-not-found exception. Returns true if the job is moved, or false if the job is already at the front of the queue, so no change is made.",
+      "parentName": "FlexQueue",
+      "variables": {},
       "params": {
-        "jobId": {
-          "id": "System.flexqueue.movejobtofront.jobid",
-          "type": "var",
+        "jobid": {
+          "id": "System.flexqueue.method.movejobtofront(id).varParam.jobid",
+          "nodeType": "variable",
           "name": "jobId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -514,30 +866,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 40
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_jobId_-1:0"
+            "id": "token.type.identifier_jobId_0:40"
           },
-          "signature": "Id jobId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "jobId",
+            "textToLower": "jobid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 40
+              },
+              "end": {
+                "line": 0,
+                "character": 45
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_jobId_0:40"
+          },
+          "parentId": "System.flexqueue.method.movejobtofront(id)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.flexqueue.movejobtofront.id",
+            "id": "System.flexqueue.movejobtofront.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 39
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:37"
+            },
+            "parentId": "System.flexqueue.movejobtofront",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "description": "The ID of the job to move.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 4,
+  "queries": []
 }

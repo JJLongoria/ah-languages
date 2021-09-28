@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_QuickAction_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "describeavailablequickactions(string)": {
-      "id": "System.quickaction.describeavailablequickactions",
+      "id": "System.quickaction.method.describeavailablequickactions(string)",
       "nodeType": "method",
       "name": "describeAvailableQuickActions",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_describeAvailableQuickActions_-1:0"
       },
+      "parentId": "System.quickaction",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,83 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static List<QuickAction.DescribeAvailableQuickActionResult> describeAvailableQuickActions(String parentType)",
+      "overrideSignature": "public static override List<QuickAction.DescribeAvailableQuickActionResult> describeAvailableQuickActions(String parentType)",
       "simplifiedSignature": "describeAvailableQuickActions(String)",
       "datatype": {
-        "id": "System.quickaction.describeavailablequickactions.List<QuickAction.DescribeAvailableQuickActionResult>",
+        "id": "System.quickaction.describeavailablequickactions.datatype.List<QuickAction.DescribeAvailableQuickActionResult>",
         "nodeType": "datatype",
-        "name": "List<QuickAction.DescribeAvailableQuickActionResult>"
+        "name": "List<QuickAction.DescribeAvailableQuickActionResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "System.quickaction.describeavailablequickactions",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.quickaction.describeavailablequickactions.datatype.List<QuickAction.DescribeAvailableQuickActionResult>.value.QuickAction.DescribeAvailableQuickActionResult",
+          "nodeType": "datatype",
+          "name": "QuickAction.DescribeAvailableQuickActionResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "QuickAction",
+            "textToLower": "quickaction",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 30
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_QuickAction_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "QuickAction.DescribeAvailableQuickActionResult"
+        }
       },
       "description": "Returns metadata information for the available quick actions of the provided parent object.",
+      "parentName": "QuickAction",
+      "variables": {},
       "params": {
-        "parentType": {
-          "id": "System.quickaction.describeavailablequickactions.parenttype",
-          "type": "var",
+        "parenttype": {
+          "id": "System.quickaction.method.describeavailablequickactions(string).varParam.parenttype",
+          "nodeType": "variable",
           "name": "parentType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,29 +206,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 104
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 114
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_parentType_-1:0"
+            "id": "token.type.identifier_parentType_0:104"
           },
-          "signature": "String parentType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "parentType",
+            "textToLower": "parenttype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 104
+              },
+              "end": {
+                "line": 0,
+                "character": 114
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_parentType_0:104"
+          },
+          "parentId": "System.quickaction.method.describeavailablequickactions(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.quickaction.describeavailablequickactions.string",
+            "id": "System.quickaction.describeavailablequickactions.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 97
+                },
+                "end": {
+                  "line": 0,
+                  "character": 103
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:97"
+            },
+            "parentId": "System.quickaction.describeavailablequickactions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The parent object type. This can be an object type name ('Account') or 'Global' (meaning that this method is called at a global level and not an entity level).",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "describeavailablequickactions(list)": {
-      "id": "System.quickaction.describeavailablequickactions",
+    "describeavailablequickactions(list<string>)": {
+      "id": "System.quickaction.method.describeavailablequickactions(list<string>)",
       "nodeType": "method",
       "name": "describeAvailableQuickActions",
       "startToken": {
@@ -192,6 +298,9 @@
         },
         "id": "declaration.entity.name.function_describeAvailableQuickActions_-1:0"
       },
+      "parentId": "System.quickaction",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -199,17 +308,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -218,61 +327,189 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static List<QuickAction.DescribeQuickActionResult> describeAvailableQuickActions(List <String>)",
-      "simplifiedSignature": "describeAvailableQuickActions(List)",
+      "signature": "public static List<QuickAction.DescribeQuickActionResult> describeAvailableQuickActions(List<String> sObjectNames)",
+      "overrideSignature": "public static override List<QuickAction.DescribeQuickActionResult> describeAvailableQuickActions(List<String> sObjectNames)",
+      "simplifiedSignature": "describeAvailableQuickActions(List<String>)",
       "datatype": {
-        "id": "System.quickaction.describeavailablequickactions.List<QuickAction.DescribeQuickActionResult>",
+        "id": "System.quickaction.describeavailablequickactions.datatype.List<QuickAction.DescribeQuickActionResult>",
         "nodeType": "datatype",
-        "name": "List<QuickAction.DescribeQuickActionResult>"
+        "name": "List<QuickAction.DescribeQuickActionResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "System.quickaction.describeavailablequickactions",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.quickaction.describeavailablequickactions.datatype.List<QuickAction.DescribeQuickActionResult>.value.QuickAction.DescribeQuickActionResult",
+          "nodeType": "datatype",
+          "name": "QuickAction.DescribeQuickActionResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "QuickAction",
+            "textToLower": "quickaction",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 30
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_QuickAction_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "QuickAction.DescribeQuickActionResult"
+        }
       },
       "description": "Returns the metadata information for the provided quick actions.",
+      "parentName": "QuickAction",
+      "variables": {},
       "params": {
-        "<String>": {
-          "id": "System.quickaction.describeavailablequickactions.<string>",
-          "type": "var",
-          "name": "<String>",
+        "sobjectnames": {
+          "id": "System.quickaction.method.describeavailablequickactions(list<string>).varParam.sobjectnames",
+          "nodeType": "variable",
+          "name": "sObjectNames",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "sObjectNames",
+            "textToLower": "sobjectnames",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 101
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 113
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_sObjectNames_0:101"
           },
-          "signature": "List <String>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sObjectNames",
+            "textToLower": "sobjectnames",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 101
+              },
+              "end": {
+                "line": 0,
+                "character": 113
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sObjectNames_0:101"
+          },
+          "parentId": "System.quickaction.method.describeavailablequickactions(list<string>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.quickaction.describeavailablequickactions.list",
+            "id": "System.quickaction.describeavailablequickactions.datatype.List<String>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 88
+                },
+                "end": {
+                  "line": 0,
+                  "character": 92
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:88"
+            },
+            "parentId": "System.quickaction.describeavailablequickactions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.quickaction.describeavailablequickactions.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 93
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 99
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:93"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "The names of the quick actions. The quick action name can contain the entity name if it is at the entity level ('Account.QuickCreateContact'), or 'Global' if used for the action at the global level ('Global.CreateNewContact').",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "performquickaction(quickaction.quickactionrequest)": {
-      "id": "System.quickaction.performquickaction",
+      "id": "System.quickaction.method.performquickaction(quickaction.quickactionrequest)",
       "nodeType": "method",
       "name": "performQuickAction",
       "startToken": {
@@ -294,6 +531,9 @@
         },
         "id": "declaration.entity.name.function_performQuickAction_-1:0"
       },
+      "parentId": "System.quickaction",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -301,17 +541,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -320,30 +560,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static QuickAction.QuickActionResult performQuickAction(QuickAction.QuickActionRequest quickActionRequest)",
+      "overrideSignature": "public static override QuickAction.QuickActionResult performQuickAction(QuickAction.QuickActionRequest quickActionRequest)",
       "simplifiedSignature": "performQuickAction(QuickAction.QuickActionRequest)",
       "datatype": {
-        "id": "System.quickaction.performquickaction.QuickAction.QuickActionResult",
+        "id": "System.quickaction.performquickaction.datatype.QuickAction.QuickActionResult",
         "nodeType": "datatype",
-        "name": "QuickAction.QuickActionResult"
+        "name": "QuickAction.QuickActionResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "QuickAction",
+          "textToLower": "quickaction",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 25
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_QuickAction_0:14"
+        },
+        "parentId": "System.quickaction.performquickaction",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "QuickAction.QuickActionResult"
       },
       "description": "Performs the quick action specified in the quick action request and returns the action result.",
+      "parentName": "QuickAction",
+      "variables": {},
       "params": {
-        "quickActionRequest": {
-          "id": "System.quickaction.performquickaction.quickactionrequest",
-          "type": "var",
+        "quickactionrequest": {
+          "id": "System.quickaction.method.performquickaction(quickaction.quickactionrequest).varParam.quickactionrequest",
+          "nodeType": "variable",
           "name": "quickActionRequest",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -352,29 +618,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 112
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_quickActionRequest_-1:0"
+            "id": "token.type.identifier_quickActionRequest_0:94"
           },
-          "signature": "QuickAction.QuickActionRequest quickActionRequest",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "quickActionRequest",
+            "textToLower": "quickactionrequest",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 94
+              },
+              "end": {
+                "line": 0,
+                "character": 112
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_quickActionRequest_0:94"
+          },
+          "parentId": "System.quickaction.method.performquickaction(quickaction.quickactionrequest)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.quickaction.performquickaction.quickaction.quickactionrequest",
+            "id": "System.quickaction.performquickaction.datatype.QuickAction.QuickActionRequest",
             "nodeType": "datatype",
-            "name": "QuickAction.QuickActionRequest"
-          }
+            "name": "QuickAction.QuickActionRequest",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "QuickAction",
+              "textToLower": "quickaction",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 63
+                },
+                "end": {
+                  "line": 0,
+                  "character": 74
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_QuickAction_0:63"
+            },
+            "parentId": "System.quickaction.performquickaction",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "QuickAction.QuickActionRequest"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "performquickaction(quickaction.quickactionrequest,boolean)": {
-      "id": "System.quickaction.performquickaction",
+      "id": "System.quickaction.method.performquickaction(quickaction.quickactionrequest,boolean)",
       "nodeType": "method",
       "name": "performQuickAction",
       "startToken": {
@@ -396,6 +710,9 @@
         },
         "id": "declaration.entity.name.function_performQuickAction_-1:0"
       },
+      "parentId": "System.quickaction",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -403,17 +720,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -422,30 +739,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static QuickAction.QuickActionResult performQuickAction(QuickAction.QuickActionRequest quickActionRequest, Boolean allOrNothing)",
+      "overrideSignature": "public static override QuickAction.QuickActionResult performQuickAction(QuickAction.QuickActionRequest quickActionRequest, Boolean allOrNothing)",
       "simplifiedSignature": "performQuickAction(QuickAction.QuickActionRequest,Boolean)",
       "datatype": {
-        "id": "System.quickaction.performquickaction.QuickAction.QuickActionResult",
+        "id": "System.quickaction.performquickaction.datatype.QuickAction.QuickActionResult",
         "nodeType": "datatype",
-        "name": "QuickAction.QuickActionResult"
+        "name": "QuickAction.QuickActionResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "QuickAction",
+          "textToLower": "quickaction",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 25
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_QuickAction_0:14"
+        },
+        "parentId": "System.quickaction.performquickaction",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "QuickAction.QuickActionResult"
       },
       "description": "Performs the quick action specified in the quick action request with the option for partial success, and returns the result.",
+      "parentName": "QuickAction",
+      "variables": {},
       "params": {
-        "quickActionRequest": {
-          "id": "System.quickaction.performquickaction.quickactionrequest",
-          "type": "var",
+        "quickactionrequest": {
+          "id": "System.quickaction.method.performquickaction(quickaction.quickactionrequest,boolean).varParam.quickactionrequest",
+          "nodeType": "variable",
           "name": "quickActionRequest",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -454,28 +797,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 112
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_quickActionRequest_-1:0"
+            "id": "token.type.identifier_quickActionRequest_0:94"
           },
-          "signature": "QuickAction.QuickActionRequest quickActionRequest",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "quickActionRequest",
+            "textToLower": "quickactionrequest",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 94
+              },
+              "end": {
+                "line": 0,
+                "character": 112
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_quickActionRequest_0:94"
+          },
+          "parentId": "System.quickaction.method.performquickaction(quickaction.quickactionrequest,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.quickaction.performquickaction.quickaction.quickactionrequest",
+            "id": "System.quickaction.performquickaction.datatype.QuickAction.QuickActionRequest",
             "nodeType": "datatype",
-            "name": "QuickAction.QuickActionRequest"
-          }
+            "name": "QuickAction.QuickActionRequest",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "QuickAction",
+              "textToLower": "quickaction",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 63
+                },
+                "end": {
+                  "line": 0,
+                  "character": 74
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_QuickAction_0:63"
+            },
+            "parentId": "System.quickaction.performquickaction",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "QuickAction.QuickActionRequest"
+          },
+          "scope": null
         },
-        "allOrNothing": {
-          "id": "System.quickaction.performquickaction.allornothing",
-          "type": "var",
+        "allornothing": {
+          "id": "System.quickaction.method.performquickaction(quickaction.quickactionrequest,boolean).varParam.allornothing",
+          "nodeType": "variable",
           "name": "allOrNothing",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -484,29 +872,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 122
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 134
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_allOrNothing_-1:0"
+            "id": "token.type.identifier_allOrNothing_0:122"
           },
-          "signature": "Boolean allOrNothing",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 122
+              },
+              "end": {
+                "line": 0,
+                "character": 134
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:122"
+          },
+          "parentId": "System.quickaction.method.performquickaction(quickaction.quickactionrequest,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.quickaction.performquickaction.boolean",
+            "id": "System.quickaction.performquickaction.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 114
+                },
+                "end": {
+                  "line": 0,
+                  "character": 121
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:114"
+            },
+            "parentId": "System.quickaction.performquickaction",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "Specifies whether this operation allows partial success. If you specify false for this argument and a record fails, the remainder of the DML operation can still succeed. This method returns a result object that can be used to verify which records succeeded, which failed, and why.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "performquickactions(list)": {
-      "id": "System.quickaction.performquickactions",
+    "performquickactions(list<quickaction.quickactionrequest>)": {
+      "id": "System.quickaction.method.performquickactions(list<quickaction.quickactionrequest>)",
       "nodeType": "method",
       "name": "performQuickActions",
       "startToken": {
@@ -528,6 +964,9 @@
         },
         "id": "declaration.entity.name.function_performQuickActions_-1:0"
       },
+      "parentId": "System.quickaction",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -535,17 +974,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -554,6 +993,198 @@
         "isAux": false,
         "range": {
           "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static List<QuickAction.QuickActionResult> performQuickActions(List<QuickAction.QuickActionRequest> quickActionRequests)",
+      "overrideSignature": "public static override List<QuickAction.QuickActionResult> performQuickActions(List<QuickAction.QuickActionRequest> quickActionRequests)",
+      "simplifiedSignature": "performQuickActions(List<QuickAction.QuickActionRequest>)",
+      "datatype": {
+        "id": "System.quickaction.performquickactions.datatype.List<QuickAction.QuickActionResult>",
+        "nodeType": "datatype",
+        "name": "List<QuickAction.QuickActionResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "System.quickaction.performquickactions",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.quickaction.performquickactions.datatype.List<QuickAction.QuickActionResult>.value.QuickAction.QuickActionResult",
+          "nodeType": "datatype",
+          "name": "QuickAction.QuickActionResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "QuickAction",
+            "textToLower": "quickaction",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 30
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_QuickAction_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "QuickAction.QuickActionResult"
+        }
+      },
+      "description": "Performs the quick actions specified in the quick action request list and returns action results.",
+      "parentName": "QuickAction",
+      "variables": {},
+      "params": {
+        "quickactionrequests": {
+          "id": "System.quickaction.method.performquickactions(list<quickaction.quickactionrequest>).varParam.quickactionrequests",
+          "nodeType": "variable",
+          "name": "quickActionRequests",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "quickActionRequests",
+            "textToLower": "quickactionrequests",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 107
+              },
+              "end": {
+                "line": 0,
+                "character": 126
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_quickActionRequests_0:107"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "quickActionRequests",
+            "textToLower": "quickactionrequests",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 107
+              },
+              "end": {
+                "line": 0,
+                "character": 126
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_quickActionRequests_0:107"
+          },
+          "parentId": "System.quickaction.method.performquickactions(list<quickaction.quickactionrequest>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.quickaction.performquickactions.datatype.List<QuickAction.QuickActionRequest>",
+            "nodeType": "datatype",
+            "name": "List<QuickAction.QuickActionRequest>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 70
+                },
+                "end": {
+                  "line": 0,
+                  "character": 74
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:70"
+            },
+            "parentId": "System.quickaction.performquickactions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.quickaction.performquickactions.datatype.List<QuickAction.QuickActionRequest>.value.QuickAction.QuickActionRequest",
+              "nodeType": "datatype",
+              "name": "QuickAction.QuickActionRequest",
+              "startToken": {
+                "type": "datatype.support.namespace",
+                "text": "QuickAction",
+                "textToLower": "quickaction",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 75
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 86
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_QuickAction_0:75"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "QuickAction.QuickActionRequest"
+            }
+          },
+          "description": "",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
+    },
+    "performquickactions(list<quickaction.quickactionrequest>,boolean)": {
+      "id": "System.quickaction.method.performquickactions(list<quickaction.quickactionrequest>,boolean)",
+      "nodeType": "method",
+      "name": "performQuickActions",
+      "startToken": {
+        "type": "declaration.entity.name.function",
+        "text": "performQuickActions",
+        "textToLower": "performquickactions",
+        "isAux": false,
+        "range": {
+          "start": {
             "line": -1,
             "character": 0
           },
@@ -564,52 +1195,298 @@
           "isEmpty": true,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "declaration.entity.name.function_performQuickActions_-1:0"
       },
-      "signature": "public static List<QuickAction.QuickActionResult> performQuickActions(List <QuickAction.QuickActionRequest>)",
-      "simplifiedSignature": "performQuickActions(List)",
+      "parentId": "System.quickaction",
+      "order": 6,
+      "memberOrder": 6,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "static": {
+        "type": "keyword.modifier.static",
+        "text": "static",
+        "textToLower": "static",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 7
+          },
+          "end": {
+            "line": 0,
+            "character": 13
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_static_0:7"
+      },
+      "signature": "public static List<QuickAction.QuickActionResult> performQuickActions(List<QuickAction.QuickActionRequest> quickActionRequests, Boolean allOrNothing)",
+      "overrideSignature": "public static override List<QuickAction.QuickActionResult> performQuickActions(List<QuickAction.QuickActionRequest> quickActionRequests, Boolean allOrNothing)",
+      "simplifiedSignature": "performQuickActions(List<QuickAction.QuickActionRequest>,Boolean)",
       "datatype": {
-        "id": "System.quickaction.performquickactions.List<QuickAction.QuickActionResult>",
+        "id": "System.quickaction.performquickactions.datatype.List<QuickAction.QuickActionResult>",
         "nodeType": "datatype",
-        "name": "List<QuickAction.QuickActionResult>"
-      },
-      "description": "Performs the quick actions specified in the quick action request list with the option for partial success, and returns action results.",
-      "params": {
-        "<QuickAction.QuickActionRequest>": {
-          "id": "System.quickaction.performquickactions.<quickaction.quickactionrequest>",
-          "type": "var",
-          "name": "<QuickAction.QuickActionRequest>",
+        "name": "List<QuickAction.QuickActionResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "System.quickaction.performquickactions",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "System.quickaction.performquickactions.datatype.List<QuickAction.QuickActionResult>.value.QuickAction.QuickActionResult",
+          "nodeType": "datatype",
+          "name": "QuickAction.QuickActionResult",
           "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "<QuickAction.QuickActionRequest>",
-            "textToLower": "<quickaction.quickactionrequest>",
+            "type": "datatype.support.namespace",
+            "text": "QuickAction",
+            "textToLower": "quickaction",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 19
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 30
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<QuickAction.QuickActionRequest>_-1:0"
+            "id": "token.type.identifier_QuickAction_0:19"
           },
-          "signature": "List <QuickAction.QuickActionRequest>",
-          "datatype": {
-            "id": "System.quickaction.performquickactions.list",
-            "nodeType": "datatype",
-            "name": "List"
-          }
+          "order": 0,
+          "memberOrder": 0,
+          "type": "QuickAction.QuickActionResult"
         }
-      }
+      },
+      "description": "Performs the quick actions specified in the quick action request list with the option for partial success, and returns action results.",
+      "parentName": "QuickAction",
+      "variables": {},
+      "params": {
+        "quickactionrequests": {
+          "id": "System.quickaction.method.performquickactions(list<quickaction.quickactionrequest>,boolean).varParam.quickactionrequests",
+          "nodeType": "variable",
+          "name": "quickActionRequests",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "quickActionRequests",
+            "textToLower": "quickactionrequests",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 107
+              },
+              "end": {
+                "line": 0,
+                "character": 126
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_quickActionRequests_0:107"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "quickActionRequests",
+            "textToLower": "quickactionrequests",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 107
+              },
+              "end": {
+                "line": 0,
+                "character": 126
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_quickActionRequests_0:107"
+          },
+          "parentId": "System.quickaction.method.performquickactions(list<quickaction.quickactionrequest>,boolean)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "System.quickaction.performquickactions.datatype.List<QuickAction.QuickActionRequest>",
+            "nodeType": "datatype",
+            "name": "List<QuickAction.QuickActionRequest>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 70
+                },
+                "end": {
+                  "line": 0,
+                  "character": 74
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:70"
+            },
+            "parentId": "System.quickaction.performquickactions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.quickaction.performquickactions.datatype.List<QuickAction.QuickActionRequest>.value.QuickAction.QuickActionRequest",
+              "nodeType": "datatype",
+              "name": "QuickAction.QuickActionRequest",
+              "startToken": {
+                "type": "datatype.support.namespace",
+                "text": "QuickAction",
+                "textToLower": "quickaction",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 75
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 86
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_QuickAction_0:75"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "QuickAction.QuickActionRequest"
+            }
+          },
+          "scope": null
+        },
+        "allornothing": {
+          "id": "System.quickaction.method.performquickactions(list<quickaction.quickactionrequest>,boolean).varParam.allornothing",
+          "nodeType": "variable",
+          "name": "allOrNothing",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 136
+              },
+              "end": {
+                "line": 0,
+                "character": 148
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:136"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "allOrNothing",
+            "textToLower": "allornothing",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 136
+              },
+              "end": {
+                "line": 0,
+                "character": 148
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_allOrNothing_0:136"
+          },
+          "parentId": "System.quickaction.method.performquickactions(list<quickaction.quickactionrequest>,boolean)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "System.quickaction.performquickactions.datatype.Boolean",
+            "nodeType": "datatype",
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 128
+                },
+                "end": {
+                  "line": 0,
+                  "character": 135
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:128"
+            },
+            "parentId": "System.quickaction.performquickactions",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "Specifies whether this operation allows partial success. If you specify false for this argument and a record fails, the remainder of the DML operation can still succeed. This method returns a result object that can be used to verify which records succeeded, which failed, and why.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 6,
+  "queries": []
 }

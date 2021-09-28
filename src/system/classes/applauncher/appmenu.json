@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_AppMenu_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "setappvisibility(id,boolean)": {
-      "id": "AppLauncher.appmenu.setappvisibility",
+      "id": "AppLauncher.appmenu.method.setappvisibility(id,boolean)",
       "nodeType": "method",
       "name": "setAppVisibility",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_setAppVisibility_-1:0"
       },
+      "parentId": "AppLauncher.appmenu",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void setAppVisibility(Id appMenuItemId, Boolean isVisible)",
+      "overrideSignature": "public static override void setAppVisibility(Id appMenuItemId, Boolean isVisible)",
       "simplifiedSignature": "setAppVisibility(Id,Boolean)",
       "datatype": {
-        "id": "AppLauncher.appmenu.setappvisibility.void",
+        "id": "AppLauncher.appmenu.setappvisibility.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "AppLauncher.appmenu.setappvisibility",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Shows or hides specific apps in the App Launcher.",
+      "parentName": "AppMenu",
+      "variables": {},
       "params": {
-        "appMenuItemId": {
-          "id": "AppLauncher.appmenu.setappvisibility.appmenuitemid",
-          "type": "var",
+        "appmenuitemid": {
+          "id": "AppLauncher.appmenu.method.setappvisibility(id,boolean).varParam.appmenuitemid",
+          "nodeType": "variable",
           "name": "appMenuItemId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_appMenuItemId_-1:0"
+            "id": "token.type.identifier_appMenuItemId_0:39"
           },
-          "signature": "Id appMenuItemId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "appMenuItemId",
+            "textToLower": "appmenuitemid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 39
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_appMenuItemId_0:39"
+          },
+          "parentId": "AppLauncher.appmenu.method.setappvisibility(id,boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "AppLauncher.appmenu.setappvisibility.id",
+            "id": "AppLauncher.appmenu.setappvisibility.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 36
+                },
+                "end": {
+                  "line": 0,
+                  "character": 38
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:36"
+            },
+            "parentId": "AppLauncher.appmenu.setappvisibility",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "isVisible": {
-          "id": "AppLauncher.appmenu.setappvisibility.isvisible",
-          "type": "var",
+        "isvisible": {
+          "id": "AppLauncher.appmenu.method.setappvisibility(id,boolean).varParam.isvisible",
+          "nodeType": "variable",
           "name": "isVisible",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,29 +254,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 62
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_isVisible_-1:0"
+            "id": "token.type.identifier_isVisible_0:62"
           },
-          "signature": "Boolean isVisible",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "isVisible",
+            "textToLower": "isvisible",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 62
+              },
+              "end": {
+                "line": 0,
+                "character": 71
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_isVisible_0:62"
+          },
+          "parentId": "AppLauncher.appmenu.method.setappvisibility(id,boolean)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "AppLauncher.appmenu.setappvisibility.boolean",
+            "id": "AppLauncher.appmenu.setappvisibility.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 61
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:54"
+            },
+            "parentId": "AppLauncher.appmenu.setappvisibility",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "The 15-character application ID value for an app. For more information, see the ApplicationId field for AppMenuItem or the AppMenuItemId field for UserAppMenuItem in the SOAP API Developer Guide  If true, the app is visible.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "setorgsortorder(list)": {
-      "id": "AppLauncher.appmenu.setorgsortorder",
+    "setorgsortorder(list<id>)": {
+      "id": "AppLauncher.appmenu.method.setorgsortorder(list<id>)",
       "nodeType": "method",
       "name": "setOrgSortOrder",
       "startToken": {
@@ -222,6 +346,9 @@
         },
         "id": "declaration.entity.name.function_setOrgSortOrder_-1:0"
       },
+      "parentId": "AppLauncher.appmenu",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -229,17 +356,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -248,61 +375,162 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void setOrgSortOrder(List <Id>)",
-      "simplifiedSignature": "setOrgSortOrder(List)",
+      "signature": "public static void setOrgSortOrder(List<Id> appIds)",
+      "overrideSignature": "public static override void setOrgSortOrder(List<Id> appIds)",
+      "simplifiedSignature": "setOrgSortOrder(List<Id>)",
       "datatype": {
-        "id": "AppLauncher.appmenu.setorgsortorder.void",
+        "id": "AppLauncher.appmenu.setorgsortorder.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "AppLauncher.appmenu.setorgsortorder",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Sets the organization-wide default sort order for the App Launcher based on a List of app menu item IDs in the desired order.",
+      "parentName": "AppMenu",
+      "variables": {},
       "params": {
-        "<Id>": {
-          "id": "AppLauncher.appmenu.setorgsortorder.<id>",
-          "type": "var",
-          "name": "<Id>",
+        "appids": {
+          "id": "AppLauncher.appmenu.method.setorgsortorder(list<id>).varParam.appids",
+          "nodeType": "variable",
+          "name": "appIds",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Id>",
-            "textToLower": "<id>",
+            "text": "appIds",
+            "textToLower": "appids",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Id>_-1:0"
+            "id": "token.type.identifier_appIds_0:44"
           },
-          "signature": "List <Id>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "appIds",
+            "textToLower": "appids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 44
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_appIds_0:44"
+          },
+          "parentId": "AppLauncher.appmenu.method.setorgsortorder(list<id>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "AppLauncher.appmenu.setorgsortorder.list",
+            "id": "AppLauncher.appmenu.setorgsortorder.datatype.List<Id>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<Id>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 39
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:35"
+            },
+            "parentId": "AppLauncher.appmenu.setorgsortorder",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "AppLauncher.appmenu.setorgsortorder.datatype.List<Id>.value.Id",
+              "nodeType": "datatype",
+              "name": "Id",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Id",
+                "textToLower": "id",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 40
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 42
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Id_0:40"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Id"
+            }
+          },
+          "description": "A list of application ID values. For more information, see the ApplicationId field for AppMenuItem in the SOAP API Developer Guide.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "setusersortorder(list)": {
-      "id": "AppLauncher.appmenu.setusersortorder",
+    "setusersortorder(list<id>)": {
+      "id": "AppLauncher.appmenu.method.setusersortorder(list<id>)",
       "nodeType": "method",
       "name": "setUserSortOrder",
       "startToken": {
@@ -324,6 +552,9 @@
         },
         "id": "declaration.entity.name.function_setUserSortOrder_-1:0"
       },
+      "parentId": "AppLauncher.appmenu",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -331,17 +562,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -350,62 +581,165 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void setUserSortOrder(List <Id>)",
-      "simplifiedSignature": "setUserSortOrder(List)",
+      "signature": "public static void setUserSortOrder(List<Id> appIds)",
+      "overrideSignature": "public static override void setUserSortOrder(List<Id> appIds)",
+      "simplifiedSignature": "setUserSortOrder(List<Id>)",
       "datatype": {
-        "id": "AppLauncher.appmenu.setusersortorder.void",
+        "id": "AppLauncher.appmenu.setusersortorder.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "AppLauncher.appmenu.setusersortorder",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Sets an individual user’s default sort order for the App Launcher based on a List of app menu item IDs in the desired order.",
+      "parentName": "AppMenu",
+      "variables": {},
       "params": {
-        "<Id>": {
-          "id": "AppLauncher.appmenu.setusersortorder.<id>",
-          "type": "var",
-          "name": "<Id>",
+        "appids": {
+          "id": "AppLauncher.appmenu.method.setusersortorder(list<id>).varParam.appids",
+          "nodeType": "variable",
+          "name": "appIds",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Id>",
-            "textToLower": "<id>",
+            "text": "appIds",
+            "textToLower": "appids",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Id>_-1:0"
+            "id": "token.type.identifier_appIds_0:45"
           },
-          "signature": "List <Id>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "appIds",
+            "textToLower": "appids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 45
+              },
+              "end": {
+                "line": 0,
+                "character": 51
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_appIds_0:45"
+          },
+          "parentId": "AppLauncher.appmenu.method.setusersortorder(list<id>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "AppLauncher.appmenu.setusersortorder.list",
+            "id": "AppLauncher.appmenu.setusersortorder.datatype.List<Id>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<Id>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 36
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:36"
+            },
+            "parentId": "AppLauncher.appmenu.setusersortorder",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "AppLauncher.appmenu.setusersortorder.datatype.List<Id>.value.Id",
+              "nodeType": "datatype",
+              "name": "Id",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Id",
+                "textToLower": "id",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 41
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 43
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Id_0:41"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Id"
+            }
+          },
+          "description": "A list of application ID values. For more information, see the AppMenuItemId field for UserAppMenuItem in the SOAP API Developer Guide.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 3,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Ideas_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "findsimilar(idea)": {
-      "id": "System.ideas.findsimilar",
+      "id": "System.ideas.method.findsimilar(idea)",
       "nodeType": "method",
       "name": "findSimilar",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_findSimilar_-1:0"
       },
+      "parentId": "System.ideas",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ID[] findSimilar(Idea idea)",
+      "overrideSignature": "public static override ID[] findSimilar(Idea idea)",
       "simplifiedSignature": "findSimilar(Idea)",
       "datatype": {
-        "id": "System.ideas.findsimilar.ID[]",
+        "id": "System.ideas.findsimilar.datatype.ID[]",
         "nodeType": "datatype",
-        "name": "ID[]"
+        "name": "ID[]",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "ID",
+          "textToLower": "id",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 16
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ID_0:14"
+        },
+        "parentId": "System.ideas.findsimilar",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ID[]"
       },
       "description": "Returns a list of similar ideas based on the title of the specified idea.",
+      "parentName": "Ideas",
+      "variables": {},
       "params": {
         "idea": {
-          "id": "System.ideas.findsimilar.idea",
-          "type": "var",
+          "id": "System.ideas.method.findsimilar(idea).varParam.idea",
+          "nodeType": "variable",
           "name": "idea",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,29 +179,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 36
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 40
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_idea_-1:0"
+            "id": "token.type.identifier_idea_0:36"
           },
-          "signature": "Idea idea",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "idea",
+            "textToLower": "idea",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 36
+              },
+              "end": {
+                "line": 0,
+                "character": 40
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_idea_0:36"
+          },
+          "parentId": "System.ideas.method.findsimilar(idea)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.ideas.findsimilar.idea",
+            "id": "System.ideas.findsimilar.datatype.Idea",
             "nodeType": "datatype",
-            "name": "Idea"
-          }
+            "name": "Idea",
+            "startToken": {
+              "type": "datatype.custom.class",
+              "text": "Idea",
+              "textToLower": "idea",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 35
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Idea_0:31"
+            },
+            "parentId": "System.ideas.findsimilar",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Idea"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getallrecentreplies(string,string)": {
-      "id": "System.ideas.getallrecentreplies",
+      "id": "System.ideas.method.getallrecentreplies(string,string)",
       "nodeType": "method",
       "name": "getAllRecentReplies",
       "startToken": {
@@ -192,6 +271,9 @@
         },
         "id": "declaration.entity.name.function_getAllRecentReplies_-1:0"
       },
+      "parentId": "System.ideas",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -199,17 +281,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -218,30 +300,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ID[] getAllRecentReplies(String userID, String communityID)",
+      "overrideSignature": "public static override ID[] getAllRecentReplies(String userID, String communityID)",
       "simplifiedSignature": "getAllRecentReplies(String,String)",
       "datatype": {
-        "id": "System.ideas.getallrecentreplies.ID[]",
+        "id": "System.ideas.getallrecentreplies.datatype.ID[]",
         "nodeType": "datatype",
-        "name": "ID[]"
+        "name": "ID[]",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "ID",
+          "textToLower": "id",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 16
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ID_0:14"
+        },
+        "parentId": "System.ideas.getallrecentreplies",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ID[]"
       },
       "description": "Returns ideas that have recent replies for the specified user or zone. This includes all read and unread replies.",
+      "parentName": "Ideas",
+      "variables": {},
       "params": {
-        "userID": {
-          "id": "System.ideas.getallrecentreplies.userid",
-          "type": "var",
+        "userid": {
+          "id": "System.ideas.method.getallrecentreplies(string,string).varParam.userid",
+          "nodeType": "variable",
           "name": "userID",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -250,28 +358,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userID_-1:0"
+            "id": "token.type.identifier_userID_0:46"
           },
-          "signature": "String userID",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userID",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userID_0:46"
+          },
+          "parentId": "System.ideas.method.getallrecentreplies(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.ideas.getallrecentreplies.string",
+            "id": "System.ideas.getallrecentreplies.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:39"
+            },
+            "parentId": "System.ideas.getallrecentreplies",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "communityID": {
-          "id": "System.ideas.getallrecentreplies.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "System.ideas.method.getallrecentreplies(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityID",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -280,29 +433,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityID_-1:0"
+            "id": "token.type.identifier_communityID_0:61"
           },
-          "signature": "String communityID",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityID",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityID_0:61"
+          },
+          "parentId": "System.ideas.method.getallrecentreplies(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.ideas.getallrecentreplies.string",
+            "id": "System.ideas.getallrecentreplies.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:54"
+            },
+            "parentId": "System.ideas.getallrecentreplies",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getreadrecentreplies(string,string)": {
-      "id": "System.ideas.getreadrecentreplies",
+      "id": "System.ideas.method.getreadrecentreplies(string,string)",
       "nodeType": "method",
       "name": "getReadRecentReplies",
       "startToken": {
@@ -324,6 +525,9 @@
         },
         "id": "declaration.entity.name.function_getReadRecentReplies_-1:0"
       },
+      "parentId": "System.ideas",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -331,17 +535,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -350,30 +554,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ID[] getReadRecentReplies(String userID, String communityID)",
+      "overrideSignature": "public static override ID[] getReadRecentReplies(String userID, String communityID)",
       "simplifiedSignature": "getReadRecentReplies(String,String)",
       "datatype": {
-        "id": "System.ideas.getreadrecentreplies.ID[]",
+        "id": "System.ideas.getreadrecentreplies.datatype.ID[]",
         "nodeType": "datatype",
-        "name": "ID[]"
+        "name": "ID[]",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "ID",
+          "textToLower": "id",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 16
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ID_0:14"
+        },
+        "parentId": "System.ideas.getreadrecentreplies",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ID[]"
       },
       "description": "Returns ideas that have recent replies marked as read.",
+      "parentName": "Ideas",
+      "variables": {},
       "params": {
-        "userID": {
-          "id": "System.ideas.getreadrecentreplies.userid",
-          "type": "var",
+        "userid": {
+          "id": "System.ideas.method.getreadrecentreplies(string,string).varParam.userid",
+          "nodeType": "variable",
           "name": "userID",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -382,28 +612,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userID_-1:0"
+            "id": "token.type.identifier_userID_0:47"
           },
-          "signature": "String userID",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userID",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 53
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userID_0:47"
+          },
+          "parentId": "System.ideas.method.getreadrecentreplies(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.ideas.getreadrecentreplies.string",
+            "id": "System.ideas.getreadrecentreplies.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 40
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:40"
+            },
+            "parentId": "System.ideas.getreadrecentreplies",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "communityID": {
-          "id": "System.ideas.getreadrecentreplies.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "System.ideas.method.getreadrecentreplies(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityID",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -412,29 +687,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 62
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityID_-1:0"
+            "id": "token.type.identifier_communityID_0:62"
           },
-          "signature": "String communityID",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityID",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 62
+              },
+              "end": {
+                "line": 0,
+                "character": 73
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityID_0:62"
+          },
+          "parentId": "System.ideas.method.getreadrecentreplies(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.ideas.getreadrecentreplies.string",
+            "id": "System.ideas.getreadrecentreplies.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 55
+                },
+                "end": {
+                  "line": 0,
+                  "character": 61
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:55"
+            },
+            "parentId": "System.ideas.getreadrecentreplies",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getunreadrecentreplies(string,string)": {
-      "id": "System.ideas.getunreadrecentreplies",
+      "id": "System.ideas.method.getunreadrecentreplies(string,string)",
       "nodeType": "method",
       "name": "getUnreadRecentReplies",
       "startToken": {
@@ -456,6 +779,9 @@
         },
         "id": "declaration.entity.name.function_getUnreadRecentReplies_-1:0"
       },
+      "parentId": "System.ideas",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -463,17 +789,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -482,30 +808,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ID[] getUnreadRecentReplies(String userID, String communityID)",
+      "overrideSignature": "public static override ID[] getUnreadRecentReplies(String userID, String communityID)",
       "simplifiedSignature": "getUnreadRecentReplies(String,String)",
       "datatype": {
-        "id": "System.ideas.getunreadrecentreplies.ID[]",
+        "id": "System.ideas.getunreadrecentreplies.datatype.ID[]",
         "nodeType": "datatype",
-        "name": "ID[]"
+        "name": "ID[]",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "ID",
+          "textToLower": "id",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 16
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ID_0:14"
+        },
+        "parentId": "System.ideas.getunreadrecentreplies",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ID[]"
       },
       "description": "Returns ideas that have recent replies marked as unread.",
+      "parentName": "Ideas",
+      "variables": {},
       "params": {
-        "userID": {
-          "id": "System.ideas.getunreadrecentreplies.userid",
-          "type": "var",
+        "userid": {
+          "id": "System.ideas.method.getunreadrecentreplies(string,string).varParam.userid",
+          "nodeType": "variable",
           "name": "userID",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -514,28 +866,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userID_-1:0"
+            "id": "token.type.identifier_userID_0:49"
           },
-          "signature": "String userID",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userID",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 49
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userID_0:49"
+          },
+          "parentId": "System.ideas.method.getunreadrecentreplies(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.ideas.getunreadrecentreplies.string",
+            "id": "System.ideas.getunreadrecentreplies.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 48
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:42"
+            },
+            "parentId": "System.ideas.getunreadrecentreplies",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "communityID": {
-          "id": "System.ideas.getunreadrecentreplies.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "System.ideas.method.getunreadrecentreplies(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityID",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -544,29 +941,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 75
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityID_-1:0"
+            "id": "token.type.identifier_communityID_0:64"
           },
-          "signature": "String communityID",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityID",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 75
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityID_0:64"
+          },
+          "parentId": "System.ideas.method.getunreadrecentreplies(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.ideas.getunreadrecentreplies.string",
+            "id": "System.ideas.getunreadrecentreplies.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 57
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:57"
+            },
+            "parentId": "System.ideas.getunreadrecentreplies",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "markread(string)": {
-      "id": "System.ideas.markread",
+      "id": "System.ideas.method.markread(string)",
       "nodeType": "method",
       "name": "markRead",
       "startToken": {
@@ -588,6 +1033,9 @@
         },
         "id": "declaration.entity.name.function_markRead_-1:0"
       },
+      "parentId": "System.ideas",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -595,17 +1043,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -614,30 +1062,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void markRead(String ideaID)",
+      "signature": "public static Void markRead(String ideaID)",
+      "overrideSignature": "public static override Void markRead(String ideaID)",
       "simplifiedSignature": "markRead(String)",
       "datatype": {
-        "id": "System.ideas.markread.void",
+        "id": "System.ideas.markread.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:14"
+        },
+        "parentId": "System.ideas.markread",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Marks all comments as read for the user that is currently logged in.",
+      "parentName": "Ideas",
+      "variables": {},
       "params": {
-        "ideaID": {
-          "id": "System.ideas.markread.ideaid",
-          "type": "var",
+        "ideaid": {
+          "id": "System.ideas.method.markread(string).varParam.ideaid",
+          "nodeType": "variable",
           "name": "ideaID",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -646,30 +1120,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_ideaID_-1:0"
+            "id": "token.type.identifier_ideaID_0:35"
           },
-          "signature": "String ideaID",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "ideaID",
+            "textToLower": "ideaid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 35
+              },
+              "end": {
+                "line": 0,
+                "character": 41
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_ideaID_0:35"
+          },
+          "parentId": "System.ideas.method.markread(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.ideas.markread.string",
+            "id": "System.ideas.markread.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 28
+                },
+                "end": {
+                  "line": 0,
+                  "character": 34
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:28"
+            },
+            "parentId": "System.ideas.markread",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 5,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_NotificationAction_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "execute(reports.notificationactioncontext)": {
-      "id": "Reports.notificationaction.execute",
+      "id": "Reports.notificationaction.method.execute(reports.notificationactioncontext)",
       "nodeType": "method",
       "name": "execute",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_execute_-1:0"
       },
+      "parentId": "Reports.notificationaction",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void execute(Reports.NotificationActionContext context)",
+      "overrideSignature": "public override void execute(Reports.NotificationActionContext context)",
       "simplifiedSignature": "execute(Reports.NotificationActionContext)",
       "datatype": {
-        "id": "Reports.notificationaction.execute.void",
+        "id": "Reports.notificationaction.execute.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Reports.notificationaction.execute",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Executes the custom Apex action specified in the context parameter of the context object, NotificationActionContext. The object contains information about the report instance and the conditions that must be met for a notification to be triggered. The method executes whenever the specified conditions are met.",
+      "parentName": "NotificationAction",
+      "variables": {},
       "params": {
         "context": {
-          "id": "Reports.notificationaction.execute.context",
-          "type": "var",
+          "id": "Reports.notificationaction.method.execute(reports.notificationactioncontext).varParam.context",
+          "nodeType": "variable",
           "name": "context",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,30 +160,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_context_-1:0"
+            "id": "token.type.identifier_context_0:54"
           },
-          "signature": "Reports.NotificationActionContext context",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "context",
+            "textToLower": "context",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 61
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_context_0:54"
+          },
+          "parentId": "Reports.notificationaction.method.execute(reports.notificationactioncontext)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Reports.notificationaction.execute.reports.notificationactioncontext",
+            "id": "Reports.notificationaction.execute.datatype.Reports.NotificationActionContext",
             "nodeType": "datatype",
-            "name": "Reports.NotificationActionContext"
-          }
+            "name": "Reports.NotificationActionContext",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Reports",
+              "textToLower": "reports",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 20
+                },
+                "end": {
+                  "line": 0,
+                  "character": 27
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Reports_0:20"
+            },
+            "parentId": "Reports.notificationaction.execute",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Reports.NotificationActionContext"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Table_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,7 +69,7 @@
   "enums": {},
   "variables": {
     "columns": {
-      "id": "Datasource.table.columns",
+      "id": "Datasource.table.method.list<datasource.column> columns{get;set;}",
       "nodeType": "property",
       "name": "columns",
       "startToken": {
@@ -89,6 +91,9 @@
         },
         "id": "declaration.entity.name.property_columns_-1:0"
       },
+      "parentId": "Datasource.table",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -96,77 +101,99 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public List<DataSource.Column> columns {get; set;}",
-      "simplifiedSignature": "List<DataSource.Column> columns { get; set; }",
+      "signature": "public List<DataSource.Column> columns { get; set; }",
+      "simplifiedSignature": "List<DataSource.Column> columns{get;set;}",
       "datatype": {
-        "id": "Datasource.table.columns.list<datasource.column>",
+        "id": ".datatype.List<DataSource.Column>",
         "nodeType": "datatype",
-        "name": "List<DataSource.Column>"
+        "name": "List<DataSource.Column>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": ".datatype.List<DataSource.Column>.value.DataSource.Column",
+          "nodeType": "datatype",
+          "name": "DataSource.Column",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "DataSource",
+            "textToLower": "datasource",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 22
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_DataSource_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "DataSource.Column"
+        }
       },
-      "description": "List of table columns.",
+      "parentName": "Table",
       "getter": {
-        "id": "Datasource.table.columns.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Datasource.table.columns.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "description": {
-      "id": "Datasource.table.description",
+      "id": "Datasource.table.method.string description{get;set;}",
       "nodeType": "property",
       "name": "description",
       "startToken": {
@@ -188,6 +215,9 @@
         },
         "id": "declaration.entity.name.property_description_-1:0"
       },
+      "parentId": "Datasource.table",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -195,77 +225,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String description {get; set;}",
-      "simplifiedSignature": "String description { get; set; }",
+      "signature": "public String description { get; set; }",
+      "simplifiedSignature": "String description{get;set;}",
       "datatype": {
-        "id": "Datasource.table.description.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "Description of what the table represents.",
+      "parentName": "Table",
       "getter": {
-        "id": "Datasource.table.description.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Datasource.table.description.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "labelplural": {
-      "id": "Datasource.table.labelplural",
+      "id": "Datasource.table.method.string labelplural{get;set;}",
       "nodeType": "property",
       "name": "labelPlural",
       "startToken": {
@@ -287,6 +312,9 @@
         },
         "id": "declaration.entity.name.property_labelPlural_-1:0"
       },
+      "parentId": "Datasource.table",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -294,77 +322,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String labelPlural {get; set;}",
-      "simplifiedSignature": "String labelPlural { get; set; }",
+      "signature": "public String labelPlural { get; set; }",
+      "simplifiedSignature": "String labelPlural{get;set;}",
       "datatype": {
-        "id": "Datasource.table.labelplural.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "Plural form of the user-friendly name for the table. The labelPlural becomes the object’s plural label in the Salesforce user interface.",
+      "parentName": "Table",
       "getter": {
-        "id": "Datasource.table.labelplural.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Datasource.table.labelplural.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "labelsingular": {
-      "id": "Datasource.table.labelsingular",
+      "id": "Datasource.table.method.string labelsingular{get;set;}",
       "nodeType": "property",
       "name": "labelSingular",
       "startToken": {
@@ -386,6 +409,9 @@
         },
         "id": "declaration.entity.name.property_labelSingular_-1:0"
       },
+      "parentId": "Datasource.table",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -393,77 +419,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String labelSingular {get; set;}",
-      "simplifiedSignature": "String labelSingular { get; set; }",
+      "signature": "public String labelSingular { get; set; }",
+      "simplifiedSignature": "String labelSingular{get;set;}",
       "datatype": {
-        "id": "Datasource.table.labelsingular.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "Singular form of the user-friendly name for the table. The labelSingular becomes the object label in the Salesforce user interface. We recommend that you make object labels unique across all standard, custom, and external objects in the org.",
+      "parentName": "Table",
       "getter": {
-        "id": "Datasource.table.labelsingular.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Datasource.table.labelsingular.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "name": {
-      "id": "Datasource.table.name",
+      "id": "Datasource.table.method.string name{get;set;}",
       "nodeType": "property",
       "name": "name",
       "startToken": {
@@ -485,6 +506,9 @@
         },
         "id": "declaration.entity.name.property_name_-1:0"
       },
+      "parentId": "Datasource.table",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -492,77 +516,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String name {get; set;}",
-      "simplifiedSignature": "String name { get; set; }",
+      "signature": "public String name { get; set; }",
+      "simplifiedSignature": "String name{get;set;}",
       "datatype": {
-        "id": "Datasource.table.name.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "Name of the table on the external system.",
+      "parentName": "Table",
       "getter": {
-        "id": "Datasource.table.name.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Datasource.table.name.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "namecolumn": {
-      "id": "Datasource.table.namecolumn",
+      "id": "Datasource.table.method.string namecolumn{get;set;}",
       "nodeType": "property",
       "name": "nameColumn",
       "startToken": {
@@ -584,6 +603,9 @@
         },
         "id": "declaration.entity.name.property_nameColumn_-1:0"
       },
+      "parentId": "Datasource.table",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -591,79 +613,74 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String nameColumn {get; set;}",
-      "simplifiedSignature": "String nameColumn { get; set; }",
+      "signature": "public String nameColumn { get; set; }",
+      "simplifiedSignature": "String nameColumn{get;set;}",
       "datatype": {
-        "id": "Datasource.table.namecolumn.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "Name of the table column that becomes the name field of the external object when the administrator syncs the table.",
+      "parentName": "Table",
       "getter": {
-        "id": "Datasource.table.namecolumn.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Datasource.table.namecolumn.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     }
   },
   "methods": {
-    "get(string,string,string,string,string,list)": {
-      "id": "Datasource.table.get",
+    "get(string,string,string,string,string,list<datasource.column>)": {
+      "id": "Datasource.table.method.get(string,string,string,string,string,list<datasource.column>)",
       "nodeType": "method",
       "name": "get",
       "startToken": {
@@ -685,6 +702,9 @@
         },
         "id": "declaration.entity.name.function_get_-1:0"
       },
+      "parentId": "Datasource.table",
+      "order": 1,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -692,17 +712,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -711,30 +731,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static DataSource.Table get(String name, String labelSingular, String labelPlural, String description, String nameColumn, List <DataSource.Column>)",
-      "simplifiedSignature": "get(String,String,String,String,String,List)",
+      "signature": "public static DataSource.Table get(String name, String labelSingular, String labelPlural, String description, String nameColumn, List<DataSource.Column> columns)",
+      "overrideSignature": "public static override DataSource.Table get(String name, String labelSingular, String labelPlural, String description, String nameColumn, List<DataSource.Column> columns)",
+      "simplifiedSignature": "get(String,String,String,String,String,List<DataSource.Column>)",
       "datatype": {
-        "id": "Datasource.table.get.DataSource.Table",
+        "id": "Datasource.table.get.datatype.DataSource.Table",
         "nodeType": "datatype",
-        "name": "DataSource.Table"
+        "name": "DataSource.Table",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "DataSource",
+          "textToLower": "datasource",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_DataSource_0:14"
+        },
+        "parentId": "Datasource.table.get",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "DataSource.Table"
       },
       "description": "Returns the table metadata with the specified parameter values.",
+      "parentName": "Table",
+      "variables": {},
       "params": {
         "name": {
-          "id": "Datasource.table.get.name",
-          "type": "var",
+          "id": "Datasource.table.method.get(string,string,string,string,string,list<datasource.column>).varParam.name",
+          "nodeType": "variable",
           "name": "name",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -743,28 +789,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_name_-1:0"
+            "id": "token.type.identifier_name_0:42"
           },
-          "signature": "String name",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "name",
+            "textToLower": "name",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 46
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_name_0:42"
+          },
+          "parentId": "Datasource.table.method.get(string,string,string,string,string,list<datasource.column>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Datasource.table.get.string",
+            "id": "Datasource.table.get.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:35"
+            },
+            "parentId": "Datasource.table.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "labelSingular": {
-          "id": "Datasource.table.get.labelsingular",
-          "type": "var",
+        "labelsingular": {
+          "id": "Datasource.table.method.get(string,string,string,string,string,list<datasource.column>).varParam.labelsingular",
+          "nodeType": "variable",
           "name": "labelSingular",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -773,28 +864,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 68
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_labelSingular_-1:0"
+            "id": "token.type.identifier_labelSingular_0:55"
           },
-          "signature": "String labelSingular",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "labelSingular",
+            "textToLower": "labelsingular",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 55
+              },
+              "end": {
+                "line": 0,
+                "character": 68
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_labelSingular_0:55"
+          },
+          "parentId": "Datasource.table.method.get(string,string,string,string,string,list<datasource.column>)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Datasource.table.get.string",
+            "id": "Datasource.table.get.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 48
+                },
+                "end": {
+                  "line": 0,
+                  "character": 54
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:48"
+            },
+            "parentId": "Datasource.table.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "labelPlural": {
-          "id": "Datasource.table.get.labelplural",
-          "type": "var",
+        "labelplural": {
+          "id": "Datasource.table.method.get(string,string,string,string,string,list<datasource.column>).varParam.labelplural",
+          "nodeType": "variable",
           "name": "labelPlural",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -803,28 +939,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 88
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_labelPlural_-1:0"
+            "id": "token.type.identifier_labelPlural_0:77"
           },
-          "signature": "String labelPlural",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "labelPlural",
+            "textToLower": "labelplural",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 77
+              },
+              "end": {
+                "line": 0,
+                "character": 88
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_labelPlural_0:77"
+          },
+          "parentId": "Datasource.table.method.get(string,string,string,string,string,list<datasource.column>)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Datasource.table.get.string",
+            "id": "Datasource.table.get.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 70
+                },
+                "end": {
+                  "line": 0,
+                  "character": 76
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:70"
+            },
+            "parentId": "Datasource.table.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "description": {
-          "id": "Datasource.table.get.description",
-          "type": "var",
+          "id": "Datasource.table.method.get(string,string,string,string,string,list<datasource.column>).varParam.description",
+          "nodeType": "variable",
           "name": "description",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -833,28 +1014,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 97
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 108
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_description_-1:0"
+            "id": "token.type.identifier_description_0:97"
           },
-          "signature": "String description",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "description",
+            "textToLower": "description",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 97
+              },
+              "end": {
+                "line": 0,
+                "character": 108
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_description_0:97"
+          },
+          "parentId": "Datasource.table.method.get(string,string,string,string,string,list<datasource.column>)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "Datasource.table.get.string",
+            "id": "Datasource.table.get.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 90
+                },
+                "end": {
+                  "line": 0,
+                  "character": 96
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:90"
+            },
+            "parentId": "Datasource.table.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "nameColumn": {
-          "id": "Datasource.table.get.namecolumn",
-          "type": "var",
+        "namecolumn": {
+          "id": "Datasource.table.method.get(string,string,string,string,string,list<datasource.column>).varParam.namecolumn",
+          "nodeType": "variable",
           "name": "nameColumn",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -863,59 +1089,179 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 117
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 127
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_nameColumn_-1:0"
+            "id": "token.type.identifier_nameColumn_0:117"
           },
-          "signature": "String nameColumn",
-          "datatype": {
-            "id": "Datasource.table.get.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<DataSource.Column>": {
-          "id": "Datasource.table.get.<datasource.column>",
-          "type": "var",
-          "name": "<DataSource.Column>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<DataSource.Column>",
-            "textToLower": "<datasource.column>",
+            "text": "nameColumn",
+            "textToLower": "namecolumn",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 117
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 127
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<DataSource.Column>_-1:0"
+            "id": "token.type.identifier_nameColumn_0:117"
           },
-          "signature": "List <DataSource.Column>",
+          "parentId": "Datasource.table.method.get(string,string,string,string,string,list<datasource.column>)",
+          "order": 5,
+          "memberOrder": 5,
           "datatype": {
-            "id": "Datasource.table.get.list",
+            "id": "Datasource.table.get.datatype.String",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 110
+                },
+                "end": {
+                  "line": 0,
+                  "character": 116
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:110"
+            },
+            "parentId": "Datasource.table.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "columns": {
+          "id": "Datasource.table.method.get(string,string,string,string,string,list<datasource.column>).varParam.columns",
+          "nodeType": "variable",
+          "name": "columns",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "columns",
+            "textToLower": "columns",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 153
+              },
+              "end": {
+                "line": 0,
+                "character": 160
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_columns_0:153"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "columns",
+            "textToLower": "columns",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 153
+              },
+              "end": {
+                "line": 0,
+                "character": 160
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_columns_0:153"
+          },
+          "parentId": "Datasource.table.method.get(string,string,string,string,string,list<datasource.column>)",
+          "order": 6,
+          "memberOrder": 6,
+          "datatype": {
+            "id": "Datasource.table.get.datatype.List<DataSource.Column>",
+            "nodeType": "datatype",
+            "name": "List<DataSource.Column>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 129
+                },
+                "end": {
+                  "line": 0,
+                  "character": 133
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:129"
+            },
+            "parentId": "Datasource.table.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Datasource.table.get.datatype.List<DataSource.Column>.value.DataSource.Column",
+              "nodeType": "datatype",
+              "name": "DataSource.Column",
+              "startToken": {
+                "type": "datatype.support.namespace",
+                "text": "DataSource",
+                "textToLower": "datasource",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 134
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 144
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_DataSource_0:134"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "DataSource.Column"
+            }
+          },
+          "description": "Name of the external table. Singular form of the user-friendly name for the table. The labelSingular becomes the object label in the Salesforce user interface. Plural form of the user-friendly name for the table. The labelPlural becomes the object’s plural label in the Salesforce user interface. Description of the external table. Name of the table column that becomes the name field of the external object when the administrator syncs the table. List of table columns.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "get(string,string,list)": {
-      "id": "Datasource.table.get",
+    "get(string,string,list<datasource.column>)": {
+      "id": "Datasource.table.method.get(string,string,list<datasource.column>)",
       "nodeType": "method",
       "name": "get",
       "startToken": {
@@ -937,6 +1283,9 @@
         },
         "id": "declaration.entity.name.function_get_-1:0"
       },
+      "parentId": "Datasource.table",
+      "order": 2,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -944,17 +1293,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -963,30 +1312,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static DataSource.Table get(String name, String nameColumn, List <DataSource.Column>)",
-      "simplifiedSignature": "get(String,String,List)",
+      "signature": "public static DataSource.Table get(String name, String nameColumn, List<DataSource.Column> columns)",
+      "overrideSignature": "public static override DataSource.Table get(String name, String nameColumn, List<DataSource.Column> columns)",
+      "simplifiedSignature": "get(String,String,List<DataSource.Column>)",
       "datatype": {
-        "id": "Datasource.table.get.DataSource.Table",
+        "id": "Datasource.table.get.datatype.DataSource.Table",
         "nodeType": "datatype",
-        "name": "DataSource.Table"
+        "name": "DataSource.Table",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "DataSource",
+          "textToLower": "datasource",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_DataSource_0:14"
+        },
+        "parentId": "Datasource.table.get",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "DataSource.Table"
       },
       "description": "Returns the table metadata with the specified parameter values, using the name for the labels and description.",
+      "parentName": "Table",
+      "variables": {},
       "params": {
         "name": {
-          "id": "Datasource.table.get.name",
-          "type": "var",
+          "id": "Datasource.table.method.get(string,string,list<datasource.column>).varParam.name",
+          "nodeType": "variable",
           "name": "name",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -995,28 +1370,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_name_-1:0"
+            "id": "token.type.identifier_name_0:42"
           },
-          "signature": "String name",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "name",
+            "textToLower": "name",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 46
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_name_0:42"
+          },
+          "parentId": "Datasource.table.method.get(string,string,list<datasource.column>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Datasource.table.get.string",
+            "id": "Datasource.table.get.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 41
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:35"
+            },
+            "parentId": "Datasource.table.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "nameColumn": {
-          "id": "Datasource.table.get.namecolumn",
-          "type": "var",
+        "namecolumn": {
+          "id": "Datasource.table.method.get(string,string,list<datasource.column>).varParam.namecolumn",
+          "nodeType": "variable",
           "name": "nameColumn",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1025,60 +1445,182 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_nameColumn_-1:0"
+            "id": "token.type.identifier_nameColumn_0:55"
           },
-          "signature": "String nameColumn",
-          "datatype": {
-            "id": "Datasource.table.get.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<DataSource.Column>": {
-          "id": "Datasource.table.get.<datasource.column>",
-          "type": "var",
-          "name": "<DataSource.Column>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<DataSource.Column>",
-            "textToLower": "<datasource.column>",
+            "text": "nameColumn",
+            "textToLower": "namecolumn",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<DataSource.Column>_-1:0"
+            "id": "token.type.identifier_nameColumn_0:55"
           },
-          "signature": "List <DataSource.Column>",
+          "parentId": "Datasource.table.method.get(string,string,list<datasource.column>)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Datasource.table.get.list",
+            "id": "Datasource.table.get.datatype.String",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 48
+                },
+                "end": {
+                  "line": 0,
+                  "character": 54
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:48"
+            },
+            "parentId": "Datasource.table.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "columns": {
+          "id": "Datasource.table.method.get(string,string,list<datasource.column>).varParam.columns",
+          "nodeType": "variable",
+          "name": "columns",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "columns",
+            "textToLower": "columns",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 91
+              },
+              "end": {
+                "line": 0,
+                "character": 98
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_columns_0:91"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "columns",
+            "textToLower": "columns",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 91
+              },
+              "end": {
+                "line": 0,
+                "character": 98
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_columns_0:91"
+          },
+          "parentId": "Datasource.table.method.get(string,string,list<datasource.column>)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "Datasource.table.get.datatype.List<DataSource.Column>",
+            "nodeType": "datatype",
+            "name": "List<DataSource.Column>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 67
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:67"
+            },
+            "parentId": "Datasource.table.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Datasource.table.get.datatype.List<DataSource.Column>.value.DataSource.Column",
+              "nodeType": "datatype",
+              "name": "DataSource.Column",
+              "startToken": {
+                "type": "datatype.support.namespace",
+                "text": "DataSource",
+                "textToLower": "datasource",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 72
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 82
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_DataSource_0:72"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "DataSource.Column"
+            }
+          },
+          "description": "Name of the external table. Name of the table column that becomes the name field of the external object when the administrator syncs the table. List of table columns.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 8,
+  "queries": []
 }

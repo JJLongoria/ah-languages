@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_FieldSet_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getdescription()": {
-      "id": "Schema.fieldset.getdescription",
+      "id": "Schema.fieldset.method.getdescription()",
       "nodeType": "method",
       "name": "getDescription",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getDescription_-1:0"
       },
+      "parentId": "Schema.fieldset",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getDescription()",
+      "overrideSignature": "public override String getDescription()",
       "simplifiedSignature": "getDescription()",
       "datatype": {
-        "id": "Schema.fieldset.getdescription.String",
+        "id": "Schema.fieldset.getdescription.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Schema.fieldset.getdescription",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the field set’s description.",
-      "params": {}
+      "parentName": "FieldSet",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getfields()": {
-      "id": "Schema.fieldset.getfields",
+      "id": "Schema.fieldset.method.getfields()",
       "nodeType": "method",
       "name": "getFields",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_getFields_-1:0"
       },
+      "parentId": "Schema.fieldset",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,30 +185,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public List<Schema.FieldSetMember> getFields()",
+      "signature": "public List<FieldSetMember> getFields()",
+      "overrideSignature": "public override List<FieldSetMember> getFields()",
       "simplifiedSignature": "getFields()",
       "datatype": {
-        "id": "Schema.fieldset.getfields.List<Schema.FieldSetMember>",
+        "id": "Schema.fieldset.getfields.datatype.List<FieldSetMember>",
         "nodeType": "datatype",
-        "name": "List<Schema.FieldSetMember>"
+        "name": "List<FieldSetMember>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Schema.fieldset.getfields",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Schema.fieldset.getfields.datatype.List<FieldSetMember>.value.FieldSetMember",
+          "nodeType": "datatype",
+          "name": "FieldSetMember",
+          "startToken": {
+            "type": "datatype.custom.class",
+            "text": "FieldSetMember",
+            "textToLower": "fieldsetmember",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 26
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_FieldSetMember_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "FieldSetMember"
+        }
       },
       "description": "Returns a list of Schema.FieldSetMember objects for the fields making up the field set.",
-      "params": {}
+      "parentName": "FieldSet",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getlabel()": {
-      "id": "Schema.fieldset.getlabel",
+      "id": "Schema.fieldset.method.getlabel()",
       "nodeType": "method",
       "name": "getLabel",
       "startToken": {
@@ -194,6 +285,9 @@
         },
         "id": "declaration.entity.name.function_getLabel_-1:0"
       },
+      "parentId": "Schema.fieldset",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -201,30 +295,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getLabel()",
+      "overrideSignature": "public override String getLabel()",
       "simplifiedSignature": "getLabel()",
       "datatype": {
-        "id": "Schema.fieldset.getlabel.String",
+        "id": "Schema.fieldset.getlabel.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Schema.fieldset.getlabel",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the translation of the text label that is displayed next to the field in the Salesforce user interface.",
-      "params": {}
+      "parentName": "FieldSet",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getname()": {
-      "id": "Schema.fieldset.getname",
+      "id": "Schema.fieldset.method.getname()",
       "nodeType": "method",
       "name": "getName",
       "startToken": {
@@ -246,6 +368,9 @@
         },
         "id": "declaration.entity.name.function_getName_-1:0"
       },
+      "parentId": "Schema.fieldset",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -253,30 +378,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getName()",
+      "overrideSignature": "public override String getName()",
       "simplifiedSignature": "getName()",
       "datatype": {
-        "id": "Schema.fieldset.getname.String",
+        "id": "Schema.fieldset.getname.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Schema.fieldset.getname",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the field set’s name.",
-      "params": {}
+      "parentName": "FieldSet",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getnamespace()": {
-      "id": "Schema.fieldset.getnamespace",
+      "id": "Schema.fieldset.method.getnamespace()",
       "nodeType": "method",
       "name": "getNamespace",
       "startToken": {
@@ -298,6 +451,9 @@
         },
         "id": "declaration.entity.name.function_getNamespace_-1:0"
       },
+      "parentId": "Schema.fieldset",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -305,30 +461,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getNamespace()",
+      "overrideSignature": "public override String getNamespace()",
       "simplifiedSignature": "getNamespace()",
       "datatype": {
-        "id": "Schema.fieldset.getnamespace.String",
+        "id": "Schema.fieldset.getnamespace.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "Schema.fieldset.getnamespace",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the field set’s namespace.",
-      "params": {}
+      "parentName": "FieldSet",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getsobjecttype()": {
-      "id": "Schema.fieldset.getsobjecttype",
+      "id": "Schema.fieldset.method.getsobjecttype()",
       "nodeType": "method",
       "name": "getSObjectType",
       "startToken": {
@@ -350,6 +534,9 @@
         },
         "id": "declaration.entity.name.function_getSObjectType_-1:0"
       },
+      "parentId": "Schema.fieldset",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -357,31 +544,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Schema.SObjectType getSObjectType()",
+      "overrideSignature": "public override Schema.SObjectType getSObjectType()",
       "simplifiedSignature": "getSObjectType()",
       "datatype": {
-        "id": "Schema.fieldset.getsobjecttype.Schema.SObjectType",
+        "id": "Schema.fieldset.getsobjecttype.datatype.Schema.SObjectType",
         "nodeType": "datatype",
-        "name": "Schema.SObjectType"
+        "name": "Schema.SObjectType",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Schema",
+          "textToLower": "schema",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Schema_0:7"
+        },
+        "parentId": "Schema.fieldset.getsobjecttype",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Schema.SObjectType"
       },
       "description": "Returns the Schema.sObjectType of the sObject containing the field set definition.",
-      "params": {}
+      "parentName": "FieldSet",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 6,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Interview_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "createinterview(string,string,map,any>)": {
-      "id": "Flow.interview.createinterview",
+    "createinterview(string,string,map<string,any>)": {
+      "id": "Flow.interview.method.createinterview(string,string,map<string,any>)",
       "nodeType": "method",
       "name": "createInterview",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_createInterview_-1:0"
       },
+      "parentId": "Flow.interview",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static Flow.Interview createInterview(String namespace, String flowName, Map <String, ANY> inputVariables)",
-      "simplifiedSignature": "createInterview(String,String,Map,ANY>)",
+      "signature": "public static Flow.Interview createInterview(String namespace, String flowName, Map<String,ANY> inputVariables)",
+      "overrideSignature": "public static override Flow.Interview createInterview(String namespace, String flowName, Map<String,ANY> inputVariables)",
+      "simplifiedSignature": "createInterview(String,String,Map<String,ANY>)",
       "datatype": {
-        "id": "Flow.interview.createinterview.Flow.Interview",
+        "id": "Flow.interview.createinterview.datatype.Flow.Interview",
         "nodeType": "datatype",
-        "name": "Flow.Interview"
+        "name": "Flow.Interview",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Flow",
+          "textToLower": "flow",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Flow_0:14"
+        },
+        "parentId": "Flow.interview.createinterview",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Flow.Interview"
       },
       "description": "Creates an interview for a namespaced flow.",
+      "parentName": "Interview",
+      "variables": {},
       "params": {
         "namespace": {
-          "id": "Flow.interview.createinterview.namespace",
-          "type": "var",
+          "id": "Flow.interview.method.createinterview(string,string,map<string,any>).varParam.namespace",
+          "nodeType": "variable",
           "name": "namespace",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_namespace_-1:0"
+            "id": "token.type.identifier_namespace_0:52"
           },
-          "signature": "String namespace",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "namespace",
+            "textToLower": "namespace",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 52
+              },
+              "end": {
+                "line": 0,
+                "character": 61
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_namespace_0:52"
+          },
+          "parentId": "Flow.interview.method.createinterview(string,string,map<string,any>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Flow.interview.createinterview.string",
+            "id": "Flow.interview.createinterview.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 51
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:45"
+            },
+            "parentId": "Flow.interview.createinterview",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "flowName": {
-          "id": "Flow.interview.createinterview.flowname",
-          "type": "var",
+        "flowname": {
+          "id": "Flow.interview.method.createinterview(string,string,map<string,any>).varParam.flowname",
+          "nodeType": "variable",
           "name": "flowName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,58 +254,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_flowName_-1:0"
+            "id": "token.type.identifier_flowName_0:70"
           },
-          "signature": "String flowName",
-          "datatype": {
-            "id": "Flow.interview.createinterview.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String": {
-          "id": "Flow.interview.createinterview.<string",
-          "type": "var",
-          "name": "<String",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "flowName",
+            "textToLower": "flowname",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_flowName_0:70"
           },
-          "signature": "Map <String",
+          "parentId": "Flow.interview.method.createinterview(string,string,map<string,any>)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Flow.interview.createinterview.map",
+            "id": "Flow.interview.createinterview.datatype.String",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 63
+                },
+                "end": {
+                  "line": 0,
+                  "character": 69
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:63"
+            },
+            "parentId": "Flow.interview.createinterview",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "inputVariables": {
-          "id": "Flow.interview.createinterview.inputvariables",
-          "type": "var",
+        "inputvariables": {
+          "id": "Flow.interview.method.createinterview(string,string,map<string,any>).varParam.inputvariables",
+          "nodeType": "variable",
           "name": "inputVariables",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -238,29 +329,131 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 96
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 110
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_inputVariables_-1:0"
+            "id": "token.type.identifier_inputVariables_0:96"
           },
-          "signature": "ANY> inputVariables",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "inputVariables",
+            "textToLower": "inputvariables",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 96
+              },
+              "end": {
+                "line": 0,
+                "character": 110
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_inputVariables_0:96"
+          },
+          "parentId": "Flow.interview.method.createinterview(string,string,map<string,any>)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Flow.interview.createinterview.any>",
+            "id": "Flow.interview.createinterview.datatype.Map<String,ANY>",
             "nodeType": "datatype",
-            "name": "ANY>"
-          }
+            "name": "Map<String,ANY>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 80
+                },
+                "end": {
+                  "line": 0,
+                  "character": 83
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:80"
+            },
+            "parentId": "Flow.interview.createinterview",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "Flow.interview.createinterview.datatype.Map<String,ANY>.value.ANY",
+              "nodeType": "datatype",
+              "name": "ANY",
+              "startToken": {
+                "type": "datatype.custom.class",
+                "text": "ANY",
+                "textToLower": "any",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 91
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 94
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_ANY_0:91"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "ANY"
+            },
+            "key": {
+              "id": "Flow.interview.createinterview.datatype.Map<String,ANY>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 84
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 90
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:84"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "The flow’s namespace. The flow’s API name. Initial values for the flow’s input variables.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "createinterview(string,map,object>)": {
-      "id": "Flow.interview.createinterview",
+    "createinterview(string,map<string,object>)": {
+      "id": "Flow.interview.method.createinterview(string,map<string,object>)",
       "nodeType": "method",
       "name": "createInterview",
       "startToken": {
@@ -282,6 +475,9 @@
         },
         "id": "declaration.entity.name.function_createInterview_-1:0"
       },
+      "parentId": "Flow.interview",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -289,17 +485,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -308,30 +504,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static Flow.Interview createInterview(String flowName, Map <String, Object> inputVariables)",
-      "simplifiedSignature": "createInterview(String,Map,Object>)",
+      "signature": "public static Flow.Interview createInterview(String flowName, Map<String,Object> inputVariables)",
+      "overrideSignature": "public static override Flow.Interview createInterview(String flowName, Map<String,Object> inputVariables)",
+      "simplifiedSignature": "createInterview(String,Map<String,Object>)",
       "datatype": {
-        "id": "Flow.interview.createinterview.Flow.Interview",
+        "id": "Flow.interview.createinterview.datatype.Flow.Interview",
         "nodeType": "datatype",
-        "name": "Flow.Interview"
+        "name": "Flow.Interview",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Flow",
+          "textToLower": "flow",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Flow_0:14"
+        },
+        "parentId": "Flow.interview.createinterview",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Flow.Interview"
       },
       "description": "Creates an interview for a flow.",
+      "parentName": "Interview",
+      "variables": {},
       "params": {
-        "flowName": {
-          "id": "Flow.interview.createinterview.flowname",
-          "type": "var",
+        "flowname": {
+          "id": "Flow.interview.method.createinterview(string,map<string,object>).varParam.flowname",
+          "nodeType": "variable",
           "name": "flowName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -340,58 +562,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_flowName_-1:0"
+            "id": "token.type.identifier_flowName_0:52"
           },
-          "signature": "String flowName",
-          "datatype": {
-            "id": "Flow.interview.createinterview.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String": {
-          "id": "Flow.interview.createinterview.<string",
-          "type": "var",
-          "name": "<String",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "flowName",
+            "textToLower": "flowname",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_flowName_0:52"
           },
-          "signature": "Map <String",
+          "parentId": "Flow.interview.method.createinterview(string,map<string,object>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Flow.interview.createinterview.map",
+            "id": "Flow.interview.createinterview.datatype.String",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 51
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:45"
+            },
+            "parentId": "Flow.interview.createinterview",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "inputVariables": {
-          "id": "Flow.interview.createinterview.inputvariables",
-          "type": "var",
+        "inputvariables": {
+          "id": "Flow.interview.method.createinterview(string,map<string,object>).varParam.inputvariables",
+          "nodeType": "variable",
           "name": "inputVariables",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -400,29 +637,130 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_inputVariables_-1:0"
+            "id": "token.type.identifier_inputVariables_0:81"
           },
-          "signature": "Object> inputVariables",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "inputVariables",
+            "textToLower": "inputvariables",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 95
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_inputVariables_0:81"
+          },
+          "parentId": "Flow.interview.method.createinterview(string,map<string,object>)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Flow.interview.createinterview.object>",
+            "id": "Flow.interview.createinterview.datatype.Map<String,Object>",
             "nodeType": "datatype",
-            "name": "Object>"
-          }
+            "name": "Map<String,Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 62
+                },
+                "end": {
+                  "line": 0,
+                  "character": 65
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:62"
+            },
+            "parentId": "Flow.interview.createinterview",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "Flow.interview.createinterview.datatype.Map<String,Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 73
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 79
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:73"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            },
+            "key": {
+              "id": "Flow.interview.createinterview.datatype.Map<String,Object>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 66
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 72
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:66"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getvariablevalue(string)": {
-      "id": "Flow.interview.getvariablevalue",
+      "id": "Flow.interview.method.getvariablevalue(string)",
       "nodeType": "method",
       "name": "getVariableValue",
       "startToken": {
@@ -444,6 +782,9 @@
         },
         "id": "declaration.entity.name.function_getVariableValue_-1:0"
       },
+      "parentId": "Flow.interview",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -451,30 +792,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Object getVariableValue(String variableName)",
+      "overrideSignature": "public override Object getVariableValue(String variableName)",
       "simplifiedSignature": "getVariableValue(String)",
       "datatype": {
-        "id": "Flow.interview.getvariablevalue.Object",
+        "id": "Flow.interview.getvariablevalue.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:7"
+        },
+        "parentId": "Flow.interview.getvariablevalue",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Returns the value of the specified flow variable. The flow variable can be in the flow embedded in the Visualforce page, or in a separate flow that is called by a subflow element.",
+      "parentName": "Interview",
+      "variables": {},
       "params": {
-        "variableName": {
-          "id": "Flow.interview.getvariablevalue.variablename",
-          "type": "var",
+        "variablename": {
+          "id": "Flow.interview.method.getvariablevalue(string).varParam.variablename",
+          "nodeType": "variable",
           "name": "variableName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -483,29 +850,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_variableName_-1:0"
+            "id": "token.type.identifier_variableName_0:38"
           },
-          "signature": "String variableName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "variableName",
+            "textToLower": "variablename",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_variableName_0:38"
+          },
+          "parentId": "Flow.interview.method.getvariablevalue(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Flow.interview.getvariablevalue.string",
+            "id": "Flow.interview.getvariablevalue.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:31"
+            },
+            "parentId": "Flow.interview.getvariablevalue",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Specifies the unique name of the flow variable.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "start()": {
-      "id": "Flow.interview.start",
+      "id": "Flow.interview.method.start()",
       "nodeType": "method",
       "name": "start",
       "startToken": {
@@ -527,6 +942,9 @@
         },
         "id": "declaration.entity.name.function_start_-1:0"
       },
+      "parentId": "Flow.interview",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -534,31 +952,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void start()",
+      "signature": "public Void start()",
+      "overrideSignature": "public override Void start()",
       "simplifiedSignature": "start()",
       "datatype": {
-        "id": "Flow.interview.start.void",
+        "id": "Flow.interview.start.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "Flow.interview.start",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Starts an instance (interview) for an autolaunched or user provisioning flow.",
-      "params": {}
+      "parentName": "Interview",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 4,
+  "queries": []
 }

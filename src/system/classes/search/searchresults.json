@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_SearchResults_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "get(string)": {
-      "id": "Search.searchresults.get",
+      "id": "Search.searchresults.method.get(string)",
       "nodeType": "method",
       "name": "get",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_get_-1:0"
       },
+      "parentId": "Search.searchresults",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,83 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<Search.SearchResult> get(String sObjectType)",
+      "overrideSignature": "public override List<Search.SearchResult> get(String sObjectType)",
       "simplifiedSignature": "get(String)",
       "datatype": {
-        "id": "Search.searchresults.get.List<Search.SearchResult>",
+        "id": "Search.searchresults.get.datatype.List<Search.SearchResult>",
         "nodeType": "datatype",
-        "name": "List<Search.SearchResult>"
+        "name": "List<Search.SearchResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Search.searchresults.get",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Search.searchresults.get.datatype.List<Search.SearchResult>.value.Search.SearchResult",
+          "nodeType": "datatype",
+          "name": "Search.SearchResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Search",
+            "textToLower": "search",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 18
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Search_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Search.SearchResult"
+        }
       },
       "description": "Returns a list of Search.SearchResult objects that contain an sObject of the specified type.",
+      "parentName": "SearchResults",
+      "variables": {},
       "params": {
-        "sObjectType": {
-          "id": "Search.searchresults.get.sobjecttype",
-          "type": "var",
+        "sobjecttype": {
+          "id": "Search.searchresults.method.get(string).varParam.sobjecttype",
+          "nodeType": "variable",
           "name": "sObjectType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,30 +187,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_sObjectType_-1:0"
+            "id": "token.type.identifier_sObjectType_0:44"
           },
-          "signature": "String sObjectType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sObjectType",
+            "textToLower": "sobjecttype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 44
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sObjectType_0:44"
+          },
+          "parentId": "Search.searchresults.method.get(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Search.searchresults.get.string",
+            "id": "Search.searchresults.get.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 43
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:37"
+            },
+            "parentId": "Search.searchresults.get",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The name of an sObject in the dynamic SOSL query passed to the Search.find(String) method.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

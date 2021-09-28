@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_InboundEmail_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -87,6 +89,8 @@
         },
         "id": "declaration.entity.name.class_BinaryAttachment_-1:0"
       },
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "global",
@@ -127,12 +131,13 @@
       },
       "description": "An InboundEmail object stores binary attachments in an InboundEmail.BinaryAttachment object.",
       "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_email_inbound_binary.htm",
+      "parentName": "InboundEmail",
       "classes": {},
       "interfaces": {},
       "enums": {},
-      "params": {
+      "variables": {
         "body": {
-          "id": "Messaging.inboundemail.binaryattachment.body",
+          "id": "Messaging.inboundemail.binaryattachment.method.blob body{get;set;}",
           "nodeType": "property",
           "name": "body",
           "startToken": {
@@ -154,6 +159,9 @@
             },
             "id": "declaration.entity.name.property_body_-1:0"
           },
+          "parentId": "Messaging.inboundemail.binaryattachment",
+          "order": 1,
+          "memberOrder": 1,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -161,77 +169,72 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public Blob body {get; set;}",
-          "simplifiedSignature": "Blob body { get; set; }",
+          "signature": "public Blob body { get; set; }",
+          "simplifiedSignature": "Blob body{get;set;}",
           "datatype": {
-            "id": "Messaging.inboundemail.binaryattachment.body.blob",
+            "id": ".datatype.Blob",
             "nodeType": "datatype",
-            "name": "Blob"
+            "name": "Blob",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Blob",
+              "textToLower": "blob",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 0,
+                  "character": 11
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Blob_0:7"
+            },
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Blob"
           },
-          "description": "The body of the attachment.",
+          "parentName": "BinaryAttachment",
           "getter": {
-            "id": "Messaging.inboundemail.binaryattachment.body.get",
+            "id": ".getter.get",
             "nodeType": "getter",
             "name": "get",
-            "startToken": {
-              "type": "keyword.declaration.property.getter",
-              "text": "get",
-              "textToLower": "get",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.getter_get_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           },
           "setter": {
-            "id": "Messaging.inboundemail.binaryattachment.body.set",
+            "id": ".getter.set",
             "nodeType": "setter",
             "name": "set",
-            "startToken": {
-              "type": "keyword.declaration.property.setter",
-              "text": "set",
-              "textToLower": "set",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.setter_set_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           }
         },
         "filename": {
-          "id": "Messaging.inboundemail.binaryattachment.filename",
+          "id": "Messaging.inboundemail.binaryattachment.method.string filename{get;set;}",
           "nodeType": "property",
           "name": "fileName",
           "startToken": {
@@ -253,6 +256,9 @@
             },
             "id": "declaration.entity.name.property_fileName_-1:0"
           },
+          "parentId": "Messaging.inboundemail.binaryattachment",
+          "order": 2,
+          "memberOrder": 2,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -260,77 +266,72 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public String fileName {get; set;}",
-          "simplifiedSignature": "String fileName { get; set; }",
+          "signature": "public String fileName { get; set; }",
+          "simplifiedSignature": "String fileName{get;set;}",
           "datatype": {
-            "id": "Messaging.inboundemail.binaryattachment.filename.string",
+            "id": ".datatype.String",
             "nodeType": "datatype",
-            "name": "String"
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 0,
+                  "character": 13
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:7"
+            },
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
           },
-          "description": "The name of the attached file.",
+          "parentName": "BinaryAttachment",
           "getter": {
-            "id": "Messaging.inboundemail.binaryattachment.filename.get",
+            "id": ".getter.get",
             "nodeType": "getter",
             "name": "get",
-            "startToken": {
-              "type": "keyword.declaration.property.getter",
-              "text": "get",
-              "textToLower": "get",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.getter_get_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           },
           "setter": {
-            "id": "Messaging.inboundemail.binaryattachment.filename.set",
+            "id": ".getter.set",
             "nodeType": "setter",
             "name": "set",
-            "startToken": {
-              "type": "keyword.declaration.property.setter",
-              "text": "set",
-              "textToLower": "set",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.setter_set_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           }
         },
         "headers": {
-          "id": "Messaging.inboundemail.binaryattachment.headers",
+          "id": "Messaging.inboundemail.binaryattachment.method.list<messaging.inboundemail.header> headers{get;set;}",
           "nodeType": "property",
           "name": "headers",
           "startToken": {
@@ -352,6 +353,9 @@
             },
             "id": "declaration.entity.name.property_headers_-1:0"
           },
+          "parentId": "Messaging.inboundemail.binaryattachment",
+          "order": 3,
+          "memberOrder": 3,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -359,82 +363,104 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public List<Messaging.InboundEmail.Header> headers {get; set;}",
-          "simplifiedSignature": "List<Messaging.InboundEmail.Header> headers { get; set; }",
+          "signature": "public List<Messaging.InboundEmail.Header> headers { get; set; }",
+          "simplifiedSignature": "List<Messaging.InboundEmail.Header> headers{get;set;}",
           "datatype": {
-            "id": "Messaging.inboundemail.binaryattachment.headers.list<messaging.inboundemail.header>",
+            "id": ".datatype.List<Messaging.InboundEmail.Header>",
             "nodeType": "datatype",
-            "name": "List<Messaging.InboundEmail.Header>"
+            "name": "List<Messaging.InboundEmail.Header>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 0,
+                  "character": 11
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:7"
+            },
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": ".datatype.List<Messaging.InboundEmail.Header>.value.Messaging.InboundEmail.Header",
+              "nodeType": "datatype",
+              "name": "Messaging.InboundEmail.Header",
+              "startToken": {
+                "type": "datatype.support.namespace",
+                "text": "Messaging",
+                "textToLower": "messaging",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 12
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 21
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Messaging_0:12"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Messaging.InboundEmail.Header"
+            }
           },
-          "description": "Any header values associated with the attachment. Examples of header names include Content-Type, Content-Transfer-Encoding, and Content-ID.",
+          "parentName": "BinaryAttachment",
           "getter": {
-            "id": "Messaging.inboundemail.binaryattachment.headers.get",
+            "id": ".getter.get",
             "nodeType": "getter",
             "name": "get",
-            "startToken": {
-              "type": "keyword.declaration.property.getter",
-              "text": "get",
-              "textToLower": "get",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.getter_get_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           },
           "setter": {
-            "id": "Messaging.inboundemail.binaryattachment.headers.set",
+            "id": ".getter.set",
             "nodeType": "setter",
             "name": "set",
-            "startToken": {
-              "type": "keyword.declaration.property.setter",
-              "text": "set",
-              "textToLower": "set",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.setter_set_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           }
         }
       },
       "methods": {},
       "constructors": {
-        "inboundemail.binaryattachment()": {
-          "id": "Messaging.inboundemail.binaryattachment.inboundemail.binaryattachment",
+        "binaryattachment()": {
+          "id": "Messaging.inboundemail.binaryattachment.method.binaryattachment()",
           "nodeType": "constructor",
-          "name": "InboundEmail.BinaryAttachment",
+          "name": "BinaryAttachment",
           "startToken": {
             "type": "declaration.entity.name.function",
             "text": "InboundEmail.BinaryAttachment",
@@ -454,6 +480,9 @@
             },
             "id": "declaration.entity.name.function_InboundEmail.BinaryAttachment_-1:0"
           },
+          "parentId": "Messaging.inboundemail.binaryattachment",
+          "order": 1,
+          "memberOrder": 4,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -461,32 +490,34 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public InboundEmail.BinaryAttachment()",
-          "simplifiedSignature": "InboundEmail.BinaryAttachment()",
-          "datatype": {
-            "id": "Messaging.inboundemail.binaryattachment.inboundemail.binaryattachment.constructor",
-            "nodeType": "datatype",
-            "name": "BinaryAttachment"
-          },
+          "signature": "public BinaryAttachment()",
+          "overrideSignature": "public override BinaryAttachment()",
+          "simplifiedSignature": "BinaryAttachment()",
           "description": "Creates a new instance of the Messaging.InboundEmail.BinaryAttachment class.",
-          "params": {}
+          "parentName": "BinaryAttachment",
+          "variables": {},
+          "params": {},
+          "queries": [],
+          "exceptions": []
         }
       },
       "extendsType": "",
       "implementTypes": [],
-      "implements": {}
+      "implements": {},
+      "totalMembers": 4,
+      "queries": []
     },
     "header": {
       "id": "Messaging.inboundemail.header",
@@ -512,6 +543,8 @@
         },
         "id": "declaration.entity.name.class_Header_-1:0"
       },
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "global",
@@ -552,12 +585,13 @@
       },
       "description": "An InboundEmail object stores RFC 2822 email header information in an InboundEmail.Header object with the following properties.",
       "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_email_inbound_header.htm",
+      "parentName": "InboundEmail",
       "classes": {},
       "interfaces": {},
       "enums": {},
-      "params": {
+      "variables": {
         "name": {
-          "id": "Messaging.inboundemail.header.name",
+          "id": "Messaging.inboundemail.header.method.string name{get;set;}",
           "nodeType": "property",
           "name": "name",
           "startToken": {
@@ -579,6 +613,9 @@
             },
             "id": "declaration.entity.name.property_name_-1:0"
           },
+          "parentId": "Messaging.inboundemail.header",
+          "order": 1,
+          "memberOrder": 1,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -586,73 +623,68 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public String name {get; set;}",
-          "simplifiedSignature": "String name { get; set; }",
+          "signature": "public String name { get; set; }",
+          "simplifiedSignature": "String name{get;set;}",
           "datatype": {
-            "id": "Messaging.inboundemail.header.name.string",
+            "id": ".datatype.String",
             "nodeType": "datatype",
-            "name": "String"
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 0,
+                  "character": 13
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:7"
+            },
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
           },
-          "description": "The name of the header parameter, such as Date or Message-ID.",
+          "parentName": "Header",
           "getter": {
-            "id": "Messaging.inboundemail.header.name.get",
+            "id": ".getter.get",
             "nodeType": "getter",
             "name": "get",
-            "startToken": {
-              "type": "keyword.declaration.property.getter",
-              "text": "get",
-              "textToLower": "get",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.getter_get_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           },
           "setter": {
-            "id": "Messaging.inboundemail.header.name.set",
+            "id": ".getter.set",
             "nodeType": "setter",
             "name": "set",
-            "startToken": {
-              "type": "keyword.declaration.property.setter",
-              "text": "set",
-              "textToLower": "set",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.setter_set_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           }
         }
       },
@@ -660,7 +692,9 @@
       "constructors": {},
       "extendsType": "",
       "implementTypes": [],
-      "implements": {}
+      "implements": {},
+      "totalMembers": 1,
+      "queries": []
     },
     "textattachment": {
       "id": "Messaging.inboundemail.textattachment",
@@ -686,6 +720,8 @@
         },
         "id": "declaration.entity.name.class_TextAttachment_-1:0"
       },
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "global",
@@ -726,12 +762,13 @@
       },
       "description": "An InboundEmail object stores text attachments in an InboundEmail.TextAttachment object.",
       "documentation": "https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_email_inbound_text.htm",
+      "parentName": "InboundEmail",
       "classes": {},
       "interfaces": {},
       "enums": {},
-      "params": {
+      "variables": {
         "body": {
-          "id": "Messaging.inboundemail.textattachment.body",
+          "id": "Messaging.inboundemail.textattachment.method.string body{get;set;}",
           "nodeType": "property",
           "name": "body",
           "startToken": {
@@ -753,6 +790,9 @@
             },
             "id": "declaration.entity.name.property_body_-1:0"
           },
+          "parentId": "Messaging.inboundemail.textattachment",
+          "order": 1,
+          "memberOrder": 1,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -760,77 +800,72 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public String body {get; set;}",
-          "simplifiedSignature": "String body { get; set; }",
+          "signature": "public String body { get; set; }",
+          "simplifiedSignature": "String body{get;set;}",
           "datatype": {
-            "id": "Messaging.inboundemail.textattachment.body.string",
+            "id": ".datatype.String",
             "nodeType": "datatype",
-            "name": "String"
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 0,
+                  "character": 13
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:7"
+            },
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
           },
-          "description": "The body of the attachment.",
+          "parentName": "TextAttachment",
           "getter": {
-            "id": "Messaging.inboundemail.textattachment.body.get",
+            "id": ".getter.get",
             "nodeType": "getter",
             "name": "get",
-            "startToken": {
-              "type": "keyword.declaration.property.getter",
-              "text": "get",
-              "textToLower": "get",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.getter_get_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           },
           "setter": {
-            "id": "Messaging.inboundemail.textattachment.body.set",
+            "id": ".getter.set",
             "nodeType": "setter",
             "name": "set",
-            "startToken": {
-              "type": "keyword.declaration.property.setter",
-              "text": "set",
-              "textToLower": "set",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.setter_set_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           }
         },
         "bodyistruncated": {
-          "id": "Messaging.inboundemail.textattachment.bodyistruncated",
+          "id": "Messaging.inboundemail.textattachment.method.boolean bodyistruncated{get;set;}",
           "nodeType": "property",
           "name": "bodyIsTruncated",
           "startToken": {
@@ -852,6 +887,9 @@
             },
             "id": "declaration.entity.name.property_bodyIsTruncated_-1:0"
           },
+          "parentId": "Messaging.inboundemail.textattachment",
+          "order": 2,
+          "memberOrder": 2,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -859,77 +897,72 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public Boolean bodyIsTruncated {get; set;}",
-          "simplifiedSignature": "Boolean bodyIsTruncated { get; set; }",
+          "signature": "public Boolean bodyIsTruncated { get; set; }",
+          "simplifiedSignature": "Boolean bodyIsTruncated{get;set;}",
           "datatype": {
-            "id": "Messaging.inboundemail.textattachment.bodyistruncated.boolean",
+            "id": ".datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 0,
+                  "character": 14
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:7"
+            },
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
           },
-          "description": "Indicates whether the attachment body text is truncated (true) or not (false.)",
+          "parentName": "TextAttachment",
           "getter": {
-            "id": "Messaging.inboundemail.textattachment.bodyistruncated.get",
+            "id": ".getter.get",
             "nodeType": "getter",
             "name": "get",
-            "startToken": {
-              "type": "keyword.declaration.property.getter",
-              "text": "get",
-              "textToLower": "get",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.getter_get_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           },
           "setter": {
-            "id": "Messaging.inboundemail.textattachment.bodyistruncated.set",
+            "id": ".getter.set",
             "nodeType": "setter",
             "name": "set",
-            "startToken": {
-              "type": "keyword.declaration.property.setter",
-              "text": "set",
-              "textToLower": "set",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.setter_set_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           }
         },
         "charset": {
-          "id": "Messaging.inboundemail.textattachment.charset",
+          "id": "Messaging.inboundemail.textattachment.method.string charset{get;set;}",
           "nodeType": "property",
           "name": "charset",
           "startToken": {
@@ -951,6 +984,9 @@
             },
             "id": "declaration.entity.name.property_charset_-1:0"
           },
+          "parentId": "Messaging.inboundemail.textattachment",
+          "order": 3,
+          "memberOrder": 3,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -958,77 +994,72 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public String charset {get; set;}",
-          "simplifiedSignature": "String charset { get; set; }",
+          "signature": "public String charset { get; set; }",
+          "simplifiedSignature": "String charset{get;set;}",
           "datatype": {
-            "id": "Messaging.inboundemail.textattachment.charset.string",
+            "id": ".datatype.String",
             "nodeType": "datatype",
-            "name": "String"
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 0,
+                  "character": 13
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:7"
+            },
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
           },
-          "description": "The original character set of the body field. The body is re-encoded as UTF-8 as input to the Apex method.",
+          "parentName": "TextAttachment",
           "getter": {
-            "id": "Messaging.inboundemail.textattachment.charset.get",
+            "id": ".getter.get",
             "nodeType": "getter",
             "name": "get",
-            "startToken": {
-              "type": "keyword.declaration.property.getter",
-              "text": "get",
-              "textToLower": "get",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.getter_get_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           },
           "setter": {
-            "id": "Messaging.inboundemail.textattachment.charset.set",
+            "id": ".getter.set",
             "nodeType": "setter",
             "name": "set",
-            "startToken": {
-              "type": "keyword.declaration.property.setter",
-              "text": "set",
-              "textToLower": "set",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.setter_set_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           }
         },
         "filename": {
-          "id": "Messaging.inboundemail.textattachment.filename",
+          "id": "Messaging.inboundemail.textattachment.method.string filename{get;set;}",
           "nodeType": "property",
           "name": "fileName",
           "startToken": {
@@ -1050,6 +1081,9 @@
             },
             "id": "declaration.entity.name.property_fileName_-1:0"
           },
+          "parentId": "Messaging.inboundemail.textattachment",
+          "order": 4,
+          "memberOrder": 4,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -1057,77 +1091,72 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public String fileName {get; set;}",
-          "simplifiedSignature": "String fileName { get; set; }",
+          "signature": "public String fileName { get; set; }",
+          "simplifiedSignature": "String fileName{get;set;}",
           "datatype": {
-            "id": "Messaging.inboundemail.textattachment.filename.string",
+            "id": ".datatype.String",
             "nodeType": "datatype",
-            "name": "String"
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 0,
+                  "character": 13
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:7"
+            },
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
           },
-          "description": "The name of the attached file.",
+          "parentName": "TextAttachment",
           "getter": {
-            "id": "Messaging.inboundemail.textattachment.filename.get",
+            "id": ".getter.get",
             "nodeType": "getter",
             "name": "get",
-            "startToken": {
-              "type": "keyword.declaration.property.getter",
-              "text": "get",
-              "textToLower": "get",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.getter_get_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           },
           "setter": {
-            "id": "Messaging.inboundemail.textattachment.filename.set",
+            "id": ".getter.set",
             "nodeType": "setter",
             "name": "set",
-            "startToken": {
-              "type": "keyword.declaration.property.setter",
-              "text": "set",
-              "textToLower": "set",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.setter_set_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           }
         },
         "headers": {
-          "id": "Messaging.inboundemail.textattachment.headers",
+          "id": "Messaging.inboundemail.textattachment.method.list<messaging.inboundemail.header> headers{get;set;}",
           "nodeType": "property",
           "name": "headers",
           "startToken": {
@@ -1149,6 +1178,9 @@
             },
             "id": "declaration.entity.name.property_headers_-1:0"
           },
+          "parentId": "Messaging.inboundemail.textattachment",
+          "order": 5,
+          "memberOrder": 5,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -1156,82 +1188,104 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public List<Messaging.InboundEmail.Header> headers {get; set;}",
-          "simplifiedSignature": "List<Messaging.InboundEmail.Header> headers { get; set; }",
+          "signature": "public List<Messaging.InboundEmail.Header> headers { get; set; }",
+          "simplifiedSignature": "List<Messaging.InboundEmail.Header> headers{get;set;}",
           "datatype": {
-            "id": "Messaging.inboundemail.textattachment.headers.list<messaging.inboundemail.header>",
+            "id": ".datatype.List<Messaging.InboundEmail.Header>",
             "nodeType": "datatype",
-            "name": "List<Messaging.InboundEmail.Header>"
+            "name": "List<Messaging.InboundEmail.Header>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 7
+                },
+                "end": {
+                  "line": 0,
+                  "character": 11
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:7"
+            },
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": ".datatype.List<Messaging.InboundEmail.Header>.value.Messaging.InboundEmail.Header",
+              "nodeType": "datatype",
+              "name": "Messaging.InboundEmail.Header",
+              "startToken": {
+                "type": "datatype.support.namespace",
+                "text": "Messaging",
+                "textToLower": "messaging",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 12
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 21
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Messaging_0:12"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Messaging.InboundEmail.Header"
+            }
           },
-          "description": "Any header values associated with the attachment. Examples of header names include Content-Type, Content-Transfer-Encoding, and Content-ID.",
+          "parentName": "TextAttachment",
           "getter": {
-            "id": "Messaging.inboundemail.textattachment.headers.get",
+            "id": ".getter.get",
             "nodeType": "getter",
             "name": "get",
-            "startToken": {
-              "type": "keyword.declaration.property.getter",
-              "text": "get",
-              "textToLower": "get",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.getter_get_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           },
           "setter": {
-            "id": "Messaging.inboundemail.textattachment.headers.set",
+            "id": ".getter.set",
             "nodeType": "setter",
             "name": "set",
-            "startToken": {
-              "type": "keyword.declaration.property.setter",
-              "text": "set",
-              "textToLower": "set",
-              "isAux": false,
-              "range": {
-                "start": {
-                  "line": -1,
-                  "character": 0
-                },
-                "end": {
-                  "line": -1,
-                  "character": 0
-                },
-                "isEmpty": true,
-                "isSingleLine": true
-              },
-              "id": "keyword.declaration.property.setter_set_-1:0"
-            }
+            "parentId": "",
+            "order": 0,
+            "memberOrder": 0,
+            "variables": {},
+            "queries": []
           }
         }
       },
       "methods": {},
       "constructors": {
-        "inboundemail.textattachment()": {
-          "id": "Messaging.inboundemail.textattachment.inboundemail.textattachment",
+        "textattachment()": {
+          "id": "Messaging.inboundemail.textattachment.method.textattachment()",
           "nodeType": "constructor",
-          "name": "InboundEmail.TextAttachment",
+          "name": "TextAttachment",
           "startToken": {
             "type": "declaration.entity.name.function",
             "text": "InboundEmail.TextAttachment",
@@ -1251,6 +1305,9 @@
             },
             "id": "declaration.entity.name.function_InboundEmail.TextAttachment_-1:0"
           },
+          "parentId": "Messaging.inboundemail.textattachment",
+          "order": 1,
+          "memberOrder": 6,
           "accessModifier": {
             "type": "keyword.modifier.access",
             "text": "public",
@@ -1258,39 +1315,41 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
+                "line": 0,
                 "character": 0
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 6
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "keyword.modifier.access_public_-1:0"
+            "id": "token.type.identifier_public_0:0"
           },
-          "signature": "public InboundEmail.TextAttachment()",
-          "simplifiedSignature": "InboundEmail.TextAttachment()",
-          "datatype": {
-            "id": "Messaging.inboundemail.textattachment.inboundemail.textattachment.constructor",
-            "nodeType": "datatype",
-            "name": "TextAttachment"
-          },
+          "signature": "public TextAttachment()",
+          "overrideSignature": "public override TextAttachment()",
+          "simplifiedSignature": "TextAttachment()",
           "description": "Creates a new instance of the Messaging.InboundEmail.TextAttachment class.",
-          "params": {}
+          "parentName": "TextAttachment",
+          "variables": {},
+          "params": {},
+          "queries": [],
+          "exceptions": []
         }
       },
       "extendsType": "",
       "implementTypes": [],
-      "implements": {}
+      "implements": {},
+      "totalMembers": 6,
+      "queries": []
     }
   },
   "interfaces": {},
   "enums": {},
   "variables": {
     "binaryattachments": {
-      "id": "Messaging.inboundemail.binaryattachments",
+      "id": "Messaging.inboundemail.method.binaryattachment[] binaryattachments{get;set;}",
       "nodeType": "property",
       "name": "binaryAttachments",
       "startToken": {
@@ -1312,6 +1371,9 @@
         },
         "id": "declaration.entity.name.property_binaryAttachments_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 1,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1319,77 +1381,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public InboundEmail.BinaryAttachment[] binaryAttachments {get; set;}",
-      "simplifiedSignature": "InboundEmail.BinaryAttachment[] binaryAttachments { get; set; }",
+      "signature": "public BinaryAttachment[] binaryAttachments { get; set; }",
+      "simplifiedSignature": "BinaryAttachment[] binaryAttachments{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.binaryattachments.inboundemail.binaryattachment[]",
+        "id": ".datatype.BinaryAttachment[]",
         "nodeType": "datatype",
-        "name": "InboundEmail.BinaryAttachment[]"
+        "name": "BinaryAttachment[]",
+        "startToken": {
+          "type": "datatype.custom.class",
+          "text": "BinaryAttachment",
+          "textToLower": "binaryattachment",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 20
+            },
+            "end": {
+              "line": 0,
+              "character": 36
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_BinaryAttachment_0:20"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "BinaryAttachment[]"
       },
-      "description": "A list of binary attachments received with the email, if any.",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.binaryattachments.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.binaryattachments.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "ccaddresses": {
-      "id": "Messaging.inboundemail.ccaddresses",
+      "id": "Messaging.inboundemail.method.string[] ccaddresses{get;set;}",
       "nodeType": "property",
       "name": "ccAddresses",
       "startToken": {
@@ -1411,6 +1468,9 @@
         },
         "id": "declaration.entity.name.property_ccAddresses_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 2,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1418,77 +1478,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String[] ccAddresses {get; set;}",
-      "simplifiedSignature": "String[] ccAddresses { get; set; }",
+      "signature": "public String[] ccAddresses { get; set; }",
+      "simplifiedSignature": "String[] ccAddresses{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.ccaddresses.string[]",
+        "id": ".datatype.String[]",
         "nodeType": "datatype",
-        "name": "String[]"
+        "name": "String[]",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String[]"
       },
-      "description": "A list of carbon copy (CC) addresses, if any.",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.ccaddresses.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.ccaddresses.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "fromaddress": {
-      "id": "Messaging.inboundemail.fromaddress",
+      "id": "Messaging.inboundemail.method.string fromaddress{get;set;}",
       "nodeType": "property",
       "name": "fromAddress",
       "startToken": {
@@ -1510,6 +1565,9 @@
         },
         "id": "declaration.entity.name.property_fromAddress_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 3,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1517,77 +1575,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String fromAddress {get; set;}",
-      "simplifiedSignature": "String fromAddress { get; set; }",
+      "signature": "public String fromAddress { get; set; }",
+      "simplifiedSignature": "String fromAddress{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.fromaddress.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "The email address that appears in the From field.",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.fromaddress.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.fromaddress.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "fromname": {
-      "id": "Messaging.inboundemail.fromname",
+      "id": "Messaging.inboundemail.method.string fromname{get;set;}",
       "nodeType": "property",
       "name": "fromName",
       "startToken": {
@@ -1609,6 +1662,9 @@
         },
         "id": "declaration.entity.name.property_fromName_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 4,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1616,77 +1672,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String fromName {get; set;}",
-      "simplifiedSignature": "String fromName { get; set; }",
+      "signature": "public String fromName { get; set; }",
+      "simplifiedSignature": "String fromName{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.fromname.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "The name that appears in the From field, if any.",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.fromname.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.fromname.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "headers": {
-      "id": "Messaging.inboundemail.headers",
+      "id": "Messaging.inboundemail.method.header[] headers{get;set;}",
       "nodeType": "property",
       "name": "headers",
       "startToken": {
@@ -1708,6 +1759,9 @@
         },
         "id": "declaration.entity.name.property_headers_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 5,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1715,77 +1769,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public InboundEmail.Header[] headers {get; set;}",
-      "simplifiedSignature": "InboundEmail.Header[] headers { get; set; }",
+      "signature": "public Header[] headers { get; set; }",
+      "simplifiedSignature": "Header[] headers{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.headers.inboundemail.header[]",
+        "id": ".datatype.Header[]",
         "nodeType": "datatype",
-        "name": "InboundEmail.Header[]"
+        "name": "Header[]",
+        "startToken": {
+          "type": "datatype.custom.class",
+          "text": "Header",
+          "textToLower": "header",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 20
+            },
+            "end": {
+              "line": 0,
+              "character": 26
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Header_0:20"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Header[]"
       },
-      "description": "A list of the RFC 2822 headers in the email.",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.headers.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.headers.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "htmlbody": {
-      "id": "Messaging.inboundemail.htmlbody",
+      "id": "Messaging.inboundemail.method.string htmlbody{get;set;}",
       "nodeType": "property",
       "name": "htmlBody",
       "startToken": {
@@ -1807,6 +1856,9 @@
         },
         "id": "declaration.entity.name.property_htmlBody_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 6,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1814,77 +1866,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String htmlBody {get; set;}",
-      "simplifiedSignature": "String htmlBody { get; set; }",
+      "signature": "public String htmlBody { get; set; }",
+      "simplifiedSignature": "String htmlBody{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.htmlbody.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "The HTML version of the email, if specified by the sender.",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.htmlbody.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.htmlbody.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "htmlbodyistruncated": {
-      "id": "Messaging.inboundemail.htmlbodyistruncated",
+      "id": "Messaging.inboundemail.method.boolean htmlbodyistruncated{get;set;}",
       "nodeType": "property",
       "name": "htmlBodyIsTruncated",
       "startToken": {
@@ -1906,6 +1953,9 @@
         },
         "id": "declaration.entity.name.property_htmlBodyIsTruncated_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 7,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1913,77 +1963,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Boolean htmlBodyIsTruncated {get; set;}",
-      "simplifiedSignature": "Boolean htmlBodyIsTruncated { get; set; }",
+      "signature": "public Boolean htmlBodyIsTruncated { get; set; }",
+      "simplifiedSignature": "Boolean htmlBodyIsTruncated{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.htmlbodyistruncated.boolean",
+        "id": ".datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
-      "description": "Indicates whether the HTML body text is truncated (true) or not (false.)",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.htmlbodyistruncated.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.htmlbodyistruncated.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "inreplyto": {
-      "id": "Messaging.inboundemail.inreplyto",
+      "id": "Messaging.inboundemail.method.string inreplyto{get;set;}",
       "nodeType": "property",
       "name": "inReplyTo",
       "startToken": {
@@ -2005,6 +2050,9 @@
         },
         "id": "declaration.entity.name.property_inReplyTo_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 8,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -2012,77 +2060,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String inReplyTo {get; set;}",
-      "simplifiedSignature": "String inReplyTo { get; set; }",
+      "signature": "public String inReplyTo { get; set; }",
+      "simplifiedSignature": "String inReplyTo{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.inreplyto.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "The In-Reply-To field of the incoming email. Identifies the email or emails to which this one is a reply (parent emails). Contains the parent email or emails' message-IDs.",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.inreplyto.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.inreplyto.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "messageid": {
-      "id": "Messaging.inboundemail.messageid",
+      "id": "Messaging.inboundemail.method.string messageid{get;set;}",
       "nodeType": "property",
       "name": "messageId",
       "startToken": {
@@ -2104,6 +2147,9 @@
         },
         "id": "declaration.entity.name.property_messageId_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 9,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -2111,77 +2157,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String messageId {get; set;}",
-      "simplifiedSignature": "String messageId { get; set; }",
+      "signature": "public String messageId { get; set; }",
+      "simplifiedSignature": "String messageId{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.messageid.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "The Message-ID—the incoming email's unique identifier.",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.messageid.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.messageid.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "plaintextbody": {
-      "id": "Messaging.inboundemail.plaintextbody",
+      "id": "Messaging.inboundemail.method.string plaintextbody{get;set;}",
       "nodeType": "property",
       "name": "plainTextBody",
       "startToken": {
@@ -2203,6 +2244,9 @@
         },
         "id": "declaration.entity.name.property_plainTextBody_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 10,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -2210,77 +2254,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String plainTextBody {get; set;}",
-      "simplifiedSignature": "String plainTextBody { get; set; }",
+      "signature": "public String plainTextBody { get; set; }",
+      "simplifiedSignature": "String plainTextBody{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.plaintextbody.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "The plain text version of the email, if specified by the sender.",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.plaintextbody.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.plaintextbody.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "plaintextbodyistruncated": {
-      "id": "Messaging.inboundemail.plaintextbodyistruncated",
+      "id": "Messaging.inboundemail.method.boolean plaintextbodyistruncated{get;set;}",
       "nodeType": "property",
       "name": "plainTextBodyIsTruncated",
       "startToken": {
@@ -2302,6 +2341,9 @@
         },
         "id": "declaration.entity.name.property_plainTextBodyIsTruncated_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 11,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -2309,77 +2351,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Boolean plainTextBodyIsTruncated {get; set;}",
-      "simplifiedSignature": "Boolean plainTextBodyIsTruncated { get; set; }",
+      "signature": "public Boolean plainTextBodyIsTruncated { get; set; }",
+      "simplifiedSignature": "Boolean plainTextBodyIsTruncated{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.plaintextbodyistruncated.boolean",
+        "id": ".datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
-      "description": "Indicates whether the plain body text is truncated (true) or not (false.)",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.plaintextbodyistruncated.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.plaintextbodyistruncated.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "references": {
-      "id": "Messaging.inboundemail.references",
+      "id": "Messaging.inboundemail.method.string[] references{get;set;}",
       "nodeType": "property",
       "name": "references",
       "startToken": {
@@ -2401,6 +2438,9 @@
         },
         "id": "declaration.entity.name.property_references_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 12,
+      "memberOrder": 15,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -2408,77 +2448,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String[] references {get; set;}",
-      "simplifiedSignature": "String[] references { get; set; }",
+      "signature": "public String[] references { get; set; }",
+      "simplifiedSignature": "String[] references{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.references.string[]",
+        "id": ".datatype.String[]",
         "nodeType": "datatype",
-        "name": "String[]"
+        "name": "String[]",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String[]"
       },
-      "description": "The References field of the incoming email. Identifies an email thread. Contains a list of the parent emails' References and message IDs, and possibly the In-Reply-To fields.",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.references.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.references.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "replyto": {
-      "id": "Messaging.inboundemail.replyto",
+      "id": "Messaging.inboundemail.method.string replyto{get;set;}",
       "nodeType": "property",
       "name": "replyTo",
       "startToken": {
@@ -2500,6 +2535,9 @@
         },
         "id": "declaration.entity.name.property_replyTo_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 13,
+      "memberOrder": 16,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -2507,77 +2545,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String replyTo {get; set;}",
-      "simplifiedSignature": "String replyTo { get; set; }",
+      "signature": "public String replyTo { get; set; }",
+      "simplifiedSignature": "String replyTo{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.replyto.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "The email address that appears in the reply-to header.",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.replyto.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.replyto.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "subject": {
-      "id": "Messaging.inboundemail.subject",
+      "id": "Messaging.inboundemail.method.string subject{get;set;}",
       "nodeType": "property",
       "name": "subject",
       "startToken": {
@@ -2599,6 +2632,9 @@
         },
         "id": "declaration.entity.name.property_subject_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 14,
+      "memberOrder": 17,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -2606,77 +2642,72 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public String subject {get; set;}",
-      "simplifiedSignature": "String subject { get; set; }",
+      "signature": "public String subject { get; set; }",
+      "simplifiedSignature": "String subject{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.subject.string",
+        "id": ".datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
-      "description": "The subject line of the email, if any.",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.subject.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.subject.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "textattachments": {
-      "id": "Messaging.inboundemail.textattachments",
+      "id": "Messaging.inboundemail.method.textattachment[] textattachments{get;set;}",
       "nodeType": "property",
       "name": "textAttachments",
       "startToken": {
@@ -2698,6 +2729,9 @@
         },
         "id": "declaration.entity.name.property_textAttachments_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 15,
+      "memberOrder": 18,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -2705,80 +2739,75 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public InboundEmail.TextAttachment[] textAttachments {get; set;}",
-      "simplifiedSignature": "InboundEmail.TextAttachment[] textAttachments { get; set; }",
+      "signature": "public TextAttachment[] textAttachments { get; set; }",
+      "simplifiedSignature": "TextAttachment[] textAttachments{get;set;}",
       "datatype": {
-        "id": "Messaging.inboundemail.textattachments.inboundemail.textattachment[]",
+        "id": ".datatype.TextAttachment[]",
         "nodeType": "datatype",
-        "name": "InboundEmail.TextAttachment[]"
+        "name": "TextAttachment[]",
+        "startToken": {
+          "type": "datatype.custom.class",
+          "text": "TextAttachment",
+          "textToLower": "textattachment",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 20
+            },
+            "end": {
+              "line": 0,
+              "character": 34
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_TextAttachment_0:20"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "TextAttachment[]"
       },
-      "description": "A list of text attachments received with the email, if any.",
+      "parentName": "InboundEmail",
       "getter": {
-        "id": "Messaging.inboundemail.textattachments.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Messaging.inboundemail.textattachments.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     }
   },
   "methods": {},
   "constructors": {
     "inboundemail()": {
-      "id": "Messaging.inboundemail.inboundemail",
+      "id": "Messaging.inboundemail.method.inboundemail()",
       "nodeType": "constructor",
       "name": "InboundEmail",
       "startToken": {
@@ -2800,6 +2829,9 @@
         },
         "id": "declaration.entity.name.function_InboundEmail_-1:0"
       },
+      "parentId": "Messaging.inboundemail",
+      "order": 1,
+      "memberOrder": 19,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -2807,30 +2839,32 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public InboundEmail()",
+      "overrideSignature": "public override InboundEmail()",
       "simplifiedSignature": "InboundEmail()",
-      "datatype": {
-        "id": "Messaging.inboundemail.inboundemail.constructor",
-        "nodeType": "datatype",
-        "name": "InboundEmail"
-      },
       "description": "Creates a new instance of the Messaging.InboundEmail class.",
-      "params": {}
+      "parentName": "InboundEmail",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 19,
+  "queries": []
 }

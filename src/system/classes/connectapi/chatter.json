@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Chatter_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "deletesubscription(string,string)": {
-      "id": "ConnectApi.chatter.deletesubscription",
+      "id": "ConnectApi.chatter.method.deletesubscription(string,string)",
       "nodeType": "method",
       "name": "deleteSubscription",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_deleteSubscription_-1:0"
       },
+      "parentId": "ConnectApi.chatter",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static void deleteSubscription(String communityId, String subscriptionId)",
+      "overrideSignature": "public static override void deleteSubscription(String communityId, String subscriptionId)",
       "simplifiedSignature": "deleteSubscription(String,String)",
       "datatype": {
-        "id": "ConnectApi.chatter.deletesubscription.void",
+        "id": "ConnectApi.chatter.deletesubscription.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:14"
+        },
+        "parentId": "ConnectApi.chatter.deletesubscription",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Delete a subscription. Use this method to stop following a record, a user, or a file.",
+      "parentName": "Chatter",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.chatter.deletesubscription.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.chatter.method.deletesubscription(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:45"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 45
+              },
+              "end": {
+                "line": 0,
+                "character": 56
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:45"
+          },
+          "parentId": "ConnectApi.chatter.method.deletesubscription(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.chatter.deletesubscription.string",
+            "id": "ConnectApi.chatter.deletesubscription.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 38
+                },
+                "end": {
+                  "line": 0,
+                  "character": 44
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:38"
+            },
+            "parentId": "ConnectApi.chatter.deletesubscription",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "subscriptionId": {
-          "id": "ConnectApi.chatter.deletesubscription.subscriptionid",
-          "type": "var",
+        "subscriptionid": {
+          "id": "ConnectApi.chatter.method.deletesubscription(string,string).varParam.subscriptionid",
+          "nodeType": "variable",
           "name": "subscriptionId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,29 +254,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_subscriptionId_-1:0"
+            "id": "token.type.identifier_subscriptionId_0:65"
           },
-          "signature": "String subscriptionId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "subscriptionId",
+            "textToLower": "subscriptionid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 65
+              },
+              "end": {
+                "line": 0,
+                "character": 79
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_subscriptionId_0:65"
+          },
+          "parentId": "ConnectApi.chatter.method.deletesubscription(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.chatter.deletesubscription.string",
+            "id": "ConnectApi.chatter.deletesubscription.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 58
+                },
+                "end": {
+                  "line": 0,
+                  "character": 64
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:58"
+            },
+            "parentId": "ConnectApi.chatter.deletesubscription",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID for a subscription.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getfollowers(string,string)": {
-      "id": "ConnectApi.chatter.getfollowers",
+      "id": "ConnectApi.chatter.method.getfollowers(string,string)",
       "nodeType": "method",
       "name": "getFollowers",
       "startToken": {
@@ -222,6 +346,9 @@
         },
         "id": "declaration.entity.name.function_getFollowers_-1:0"
       },
+      "parentId": "ConnectApi.chatter",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -229,17 +356,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -248,30 +375,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.​FollowerPage getFollowers(String communityId, String recordId)",
+      "signature": "public static ConnectApi.FollowerPage getFollowers(String communityId, String recordId)",
+      "overrideSignature": "public static override ConnectApi.FollowerPage getFollowers(String communityId, String recordId)",
       "simplifiedSignature": "getFollowers(String,String)",
       "datatype": {
-        "id": "ConnectApi.chatter.getfollowers.ConnectApi.​FollowerPage",
+        "id": "ConnectApi.chatter.getfollowers.datatype.ConnectApi.FollowerPage",
         "nodeType": "datatype",
-        "name": "ConnectApi.​FollowerPage"
+        "name": "ConnectApi.FollowerPage",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.chatter.getfollowers",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.FollowerPage"
       },
       "description": "Get the first page of followers for a record.",
+      "parentName": "Chatter",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.chatter.getfollowers.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.chatter.method.getfollowers(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -280,28 +433,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:58"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:58"
+          },
+          "parentId": "ConnectApi.chatter.method.getfollowers(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.chatter.getfollowers.string",
+            "id": "ConnectApi.chatter.getfollowers.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 51
+                },
+                "end": {
+                  "line": 0,
+                  "character": 57
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:51"
+            },
+            "parentId": "ConnectApi.chatter.getfollowers",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "recordId": {
-          "id": "ConnectApi.chatter.getfollowers.recordid",
-          "type": "var",
+        "recordid": {
+          "id": "ConnectApi.chatter.method.getfollowers(string,string).varParam.recordid",
+          "nodeType": "variable",
           "name": "recordId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,29 +508,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_recordId_-1:0"
+            "id": "token.type.identifier_recordId_0:78"
           },
-          "signature": "String recordId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordId",
+            "textToLower": "recordid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 78
+              },
+              "end": {
+                "line": 0,
+                "character": 86
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordId_0:78"
+          },
+          "parentId": "ConnectApi.chatter.method.getfollowers(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.chatter.getfollowers.string",
+            "id": "ConnectApi.chatter.getfollowers.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 71
+                },
+                "end": {
+                  "line": 0,
+                  "character": 77
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:71"
+            },
+            "parentId": "ConnectApi.chatter.getfollowers",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID for a record or the keyword me.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getfollowers(string,string,integer,integer)": {
-      "id": "ConnectApi.chatter.getfollowers",
+      "id": "ConnectApi.chatter.method.getfollowers(string,string,integer,integer)",
       "nodeType": "method",
       "name": "getFollowers",
       "startToken": {
@@ -354,6 +600,9 @@
         },
         "id": "declaration.entity.name.function_getFollowers_-1:0"
       },
+      "parentId": "ConnectApi.chatter",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -361,17 +610,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -380,30 +629,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.​FollowerPage getFollowers(String communityId, String recordId, Integer pageParam, Integer pageSize)",
+      "signature": "public static ConnectApi.FollowerPage getFollowers(String communityId, String recordId, Integer pageParam, Integer pageSize)",
+      "overrideSignature": "public static override ConnectApi.FollowerPage getFollowers(String communityId, String recordId, Integer pageParam, Integer pageSize)",
       "simplifiedSignature": "getFollowers(String,String,Integer,Integer)",
       "datatype": {
-        "id": "ConnectApi.chatter.getfollowers.ConnectApi.​FollowerPage",
+        "id": "ConnectApi.chatter.getfollowers.datatype.ConnectApi.FollowerPage",
         "nodeType": "datatype",
-        "name": "ConnectApi.​FollowerPage"
+        "name": "ConnectApi.FollowerPage",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.chatter.getfollowers",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.FollowerPage"
       },
       "description": "Get a page of followers for a record.",
+      "parentName": "Chatter",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.chatter.getfollowers.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.chatter.method.getfollowers(string,string,integer,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -412,28 +687,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:58"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 58
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:58"
+          },
+          "parentId": "ConnectApi.chatter.method.getfollowers(string,string,integer,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.chatter.getfollowers.string",
+            "id": "ConnectApi.chatter.getfollowers.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 51
+                },
+                "end": {
+                  "line": 0,
+                  "character": 57
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:51"
+            },
+            "parentId": "ConnectApi.chatter.getfollowers",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "recordId": {
-          "id": "ConnectApi.chatter.getfollowers.recordid",
-          "type": "var",
+        "recordid": {
+          "id": "ConnectApi.chatter.method.getfollowers(string,string,integer,integer).varParam.recordid",
+          "nodeType": "variable",
           "name": "recordId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -442,28 +762,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_recordId_-1:0"
+            "id": "token.type.identifier_recordId_0:78"
           },
-          "signature": "String recordId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordId",
+            "textToLower": "recordid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 78
+              },
+              "end": {
+                "line": 0,
+                "character": 86
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordId_0:78"
+          },
+          "parentId": "ConnectApi.chatter.method.getfollowers(string,string,integer,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.chatter.getfollowers.string",
+            "id": "ConnectApi.chatter.getfollowers.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 71
+                },
+                "end": {
+                  "line": 0,
+                  "character": 77
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:71"
+            },
+            "parentId": "ConnectApi.chatter.getfollowers",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "pageParam": {
-          "id": "ConnectApi.chatter.getfollowers.pageparam",
-          "type": "var",
+        "pageparam": {
+          "id": "ConnectApi.chatter.method.getfollowers(string,string,integer,integer).varParam.pageparam",
+          "nodeType": "variable",
           "name": "pageParam",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -472,28 +837,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 96
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 105
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageParam_-1:0"
+            "id": "token.type.identifier_pageParam_0:96"
           },
-          "signature": "Integer pageParam",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 96
+              },
+              "end": {
+                "line": 0,
+                "character": 105
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:96"
+          },
+          "parentId": "ConnectApi.chatter.method.getfollowers(string,string,integer,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.chatter.getfollowers.integer",
+            "id": "ConnectApi.chatter.getfollowers.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 88
+                },
+                "end": {
+                  "line": 0,
+                  "character": 95
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:88"
+            },
+            "parentId": "ConnectApi.chatter.getfollowers",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
-        "pageSize": {
-          "id": "ConnectApi.chatter.getfollowers.pagesize",
-          "type": "var",
+        "pagesize": {
+          "id": "ConnectApi.chatter.method.getfollowers(string,string,integer,integer).varParam.pagesize",
+          "nodeType": "variable",
           "name": "pageSize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -502,29 +912,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 115
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 123
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageSize_-1:0"
+            "id": "token.type.identifier_pageSize_0:115"
           },
-          "signature": "Integer pageSize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 115
+              },
+              "end": {
+                "line": 0,
+                "character": 123
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:115"
+          },
+          "parentId": "ConnectApi.chatter.method.getfollowers(string,string,integer,integer)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.chatter.getfollowers.integer",
+            "id": "ConnectApi.chatter.getfollowers.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 107
+                },
+                "end": {
+                  "line": 0,
+                  "character": 114
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:107"
+            },
+            "parentId": "ConnectApi.chatter.getfollowers",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID for a record or the keyword me. Specifies the number of the page you want returned. Starts at 0. If you pass in null or 0, the first page is returned. Specifies the number of items per page. Valid values are from 1 through 100. If you pass in null, the default size is 25.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getsubscription(string,string)": {
-      "id": "ConnectApi.chatter.getsubscription",
+      "id": "ConnectApi.chatter.method.getsubscription(string,string)",
       "nodeType": "method",
       "name": "getSubscription",
       "startToken": {
@@ -546,6 +1004,9 @@
         },
         "id": "declaration.entity.name.function_getSubscription_-1:0"
       },
+      "parentId": "ConnectApi.chatter",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -553,17 +1014,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -572,30 +1033,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.​Subscription getSubscription(String communityId, String subscriptionId)",
+      "signature": "public static ConnectApi.Subscription getSubscription(String communityId, String subscriptionId)",
+      "overrideSignature": "public static override ConnectApi.Subscription getSubscription(String communityId, String subscriptionId)",
       "simplifiedSignature": "getSubscription(String,String)",
       "datatype": {
-        "id": "ConnectApi.chatter.getsubscription.ConnectApi.​Subscription",
+        "id": "ConnectApi.chatter.getsubscription.datatype.ConnectApi.Subscription",
         "nodeType": "datatype",
-        "name": "ConnectApi.​Subscription"
+        "name": "ConnectApi.Subscription",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.chatter.getsubscription",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.Subscription"
       },
       "description": "Get information about a subscription.",
+      "parentName": "Chatter",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.chatter.getsubscription.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.chatter.method.getsubscription(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -604,28 +1091,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:61"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:61"
+          },
+          "parentId": "ConnectApi.chatter.method.getsubscription(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.chatter.getsubscription.string",
+            "id": "ConnectApi.chatter.getsubscription.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:54"
+            },
+            "parentId": "ConnectApi.chatter.getsubscription",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "subscriptionId": {
-          "id": "ConnectApi.chatter.getsubscription.subscriptionid",
-          "type": "var",
+        "subscriptionid": {
+          "id": "ConnectApi.chatter.method.getsubscription(string,string).varParam.subscriptionid",
+          "nodeType": "variable",
           "name": "subscriptionId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -634,29 +1166,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_subscriptionId_-1:0"
+            "id": "token.type.identifier_subscriptionId_0:81"
           },
-          "signature": "String subscriptionId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "subscriptionId",
+            "textToLower": "subscriptionid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 95
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_subscriptionId_0:81"
+          },
+          "parentId": "ConnectApi.chatter.method.getsubscription(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.chatter.getsubscription.string",
+            "id": "ConnectApi.chatter.getsubscription.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 80
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:74"
+            },
+            "parentId": "ConnectApi.chatter.getsubscription",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. The ID for a subscription.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "submitdigestjob(connectapi.digestperiod)": {
-      "id": "ConnectApi.chatter.submitdigestjob",
+      "id": "ConnectApi.chatter.method.submitdigestjob(connectapi.digestperiod)",
       "nodeType": "method",
       "name": "submitDigestJob",
       "startToken": {
@@ -678,6 +1258,9 @@
         },
         "id": "declaration.entity.name.function_submitDigestJob_-1:0"
       },
+      "parentId": "ConnectApi.chatter",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -685,17 +1268,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -704,30 +1287,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.DigestJob submitDigestJob(ConnectApi.DigestPeriod period)",
+      "signature": "public static ConnectApi.DigestJobRepresentation submitDigestJob(ConnectApi.DigestPeriod period)",
+      "overrideSignature": "public static override ConnectApi.DigestJobRepresentation submitDigestJob(ConnectApi.DigestPeriod period)",
       "simplifiedSignature": "submitDigestJob(ConnectApi.DigestPeriod)",
       "datatype": {
-        "id": "ConnectApi.chatter.submitdigestjob.ConnectApi.DigestJob",
+        "id": "ConnectApi.chatter.submitdigestjob.datatype.ConnectApi.DigestJobRepresentation",
         "nodeType": "datatype",
-        "name": "ConnectApi.DigestJob"
+        "name": "ConnectApi.DigestJobRepresentation",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.chatter.submitdigestjob",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.DigestJobRepresentation"
       },
       "description": "Submit a daily or weekly Chatter email digest job.",
+      "parentName": "Chatter",
+      "variables": {},
       "params": {
         "period": {
-          "id": "ConnectApi.chatter.submitdigestjob.period",
-          "type": "var",
+          "id": "ConnectApi.chatter.method.submitdigestjob(connectapi.digestperiod).varParam.period",
+          "nodeType": "variable",
           "name": "period",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -736,30 +1345,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 89
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_period_-1:0"
+            "id": "token.type.identifier_period_0:89"
           },
-          "signature": "ConnectApi.DigestPeriod period",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "period",
+            "textToLower": "period",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 89
+              },
+              "end": {
+                "line": 0,
+                "character": 95
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_period_0:89"
+          },
+          "parentId": "ConnectApi.chatter.method.submitdigestjob(connectapi.digestperiod)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.chatter.submitdigestjob.connectapi.digestperiod",
+            "id": "ConnectApi.chatter.submitdigestjob.datatype.ConnectApi.DigestPeriod",
             "nodeType": "datatype",
-            "name": "ConnectApi.DigestPeriod"
-          }
+            "name": "ConnectApi.DigestPeriod",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 75
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:65"
+            },
+            "parentId": "ConnectApi.chatter.submitdigestjob",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.DigestPeriod"
+          },
+          "description": "Period of time that is included in a Chatter email digest. Values are:  DailyDigest—The email includes up to the 50 latest posts from the previous day.   WeeklyDigest—The email includes up to the 50 latest posts from the previous week.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 5,
+  "queries": []
 }

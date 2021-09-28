@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Search_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "find(string)": {
-      "id": "System.search.find",
+      "id": "System.search.method.find(string)",
       "nodeType": "method",
       "name": "find",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_find_-1:0"
       },
+      "parentId": "System.search",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Search.SearchResults find(String searchQuery)",
+      "overrideSignature": "public static override Search.SearchResults find(String searchQuery)",
       "simplifiedSignature": "find(String)",
       "datatype": {
-        "id": "System.search.find.Search.SearchResults",
+        "id": "System.search.find.datatype.Search.SearchResults",
         "nodeType": "datatype",
-        "name": "Search.SearchResults"
+        "name": "Search.SearchResults",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Search",
+          "textToLower": "search",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Search_0:14"
+        },
+        "parentId": "System.search.find",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Search.SearchResults"
       },
       "description": "Performs a dynamic SOSL query that can include the SOSL WITH SNIPPET clause. Snippets provide more context for users in Salesforce Knowledge article search results.",
+      "parentName": "Search",
+      "variables": {},
       "params": {
-        "searchQuery": {
-          "id": "System.search.find.searchquery",
-          "type": "var",
+        "searchquery": {
+          "id": "System.search.method.find(string).varParam.searchquery",
+          "nodeType": "variable",
           "name": "searchQuery",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,29 +179,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 58
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_searchQuery_-1:0"
+            "id": "token.type.identifier_searchQuery_0:47"
           },
-          "signature": "String searchQuery",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "searchQuery",
+            "textToLower": "searchquery",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_searchQuery_0:47"
+          },
+          "parentId": "System.search.method.find(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.search.find.string",
+            "id": "System.search.find.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 40
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:40"
+            },
+            "parentId": "System.search.find",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "A SOSL query string.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "query(string)": {
-      "id": "System.search.query",
+      "id": "System.search.method.query(string)",
       "nodeType": "method",
       "name": "query",
       "startToken": {
@@ -192,6 +271,9 @@
         },
         "id": "declaration.entity.name.function_query_-1:0"
       },
+      "parentId": "System.search",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -199,17 +281,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -218,30 +300,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static sObject[sObject[]] query(String query)",
+      "overrideSignature": "public static override sObject[sObject[]] query(String query)",
       "simplifiedSignature": "query(String)",
       "datatype": {
-        "id": "System.search.query.sObject[sObject[]]",
+        "id": "System.search.query.datatype.sObject[sObject[]]",
         "nodeType": "datatype",
-        "name": "sObject[sObject[]]"
+        "name": "sObject[sObject[]]",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "sObject",
+          "textToLower": "sobject",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_sObject_0:14"
+        },
+        "parentId": "System.search.query",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "sObject[sObject[]]"
       },
       "description": "Performs a dynamic SOSL query.",
+      "parentName": "Search",
+      "variables": {},
       "params": {
         "query": {
-          "id": "System.search.query.query",
-          "type": "var",
+          "id": "System.search.method.query(string).varParam.query",
+          "nodeType": "variable",
           "name": "query",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -250,29 +358,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_query_-1:0"
+            "id": "token.type.identifier_query_0:46"
           },
-          "signature": "String query",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "query",
+            "textToLower": "query",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 46
+              },
+              "end": {
+                "line": 0,
+                "character": 51
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_query_0:46"
+          },
+          "parentId": "System.search.method.query(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.search.query.string",
+            "id": "System.search.query.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:39"
+            },
+            "parentId": "System.search.query",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "A SOSL query string. To create a SOSL query that includes the WITH SNIPPET clause, use the Search.find(String searchQuery) method instead.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "suggest(string,string,search.suggestionoption)": {
-      "id": "System.search.suggest",
+      "id": "System.search.method.suggest(string,string,search.suggestionoption)",
       "nodeType": "method",
       "name": "suggest",
       "startToken": {
@@ -294,6 +450,9 @@
         },
         "id": "declaration.entity.name.function_suggest_-1:0"
       },
+      "parentId": "System.search",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -301,17 +460,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -320,30 +479,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static SuggestionResults suggest(String searchQuery, String sObjectType, Search.SuggestionOption suggestions)",
+      "signature": "public static Search.SuggestionResults suggest(String searchQuery, String sObjectType, Search.SuggestionOption suggestions)",
+      "overrideSignature": "public static override Search.SuggestionResults suggest(String searchQuery, String sObjectType, Search.SuggestionOption suggestions)",
       "simplifiedSignature": "suggest(String,String,Search.SuggestionOption)",
       "datatype": {
-        "id": "System.search.suggest.SuggestionResults",
+        "id": "System.search.suggest.datatype.Search.SuggestionResults",
         "nodeType": "datatype",
-        "name": "SuggestionResults"
+        "name": "Search.SuggestionResults",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Search",
+          "textToLower": "search",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Search_0:14"
+        },
+        "parentId": "System.search.suggest",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Search.SuggestionResults"
       },
       "description": "Returns a list of records or Salesforce Knowledge articles whose names or titles match the user’s search query string. Use this method to provide users with shortcuts to navigate to relevant records or articles before they perform a search.",
+      "parentName": "Search",
+      "variables": {},
       "params": {
-        "searchQuery": {
-          "id": "System.search.suggest.searchquery",
-          "type": "var",
+        "searchquery": {
+          "id": "System.search.method.suggest(string,string,search.suggestionoption).varParam.searchquery",
+          "nodeType": "variable",
           "name": "searchQuery",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -352,28 +537,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 65
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_searchQuery_-1:0"
+            "id": "token.type.identifier_searchQuery_0:54"
           },
-          "signature": "String searchQuery",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "searchQuery",
+            "textToLower": "searchquery",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 65
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_searchQuery_0:54"
+          },
+          "parentId": "System.search.method.suggest(string,string,search.suggestionoption)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.search.suggest.string",
+            "id": "System.search.suggest.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 47
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:47"
+            },
+            "parentId": "System.search.suggest",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "sObjectType": {
-          "id": "System.search.suggest.sobjecttype",
-          "type": "var",
+        "sobjecttype": {
+          "id": "System.search.method.suggest(string,string,search.suggestionoption).varParam.sobjecttype",
+          "nodeType": "variable",
           "name": "sObjectType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -382,28 +612,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 74
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 85
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_sObjectType_-1:0"
+            "id": "token.type.identifier_sObjectType_0:74"
           },
-          "signature": "String sObjectType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sObjectType",
+            "textToLower": "sobjecttype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 74
+              },
+              "end": {
+                "line": 0,
+                "character": 85
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sObjectType_0:74"
+          },
+          "parentId": "System.search.method.suggest(string,string,search.suggestionoption)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.search.suggest.string",
+            "id": "System.search.suggest.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 67
+                },
+                "end": {
+                  "line": 0,
+                  "character": 73
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:67"
+            },
+            "parentId": "System.search.suggest",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "suggestions": {
-          "id": "System.search.suggest.suggestions",
-          "type": "var",
+          "id": "System.search.method.suggest(string,string,search.suggestionoption).varParam.suggestions",
+          "nodeType": "variable",
           "name": "suggestions",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -412,30 +687,79 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 111
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 122
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_suggestions_-1:0"
+            "id": "token.type.identifier_suggestions_0:111"
           },
-          "signature": "Search.SuggestionOption suggestions",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "suggestions",
+            "textToLower": "suggestions",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 111
+              },
+              "end": {
+                "line": 0,
+                "character": 122
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_suggestions_0:111"
+          },
+          "parentId": "System.search.method.suggest(string,string,search.suggestionoption)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.search.suggest.search.suggestionoption",
+            "id": "System.search.suggest.datatype.Search.SuggestionOption",
             "nodeType": "datatype",
-            "name": "Search.SuggestionOption"
-          }
+            "name": "Search.SuggestionOption",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Search",
+              "textToLower": "search",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 87
+                },
+                "end": {
+                  "line": 0,
+                  "character": 93
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Search_0:87"
+            },
+            "parentId": "System.search.suggest",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Search.SuggestionOption"
+          },
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 3,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_StandardController_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "addfields(list)": {
-      "id": "ApexPages.standardcontroller.addfields",
+    "addfields(list<string>)": {
+      "id": "ApexPages.standardcontroller.method.addfields(list<string>)",
       "nodeType": "method",
       "name": "addFields",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_addFields_-1:0"
       },
+      "parentId": "ApexPages.standardcontroller",
+      "order": 1,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,61 +102,162 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void addFields(List <String>)",
-      "simplifiedSignature": "addFields(List)",
+      "signature": "public Void addFields(List<String> fieldNames)",
+      "overrideSignature": "public override Void addFields(List<String> fieldNames)",
+      "simplifiedSignature": "addFields(List<String>)",
       "datatype": {
-        "id": "ApexPages.standardcontroller.addfields.void",
+        "id": "ApexPages.standardcontroller.addfields.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "ApexPages.standardcontroller.addfields",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "When a Visualforce page is loaded, the fields accessible to the page are based on the fields referenced in the Visualforce markup. This method adds a reference to each field specified in fieldNames so that the controller can explicitly access those fields as well.",
+      "parentName": "StandardController",
+      "variables": {},
       "params": {
-        "<String>": {
-          "id": "ApexPages.standardcontroller.addfields.<string>",
-          "type": "var",
-          "name": "<String>",
+        "fieldnames": {
+          "id": "ApexPages.standardcontroller.method.addfields(list<string>).varParam.fieldnames",
+          "nodeType": "variable",
+          "name": "fieldNames",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "fieldNames",
+            "textToLower": "fieldnames",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_fieldNames_0:35"
           },
-          "signature": "List <String>",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fieldNames",
+            "textToLower": "fieldnames",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 35
+              },
+              "end": {
+                "line": 0,
+                "character": 45
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fieldNames_0:35"
+          },
+          "parentId": "ApexPages.standardcontroller.method.addfields(list<string>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ApexPages.standardcontroller.addfields.list",
+            "id": "ApexPages.standardcontroller.addfields.datatype.List<String>",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 26
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:22"
+            },
+            "parentId": "ApexPages.standardcontroller.addfields",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "ApexPages.standardcontroller.addfields.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 27
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 33
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:27"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "cancel()": {
-      "id": "ApexPages.standardcontroller.cancel",
+      "id": "ApexPages.standardcontroller.method.cancel()",
       "nodeType": "method",
       "name": "cancel",
       "startToken": {
@@ -173,6 +279,9 @@
         },
         "id": "declaration.entity.name.function_cancel_-1:0"
       },
+      "parentId": "ApexPages.standardcontroller",
+      "order": 2,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -180,30 +289,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public System.PageReference cancel()",
+      "overrideSignature": "public override System.PageReference cancel()",
       "simplifiedSignature": "cancel()",
       "datatype": {
-        "id": "ApexPages.standardcontroller.cancel.System.PageReference",
+        "id": "ApexPages.standardcontroller.cancel.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:7"
+        },
+        "parentId": "ApexPages.standardcontroller.cancel",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Returns the PageReference of the cancel page.",
-      "params": {}
+      "parentName": "StandardController",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "delete()": {
-      "id": "ApexPages.standardcontroller.delete",
+      "id": "ApexPages.standardcontroller.method.delete()",
       "nodeType": "method",
       "name": "delete",
       "startToken": {
@@ -225,6 +362,9 @@
         },
         "id": "declaration.entity.name.function_delete_-1:0"
       },
+      "parentId": "ApexPages.standardcontroller",
+      "order": 3,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -232,30 +372,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public System.PageReference delete()",
+      "overrideSignature": "public override System.PageReference delete()",
       "simplifiedSignature": "delete()",
       "datatype": {
-        "id": "ApexPages.standardcontroller.delete.System.PageReference",
+        "id": "ApexPages.standardcontroller.delete.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:7"
+        },
+        "parentId": "ApexPages.standardcontroller.delete",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Deletes record and returns the PageReference of the delete page.",
-      "params": {}
+      "parentName": "StandardController",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "edit()": {
-      "id": "ApexPages.standardcontroller.edit",
+      "id": "ApexPages.standardcontroller.method.edit()",
       "nodeType": "method",
       "name": "edit",
       "startToken": {
@@ -277,6 +445,9 @@
         },
         "id": "declaration.entity.name.function_edit_-1:0"
       },
+      "parentId": "ApexPages.standardcontroller",
+      "order": 4,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -284,30 +455,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public System.PageReference edit()",
+      "overrideSignature": "public override System.PageReference edit()",
       "simplifiedSignature": "edit()",
       "datatype": {
-        "id": "ApexPages.standardcontroller.edit.System.PageReference",
+        "id": "ApexPages.standardcontroller.edit.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:7"
+        },
+        "parentId": "ApexPages.standardcontroller.edit",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Returns the PageReference of the standard edit page.",
-      "params": {}
+      "parentName": "StandardController",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getid()": {
-      "id": "ApexPages.standardcontroller.getid",
+      "id": "ApexPages.standardcontroller.method.getid()",
       "nodeType": "method",
       "name": "getId",
       "startToken": {
@@ -329,6 +528,9 @@
         },
         "id": "declaration.entity.name.function_getId_-1:0"
       },
+      "parentId": "ApexPages.standardcontroller",
+      "order": 5,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -336,30 +538,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getId()",
+      "overrideSignature": "public override String getId()",
       "simplifiedSignature": "getId()",
       "datatype": {
-        "id": "ApexPages.standardcontroller.getid.String",
+        "id": "ApexPages.standardcontroller.getid.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "ApexPages.standardcontroller.getid",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the ID of the record that is currently in context, based on the value of the id query string parameter in the Visualforce page URL.",
-      "params": {}
+      "parentName": "StandardController",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getrecord()": {
-      "id": "ApexPages.standardcontroller.getrecord",
+      "id": "ApexPages.standardcontroller.method.getrecord()",
       "nodeType": "method",
       "name": "getRecord",
       "startToken": {
@@ -381,6 +611,9 @@
         },
         "id": "declaration.entity.name.function_getRecord_-1:0"
       },
+      "parentId": "ApexPages.standardcontroller",
+      "order": 6,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -388,30 +621,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public sObject getRecord()",
+      "signature": "public SObject getRecord()",
+      "overrideSignature": "public override SObject getRecord()",
       "simplifiedSignature": "getRecord()",
       "datatype": {
-        "id": "ApexPages.standardcontroller.getrecord.sObject",
+        "id": "ApexPages.standardcontroller.getrecord.datatype.SObject",
         "nodeType": "datatype",
-        "name": "sObject"
+        "name": "SObject",
+        "startToken": {
+          "type": "datatype.custom.class",
+          "text": "SObject",
+          "textToLower": "sobject",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_SObject_0:7"
+        },
+        "parentId": "ApexPages.standardcontroller.getrecord",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "SObject"
       },
       "description": "Returns the record that is currently in context, based on the value of the id query string parameter in the Visualforce page URL.",
-      "params": {}
+      "parentName": "StandardController",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "reset()": {
-      "id": "ApexPages.standardcontroller.reset",
+      "id": "ApexPages.standardcontroller.method.reset()",
       "nodeType": "method",
       "name": "reset",
       "startToken": {
@@ -433,6 +694,9 @@
         },
         "id": "declaration.entity.name.function_reset_-1:0"
       },
+      "parentId": "ApexPages.standardcontroller",
+      "order": 7,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -440,30 +704,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public void reset()",
+      "signature": "public Void reset()",
+      "overrideSignature": "public override Void reset()",
       "simplifiedSignature": "reset()",
       "datatype": {
-        "id": "ApexPages.standardcontroller.reset.void",
+        "id": "ApexPages.standardcontroller.reset.datatype.Void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "Void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Void_0:7"
+        },
+        "parentId": "ApexPages.standardcontroller.reset",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Void"
       },
       "description": "Forces the controller to reacquire access to newly referenced fields. Any changes made to the record prior to this method call are discarded.",
-      "params": {}
+      "parentName": "StandardController",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "save()": {
-      "id": "ApexPages.standardcontroller.save",
+      "id": "ApexPages.standardcontroller.method.save()",
       "nodeType": "method",
       "name": "save",
       "startToken": {
@@ -485,6 +777,9 @@
         },
         "id": "declaration.entity.name.function_save_-1:0"
       },
+      "parentId": "ApexPages.standardcontroller",
+      "order": 8,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -492,30 +787,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public System.PageReference save()",
+      "overrideSignature": "public override System.PageReference save()",
       "simplifiedSignature": "save()",
       "datatype": {
-        "id": "ApexPages.standardcontroller.save.System.PageReference",
+        "id": "ApexPages.standardcontroller.save.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:7"
+        },
+        "parentId": "ApexPages.standardcontroller.save",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Saves changes and returns the updated PageReference.",
-      "params": {}
+      "parentName": "StandardController",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "view()": {
-      "id": "ApexPages.standardcontroller.view",
+      "id": "ApexPages.standardcontroller.method.view()",
       "nodeType": "method",
       "name": "view",
       "startToken": {
@@ -537,6 +860,9 @@
         },
         "id": "declaration.entity.name.function_view_-1:0"
       },
+      "parentId": "ApexPages.standardcontroller",
+      "order": 9,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -544,32 +870,60 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public System.PageReference view()",
+      "overrideSignature": "public override System.PageReference view()",
       "simplifiedSignature": "view()",
       "datatype": {
-        "id": "ApexPages.standardcontroller.view.System.PageReference",
+        "id": "ApexPages.standardcontroller.view.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:7"
+        },
+        "parentId": "ApexPages.standardcontroller.view",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Returns the PageReference object of the standard detail page.",
-      "params": {}
+      "parentName": "StandardController",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {
     "standardcontroller(sobject)": {
-      "id": "ApexPages.standardcontroller.standardcontroller",
+      "id": "ApexPages.standardcontroller.method.standardcontroller(sobject)",
       "nodeType": "constructor",
       "name": "StandardController",
       "startToken": {
@@ -591,6 +945,9 @@
         },
         "id": "declaration.entity.name.function_StandardController_-1:0"
       },
+      "parentId": "ApexPages.standardcontroller",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -598,30 +955,28 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public StandardController(SObject controllerSObject)",
+      "overrideSignature": "public override StandardController(SObject controllerSObject)",
       "simplifiedSignature": "StandardController(SObject)",
-      "datatype": {
-        "id": "ApexPages.standardcontroller.standardcontroller.constructor",
-        "nodeType": "datatype",
-        "name": "StandardController"
-      },
       "description": "Creates a new instance of the ApexPages.StandardController class for the specified standard or custom object.",
+      "parentName": "StandardController",
+      "variables": {},
       "params": {
-        "controllerSObject": {
-          "id": "ApexPages.standardcontroller.standardcontroller.controllersobject",
-          "type": "var",
+        "controllersobject": {
+          "id": "ApexPages.standardcontroller.method.standardcontroller(sobject).varParam.controllersobject",
+          "nodeType": "variable",
           "name": "controllerSObject",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -630,29 +985,79 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_controllerSObject_-1:0"
+            "id": "token.type.identifier_controllerSObject_0:34"
           },
-          "signature": "SObject controllerSObject",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "controllerSObject",
+            "textToLower": "controllersobject",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 51
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_controllerSObject_0:34"
+          },
+          "parentId": "ApexPages.standardcontroller.method.standardcontroller(sobject)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ApexPages.standardcontroller.standardcontroller.sobject",
+            "id": "ApexPages.standardcontroller.standardcontroller.datatype.SObject",
             "nodeType": "datatype",
-            "name": "SObject"
-          }
+            "name": "SObject",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "SObject",
+              "textToLower": "sobject",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 26
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_SObject_0:26"
+            },
+            "parentId": "ApexPages.standardcontroller.standardcontroller",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "SObject"
+          },
+          "description": "A standard or custom object.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 10,
+  "queries": []
 }

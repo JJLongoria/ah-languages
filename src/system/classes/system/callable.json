@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Callable_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "add(string,datetime,long)": {
-      "id": "System.callable.add",
+      "id": "System.callable.method.add(string,datetime,long)",
       "nodeType": "method",
       "name": "add",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_add_-1:0"
       },
+      "parentId": "System.callable",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Datetime add(String businessHoursId, Datetime startDate, Long intervalMilliseconds)",
+      "overrideSignature": "public static override Datetime add(String businessHoursId, Datetime startDate, Long intervalMilliseconds)",
       "simplifiedSignature": "add(String,Datetime,Long)",
       "datatype": {
-        "id": "System.callable.add.Datetime",
+        "id": "System.callable.add.datatype.Datetime",
         "nodeType": "datatype",
-        "name": "Datetime"
+        "name": "Datetime",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Datetime",
+          "textToLower": "datetime",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Datetime_0:14"
+        },
+        "parentId": "System.callable.add",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Datetime"
       },
       "description": "Adds an interval of time from a start Datetime traversing business hours only. Returns the result Datetime in the local time zone.",
+      "parentName": "Callable",
+      "variables": {},
       "params": {
-        "businessHoursId": {
-          "id": "System.callable.add.businesshoursid",
-          "type": "var",
+        "businesshoursid": {
+          "id": "System.callable.method.add(string,datetime,long).varParam.businesshoursid",
+          "nodeType": "variable",
           "name": "businessHoursId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_businessHoursId_-1:0"
+            "id": "token.type.identifier_businessHoursId_0:34"
           },
-          "signature": "String businessHoursId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "businessHoursId",
+            "textToLower": "businesshoursid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 34
+              },
+              "end": {
+                "line": 0,
+                "character": 49
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_businessHoursId_0:34"
+          },
+          "parentId": "System.callable.method.add(string,datetime,long)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.callable.add.string",
+            "id": "System.callable.add.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 27
+                },
+                "end": {
+                  "line": 0,
+                  "character": 33
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:27"
+            },
+            "parentId": "System.callable.add",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "startDate": {
-          "id": "System.callable.add.startdate",
-          "type": "var",
+        "startdate": {
+          "id": "System.callable.method.add(string,datetime,long).varParam.startdate",
+          "nodeType": "variable",
           "name": "startDate",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,28 +254,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_startDate_-1:0"
+            "id": "token.type.identifier_startDate_0:60"
           },
-          "signature": "Datetime startDate",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "startDate",
+            "textToLower": "startdate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 60
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_startDate_0:60"
+          },
+          "parentId": "System.callable.method.add(string,datetime,long)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.callable.add.datetime",
+            "id": "System.callable.add.datatype.Datetime",
             "nodeType": "datatype",
-            "name": "Datetime"
-          }
+            "name": "Datetime",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Datetime",
+              "textToLower": "datetime",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 51
+                },
+                "end": {
+                  "line": 0,
+                  "character": 59
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Datetime_0:51"
+            },
+            "parentId": "System.callable.add",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Datetime"
+          },
+          "scope": null
         },
-        "intervalMilliseconds": {
-          "id": "System.callable.add.intervalmilliseconds",
-          "type": "var",
+        "intervalmilliseconds": {
+          "id": "System.callable.method.add(string,datetime,long).varParam.intervalmilliseconds",
+          "nodeType": "variable",
           "name": "intervalMilliseconds",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -208,29 +329,76 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 76
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 96
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_intervalMilliseconds_-1:0"
+            "id": "token.type.identifier_intervalMilliseconds_0:76"
           },
-          "signature": "Long intervalMilliseconds",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "intervalMilliseconds",
+            "textToLower": "intervalmilliseconds",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 76
+              },
+              "end": {
+                "line": 0,
+                "character": 96
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_intervalMilliseconds_0:76"
+          },
+          "parentId": "System.callable.method.add(string,datetime,long)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.callable.add.long",
+            "id": "System.callable.add.datatype.Long",
             "nodeType": "datatype",
-            "name": "Long"
-          }
+            "name": "Long",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Long",
+              "textToLower": "long",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 71
+                },
+                "end": {
+                  "line": 0,
+                  "character": 75
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Long_0:71"
+            },
+            "parentId": "System.callable.add",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Long"
+          },
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "addgmt(string,datetime,long)": {
-      "id": "System.callable.addgmt",
+      "id": "System.callable.method.addgmt(string,datetime,long)",
       "nodeType": "method",
       "name": "addGmt",
       "startToken": {
@@ -252,6 +420,9 @@
         },
         "id": "declaration.entity.name.function_addGmt_-1:0"
       },
+      "parentId": "System.callable",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -259,17 +430,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -278,30 +449,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Datetime addGmt(String businessHoursId, Datetime startDate, Long intervalMilliseconds)",
+      "overrideSignature": "public static override Datetime addGmt(String businessHoursId, Datetime startDate, Long intervalMilliseconds)",
       "simplifiedSignature": "addGmt(String,Datetime,Long)",
       "datatype": {
-        "id": "System.callable.addgmt.Datetime",
+        "id": "System.callable.addgmt.datatype.Datetime",
         "nodeType": "datatype",
-        "name": "Datetime"
+        "name": "Datetime",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Datetime",
+          "textToLower": "datetime",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Datetime_0:14"
+        },
+        "parentId": "System.callable.addgmt",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Datetime"
       },
       "description": "Adds an interval of milliseconds from a start Datetime traversing business hours only. Returns the result Datetime in GMT.",
+      "parentName": "Callable",
+      "variables": {},
       "params": {
-        "businessHoursId": {
-          "id": "System.callable.addgmt.businesshoursid",
-          "type": "var",
+        "businesshoursid": {
+          "id": "System.callable.method.addgmt(string,datetime,long).varParam.businesshoursid",
+          "nodeType": "variable",
           "name": "businessHoursId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,28 +507,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_businessHoursId_-1:0"
+            "id": "token.type.identifier_businessHoursId_0:37"
           },
-          "signature": "String businessHoursId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "businessHoursId",
+            "textToLower": "businesshoursid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_businessHoursId_0:37"
+          },
+          "parentId": "System.callable.method.addgmt(string,datetime,long)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.callable.addgmt.string",
+            "id": "System.callable.addgmt.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:30"
+            },
+            "parentId": "System.callable.addgmt",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "startDate": {
-          "id": "System.callable.addgmt.startdate",
-          "type": "var",
+        "startdate": {
+          "id": "System.callable.method.addgmt(string,datetime,long).varParam.startdate",
+          "nodeType": "variable",
           "name": "startDate",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -340,28 +582,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 63
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_startDate_-1:0"
+            "id": "token.type.identifier_startDate_0:63"
           },
-          "signature": "Datetime startDate",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "startDate",
+            "textToLower": "startdate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 63
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_startDate_0:63"
+          },
+          "parentId": "System.callable.method.addgmt(string,datetime,long)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.callable.addgmt.datetime",
+            "id": "System.callable.addgmt.datatype.Datetime",
             "nodeType": "datatype",
-            "name": "Datetime"
-          }
+            "name": "Datetime",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Datetime",
+              "textToLower": "datetime",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 62
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Datetime_0:54"
+            },
+            "parentId": "System.callable.addgmt",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Datetime"
+          },
+          "scope": null
         },
-        "intervalMilliseconds": {
-          "id": "System.callable.addgmt.intervalmilliseconds",
-          "type": "var",
+        "intervalmilliseconds": {
+          "id": "System.callable.method.addgmt(string,datetime,long).varParam.intervalmilliseconds",
+          "nodeType": "variable",
           "name": "intervalMilliseconds",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -370,29 +657,76 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 99
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_intervalMilliseconds_-1:0"
+            "id": "token.type.identifier_intervalMilliseconds_0:79"
           },
-          "signature": "Long intervalMilliseconds",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "intervalMilliseconds",
+            "textToLower": "intervalmilliseconds",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 79
+              },
+              "end": {
+                "line": 0,
+                "character": 99
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_intervalMilliseconds_0:79"
+          },
+          "parentId": "System.callable.method.addgmt(string,datetime,long)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.callable.addgmt.long",
+            "id": "System.callable.addgmt.datatype.Long",
             "nodeType": "datatype",
-            "name": "Long"
-          }
+            "name": "Long",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Long",
+              "textToLower": "long",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 78
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Long_0:74"
+            },
+            "parentId": "System.callable.addgmt",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Long"
+          },
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "diff(string,datetime,datetime)": {
-      "id": "System.callable.diff",
+      "id": "System.callable.method.diff(string,datetime,datetime)",
       "nodeType": "method",
       "name": "diff",
       "startToken": {
@@ -414,6 +748,9 @@
         },
         "id": "declaration.entity.name.function_diff_-1:0"
       },
+      "parentId": "System.callable",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -421,17 +758,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -440,30 +777,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Long diff(String businessHoursId, Datetime startDate, Datetime endDate)",
+      "overrideSignature": "public static override Long diff(String businessHoursId, Datetime startDate, Datetime endDate)",
       "simplifiedSignature": "diff(String,Datetime,Datetime)",
       "datatype": {
-        "id": "System.callable.diff.Long",
+        "id": "System.callable.diff.datatype.Long",
         "nodeType": "datatype",
-        "name": "Long"
+        "name": "Long",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Long",
+          "textToLower": "long",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Long_0:14"
+        },
+        "parentId": "System.callable.diff",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Long"
       },
       "description": "Returns the difference in milliseconds between a start and end Datetime based on a specific set of business hours.",
+      "parentName": "Callable",
+      "variables": {},
       "params": {
-        "businessHoursId": {
-          "id": "System.callable.diff.businesshoursid",
-          "type": "var",
+        "businesshoursid": {
+          "id": "System.callable.method.diff(string,datetime,datetime).varParam.businesshoursid",
+          "nodeType": "variable",
           "name": "businessHoursId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -472,28 +835,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 31
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_businessHoursId_-1:0"
+            "id": "token.type.identifier_businessHoursId_0:31"
           },
-          "signature": "String businessHoursId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "businessHoursId",
+            "textToLower": "businesshoursid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 31
+              },
+              "end": {
+                "line": 0,
+                "character": 46
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_businessHoursId_0:31"
+          },
+          "parentId": "System.callable.method.diff(string,datetime,datetime)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.callable.diff.string",
+            "id": "System.callable.diff.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 24
+                },
+                "end": {
+                  "line": 0,
+                  "character": 30
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:24"
+            },
+            "parentId": "System.callable.diff",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "startDate": {
-          "id": "System.callable.diff.startdate",
-          "type": "var",
+        "startdate": {
+          "id": "System.callable.method.diff(string,datetime,datetime).varParam.startdate",
+          "nodeType": "variable",
           "name": "startDate",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -502,28 +910,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_startDate_-1:0"
+            "id": "token.type.identifier_startDate_0:57"
           },
-          "signature": "Datetime startDate",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "startDate",
+            "textToLower": "startdate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 57
+              },
+              "end": {
+                "line": 0,
+                "character": 66
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_startDate_0:57"
+          },
+          "parentId": "System.callable.method.diff(string,datetime,datetime)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.callable.diff.datetime",
+            "id": "System.callable.diff.datatype.Datetime",
             "nodeType": "datatype",
-            "name": "Datetime"
-          }
+            "name": "Datetime",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Datetime",
+              "textToLower": "datetime",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 48
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Datetime_0:48"
+            },
+            "parentId": "System.callable.diff",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Datetime"
+          },
+          "scope": null
         },
-        "endDate": {
-          "id": "System.callable.diff.enddate",
-          "type": "var",
+        "enddate": {
+          "id": "System.callable.method.diff(string,datetime,datetime).varParam.enddate",
+          "nodeType": "variable",
           "name": "endDate",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -532,29 +985,76 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 77
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_endDate_-1:0"
+            "id": "token.type.identifier_endDate_0:77"
           },
-          "signature": "Datetime endDate",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "endDate",
+            "textToLower": "enddate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 77
+              },
+              "end": {
+                "line": 0,
+                "character": 84
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_endDate_0:77"
+          },
+          "parentId": "System.callable.method.diff(string,datetime,datetime)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "System.callable.diff.datetime",
+            "id": "System.callable.diff.datatype.Datetime",
             "nodeType": "datatype",
-            "name": "Datetime"
-          }
+            "name": "Datetime",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Datetime",
+              "textToLower": "datetime",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 68
+                },
+                "end": {
+                  "line": 0,
+                  "character": 76
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Datetime_0:68"
+            },
+            "parentId": "System.callable.diff",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Datetime"
+          },
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "iswithin(string,datetime)": {
-      "id": "System.callable.iswithin",
+      "id": "System.callable.method.iswithin(string,datetime)",
       "nodeType": "method",
       "name": "isWithin",
       "startToken": {
@@ -576,6 +1076,9 @@
         },
         "id": "declaration.entity.name.function_isWithin_-1:0"
       },
+      "parentId": "System.callable",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -583,17 +1086,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -602,30 +1105,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Boolean isWithin(String businessHoursId, Datetime targetDate)",
+      "overrideSignature": "public static override Boolean isWithin(String businessHoursId, Datetime targetDate)",
       "simplifiedSignature": "isWithin(String,Datetime)",
       "datatype": {
-        "id": "System.callable.iswithin.Boolean",
+        "id": "System.callable.iswithin.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:14"
+        },
+        "parentId": "System.callable.iswithin",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the specified target date occurs within business hours. Holidays are included in the calculation.",
+      "parentName": "Callable",
+      "variables": {},
       "params": {
-        "businessHoursId": {
-          "id": "System.callable.iswithin.businesshoursid",
-          "type": "var",
+        "businesshoursid": {
+          "id": "System.callable.method.iswithin(string,datetime).varParam.businesshoursid",
+          "nodeType": "variable",
           "name": "businessHoursId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -634,28 +1163,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_businessHoursId_-1:0"
+            "id": "token.type.identifier_businessHoursId_0:38"
           },
-          "signature": "String businessHoursId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "businessHoursId",
+            "textToLower": "businesshoursid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 38
+              },
+              "end": {
+                "line": 0,
+                "character": 53
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_businessHoursId_0:38"
+          },
+          "parentId": "System.callable.method.iswithin(string,datetime)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.callable.iswithin.string",
+            "id": "System.callable.iswithin.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 31
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:31"
+            },
+            "parentId": "System.callable.iswithin",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "targetDate": {
-          "id": "System.callable.iswithin.targetdate",
-          "type": "var",
+        "targetdate": {
+          "id": "System.callable.method.iswithin(string,datetime).varParam.targetdate",
+          "nodeType": "variable",
           "name": "targetDate",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -664,29 +1238,76 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 74
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_targetDate_-1:0"
+            "id": "token.type.identifier_targetDate_0:64"
           },
-          "signature": "Datetime targetDate",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "targetDate",
+            "textToLower": "targetdate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 74
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_targetDate_0:64"
+          },
+          "parentId": "System.callable.method.iswithin(string,datetime)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.callable.iswithin.datetime",
+            "id": "System.callable.iswithin.datatype.Datetime",
             "nodeType": "datatype",
-            "name": "Datetime"
-          }
+            "name": "Datetime",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Datetime",
+              "textToLower": "datetime",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 55
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Datetime_0:55"
+            },
+            "parentId": "System.callable.iswithin",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Datetime"
+          },
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "nextstartdate(string,datetime)": {
-      "id": "System.callable.nextstartdate",
+      "id": "System.callable.method.nextstartdate(string,datetime)",
       "nodeType": "method",
       "name": "nextStartDate",
       "startToken": {
@@ -708,6 +1329,9 @@
         },
         "id": "declaration.entity.name.function_nextStartDate_-1:0"
       },
+      "parentId": "System.callable",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -715,17 +1339,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -734,30 +1358,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Datetime nextStartDate(String businessHoursId, Datetime targetDate)",
+      "overrideSignature": "public static override Datetime nextStartDate(String businessHoursId, Datetime targetDate)",
       "simplifiedSignature": "nextStartDate(String,Datetime)",
       "datatype": {
-        "id": "System.callable.nextstartdate.Datetime",
+        "id": "System.callable.nextstartdate.datatype.Datetime",
         "nodeType": "datatype",
-        "name": "Datetime"
+        "name": "Datetime",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Datetime",
+          "textToLower": "datetime",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 22
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Datetime_0:14"
+        },
+        "parentId": "System.callable.nextstartdate",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Datetime"
       },
       "description": "Starting from the specified target date, returns the next date when business hours are open. If the specified target date falls within business hours, this target date is returned.",
+      "parentName": "Callable",
+      "variables": {},
       "params": {
-        "businessHoursId": {
-          "id": "System.callable.nextstartdate.businesshoursid",
-          "type": "var",
+        "businesshoursid": {
+          "id": "System.callable.method.nextstartdate(string,datetime).varParam.businesshoursid",
+          "nodeType": "variable",
           "name": "businessHoursId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -766,28 +1416,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_businessHoursId_-1:0"
+            "id": "token.type.identifier_businessHoursId_0:44"
           },
-          "signature": "String businessHoursId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "businessHoursId",
+            "textToLower": "businesshoursid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 44
+              },
+              "end": {
+                "line": 0,
+                "character": 59
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_businessHoursId_0:44"
+          },
+          "parentId": "System.callable.method.nextstartdate(string,datetime)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.callable.nextstartdate.string",
+            "id": "System.callable.nextstartdate.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 43
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:37"
+            },
+            "parentId": "System.callable.nextstartdate",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "targetDate": {
-          "id": "System.callable.nextstartdate.targetdate",
-          "type": "var",
+        "targetdate": {
+          "id": "System.callable.method.nextstartdate(string,datetime).varParam.targetdate",
+          "nodeType": "variable",
           "name": "targetDate",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -796,30 +1491,79 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_targetDate_-1:0"
+            "id": "token.type.identifier_targetDate_0:70"
           },
-          "signature": "Datetime targetDate",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "targetDate",
+            "textToLower": "targetdate",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 70
+              },
+              "end": {
+                "line": 0,
+                "character": 80
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_targetDate_0:70"
+          },
+          "parentId": "System.callable.method.nextstartdate(string,datetime)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.callable.nextstartdate.datetime",
+            "id": "System.callable.nextstartdate.datatype.Datetime",
             "nodeType": "datatype",
-            "name": "Datetime"
-          }
+            "name": "Datetime",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Datetime",
+              "textToLower": "datetime",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 61
+                },
+                "end": {
+                  "line": 0,
+                  "character": 69
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Datetime_0:61"
+            },
+            "parentId": "System.callable.nextstartdate",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Datetime"
+          },
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 5,
+  "queries": []
 }

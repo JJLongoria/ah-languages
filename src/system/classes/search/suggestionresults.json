@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_SuggestionResults_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getsuggestionresults()": {
-      "id": "Search.suggestionresults.getsuggestionresults",
+      "id": "Search.suggestionresults.method.getsuggestionresults()",
       "nodeType": "method",
       "name": "getSuggestionResults",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getSuggestionResults_-1:0"
       },
+      "parentId": "Search.suggestionresults",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public List<SuggestionResult> getSuggestionResults()",
+      "signature": "public List<Search.SuggestionResult> getSuggestionResults()",
+      "overrideSignature": "public override List<Search.SuggestionResult> getSuggestionResults()",
       "simplifiedSignature": "getSuggestionResults()",
       "datatype": {
-        "id": "Search.suggestionresults.getsuggestionresults.List<SuggestionResult>",
+        "id": "Search.suggestionresults.getsuggestionresults.datatype.List<Search.SuggestionResult>",
         "nodeType": "datatype",
-        "name": "List<SuggestionResult>"
+        "name": "List<Search.SuggestionResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Search.suggestionresults.getsuggestionresults",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Search.suggestionresults.getsuggestionresults.datatype.List<Search.SuggestionResult>.value.Search.SuggestionResult",
+          "nodeType": "datatype",
+          "name": "Search.SuggestionResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Search",
+            "textToLower": "search",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 18
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Search_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Search.SuggestionResult"
+        }
       },
       "description": "Returns a list of SuggestionResult objects from the response to a call to Search.suggest(String, String, Search.SuggestionOption).",
-      "params": {}
+      "parentName": "SuggestionResults",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "hasmoreresults()": {
-      "id": "Search.suggestionresults.hasmoreresults",
+      "id": "Search.suggestionresults.method.hasmoreresults()",
       "nodeType": "method",
       "name": "hasMoreResults",
       "startToken": {
@@ -142,6 +202,9 @@
         },
         "id": "declaration.entity.name.function_hasMoreResults_-1:0"
       },
+      "parentId": "Search.suggestionresults",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,31 +212,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean hasMoreResults()",
+      "overrideSignature": "public override Boolean hasMoreResults()",
       "simplifiedSignature": "hasMoreResults()",
       "datatype": {
-        "id": "Search.suggestionresults.hasmoreresults.Boolean",
+        "id": "Search.suggestionresults.hasmoreresults.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Search.suggestionresults.hasmoreresults",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Indicates whether a call to System.Search.suggest(String, String, Search.SuggestionOption) has more results available than were returned.",
-      "params": {}
+      "parentName": "SuggestionResults",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

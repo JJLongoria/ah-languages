@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_FindDuplicatesResult_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {
     "duplicateresults": {
-      "id": "Datacloud.findduplicatesresult.duplicateresults",
-      "type": "var",
+      "id": "Datacloud.findduplicatesresult.method.list<datacloud.duplicateresult> duplicateresults",
+      "nodeType": "variable",
       "name": "duplicateresults",
       "startToken": {
         "type": "declaration.entity.name.variable",
@@ -89,6 +91,9 @@
         },
         "id": "declaration.entity.name.variable_duplicateresults_-1:0"
       },
+      "parentId": "Datacloud.findduplicatesresult",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -96,29 +101,79 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<Datacloud.DuplicateResult> duplicateresults",
       "simplifiedSignature": "List<Datacloud.DuplicateResult> duplicateresults",
       "datatype": {
-        "id": "Datacloud.findduplicatesresult.duplicateresults.list<datacloud.duplicateresult>",
+        "id": ".datatype.List<Datacloud.DuplicateResult>",
         "nodeType": "datatype",
-        "name": "List<Datacloud.DuplicateResult>"
+        "name": "List<Datacloud.DuplicateResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": ".datatype.List<Datacloud.DuplicateResult>.value.Datacloud.DuplicateResult",
+          "nodeType": "datatype",
+          "name": "Datacloud.DuplicateResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Datacloud",
+            "textToLower": "datacloud",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 21
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Datacloud_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Datacloud.DuplicateResult"
+        }
       },
-      "description": "A list of DuplicateResult objects representing the results of calling FindDuplicates.findDuplicates(sObjects) or FindDuplicatesByIds.findDuplicatesByIds(ids). Elements in the list correspond to sObjects or IDs in the input list."
+      "parentName": "FindDuplicatesResult"
     },
     "errors": {
-      "id": "Datacloud.findduplicatesresult.errors",
+      "id": "Datacloud.findduplicatesresult.method.list<database.error> errors{get;set;}",
       "nodeType": "property",
       "name": "errors",
       "startToken": {
@@ -140,6 +195,9 @@
         },
         "id": "declaration.entity.name.property_errors_-1:0"
       },
+      "parentId": "Datacloud.findduplicatesresult",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -147,77 +205,99 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public List<Database.Error> errors {get; set;}",
-      "simplifiedSignature": "List<Database.Error> errors { get; set; }",
+      "signature": "public List<Database.Error> errors { get; set; }",
+      "simplifiedSignature": "List<Database.Error> errors{get;set;}",
       "datatype": {
-        "id": "Datacloud.findduplicatesresult.errors.list<database.error>",
+        "id": ".datatype.List<Database.Error>",
         "nodeType": "datatype",
-        "name": "List<Database.Error>"
+        "name": "List<Database.Error>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": ".datatype.List<Database.Error>.value.Database.Error",
+          "nodeType": "datatype",
+          "name": "Database.Error",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Database",
+            "textToLower": "database",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 20
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Database_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Database.Error"
+        }
       },
-      "description": "A list of Database.Error objects holding errors resulting from calling FindDuplicates.findDuplicates(sObjects) or FindDuplicatesByIds.findDuplicatesByIds(ids).",
+      "parentName": "FindDuplicatesResult",
       "getter": {
-        "id": "Datacloud.findduplicatesresult.errors.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Datacloud.findduplicatesresult.errors.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     },
     "success": {
-      "id": "Datacloud.findduplicatesresult.success",
+      "id": "Datacloud.findduplicatesresult.method.boolean success{get;set;}",
       "nodeType": "property",
       "name": "success",
       "startToken": {
@@ -239,6 +319,9 @@
         },
         "id": "declaration.entity.name.property_success_-1:0"
       },
+      "parentId": "Datacloud.findduplicatesresult",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -246,79 +329,74 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Boolean success {get; set;}",
-      "simplifiedSignature": "Boolean success { get; set; }",
+      "signature": "public Boolean success { get; set; }",
+      "simplifiedSignature": "Boolean success{get;set;}",
       "datatype": {
-        "id": "Datacloud.findduplicatesresult.success.boolean",
+        "id": ".datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
-      "description": "Boolean signifying whether the call to FindDuplicates.findDuplicates(sObjects) or FindDuplicatesByIds.findDuplicatesByIds(ids) was successful.",
+      "parentName": "FindDuplicatesResult",
       "getter": {
-        "id": "Datacloud.findduplicatesresult.success.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Datacloud.findduplicatesresult.success.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     }
   },
   "methods": {
     "getduplicateresults()": {
-      "id": "Datacloud.findduplicatesresult.getduplicateresults",
+      "id": "Datacloud.findduplicatesresult.method.getduplicateresults()",
       "nodeType": "method",
       "name": "getDuplicateResults",
       "startToken": {
@@ -340,6 +418,9 @@
         },
         "id": "declaration.entity.name.function_getDuplicateResults_-1:0"
       },
+      "parentId": "Datacloud.findduplicatesresult",
+      "order": 1,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -347,30 +428,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public List<DuplicateResult> getDuplicateResults()",
+      "signature": "public List<Datacloud.DuplicateResult> getDuplicateResults()",
+      "overrideSignature": "public override List<Datacloud.DuplicateResult> getDuplicateResults()",
       "simplifiedSignature": "getDuplicateResults()",
       "datatype": {
-        "id": "Datacloud.findduplicatesresult.getduplicateresults.List<DuplicateResult>",
+        "id": "Datacloud.findduplicatesresult.getduplicateresults.datatype.List<Datacloud.DuplicateResult>",
         "nodeType": "datatype",
-        "name": "List<DuplicateResult>"
+        "name": "List<Datacloud.DuplicateResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Datacloud.findduplicatesresult.getduplicateresults",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Datacloud.findduplicatesresult.getduplicateresults.datatype.List<Datacloud.DuplicateResult>.value.Datacloud.DuplicateResult",
+          "nodeType": "datatype",
+          "name": "Datacloud.DuplicateResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Datacloud",
+            "textToLower": "datacloud",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 21
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Datacloud_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Datacloud.DuplicateResult"
+        }
       },
       "description": "Returns  a list of DuplicateResult objects representing the results of calling FindDuplicates.findDuplicates(sObjects) or FindDuplicatesByIds.findDuplicatesByIds(ids). Elements in the list correspond to sObjects or IDs in the input list.",
-      "params": {}
+      "parentName": "FindDuplicatesResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "geterrors()": {
-      "id": "Datacloud.findduplicatesresult.geterrors",
+      "id": "Datacloud.findduplicatesresult.method.geterrors()",
       "nodeType": "method",
       "name": "getErrors",
       "startToken": {
@@ -392,6 +528,9 @@
         },
         "id": "declaration.entity.name.function_getErrors_-1:0"
       },
+      "parentId": "Datacloud.findduplicatesresult",
+      "order": 2,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -399,30 +538,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<Database.Error> getErrors()",
+      "overrideSignature": "public override List<Database.Error> getErrors()",
       "simplifiedSignature": "getErrors()",
       "datatype": {
-        "id": "Datacloud.findduplicatesresult.geterrors.List<Database.Error>",
+        "id": "Datacloud.findduplicatesresult.geterrors.datatype.List<Database.Error>",
         "nodeType": "datatype",
-        "name": "List<Database.Error>"
+        "name": "List<Database.Error>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Datacloud.findduplicatesresult.geterrors",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Datacloud.findduplicatesresult.geterrors.datatype.List<Database.Error>.value.Database.Error",
+          "nodeType": "datatype",
+          "name": "Database.Error",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Database",
+            "textToLower": "database",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 20
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Database_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Database.Error"
+        }
       },
       "description": "Returns a list of DatabaseError objects containing errors resulting from calling FindDuplicates.findDuplicates(sObjects) or FindDuplicatesByIds.findDuplicatesByIds(ids), if errors were encountered.",
-      "params": {}
+      "parentName": "FindDuplicatesResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "issuccess()": {
-      "id": "Datacloud.findduplicatesresult.issuccess",
+      "id": "Datacloud.findduplicatesresult.method.issuccess()",
       "nodeType": "method",
       "name": "isSuccess",
       "startToken": {
@@ -444,6 +638,9 @@
         },
         "id": "declaration.entity.name.function_isSuccess_-1:0"
       },
+      "parentId": "Datacloud.findduplicatesresult",
+      "order": 3,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -451,31 +648,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean isSuccess()",
+      "overrideSignature": "public override Boolean isSuccess()",
       "simplifiedSignature": "isSuccess()",
       "datatype": {
-        "id": "Datacloud.findduplicatesresult.issuccess.Boolean",
+        "id": "Datacloud.findduplicatesresult.issuccess.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Datacloud.findduplicatesresult.issuccess",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns a Boolean signifying whether the call to FindDuplicates.findDuplicates(sObjects) or FindDuplicatesByIds.findDuplicatesByIds(ids) was successful.",
-      "params": {}
+      "parentName": "FindDuplicatesResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 6,
+  "queries": []
 }

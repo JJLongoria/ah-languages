@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_MyDomainLoginDiscoveryHandler_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "login(string,string,map,string>)": {
-      "id": "Auth.mydomainlogindiscoveryhandler.login",
+    "login(string,string,map<string,string>)": {
+      "id": "Auth.mydomainlogindiscoveryhandler.method.login(string,string,map<string,string>)",
       "nodeType": "method",
       "name": "login",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_login_-1:0"
       },
+      "parentId": "Auth.mydomainlogindiscoveryhandler",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public System.PageReference login(String identifier, String startUrl, Map <String, String> requestAttributes)",
-      "simplifiedSignature": "login(String,String,Map,String>)",
+      "signature": "public System.PageReference login(String identifier, String startUrl, Map<String,String> requestAttributes)",
+      "overrideSignature": "public override System.PageReference login(String identifier, String startUrl, Map<String,String> requestAttributes)",
+      "simplifiedSignature": "login(String,String,Map<String,String>)",
       "datatype": {
-        "id": "Auth.mydomainlogindiscoveryhandler.login.System.PageReference",
+        "id": "Auth.mydomainlogindiscoveryhandler.login.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:7"
+        },
+        "parentId": "Auth.mydomainlogindiscoveryhandler.login",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Log in a Salesforce user given the specified identifier, such as email or phone number. If successful, redirect the user to the page specified by the start URL.",
+      "parentName": "MyDomainLoginDiscoveryHandler",
+      "variables": {},
       "params": {
         "identifier": {
-          "id": "Auth.mydomainlogindiscoveryhandler.login.identifier",
-          "type": "var",
+          "id": "Auth.mydomainlogindiscoveryhandler.method.login(string,string,map<string,string>).varParam.identifier",
+          "nodeType": "variable",
           "name": "identifier",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,28 +160,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_identifier_-1:0"
+            "id": "token.type.identifier_identifier_0:41"
           },
-          "signature": "String identifier",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "identifier",
+            "textToLower": "identifier",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 41
+              },
+              "end": {
+                "line": 0,
+                "character": 51
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_identifier_0:41"
+          },
+          "parentId": "Auth.mydomainlogindiscoveryhandler.method.login(string,string,map<string,string>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.mydomainlogindiscoveryhandler.login.string",
+            "id": "Auth.mydomainlogindiscoveryhandler.login.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:34"
+            },
+            "parentId": "Auth.mydomainlogindiscoveryhandler.login",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "startUrl": {
-          "id": "Auth.mydomainlogindiscoveryhandler.login.starturl",
-          "type": "var",
+        "starturl": {
+          "id": "Auth.mydomainlogindiscoveryhandler.method.login(string,string,map<string,string>).varParam.starturl",
+          "nodeType": "variable",
           "name": "startUrl",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -159,58 +235,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 68
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_startUrl_-1:0"
+            "id": "token.type.identifier_startUrl_0:60"
           },
-          "signature": "String startUrl",
-          "datatype": {
-            "id": "Auth.mydomainlogindiscoveryhandler.login.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String": {
-          "id": "Auth.mydomainlogindiscoveryhandler.login.<string",
-          "type": "var",
-          "name": "<String",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "startUrl",
+            "textToLower": "starturl",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 68
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_startUrl_0:60"
           },
-          "signature": "Map <String",
+          "parentId": "Auth.mydomainlogindiscoveryhandler.method.login(string,string,map<string,string>)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.mydomainlogindiscoveryhandler.login.map",
+            "id": "Auth.mydomainlogindiscoveryhandler.login.datatype.String",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 53
+                },
+                "end": {
+                  "line": 0,
+                  "character": 59
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:53"
+            },
+            "parentId": "Auth.mydomainlogindiscoveryhandler.login",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "requestAttributes": {
-          "id": "Auth.mydomainlogindiscoveryhandler.login.requestattributes",
-          "type": "var",
+        "requestattributes": {
+          "id": "Auth.mydomainlogindiscoveryhandler.method.login(string,string,map<string,string>).varParam.requestattributes",
+          "nodeType": "variable",
           "name": "requestAttributes",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -219,30 +310,134 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 89
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 106
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_requestAttributes_-1:0"
+            "id": "token.type.identifier_requestAttributes_0:89"
           },
-          "signature": "String> requestAttributes",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "requestAttributes",
+            "textToLower": "requestattributes",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 89
+              },
+              "end": {
+                "line": 0,
+                "character": 106
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_requestAttributes_0:89"
+          },
+          "parentId": "Auth.mydomainlogindiscoveryhandler.method.login(string,string,map<string,string>)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Auth.mydomainlogindiscoveryhandler.login.string>",
+            "id": "Auth.mydomainlogindiscoveryhandler.login.datatype.Map<String,String>",
             "nodeType": "datatype",
-            "name": "String>"
-          }
+            "name": "Map<String,String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 70
+                },
+                "end": {
+                  "line": 0,
+                  "character": 73
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:70"
+            },
+            "parentId": "Auth.mydomainlogindiscoveryhandler.login",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "Auth.mydomainlogindiscoveryhandler.login.datatype.Map<String,String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 81
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 87
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:81"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            },
+            "key": {
+              "id": "Auth.mydomainlogindiscoveryhandler.login.datatype.Map<String,String>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 74
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 80
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:74"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "Identifier the Salesforce user entered at the login prompt, for example, an email address or phone number. The page users see after successfully logging in to the My Domain subdomain. Information about the login request based on the user’s browser state when accessing the login page. requestAttributes passes in the MyDomainUrl, IpAddress, UserAgent, Platform, Application, City, Country, and Subdivision values. The City, Country, and Subdivision values come from IP address geolocation.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

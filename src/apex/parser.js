@@ -122,6 +122,8 @@ class ApexParser {
             const lastToken = LangUtils.getLastToken(this.tokens, index);
             const token = new Token(this.tokens[index]);
             const nextToken = LangUtils.getNextToken(this.tokens, index);
+            const twoNextToken = LangUtils.getTwoNextToken(this.tokens, index);
+            const twoLastToken = LangUtils.getTwoLastToken(this.tokens, index);
             const parentToken = (token.parentToken !== undefined && token.parentToken != -1) ? new Token(this.tokens[token.parentToken]) : undefined;
             const pairToken = (token.pairToken !== undefined) ? new Token(this.tokens[token.pairToken]) : undefined;
             if (token.range.start.line < startLine)
@@ -134,6 +136,12 @@ class ApexParser {
                     positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
                     positionData.onText = token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING;
                     positionData.signature = node.simplifiedSignature || node.signature;
+                    positionData.parentName = node.parentName;
+                    positionData.token = token;
+                    positionData.nextToken = nextToken;
+                    positionData.twoNextToken = twoNextToken;
+                    positionData.lastToken = lastToken;
+                    positionData.twoLastToken = twoLastToken;
                 }
             }
             if (openBracket(token)) {
@@ -161,6 +169,9 @@ class ApexParser {
                         if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                             newNode.comment.processComment(this.systemData.template);
                         this.comment = undefined;
+                        if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                            positionData.parentName = newNode.name;
+                        }
                     }
                     this.nodesMap[newNode.id] = newNode;
                     if (node)
@@ -226,12 +237,22 @@ class ApexParser {
                 this.webservice = token;
             } else if (isCommentLine(token)) {
                 const newNode = new ApexComment('comment.' + this.nComments, 'LineComment.' + this.nComments, token);
-                index = processCommentLine(newNode, this, index);
+                index = processCommentLine(newNode, this, index, this.cursorPosition);
+                if (newNode.positionData) {
+                    positionData = newNode.positionData;
+                    newNode.positionData = undefined;
+                    positionData.parentName = node.name;
+                }
                 this.comment = newNode;
                 this.nComments++;
             } else if (openCommentBlock(token)) {
                 const newNode = new ApexCommentBlock('comment.' + this.nComments, 'BlockComment.' + this.nComments, token);
-                index = processCommentBlock(newNode, this, index);
+                index = processCommentBlock(newNode, this, index, this.cursorPosition);
+                if (newNode.positionData) {
+                    positionData = newNode.positionData;
+                    newNode.positionData = undefined;
+                    positionData.parentName = node.name;
+                }
                 this.comment = newNode;
                 this.nComments++;
             } else if (isAnnotation(token)) {
@@ -261,6 +282,9 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
+                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                        positionData.parentName = newNode.name;
+                    }
                 }
                 this.nodesMap[newNode.id] = newNode;
                 if (node)
@@ -289,6 +313,9 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
+                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                        positionData.parentName = newNode.name;
+                    }
                 }
                 this.nodesMap[newNode.id] = newNode;
                 if (node)
@@ -317,6 +344,9 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
+                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                        positionData.parentName = newNode.name;
+                    }
                 }
                 this.nodesMap[newNode.id] = newNode;
                 if (node)
@@ -334,6 +364,9 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
+                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                        positionData.parentName = newNode.name;
+                    }
                 }
                 this.nodesMap[newNode.id] = newNode;
                 if (node)
@@ -382,6 +415,9 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
+                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                        positionData.parentName = newNode.name;
+                    }
                 }
                 if (this.datatype) {
                     this.datatype.parentId = newNode.id;
@@ -389,6 +425,9 @@ class ApexParser {
                     this.nodesMap[this.datatype.id] = this.datatype;
                     newNode.datatype = this.datatype;
                     this.datatype = undefined;
+                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                        positionData.parentName = newNode.name;
+                    }
                 }
                 this.nodesMap[newNode.id] = newNode;
                 if (node)
@@ -404,6 +443,9 @@ class ApexParser {
                     this.nodesMap[this.comment.id] = this.comment;
                     newNode.comment = this.comment;
                     this.comment = undefined;
+                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                        positionData.parentName = newNode.name;
+                    }
                 }
                 this.nodesMap[newNode.id] = newNode;
                 if (node)
@@ -419,6 +461,9 @@ class ApexParser {
                     this.nodesMap[this.comment.id] = this.comment;
                     newNode.comment = this.comment;
                     this.comment = undefined;
+                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                        positionData.parentName = newNode.name;
+                    }
                 }
                 this.nodesMap[newNode.id] = newNode;
                 if (node)
@@ -428,6 +473,13 @@ class ApexParser {
             } else if (isDatatype(token)) {
                 const newNode = new ApexDatatype('datatype.', '', token);
                 index = processDatatype(newNode, this, index);
+                if (newNode.positionData) {
+                    positionData = newNode.positionData;
+                    newNode.positionData = undefined;
+                    positionData.nodeType = (node) ? node.nodeType : undefined;
+                    positionData.signature = (node) ? node.simplifiedSignature || node.signature : undefined;
+                    positionData.parentName = (node) ? node.name : undefined;
+                }
                 this.datatype = newNode;
             } else if (isStaticConstructorDeclaration(token)) {
                 const newNode = new ApexStaticConstructor(((node) ? node.id : 'InitialNode') + '.staticConstructor.' + token.textToLower, token.text);
@@ -448,6 +500,9 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
+                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                        positionData.parentName = newNode.name;
+                    }
                 }
                 this.nodesMap[newNode.id] = newNode;
                 if (node)
@@ -462,6 +517,12 @@ class ApexParser {
                 newNode.webservice = this.webservice;
                 newNode.override = this.override;
                 newNode.scope = bracketIndent;
+                index = processMethodSignature(newNode, this, index);
+                if (newNode.positionData) {
+                    positionData = newNode.positionData;
+                    newNode.positionData = undefined;
+                    positionData.parentName = node.name;
+                }
                 if (this.annotation) {
                     this.annotation.parentId = newNode.id;
                     this.annotation.id = newNode.id + '.' + this.annotation.id;
@@ -477,8 +538,11 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
+                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                        positionData.parentName = newNode.name;
+                        positionData.signature = newNode.simplifiedSignature;
+                    }
                 }
-                index = processMethodSignature(newNode, this, index);
                 this.nodesMap[newNode.id] = newNode;
                 if (node)
                     node.addChild(newNode);
@@ -495,6 +559,18 @@ class ApexParser {
                 newNode.testMethod = this.testMethod;
                 newNode.override = this.override;
                 newNode.scope = bracketIndent;
+                if (this.datatype) {
+                    this.datatype.parentId = newNode.id;
+                    this.datatype.id = newNode.id + '.' + this.datatype.id;
+                    this.nodesMap[this.datatype.id] = this.datatype;
+                    newNode.datatype = this.datatype;
+                }
+                index = processMethodSignature(newNode, this, index);
+                if (newNode.positionData) {
+                    positionData = newNode.positionData;
+                    newNode.positionData = undefined;
+                    positionData.parentName = node.name;
+                }
                 if (this.annotation) {
                     this.annotation.parentId = newNode.id;
                     this.annotation.id = newNode.id + '.' + this.annotation.id;
@@ -509,14 +585,11 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
+                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                        positionData.parentName = newNode.name;
+                        positionData.signature = newNode.simplifiedSignature;
+                    }
                 }
-                if (this.datatype) {
-                    this.datatype.parentId = newNode.id;
-                    this.datatype.id = newNode.id + '.' + this.datatype.id;
-                    this.nodesMap[this.datatype.id] = this.datatype;
-                    newNode.datatype = this.datatype;
-                }
-                index = processMethodSignature(newNode, this, index);
                 this.nodesMap[newNode.id] = newNode;
                 if (node)
                     node.addChild(newNode);
@@ -544,6 +617,9 @@ class ApexParser {
                     newNode.comment = this.comment;
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
+                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                        positionData.parentName = newNode.name;
+                    }
                 }
                 if (this.datatype) {
                     this.datatype.parentId = newNode.id;
@@ -558,17 +634,59 @@ class ApexParser {
                     node = newNode;
                     break;
                 }
+                if (this.cursorPosition && node && !positionData) {
+                    if (LangUtils.isOnPosition(token, lastToken, nextToken, this.cursorPosition)) {
+                        const startIndex = this.cursorPosition.character - token.range.start.character;
+                        const startPart = token.text.substring(0, startIndex + 1);
+                        const endPart = token.text.substring(startIndex + 1);
+                        positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
+                        positionData.onText = token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+                        positionData.signature = node.simplifiedSignature || node.signature;
+                        positionData.parentName = node.name;
+                        positionData.token = token;
+                        positionData.nextToken = nextToken;
+                        positionData.twoNextToken = twoNextToken;
+                        positionData.lastToken = lastToken;
+                        positionData.twoLastToken = twoLastToken;
+                    }
+                }
                 if (nextToken.type === TokenType.PUNCTUATION.COMMA || nextToken.type === TokenType.OPERATOR.ASSIGN.ASSIGN) {
                     index++;
+                    let paramIndent = 0;
                     for (; index < this.tokensLength; index++) {
                         const auxToken = this.tokens[index];
+                        const nextTokenAux = LangUtils.getNextToken(this.tokens, index);
+                        const lastTokenAux = LangUtils.getLastToken(this.tokens, index);
+                        const twoNextTokenAux = LangUtils.getTwoNextToken(this.tokens, index);
+                        const twoLastTokenAux = LangUtils.getTwoLastToken(this.tokens, index);
+                        if (this.cursorPosition && node && !positionData) {
+                            if (LangUtils.isOnPosition(token, lastTokenAux, nextTokenAux, this.cursorPosition)) {
+                                const startIndex = this.cursorPosition.character - token.range.start.character;
+                                const startPart = token.text.substring(0, startIndex + 1);
+                                const endPart = token.text.substring(startIndex + 1);
+                                positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
+                                positionData.onText = token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+                                positionData.signature = node.simplifiedSignature || node.signature;
+                                positionData.parentName = node.name;
+                                positionData.token = token;
+                                positionData.nextToken = nextToken;
+                                positionData.twoNextToken = twoNextTokenAux;
+                                positionData.lastToken = lastToken;
+                                positionData.twoLastToken = twoLastTokenAux;
+                            }
+                        }
                         if (auxToken.type === TokenType.PUNCTUATION.SEMICOLON)
                             break;
                         if (auxToken.type === TokenType.BRACKET.QUERY_START) {
                             index--;
                             break;
                         }
-                        if (auxToken.type === TokenType.DECLARATION.ENTITY.VARIABLE || auxToken.type === TokenType.ENTITY.VARIABLE) {
+                        if (auxToken.type === TokenType.BRACKET.PARENTHESIS_PARAM_OPEN){
+                            paramIndent++;
+                        } else if (auxToken.type === TokenType.BRACKET.PARENTHESIS_PARAM_CLOSE){
+                            paramIndent--;
+                        }
+                        if (paramIndent === 0 && (auxToken.type === TokenType.DECLARATION.ENTITY.VARIABLE || auxToken.type === TokenType.ENTITY.VARIABLE)) {
                             let sameLineVar = new ApexVariable(((node) ? node.id : 'InitialNode') + '.variable.' + auxToken.textToLower, auxToken.text, auxToken);
                             sameLineVar.accessModifier = this.accessModifier;
                             sameLineVar.definitionModifier = this.definitionModifier;
@@ -615,29 +733,6 @@ class ApexParser {
             node.positionData = positionData;
         this.node = node;
         return node;
-    }
-
-    isPositionOnText() {
-        if (this.node && this.node.positionData) {
-            return this.node.positionData.onText;
-        } else {
-            let tokens = this.tokens;
-            if (this.filePath && !this.content && (!this.tokens || this.tokens.length === 0)) {
-                let content = FileReader.readFileSync(Validator.validateFilePath(this.filePath));
-                tokens = Lexer.tokenize(content, this.systemData);
-            } else if (this.content && (!this.tokens || this.tokens.length === 0)) {
-                tokens = Lexer.tokenize(this.content, this.systemData);
-
-            }
-            const tokensLength = tokens.length;
-            for (let index = 0; index < tokensLength; index++) {
-                const token = new Token(tokens[index]);
-                if (token.range.start.isBeforeOrEqual(this.cursorPosition) && token.range.end.isAfterOrEqual(this.cursorPosition) && (token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING))
-                    return true;
-
-            }
-            return false;
-        }
     }
 
     resolveReferences(node) {
@@ -1012,6 +1107,8 @@ function processQuery(tokens, index, position, node) {
         lastToken = LangUtils.getLastToken(tokens, index);
         token = tokens[index];
         const nextToken = LangUtils.getNextToken(tokens, index);
+        const twoNextToken = LangUtils.getTwoNextToken(tokens, index);
+        const twoLastToken = LangUtils.getTwoLastToken(tokens, index);
         if (position && query && !positionData) {
             if (LangUtils.isOnPosition(token, lastToken, nextToken, position)) {
                 const startIndex = position.character - token.range.start.character;
@@ -1019,6 +1116,13 @@ function processQuery(tokens, index, position, node) {
                 const endPart = token.text.substring(startIndex + 1);
                 positionData = new PositionData(startPart, endPart, query.nodeType, query.id, 'Apex');
                 positionData.onText = token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+                positionData.parentName = node.name;
+                positionData.signature = node.simplifiedSignature || node.signature;
+                positionData.token = token;
+                positionData.nextToken = nextToken;
+                positionData.twoNextToken = twoNextToken;
+                positionData.lastToken = lastToken;
+                positionData.twoLastToken = twoLastToken;
             }
         }
         if (!isDynamic) {
@@ -1210,6 +1314,25 @@ function processMethodSignature(node, parser, index) {
     let final = undefined;
     for (; index < len; index++) {
         const token = parser.tokens[index];
+        const lastToken = LangUtils.getLastToken(parser.tokens, index);
+        const nextToken = LangUtils.getNextToken(parser.tokens, index);
+        const twoNextToken = LangUtils.getTwoNextToken(parser.tokens, index);
+        const twoLastToken = LangUtils.getTwoLastToken(parser.tokens, index);
+        if (parser.cursorPosition && !node.positionData) {
+            if (LangUtils.isOnPosition(token, lastToken, nextToken, parser.cursorPosition)) {
+                const startIndex = parser.cursorPosition.character - token.range.start.character;
+                const startPart = token.text.substring(0, startIndex + 1);
+                const endPart = token.text.substring(startIndex + 1);
+                node.positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
+                node.positionData.onText = token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+                node.positionData.signature = node.simplifiedSignature || node.signature;
+                node.positionData.token = token;
+                node.positionData.nextToken = nextToken;
+                node.positionData.twoNextToken = twoNextToken;
+                node.positionData.lastToken = lastToken;
+                node.positionData.twoLastToken = twoLastToken;
+            }
+        }
         if (token.type === TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE) {
             if (datatype && paramName) {
                 types.push(datatype.name);
@@ -1228,6 +1351,12 @@ function processMethodSignature(node, parser, index) {
         } else if (!paramName && isDatatype(token)) {
             let newNode = new ApexDatatype(node.id + '.datatype.', '', token);
             index = processDatatype(newNode, parser, index);
+            if (newNode.positionData) {
+                node.positionData = newNode.positionData;
+                newNode.positionData = undefined;
+                node.positionData.nodeType = (node) ? node.nodeType : undefined;
+                node.positionData.signature = node.simplifiedSignature || node.signature;
+            }
             newNode.parentId = (node) ? node.id : undefined;;
             datatype = newNode;
         } else if (datatype && paramName && (token.type === TokenType.PUNCTUATION.COMMA || token.type === TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE)) {
@@ -1287,11 +1416,14 @@ function processMethodSignature(node, parser, index) {
         if (node)
             node.addParam(newNode);
     }
+    if (node.positionData) {
+        node.positionData.signature = node.simplifiedSignature || node.signature;
+    }
     index--;
     return index;
 }
 
-function processAnnotation(node, parser, index) {
+function processAnnotation(node, parser, index, position) {
     const len = parser.tokens.length;
     for (; index < len; index++) {
         const token = parser.tokens[index];
@@ -1304,10 +1436,27 @@ function processAnnotation(node, parser, index) {
     return index;
 }
 
-function processCommentBlock(node, parser, index) {
+function processCommentBlock(node, parser, index, position) {
     const len = parser.tokens.length;
     for (; index < len; index++) {
         const token = parser.tokens[index];
+        const lastToken = LangUtils.getLastToken(parser.tokens, index);
+        const nextToken = LangUtils.getNextToken(parser.tokens, index);
+        const twoNextToken = LangUtils.getTwoNextToken(parser.tokens, index);
+        const twoLastToken = LangUtils.getTwoLastToken(parser.tokens, index);
+        if (position && node && !node.positionData) {
+            if (LangUtils.isOnPosition(token, lastToken, nextToken, this.cursorPosition)) {
+                const startIndex = this.cursorPosition.character - token.range.start.character;
+                const startPart = token.text.substring(0, startIndex + 1);
+                const endPart = token.text.substring(startIndex + 1);
+                node.positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
+                node.positionData.token = token;
+                node.positionData.nextToken = nextToken;
+                node.positionData.twoNextToken = twoNextToken;
+                node.positionData.lastToken = lastToken;
+                node.positionData.twoLastToken = twoLastToken;
+            }
+        }
         if (!closeCommentBlock(token)) {
             node.addToken(token);
         } else {
@@ -1318,10 +1467,27 @@ function processCommentBlock(node, parser, index) {
     return index;
 }
 
-function processCommentLine(node, parser, index) {
+function processCommentLine(node, parser, index, position) {
     const len = parser.tokens.length;
     for (; index < len; index++) {
         const token = parser.tokens[index];
+        const lastToken = LangUtils.getLastToken(parser.tokens, index);
+        const nextToken = LangUtils.getNextToken(parser.tokens, index);
+        const twoNextToken = LangUtils.getTwoNextToken(parser.tokens, index);
+        const twoLastToken = LangUtils.getTwoLastToken(parser.tokens, index);
+        if (position && node && !node.positionData) {
+            if (LangUtils.isOnPosition(token, lastToken, nextToken, this.cursorPosition)) {
+                const startIndex = this.cursorPosition.character - token.range.start.character;
+                const startPart = token.text.substring(0, startIndex + 1);
+                const endPart = token.text.substring(startIndex + 1);
+                node.positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
+                node.positionData.token = token;
+                node.positionData.nextToken = nextToken;
+                node.positionData.twoNextToken = twoNextToken;
+                node.positionData.lastToken = lastToken;
+                node.positionData.twoLastToken = twoLastToken;
+            }
+        }
         if (token.type === TokenType.COMMENT.LINE || token.type === TokenType.COMMENT.LINE_DOC || token.type === TokenType.COMMENT.CONTENT) {
             node.addToken(token);
         } else {
@@ -1333,25 +1499,96 @@ function processCommentLine(node, parser, index) {
 }
 
 function processDatatype(node, parser, index) {
-    let bracketIndent = 0;
+    let aBracketIndent = 0;
+    let sqBracketIndent = 0;
     let datatype = '';
     const len = parser.tokens.length;
+    let type = '';
+    let valueTokens = [];
+    let valueText = '';
+    let keyTokens = [];
+    let keyText = '';
     for (; index < len; index++) {
         const token = parser.tokens[index];
+        const nextToken = LangUtils.getNextToken(parser.tokens, index);
+        const twoNextToken = LangUtils.getTwoNextToken(parser.tokens, index);
+        const lastToken = LangUtils.getLastToken(parser.tokens, index);
+        const twoLastToken = LangUtils.getTwoLastToken(parser.tokens, index);
         if (token) {
+            if (parser.cursorPosition && node && !node.positionData) {
+                if (LangUtils.isOnPosition(token, lastToken, nextToken, parser.cursorPosition)) {
+                    const startIndex = parser.cursorPosition.character - token.range.start.character;
+                    const startPart = token.text.substring(0, startIndex + 1);
+                    const endPart = token.text.substring(startIndex + 1);
+                    node.positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
+                    node.positionData.onText = token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+                    node.positionData.token = token;
+                    node.positionData.nextToken = nextToken;
+                    node.positionData.twoNextToken = twoNextToken;
+                    node.positionData.lastToken = lastToken;
+                    node.positionData.twoLastToken = twoLastToken;
+                }
+            }
             if (isDatatype(token)) {
                 datatype += token.text;
-            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN || token.type === TokenType.BRACKET.SQUARE_OPEN) {
-                bracketIndent++;
+                if (aBracketIndent === 0) {
+                    type += token.text;
+                } else if (aBracketIndent > 0) {
+                    valueTokens.push(token);
+                    valueText += token.text;
+                }
+            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN) {
+                aBracketIndent++;
+                if (aBracketIndent > 1) {
+                    valueTokens.push(token);
+                    valueText += token.text;
+                }
                 datatype += token.text;
-            }
-            else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE || token.type === TokenType.BRACKET.SQUARE_CLOSE) {
-                bracketIndent--;
+            } else if (token.type === TokenType.BRACKET.SQUARE_OPEN) {
+                sqBracketIndent++;
                 datatype += token.text;
-            } else if (token.type === TokenType.PUNCTUATION.COMMA && bracketIndent > 0) {
+                if (aBracketIndent === 0) {
+                    type += token.text;
+                } else if (aBracketIndent > 0) {
+                    valueTokens.push(token);
+                    valueText += token.text;
+                }
+            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
+                aBracketIndent--;
                 datatype += token.text;
+                if (aBracketIndent > 0) {
+                    valueTokens.push(token);
+                    valueText += token.text;
+                }
+            } else if (token.type === TokenType.BRACKET.SQUARE_CLOSE) {
+                sqBracketIndent--;
+                datatype += token.text;
+                if (aBracketIndent === 0) {
+                    type += token.text;
+                } else if (aBracketIndent > 0) {
+                    valueTokens.push(token);
+                    valueText += token.text;
+                }
+            } else if (token.type === TokenType.PUNCTUATION.COMMA && aBracketIndent > 0) {
+                datatype += token.text;
+                if (aBracketIndent > 1) {
+                    valueTokens.push(token);
+                    valueText += token.text;
+                }
+                if (aBracketIndent === 1) {
+                    keyTokens = valueTokens;
+                    keyText = valueText;
+                    valueText = '';
+                    valueTokens = [];
+                }
             } else if (token.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR) {
                 datatype += token.text;
+                if (aBracketIndent === 0) {
+                    type += token.text;
+                } else if (aBracketIndent > 0) {
+                    valueTokens.push(token);
+                    valueText += token.text;
+                }
             } else {
                 break;
             }
@@ -1359,8 +1596,89 @@ function processDatatype(node, parser, index) {
     }
     node.name = datatype;
     node.id += datatype;
+    node.type = type;
+    node.value = processDatatypeTokens(node, valueText, valueTokens, false);
+    node.key = processDatatypeTokens(node, keyText, keyTokens, true);
     index--;
     return index;
+}
+
+function processDatatypeTokens(node, text, tokens, isKey) {
+    if (!tokens || tokens.length === 0)
+        return undefined;
+    let aBracketIndent = 0;
+    let sqBracketIndent = 0;
+    let type = '';
+    let valueTokens = [];
+    let valueText = '';
+    let keyTokens = [];
+    let keyText = '';
+    const datatypeNode = new ApexDatatype(node.id + '.' + (isKey ? 'key.' : 'value.') + text, text, tokens[0]);
+    const len = tokens.length;
+    for (let index = 0; index < len; index++) {
+        const token = tokens[index];
+        if (token) {
+            if (isDatatype(token)) {
+                if (aBracketIndent === 0) {
+                    type += token.text;
+                } else if (aBracketIndent > 0) {
+                    valueTokens.push(token);
+                    valueText += token.text;
+                }
+            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN) {
+                aBracketIndent++;
+                if (aBracketIndent > 1) {
+                    valueTokens.push(token);
+                    valueText += token.text;
+                }
+            } else if (token.type === TokenType.BRACKET.SQUARE_OPEN) {
+                sqBracketIndent++;
+                if (aBracketIndent === 0) {
+                    type += token.text;
+                } else if (aBracketIndent > 0) {
+                    valueTokens.push(token);
+                    valueText += token.text;
+                }
+            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
+                aBracketIndent--;                if (aBracketIndent > 0) {
+                    valueTokens.push(token);
+                    valueText += token.text;
+                }
+            } else if (token.type === TokenType.BRACKET.SQUARE_CLOSE) {
+                sqBracketIndent--;
+                if (aBracketIndent === 0) {
+                    type += token.text;
+                } else if (aBracketIndent > 0) {
+                    valueTokens.push(token);
+                    valueText += token.text;
+                }
+            } else if (token.type === TokenType.PUNCTUATION.COMMA && aBracketIndent > 0) {
+                if (aBracketIndent > 1) {
+                    valueTokens.push(token);
+                    valueText += token.text;
+                }
+                if (aBracketIndent === 1) {
+                    keyTokens = valueTokens;
+                    keyText = valueText;
+                    valueText = '';
+                    valueTokens = [];
+                }
+            } else if (token.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR) {
+                if (aBracketIndent === 0) {
+                    type += token.text;
+                } else if (aBracketIndent > 0) {
+                    valueTokens.push(token);
+                    valueText += token.text;
+                }
+            } else {
+                break;
+            }
+        }
+    }
+    datatypeNode.type = type;
+    datatypeNode.value = processDatatypeTokens(datatypeNode, valueText, valueTokens, false);
+    datatypeNode.key = processDatatypeTokens(datatypeNode, keyText, keyTokens, true);
+    return datatypeNode;
 }
 
 function getBatches(objects, multiThread) {

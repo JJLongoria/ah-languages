@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_ManagedTopics_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "createmanagedtopic(string,string,connectapi.managedtopictype)": {
-      "id": "ConnectApi.managedtopics.createmanagedtopic",
+      "id": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype)",
       "nodeType": "method",
       "name": "createManagedTopic",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_createManagedTopic_-1:0"
       },
+      "parentId": "ConnectApi.managedtopics",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedTopic createManagedTopic(String communityId, String recordId, ConnectApi.ManagedTopicType managedTopicType)",
+      "overrideSignature": "public static override ConnectApi.ManagedTopic createManagedTopic(String communityId, String recordId, ConnectApi.ManagedTopicType managedTopicType)",
       "simplifiedSignature": "createManagedTopic(String,String,ConnectApi.ManagedTopicType)",
       "datatype": {
-        "id": "ConnectApi.managedtopics.createmanagedtopic.ConnectApi.ManagedTopic",
+        "id": "ConnectApi.managedtopics.createmanagedtopic.datatype.ConnectApi.ManagedTopic",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedTopic"
+        "name": "ConnectApi.ManagedTopic",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedtopics.createmanagedtopic",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedTopic"
       },
       "description": "Create a managed topic of a specific type for a community.",
+      "parentName": "ManagedTopics",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedtopics.createmanagedtopic.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 75
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:64"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 75
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:64"
+          },
+          "parentId": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedtopics.createmanagedtopic.string",
+            "id": "ConnectApi.managedtopics.createmanagedtopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 57
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:57"
+            },
+            "parentId": "ConnectApi.managedtopics.createmanagedtopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "recordId": {
-          "id": "ConnectApi.managedtopics.createmanagedtopic.recordid",
-          "type": "var",
+        "recordid": {
+          "id": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype).varParam.recordid",
+          "nodeType": "variable",
           "name": "recordId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,28 +254,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 92
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_recordId_-1:0"
+            "id": "token.type.identifier_recordId_0:84"
           },
-          "signature": "String recordId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordId",
+            "textToLower": "recordid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 84
+              },
+              "end": {
+                "line": 0,
+                "character": 92
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordId_0:84"
+          },
+          "parentId": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.managedtopics.createmanagedtopic.string",
+            "id": "ConnectApi.managedtopics.createmanagedtopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 77
+                },
+                "end": {
+                  "line": 0,
+                  "character": 83
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:77"
+            },
+            "parentId": "ConnectApi.managedtopics.createmanagedtopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "managedTopicType": {
-          "id": "ConnectApi.managedtopics.createmanagedtopic.managedtopictype",
-          "type": "var",
+        "managedtopictype": {
+          "id": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype).varParam.managedtopictype",
+          "nodeType": "variable",
           "name": "managedTopicType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -208,29 +329,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 122
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 138
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_managedTopicType_-1:0"
+            "id": "token.type.identifier_managedTopicType_0:122"
           },
-          "signature": "ConnectApi.ManagedTopicType managedTopicType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedTopicType",
+            "textToLower": "managedtopictype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 122
+              },
+              "end": {
+                "line": 0,
+                "character": 138
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedTopicType_0:122"
+          },
+          "parentId": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.managedtopics.createmanagedtopic.connectapi.managedtopictype",
+            "id": "ConnectApi.managedtopics.createmanagedtopic.datatype.ConnectApi.ManagedTopicType",
             "nodeType": "datatype",
-            "name": "ConnectApi.ManagedTopicType"
-          }
+            "name": "ConnectApi.ManagedTopicType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 94
+                },
+                "end": {
+                  "line": 0,
+                  "character": 104
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:94"
+            },
+            "parentId": "ConnectApi.managedtopics.createmanagedtopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ManagedTopicType"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of the topic. Specify the type of managed topic.  Content—Topics that are associated with native content.   Featured—Topics that are featured, for example, on the community home page, but don’t provide overall navigation.   Navigational—Topics that display in a navigational menu in the community.   A topic can be associated with all three managed topic types, so a topic can be a Featured, Navigational, and Content topic. You can create up to 25 Featured and 5,000 Content topics. You can create up to eight levels of Navigational managed topics with 25 top-level topics and 10 children topics per level for a maximum of 2,775 Navigational topics.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "createmanagedtopic(string,string,connectapi.managedtopictype,string)": {
-      "id": "ConnectApi.managedtopics.createmanagedtopic",
+      "id": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype,string)",
       "nodeType": "method",
       "name": "createManagedTopic",
       "startToken": {
@@ -252,6 +421,9 @@
         },
         "id": "declaration.entity.name.function_createManagedTopic_-1:0"
       },
+      "parentId": "ConnectApi.managedtopics",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -259,17 +431,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -278,30 +450,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedTopic createManagedTopic(String communityId, String recordId, ConnectApi.ManagedTopicType managedTopicType, String parentId)",
+      "overrideSignature": "public static override ConnectApi.ManagedTopic createManagedTopic(String communityId, String recordId, ConnectApi.ManagedTopicType managedTopicType, String parentId)",
       "simplifiedSignature": "createManagedTopic(String,String,ConnectApi.ManagedTopicType,String)",
       "datatype": {
-        "id": "ConnectApi.managedtopics.createmanagedtopic.ConnectApi.ManagedTopic",
+        "id": "ConnectApi.managedtopics.createmanagedtopic.datatype.ConnectApi.ManagedTopic",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedTopic"
+        "name": "ConnectApi.ManagedTopic",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedtopics.createmanagedtopic",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedTopic"
       },
       "description": "Create a child managed topic for a community.",
+      "parentName": "ManagedTopics",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedtopics.createmanagedtopic.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,28 +508,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 75
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:64"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 75
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:64"
+          },
+          "parentId": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedtopics.createmanagedtopic.string",
+            "id": "ConnectApi.managedtopics.createmanagedtopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 57
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:57"
+            },
+            "parentId": "ConnectApi.managedtopics.createmanagedtopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "recordId": {
-          "id": "ConnectApi.managedtopics.createmanagedtopic.recordid",
-          "type": "var",
+        "recordid": {
+          "id": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype,string).varParam.recordid",
+          "nodeType": "variable",
           "name": "recordId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -340,28 +583,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 84
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 92
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_recordId_-1:0"
+            "id": "token.type.identifier_recordId_0:84"
           },
-          "signature": "String recordId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordId",
+            "textToLower": "recordid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 84
+              },
+              "end": {
+                "line": 0,
+                "character": 92
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordId_0:84"
+          },
+          "parentId": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.managedtopics.createmanagedtopic.string",
+            "id": "ConnectApi.managedtopics.createmanagedtopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 77
+                },
+                "end": {
+                  "line": 0,
+                  "character": 83
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:77"
+            },
+            "parentId": "ConnectApi.managedtopics.createmanagedtopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "managedTopicType": {
-          "id": "ConnectApi.managedtopics.createmanagedtopic.managedtopictype",
-          "type": "var",
+        "managedtopictype": {
+          "id": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype,string).varParam.managedtopictype",
+          "nodeType": "variable",
           "name": "managedTopicType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -370,28 +658,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 122
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 138
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_managedTopicType_-1:0"
+            "id": "token.type.identifier_managedTopicType_0:122"
           },
-          "signature": "ConnectApi.ManagedTopicType managedTopicType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedTopicType",
+            "textToLower": "managedtopictype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 122
+              },
+              "end": {
+                "line": 0,
+                "character": 138
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedTopicType_0:122"
+          },
+          "parentId": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.managedtopics.createmanagedtopic.connectapi.managedtopictype",
+            "id": "ConnectApi.managedtopics.createmanagedtopic.datatype.ConnectApi.ManagedTopicType",
             "nodeType": "datatype",
-            "name": "ConnectApi.ManagedTopicType"
-          }
+            "name": "ConnectApi.ManagedTopicType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 94
+                },
+                "end": {
+                  "line": 0,
+                  "character": 104
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:94"
+            },
+            "parentId": "ConnectApi.managedtopics.createmanagedtopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ManagedTopicType"
+          },
+          "scope": null
         },
-        "parentId": {
-          "id": "ConnectApi.managedtopics.createmanagedtopic.parentid",
-          "type": "var",
+        "parentid": {
+          "id": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype,string).varParam.parentid",
+          "nodeType": "variable",
           "name": "parentId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -400,29 +733,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 147
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 155
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_parentId_-1:0"
+            "id": "token.type.identifier_parentId_0:147"
           },
-          "signature": "String parentId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "parentId",
+            "textToLower": "parentid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 147
+              },
+              "end": {
+                "line": 0,
+                "character": 155
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_parentId_0:147"
+          },
+          "parentId": "ConnectApi.managedtopics.method.createmanagedtopic(string,string,connectapi.managedtopictype,string)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.managedtopics.createmanagedtopic.string",
+            "id": "ConnectApi.managedtopics.createmanagedtopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 140
+                },
+                "end": {
+                  "line": 0,
+                  "character": 146
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:140"
+            },
+            "parentId": "ConnectApi.managedtopics.createmanagedtopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of the topic. Specify Navigational for the type of managed topic to create a child managed topic.You can create up to 25 Featured and 5,000 Content topics. You can create up to eight levels of Navigational managed topics with 25 top-level topics and 10 children topics per level for a maximum of 2,775 Navigational topics.  ID of the parent managed topic.You can create up to eight levels (parent, direct children, their children, etc.) of managed topics and up to 10 children managed topics per managed topic.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "createmanagedtopicbyname(string,string,connectapi.managedtopictype)": {
-      "id": "ConnectApi.managedtopics.createmanagedtopicbyname",
+      "id": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype)",
       "nodeType": "method",
       "name": "createManagedTopicByName",
       "startToken": {
@@ -444,6 +825,9 @@
         },
         "id": "declaration.entity.name.function_createManagedTopicByName_-1:0"
       },
+      "parentId": "ConnectApi.managedtopics",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -451,17 +835,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -470,30 +854,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedTopic createManagedTopicByName(String communityId, String name, ConnectApi.ManagedTopicType managedTopicType)",
+      "overrideSignature": "public static override ConnectApi.ManagedTopic createManagedTopicByName(String communityId, String name, ConnectApi.ManagedTopicType managedTopicType)",
       "simplifiedSignature": "createManagedTopicByName(String,String,ConnectApi.ManagedTopicType)",
       "datatype": {
-        "id": "ConnectApi.managedtopics.createmanagedtopicbyname.ConnectApi.ManagedTopic",
+        "id": "ConnectApi.managedtopics.createmanagedtopicbyname.datatype.ConnectApi.ManagedTopic",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedTopic"
+        "name": "ConnectApi.ManagedTopic",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedtopics.createmanagedtopicbyname",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedTopic"
       },
       "description": "Create a managed topic of a specific type by name for a community.",
+      "parentName": "ManagedTopics",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedtopics.createmanagedtopicbyname.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -502,28 +912,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:70"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 70
+              },
+              "end": {
+                "line": 0,
+                "character": 81
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:70"
+          },
+          "parentId": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedtopics.createmanagedtopicbyname.string",
+            "id": "ConnectApi.managedtopics.createmanagedtopicbyname.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 63
+                },
+                "end": {
+                  "line": 0,
+                  "character": 69
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:63"
+            },
+            "parentId": "ConnectApi.managedtopics.createmanagedtopicbyname",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "name": {
-          "id": "ConnectApi.managedtopics.createmanagedtopicbyname.name",
-          "type": "var",
+          "id": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype).varParam.name",
+          "nodeType": "variable",
           "name": "name",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -532,28 +987,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 90
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_name_-1:0"
+            "id": "token.type.identifier_name_0:90"
           },
-          "signature": "String name",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "name",
+            "textToLower": "name",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 90
+              },
+              "end": {
+                "line": 0,
+                "character": 94
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_name_0:90"
+          },
+          "parentId": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.managedtopics.createmanagedtopicbyname.string",
+            "id": "ConnectApi.managedtopics.createmanagedtopicbyname.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 83
+                },
+                "end": {
+                  "line": 0,
+                  "character": 89
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:83"
+            },
+            "parentId": "ConnectApi.managedtopics.createmanagedtopicbyname",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "managedTopicType": {
-          "id": "ConnectApi.managedtopics.createmanagedtopicbyname.managedtopictype",
-          "type": "var",
+        "managedtopictype": {
+          "id": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype).varParam.managedtopictype",
+          "nodeType": "variable",
           "name": "managedTopicType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -562,29 +1062,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 124
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 140
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_managedTopicType_-1:0"
+            "id": "token.type.identifier_managedTopicType_0:124"
           },
-          "signature": "ConnectApi.ManagedTopicType managedTopicType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedTopicType",
+            "textToLower": "managedtopictype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 124
+              },
+              "end": {
+                "line": 0,
+                "character": 140
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedTopicType_0:124"
+          },
+          "parentId": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.managedtopics.createmanagedtopicbyname.connectapi.managedtopictype",
+            "id": "ConnectApi.managedtopics.createmanagedtopicbyname.datatype.ConnectApi.ManagedTopicType",
             "nodeType": "datatype",
-            "name": "ConnectApi.ManagedTopicType"
-          }
+            "name": "ConnectApi.ManagedTopicType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 96
+                },
+                "end": {
+                  "line": 0,
+                  "character": 106
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:96"
+            },
+            "parentId": "ConnectApi.managedtopics.createmanagedtopicbyname",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ManagedTopicType"
+          },
+          "description": "Use either the ID for a community, internal, or null. Name of the topic. Specify the type of managed topic.  Content—Topics that are associated with native content.   Featured—Topics that are featured, for example, on the community home page, but don’t provide overall navigation.   Navigational—Topics that display in a navigational menu in the community.   A topic can be associated with all three managed topic types, so a topic can be a Featured, Navigational, and Content topic. You can create up to 25 Featured and 5,000 Content topics. You can create up to eight levels of Navigational managed topics with 25 top-level topics and 10 children topics per level for a maximum of 2,775 Navigational topics.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "createmanagedtopicbyname(string,string,connectapi.managedtopictype,string)": {
-      "id": "ConnectApi.managedtopics.createmanagedtopicbyname",
+      "id": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype,string)",
       "nodeType": "method",
       "name": "createManagedTopicByName",
       "startToken": {
@@ -606,6 +1154,9 @@
         },
         "id": "declaration.entity.name.function_createManagedTopicByName_-1:0"
       },
+      "parentId": "ConnectApi.managedtopics",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -613,17 +1164,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -632,30 +1183,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedTopic createManagedTopicByName(String communityId, String name, ConnectApi.ManagedTopicType managedTopicType, String parentId)",
+      "overrideSignature": "public static override ConnectApi.ManagedTopic createManagedTopicByName(String communityId, String name, ConnectApi.ManagedTopicType managedTopicType, String parentId)",
       "simplifiedSignature": "createManagedTopicByName(String,String,ConnectApi.ManagedTopicType,String)",
       "datatype": {
-        "id": "ConnectApi.managedtopics.createmanagedtopicbyname.ConnectApi.ManagedTopic",
+        "id": "ConnectApi.managedtopics.createmanagedtopicbyname.datatype.ConnectApi.ManagedTopic",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedTopic"
+        "name": "ConnectApi.ManagedTopic",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedtopics.createmanagedtopicbyname",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedTopic"
       },
       "description": "Create a child managed topic by name for a community.",
+      "parentName": "ManagedTopics",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedtopics.createmanagedtopicbyname.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -664,28 +1241,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:70"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 70
+              },
+              "end": {
+                "line": 0,
+                "character": 81
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:70"
+          },
+          "parentId": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedtopics.createmanagedtopicbyname.string",
+            "id": "ConnectApi.managedtopics.createmanagedtopicbyname.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 63
+                },
+                "end": {
+                  "line": 0,
+                  "character": 69
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:63"
+            },
+            "parentId": "ConnectApi.managedtopics.createmanagedtopicbyname",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "name": {
-          "id": "ConnectApi.managedtopics.createmanagedtopicbyname.name",
-          "type": "var",
+          "id": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype,string).varParam.name",
+          "nodeType": "variable",
           "name": "name",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -694,28 +1316,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 90
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 94
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_name_-1:0"
+            "id": "token.type.identifier_name_0:90"
           },
-          "signature": "String name",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "name",
+            "textToLower": "name",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 90
+              },
+              "end": {
+                "line": 0,
+                "character": 94
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_name_0:90"
+          },
+          "parentId": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.managedtopics.createmanagedtopicbyname.string",
+            "id": "ConnectApi.managedtopics.createmanagedtopicbyname.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 83
+                },
+                "end": {
+                  "line": 0,
+                  "character": 89
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:83"
+            },
+            "parentId": "ConnectApi.managedtopics.createmanagedtopicbyname",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "managedTopicType": {
-          "id": "ConnectApi.managedtopics.createmanagedtopicbyname.managedtopictype",
-          "type": "var",
+        "managedtopictype": {
+          "id": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype,string).varParam.managedtopictype",
+          "nodeType": "variable",
           "name": "managedTopicType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -724,28 +1391,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 124
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 140
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_managedTopicType_-1:0"
+            "id": "token.type.identifier_managedTopicType_0:124"
           },
-          "signature": "ConnectApi.ManagedTopicType managedTopicType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedTopicType",
+            "textToLower": "managedtopictype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 124
+              },
+              "end": {
+                "line": 0,
+                "character": 140
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedTopicType_0:124"
+          },
+          "parentId": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.managedtopics.createmanagedtopicbyname.connectapi.managedtopictype",
+            "id": "ConnectApi.managedtopics.createmanagedtopicbyname.datatype.ConnectApi.ManagedTopicType",
             "nodeType": "datatype",
-            "name": "ConnectApi.ManagedTopicType"
-          }
+            "name": "ConnectApi.ManagedTopicType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 96
+                },
+                "end": {
+                  "line": 0,
+                  "character": 106
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:96"
+            },
+            "parentId": "ConnectApi.managedtopics.createmanagedtopicbyname",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ManagedTopicType"
+          },
+          "scope": null
         },
-        "parentId": {
-          "id": "ConnectApi.managedtopics.createmanagedtopicbyname.parentid",
-          "type": "var",
+        "parentid": {
+          "id": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype,string).varParam.parentid",
+          "nodeType": "variable",
           "name": "parentId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -754,29 +1466,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 149
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 157
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_parentId_-1:0"
+            "id": "token.type.identifier_parentId_0:149"
           },
-          "signature": "String parentId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "parentId",
+            "textToLower": "parentid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 149
+              },
+              "end": {
+                "line": 0,
+                "character": 157
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_parentId_0:149"
+          },
+          "parentId": "ConnectApi.managedtopics.method.createmanagedtopicbyname(string,string,connectapi.managedtopictype,string)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.managedtopics.createmanagedtopicbyname.string",
+            "id": "ConnectApi.managedtopics.createmanagedtopicbyname.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 142
+                },
+                "end": {
+                  "line": 0,
+                  "character": 148
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:142"
+            },
+            "parentId": "ConnectApi.managedtopics.createmanagedtopicbyname",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. Name of the topic. Specify Navigational for the type of managed topic to create a child managed topic.You can create up to 25 Featured and 5,000 Content topics. You can create up to eight levels of Navigational managed topics with 25 top-level topics and 10 children topics per level for a maximum of 2,775 Navigational topics.  ID of the parent managed topic.You can create up to eight levels (parent, direct children, their children, etc.) of managed topics and up to 10 children managed topics per managed topic.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "deletemanagedtopic(string,string)": {
-      "id": "ConnectApi.managedtopics.deletemanagedtopic",
+      "id": "ConnectApi.managedtopics.method.deletemanagedtopic(string,string)",
       "nodeType": "method",
       "name": "deleteManagedTopic",
       "startToken": {
@@ -798,6 +1558,9 @@
         },
         "id": "declaration.entity.name.function_deleteManagedTopic_-1:0"
       },
+      "parentId": "ConnectApi.managedtopics",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -805,17 +1568,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -824,30 +1587,28 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static void deleteManagedTopic(String communityId, String managedTopicId)",
+      "signature": "public static deleteManagedTopic(String communityId, String managedTopicId)",
+      "overrideSignature": "public static override deleteManagedTopic(String communityId, String managedTopicId)",
       "simplifiedSignature": "deleteManagedTopic(String,String)",
-      "datatype": {
-        "id": "ConnectApi.managedtopics.deletemanagedtopic.void",
-        "nodeType": "datatype",
-        "name": "void"
-      },
       "description": "Delete a managed topic from a community.",
+      "parentName": "ManagedTopics",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedtopics.deletemanagedtopic.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedtopics.method.deletemanagedtopic(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -856,28 +1617,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 52
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:41"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 41
+              },
+              "end": {
+                "line": 0,
+                "character": 52
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:41"
+          },
+          "parentId": "ConnectApi.managedtopics.method.deletemanagedtopic(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedtopics.deletemanagedtopic.string",
+            "id": "ConnectApi.managedtopics.deletemanagedtopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:34"
+            },
+            "parentId": "ConnectApi.managedtopics.deletemanagedtopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "managedTopicId": {
-          "id": "ConnectApi.managedtopics.deletemanagedtopic.managedtopicid",
-          "type": "var",
+        "managedtopicid": {
+          "id": "ConnectApi.managedtopics.method.deletemanagedtopic(string,string).varParam.managedtopicid",
+          "nodeType": "variable",
           "name": "managedTopicId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -886,29 +1692,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 75
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_managedTopicId_-1:0"
+            "id": "token.type.identifier_managedTopicId_0:61"
           },
-          "signature": "String managedTopicId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedTopicId",
+            "textToLower": "managedtopicid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 75
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedTopicId_0:61"
+          },
+          "parentId": "ConnectApi.managedtopics.method.deletemanagedtopic(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.managedtopics.deletemanagedtopic.string",
+            "id": "ConnectApi.managedtopics.deletemanagedtopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:54"
+            },
+            "parentId": "ConnectApi.managedtopics.deletemanagedtopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of managed topic.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getmanagedtopic(string,string)": {
-      "id": "ConnectApi.managedtopics.getmanagedtopic",
+      "id": "ConnectApi.managedtopics.method.getmanagedtopic(string,string)",
       "nodeType": "method",
       "name": "getManagedTopic",
       "startToken": {
@@ -930,6 +1784,9 @@
         },
         "id": "declaration.entity.name.function_getManagedTopic_-1:0"
       },
+      "parentId": "ConnectApi.managedtopics",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -937,17 +1794,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -956,30 +1813,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedTopic getManagedTopic(String communityId, String managedTopicId)",
+      "overrideSignature": "public static override ConnectApi.ManagedTopic getManagedTopic(String communityId, String managedTopicId)",
       "simplifiedSignature": "getManagedTopic(String,String)",
       "datatype": {
-        "id": "ConnectApi.managedtopics.getmanagedtopic.ConnectApi.ManagedTopic",
+        "id": "ConnectApi.managedtopics.getmanagedtopic.datatype.ConnectApi.ManagedTopic",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedTopic"
+        "name": "ConnectApi.ManagedTopic",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedtopics.getmanagedtopic",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedTopic"
       },
       "description": "Get a managed topic in a community.",
+      "parentName": "ManagedTopics",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedtopics.getmanagedtopic.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopic(string,string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -988,28 +1871,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:61"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:61"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopic(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopic.string",
+            "id": "ConnectApi.managedtopics.getmanagedtopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:54"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "managedTopicId": {
-          "id": "ConnectApi.managedtopics.getmanagedtopic.managedtopicid",
-          "type": "var",
+        "managedtopicid": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopic(string,string).varParam.managedtopicid",
+          "nodeType": "variable",
           "name": "managedTopicId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1018,29 +1946,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_managedTopicId_-1:0"
+            "id": "token.type.identifier_managedTopicId_0:81"
           },
-          "signature": "String managedTopicId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedTopicId",
+            "textToLower": "managedtopicid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 95
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedTopicId_0:81"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopic(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopic.string",
+            "id": "ConnectApi.managedtopics.getmanagedtopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 80
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:74"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of managed topic.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getmanagedtopic(string,string,integer)": {
-      "id": "ConnectApi.managedtopics.getmanagedtopic",
+      "id": "ConnectApi.managedtopics.method.getmanagedtopic(string,string,integer)",
       "nodeType": "method",
       "name": "getManagedTopic",
       "startToken": {
@@ -1062,6 +2038,9 @@
         },
         "id": "declaration.entity.name.function_getManagedTopic_-1:0"
       },
+      "parentId": "ConnectApi.managedtopics",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1069,17 +2048,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1088,30 +2067,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedTopic getManagedTopic(String communityId, String managedTopicId, Integer depth)",
+      "overrideSignature": "public static override ConnectApi.ManagedTopic getManagedTopic(String communityId, String managedTopicId, Integer depth)",
       "simplifiedSignature": "getManagedTopic(String,String,Integer)",
       "datatype": {
-        "id": "ConnectApi.managedtopics.getmanagedtopic.ConnectApi.ManagedTopic",
+        "id": "ConnectApi.managedtopics.getmanagedtopic.datatype.ConnectApi.ManagedTopic",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedTopic"
+        "name": "ConnectApi.ManagedTopic",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedtopics.getmanagedtopic",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedTopic"
       },
       "description": "Get a managed topic, including its parent and children managed topics, in a community.",
+      "parentName": "ManagedTopics",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedtopics.getmanagedtopic.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopic(string,string,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1120,28 +2125,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 61
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:61"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 61
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:61"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopic(string,string,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopic.string",
+            "id": "ConnectApi.managedtopics.getmanagedtopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 54
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:54"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "managedTopicId": {
-          "id": "ConnectApi.managedtopics.getmanagedtopic.managedtopicid",
-          "type": "var",
+        "managedtopicid": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopic(string,string,integer).varParam.managedtopicid",
+          "nodeType": "variable",
           "name": "managedTopicId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1150,28 +2200,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_managedTopicId_-1:0"
+            "id": "token.type.identifier_managedTopicId_0:81"
           },
-          "signature": "String managedTopicId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedTopicId",
+            "textToLower": "managedtopicid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 95
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedTopicId_0:81"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopic(string,string,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopic.string",
+            "id": "ConnectApi.managedtopics.getmanagedtopic.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 74
+                },
+                "end": {
+                  "line": 0,
+                  "character": 80
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:74"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "depth": {
-          "id": "ConnectApi.managedtopics.getmanagedtopic.depth",
-          "type": "var",
+          "id": "ConnectApi.managedtopics.method.getmanagedtopic(string,string,integer).varParam.depth",
+          "nodeType": "variable",
           "name": "depth",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1180,29 +2275,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 105
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 110
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_depth_-1:0"
+            "id": "token.type.identifier_depth_0:105"
           },
-          "signature": "Integer depth",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "depth",
+            "textToLower": "depth",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 105
+              },
+              "end": {
+                "line": 0,
+                "character": 110
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_depth_0:105"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopic(string,string,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopic.integer",
+            "id": "ConnectApi.managedtopics.getmanagedtopic.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 97
+                },
+                "end": {
+                  "line": 0,
+                  "character": 104
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:97"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopic",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. ID of managed topic. Specify an integer 1–8. If you specify 1, the children property of the ConnectApi.ManagedTopic output class is null. If you specify 2, the children property of the ConnectApi.ManagedTopic output class contains the direct children managed topics, if any, of the managed topic. If you specify 3–8, you get the direct children managed topics and their children managed topics if there are any. If depth isn’t specified, it defaults to 1.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getmanagedtopics(string)": {
-      "id": "ConnectApi.managedtopics.getmanagedtopics",
+      "id": "ConnectApi.managedtopics.method.getmanagedtopics(string)",
       "nodeType": "method",
       "name": "getManagedTopics",
       "startToken": {
@@ -1224,6 +2367,9 @@
         },
         "id": "declaration.entity.name.function_getManagedTopics_-1:0"
       },
+      "parentId": "ConnectApi.managedtopics",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1231,17 +2377,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1250,30 +2396,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedTopicCollection getManagedTopics(String communityId)",
+      "overrideSignature": "public static override ConnectApi.ManagedTopicCollection getManagedTopics(String communityId)",
       "simplifiedSignature": "getManagedTopics(String)",
       "datatype": {
-        "id": "ConnectApi.managedtopics.getmanagedtopics.ConnectApi.ManagedTopicCollection",
+        "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.ConnectApi.ManagedTopicCollection",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedTopicCollection"
+        "name": "ConnectApi.ManagedTopicCollection",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedTopicCollection"
       },
       "description": "Get the featured and navigational managed topics for the community.",
+      "parentName": "ManagedTopics",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1282,29 +2454,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:72"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 72
+              },
+              "end": {
+                "line": 0,
+                "character": 83
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:72"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.string",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:65"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Use either the ID for a community, internal, or null.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getmanagedtopics(string,connectapi.managedtopictype)": {
-      "id": "ConnectApi.managedtopics.getmanagedtopics",
+      "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype)",
       "nodeType": "method",
       "name": "getManagedTopics",
       "startToken": {
@@ -1326,6 +2546,9 @@
         },
         "id": "declaration.entity.name.function_getManagedTopics_-1:0"
       },
+      "parentId": "ConnectApi.managedtopics",
+      "order": 9,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1333,17 +2556,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1352,30 +2575,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedTopicCollection getManagedTopics(String communityId, ConnectApi.ManagedTopicType managedTopicType)",
+      "overrideSignature": "public static override ConnectApi.ManagedTopicCollection getManagedTopics(String communityId, ConnectApi.ManagedTopicType managedTopicType)",
       "simplifiedSignature": "getManagedTopics(String,ConnectApi.ManagedTopicType)",
       "datatype": {
-        "id": "ConnectApi.managedtopics.getmanagedtopics.ConnectApi.ManagedTopicCollection",
+        "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.ConnectApi.ManagedTopicCollection",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedTopicCollection"
+        "name": "ConnectApi.ManagedTopicCollection",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedTopicCollection"
       },
       "description": "Get managed topics of the specified type for a community.",
+      "parentName": "ManagedTopics",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1384,28 +2633,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:72"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 72
+              },
+              "end": {
+                "line": 0,
+                "character": 83
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:72"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.string",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:65"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "managedTopicType": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.managedtopictype",
-          "type": "var",
+        "managedtopictype": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype).varParam.managedtopictype",
+          "nodeType": "variable",
           "name": "managedTopicType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1414,29 +2708,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 113
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 129
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_managedTopicType_-1:0"
+            "id": "token.type.identifier_managedTopicType_0:113"
           },
-          "signature": "ConnectApi.ManagedTopicType managedTopicType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedTopicType",
+            "textToLower": "managedtopictype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 113
+              },
+              "end": {
+                "line": 0,
+                "character": 129
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedTopicType_0:113"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.connectapi.managedtopictype",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.ConnectApi.ManagedTopicType",
             "nodeType": "datatype",
-            "name": "ConnectApi.ManagedTopicType"
-          }
+            "name": "ConnectApi.ManagedTopicType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 85
+                },
+                "end": {
+                  "line": 0,
+                  "character": 95
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:85"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ManagedTopicType"
+          },
+          "description": "Use either the ID for a community, internal, or null. Type of managed topic.  Content—Topics that are associated with native content.   Featured—Topics that are featured, for example, on the community home page, but don’t provide overall navigation.   Navigational—Topics that display in a navigational menu in the community.   A topic can be associated with all three managed topic types, so a topic can be a Featured, Navigational, and Content topic. If you specify Content, up to 50 topics are returned. If you want more than 50 Content topics, use getManagedTopics(communityId, managedTopicType, pageParam, pageSize).",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getmanagedtopics(string,connectapi.managedtopictype,integer)": {
-      "id": "ConnectApi.managedtopics.getmanagedtopics",
+      "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer)",
       "nodeType": "method",
       "name": "getManagedTopics",
       "startToken": {
@@ -1458,6 +2800,9 @@
         },
         "id": "declaration.entity.name.function_getManagedTopics_-1:0"
       },
+      "parentId": "ConnectApi.managedtopics",
+      "order": 10,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1465,17 +2810,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1484,30 +2829,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedTopicCollection getManagedTopics(String communityId, ConnectApi.ManagedTopicType managedTopicType, Integer depth)",
+      "overrideSignature": "public static override ConnectApi.ManagedTopicCollection getManagedTopics(String communityId, ConnectApi.ManagedTopicType managedTopicType, Integer depth)",
       "simplifiedSignature": "getManagedTopics(String,ConnectApi.ManagedTopicType,Integer)",
       "datatype": {
-        "id": "ConnectApi.managedtopics.getmanagedtopics.ConnectApi.ManagedTopicCollection",
+        "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.ConnectApi.ManagedTopicCollection",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedTopicCollection"
+        "name": "ConnectApi.ManagedTopicCollection",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedTopicCollection"
       },
       "description": "Get managed topics of the specified type, including their parent and children managed topics, in a community.",
+      "parentName": "ManagedTopics",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1516,28 +2887,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:72"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 72
+              },
+              "end": {
+                "line": 0,
+                "character": 83
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:72"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.string",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:65"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "managedTopicType": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.managedtopictype",
-          "type": "var",
+        "managedtopictype": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer).varParam.managedtopictype",
+          "nodeType": "variable",
           "name": "managedTopicType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1546,28 +2962,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 113
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 129
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_managedTopicType_-1:0"
+            "id": "token.type.identifier_managedTopicType_0:113"
           },
-          "signature": "ConnectApi.ManagedTopicType managedTopicType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedTopicType",
+            "textToLower": "managedtopictype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 113
+              },
+              "end": {
+                "line": 0,
+                "character": 129
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedTopicType_0:113"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.connectapi.managedtopictype",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.ConnectApi.ManagedTopicType",
             "nodeType": "datatype",
-            "name": "ConnectApi.ManagedTopicType"
-          }
+            "name": "ConnectApi.ManagedTopicType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 85
+                },
+                "end": {
+                  "line": 0,
+                  "character": 95
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:85"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ManagedTopicType"
+          },
+          "scope": null
         },
         "depth": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.depth",
-          "type": "var",
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer).varParam.depth",
+          "nodeType": "variable",
           "name": "depth",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1576,29 +3037,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 139
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 144
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_depth_-1:0"
+            "id": "token.type.identifier_depth_0:139"
           },
-          "signature": "Integer depth",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "depth",
+            "textToLower": "depth",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 139
+              },
+              "end": {
+                "line": 0,
+                "character": 144
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_depth_0:139"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.integer",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 131
+                },
+                "end": {
+                  "line": 0,
+                  "character": 138
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:131"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. Type of managed topic.  Content—Topics that are associated with native content.   Featured—Topics that are featured, for example, on the community home page, but don’t provide overall navigation.   Navigational—Topics that display in a navigational menu in the community.   A topic can be associated with all three managed topic types, so a topic can be a Featured, Navigational, and Content topic.  Specify an integer 1–8. If you specify 1, the children property of the ConnectApi.ManagedTopic output class is null. If you specify 2, the children property of the ConnectApi.ManagedTopic output class contains the direct children managed topics, if any, of the managed topic. If you specify 3–8, you get the direct children managed topics and their children managed topics if there are any. If depth isn’t specified, it defaults to 1.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getmanagedtopics(string,connectapi.managedtopictype,string,integer)": {
-      "id": "ConnectApi.managedtopics.getmanagedtopics",
+      "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,string,integer)",
       "nodeType": "method",
       "name": "getManagedTopics",
       "startToken": {
@@ -1620,6 +3129,9 @@
         },
         "id": "declaration.entity.name.function_getManagedTopics_-1:0"
       },
+      "parentId": "ConnectApi.managedtopics",
+      "order": 11,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1627,17 +3139,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1646,30 +3158,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedTopicCollection getManagedTopics(String communityId, ConnectApi.ManagedTopicType managedTopicType, String recordId, Integer depth)",
+      "overrideSignature": "public static override ConnectApi.ManagedTopicCollection getManagedTopics(String communityId, ConnectApi.ManagedTopicType managedTopicType, String recordId, Integer depth)",
       "simplifiedSignature": "getManagedTopics(String,ConnectApi.ManagedTopicType,String,Integer)",
       "datatype": {
-        "id": "ConnectApi.managedtopics.getmanagedtopics.ConnectApi.ManagedTopicCollection",
+        "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.ConnectApi.ManagedTopicCollection",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedTopicCollection"
+        "name": "ConnectApi.ManagedTopicCollection",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedTopicCollection"
       },
       "description": "Get managed topics of the specified type, including their parent and children managed topics, that are associated with a given topic in a community.",
+      "parentName": "ManagedTopics",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,string,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1678,28 +3216,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:72"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 72
+              },
+              "end": {
+                "line": 0,
+                "character": 83
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:72"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,string,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.string",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:65"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "managedTopicType": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.managedtopictype",
-          "type": "var",
+        "managedtopictype": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,string,integer).varParam.managedtopictype",
+          "nodeType": "variable",
           "name": "managedTopicType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1708,28 +3291,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 113
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 129
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_managedTopicType_-1:0"
+            "id": "token.type.identifier_managedTopicType_0:113"
           },
-          "signature": "ConnectApi.ManagedTopicType managedTopicType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedTopicType",
+            "textToLower": "managedtopictype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 113
+              },
+              "end": {
+                "line": 0,
+                "character": 129
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedTopicType_0:113"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,string,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.connectapi.managedtopictype",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.ConnectApi.ManagedTopicType",
             "nodeType": "datatype",
-            "name": "ConnectApi.ManagedTopicType"
-          }
+            "name": "ConnectApi.ManagedTopicType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 85
+                },
+                "end": {
+                  "line": 0,
+                  "character": 95
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:85"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ManagedTopicType"
+          },
+          "scope": null
         },
-        "recordId": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.recordid",
-          "type": "var",
+        "recordid": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,string,integer).varParam.recordid",
+          "nodeType": "variable",
           "name": "recordId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1738,28 +3366,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 138
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 146
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_recordId_-1:0"
+            "id": "token.type.identifier_recordId_0:138"
           },
-          "signature": "String recordId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordId",
+            "textToLower": "recordid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 138
+              },
+              "end": {
+                "line": 0,
+                "character": 146
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordId_0:138"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,string,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.string",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 131
+                },
+                "end": {
+                  "line": 0,
+                  "character": 137
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:131"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "depth": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.depth",
-          "type": "var",
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,string,integer).varParam.depth",
+          "nodeType": "variable",
           "name": "depth",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1768,29 +3441,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 156
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 161
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_depth_-1:0"
+            "id": "token.type.identifier_depth_0:156"
           },
-          "signature": "Integer depth",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "depth",
+            "textToLower": "depth",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 156
+              },
+              "end": {
+                "line": 0,
+                "character": 161
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_depth_0:156"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,string,integer)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.integer",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 148
+                },
+                "end": {
+                  "line": 0,
+                  "character": 155
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:148"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. Type of managed topic.  Content—Topics that are associated with native content.   Featured—Topics that are featured, for example, on the community home page, but don’t provide overall navigation.   Navigational—Topics that display in a navigational menu in the community.   A topic can be associated with all three managed topic types, so a topic can be a Featured, Navigational, and Content topic.  ID of the topic associated with the managed topics. Specify an integer 1–8. If you specify 1, the children property of the ConnectApi.ManagedTopic output class is null. If you specify 2, the children property of the ConnectApi.ManagedTopic output class contains the direct children managed topics, if any, of the managed topic. If you specify 3–8, you get the direct children managed topics and their children managed topics if there are any. If depth isn’t specified, it defaults to 1.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "getmanagedtopics(string,connectapi.managedtopictype,list)": {
-      "id": "ConnectApi.managedtopics.getmanagedtopics",
+    "getmanagedtopics(string,connectapi.managedtopictype,list<string>,integer)": {
+      "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,list<string>,integer)",
       "nodeType": "method",
       "name": "getManagedTopics",
       "startToken": {
@@ -1812,6 +3533,9 @@
         },
         "id": "declaration.entity.name.function_getManagedTopics_-1:0"
       },
+      "parentId": "ConnectApi.managedtopics",
+      "order": 12,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1819,17 +3543,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -1838,30 +3562,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static ConnectApi.ManagedTopicCollection getManagedTopics(String communityId, ConnectApi.ManagedTopicType managedTopicType, List <String>)",
-      "simplifiedSignature": "getManagedTopics(String,ConnectApi.ManagedTopicType,List)",
+      "signature": "public static ConnectApi.ManagedTopicCollection getManagedTopics(String communityId, ConnectApi.ManagedTopicType managedTopicType, List<String> recordIds, Integer depth)",
+      "overrideSignature": "public static override ConnectApi.ManagedTopicCollection getManagedTopics(String communityId, ConnectApi.ManagedTopicType managedTopicType, List<String> recordIds, Integer depth)",
+      "simplifiedSignature": "getManagedTopics(String,ConnectApi.ManagedTopicType,List<String>,Integer)",
       "datatype": {
-        "id": "ConnectApi.managedtopics.getmanagedtopics.ConnectApi.ManagedTopicCollection",
+        "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.ConnectApi.ManagedTopicCollection",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedTopicCollection"
+        "name": "ConnectApi.ManagedTopicCollection",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedTopicCollection"
       },
       "description": "Get managed topics of the specified type, including their parent and children managed topics, that are associated with topics in a community.",
+      "parentName": "ManagedTopics",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,list<string>,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1870,28 +3620,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:72"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 72
+              },
+              "end": {
+                "line": 0,
+                "character": 83
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:72"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,list<string>,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.string",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:65"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "managedTopicType": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.managedtopictype",
-          "type": "var",
+        "managedtopictype": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,list<string>,integer).varParam.managedtopictype",
+          "nodeType": "variable",
           "name": "managedTopicType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1900,59 +3695,254 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 113
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 129
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_managedTopicType_-1:0"
+            "id": "token.type.identifier_managedTopicType_0:113"
           },
-          "signature": "ConnectApi.ManagedTopicType managedTopicType",
-          "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.connectapi.managedtopictype",
-            "nodeType": "datatype",
-            "name": "ConnectApi.ManagedTopicType"
-          }
-        },
-        "<String>": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.<string>",
-          "type": "var",
-          "name": "<String>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "managedTopicType",
+            "textToLower": "managedtopictype",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 113
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 129
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_managedTopicType_0:113"
           },
-          "signature": "List <String>",
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,list<string>,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.list",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.ConnectApi.ManagedTopicType",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "ConnectApi.ManagedTopicType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 85
+                },
+                "end": {
+                  "line": 0,
+                  "character": 95
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:85"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ManagedTopicType"
+          },
+          "scope": null
+        },
+        "recordids": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,list<string>,integer).varParam.recordids",
+          "nodeType": "variable",
+          "name": "recordIds",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordIds",
+            "textToLower": "recordids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 144
+              },
+              "end": {
+                "line": 0,
+                "character": 153
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordIds_0:144"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordIds",
+            "textToLower": "recordids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 144
+              },
+              "end": {
+                "line": 0,
+                "character": 153
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordIds_0:144"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,list<string>,integer)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.List<String>",
+            "nodeType": "datatype",
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 131
+                },
+                "end": {
+                  "line": 0,
+                  "character": 135
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:131"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 136
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 142
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:136"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
+        },
+        "depth": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,list<string>,integer).varParam.depth",
+          "nodeType": "variable",
+          "name": "depth",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "depth",
+            "textToLower": "depth",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 163
+              },
+              "end": {
+                "line": 0,
+                "character": 168
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_depth_0:163"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "depth",
+            "textToLower": "depth",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 163
+              },
+              "end": {
+                "line": 0,
+                "character": 168
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_depth_0:163"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,list<string>,integer)",
+          "order": 4,
+          "memberOrder": 4,
+          "datatype": {
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.Integer",
+            "nodeType": "datatype",
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 155
+                },
+                "end": {
+                  "line": 0,
+                  "character": 162
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:155"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. Type of managed topic.  Content—Topics that are associated with native content.   Featured—Topics that are featured, for example, on the community home page, but don’t provide overall navigation.   Navigational—Topics that display in a navigational menu in the community.   A topic can be associated with all three managed topic types, so a topic can be a Featured, Navigational, and Content topic.  A list of up to 100 topic IDs associated with the managed topics.If you list more than 10 topic IDs, you can’t specify 2–8 for depth.  Specify an integer 1–8. If you specify 1, the children property of the ConnectApi.ManagedTopic output class is null. If you specify 2, the children property of the ConnectApi.ManagedTopic output class contains the direct children managed topics, if any, of the managed topic. If you specify 3–8, you get the direct children managed topics and their children managed topics if there are any. If depth isn’t specified, it defaults to 1.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getmanagedtopics(string,connectapi.managedtopictype,integer,integer)": {
-      "id": "ConnectApi.managedtopics.getmanagedtopics",
+      "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer,integer)",
       "nodeType": "method",
       "name": "getManagedTopics",
       "startToken": {
@@ -1974,6 +3964,9 @@
         },
         "id": "declaration.entity.name.function_getManagedTopics_-1:0"
       },
+      "parentId": "ConnectApi.managedtopics",
+      "order": 13,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1981,17 +3974,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -2000,30 +3993,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedTopicCollection getManagedTopics(String communityId, ConnectApi.ManagedTopicType managedTopicType, Integer pageParam, Integer pageSize)",
+      "overrideSignature": "public static override ConnectApi.ManagedTopicCollection getManagedTopics(String communityId, ConnectApi.ManagedTopicType managedTopicType, Integer pageParam, Integer pageSize)",
       "simplifiedSignature": "getManagedTopics(String,ConnectApi.ManagedTopicType,Integer,Integer)",
       "datatype": {
-        "id": "ConnectApi.managedtopics.getmanagedtopics.ConnectApi.ManagedTopicCollection",
+        "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.ConnectApi.ManagedTopicCollection",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedTopicCollection"
+        "name": "ConnectApi.ManagedTopicCollection",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedTopicCollection"
       },
       "description": "Get a page of managed topics.",
+      "parentName": "ManagedTopics",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer,integer).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2032,28 +4051,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:72"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 72
+              },
+              "end": {
+                "line": 0,
+                "character": 83
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:72"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer,integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.string",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 65
+                },
+                "end": {
+                  "line": 0,
+                  "character": 71
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:65"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "managedTopicType": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.managedtopictype",
-          "type": "var",
+        "managedtopictype": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer,integer).varParam.managedtopictype",
+          "nodeType": "variable",
           "name": "managedTopicType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2062,28 +4126,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 113
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 129
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_managedTopicType_-1:0"
+            "id": "token.type.identifier_managedTopicType_0:113"
           },
-          "signature": "ConnectApi.ManagedTopicType managedTopicType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedTopicType",
+            "textToLower": "managedtopictype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 113
+              },
+              "end": {
+                "line": 0,
+                "character": 129
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedTopicType_0:113"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer,integer)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.connectapi.managedtopictype",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.ConnectApi.ManagedTopicType",
             "nodeType": "datatype",
-            "name": "ConnectApi.ManagedTopicType"
-          }
+            "name": "ConnectApi.ManagedTopicType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 85
+                },
+                "end": {
+                  "line": 0,
+                  "character": 95
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:85"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ManagedTopicType"
+          },
+          "scope": null
         },
-        "pageParam": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.pageparam",
-          "type": "var",
+        "pageparam": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer,integer).varParam.pageparam",
+          "nodeType": "variable",
           "name": "pageParam",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2092,28 +4201,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 139
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 148
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageParam_-1:0"
+            "id": "token.type.identifier_pageParam_0:139"
           },
-          "signature": "Integer pageParam",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageParam",
+            "textToLower": "pageparam",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 139
+              },
+              "end": {
+                "line": 0,
+                "character": 148
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageParam_0:139"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer,integer)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.integer",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 131
+                },
+                "end": {
+                  "line": 0,
+                  "character": 138
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:131"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "scope": null
         },
-        "pageSize": {
-          "id": "ConnectApi.managedtopics.getmanagedtopics.pagesize",
-          "type": "var",
+        "pagesize": {
+          "id": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer,integer).varParam.pagesize",
+          "nodeType": "variable",
           "name": "pageSize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2122,29 +4276,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 158
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 166
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageSize_-1:0"
+            "id": "token.type.identifier_pageSize_0:158"
           },
-          "signature": "Integer pageSize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 158
+              },
+              "end": {
+                "line": 0,
+                "character": 166
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:158"
+          },
+          "parentId": "ConnectApi.managedtopics.method.getmanagedtopics(string,connectapi.managedtopictype,integer,integer)",
+          "order": 4,
+          "memberOrder": 4,
           "datatype": {
-            "id": "ConnectApi.managedtopics.getmanagedtopics.integer",
+            "id": "ConnectApi.managedtopics.getmanagedtopics.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 150
+                },
+                "end": {
+                  "line": 0,
+                  "character": 157
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:150"
+            },
+            "parentId": "ConnectApi.managedtopics.getmanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "Use either the ID for a community, internal, or null. Type of managed topic.  Content—Topics that are associated with native content.   Featured—Topics that are featured, for example, on the community home page, but don’t provide overall navigation.   Navigational—Topics that display in a navigational menu in the community.   A topic can be associated with all three managed topic types, so a topic can be a Featured, Navigational, and Content topic.  Specifies the number of the page you want returned. Starts at 0. If you pass in null or 0, the first page is returned. Specifies the number of items per page. Valid values are from 1 through 100. If you pass in null, the default size is 50.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "reordermanagedtopics(string,connectapi.managedtopicpositioncollectioninput)": {
-      "id": "ConnectApi.managedtopics.reordermanagedtopics",
+      "id": "ConnectApi.managedtopics.method.reordermanagedtopics(string,connectapi.managedtopicpositioncollectioninput)",
       "nodeType": "method",
       "name": "reorderManagedTopics",
       "startToken": {
@@ -2166,6 +4368,9 @@
         },
         "id": "declaration.entity.name.function_reorderManagedTopics_-1:0"
       },
+      "parentId": "ConnectApi.managedtopics",
+      "order": 14,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -2173,17 +4378,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -2192,30 +4397,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ManagedTopicCollection reorderManagedTopics(String communityId, ConnectApi.ManagedTopicPositionCollectionInput managedTopicPositionCollection)",
+      "overrideSignature": "public static override ConnectApi.ManagedTopicCollection reorderManagedTopics(String communityId, ConnectApi.ManagedTopicPositionCollectionInput managedTopicPositionCollection)",
       "simplifiedSignature": "reorderManagedTopics(String,ConnectApi.ManagedTopicPositionCollectionInput)",
       "datatype": {
-        "id": "ConnectApi.managedtopics.reordermanagedtopics.ConnectApi.ManagedTopicCollection",
+        "id": "ConnectApi.managedtopics.reordermanagedtopics.datatype.ConnectApi.ManagedTopicCollection",
         "nodeType": "datatype",
-        "name": "ConnectApi.ManagedTopicCollection"
+        "name": "ConnectApi.ManagedTopicCollection",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.managedtopics.reordermanagedtopics",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ManagedTopicCollection"
       },
       "description": "Reorder the relative positions of managed topics in a community.",
+      "parentName": "ManagedTopics",
+      "variables": {},
       "params": {
-        "communityId": {
-          "id": "ConnectApi.managedtopics.reordermanagedtopics.communityid",
-          "type": "var",
+        "communityid": {
+          "id": "ConnectApi.managedtopics.method.reordermanagedtopics(string,connectapi.managedtopicpositioncollectioninput).varParam.communityid",
+          "nodeType": "variable",
           "name": "communityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2224,28 +4455,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 76
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 87
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_communityId_-1:0"
+            "id": "token.type.identifier_communityId_0:76"
           },
-          "signature": "String communityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "communityId",
+            "textToLower": "communityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 76
+              },
+              "end": {
+                "line": 0,
+                "character": 87
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_communityId_0:76"
+          },
+          "parentId": "ConnectApi.managedtopics.method.reordermanagedtopics(string,connectapi.managedtopicpositioncollectioninput)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.managedtopics.reordermanagedtopics.string",
+            "id": "ConnectApi.managedtopics.reordermanagedtopics.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 69
+                },
+                "end": {
+                  "line": 0,
+                  "character": 75
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:69"
+            },
+            "parentId": "ConnectApi.managedtopics.reordermanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "managedTopicPositionCollection": {
-          "id": "ConnectApi.managedtopics.reordermanagedtopics.managedtopicpositioncollection",
-          "type": "var",
+        "managedtopicpositioncollection": {
+          "id": "ConnectApi.managedtopics.method.reordermanagedtopics(string,connectapi.managedtopicpositioncollectioninput).varParam.managedtopicpositioncollection",
+          "nodeType": "variable",
           "name": "managedTopicPositionCollection",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -2254,30 +4530,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 136
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 166
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_managedTopicPositionCollection_-1:0"
+            "id": "token.type.identifier_managedTopicPositionCollection_0:136"
           },
-          "signature": "ConnectApi.ManagedTopicPositionCollectionInput managedTopicPositionCollection",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "managedTopicPositionCollection",
+            "textToLower": "managedtopicpositioncollection",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 136
+              },
+              "end": {
+                "line": 0,
+                "character": 166
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_managedTopicPositionCollection_0:136"
+          },
+          "parentId": "ConnectApi.managedtopics.method.reordermanagedtopics(string,connectapi.managedtopicpositioncollectioninput)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.managedtopics.reordermanagedtopics.connectapi.managedtopicpositioncollectioninput",
+            "id": "ConnectApi.managedtopics.reordermanagedtopics.datatype.ConnectApi.ManagedTopicPositionCollectionInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.ManagedTopicPositionCollectionInput"
-          }
+            "name": "ConnectApi.ManagedTopicPositionCollectionInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 89
+                },
+                "end": {
+                  "line": 0,
+                  "character": 99
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:89"
+            },
+            "parentId": "ConnectApi.managedtopics.reordermanagedtopics",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ManagedTopicPositionCollectionInput"
+          },
+          "description": "Use either the ID for a community, internal, or null. A collection of relative positions of managed topics. This collection can include only Featured and Navigational topics and doesn’t have to include all managed topics.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 14,
+  "queries": []
 }

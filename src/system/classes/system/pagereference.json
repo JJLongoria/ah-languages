@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_PageReference_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "forresource(string,string)": {
-      "id": "System.pagereference.forresource",
+      "id": "System.pagereference.method.forresource(string,string)",
       "nodeType": "method",
       "name": "forResource",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_forResource_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 1,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static System.PageReference forResource(String resourceName, String path)",
+      "overrideSignature": "public static override System.PageReference forResource(String resourceName, String path)",
       "simplifiedSignature": "forResource(String,String)",
       "datatype": {
-        "id": "System.pagereference.forresource.System.PageReference",
+        "id": "System.pagereference.forresource.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:14"
+        },
+        "parentId": "System.pagereference.forresource",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Generate a new instance of the PageReference class for the specified sObject record.",
+      "parentName": "PageReference",
+      "variables": {},
       "params": {
-        "resourceName": {
-          "id": "System.pagereference.forresource.resourcename",
-          "type": "var",
+        "resourcename": {
+          "id": "System.pagereference.method.forresource(string,string).varParam.resourcename",
+          "nodeType": "variable",
           "name": "resourceName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,74 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_resourceName_-1:0"
+            "id": "token.type.identifier_resourceName_0:54"
           },
-          "signature": "String resourceName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "resourceName",
+            "textToLower": "resourcename",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 66
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_resourceName_0:54"
+          },
+          "parentId": "System.pagereference.method.forresource(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.pagereference.forresource.string",
+            "id": "System.pagereference.forresource.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 47
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:47"
+            },
+            "parentId": "System.pagereference.forresource",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The resource name",
+          "scope": null
         },
         "path": {
-          "id": "System.pagereference.forresource.path",
-          "type": "var",
+          "id": "System.pagereference.method.forresource(string,string).varParam.path",
+          "nodeType": "variable",
           "name": "path",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,29 +255,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 75
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 79
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_path_-1:0"
+            "id": "token.type.identifier_path_0:75"
           },
-          "signature": "String path",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "path",
+            "textToLower": "path",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 75
+              },
+              "end": {
+                "line": 0,
+                "character": 79
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_path_0:75"
+          },
+          "parentId": "System.pagereference.method.forresource(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.pagereference.forresource.string",
+            "id": "System.pagereference.forresource.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 68
+                },
+                "end": {
+                  "line": 0,
+                  "character": 74
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:68"
+            },
+            "parentId": "System.pagereference.forresource",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The resource path",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "forresource(string)": {
-      "id": "System.pagereference.forresource",
+      "id": "System.pagereference.method.forresource(string)",
       "nodeType": "method",
       "name": "forResource",
       "startToken": {
@@ -222,6 +347,9 @@
         },
         "id": "declaration.entity.name.function_forResource_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 2,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -229,17 +357,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -248,30 +376,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static System.PageReference forResource(String resourceName)",
+      "overrideSignature": "public static override System.PageReference forResource(String resourceName)",
       "simplifiedSignature": "forResource(String)",
       "datatype": {
-        "id": "System.pagereference.forresource.System.PageReference",
+        "id": "System.pagereference.forresource.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:14"
+        },
+        "parentId": "System.pagereference.forresource",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Create a PageReference for a static resource, by name.",
+      "parentName": "PageReference",
+      "variables": {},
       "params": {
-        "resourceName": {
-          "id": "System.pagereference.forresource.resourcename",
-          "type": "var",
+        "resourcename": {
+          "id": "System.pagereference.method.forresource(string).varParam.resourcename",
+          "nodeType": "variable",
           "name": "resourceName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -280,29 +434,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 54
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 66
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_resourceName_-1:0"
+            "id": "token.type.identifier_resourceName_0:54"
           },
-          "signature": "String resourceName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "resourceName",
+            "textToLower": "resourcename",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 54
+              },
+              "end": {
+                "line": 0,
+                "character": 66
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_resourceName_0:54"
+          },
+          "parentId": "System.pagereference.method.forresource(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.pagereference.forresource.string",
+            "id": "System.pagereference.forresource.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 47
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:47"
+            },
+            "parentId": "System.pagereference.forresource",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The resource name",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getanchor()": {
-      "id": "System.pagereference.getanchor",
+      "id": "System.pagereference.method.getanchor()",
       "nodeType": "method",
       "name": "getAnchor",
       "startToken": {
@@ -324,6 +526,9 @@
         },
         "id": "declaration.entity.name.function_getAnchor_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 3,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -331,30 +536,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getAnchor()",
+      "overrideSignature": "public override String getAnchor()",
       "simplifiedSignature": "getAnchor()",
       "datatype": {
-        "id": "System.pagereference.getanchor.String",
+        "id": "System.pagereference.getanchor.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.pagereference.getanchor",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the name of the anchor referenced in the page’s URL. That is, the part of the URL after the hashtag (#).",
-      "params": {}
+      "parentName": "PageReference",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getcontent()": {
-      "id": "System.pagereference.getcontent",
+      "id": "System.pagereference.method.getcontent()",
       "nodeType": "method",
       "name": "getContent",
       "startToken": {
@@ -376,6 +609,9 @@
         },
         "id": "declaration.entity.name.function_getContent_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 4,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -383,30 +619,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Blob getContent()",
+      "overrideSignature": "public override Blob getContent()",
       "simplifiedSignature": "getContent()",
       "datatype": {
-        "id": "System.pagereference.getcontent.Blob",
+        "id": "System.pagereference.getcontent.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:7"
+        },
+        "parentId": "System.pagereference.getcontent",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Returns the output of the page, as displayed to a user in a web browser.",
-      "params": {}
+      "parentName": "PageReference",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getcontentaspdf()": {
-      "id": "System.pagereference.getcontentaspdf",
+      "id": "System.pagereference.method.getcontentaspdf()",
       "nodeType": "method",
       "name": "getContentAsPDF",
       "startToken": {
@@ -428,6 +692,9 @@
         },
         "id": "declaration.entity.name.function_getContentAsPDF_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 5,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -435,30 +702,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Blob getContentAsPDF()",
+      "overrideSignature": "public override Blob getContentAsPDF()",
       "simplifiedSignature": "getContentAsPDF()",
       "datatype": {
-        "id": "System.pagereference.getcontentaspdf.Blob",
+        "id": "System.pagereference.getcontentaspdf.datatype.Blob",
         "nodeType": "datatype",
-        "name": "Blob"
+        "name": "Blob",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Blob",
+          "textToLower": "blob",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Blob_0:7"
+        },
+        "parentId": "System.pagereference.getcontentaspdf",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Blob"
       },
       "description": "Returns the page in PDF, regardless of the <apex:page> component’s renderAs attribute.",
-      "params": {}
+      "parentName": "PageReference",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getcookies()": {
-      "id": "System.pagereference.getcookies",
+      "id": "System.pagereference.method.getcookies()",
       "nodeType": "method",
       "name": "getCookies",
       "startToken": {
@@ -480,6 +775,9 @@
         },
         "id": "declaration.entity.name.function_getCookies_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 6,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -487,30 +785,112 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Map<String,  System.Cookie> getCookies()",
+      "signature": "public Map<String,System.Cookie> getCookies()",
+      "overrideSignature": "public override Map<String,System.Cookie> getCookies()",
       "simplifiedSignature": "getCookies()",
       "datatype": {
-        "id": "System.pagereference.getcookies.Map<String,  System.Cookie>",
+        "id": "System.pagereference.getcookies.datatype.Map<String,System.Cookie>",
         "nodeType": "datatype",
-        "name": "Map<String,  System.Cookie>"
+        "name": "Map<String,System.Cookie>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "System.pagereference.getcookies",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "System.pagereference.getcookies.datatype.Map<String,System.Cookie>.value.System.Cookie",
+          "nodeType": "datatype",
+          "name": "System.Cookie",
+          "startToken": {
+            "type": "datatype.support.class",
+            "text": "System",
+            "textToLower": "system",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 25
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_System_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "System.Cookie"
+        },
+        "key": {
+          "id": "System.pagereference.getcookies.datatype.Map<String,System.Cookie>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Returns a map of cookie names and cookie objects, where the key is a String of the cookie name and the the value contains the cookie object with that name.",
-      "params": {}
+      "parentName": "PageReference",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getheaders()": {
-      "id": "System.pagereference.getheaders",
+      "id": "System.pagereference.method.getheaders()",
       "nodeType": "method",
       "name": "getHeaders",
       "startToken": {
@@ -532,6 +912,9 @@
         },
         "id": "declaration.entity.name.function_getHeaders_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 7,
+      "memberOrder": 9,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -539,30 +922,112 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Map<String,  String> getHeaders()",
+      "signature": "public Map<String,String> getHeaders()",
+      "overrideSignature": "public override Map<String,String> getHeaders()",
       "simplifiedSignature": "getHeaders()",
       "datatype": {
-        "id": "System.pagereference.getheaders.Map<String,  String>",
+        "id": "System.pagereference.getheaders.datatype.Map<String,String>",
         "nodeType": "datatype",
-        "name": "Map<String,  String>"
+        "name": "Map<String,String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "System.pagereference.getheaders",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "System.pagereference.getheaders.datatype.Map<String,String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 25
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        },
+        "key": {
+          "id": "System.pagereference.getheaders.datatype.Map<String,String>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Returns a map of the request headers, where the key string contains the name of the header, and the value string contains the value of the header.",
-      "params": {}
+      "parentName": "PageReference",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getparameters()": {
-      "id": "System.pagereference.getparameters",
+      "id": "System.pagereference.method.getparameters()",
       "nodeType": "method",
       "name": "getParameters",
       "startToken": {
@@ -584,6 +1049,9 @@
         },
         "id": "declaration.entity.name.function_getParameters_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 8,
+      "memberOrder": 10,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -591,30 +1059,112 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Map<String,  String> getParameters()",
+      "signature": "public Map<String,String> getParameters()",
+      "overrideSignature": "public override Map<String,String> getParameters()",
       "simplifiedSignature": "getParameters()",
       "datatype": {
-        "id": "System.pagereference.getparameters.Map<String,  String>",
+        "id": "System.pagereference.getparameters.datatype.Map<String,String>",
         "nodeType": "datatype",
-        "name": "Map<String,  String>"
+        "name": "Map<String,String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "System.pagereference.getparameters",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "System.pagereference.getparameters.datatype.Map<String,String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 25
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        },
+        "key": {
+          "id": "System.pagereference.getparameters.datatype.Map<String,String>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Returns a map of the query string parameters for the PageReference; both POST and GET parameters are included. The key string contains the name of the parameter, while the value string contains the value of the parameter.",
-      "params": {}
+      "parentName": "PageReference",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getredirect()": {
-      "id": "System.pagereference.getredirect",
+      "id": "System.pagereference.method.getredirect()",
       "nodeType": "method",
       "name": "getRedirect",
       "startToken": {
@@ -636,6 +1186,9 @@
         },
         "id": "declaration.entity.name.function_getRedirect_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 9,
+      "memberOrder": 11,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -643,30 +1196,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean getRedirect()",
+      "overrideSignature": "public override Boolean getRedirect()",
       "simplifiedSignature": "getRedirect()",
       "datatype": {
-        "id": "System.pagereference.getredirect.Boolean",
+        "id": "System.pagereference.getredirect.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.pagereference.getredirect",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns the current value of the PageReference object's redirect attribute.",
-      "params": {}
+      "parentName": "PageReference",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "geturl()": {
-      "id": "System.pagereference.geturl",
+      "id": "System.pagereference.method.geturl()",
       "nodeType": "method",
       "name": "getUrl",
       "startToken": {
@@ -688,6 +1269,9 @@
         },
         "id": "declaration.entity.name.function_getUrl_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 10,
+      "memberOrder": 12,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -695,30 +1279,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getUrl()",
+      "overrideSignature": "public override String getUrl()",
       "simplifiedSignature": "getUrl()",
       "datatype": {
-        "id": "System.pagereference.geturl.String",
+        "id": "System.pagereference.geturl.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.pagereference.geturl",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the relative URL associated with the PageReference when it was originally defined, including any query string parameters and anchors.",
-      "params": {}
+      "parentName": "PageReference",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "setanchor(string)": {
-      "id": "System.pagereference.setanchor",
+      "id": "System.pagereference.method.setanchor(string)",
       "nodeType": "method",
       "name": "setAnchor",
       "startToken": {
@@ -740,6 +1352,9 @@
         },
         "id": "declaration.entity.name.function_setAnchor_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 11,
+      "memberOrder": 13,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -747,30 +1362,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public System.PageReference setAnchor(String anchor)",
+      "overrideSignature": "public override System.PageReference setAnchor(String anchor)",
       "simplifiedSignature": "setAnchor(String)",
       "datatype": {
-        "id": "System.pagereference.setanchor.System.PageReference",
+        "id": "System.pagereference.setanchor.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:7"
+        },
+        "parentId": "System.pagereference.setanchor",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Create a PageReference for a static resource, by name.",
+      "parentName": "PageReference",
+      "variables": {},
       "params": {
         "anchor": {
-          "id": "System.pagereference.setanchor.anchor",
-          "type": "var",
+          "id": "System.pagereference.method.setanchor(string).varParam.anchor",
+          "nodeType": "variable",
           "name": "anchor",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -779,29 +1420,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 45
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_anchor_-1:0"
+            "id": "token.type.identifier_anchor_0:45"
           },
-          "signature": "String anchor",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "anchor",
+            "textToLower": "anchor",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 45
+              },
+              "end": {
+                "line": 0,
+                "character": 51
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_anchor_0:45"
+          },
+          "parentId": "System.pagereference.method.setanchor(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.pagereference.setanchor.string",
+            "id": "System.pagereference.setanchor.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 38
+                },
+                "end": {
+                  "line": 0,
+                  "character": 44
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:38"
+            },
+            "parentId": "System.pagereference.setanchor",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setcookies(cookie[])": {
-      "id": "System.pagereference.setcookies",
+      "id": "System.pagereference.method.setcookies(cookie[])",
       "nodeType": "method",
       "name": "setCookies",
       "startToken": {
@@ -823,6 +1512,9 @@
         },
         "id": "declaration.entity.name.function_setCookies_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 12,
+      "memberOrder": 14,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -830,30 +1522,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setCookies(Cookie[] cookies)",
+      "overrideSignature": "public override void setCookies(Cookie[] cookies)",
       "simplifiedSignature": "setCookies(Cookie[])",
       "datatype": {
-        "id": "System.pagereference.setcookies.void",
+        "id": "System.pagereference.setcookies.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "System.pagereference.setcookies",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Creates a list of cookie objects. Used in conjunction with the Cookie class.",
+      "parentName": "PageReference",
+      "variables": {},
       "params": {
         "cookies": {
-          "id": "System.pagereference.setcookies.cookies",
-          "type": "var",
+          "id": "System.pagereference.method.setcookies(cookie[]).varParam.cookies",
+          "nodeType": "variable",
           "name": "cookies",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -862,29 +1580,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 32
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 39
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_cookies_-1:0"
+            "id": "token.type.identifier_cookies_0:32"
           },
-          "signature": "Cookie[] cookies",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "cookies",
+            "textToLower": "cookies",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 32
+              },
+              "end": {
+                "line": 0,
+                "character": 39
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_cookies_0:32"
+          },
+          "parentId": "System.pagereference.method.setcookies(cookie[])",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.pagereference.setcookies.cookie[]",
+            "id": "System.pagereference.setcookies.datatype.Cookie[]",
             "nodeType": "datatype",
-            "name": "Cookie[]"
-          }
+            "name": "Cookie[]",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "Cookie",
+              "textToLower": "cookie",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Cookie_0:23"
+            },
+            "parentId": "System.pagereference.setcookies",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Cookie[]"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setredirect(boolean)": {
-      "id": "System.pagereference.setredirect",
+      "id": "System.pagereference.method.setredirect(boolean)",
       "nodeType": "method",
       "name": "setRedirect",
       "startToken": {
@@ -906,6 +1672,9 @@
         },
         "id": "declaration.entity.name.function_setRedirect_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 13,
+      "memberOrder": 15,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -913,30 +1682,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public System.PageReference setRedirect(Boolean redirect)",
+      "overrideSignature": "public override System.PageReference setRedirect(Boolean redirect)",
       "simplifiedSignature": "setRedirect(Boolean)",
       "datatype": {
-        "id": "System.pagereference.setredirect.System.PageReference",
+        "id": "System.pagereference.setredirect.datatype.System.PageReference",
         "nodeType": "datatype",
-        "name": "System.PageReference"
+        "name": "System.PageReference",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:7"
+        },
+        "parentId": "System.pagereference.setredirect",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.PageReference"
       },
       "description": "Sets the value of the PageReference object's redirect attribute. If set to true, a redirect is performed through a client side redirect.",
+      "parentName": "PageReference",
+      "variables": {},
       "params": {
         "redirect": {
-          "id": "System.pagereference.setredirect.redirect",
-          "type": "var",
+          "id": "System.pagereference.method.setredirect(boolean).varParam.redirect",
+          "nodeType": "variable",
           "name": "redirect",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -945,31 +1740,79 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_redirect_-1:0"
+            "id": "token.type.identifier_redirect_0:48"
           },
-          "signature": "Boolean redirect",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "redirect",
+            "textToLower": "redirect",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 48
+              },
+              "end": {
+                "line": 0,
+                "character": 56
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_redirect_0:48"
+          },
+          "parentId": "System.pagereference.method.setredirect(boolean)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.pagereference.setredirect.boolean",
+            "id": "System.pagereference.setredirect.datatype.Boolean",
             "nodeType": "datatype",
-            "name": "Boolean"
-          }
+            "name": "Boolean",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Boolean",
+              "textToLower": "boolean",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 40
+                },
+                "end": {
+                  "line": 0,
+                  "character": 47
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Boolean_0:40"
+            },
+            "parentId": "System.pagereference.setredirect",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Boolean"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {
     "pagereference(string)": {
-      "id": "System.pagereference.pagereference",
+      "id": "System.pagereference.method.pagereference(string)",
       "nodeType": "constructor",
       "name": "PageReference",
       "startToken": {
@@ -991,6 +1834,9 @@
         },
         "id": "declaration.entity.name.function_PageReference_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -998,30 +1844,28 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public PageReference(String partialURL)",
+      "overrideSignature": "public override PageReference(String partialURL)",
       "simplifiedSignature": "PageReference(String)",
-      "datatype": {
-        "id": "System.pagereference.pagereference.constructor",
-        "nodeType": "datatype",
-        "name": "PageReference"
-      },
       "description": "Creates a new instance of the PageReference class using the specified URL.",
+      "parentName": "PageReference",
+      "variables": {},
       "params": {
-        "partialURL": {
-          "id": "System.pagereference.pagereference.partialurl",
-          "type": "var",
+        "partialurl": {
+          "id": "System.pagereference.method.pagereference(string).varParam.partialurl",
+          "nodeType": "variable",
           "name": "partialURL",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1030,29 +1874,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 28
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_partialURL_-1:0"
+            "id": "token.type.identifier_partialURL_0:28"
           },
-          "signature": "String partialURL",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "partialURL",
+            "textToLower": "partialurl",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 28
+              },
+              "end": {
+                "line": 0,
+                "character": 38
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_partialURL_0:28"
+          },
+          "parentId": "System.pagereference.method.pagereference(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.pagereference.pagereference.string",
+            "id": "System.pagereference.pagereference.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 21
+                },
+                "end": {
+                  "line": 0,
+                  "character": 27
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:21"
+            },
+            "parentId": "System.pagereference.pagereference",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The partial URL of a page hosted on the Lightning platform or a full external URL.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "pagereference(sobject)": {
-      "id": "System.pagereference.pagereference",
+      "id": "System.pagereference.method.pagereference(sobject)",
       "nodeType": "constructor",
       "name": "PageReference",
       "startToken": {
@@ -1074,6 +1966,9 @@
         },
         "id": "declaration.entity.name.function_PageReference_-1:0"
       },
+      "parentId": "System.pagereference",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -1081,30 +1976,28 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public PageReference(SObject record)",
+      "overrideSignature": "public override PageReference(SObject record)",
       "simplifiedSignature": "PageReference(SObject)",
-      "datatype": {
-        "id": "System.pagereference.pagereference.constructor",
-        "nodeType": "datatype",
-        "name": "PageReference"
-      },
       "description": "Generate a new instance of the PageReference class for the specified sObject record.",
+      "parentName": "PageReference",
+      "variables": {},
       "params": {
         "record": {
-          "id": "System.pagereference.pagereference.record",
-          "type": "var",
+          "id": "System.pagereference.method.pagereference(sobject).varParam.record",
+          "nodeType": "variable",
           "name": "record",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -1113,29 +2006,79 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 35
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_record_-1:0"
+            "id": "token.type.identifier_record_0:29"
           },
-          "signature": "SObject record",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "record",
+            "textToLower": "record",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 35
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_record_0:29"
+          },
+          "parentId": "System.pagereference.method.pagereference(sobject)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.pagereference.pagereference.sobject",
+            "id": "System.pagereference.pagereference.datatype.SObject",
             "nodeType": "datatype",
-            "name": "SObject"
-          }
+            "name": "SObject",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "SObject",
+              "textToLower": "sobject",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 21
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_SObject_0:21"
+            },
+            "parentId": "System.pagereference.pagereference",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "SObject"
+          },
+          "description": "The sObject record that references the ApexPage. The reference must be an ApexPage.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 15,
+  "queries": []
 }

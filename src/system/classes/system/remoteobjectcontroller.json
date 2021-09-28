@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_RemoteObjectController_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "create(string,map,object>)": {
-      "id": "System.remoteobjectcontroller.create",
+    "create(string,map<string,object>)": {
+      "id": "System.remoteobjectcontroller.method.create(string,map<string,object>)",
       "nodeType": "method",
       "name": "create",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_create_-1:0"
       },
+      "parentId": "System.remoteobjectcontroller",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,110 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static Map<String, Object> create(String type, Map <String, Object> fields)",
-      "simplifiedSignature": "create(String,Map,Object>)",
+      "signature": "public static Map<String,Object> create(String type, Map<String,Object> fields)",
+      "overrideSignature": "public static override Map<String,Object> create(String type, Map<String,Object> fields)",
+      "simplifiedSignature": "create(String,Map<String,Object>)",
       "datatype": {
-        "id": "System.remoteobjectcontroller.create.Map<String, Object>",
+        "id": "System.remoteobjectcontroller.create.datatype.Map<String,Object>",
         "nodeType": "datatype",
-        "name": "Map<String, Object>"
+        "name": "Map<String,Object>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:14"
+        },
+        "parentId": "System.remoteobjectcontroller.create",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "System.remoteobjectcontroller.create.datatype.Map<String,Object>.value.Object",
+          "nodeType": "datatype",
+          "name": "Object",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Object",
+            "textToLower": "object",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 25
+              },
+              "end": {
+                "line": 0,
+                "character": 31
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Object_0:25"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Object"
+        },
+        "key": {
+          "id": "System.remoteobjectcontroller.create.datatype.Map<String,Object>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 24
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Create a record in the database.",
+      "parentName": "RemoteObjectController",
+      "variables": {},
       "params": {
         "type": {
-          "id": "System.remoteobjectcontroller.create.type",
-          "type": "var",
+          "id": "System.remoteobjectcontroller.method.create(string,map<string,object>).varParam.type",
+          "nodeType": "variable",
           "name": "type",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,58 +233,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_type_-1:0"
+            "id": "token.type.identifier_type_0:47"
           },
-          "signature": "String type",
-          "datatype": {
-            "id": "System.remoteobjectcontroller.create.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String": {
-          "id": "System.remoteobjectcontroller.create.<string",
-          "type": "var",
-          "name": "<String",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String",
-            "textToLower": "<string",
+            "text": "type",
+            "textToLower": "type",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 51
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String_-1:0"
+            "id": "token.type.identifier_type_0:47"
           },
-          "signature": "Map <String",
+          "parentId": "System.remoteobjectcontroller.method.create(string,map<string,object>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.remoteobjectcontroller.create.map",
+            "id": "System.remoteobjectcontroller.create.datatype.String",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 40
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:40"
+            },
+            "parentId": "System.remoteobjectcontroller.create",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "fields": {
-          "id": "System.remoteobjectcontroller.create.fields",
-          "type": "var",
+          "id": "System.remoteobjectcontroller.method.create(string,map<string,object>).varParam.fields",
+          "nodeType": "variable",
           "name": "fields",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -208,29 +308,131 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_fields_-1:0"
+            "id": "token.type.identifier_fields_0:72"
           },
-          "signature": "Object> fields",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fields",
+            "textToLower": "fields",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 72
+              },
+              "end": {
+                "line": 0,
+                "character": 78
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fields_0:72"
+          },
+          "parentId": "System.remoteobjectcontroller.method.create(string,map<string,object>)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.remoteobjectcontroller.create.object>",
+            "id": "System.remoteobjectcontroller.create.datatype.Map<String,Object>",
             "nodeType": "datatype",
-            "name": "Object>"
-          }
+            "name": "Map<String,Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 53
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:53"
+            },
+            "parentId": "System.remoteobjectcontroller.create",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "System.remoteobjectcontroller.create.datatype.Map<String,Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 64
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 70
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:64"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            },
+            "key": {
+              "id": "System.remoteobjectcontroller.create.datatype.Map<String,Object>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 57
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 63
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:57"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "The sObject type on which create is being called. The fields and values to set on the new record.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "del(string,list)": {
-      "id": "System.remoteobjectcontroller.del",
+    "del(string,list<string>)": {
+      "id": "System.remoteobjectcontroller.method.del(string,list<string>)",
       "nodeType": "method",
       "name": "del",
       "startToken": {
@@ -252,6 +454,9 @@
         },
         "id": "declaration.entity.name.function_del_-1:0"
       },
+      "parentId": "System.remoteobjectcontroller",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -259,17 +464,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -278,30 +483,110 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static Map<String, Object> del(String type, List <String>)",
-      "simplifiedSignature": "del(String,List)",
+      "signature": "public static Map<String,Object> del(String type, List<String> recordIds)",
+      "overrideSignature": "public static override Map<String,Object> del(String type, List<String> recordIds)",
+      "simplifiedSignature": "del(String,List<String>)",
       "datatype": {
-        "id": "System.remoteobjectcontroller.del.Map<String, Object>",
+        "id": "System.remoteobjectcontroller.del.datatype.Map<String,Object>",
         "nodeType": "datatype",
-        "name": "Map<String, Object>"
+        "name": "Map<String,Object>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:14"
+        },
+        "parentId": "System.remoteobjectcontroller.del",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "System.remoteobjectcontroller.del.datatype.Map<String,Object>.value.Object",
+          "nodeType": "datatype",
+          "name": "Object",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Object",
+            "textToLower": "object",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 25
+              },
+              "end": {
+                "line": 0,
+                "character": 31
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Object_0:25"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Object"
+        },
+        "key": {
+          "id": "System.remoteobjectcontroller.del.datatype.Map<String,Object>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 24
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Delete records from the database.",
+      "parentName": "RemoteObjectController",
+      "variables": {},
       "params": {
         "type": {
-          "id": "System.remoteobjectcontroller.del.type",
-          "type": "var",
+          "id": "System.remoteobjectcontroller.method.del(string,list<string>).varParam.type",
+          "nodeType": "variable",
           "name": "type",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,59 +595,179 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_type_-1:0"
+            "id": "token.type.identifier_type_0:44"
           },
-          "signature": "String type",
-          "datatype": {
-            "id": "System.remoteobjectcontroller.del.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String>": {
-          "id": "System.remoteobjectcontroller.del.<string>",
-          "type": "var",
-          "name": "<String>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "type",
+            "textToLower": "type",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_type_0:44"
           },
-          "signature": "List <String>",
+          "parentId": "System.remoteobjectcontroller.method.del(string,list<string>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.remoteobjectcontroller.del.list",
+            "id": "System.remoteobjectcontroller.del.datatype.String",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 37
+                },
+                "end": {
+                  "line": 0,
+                  "character": 43
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:37"
+            },
+            "parentId": "System.remoteobjectcontroller.del",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "recordids": {
+          "id": "System.remoteobjectcontroller.method.del(string,list<string>).varParam.recordids",
+          "nodeType": "variable",
+          "name": "recordIds",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordIds",
+            "textToLower": "recordids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 63
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordIds_0:63"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordIds",
+            "textToLower": "recordids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 63
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordIds_0:63"
+          },
+          "parentId": "System.remoteobjectcontroller.method.del(string,list<string>)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "System.remoteobjectcontroller.del.datatype.List<String>",
+            "nodeType": "datatype",
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 50
+                },
+                "end": {
+                  "line": 0,
+                  "character": 54
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:50"
+            },
+            "parentId": "System.remoteobjectcontroller.del",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.remoteobjectcontroller.del.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 55
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 61
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:55"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "The sObject type on which delete is being called. The IDs of the records to be deleted.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "retrieve(string,list)": {
-      "id": "System.remoteobjectcontroller.retrieve",
+    "retrieve(string,list<string>,map<string,object>)": {
+      "id": "System.remoteobjectcontroller.method.retrieve(string,list<string>,map<string,object>)",
       "nodeType": "method",
       "name": "retrieve",
       "startToken": {
@@ -384,6 +789,9 @@
         },
         "id": "declaration.entity.name.function_retrieve_-1:0"
       },
+      "parentId": "System.remoteobjectcontroller",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -391,17 +799,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -410,30 +818,110 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static Map<String, Object> retrieve(String type, List <String>)",
-      "simplifiedSignature": "retrieve(String,List)",
+      "signature": "public static Map<String,Object> retrieve(String type, List<String> fields, Map<String,Object> criteria)",
+      "overrideSignature": "public static override Map<String,Object> retrieve(String type, List<String> fields, Map<String,Object> criteria)",
+      "simplifiedSignature": "retrieve(String,List<String>,Map<String,Object>)",
       "datatype": {
-        "id": "System.remoteobjectcontroller.retrieve.Map<String, Object>",
+        "id": "System.remoteobjectcontroller.retrieve.datatype.Map<String,Object>",
         "nodeType": "datatype",
-        "name": "Map<String, Object>"
+        "name": "Map<String,Object>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:14"
+        },
+        "parentId": "System.remoteobjectcontroller.retrieve",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "System.remoteobjectcontroller.retrieve.datatype.Map<String,Object>.value.Object",
+          "nodeType": "datatype",
+          "name": "Object",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Object",
+            "textToLower": "object",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 25
+              },
+              "end": {
+                "line": 0,
+                "character": 31
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Object_0:25"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Object"
+        },
+        "key": {
+          "id": "System.remoteobjectcontroller.retrieve.datatype.Map<String,Object>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 24
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Retrieve records from the database.",
+      "parentName": "RemoteObjectController",
+      "variables": {},
       "params": {
         "type": {
-          "id": "System.remoteobjectcontroller.retrieve.type",
-          "type": "var",
+          "id": "System.remoteobjectcontroller.method.retrieve(string,list<string>,map<string,object>).varParam.type",
+          "nodeType": "variable",
           "name": "type",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -442,59 +930,308 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_type_-1:0"
+            "id": "token.type.identifier_type_0:49"
           },
-          "signature": "String type",
-          "datatype": {
-            "id": "System.remoteobjectcontroller.retrieve.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String>": {
-          "id": "System.remoteobjectcontroller.retrieve.<string>",
-          "type": "var",
-          "name": "<String>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "type",
+            "textToLower": "type",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 49
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 53
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_type_0:49"
           },
-          "signature": "List <String>",
+          "parentId": "System.remoteobjectcontroller.method.retrieve(string,list<string>,map<string,object>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.remoteobjectcontroller.retrieve.list",
+            "id": "System.remoteobjectcontroller.retrieve.datatype.String",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 42
+                },
+                "end": {
+                  "line": 0,
+                  "character": 48
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:42"
+            },
+            "parentId": "System.remoteobjectcontroller.retrieve",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "fields": {
+          "id": "System.remoteobjectcontroller.method.retrieve(string,list<string>,map<string,object>).varParam.fields",
+          "nodeType": "variable",
+          "name": "fields",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fields",
+            "textToLower": "fields",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 68
+              },
+              "end": {
+                "line": 0,
+                "character": 74
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fields_0:68"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fields",
+            "textToLower": "fields",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 68
+              },
+              "end": {
+                "line": 0,
+                "character": 74
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fields_0:68"
+          },
+          "parentId": "System.remoteobjectcontroller.method.retrieve(string,list<string>,map<string,object>)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "System.remoteobjectcontroller.retrieve.datatype.List<String>",
+            "nodeType": "datatype",
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 55
+                },
+                "end": {
+                  "line": 0,
+                  "character": 59
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:55"
+            },
+            "parentId": "System.remoteobjectcontroller.retrieve",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.remoteobjectcontroller.retrieve.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 60
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 66
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:60"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
+        },
+        "criteria": {
+          "id": "System.remoteobjectcontroller.method.retrieve(string,list<string>,map<string,object>).varParam.criteria",
+          "nodeType": "variable",
+          "name": "criteria",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "criteria",
+            "textToLower": "criteria",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 95
+              },
+              "end": {
+                "line": 0,
+                "character": 103
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_criteria_0:95"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "criteria",
+            "textToLower": "criteria",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 95
+              },
+              "end": {
+                "line": 0,
+                "character": 103
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_criteria_0:95"
+          },
+          "parentId": "System.remoteobjectcontroller.method.retrieve(string,list<string>,map<string,object>)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "System.remoteobjectcontroller.retrieve.datatype.Map<String,Object>",
+            "nodeType": "datatype",
+            "name": "Map<String,Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 76
+                },
+                "end": {
+                  "line": 0,
+                  "character": 79
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:76"
+            },
+            "parentId": "System.remoteobjectcontroller.retrieve",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "System.remoteobjectcontroller.retrieve.datatype.Map<String,Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 87
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 93
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:87"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            },
+            "key": {
+              "id": "System.remoteobjectcontroller.retrieve.datatype.Map<String,Object>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 80
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 86
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:80"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "The sObject type on which retrieve is being called. The fields to retrieve for each record. The criteria to use when performing the query.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "updat(string,list)": {
-      "id": "System.remoteobjectcontroller.updat",
+    "updat(string,list<string>,map<string,object>)": {
+      "id": "System.remoteobjectcontroller.method.updat(string,list<string>,map<string,object>)",
       "nodeType": "method",
       "name": "updat",
       "startToken": {
@@ -516,6 +1253,9 @@
         },
         "id": "declaration.entity.name.function_updat_-1:0"
       },
+      "parentId": "System.remoteobjectcontroller",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -523,17 +1263,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -542,30 +1282,110 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static Map<String, Object> updat(String type, List <String>)",
-      "simplifiedSignature": "updat(String,List)",
+      "signature": "public static Map<String,Object> updat(String type, List<String> recordIds, Map<String,Object> fields)",
+      "overrideSignature": "public static override Map<String,Object> updat(String type, List<String> recordIds, Map<String,Object> fields)",
+      "simplifiedSignature": "updat(String,List<String>,Map<String,Object>)",
       "datatype": {
-        "id": "System.remoteobjectcontroller.updat.Map<String, Object>",
+        "id": "System.remoteobjectcontroller.updat.datatype.Map<String,Object>",
         "nodeType": "datatype",
-        "name": "Map<String, Object>"
+        "name": "Map<String,Object>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:14"
+        },
+        "parentId": "System.remoteobjectcontroller.updat",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "System.remoteobjectcontroller.updat.datatype.Map<String,Object>.value.Object",
+          "nodeType": "datatype",
+          "name": "Object",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "Object",
+            "textToLower": "object",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 25
+              },
+              "end": {
+                "line": 0,
+                "character": 31
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Object_0:25"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Object"
+        },
+        "key": {
+          "id": "System.remoteobjectcontroller.updat.datatype.Map<String,Object>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 24
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Update records in the database.",
+      "parentName": "RemoteObjectController",
+      "variables": {},
       "params": {
         "type": {
-          "id": "System.remoteobjectcontroller.updat.type",
-          "type": "var",
+          "id": "System.remoteobjectcontroller.method.updat(string,list<string>,map<string,object>).varParam.type",
+          "nodeType": "variable",
           "name": "type",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -574,60 +1394,311 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_type_-1:0"
+            "id": "token.type.identifier_type_0:46"
           },
-          "signature": "String type",
-          "datatype": {
-            "id": "System.remoteobjectcontroller.updat.string",
-            "nodeType": "datatype",
-            "name": "String"
-          }
-        },
-        "<String>": {
-          "id": "System.remoteobjectcontroller.updat.<string>",
-          "type": "var",
-          "name": "<String>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "type",
+            "textToLower": "type",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 46
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_type_0:46"
           },
-          "signature": "List <String>",
+          "parentId": "System.remoteobjectcontroller.method.updat(string,list<string>,map<string,object>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.remoteobjectcontroller.updat.list",
+            "id": "System.remoteobjectcontroller.updat.datatype.String",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 39
+                },
+                "end": {
+                  "line": 0,
+                  "character": 45
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:39"
+            },
+            "parentId": "System.remoteobjectcontroller.updat",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "recordids": {
+          "id": "System.remoteobjectcontroller.method.updat(string,list<string>,map<string,object>).varParam.recordids",
+          "nodeType": "variable",
+          "name": "recordIds",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordIds",
+            "textToLower": "recordids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 65
+              },
+              "end": {
+                "line": 0,
+                "character": 74
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordIds_0:65"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "recordIds",
+            "textToLower": "recordids",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 65
+              },
+              "end": {
+                "line": 0,
+                "character": 74
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_recordIds_0:65"
+          },
+          "parentId": "System.remoteobjectcontroller.method.updat(string,list<string>,map<string,object>)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "System.remoteobjectcontroller.updat.datatype.List<String>",
+            "nodeType": "datatype",
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:52"
+            },
+            "parentId": "System.remoteobjectcontroller.updat",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "System.remoteobjectcontroller.updat.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 57
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 63
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:57"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "scope": null
+        },
+        "fields": {
+          "id": "System.remoteobjectcontroller.method.updat(string,list<string>,map<string,object>).varParam.fields",
+          "nodeType": "variable",
+          "name": "fields",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fields",
+            "textToLower": "fields",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 95
+              },
+              "end": {
+                "line": 0,
+                "character": 101
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fields_0:95"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fields",
+            "textToLower": "fields",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 95
+              },
+              "end": {
+                "line": 0,
+                "character": 101
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fields_0:95"
+          },
+          "parentId": "System.remoteobjectcontroller.method.updat(string,list<string>,map<string,object>)",
+          "order": 3,
+          "memberOrder": 3,
+          "datatype": {
+            "id": "System.remoteobjectcontroller.updat.datatype.Map<String,Object>",
+            "nodeType": "datatype",
+            "name": "Map<String,Object>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 76
+                },
+                "end": {
+                  "line": 0,
+                  "character": 79
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:76"
+            },
+            "parentId": "System.remoteobjectcontroller.updat",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "System.remoteobjectcontroller.updat.datatype.Map<String,Object>.value.Object",
+              "nodeType": "datatype",
+              "name": "Object",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "Object",
+                "textToLower": "object",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 87
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 93
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Object_0:87"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Object"
+            },
+            "key": {
+              "id": "System.remoteobjectcontroller.updat.datatype.Map<String,Object>.key.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 80
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 86
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:80"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "The sObject type on which update is being called. The IDs of the records to be updated. The fields to update, and the value to update each field with.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 4,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_SendEmailResult_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "geterrors()": {
-      "id": "Messaging.sendemailresult.geterrors",
+      "id": "Messaging.sendemailresult.method.geterrors()",
       "nodeType": "method",
       "name": "getErrors",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getErrors_-1:0"
       },
+      "parentId": "Messaging.sendemailresult",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Messaging.SendEmailError[] getErrors()",
+      "signature": "public SendEmailError[] getErrors()",
+      "overrideSignature": "public override SendEmailError[] getErrors()",
       "simplifiedSignature": "getErrors()",
       "datatype": {
-        "id": "Messaging.sendemailresult.geterrors.Messaging.SendEmailError[]",
+        "id": "Messaging.sendemailresult.geterrors.datatype.SendEmailError[]",
         "nodeType": "datatype",
-        "name": "Messaging.SendEmailError[]"
+        "name": "SendEmailError[]",
+        "startToken": {
+          "type": "datatype.custom.class",
+          "text": "SendEmailError",
+          "textToLower": "sendemailerror",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 21
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_SendEmailError_0:7"
+        },
+        "parentId": "Messaging.sendemailresult.geterrors",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "SendEmailError[]"
       },
       "description": "If an error occurred during the sendEmail method, a SendEmailError object is returned.",
-      "params": {}
+      "parentName": "SendEmailResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "issuccess()": {
-      "id": "Messaging.sendemailresult.issuccess",
+      "id": "Messaging.sendemailresult.method.issuccess()",
       "nodeType": "method",
       "name": "isSuccess",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_isSuccess_-1:0"
       },
+      "parentId": "Messaging.sendemailresult",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,31 +185,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean isSuccess()",
+      "overrideSignature": "public override Boolean isSuccess()",
       "simplifiedSignature": "isSuccess()",
       "datatype": {
-        "id": "Messaging.sendemailresult.issuccess.Boolean",
+        "id": "Messaging.sendemailresult.issuccess.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Messaging.sendemailresult.issuccess",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Indicates whether the email was successfully submitted for delivery (true) or not (false). Even if isSuccess is true, it does not mean the intended recipients received the email, as there could have been a problem with the email address or it could have bounced or been blocked by a spam blocker.",
-      "params": {}
+      "parentName": "SendEmailResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

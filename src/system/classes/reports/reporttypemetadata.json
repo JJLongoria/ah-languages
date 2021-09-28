@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_ReportTypeMetadata_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getcategories()": {
-      "id": "Reports.reporttypemetadata.getcategories",
+      "id": "Reports.reporttypemetadata.method.getcategories()",
       "nodeType": "method",
       "name": "getCategories",
       "startToken": {
@@ -90,18 +92,95 @@
         },
         "id": "declaration.entity.name.function_getCategories_-1:0"
       },
-      "signature": "List<Reports.ReportTypeColumnCategory> getCategories()",
+      "parentId": "Reports.reporttypemetadata",
+      "order": 1,
+      "memberOrder": 1,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public List<Reports.ReportTypeColumnCategory> getCategories()",
+      "overrideSignature": "public override List<Reports.ReportTypeColumnCategory> getCategories()",
       "simplifiedSignature": "getCategories()",
       "datatype": {
-        "id": "Reports.reporttypemetadata.getcategories.List<Reports.ReportTypeColumnCategory>",
+        "id": "Reports.reporttypemetadata.getcategories.datatype.List<Reports.ReportTypeColumnCategory>",
         "nodeType": "datatype",
-        "name": "List<Reports.ReportTypeColumnCategory>"
+        "name": "List<Reports.ReportTypeColumnCategory>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Reports.reporttypemetadata.getcategories",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Reports.reporttypemetadata.getcategories.datatype.List<Reports.ReportTypeColumnCategory>.value.Reports.ReportTypeColumnCategory",
+          "nodeType": "datatype",
+          "name": "Reports.ReportTypeColumnCategory",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Reports",
+            "textToLower": "reports",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 19
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Reports_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Reports.ReportTypeColumnCategory"
+        }
       },
       "description": "Returns all fields in the report type. The fields are organized by section.",
-      "params": {}
+      "parentName": "ReportTypeMetadata",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getdivisioninfo()": {
-      "id": "Reports.reporttypemetadata.getdivisioninfo",
+      "id": "Reports.reporttypemetadata.method.getdivisioninfo()",
       "nodeType": "method",
       "name": "getDivisionInfo",
       "startToken": {
@@ -123,6 +202,9 @@
         },
         "id": "declaration.entity.name.function_getDivisionInfo_-1:0"
       },
+      "parentId": "Reports.reporttypemetadata",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -130,30 +212,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Reports.ReportDivisionInfo getDivisionInfo()",
+      "overrideSignature": "public override Reports.ReportDivisionInfo getDivisionInfo()",
       "simplifiedSignature": "getDivisionInfo()",
       "datatype": {
-        "id": "Reports.reporttypemetadata.getdivisioninfo.Reports.ReportDivisionInfo",
+        "id": "Reports.reporttypemetadata.getdivisioninfo.datatype.Reports.ReportDivisionInfo",
         "nodeType": "datatype",
-        "name": "Reports.ReportDivisionInfo"
+        "name": "Reports.ReportDivisionInfo",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:7"
+        },
+        "parentId": "Reports.reporttypemetadata.getdivisioninfo",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.ReportDivisionInfo"
       },
       "description": "Returns the default division and a list of all possible divisions that can be applied to this type of report.",
-      "params": {}
+      "parentName": "ReportTypeMetadata",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getscopeinfo()": {
-      "id": "Reports.reporttypemetadata.getscopeinfo",
+      "id": "Reports.reporttypemetadata.method.getscopeinfo()",
       "nodeType": "method",
       "name": "getScopeInfo",
       "startToken": {
@@ -175,6 +285,9 @@
         },
         "id": "declaration.entity.name.function_getScopeInfo_-1:0"
       },
+      "parentId": "Reports.reporttypemetadata",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -182,30 +295,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Reports.ReportScopeInfo getScopeInfo()",
+      "overrideSignature": "public override Reports.ReportScopeInfo getScopeInfo()",
       "simplifiedSignature": "getScopeInfo()",
       "datatype": {
-        "id": "Reports.reporttypemetadata.getscopeinfo.Reports.ReportScopeInfo",
+        "id": "Reports.reporttypemetadata.getscopeinfo.datatype.Reports.ReportScopeInfo",
         "nodeType": "datatype",
-        "name": "Reports.ReportScopeInfo"
+        "name": "Reports.ReportScopeInfo",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Reports",
+          "textToLower": "reports",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Reports_0:7"
+        },
+        "parentId": "Reports.reporttypemetadata.getscopeinfo",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Reports.ReportScopeInfo"
       },
       "description": "Returns information about the scopes that can be applied to this type of report.",
-      "params": {}
+      "parentName": "ReportTypeMetadata",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getstandarddatefilterdurationgroups()": {
-      "id": "Reports.reporttypemetadata.getstandarddatefilterdurationgroups",
+      "id": "Reports.reporttypemetadata.method.getstandarddatefilterdurationgroups()",
       "nodeType": "method",
       "name": "getStandardDateFilterDurationGroups",
       "startToken": {
@@ -227,6 +368,9 @@
         },
         "id": "declaration.entity.name.function_getStandardDateFilterDurationGroups_-1:0"
       },
+      "parentId": "Reports.reporttypemetadata",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -234,30 +378,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<Reports.StandardDateFilterDurationGroup> getStandardDateFilterDurationGroups()",
+      "overrideSignature": "public override List<Reports.StandardDateFilterDurationGroup> getStandardDateFilterDurationGroups()",
       "simplifiedSignature": "getStandardDateFilterDurationGroups()",
       "datatype": {
-        "id": "Reports.reporttypemetadata.getstandarddatefilterdurationgroups.List<Reports.StandardDateFilterDurationGroup>",
+        "id": "Reports.reporttypemetadata.getstandarddatefilterdurationgroups.datatype.List<Reports.StandardDateFilterDurationGroup>",
         "nodeType": "datatype",
-        "name": "List<Reports.StandardDateFilterDurationGroup>"
+        "name": "List<Reports.StandardDateFilterDurationGroup>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Reports.reporttypemetadata.getstandarddatefilterdurationgroups",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Reports.reporttypemetadata.getstandarddatefilterdurationgroups.datatype.List<Reports.StandardDateFilterDurationGroup>.value.Reports.StandardDateFilterDurationGroup",
+          "nodeType": "datatype",
+          "name": "Reports.StandardDateFilterDurationGroup",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Reports",
+            "textToLower": "reports",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 19
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Reports_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Reports.StandardDateFilterDurationGroup"
+        }
       },
       "description": "Returns information about the standard date filter groupings that can be applied to this type of report. Standard date filter groupings include Calendar Year, Calendar Quarter, Calendar Month, Calendar Week, Fiscal Year, Fiscal Quarter, Day and a custom value based on a user-defined date range.",
-      "params": {}
+      "parentName": "ReportTypeMetadata",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getstandardfilterinfos()": {
-      "id": "Reports.reporttypemetadata.getstandardfilterinfos",
+      "id": "Reports.reporttypemetadata.method.getstandardfilterinfos()",
       "nodeType": "method",
       "name": "getStandardFilterInfos",
       "startToken": {
@@ -279,6 +478,9 @@
         },
         "id": "declaration.entity.name.function_getStandardFilterInfos_-1:0"
       },
+      "parentId": "Reports.reporttypemetadata",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -286,31 +488,115 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Map<String, Reports.StandardFilterInfo> getStandardFilterInfos()",
+      "signature": "public Map<String,Reports.StandardFilterInfo> getStandardFilterInfos()",
+      "overrideSignature": "public override Map<String,Reports.StandardFilterInfo> getStandardFilterInfos()",
       "simplifiedSignature": "getStandardFilterInfos()",
       "datatype": {
-        "id": "Reports.reporttypemetadata.getstandardfilterinfos.Map<String, Reports.StandardFilterInfo>",
+        "id": "Reports.reporttypemetadata.getstandardfilterinfos.datatype.Map<String,Reports.StandardFilterInfo>",
         "nodeType": "datatype",
-        "name": "Map<String, Reports.StandardFilterInfo>"
+        "name": "Map<String,Reports.StandardFilterInfo>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "Map",
+          "textToLower": "map",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 10
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Map_0:7"
+        },
+        "parentId": "Reports.reporttypemetadata.getstandardfilterinfos",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Map",
+        "value": {
+          "id": "Reports.reporttypemetadata.getstandardfilterinfos.datatype.Map<String,Reports.StandardFilterInfo>.value.Reports.StandardFilterInfo",
+          "nodeType": "datatype",
+          "name": "Reports.StandardFilterInfo",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Reports",
+            "textToLower": "reports",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 18
+              },
+              "end": {
+                "line": 0,
+                "character": 25
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Reports_0:18"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Reports.StandardFilterInfo"
+        },
+        "key": {
+          "id": "Reports.reporttypemetadata.getstandardfilterinfos.datatype.Map<String,Reports.StandardFilterInfo>.key.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 11
+              },
+              "end": {
+                "line": 0,
+                "character": 17
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:11"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Returns information about standard date filters that can be applied to this type of report.",
-      "params": {}
+      "parentName": "ReportTypeMetadata",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 5,
+  "queries": []
 }

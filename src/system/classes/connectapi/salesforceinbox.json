@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_SalesforceInbox_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "shareactivity(string,connectapi.activitysharinginput)": {
-      "id": "ConnectApi.salesforceinbox.shareactivity",
+      "id": "ConnectApi.salesforceinbox.method.shareactivity(string,connectapi.activitysharinginput)",
       "nodeType": "method",
       "name": "shareActivity",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_shareActivity_-1:0"
       },
+      "parentId": "ConnectApi.salesforceinbox",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.ActivitySharingResult shareActivity(String activityId, ConnectApi.ActivitySharingInput sharingInfo)",
+      "overrideSignature": "public static override ConnectApi.ActivitySharingResult shareActivity(String activityId, ConnectApi.ActivitySharingInput sharingInfo)",
       "simplifiedSignature": "shareActivity(String,ConnectApi.ActivitySharingInput)",
       "datatype": {
-        "id": "ConnectApi.salesforceinbox.shareactivity.ConnectApi.ActivitySharingResult",
+        "id": "ConnectApi.salesforceinbox.shareactivity.datatype.ConnectApi.ActivitySharingResult",
         "nodeType": "datatype",
-        "name": "ConnectApi.ActivitySharingResult"
+        "name": "ConnectApi.ActivitySharingResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.salesforceinbox.shareactivity",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.ActivitySharingResult"
       },
       "description": "Share emails or events with certain groups of users.",
+      "parentName": "SalesforceInbox",
+      "variables": {},
       "params": {
-        "activityId": {
-          "id": "ConnectApi.salesforceinbox.shareactivity.activityid",
-          "type": "var",
+        "activityid": {
+          "id": "ConnectApi.salesforceinbox.method.shareactivity(string,connectapi.activitysharinginput).varParam.activityid",
+          "nodeType": "variable",
           "name": "activityId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 68
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_activityId_-1:0"
+            "id": "token.type.identifier_activityId_0:68"
           },
-          "signature": "String activityId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "activityId",
+            "textToLower": "activityid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 68
+              },
+              "end": {
+                "line": 0,
+                "character": 78
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_activityId_0:68"
+          },
+          "parentId": "ConnectApi.salesforceinbox.method.shareactivity(string,connectapi.activitysharinginput)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.salesforceinbox.shareactivity.string",
+            "id": "ConnectApi.salesforceinbox.shareactivity.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 61
+                },
+                "end": {
+                  "line": 0,
+                  "character": 67
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:61"
+            },
+            "parentId": "ConnectApi.salesforceinbox.shareactivity",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "sharingInfo": {
-          "id": "ConnectApi.salesforceinbox.shareactivity.sharinginfo",
-          "type": "var",
+        "sharinginfo": {
+          "id": "ConnectApi.salesforceinbox.method.shareactivity(string,connectapi.activitysharinginput).varParam.sharinginfo",
+          "nodeType": "variable",
           "name": "sharingInfo",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,30 +254,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 112
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 123
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_sharingInfo_-1:0"
+            "id": "token.type.identifier_sharingInfo_0:112"
           },
-          "signature": "ConnectApi.ActivitySharingInput sharingInfo",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sharingInfo",
+            "textToLower": "sharinginfo",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 112
+              },
+              "end": {
+                "line": 0,
+                "character": 123
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sharingInfo_0:112"
+          },
+          "parentId": "ConnectApi.salesforceinbox.method.shareactivity(string,connectapi.activitysharinginput)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.salesforceinbox.shareactivity.connectapi.activitysharinginput",
+            "id": "ConnectApi.salesforceinbox.shareactivity.datatype.ConnectApi.ActivitySharingInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.ActivitySharingInput"
-          }
+            "name": "ConnectApi.ActivitySharingInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 80
+                },
+                "end": {
+                  "line": 0,
+                  "character": 90
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:80"
+            },
+            "parentId": "ConnectApi.salesforceinbox.shareactivity",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.ActivitySharingInput"
+          },
+          "description": "The ID of the activity. A ConnectApi.ActivitySharingInput object.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

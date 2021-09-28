@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_RelatedContent_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,7 +69,7 @@
   "enums": {},
   "variables": {
     "relatedcontentitems": {
-      "id": "Metadata.relatedcontent.relatedcontentitems",
+      "id": "Metadata.relatedcontent.method.list<metadata.relatedcontentitem> relatedcontentitems{get;set;}",
       "nodeType": "property",
       "name": "relatedContentItems",
       "startToken": {
@@ -89,6 +91,9 @@
         },
         "id": "declaration.entity.name.property_relatedContentItems_-1:0"
       },
+      "parentId": "Metadata.relatedcontent",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -96,79 +101,101 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public List<Metadata.RelatedContentItem> relatedContentItems {get; set;}",
-      "simplifiedSignature": "List<Metadata.RelatedContentItem> relatedContentItems { get; set; }",
+      "signature": "public List<Metadata.RelatedContentItem> relatedContentItems { get; set; }",
+      "simplifiedSignature": "List<Metadata.RelatedContentItem> relatedContentItems{get;set;}",
       "datatype": {
-        "id": "Metadata.relatedcontent.relatedcontentitems.list<metadata.relatedcontentitem>",
+        "id": ".datatype.List<Metadata.RelatedContentItem>",
         "nodeType": "datatype",
-        "name": "List<Metadata.RelatedContentItem>"
+        "name": "List<Metadata.RelatedContentItem>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": ".datatype.List<Metadata.RelatedContentItem>.value.Metadata.RelatedContentItem",
+          "nodeType": "datatype",
+          "name": "Metadata.RelatedContentItem",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Metadata",
+            "textToLower": "metadata",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 20
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Metadata_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Metadata.RelatedContentItem"
+        }
       },
-      "description": "A list of layout items in the Mobile Cards section of the page layout.",
+      "parentName": "RelatedContent",
       "getter": {
-        "id": "Metadata.relatedcontent.relatedcontentitems.get",
+        "id": ".getter.get",
         "nodeType": "getter",
         "name": "get",
-        "startToken": {
-          "type": "keyword.declaration.property.getter",
-          "text": "get",
-          "textToLower": "get",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.getter_get_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       },
       "setter": {
-        "id": "Metadata.relatedcontent.relatedcontentitems.set",
+        "id": ".getter.set",
         "nodeType": "setter",
         "name": "set",
-        "startToken": {
-          "type": "keyword.declaration.property.setter",
-          "text": "set",
-          "textToLower": "set",
-          "isAux": false,
-          "range": {
-            "start": {
-              "line": -1,
-              "character": 0
-            },
-            "end": {
-              "line": -1,
-              "character": 0
-            },
-            "isEmpty": true,
-            "isSingleLine": true
-          },
-          "id": "keyword.declaration.property.setter_set_-1:0"
-        }
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "variables": {},
+        "queries": []
       }
     }
   },
   "methods": {
     "clone()": {
-      "id": "Metadata.relatedcontent.clone",
+      "id": "Metadata.relatedcontent.method.clone()",
       "nodeType": "method",
       "name": "clone",
       "startToken": {
@@ -190,6 +217,9 @@
         },
         "id": "declaration.entity.name.function_clone_-1:0"
       },
+      "parentId": "Metadata.relatedcontent",
+      "order": 1,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -197,31 +227,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Object clone()",
+      "overrideSignature": "public override Object clone()",
       "simplifiedSignature": "clone()",
       "datatype": {
-        "id": "Metadata.relatedcontent.clone.Object",
+        "id": "Metadata.relatedcontent.clone.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:7"
+        },
+        "parentId": "Metadata.relatedcontent.clone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Makes a duplicate copy of the Metadata.RelatedContent.",
-      "params": {}
+      "parentName": "RelatedContent",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

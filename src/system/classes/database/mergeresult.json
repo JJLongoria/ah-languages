@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_MergeResult_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "geterrors()": {
-      "id": "Database.mergeresult.geterrors",
+      "id": "Database.mergeresult.method.geterrors()",
       "nodeType": "method",
       "name": "getErrors",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getErrors_-1:0"
       },
+      "parentId": "Database.mergeresult",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<Database.Error> getErrors()",
+      "overrideSignature": "public override List<Database.Error> getErrors()",
       "simplifiedSignature": "getErrors()",
       "datatype": {
-        "id": "Database.mergeresult.geterrors.List<Database.Error>",
+        "id": "Database.mergeresult.geterrors.datatype.List<Database.Error>",
         "nodeType": "datatype",
-        "name": "List<Database.Error>"
+        "name": "List<Database.Error>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Database.mergeresult.geterrors",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Database.mergeresult.geterrors.datatype.List<Database.Error>.value.Database.Error",
+          "nodeType": "datatype",
+          "name": "Database.Error",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Database",
+            "textToLower": "database",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 20
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Database_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Database.Error"
+        }
       },
       "description": "Returns a list of Database.Error objects representing the errors encountered, if any, during a merge operation using the Database.merge method. If no error occurred, returns null.",
-      "params": {}
+      "parentName": "MergeResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getid()": {
-      "id": "Database.mergeresult.getid",
+      "id": "Database.mergeresult.method.getid()",
       "nodeType": "method",
       "name": "getId",
       "startToken": {
@@ -142,6 +202,9 @@
         },
         "id": "declaration.entity.name.function_getId_-1:0"
       },
+      "parentId": "Database.mergeresult",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,30 +212,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public ID getId()",
+      "signature": "public Id getId()",
+      "overrideSignature": "public override Id getId()",
       "simplifiedSignature": "getId()",
       "datatype": {
-        "id": "Database.mergeresult.getid.ID",
+        "id": "Database.mergeresult.getid.datatype.Id",
         "nodeType": "datatype",
-        "name": "ID"
+        "name": "Id",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Id",
+          "textToLower": "id",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 9
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Id_0:7"
+        },
+        "parentId": "Database.mergeresult.getid",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Id"
       },
       "description": "Returns the ID of the master record into which other records were merged.",
-      "params": {}
+      "parentName": "MergeResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getmergedrecordids()": {
-      "id": "Database.mergeresult.getmergedrecordids",
+      "id": "Database.mergeresult.method.getmergedrecordids()",
       "nodeType": "method",
       "name": "getMergedRecordIds",
       "startToken": {
@@ -194,6 +285,9 @@
         },
         "id": "declaration.entity.name.function_getMergedRecordIds_-1:0"
       },
+      "parentId": "Database.mergeresult",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -201,30 +295,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<String> getMergedRecordIds()",
+      "overrideSignature": "public override List<String> getMergedRecordIds()",
       "simplifiedSignature": "getMergedRecordIds()",
       "datatype": {
-        "id": "Database.mergeresult.getmergedrecordids.List<String>",
+        "id": "Database.mergeresult.getmergedrecordids.datatype.List<String>",
         "nodeType": "datatype",
-        "name": "List<String>"
+        "name": "List<String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Database.mergeresult.getmergedrecordids",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Database.mergeresult.getmergedrecordids.datatype.List<String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 18
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Returns the IDs of the records merged into the master record.",
-      "params": {}
+      "parentName": "MergeResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getupdatedrelatedids()": {
-      "id": "Database.mergeresult.getupdatedrelatedids",
+      "id": "Database.mergeresult.method.getupdatedrelatedids()",
       "nodeType": "method",
       "name": "getUpdatedRelatedIds",
       "startToken": {
@@ -246,6 +395,9 @@
         },
         "id": "declaration.entity.name.function_getUpdatedRelatedIds_-1:0"
       },
+      "parentId": "Database.mergeresult",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -253,30 +405,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<String> getUpdatedRelatedIds()",
+      "overrideSignature": "public override List<String> getUpdatedRelatedIds()",
       "simplifiedSignature": "getUpdatedRelatedIds()",
       "datatype": {
-        "id": "Database.mergeresult.getupdatedrelatedids.List<String>",
+        "id": "Database.mergeresult.getupdatedrelatedids.datatype.List<String>",
         "nodeType": "datatype",
-        "name": "List<String>"
+        "name": "List<String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Database.mergeresult.getupdatedrelatedids",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Database.mergeresult.getupdatedrelatedids.datatype.List<String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 18
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
       "description": "Returns the IDs of all related records that were reparented as a result of the merge that are viewable by the user sending the merge call.",
-      "params": {}
+      "parentName": "MergeResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "issuccess()": {
-      "id": "Database.mergeresult.issuccess",
+      "id": "Database.mergeresult.method.issuccess()",
       "nodeType": "method",
       "name": "isSuccess",
       "startToken": {
@@ -298,6 +505,9 @@
         },
         "id": "declaration.entity.name.function_isSuccess_-1:0"
       },
+      "parentId": "Database.mergeresult",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -305,31 +515,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean isSuccess()",
+      "overrideSignature": "public override Boolean isSuccess()",
       "simplifiedSignature": "isSuccess()",
       "datatype": {
-        "id": "Database.mergeresult.issuccess.Boolean",
+        "id": "Database.mergeresult.issuccess.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Database.mergeresult.issuccess",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Indicates whether the merge was successful (true) or not (false).",
-      "params": {}
+      "parentName": "MergeResult",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 5,
+  "queries": []
 }

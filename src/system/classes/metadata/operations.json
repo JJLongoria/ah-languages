@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Operations_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "clone()": {
-      "id": "Metadata.operations.clone",
+      "id": "Metadata.operations.method.clone()",
       "nodeType": "method",
       "name": "clone",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_clone_-1:0"
       },
+      "parentId": "Metadata.operations",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Object clone()",
+      "overrideSignature": "public override Object clone()",
       "simplifiedSignature": "clone()",
       "datatype": {
-        "id": "Metadata.operations.clone.Object",
+        "id": "Metadata.operations.clone.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:7"
+        },
+        "parentId": "Metadata.operations.clone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Makes a duplicate copy of the Metadata.Operations.",
-      "params": {}
+      "parentName": "Operations",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "enqueuedeployment(metadata.deploycontainer,metadata.deploycallback)": {
-      "id": "Metadata.operations.enqueuedeployment",
+      "id": "Metadata.operations.method.enqueuedeployment(metadata.deploycontainer,metadata.deploycallback)",
       "nodeType": "method",
       "name": "enqueueDeployment",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_enqueueDeployment_-1:0"
       },
+      "parentId": "Metadata.operations",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,17 +185,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -168,30 +204,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static Id enqueueDeployment(Metadata.DeployContainer container, Metadata.DeployCallback callback)",
+      "overrideSignature": "public static override Id enqueueDeployment(Metadata.DeployContainer container, Metadata.DeployCallback callback)",
       "simplifiedSignature": "enqueueDeployment(Metadata.DeployContainer,Metadata.DeployCallback)",
       "datatype": {
-        "id": "Metadata.operations.enqueuedeployment.Id",
+        "id": "Metadata.operations.enqueuedeployment.datatype.Id",
         "nodeType": "datatype",
-        "name": "Id"
+        "name": "Id",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Id",
+          "textToLower": "id",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 16
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Id_0:14"
+        },
+        "parentId": "Metadata.operations.enqueuedeployment",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Id"
       },
       "description": "Deploys custom metadata components asynchronously.",
+      "parentName": "Operations",
+      "variables": {},
       "params": {
         "container": {
-          "id": "Metadata.operations.enqueuedeployment.container",
-          "type": "var",
+          "id": "Metadata.operations.method.enqueuedeployment(metadata.deploycontainer,metadata.deploycallback).varParam.container",
+          "nodeType": "variable",
           "name": "container",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -200,28 +262,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_container_-1:0"
+            "id": "token.type.identifier_container_0:60"
           },
-          "signature": "Metadata.DeployContainer container",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "container",
+            "textToLower": "container",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 60
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_container_0:60"
+          },
+          "parentId": "Metadata.operations.method.enqueuedeployment(metadata.deploycontainer,metadata.deploycallback)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Metadata.operations.enqueuedeployment.metadata.deploycontainer",
+            "id": "Metadata.operations.enqueuedeployment.datatype.Metadata.DeployContainer",
             "nodeType": "datatype",
-            "name": "Metadata.DeployContainer"
-          }
+            "name": "Metadata.DeployContainer",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Metadata",
+              "textToLower": "metadata",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 43
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Metadata_0:35"
+            },
+            "parentId": "Metadata.operations.enqueuedeployment",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Metadata.DeployContainer"
+          },
+          "scope": null
         },
         "callback": {
-          "id": "Metadata.operations.enqueuedeployment.callback",
-          "type": "var",
+          "id": "Metadata.operations.method.enqueuedeployment(metadata.deploycontainer,metadata.deploycallback).varParam.callback",
+          "nodeType": "variable",
           "name": "callback",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -230,29 +337,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 103
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_callback_-1:0"
+            "id": "token.type.identifier_callback_0:95"
           },
-          "signature": "Metadata.DeployCallback callback",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "callback",
+            "textToLower": "callback",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 95
+              },
+              "end": {
+                "line": 0,
+                "character": 103
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_callback_0:95"
+          },
+          "parentId": "Metadata.operations.method.enqueuedeployment(metadata.deploycontainer,metadata.deploycallback)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Metadata.operations.enqueuedeployment.metadata.deploycallback",
+            "id": "Metadata.operations.enqueuedeployment.datatype.Metadata.DeployCallback",
             "nodeType": "datatype",
-            "name": "Metadata.DeployCallback"
-          }
+            "name": "Metadata.DeployCallback",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Metadata",
+              "textToLower": "metadata",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 71
+                },
+                "end": {
+                  "line": 0,
+                  "character": 79
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Metadata_0:71"
+            },
+            "parentId": "Metadata.operations.enqueuedeployment",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Metadata.DeployCallback"
+          },
+          "description": "Container that contains the set of metadata components to deploy. A class that implements the Metadata.DeployCallback interface. Used by Salesforce to return information about the deployment results.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "retrieve(metadata.metadatatype,list)": {
-      "id": "Metadata.operations.retrieve",
+    "retrieve(metadata.metadatatype,list<string>)": {
+      "id": "Metadata.operations.method.retrieve(metadata.metadatatype,list<string>)",
       "nodeType": "method",
       "name": "retrieve",
       "startToken": {
@@ -274,6 +429,9 @@
         },
         "id": "declaration.entity.name.function_retrieve_-1:0"
       },
+      "parentId": "Metadata.operations",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -281,17 +439,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -300,30 +458,83 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static List<Metadata.Metadata> retrieve(Metadata.MetadataType type, List <String>)",
-      "simplifiedSignature": "retrieve(Metadata.MetadataType,List)",
+      "signature": "public static List<Metadata.Metadata> retrieve(Metadata.MetadataType type, List<String> fullNames)",
+      "overrideSignature": "public static override List<Metadata.Metadata> retrieve(Metadata.MetadataType type, List<String> fullNames)",
+      "simplifiedSignature": "retrieve(Metadata.MetadataType,List<String>)",
       "datatype": {
-        "id": "Metadata.operations.retrieve.List<Metadata.Metadata>",
+        "id": "Metadata.operations.retrieve.datatype.List<Metadata.Metadata>",
         "nodeType": "datatype",
-        "name": "List<Metadata.Metadata>"
+        "name": "List<Metadata.Metadata>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "Metadata.operations.retrieve",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Metadata.operations.retrieve.datatype.List<Metadata.Metadata>.value.Metadata.Metadata",
+          "nodeType": "datatype",
+          "name": "Metadata.Metadata",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Metadata",
+            "textToLower": "metadata",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 27
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Metadata_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Metadata.Metadata"
+        }
       },
       "description": "Retrieves a list of custom metadata components.",
+      "parentName": "Operations",
+      "variables": {},
       "params": {
         "type": {
-          "id": "Metadata.operations.retrieve.type",
-          "type": "var",
+          "id": "Metadata.operations.method.retrieve(metadata.metadatatype,list<string>).varParam.type",
+          "nodeType": "variable",
           "name": "type",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -332,60 +543,182 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_type_-1:0"
+            "id": "token.type.identifier_type_0:69"
           },
-          "signature": "Metadata.MetadataType type",
-          "datatype": {
-            "id": "Metadata.operations.retrieve.metadata.metadatatype",
-            "nodeType": "datatype",
-            "name": "Metadata.MetadataType"
-          }
-        },
-        "<String>": {
-          "id": "Metadata.operations.retrieve.<string>",
-          "type": "var",
-          "name": "<String>",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<String>",
-            "textToLower": "<string>",
+            "text": "type",
+            "textToLower": "type",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<String>_-1:0"
+            "id": "token.type.identifier_type_0:69"
           },
-          "signature": "List <String>",
+          "parentId": "Metadata.operations.method.retrieve(metadata.metadatatype,list<string>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Metadata.operations.retrieve.list",
+            "id": "Metadata.operations.retrieve.datatype.Metadata.MetadataType",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "Metadata.MetadataType",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Metadata",
+              "textToLower": "metadata",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 47
+                },
+                "end": {
+                  "line": 0,
+                  "character": 55
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Metadata_0:47"
+            },
+            "parentId": "Metadata.operations.retrieve",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Metadata.MetadataType"
+          },
+          "scope": null
+        },
+        "fullnames": {
+          "id": "Metadata.operations.method.retrieve(metadata.metadatatype,list<string>).varParam.fullnames",
+          "nodeType": "variable",
+          "name": "fullNames",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fullNames",
+            "textToLower": "fullnames",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 88
+              },
+              "end": {
+                "line": 0,
+                "character": 97
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fullNames_0:88"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fullNames",
+            "textToLower": "fullnames",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 88
+              },
+              "end": {
+                "line": 0,
+                "character": 97
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fullNames_0:88"
+          },
+          "parentId": "Metadata.operations.method.retrieve(metadata.metadatatype,list<string>)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "Metadata.operations.retrieve.datatype.List<String>",
+            "nodeType": "datatype",
+            "name": "List<String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 75
+                },
+                "end": {
+                  "line": 0,
+                  "character": 79
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:75"
+            },
+            "parentId": "Metadata.operations.retrieve",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Metadata.operations.retrieve.datatype.List<String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 80
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 86
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:80"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            }
+          },
+          "description": "The metadata component type. A list of component names to retrieve. For information on component name formats, see Metadata.fullName().",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 3,
+  "queries": []
 }

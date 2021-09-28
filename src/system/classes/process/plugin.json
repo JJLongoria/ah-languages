@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Plugin_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "describe()": {
-      "id": "Process.plugin.describe",
+      "id": "Process.plugin.method.describe()",
       "nodeType": "method",
       "name": "describe",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_describe_-1:0"
       },
+      "parentId": "Process.plugin",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Process.PluginDescribeResult describe()",
+      "overrideSignature": "public override Process.PluginDescribeResult describe()",
       "simplifiedSignature": "describe()",
       "datatype": {
-        "id": "Process.plugin.describe.Process.PluginDescribeResult",
+        "id": "Process.plugin.describe.datatype.Process.PluginDescribeResult",
         "nodeType": "datatype",
-        "name": "Process.PluginDescribeResult"
+        "name": "Process.PluginDescribeResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Process",
+          "textToLower": "process",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Process_0:7"
+        },
+        "parentId": "Process.plugin.describe",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Process.PluginDescribeResult"
       },
       "description": "Returns a Process.PluginDescribeResult object that describes this method call.",
-      "params": {}
+      "parentName": "Plugin",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "invoke(process.pluginrequest)": {
-      "id": "Process.plugin.invoke",
+      "id": "Process.plugin.method.invoke(process.pluginrequest)",
       "nodeType": "method",
       "name": "invoke",
       "startToken": {
@@ -142,6 +175,9 @@
         },
         "id": "declaration.entity.name.function_invoke_-1:0"
       },
+      "parentId": "Process.plugin",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -149,30 +185,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Process.PluginResult invoke(Process.PluginRequest request)",
+      "overrideSignature": "public override Process.PluginResult invoke(Process.PluginRequest request)",
       "simplifiedSignature": "invoke(Process.PluginRequest)",
       "datatype": {
-        "id": "Process.plugin.invoke.Process.PluginResult",
+        "id": "Process.plugin.invoke.datatype.Process.PluginResult",
         "nodeType": "datatype",
-        "name": "Process.PluginResult"
+        "name": "Process.PluginResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "Process",
+          "textToLower": "process",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Process_0:7"
+        },
+        "parentId": "Process.plugin.invoke",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Process.PluginResult"
       },
       "description": "Primary method that the system invokes when the class that implements the interface is instantiated.",
+      "parentName": "Plugin",
+      "variables": {},
       "params": {
         "request": {
-          "id": "Process.plugin.invoke.request",
-          "type": "var",
+          "id": "Process.plugin.method.invoke(process.pluginrequest).varParam.request",
+          "nodeType": "variable",
           "name": "request",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -181,30 +243,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 57
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_request_-1:0"
+            "id": "token.type.identifier_request_0:57"
           },
-          "signature": "Process.PluginRequest request",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "request",
+            "textToLower": "request",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 57
+              },
+              "end": {
+                "line": 0,
+                "character": 64
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_request_0:57"
+          },
+          "parentId": "Process.plugin.method.invoke(process.pluginrequest)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Process.plugin.invoke.process.pluginrequest",
+            "id": "Process.plugin.invoke.datatype.Process.PluginRequest",
             "nodeType": "datatype",
-            "name": "Process.PluginRequest"
-          }
+            "name": "Process.PluginRequest",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Process",
+              "textToLower": "process",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 42
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Process_0:35"
+            },
+            "parentId": "Process.plugin.invoke",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Process.PluginRequest"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_QueryUtils_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "applylimitandoffset(datasource.querycontext,list,object>>)": {
-      "id": "Datasource.queryutils.applylimitandoffset",
+    "applylimitandoffset(datasource.querycontext,list<map<string,object>>)": {
+      "id": "Datasource.queryutils.method.applylimitandoffset(datasource.querycontext,list<map<string,object>>)",
       "nodeType": "method",
       "name": "applyLimitAndOffset",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_applyLimitAndOffset_-1:0"
       },
+      "parentId": "Datasource.queryutils",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,137 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static List<Map<String,  Object>> applyLimitAndOffset(DataSource.QueryContext queryContext, List <Map, Object>> rows)",
-      "simplifiedSignature": "applyLimitAndOffset(DataSource.QueryContext,List,Object>>)",
+      "signature": "public static List<Map<String,Object>> applyLimitAndOffset(DataSource.QueryContext queryContext, List<Map<String,Object>> rows)",
+      "overrideSignature": "public static override List<Map<String,Object>> applyLimitAndOffset(DataSource.QueryContext queryContext, List<Map<String,Object>> rows)",
+      "simplifiedSignature": "applyLimitAndOffset(DataSource.QueryContext,List<Map<String,Object>>)",
       "datatype": {
-        "id": "Datasource.queryutils.applylimitandoffset.List<Map<String,  Object>>",
+        "id": "Datasource.queryutils.applylimitandoffset.datatype.List<Map<String,Object>>",
         "nodeType": "datatype",
-        "name": "List<Map<String,  Object>>"
+        "name": "List<Map<String,Object>>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "Datasource.queryutils.applylimitandoffset",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Datasource.queryutils.applylimitandoffset.datatype.List<Map<String,Object>>.value.Map<String,Object>",
+          "nodeType": "datatype",
+          "name": "Map<String,Object>",
+          "startToken": {
+            "type": "datatype.collection",
+            "text": "Map",
+            "textToLower": "map",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 22
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Map_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Map",
+          "value": {
+            "id": "Datasource.queryutils.applylimitandoffset.datatype.List<Map<String,Object>>.value.Map<String,Object>.value.Object",
+            "nodeType": "datatype",
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:30"
+            },
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "key": {
+            "id": "Datasource.queryutils.applylimitandoffset.datatype.List<Map<String,Object>>.value.Map<String,Object>.key.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:23"
+            },
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          }
+        }
       },
       "description": "Returns a subset of data rows after locally applying limit and offset clauses from the query. This helper method is provided for your convenience during early development and tests, but it isn’t supported for use in production environments.",
+      "parentName": "QueryUtils",
+      "variables": {},
       "params": {
-        "queryContext": {
-          "id": "Datasource.queryutils.applylimitandoffset.querycontext",
-          "type": "var",
+        "querycontext": {
+          "id": "Datasource.queryutils.method.applylimitandoffset(datasource.querycontext,list<map<string,object>>).varParam.querycontext",
+          "nodeType": "variable",
           "name": "queryContext",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,58 +260,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_queryContext_-1:0"
+            "id": "token.type.identifier_queryContext_0:83"
           },
-          "signature": "DataSource.QueryContext queryContext",
-          "datatype": {
-            "id": "Datasource.queryutils.applylimitandoffset.datasource.querycontext",
-            "nodeType": "datatype",
-            "name": "DataSource.QueryContext"
-          }
-        },
-        "<Map": {
-          "id": "Datasource.queryutils.applylimitandoffset.<map",
-          "type": "var",
-          "name": "<Map",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Map",
-            "textToLower": "<map",
+            "text": "queryContext",
+            "textToLower": "querycontext",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 83
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 95
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Map_-1:0"
+            "id": "token.type.identifier_queryContext_0:83"
           },
-          "signature": "List <Map",
+          "parentId": "Datasource.queryutils.method.applylimitandoffset(datasource.querycontext,list<map<string,object>>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Datasource.queryutils.applylimitandoffset.list",
+            "id": "Datasource.queryutils.applylimitandoffset.datatype.DataSource.QueryContext",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "DataSource.QueryContext",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "DataSource",
+              "textToLower": "datasource",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 59
+                },
+                "end": {
+                  "line": 0,
+                  "character": 69
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_DataSource_0:59"
+            },
+            "parentId": "Datasource.queryutils.applylimitandoffset",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "DataSource.QueryContext"
+          },
+          "scope": null
         },
         "rows": {
-          "id": "Datasource.queryutils.applylimitandoffset.rows",
-          "type": "var",
+          "id": "Datasource.queryutils.method.applylimitandoffset(datasource.querycontext,list<map<string,object>>).varParam.rows",
+          "nodeType": "variable",
           "name": "rows",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -208,29 +335,158 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 122
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 126
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_rows_-1:0"
+            "id": "token.type.identifier_rows_0:122"
           },
-          "signature": "Object>> rows",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "rows",
+            "textToLower": "rows",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 122
+              },
+              "end": {
+                "line": 0,
+                "character": 126
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_rows_0:122"
+          },
+          "parentId": "Datasource.queryutils.method.applylimitandoffset(datasource.querycontext,list<map<string,object>>)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Datasource.queryutils.applylimitandoffset.object>>",
+            "id": "Datasource.queryutils.applylimitandoffset.datatype.List<Map<String,Object>>",
             "nodeType": "datatype",
-            "name": "Object>>"
-          }
+            "name": "List<Map<String,Object>>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 97
+                },
+                "end": {
+                  "line": 0,
+                  "character": 101
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:97"
+            },
+            "parentId": "Datasource.queryutils.applylimitandoffset",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Datasource.queryutils.applylimitandoffset.datatype.List<Map<String,Object>>.value.Map<String,Object>",
+              "nodeType": "datatype",
+              "name": "Map<String,Object>",
+              "startToken": {
+                "type": "datatype.collection",
+                "text": "Map",
+                "textToLower": "map",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 102
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 105
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Map_0:102"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Map",
+              "value": {
+                "id": "Datasource.queryutils.applylimitandoffset.datatype.List<Map<String,Object>>.value.Map<String,Object>.value.Object",
+                "nodeType": "datatype",
+                "name": "Object",
+                "startToken": {
+                  "type": "datatype.primitive",
+                  "text": "Object",
+                  "textToLower": "object",
+                  "isAux": false,
+                  "range": {
+                    "start": {
+                      "line": 0,
+                      "character": 113
+                    },
+                    "end": {
+                      "line": 0,
+                      "character": 119
+                    },
+                    "isEmpty": false,
+                    "isSingleLine": true
+                  },
+                  "id": "token.type.identifier_Object_0:113"
+                },
+                "order": 0,
+                "memberOrder": 0,
+                "type": "Object"
+              },
+              "key": {
+                "id": "Datasource.queryutils.applylimitandoffset.datatype.List<Map<String,Object>>.value.Map<String,Object>.key.String",
+                "nodeType": "datatype",
+                "name": "String",
+                "startToken": {
+                  "type": "datatype.primitive",
+                  "text": "String",
+                  "textToLower": "string",
+                  "isAux": false,
+                  "range": {
+                    "start": {
+                      "line": 0,
+                      "character": 106
+                    },
+                    "end": {
+                      "line": 0,
+                      "character": 112
+                    },
+                    "isEmpty": false,
+                    "isSingleLine": true
+                  },
+                  "id": "token.type.identifier_String_0:106"
+                },
+                "order": 0,
+                "memberOrder": 0,
+                "type": "String"
+              }
+            }
+          },
+          "description": "Represents the query to run against a data table. Rows of data.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "filter(datasource.querycontext,list,object>>)": {
-      "id": "Datasource.queryutils.filter",
+    "filter(datasource.querycontext,list<map<string,object>>)": {
+      "id": "Datasource.queryutils.method.filter(datasource.querycontext,list<map<string,object>>)",
       "nodeType": "method",
       "name": "filter",
       "startToken": {
@@ -252,6 +508,9 @@
         },
         "id": "declaration.entity.name.function_filter_-1:0"
       },
+      "parentId": "Datasource.queryutils",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -259,17 +518,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -278,30 +537,137 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static List<Map<String,  Object>> filter(DataSource.QueryContext queryContext, List <Map, Object>> rows)",
-      "simplifiedSignature": "filter(DataSource.QueryContext,List,Object>>)",
+      "signature": "public static List<Map<String,bject>> filter(DataSource.QueryContext queryContext, List<Map<String,Object>> rows)",
+      "overrideSignature": "public static override List<Map<String,bject>> filter(DataSource.QueryContext queryContext, List<Map<String,Object>> rows)",
+      "simplifiedSignature": "filter(DataSource.QueryContext,List<Map<String,Object>>)",
       "datatype": {
-        "id": "Datasource.queryutils.filter.List<Map<String,  Object>>",
+        "id": "Datasource.queryutils.filter.datatype.List<Map<String,bject>>",
         "nodeType": "datatype",
-        "name": "List<Map<String,  Object>>"
+        "name": "List<Map<String,bject>>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "Datasource.queryutils.filter",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Datasource.queryutils.filter.datatype.List<Map<String,bject>>.value.Map<String,bject>",
+          "nodeType": "datatype",
+          "name": "Map<String,bject>",
+          "startToken": {
+            "type": "datatype.collection",
+            "text": "Map",
+            "textToLower": "map",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 22
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Map_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Map",
+          "value": {
+            "id": "Datasource.queryutils.filter.datatype.List<Map<String,bject>>.value.Map<String,bject>.value.bject",
+            "nodeType": "datatype",
+            "name": "bject",
+            "startToken": {
+              "type": "datatype.custom.class",
+              "text": "bject",
+              "textToLower": "bject",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 35
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_bject_0:30"
+            },
+            "order": 0,
+            "memberOrder": 0,
+            "type": "bject"
+          },
+          "key": {
+            "id": "Datasource.queryutils.filter.datatype.List<Map<String,bject>>.value.Map<String,bject>.key.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:23"
+            },
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          }
+        }
       },
       "description": "Returns a subset of data rows after locally ordering and applying filters from the query. This helper method is provided for your convenience during early development and tests, but it isn’t supported for use in production environments.",
+      "parentName": "QueryUtils",
+      "variables": {},
       "params": {
-        "queryContext": {
-          "id": "Datasource.queryutils.filter.querycontext",
-          "type": "var",
+        "querycontext": {
+          "id": "Datasource.queryutils.method.filter(datasource.querycontext,list<map<string,object>>).varParam.querycontext",
+          "nodeType": "variable",
           "name": "queryContext",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,58 +676,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_queryContext_-1:0"
+            "id": "token.type.identifier_queryContext_0:69"
           },
-          "signature": "DataSource.QueryContext queryContext",
-          "datatype": {
-            "id": "Datasource.queryutils.filter.datasource.querycontext",
-            "nodeType": "datatype",
-            "name": "DataSource.QueryContext"
-          }
-        },
-        "<Map": {
-          "id": "Datasource.queryutils.filter.<map",
-          "type": "var",
-          "name": "<Map",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Map",
-            "textToLower": "<map",
+            "text": "queryContext",
+            "textToLower": "querycontext",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Map_-1:0"
+            "id": "token.type.identifier_queryContext_0:69"
           },
-          "signature": "List <Map",
+          "parentId": "Datasource.queryutils.method.filter(datasource.querycontext,list<map<string,object>>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Datasource.queryutils.filter.list",
+            "id": "Datasource.queryutils.filter.datatype.DataSource.QueryContext",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "DataSource.QueryContext",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "DataSource",
+              "textToLower": "datasource",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 55
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_DataSource_0:45"
+            },
+            "parentId": "Datasource.queryutils.filter",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "DataSource.QueryContext"
+          },
+          "scope": null
         },
         "rows": {
-          "id": "Datasource.queryutils.filter.rows",
-          "type": "var",
+          "id": "Datasource.queryutils.method.filter(datasource.querycontext,list<map<string,object>>).varParam.rows",
+          "nodeType": "variable",
           "name": "rows",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -370,29 +751,158 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 108
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 112
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_rows_-1:0"
+            "id": "token.type.identifier_rows_0:108"
           },
-          "signature": "Object>> rows",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "rows",
+            "textToLower": "rows",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 108
+              },
+              "end": {
+                "line": 0,
+                "character": 112
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_rows_0:108"
+          },
+          "parentId": "Datasource.queryutils.method.filter(datasource.querycontext,list<map<string,object>>)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Datasource.queryutils.filter.object>>",
+            "id": "Datasource.queryutils.filter.datatype.List<Map<String,Object>>",
             "nodeType": "datatype",
-            "name": "Object>>"
-          }
+            "name": "List<Map<String,Object>>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 83
+                },
+                "end": {
+                  "line": 0,
+                  "character": 87
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:83"
+            },
+            "parentId": "Datasource.queryutils.filter",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Datasource.queryutils.filter.datatype.List<Map<String,Object>>.value.Map<String,Object>",
+              "nodeType": "datatype",
+              "name": "Map<String,Object>",
+              "startToken": {
+                "type": "datatype.collection",
+                "text": "Map",
+                "textToLower": "map",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 88
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 91
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Map_0:88"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Map",
+              "value": {
+                "id": "Datasource.queryutils.filter.datatype.List<Map<String,Object>>.value.Map<String,Object>.value.Object",
+                "nodeType": "datatype",
+                "name": "Object",
+                "startToken": {
+                  "type": "datatype.primitive",
+                  "text": "Object",
+                  "textToLower": "object",
+                  "isAux": false,
+                  "range": {
+                    "start": {
+                      "line": 0,
+                      "character": 99
+                    },
+                    "end": {
+                      "line": 0,
+                      "character": 105
+                    },
+                    "isEmpty": false,
+                    "isSingleLine": true
+                  },
+                  "id": "token.type.identifier_Object_0:99"
+                },
+                "order": 0,
+                "memberOrder": 0,
+                "type": "Object"
+              },
+              "key": {
+                "id": "Datasource.queryutils.filter.datatype.List<Map<String,Object>>.value.Map<String,Object>.key.String",
+                "nodeType": "datatype",
+                "name": "String",
+                "startToken": {
+                  "type": "datatype.primitive",
+                  "text": "String",
+                  "textToLower": "string",
+                  "isAux": false,
+                  "range": {
+                    "start": {
+                      "line": 0,
+                      "character": 92
+                    },
+                    "end": {
+                      "line": 0,
+                      "character": 98
+                    },
+                    "isEmpty": false,
+                    "isSingleLine": true
+                  },
+                  "id": "token.type.identifier_String_0:92"
+                },
+                "order": 0,
+                "memberOrder": 0,
+                "type": "String"
+              }
+            }
+          },
+          "description": "Represents the query to run against a data table. Rows of data.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "process(datasource.querycontext,list,object>>)": {
-      "id": "Datasource.queryutils.process",
+    "process(datasource.querycontext,list<map<string,object>>)": {
+      "id": "Datasource.queryutils.method.process(datasource.querycontext,list<map<string,object>>)",
       "nodeType": "method",
       "name": "process",
       "startToken": {
@@ -414,6 +924,9 @@
         },
         "id": "declaration.entity.name.function_process_-1:0"
       },
+      "parentId": "Datasource.queryutils",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -421,17 +934,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -440,30 +953,137 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static List<Map<String,  Object>> process(DataSource.QueryContext queryContext, List <Map, Object>> rows)",
-      "simplifiedSignature": "process(DataSource.QueryContext,List,Object>>)",
+      "signature": "public static List<Map<String,bject>> process(DataSource.QueryContext queryContext, List<Map<String,Object>> rows)",
+      "overrideSignature": "public static override List<Map<String,bject>> process(DataSource.QueryContext queryContext, List<Map<String,Object>> rows)",
+      "simplifiedSignature": "process(DataSource.QueryContext,List<Map<String,Object>>)",
       "datatype": {
-        "id": "Datasource.queryutils.process.List<Map<String,  Object>>",
+        "id": "Datasource.queryutils.process.datatype.List<Map<String,bject>>",
         "nodeType": "datatype",
-        "name": "List<Map<String,  Object>>"
+        "name": "List<Map<String,bject>>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "Datasource.queryutils.process",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Datasource.queryutils.process.datatype.List<Map<String,bject>>.value.Map<String,bject>",
+          "nodeType": "datatype",
+          "name": "Map<String,bject>",
+          "startToken": {
+            "type": "datatype.collection",
+            "text": "Map",
+            "textToLower": "map",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 19
+              },
+              "end": {
+                "line": 0,
+                "character": 22
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Map_0:19"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Map",
+          "value": {
+            "id": "Datasource.queryutils.process.datatype.List<Map<String,bject>>.value.Map<String,bject>.value.bject",
+            "nodeType": "datatype",
+            "name": "bject",
+            "startToken": {
+              "type": "datatype.custom.class",
+              "text": "bject",
+              "textToLower": "bject",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 35
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_bject_0:30"
+            },
+            "order": 0,
+            "memberOrder": 0,
+            "type": "bject"
+          },
+          "key": {
+            "id": "Datasource.queryutils.process.datatype.List<Map<String,bject>>.value.Map<String,bject>.key.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 23
+                },
+                "end": {
+                  "line": 0,
+                  "character": 29
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:23"
+            },
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          }
+        }
       },
       "description": "Returns data rows after locally filtering, sorting, ordering, and applying limit and offset clauses from the query. This helper method is provided for your convenience during early development and tests, but it isn’t supported for use in production environments.",
+      "parentName": "QueryUtils",
+      "variables": {},
       "params": {
-        "queryContext": {
-          "id": "Datasource.queryutils.process.querycontext",
-          "type": "var",
+        "querycontext": {
+          "id": "Datasource.queryutils.method.process(datasource.querycontext,list<map<string,object>>).varParam.querycontext",
+          "nodeType": "variable",
           "name": "queryContext",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -472,58 +1092,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_queryContext_-1:0"
+            "id": "token.type.identifier_queryContext_0:70"
           },
-          "signature": "DataSource.QueryContext queryContext",
-          "datatype": {
-            "id": "Datasource.queryutils.process.datasource.querycontext",
-            "nodeType": "datatype",
-            "name": "DataSource.QueryContext"
-          }
-        },
-        "<Map": {
-          "id": "Datasource.queryutils.process.<map",
-          "type": "var",
-          "name": "<Map",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Map",
-            "textToLower": "<map",
+            "text": "queryContext",
+            "textToLower": "querycontext",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 82
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Map_-1:0"
+            "id": "token.type.identifier_queryContext_0:70"
           },
-          "signature": "List <Map",
+          "parentId": "Datasource.queryutils.method.process(datasource.querycontext,list<map<string,object>>)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Datasource.queryutils.process.list",
+            "id": "Datasource.queryutils.process.datatype.DataSource.QueryContext",
             "nodeType": "datatype",
-            "name": "List"
-          }
+            "name": "DataSource.QueryContext",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "DataSource",
+              "textToLower": "datasource",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 46
+                },
+                "end": {
+                  "line": 0,
+                  "character": 56
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_DataSource_0:46"
+            },
+            "parentId": "Datasource.queryutils.process",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "DataSource.QueryContext"
+          },
+          "scope": null
         },
         "rows": {
-          "id": "Datasource.queryutils.process.rows",
-          "type": "var",
+          "id": "Datasource.queryutils.method.process(datasource.querycontext,list<map<string,object>>).varParam.rows",
+          "nodeType": "variable",
           "name": "rows",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -532,29 +1167,158 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 109
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 113
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_rows_-1:0"
+            "id": "token.type.identifier_rows_0:109"
           },
-          "signature": "Object>> rows",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "rows",
+            "textToLower": "rows",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 109
+              },
+              "end": {
+                "line": 0,
+                "character": 113
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_rows_0:109"
+          },
+          "parentId": "Datasource.queryutils.method.process(datasource.querycontext,list<map<string,object>>)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Datasource.queryutils.process.object>>",
+            "id": "Datasource.queryutils.process.datatype.List<Map<String,Object>>",
             "nodeType": "datatype",
-            "name": "Object>>"
-          }
+            "name": "List<Map<String,Object>>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 84
+                },
+                "end": {
+                  "line": 0,
+                  "character": 88
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:84"
+            },
+            "parentId": "Datasource.queryutils.process",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Datasource.queryutils.process.datatype.List<Map<String,Object>>.value.Map<String,Object>",
+              "nodeType": "datatype",
+              "name": "Map<String,Object>",
+              "startToken": {
+                "type": "datatype.collection",
+                "text": "Map",
+                "textToLower": "map",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 89
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 92
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Map_0:89"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Map",
+              "value": {
+                "id": "Datasource.queryutils.process.datatype.List<Map<String,Object>>.value.Map<String,Object>.value.Object",
+                "nodeType": "datatype",
+                "name": "Object",
+                "startToken": {
+                  "type": "datatype.primitive",
+                  "text": "Object",
+                  "textToLower": "object",
+                  "isAux": false,
+                  "range": {
+                    "start": {
+                      "line": 0,
+                      "character": 100
+                    },
+                    "end": {
+                      "line": 0,
+                      "character": 106
+                    },
+                    "isEmpty": false,
+                    "isSingleLine": true
+                  },
+                  "id": "token.type.identifier_Object_0:100"
+                },
+                "order": 0,
+                "memberOrder": 0,
+                "type": "Object"
+              },
+              "key": {
+                "id": "Datasource.queryutils.process.datatype.List<Map<String,Object>>.value.Map<String,Object>.key.String",
+                "nodeType": "datatype",
+                "name": "String",
+                "startToken": {
+                  "type": "datatype.primitive",
+                  "text": "String",
+                  "textToLower": "string",
+                  "isAux": false,
+                  "range": {
+                    "start": {
+                      "line": 0,
+                      "character": 93
+                    },
+                    "end": {
+                      "line": 0,
+                      "character": 99
+                    },
+                    "isEmpty": false,
+                    "isSingleLine": true
+                  },
+                  "id": "token.type.identifier_String_0:93"
+                },
+                "order": 0,
+                "memberOrder": 0,
+                "type": "String"
+              }
+            }
+          },
+          "description": "Represents the query to run against a data table. Rows of data.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
-    "sort(datasource.querycontext,list,bject>>)": {
-      "id": "Datasource.queryutils.sort",
+    "sort()": {
+      "id": "Datasource.queryutils.method.sort()",
       "nodeType": "method",
       "name": "sort",
       "startToken": {
@@ -576,6 +1340,9 @@
         },
         "id": "declaration.entity.name.function_sort_-1:0"
       },
+      "parentId": "Datasource.queryutils",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -583,17 +1350,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -602,122 +1369,142 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static List<Map<String,  Object>> sort(DataSource.QueryContext queryContext, List <Map, bject>> rows)",
-      "simplifiedSignature": "sort(DataSource.QueryContext,List,bject>>)",
+      "signature": "public static List<Map<String,bject>> sort()",
+      "overrideSignature": "public static override List<Map<String,bject>> sort()",
+      "simplifiedSignature": "sort()",
       "datatype": {
-        "id": "Datasource.queryutils.sort.List<Map<String,  Object>>",
+        "id": "Datasource.queryutils.sort.datatype.List<Map<String,bject>>",
         "nodeType": "datatype",
-        "name": "List<Map<String,  Object>>"
-      },
-      "description": "Returns data rows after locally sorting and applying the order from the query. This helper method is provided for your convenience during early development and tests, but it isn’t supported for use in production environments.",
-      "params": {
-        "queryContext": {
-          "id": "Datasource.queryutils.sort.querycontext",
-          "type": "var",
-          "name": "queryContext",
-          "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "queryContext",
-            "textToLower": "querycontext",
-            "isAux": false,
-            "range": {
-              "start": {
-                "line": -1,
-                "character": 0
-              },
-              "end": {
-                "line": -1,
-                "character": 0
-              },
-              "isEmpty": true,
-              "isSingleLine": true
+        "name": "List<Map<String,bject>>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 80
             },
-            "id": "declaration.entity.name.variable_queryContext_-1:0"
+            "end": {
+              "line": 0,
+              "character": 84
+            },
+            "isEmpty": false,
+            "isSingleLine": true
           },
-          "signature": "DataSource.QueryContext queryContext",
-          "datatype": {
-            "id": "Datasource.queryutils.sort.datasource.querycontext",
-            "nodeType": "datatype",
-            "name": "DataSource.QueryContext"
-          }
+          "id": "token.type.identifier_List_0:80"
         },
-        "<Map": {
-          "id": "Datasource.queryutils.sort.<map",
-          "type": "var",
-          "name": "<Map",
+        "parentId": "Datasource.queryutils.sort",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Datasource.queryutils.sort.datatype.List<Map<String,bject>>.value.Map<String,bject>",
+          "nodeType": "datatype",
+          "name": "Map<String,bject>",
           "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "<Map",
-            "textToLower": "<map",
+            "type": "datatype.collection",
+            "text": "Map",
+            "textToLower": "map",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 85
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 88
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Map_-1:0"
+            "id": "token.type.identifier_Map_0:85"
           },
-          "signature": "List <Map",
-          "datatype": {
-            "id": "Datasource.queryutils.sort.list",
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Map",
+          "value": {
+            "id": "Datasource.queryutils.sort.datatype.List<Map<String,bject>>.value.Map<String,bject>.value.bject",
             "nodeType": "datatype",
-            "name": "List"
-          }
-        },
-        "rows": {
-          "id": "Datasource.queryutils.sort.rows",
-          "type": "var",
-          "name": "rows",
-          "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "rows",
-            "textToLower": "rows",
-            "isAux": false,
-            "range": {
-              "start": {
-                "line": -1,
-                "character": 0
+            "name": "bject",
+            "startToken": {
+              "type": "datatype.custom.class",
+              "text": "bject",
+              "textToLower": "bject",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 96
+                },
+                "end": {
+                  "line": 0,
+                  "character": 101
+                },
+                "isEmpty": false,
+                "isSingleLine": true
               },
-              "end": {
-                "line": -1,
-                "character": 0
-              },
-              "isEmpty": true,
-              "isSingleLine": true
+              "id": "token.type.identifier_bject_0:96"
             },
-            "id": "declaration.entity.name.variable_rows_-1:0"
+            "order": 0,
+            "memberOrder": 0,
+            "type": "bject"
           },
-          "signature": "bject>> rows",
-          "datatype": {
-            "id": "Datasource.queryutils.sort.bject>>",
+          "key": {
+            "id": "Datasource.queryutils.sort.datatype.List<Map<String,bject>>.value.Map<String,bject>.key.String",
             "nodeType": "datatype",
-            "name": "bject>>"
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 89
+                },
+                "end": {
+                  "line": 0,
+                  "character": 95
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:89"
+            },
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
           }
         }
-      }
+      },
+      "description": "Returns data rows after locally sorting and applying the order from the query. This helper method is provided for your convenience during early development and tests, but it isn’t supported for use in production environments.",
+      "parentName": "QueryUtils",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 4,
+  "queries": []
 }

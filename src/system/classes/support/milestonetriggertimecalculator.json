@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_MilestoneTriggerTimeCalculator_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "calculatemilestonetriggertime()": {
-      "id": "Support.milestonetriggertimecalculator.calculatemilestonetriggertime",
+    "calculatemilestonetriggertime(string,string)": {
+      "id": "Support.milestonetriggertimecalculator.method.calculatemilestonetriggertime(string,string)",
       "nodeType": "method",
       "name": "calculateMilestoneTriggerTime",
       "startToken": {
@@ -90,19 +92,222 @@
         },
         "id": "declaration.entity.name.function_calculateMilestoneTriggerTime_-1:0"
       },
-      "signature": "Integer calculateMilestoneTriggerTime()",
-      "simplifiedSignature": "calculateMilestoneTriggerTime()",
+      "parentId": "Support.milestonetriggertimecalculator",
+      "order": 1,
+      "memberOrder": 1,
+      "accessModifier": {
+        "type": "keyword.modifier.access",
+        "text": "public",
+        "textToLower": "public",
+        "isAux": false,
+        "range": {
+          "start": {
+            "line": 0,
+            "character": 0
+          },
+          "end": {
+            "line": 0,
+            "character": 6
+          },
+          "isEmpty": false,
+          "isSingleLine": true
+        },
+        "id": "token.type.identifier_public_0:0"
+      },
+      "signature": "public Integer calculateMilestoneTriggerTime(String caseId, String milestoneTypeId)",
+      "overrideSignature": "public override Integer calculateMilestoneTriggerTime(String caseId, String milestoneTypeId)",
+      "simplifiedSignature": "calculateMilestoneTriggerTime(String,String)",
       "datatype": {
-        "id": "Support.milestonetriggertimecalculator.calculatemilestonetriggertime.Integer",
+        "id": "Support.milestonetriggertimecalculator.calculatemilestonetriggertime.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "Support.milestonetriggertimecalculator.calculatemilestonetriggertime",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Calculates the milestone trigger time based on the specified case and milestone type and returns the time in minutes.",
-      "params": {}
+      "parentName": "MilestoneTriggerTimeCalculator",
+      "variables": {},
+      "params": {
+        "caseid": {
+          "id": "Support.milestonetriggertimecalculator.method.calculatemilestonetriggertime(string,string).varParam.caseid",
+          "nodeType": "variable",
+          "name": "caseId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "caseId",
+            "textToLower": "caseid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 52
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_caseId_0:52"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "caseId",
+            "textToLower": "caseid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 52
+              },
+              "end": {
+                "line": 0,
+                "character": 58
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_caseId_0:52"
+          },
+          "parentId": "Support.milestonetriggertimecalculator.method.calculatemilestonetriggertime(string,string)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Support.milestonetriggertimecalculator.calculatemilestonetriggertime.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 45
+                },
+                "end": {
+                  "line": 0,
+                  "character": 51
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:45"
+            },
+            "parentId": "Support.milestonetriggertimecalculator.calculatemilestonetriggertime",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        },
+        "milestonetypeid": {
+          "id": "Support.milestonetriggertimecalculator.method.calculatemilestonetriggertime(string,string).varParam.milestonetypeid",
+          "nodeType": "variable",
+          "name": "milestoneTypeId",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "milestoneTypeId",
+            "textToLower": "milestonetypeid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 82
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_milestoneTypeId_0:67"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "milestoneTypeId",
+            "textToLower": "milestonetypeid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 67
+              },
+              "end": {
+                "line": 0,
+                "character": 82
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_milestoneTypeId_0:67"
+          },
+          "parentId": "Support.milestonetriggertimecalculator.method.calculatemilestonetriggertime(string,string)",
+          "order": 2,
+          "memberOrder": 2,
+          "datatype": {
+            "id": "Support.milestonetriggertimecalculator.calculatemilestonetriggertime.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 60
+                },
+                "end": {
+                  "line": 0,
+                  "character": 66
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:60"
+            },
+            "parentId": "Support.milestonetriggertimecalculator.calculatemilestonetriggertime",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

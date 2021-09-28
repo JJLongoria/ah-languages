@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_HttpCalloutMock_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "respond(httprequest)": {
-      "id": "System.httpcalloutmock.respond",
+      "id": "System.httpcalloutmock.method.respond(httprequest)",
       "nodeType": "method",
       "name": "respond",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_respond_-1:0"
       },
+      "parentId": "System.httpcalloutmock",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public System.HttpResponse respond(HttpRequest request)",
+      "signature": "public HttpResponse respond(HttpRequest request)",
+      "overrideSignature": "public override HttpResponse respond(HttpRequest request)",
       "simplifiedSignature": "respond(HttpRequest)",
       "datatype": {
-        "id": "System.httpcalloutmock.respond.System.HttpResponse",
+        "id": "System.httpcalloutmock.respond.datatype.HttpResponse",
         "nodeType": "datatype",
-        "name": "System.HttpResponse"
+        "name": "HttpResponse",
+        "startToken": {
+          "type": "datatype.custom.class",
+          "text": "HttpResponse",
+          "textToLower": "httpresponse",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 19
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_HttpResponse_0:7"
+        },
+        "parentId": "System.httpcalloutmock.respond",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "HttpResponse"
       },
       "description": "Returns an HTTP response for the given request. The implementation of this method is called by the Apex runtime to send a fake response when an HTTP callout is made after Test.setMock has been called.",
+      "parentName": "HttpCalloutMock",
+      "variables": {},
       "params": {
         "request": {
-          "id": "System.httpcalloutmock.respond.request",
-          "type": "var",
+          "id": "System.httpcalloutmock.method.respond(httprequest).varParam.request",
+          "nodeType": "variable",
           "name": "request",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,30 +160,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 40
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_request_-1:0"
+            "id": "token.type.identifier_request_0:40"
           },
-          "signature": "HttpRequest request",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "request",
+            "textToLower": "request",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 40
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_request_0:40"
+          },
+          "parentId": "System.httpcalloutmock.method.respond(httprequest)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.httpcalloutmock.respond.httprequest",
+            "id": "System.httpcalloutmock.respond.datatype.HttpRequest",
             "nodeType": "datatype",
-            "name": "HttpRequest"
-          }
+            "name": "HttpRequest",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "HttpRequest",
+              "textToLower": "httprequest",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 28
+                },
+                "end": {
+                  "line": 0,
+                  "character": 39
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_HttpRequest_0:28"
+            },
+            "parentId": "System.httpcalloutmock.respond",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "HttpRequest"
+          },
+          "description": "",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

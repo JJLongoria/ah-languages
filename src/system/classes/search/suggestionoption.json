@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_SuggestionOption_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "setfilter(search.knowledegesuggestionfilter)": {
-      "id": "Search.suggestionoption.setfilter",
+      "id": "Search.suggestionoption.method.setfilter(search.knowledegesuggestionfilter)",
       "nodeType": "method",
       "name": "setFilter",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_setFilter_-1:0"
       },
+      "parentId": "Search.suggestionoption",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setFilter(Search.KnowledegeSuggestionFilter knowledgeSuggestionFilter)",
+      "overrideSignature": "public override void setFilter(Search.KnowledegeSuggestionFilter knowledgeSuggestionFilter)",
       "simplifiedSignature": "setFilter(Search.KnowledegeSuggestionFilter)",
       "datatype": {
-        "id": "Search.suggestionoption.setfilter.void",
+        "id": "Search.suggestionoption.setfilter.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Search.suggestionoption.setfilter",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Set filters that narrow Salesforce Knowledge article results in a call to System.Search.suggest(String, String, Search.SuggestionOption).",
+      "parentName": "SuggestionOption",
+      "variables": {},
       "params": {
-        "knowledgeSuggestionFilter": {
-          "id": "Search.suggestionoption.setfilter.knowledgesuggestionfilter",
-          "type": "var",
+        "knowledgesuggestionfilter": {
+          "id": "Search.suggestionoption.method.setfilter(search.knowledegesuggestionfilter).varParam.knowledgesuggestionfilter",
+          "nodeType": "variable",
           "name": "knowledgeSuggestionFilter",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,29 +160,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_knowledgeSuggestionFilter_-1:0"
+            "id": "token.type.identifier_knowledgeSuggestionFilter_0:56"
           },
-          "signature": "Search.KnowledegeSuggestionFilter knowledgeSuggestionFilter",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "knowledgeSuggestionFilter",
+            "textToLower": "knowledgesuggestionfilter",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 56
+              },
+              "end": {
+                "line": 0,
+                "character": 81
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_knowledgeSuggestionFilter_0:56"
+          },
+          "parentId": "Search.suggestionoption.method.setfilter(search.knowledegesuggestionfilter)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Search.suggestionoption.setfilter.search.knowledegesuggestionfilter",
+            "id": "Search.suggestionoption.setfilter.datatype.Search.KnowledegeSuggestionFilter",
             "nodeType": "datatype",
-            "name": "Search.KnowledegeSuggestionFilter"
-          }
+            "name": "Search.KnowledegeSuggestionFilter",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "Search",
+              "textToLower": "search",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Search_0:22"
+            },
+            "parentId": "Search.suggestionoption.setfilter",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Search.KnowledegeSuggestionFilter"
+          },
+          "description": "An object containing filters that narrow the search results.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "setlimit(integer)": {
-      "id": "Search.suggestionoption.setlimit",
+      "id": "Search.suggestionoption.method.setlimit(integer)",
       "nodeType": "method",
       "name": "setLimit",
       "startToken": {
@@ -173,6 +252,9 @@
         },
         "id": "declaration.entity.name.function_setLimit_-1:0"
       },
+      "parentId": "Search.suggestionoption",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -180,30 +262,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void setLimit(Integer limit)",
+      "overrideSignature": "public override void setLimit(Integer limit)",
       "simplifiedSignature": "setLimit(Integer)",
       "datatype": {
-        "id": "Search.suggestionoption.setlimit.void",
+        "id": "Search.suggestionoption.setlimit.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Search.suggestionoption.setlimit",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "The maximum number of record or article suggestions to retrieve.",
+      "parentName": "SuggestionOption",
+      "variables": {},
       "params": {
         "limit": {
-          "id": "Search.suggestionoption.setlimit.limit",
-          "type": "var",
+          "id": "Search.suggestionoption.method.setlimit(integer).varParam.limit",
+          "nodeType": "variable",
           "name": "limit",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -212,30 +320,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 34
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_limit_-1:0"
+            "id": "token.type.identifier_limit_0:29"
           },
-          "signature": "Integer limit",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "limit",
+            "textToLower": "limit",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 34
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_limit_0:29"
+          },
+          "parentId": "Search.suggestionoption.method.setlimit(integer)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Search.suggestionoption.setlimit.integer",
+            "id": "Search.suggestionoption.setlimit.datatype.Integer",
             "nodeType": "datatype",
-            "name": "Integer"
-          }
+            "name": "Integer",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Integer",
+              "textToLower": "integer",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 21
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Integer_0:21"
+            },
+            "parentId": "Search.suggestionoption.setlimit",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Integer"
+          },
+          "description": "The maximum number of record or article suggestions to retrieve.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 2,
+  "queries": []
 }

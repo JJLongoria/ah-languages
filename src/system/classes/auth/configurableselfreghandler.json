@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_ConfigurableSelfRegHandler_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "createuser(id,id,map,string>)": {
-      "id": "Auth.configurableselfreghandler.createuser",
+    "createuser(id,id,map<schema.sobjectfield,string>,string)": {
+      "id": "Auth.configurableselfreghandler.method.createuser(id,id,map<schema.sobjectfield,string>,string)",
       "nodeType": "method",
       "name": "createUser",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_createUser_-1:0"
       },
+      "parentId": "Auth.configurableselfreghandler",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public Id createUser(Id accountId, Id profileId, Map <Schema.SObjectField, String> registrationAttributes,)",
-      "simplifiedSignature": "createUser(Id,Id,Map,String>)",
+      "signature": "public Id createUser(Id accountId, Id profileId, Map<Schema.SObjectField,String> registrationAttributes, String password)",
+      "overrideSignature": "public override Id createUser(Id accountId, Id profileId, Map<Schema.SObjectField,String> registrationAttributes, String password)",
+      "simplifiedSignature": "createUser(Id,Id,Map<Schema.SObjectField,String>,String)",
       "datatype": {
-        "id": "Auth.configurableselfreghandler.createuser.Id",
+        "id": "Auth.configurableselfreghandler.createuser.datatype.Id",
         "nodeType": "datatype",
-        "name": "Id"
+        "name": "Id",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Id",
+          "textToLower": "id",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 9
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Id_0:7"
+        },
+        "parentId": "Auth.configurableselfreghandler.createuser",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Id"
       },
       "description": "Create a community member from the information that the visitor provided on your community’s self-registration page.",
+      "parentName": "ConfigurableSelfRegHandler",
+      "variables": {},
       "params": {
-        "accountId": {
-          "id": "Auth.configurableselfreghandler.createuser.accountid",
-          "type": "var",
+        "accountid": {
+          "id": "Auth.configurableselfreghandler.method.createuser(id,id,map<schema.sobjectfield,string>,string).varParam.accountid",
+          "nodeType": "variable",
           "name": "accountId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,28 +160,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 24
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 33
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_accountId_-1:0"
+            "id": "token.type.identifier_accountId_0:24"
           },
-          "signature": "Id accountId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "accountId",
+            "textToLower": "accountid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 24
+              },
+              "end": {
+                "line": 0,
+                "character": 33
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_accountId_0:24"
+          },
+          "parentId": "Auth.configurableselfreghandler.method.createuser(id,id,map<schema.sobjectfield,string>,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Auth.configurableselfreghandler.createuser.id",
+            "id": "Auth.configurableselfreghandler.createuser.datatype.Id",
             "nodeType": "datatype",
-            "name": "Id"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 21
+                },
+                "end": {
+                  "line": 0,
+                  "character": 23
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:21"
+            },
+            "parentId": "Auth.configurableselfreghandler.createuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "profileId": {
-          "id": "Auth.configurableselfreghandler.createuser.profileid",
-          "type": "var",
+        "profileid": {
+          "id": "Auth.configurableselfreghandler.method.createuser(id,id,map<schema.sobjectfield,string>,string).varParam.profileid",
+          "nodeType": "variable",
           "name": "profileId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -159,90 +235,284 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_profileId_-1:0"
+            "id": "token.type.identifier_profileId_0:38"
           },
-          "signature": "Id profileId",
-          "datatype": {
-            "id": "Auth.configurableselfreghandler.createuser.id",
-            "nodeType": "datatype",
-            "name": "Id"
-          }
-        },
-        "<Schema.SObjectField": {
-          "id": "Auth.configurableselfreghandler.createuser.<schema.sobjectfield",
-          "type": "var",
-          "name": "<Schema.SObjectField",
-          "startToken": {
+          "endToken": {
             "type": "declaration.entity.name.variable",
-            "text": "<Schema.SObjectField",
-            "textToLower": "<schema.sobjectfield",
+            "text": "profileId",
+            "textToLower": "profileid",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 38
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<Schema.SObjectField_-1:0"
+            "id": "token.type.identifier_profileId_0:38"
           },
-          "signature": "Map <Schema.SObjectField",
+          "parentId": "Auth.configurableselfreghandler.method.createuser(id,id,map<schema.sobjectfield,string>,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "Auth.configurableselfreghandler.createuser.map",
+            "id": "Auth.configurableselfreghandler.createuser.datatype.Id",
             "nodeType": "datatype",
-            "name": "Map"
-          }
+            "name": "Id",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Id",
+              "textToLower": "id",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 35
+                },
+                "end": {
+                  "line": 0,
+                  "character": 37
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Id_0:35"
+            },
+            "parentId": "Auth.configurableselfreghandler.createuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Id"
+          },
+          "scope": null
         },
-        "registrationAttributes,": {
-          "id": "Auth.configurableselfreghandler.createuser.registrationattributes,",
-          "type": "var",
-          "name": "registrationAttributes,",
+        "registrationattributes": {
+          "id": "Auth.configurableselfreghandler.method.createuser(id,id,map<schema.sobjectfield,string>,string).varParam.registrationattributes",
+          "nodeType": "variable",
+          "name": "registrationAttributes",
           "startToken": {
             "type": "declaration.entity.name.variable",
-            "text": "registrationAttributes,",
-            "textToLower": "registrationattributes,",
+            "text": "registrationAttributes",
+            "textToLower": "registrationattributes",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 103
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_registrationAttributes,_-1:0"
+            "id": "token.type.identifier_registrationAttributes_0:81"
           },
-          "signature": "String> registrationAttributes,",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "registrationAttributes",
+            "textToLower": "registrationattributes",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 103
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_registrationAttributes_0:81"
+          },
+          "parentId": "Auth.configurableselfreghandler.method.createuser(id,id,map<schema.sobjectfield,string>,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "Auth.configurableselfreghandler.createuser.string>",
+            "id": "Auth.configurableselfreghandler.createuser.datatype.Map<Schema.SObjectField,String>",
             "nodeType": "datatype",
-            "name": "String>"
-          }
+            "name": "Map<Schema.SObjectField,String>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "Map",
+              "textToLower": "map",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 52
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Map_0:49"
+            },
+            "parentId": "Auth.configurableselfreghandler.createuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Map",
+            "value": {
+              "id": "Auth.configurableselfreghandler.createuser.datatype.Map<Schema.SObjectField,String>.value.String",
+              "nodeType": "datatype",
+              "name": "String",
+              "startToken": {
+                "type": "datatype.primitive",
+                "text": "String",
+                "textToLower": "string",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 73
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 79
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_String_0:73"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "String"
+            },
+            "key": {
+              "id": "Auth.configurableselfreghandler.createuser.datatype.Map<Schema.SObjectField,String>.key.Schema.SObjectField",
+              "nodeType": "datatype",
+              "name": "Schema.SObjectField",
+              "startToken": {
+                "type": "datatype.support.namespace",
+                "text": "Schema",
+                "textToLower": "schema",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 53
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 59
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_Schema_0:53"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "Schema.SObjectField"
+            }
+          },
+          "scope": null
+        },
+        "password": {
+          "id": "Auth.configurableselfreghandler.method.createuser(id,id,map<schema.sobjectfield,string>,string).varParam.password",
+          "nodeType": "variable",
+          "name": "password",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "password",
+            "textToLower": "password",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 112
+              },
+              "end": {
+                "line": 0,
+                "character": 120
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_password_0:112"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "password",
+            "textToLower": "password",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 112
+              },
+              "end": {
+                "line": 0,
+                "character": 120
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_password_0:112"
+          },
+          "parentId": "Auth.configurableselfreghandler.method.createuser(id,id,map<schema.sobjectfield,string>,string)",
+          "order": 4,
+          "memberOrder": 4,
+          "datatype": {
+            "id": "Auth.configurableselfreghandler.createuser.datatype.String",
+            "nodeType": "datatype",
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 105
+                },
+                "end": {
+                  "line": 0,
+                  "character": 111
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:105"
+            },
+            "parentId": "Auth.configurableselfreghandler.createuser",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Default account with which the new user is associated. This value comes from the Account field setting on Login and Registration (L&amp;R) page under Registration Page Configuration. Profile to assign the new user. This value comes from the Profile field setting on the L&amp;R page under Registration Page Configuration. A map of attributes that the registering user entered on the self-registration page. The fields that appear on the self-registration page come from the User Fields selected on the L&amp;R page when the registration type is Configurable Self-Reg Page. The password entered by the user if “Include Password” is selected on the L&amp;R page. (If a password isn’t entered, the handler must generate one because a password is required to create a user.)",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

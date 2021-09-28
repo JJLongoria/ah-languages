@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_​AssociatedActions​CapabilityInput _-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -66,10 +68,10 @@
   "interfaces": {},
   "enums": {},
   "variables": {
-    "actionlink​groupids": {
-      "id": "ConnectApi.​associatedactions​capabilityinput .actionlink​groupids",
-      "type": "var",
-      "name": "actionLink​GroupIds",
+    "actionlink": {
+      "id": "ConnectApi.​associatedactions​capabilityinput .method.list<string> actionlink",
+      "nodeType": "variable",
+      "name": "actionLink",
       "startToken": {
         "type": "declaration.entity.name.variable",
         "text": "actionLink​GroupIds",
@@ -89,6 +91,9 @@
         },
         "id": "declaration.entity.name.variable_actionLink​GroupIds_-1:0"
       },
+      "parentId": "ConnectApi.​associatedactions​capabilityinput ",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -96,31 +101,83 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
-      "signature": "public List<String> actionLink​GroupIds",
-      "simplifiedSignature": "List<String> actionLink​GroupIds",
+      "signature": "public List<String> actionLink",
+      "simplifiedSignature": "List<String> actionLink",
       "datatype": {
-        "id": "ConnectApi.​associatedactions​capabilityinput .actionlink​groupids.list<string>",
+        "id": ".datatype.List<String>",
         "nodeType": "datatype",
-        "name": "List<String>"
+        "name": "List<String>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": ".datatype.List<String>.value.String",
+          "nodeType": "datatype",
+          "name": "String",
+          "startToken": {
+            "type": "datatype.primitive",
+            "text": "String",
+            "textToLower": "string",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 18
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_String_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "String"
+        }
       },
-      "description": "The action link group IDs to associate with the feed element. Associate one Primary and up to 10 total action link groups to a feed item. Action link groups are returned in the order specified in this property.An action link group ID is returned from a call to ConnectApi.ActionLinks.​createActionLinkGroupDefinition​(communityId, actionLinkGroup)."
+      "parentName": "​AssociatedActions​CapabilityInput "
     }
   },
   "methods": {},
   "constructors": {},
   "extendsType": "ConnectApi.FeedElement​CapabilityInput",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }

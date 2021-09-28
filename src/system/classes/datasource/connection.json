@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Connection_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "deleterows(datasource.deletecontext)": {
-      "id": "Datasource.connection.deleterows",
+      "id": "Datasource.connection.method.deleterows(datasource.deletecontext)",
       "nodeType": "method",
       "name": "deleteRows",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_deleteRows_-1:0"
       },
+      "parentId": "Datasource.connection",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,83 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<DataSource.DeleteResult> deleteRows(DataSource.DeleteContext deleteContext)",
+      "overrideSignature": "public override List<DataSource.DeleteResult> deleteRows(DataSource.DeleteContext deleteContext)",
       "simplifiedSignature": "deleteRows(DataSource.DeleteContext)",
       "datatype": {
-        "id": "Datasource.connection.deleterows.List<DataSource.DeleteResult>",
+        "id": "Datasource.connection.deleterows.datatype.List<DataSource.DeleteResult>",
         "nodeType": "datatype",
-        "name": "List<DataSource.DeleteResult>"
+        "name": "List<DataSource.DeleteResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Datasource.connection.deleterows",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Datasource.connection.deleterows.datatype.List<DataSource.DeleteResult>.value.DataSource.DeleteResult",
+          "nodeType": "datatype",
+          "name": "DataSource.DeleteResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "DataSource",
+            "textToLower": "datasource",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 22
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_DataSource_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "DataSource.DeleteResult"
+        }
       },
       "description": "Invoked when external object records are deleted via the Salesforce user interface, APIs, or Apex.",
+      "parentName": "Connection",
+      "variables": {},
       "params": {
-        "deleteContext": {
-          "id": "Datasource.connection.deleterows.deletecontext",
-          "type": "var",
+        "deletecontext": {
+          "id": "Datasource.connection.method.deleterows(datasource.deletecontext).varParam.deletecontext",
+          "nodeType": "variable",
           "name": "deleteContext",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,29 +187,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_deleteContext_-1:0"
+            "id": "token.type.identifier_deleteContext_0:73"
           },
-          "signature": "DataSource.DeleteContext deleteContext",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "deleteContext",
+            "textToLower": "deletecontext",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 86
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_deleteContext_0:73"
+          },
+          "parentId": "Datasource.connection.method.deleterows(datasource.deletecontext)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Datasource.connection.deleterows.datasource.deletecontext",
+            "id": "Datasource.connection.deleterows.datatype.DataSource.DeleteContext",
             "nodeType": "datatype",
-            "name": "DataSource.DeleteContext"
-          }
+            "name": "DataSource.DeleteContext",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "DataSource",
+              "textToLower": "datasource",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 48
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_DataSource_0:48"
+            },
+            "parentId": "Datasource.connection.deleterows",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "DataSource.DeleteContext"
+          },
+          "description": "Contains context information about the delete request.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "query(datasource.querycontext)": {
-      "id": "Datasource.connection.query",
+      "id": "Datasource.connection.method.query(datasource.querycontext)",
       "nodeType": "method",
       "name": "query",
       "startToken": {
@@ -173,6 +279,9 @@
         },
         "id": "declaration.entity.name.function_query_-1:0"
       },
+      "parentId": "Datasource.connection",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -180,30 +289,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public DataSource.TableResult query(DataSource.QueryContext queryContext)",
+      "overrideSignature": "public override DataSource.TableResult query(DataSource.QueryContext queryContext)",
       "simplifiedSignature": "query(DataSource.QueryContext)",
       "datatype": {
-        "id": "Datasource.connection.query.DataSource.TableResult",
+        "id": "Datasource.connection.query.datatype.DataSource.TableResult",
         "nodeType": "datatype",
-        "name": "DataSource.TableResult"
+        "name": "DataSource.TableResult",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "DataSource",
+          "textToLower": "datasource",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 17
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_DataSource_0:7"
+        },
+        "parentId": "Datasource.connection.query",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "DataSource.TableResult"
       },
       "description": "Invoked by a SOQL query of an external object. A SOQL query is generated and executed when a user visits an external object’s list view or record detail page in Salesforce. Returns the results of the query.",
+      "parentName": "Connection",
+      "variables": {},
       "params": {
-        "queryContext": {
-          "id": "Datasource.connection.query.querycontext",
-          "type": "var",
+        "querycontext": {
+          "id": "Datasource.connection.method.query(datasource.querycontext).varParam.querycontext",
+          "nodeType": "variable",
           "name": "queryContext",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -212,29 +347,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 72
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_queryContext_-1:0"
+            "id": "token.type.identifier_queryContext_0:60"
           },
-          "signature": "DataSource.QueryContext queryContext",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "queryContext",
+            "textToLower": "querycontext",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 60
+              },
+              "end": {
+                "line": 0,
+                "character": 72
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_queryContext_0:60"
+          },
+          "parentId": "Datasource.connection.method.query(datasource.querycontext)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Datasource.connection.query.datasource.querycontext",
+            "id": "Datasource.connection.query.datatype.DataSource.QueryContext",
             "nodeType": "datatype",
-            "name": "DataSource.QueryContext"
-          }
+            "name": "DataSource.QueryContext",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "DataSource",
+              "textToLower": "datasource",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 36
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_DataSource_0:36"
+            },
+            "parentId": "Datasource.connection.query",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "DataSource.QueryContext"
+          },
+          "description": "Represents the query to run against a data table.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "search(datasource.searchcontext)": {
-      "id": "Datasource.connection.search",
+      "id": "Datasource.connection.method.search(datasource.searchcontext)",
       "nodeType": "method",
       "name": "search",
       "startToken": {
@@ -256,6 +439,9 @@
         },
         "id": "declaration.entity.name.function_search_-1:0"
       },
+      "parentId": "Datasource.connection",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -263,30 +449,83 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<DataSource.TableResult> search(DataSource.SearchContext searchContext)",
+      "overrideSignature": "public override List<DataSource.TableResult> search(DataSource.SearchContext searchContext)",
       "simplifiedSignature": "search(DataSource.SearchContext)",
       "datatype": {
-        "id": "Datasource.connection.search.List<DataSource.TableResult>",
+        "id": "Datasource.connection.search.datatype.List<DataSource.TableResult>",
         "nodeType": "datatype",
-        "name": "List<DataSource.TableResult>"
+        "name": "List<DataSource.TableResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Datasource.connection.search",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Datasource.connection.search.datatype.List<DataSource.TableResult>.value.DataSource.TableResult",
+          "nodeType": "datatype",
+          "name": "DataSource.TableResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "DataSource",
+            "textToLower": "datasource",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 22
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_DataSource_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "DataSource.TableResult"
+        }
       },
       "description": "Invoked by a SOSL query of an external object or when a user performs a Salesforce global search that also searches external objects. Returns the results of the query.",
+      "parentName": "Connection",
+      "variables": {},
       "params": {
-        "searchContext": {
-          "id": "Datasource.connection.search.searchcontext",
-          "type": "var",
+        "searchcontext": {
+          "id": "Datasource.connection.method.search(datasource.searchcontext).varParam.searchcontext",
+          "nodeType": "variable",
           "name": "searchContext",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -295,29 +534,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 68
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_searchContext_-1:0"
+            "id": "token.type.identifier_searchContext_0:68"
           },
-          "signature": "DataSource.SearchContext searchContext",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "searchContext",
+            "textToLower": "searchcontext",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 68
+              },
+              "end": {
+                "line": 0,
+                "character": 81
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_searchContext_0:68"
+          },
+          "parentId": "Datasource.connection.method.search(datasource.searchcontext)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Datasource.connection.search.datasource.searchcontext",
+            "id": "Datasource.connection.search.datatype.DataSource.SearchContext",
             "nodeType": "datatype",
-            "name": "DataSource.SearchContext"
-          }
+            "name": "DataSource.SearchContext",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "DataSource",
+              "textToLower": "datasource",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 43
+                },
+                "end": {
+                  "line": 0,
+                  "character": 53
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_DataSource_0:43"
+            },
+            "parentId": "Datasource.connection.search",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "DataSource.SearchContext"
+          },
+          "description": "Represents the query to run against an external data table.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "sync()": {
-      "id": "Datasource.connection.sync",
+      "id": "Datasource.connection.method.sync()",
       "nodeType": "method",
       "name": "sync",
       "startToken": {
@@ -339,6 +626,9 @@
         },
         "id": "declaration.entity.name.function_sync_-1:0"
       },
+      "parentId": "Datasource.connection",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -346,30 +636,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<DataSource.Table> sync()",
+      "overrideSignature": "public override List<DataSource.Table> sync()",
       "simplifiedSignature": "sync()",
       "datatype": {
-        "id": "Datasource.connection.sync.List<DataSource.Table>",
+        "id": "Datasource.connection.sync.datatype.List<DataSource.Table>",
         "nodeType": "datatype",
-        "name": "List<DataSource.Table>"
+        "name": "List<DataSource.Table>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Datasource.connection.sync",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Datasource.connection.sync.datatype.List<DataSource.Table>.value.DataSource.Table",
+          "nodeType": "datatype",
+          "name": "DataSource.Table",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "DataSource",
+            "textToLower": "datasource",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 22
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_DataSource_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "DataSource.Table"
+        }
       },
       "description": "Invoked when an administrator clicks Validate and Sync on the external data source detail page. Returns a list of tables that describe the external system’s schema.",
-      "params": {}
+      "parentName": "Connection",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "upsertrows(datasource.upsertcontext)": {
-      "id": "Datasource.connection.upsertrows",
+      "id": "Datasource.connection.method.upsertrows(datasource.upsertcontext)",
       "nodeType": "method",
       "name": "upsertRows",
       "startToken": {
@@ -391,6 +736,9 @@
         },
         "id": "declaration.entity.name.function_upsertRows_-1:0"
       },
+      "parentId": "Datasource.connection",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -398,30 +746,83 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<DataSource.UpsertResult> upsertRows(DataSource.UpsertContext upsertContext)",
+      "overrideSignature": "public override List<DataSource.UpsertResult> upsertRows(DataSource.UpsertContext upsertContext)",
       "simplifiedSignature": "upsertRows(DataSource.UpsertContext)",
       "datatype": {
-        "id": "Datasource.connection.upsertrows.List<DataSource.UpsertResult>",
+        "id": "Datasource.connection.upsertrows.datatype.List<DataSource.UpsertResult>",
         "nodeType": "datatype",
-        "name": "List<DataSource.UpsertResult>"
+        "name": "List<DataSource.UpsertResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Datasource.connection.upsertrows",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Datasource.connection.upsertrows.datatype.List<DataSource.UpsertResult>.value.DataSource.UpsertResult",
+          "nodeType": "datatype",
+          "name": "DataSource.UpsertResult",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "DataSource",
+            "textToLower": "datasource",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 22
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_DataSource_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "DataSource.UpsertResult"
+        }
       },
       "description": "Invoked when external object records are created or updated via the Salesforce user interface, APIs, or Apex.",
+      "parentName": "Connection",
+      "variables": {},
       "params": {
-        "upsertContext": {
-          "id": "Datasource.connection.upsertrows.upsertcontext",
-          "type": "var",
+        "upsertcontext": {
+          "id": "Datasource.connection.method.upsertrows(datasource.upsertcontext).varParam.upsertcontext",
+          "nodeType": "variable",
           "name": "upsertContext",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -430,30 +831,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 86
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_upsertContext_-1:0"
+            "id": "token.type.identifier_upsertContext_0:73"
           },
-          "signature": "DataSource.UpsertContext upsertContext",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "upsertContext",
+            "textToLower": "upsertcontext",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 86
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_upsertContext_0:73"
+          },
+          "parentId": "Datasource.connection.method.upsertrows(datasource.upsertcontext)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Datasource.connection.upsertrows.datasource.upsertcontext",
+            "id": "Datasource.connection.upsertrows.datatype.DataSource.UpsertContext",
             "nodeType": "datatype",
-            "name": "DataSource.UpsertContext"
-          }
+            "name": "DataSource.UpsertContext",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "DataSource",
+              "textToLower": "datasource",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 48
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_DataSource_0:48"
+            },
+            "parentId": "Datasource.connection.upsertrows",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "DataSource.UpsertContext"
+          },
+          "description": "Contains context information about the upsert request.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 5,
+  "queries": []
 }

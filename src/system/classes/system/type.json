@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Type_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "equals(object)": {
-      "id": "System.type.equals",
+      "id": "System.type.method.equals(object)",
       "nodeType": "method",
       "name": "equals",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_equals_-1:0"
       },
+      "parentId": "System.type",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean equals(Object typeToCompare)",
+      "overrideSignature": "public override Boolean equals(Object typeToCompare)",
       "simplifiedSignature": "equals(Object)",
       "datatype": {
-        "id": "System.type.equals.Boolean",
+        "id": "System.type.equals.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.type.equals",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if the specified type is equal to the current type; otherwise, returns false.",
+      "parentName": "Type",
+      "variables": {},
       "params": {
-        "typeToCompare": {
-          "id": "System.type.equals.typetocompare",
-          "type": "var",
+        "typetocompare": {
+          "id": "System.type.method.equals(object).varParam.typetocompare",
+          "nodeType": "variable",
           "name": "typeToCompare",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,29 +160,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 29
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_typeToCompare_-1:0"
+            "id": "token.type.identifier_typeToCompare_0:29"
           },
-          "signature": "Object typeToCompare",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "typeToCompare",
+            "textToLower": "typetocompare",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 29
+              },
+              "end": {
+                "line": 0,
+                "character": 42
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_typeToCompare_0:29"
+          },
+          "parentId": "System.type.method.equals(object)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.type.equals.object",
+            "id": "System.type.equals.datatype.Object",
             "nodeType": "datatype",
-            "name": "Object"
-          }
+            "name": "Object",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "Object",
+              "textToLower": "object",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 22
+                },
+                "end": {
+                  "line": 0,
+                  "character": 28
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Object_0:22"
+            },
+            "parentId": "System.type.equals",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Object"
+          },
+          "description": "The type to compare with the current type.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "forname(string)": {
-      "id": "System.type.forname",
+      "id": "System.type.method.forname(string)",
       "nodeType": "method",
       "name": "forName",
       "startToken": {
@@ -173,6 +252,9 @@
         },
         "id": "declaration.entity.name.function_forName_-1:0"
       },
+      "parentId": "System.type",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -180,17 +262,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -199,30 +281,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static System.Type forName(String fullyQualifiedName)",
+      "overrideSignature": "public static override System.Type forName(String fullyQualifiedName)",
       "simplifiedSignature": "forName(String)",
       "datatype": {
-        "id": "System.type.forname.System.Type",
+        "id": "System.type.forname.datatype.System.Type",
         "nodeType": "datatype",
-        "name": "System.Type"
+        "name": "System.Type",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:14"
+        },
+        "parentId": "System.type.forname",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.Type"
       },
       "description": "Returns the type that corresponds to the specified fully qualified class name.",
+      "parentName": "Type",
+      "variables": {},
       "params": {
-        "fullyQualifiedName": {
-          "id": "System.type.forname.fullyqualifiedname",
-          "type": "var",
+        "fullyqualifiedname": {
+          "id": "System.type.method.forname(string).varParam.fullyqualifiedname",
+          "nodeType": "variable",
           "name": "fullyQualifiedName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -231,29 +339,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_fullyQualifiedName_-1:0"
+            "id": "token.type.identifier_fullyQualifiedName_0:41"
           },
-          "signature": "String fullyQualifiedName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fullyQualifiedName",
+            "textToLower": "fullyqualifiedname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 41
+              },
+              "end": {
+                "line": 0,
+                "character": 59
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fullyQualifiedName_0:41"
+          },
+          "parentId": "System.type.method.forname(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.type.forname.string",
+            "id": "System.type.forname.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:34"
+            },
+            "parentId": "System.type.forname",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The fully qualified name of the class to get the type of. The fully qualified class name contains the namespace name, for example, MyNamespace.ClassName.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "forname(string,string)": {
-      "id": "System.type.forname",
+      "id": "System.type.method.forname(string,string)",
       "nodeType": "method",
       "name": "forName",
       "startToken": {
@@ -275,6 +431,9 @@
         },
         "id": "declaration.entity.name.function_forName_-1:0"
       },
+      "parentId": "System.type",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -282,17 +441,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -301,30 +460,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static System.Type forName(String namespace, String name)",
+      "overrideSignature": "public static override System.Type forName(String namespace, String name)",
       "simplifiedSignature": "forName(String,String)",
       "datatype": {
-        "id": "System.type.forname.System.Type",
+        "id": "System.type.forname.datatype.System.Type",
         "nodeType": "datatype",
-        "name": "System.Type"
+        "name": "System.Type",
+        "startToken": {
+          "type": "datatype.support.class",
+          "text": "System",
+          "textToLower": "system",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 20
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_System_0:14"
+        },
+        "parentId": "System.type.forname",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "System.Type"
       },
       "description": "Returns the type that corresponds to the specified namespace and class name.",
+      "parentName": "Type",
+      "variables": {},
       "params": {
         "namespace": {
-          "id": "System.type.forname.namespace",
-          "type": "var",
+          "id": "System.type.method.forname(string,string).varParam.namespace",
+          "nodeType": "variable",
           "name": "namespace",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -333,28 +518,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 41
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_namespace_-1:0"
+            "id": "token.type.identifier_namespace_0:41"
           },
-          "signature": "String namespace",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "namespace",
+            "textToLower": "namespace",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 41
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_namespace_0:41"
+          },
+          "parentId": "System.type.method.forname(string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.type.forname.string",
+            "id": "System.type.forname.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 34
+                },
+                "end": {
+                  "line": 0,
+                  "character": 40
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:34"
+            },
+            "parentId": "System.type.forname",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "name": {
-          "id": "System.type.forname.name",
-          "type": "var",
+          "id": "System.type.method.forname(string,string).varParam.name",
+          "nodeType": "variable",
           "name": "name",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -363,29 +593,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 59
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 63
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_name_-1:0"
+            "id": "token.type.identifier_name_0:59"
           },
-          "signature": "String name",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "name",
+            "textToLower": "name",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 59
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_name_0:59"
+          },
+          "parentId": "System.type.method.forname(string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "System.type.forname.string",
+            "id": "System.type.forname.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 52
+                },
+                "end": {
+                  "line": 0,
+                  "character": 58
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:52"
+            },
+            "parentId": "System.type.forname",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "The namespace of the class. If the class doesn't have a namespace, set the namespace argument to null or an empty string. The name of the class.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getname()": {
-      "id": "System.type.getname",
+      "id": "System.type.method.getname()",
       "nodeType": "method",
       "name": "getName",
       "startToken": {
@@ -407,6 +685,9 @@
         },
         "id": "declaration.entity.name.function_getName_-1:0"
       },
+      "parentId": "System.type",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -414,30 +695,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String getName()",
+      "overrideSignature": "public override String getName()",
       "simplifiedSignature": "getName()",
       "datatype": {
-        "id": "System.type.getname.String",
+        "id": "System.type.getname.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.type.getname",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns the name of the current type.",
-      "params": {}
+      "parentName": "Type",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "hashcode()": {
-      "id": "System.type.hashcode",
+      "id": "System.type.method.hashcode()",
       "nodeType": "method",
       "name": "hashCode",
       "startToken": {
@@ -459,6 +768,9 @@
         },
         "id": "declaration.entity.name.function_hashCode_-1:0"
       },
+      "parentId": "System.type",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -466,30 +778,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Integer hashCode()",
+      "overrideSignature": "public override Integer hashCode()",
       "simplifiedSignature": "hashCode()",
       "datatype": {
-        "id": "System.type.hashcode.Integer",
+        "id": "System.type.hashcode.datatype.Integer",
         "nodeType": "datatype",
-        "name": "Integer"
+        "name": "Integer",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Integer",
+          "textToLower": "integer",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Integer_0:7"
+        },
+        "parentId": "System.type.hashcode",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Integer"
       },
       "description": "Returns a hash code value for the current type.",
-      "params": {}
+      "parentName": "Type",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "isassignablefrom(type)": {
-      "id": "System.type.isassignablefrom",
+      "id": "System.type.method.isassignablefrom(type)",
       "nodeType": "method",
       "name": "isAssignableFrom",
       "startToken": {
@@ -511,6 +851,9 @@
         },
         "id": "declaration.entity.name.function_isAssignableFrom_-1:0"
       },
+      "parentId": "System.type",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -518,30 +861,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean isAssignableFrom(Type sourceType)",
+      "overrideSignature": "public override Boolean isAssignableFrom(Type sourceType)",
       "simplifiedSignature": "isAssignableFrom(Type)",
       "datatype": {
-        "id": "System.type.isassignablefrom.Boolean",
+        "id": "System.type.isassignablefrom.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "System.type.isassignablefrom",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Returns true if an object reference of the specified type can be assigned from the child type; otherwise, returns false.",
+      "parentName": "Type",
+      "variables": {},
       "params": {
-        "sourceType": {
-          "id": "System.type.isassignablefrom.sourcetype",
-          "type": "var",
+        "sourcetype": {
+          "id": "System.type.method.isassignablefrom(type).varParam.sourcetype",
+          "nodeType": "variable",
           "name": "sourceType",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -550,29 +919,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 37
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_sourceType_-1:0"
+            "id": "token.type.identifier_sourceType_0:37"
           },
-          "signature": "Type sourceType",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sourceType",
+            "textToLower": "sourcetype",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 37
+              },
+              "end": {
+                "line": 0,
+                "character": 47
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sourceType_0:37"
+          },
+          "parentId": "System.type.method.isassignablefrom(type)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "System.type.isassignablefrom.type",
+            "id": "System.type.isassignablefrom.datatype.Type",
             "nodeType": "datatype",
-            "name": "Type"
-          }
+            "name": "Type",
+            "startToken": {
+              "type": "datatype.support.class",
+              "text": "Type",
+              "textToLower": "type",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 32
+                },
+                "end": {
+                  "line": 0,
+                  "character": 36
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Type_0:32"
+            },
+            "parentId": "System.type.isassignablefrom",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Type"
+          },
+          "description": "The type of the object with which you are checking compatibility.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "newinstance()": {
-      "id": "System.type.newinstance",
+      "id": "System.type.method.newinstance()",
       "nodeType": "method",
       "name": "newInstance",
       "startToken": {
@@ -594,6 +1011,9 @@
         },
         "id": "declaration.entity.name.function_newInstance_-1:0"
       },
+      "parentId": "System.type",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -601,30 +1021,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Object newInstance()",
+      "overrideSignature": "public override Object newInstance()",
       "simplifiedSignature": "newInstance()",
       "datatype": {
-        "id": "System.type.newinstance.Object",
+        "id": "System.type.newinstance.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:7"
+        },
+        "parentId": "System.type.newinstance",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Creates an instance of the current type and returns this new instance.",
-      "params": {}
+      "parentName": "Type",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "tostring()": {
-      "id": "System.type.tostring",
+      "id": "System.type.method.tostring()",
       "nodeType": "method",
       "name": "toString",
       "startToken": {
@@ -646,6 +1094,9 @@
         },
         "id": "declaration.entity.name.function_toString_-1:0"
       },
+      "parentId": "System.type",
+      "order": 8,
+      "memberOrder": 8,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -653,31 +1104,61 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public String toString()",
+      "overrideSignature": "public override String toString()",
       "simplifiedSignature": "toString()",
       "datatype": {
-        "id": "System.type.tostring.String",
+        "id": "System.type.tostring.datatype.String",
         "nodeType": "datatype",
-        "name": "String"
+        "name": "String",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "String",
+          "textToLower": "string",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_String_0:7"
+        },
+        "parentId": "System.type.tostring",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "String"
       },
       "description": "Returns a string representation of the current type, which is the type name.",
-      "params": {}
+      "parentName": "Type",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 8,
+  "queries": []
 }

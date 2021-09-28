@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_Datacloud_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "getcompaniesfromorder(string,string,string)": {
-      "id": "ConnectApi.datacloud.getcompaniesfromorder",
+      "id": "ConnectApi.datacloud.method.getcompaniesfromorder(string,string,string)",
       "nodeType": "method",
       "name": "getCompaniesFromOrder",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_getCompaniesFromOrder_-1:0"
       },
+      "parentId": "ConnectApi.datacloud",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,30 +121,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.DatacloudCompanies getCompaniesFromOrder(String orderId, String pageSize, String page)",
+      "overrideSignature": "public static override ConnectApi.DatacloudCompanies getCompaniesFromOrder(String orderId, String pageSize, String page)",
       "simplifiedSignature": "getCompaniesFromOrder(String,String,String)",
       "datatype": {
-        "id": "ConnectApi.datacloud.getcompaniesfromorder.ConnectApi.DatacloudCompanies",
+        "id": "ConnectApi.datacloud.getcompaniesfromorder.datatype.ConnectApi.DatacloudCompanies",
         "nodeType": "datatype",
-        "name": "ConnectApi.DatacloudCompanies"
+        "name": "ConnectApi.DatacloudCompanies",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.datacloud.getcompaniesfromorder",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.DatacloudCompanies"
       },
       "description": "Get a list of purchased company records for an order.",
+      "parentName": "Datacloud",
+      "variables": {},
       "params": {
-        "orderId": {
-          "id": "ConnectApi.datacloud.getcompaniesfromorder.orderid",
-          "type": "var",
+        "orderid": {
+          "id": "ConnectApi.datacloud.method.getcompaniesfromorder(string,string,string).varParam.orderid",
+          "nodeType": "variable",
           "name": "orderId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -148,28 +179,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 73
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 80
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_orderId_-1:0"
+            "id": "token.type.identifier_orderId_0:73"
           },
-          "signature": "String orderId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "orderId",
+            "textToLower": "orderid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 73
+              },
+              "end": {
+                "line": 0,
+                "character": 80
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_orderId_0:73"
+          },
+          "parentId": "ConnectApi.datacloud.method.getcompaniesfromorder(string,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.datacloud.getcompaniesfromorder.string",
+            "id": "ConnectApi.datacloud.getcompaniesfromorder.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 66
+                },
+                "end": {
+                  "line": 0,
+                  "character": 72
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:66"
+            },
+            "parentId": "ConnectApi.datacloud.getcompaniesfromorder",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "pageSize": {
-          "id": "ConnectApi.datacloud.getcompaniesfromorder.pagesize",
-          "type": "var",
+        "pagesize": {
+          "id": "ConnectApi.datacloud.method.getcompaniesfromorder(string,string,string).varParam.pagesize",
+          "nodeType": "variable",
           "name": "pageSize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -178,28 +254,74 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 89
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 97
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageSize_-1:0"
+            "id": "token.type.identifier_pageSize_0:89"
           },
-          "signature": "String pageSize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 89
+              },
+              "end": {
+                "line": 0,
+                "character": 97
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:89"
+          },
+          "parentId": "ConnectApi.datacloud.method.getcompaniesfromorder(string,string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.datacloud.getcompaniesfromorder.string",
+            "id": "ConnectApi.datacloud.getcompaniesfromorder.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 82
+                },
+                "end": {
+                  "line": 0,
+                  "character": 88
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:82"
+            },
+            "parentId": "ConnectApi.datacloud.getcompaniesfromorder",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of an order. Number of the page that you want returned. Number of companies to show on a page. The default pageSize is 25.",
+          "scope": null
         },
         "page": {
-          "id": "ConnectApi.datacloud.getcompaniesfromorder.page",
-          "type": "var",
+          "id": "ConnectApi.datacloud.method.getcompaniesfromorder(string,string,string).varParam.page",
+          "nodeType": "variable",
           "name": "page",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -208,29 +330,76 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 106
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 110
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_page_-1:0"
+            "id": "token.type.identifier_page_0:106"
           },
-          "signature": "String page",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "page",
+            "textToLower": "page",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 106
+              },
+              "end": {
+                "line": 0,
+                "character": 110
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_page_0:106"
+          },
+          "parentId": "ConnectApi.datacloud.method.getcompaniesfromorder(string,string,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.datacloud.getcompaniesfromorder.string",
+            "id": "ConnectApi.datacloud.getcompaniesfromorder.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 99
+                },
+                "end": {
+                  "line": 0,
+                  "character": 105
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:99"
+            },
+            "parentId": "ConnectApi.datacloud.getcompaniesfromorder",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getcompany(string)": {
-      "id": "ConnectApi.datacloud.getcompany",
+      "id": "ConnectApi.datacloud.method.getcompany(string)",
       "nodeType": "method",
       "name": "getCompany",
       "startToken": {
@@ -252,6 +421,9 @@
         },
         "id": "declaration.entity.name.function_getCompany_-1:0"
       },
+      "parentId": "ConnectApi.datacloud",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -259,17 +431,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -278,30 +450,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.DatacloudCompany getCompany(String companyId)",
+      "overrideSignature": "public static override ConnectApi.DatacloudCompany getCompany(String companyId)",
       "simplifiedSignature": "getCompany(String)",
       "datatype": {
-        "id": "ConnectApi.datacloud.getcompany.ConnectApi.DatacloudCompany",
+        "id": "ConnectApi.datacloud.getcompany.datatype.ConnectApi.DatacloudCompany",
         "nodeType": "datatype",
-        "name": "ConnectApi.DatacloudCompany"
+        "name": "ConnectApi.DatacloudCompany",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.datacloud.getcompany",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.DatacloudCompany"
       },
       "description": "Get a company record.",
+      "parentName": "Datacloud",
+      "variables": {},
       "params": {
-        "companyId": {
-          "id": "ConnectApi.datacloud.getcompany.companyid",
-          "type": "var",
+        "companyid": {
+          "id": "ConnectApi.datacloud.method.getcompany(string).varParam.companyid",
+          "nodeType": "variable",
           "name": "companyId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -310,29 +508,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_companyId_-1:0"
+            "id": "token.type.identifier_companyId_0:60"
           },
-          "signature": "String companyId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "companyId",
+            "textToLower": "companyid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 60
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_companyId_0:60"
+          },
+          "parentId": "ConnectApi.datacloud.method.getcompany(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.datacloud.getcompany.string",
+            "id": "ConnectApi.datacloud.getcompany.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 53
+                },
+                "end": {
+                  "line": 0,
+                  "character": 59
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:53"
+            },
+            "parentId": "ConnectApi.datacloud.getcompany",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of a company in the Data.com database.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getcontact(string)": {
-      "id": "ConnectApi.datacloud.getcontact",
+      "id": "ConnectApi.datacloud.method.getcontact(string)",
       "nodeType": "method",
       "name": "getContact",
       "startToken": {
@@ -354,6 +600,9 @@
         },
         "id": "declaration.entity.name.function_getContact_-1:0"
       },
+      "parentId": "ConnectApi.datacloud",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -361,17 +610,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -380,30 +629,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.DatacloudContact getContact(String contactId)",
+      "overrideSignature": "public static override ConnectApi.DatacloudContact getContact(String contactId)",
       "simplifiedSignature": "getContact(String)",
       "datatype": {
-        "id": "ConnectApi.datacloud.getcontact.ConnectApi.DatacloudContact",
+        "id": "ConnectApi.datacloud.getcontact.datatype.ConnectApi.DatacloudContact",
         "nodeType": "datatype",
-        "name": "ConnectApi.DatacloudContact"
+        "name": "ConnectApi.DatacloudContact",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.datacloud.getcontact",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.DatacloudContact"
       },
       "description": "Get a contact.",
+      "parentName": "Datacloud",
+      "variables": {},
       "params": {
-        "contactId": {
-          "id": "ConnectApi.datacloud.getcontact.contactid",
-          "type": "var",
+        "contactid": {
+          "id": "ConnectApi.datacloud.method.getcontact(string).varParam.contactid",
+          "nodeType": "variable",
           "name": "contactId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -412,29 +687,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 60
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 69
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_contactId_-1:0"
+            "id": "token.type.identifier_contactId_0:60"
           },
-          "signature": "String contactId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "contactId",
+            "textToLower": "contactid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 60
+              },
+              "end": {
+                "line": 0,
+                "character": 69
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_contactId_0:60"
+          },
+          "parentId": "ConnectApi.datacloud.method.getcontact(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.datacloud.getcontact.string",
+            "id": "ConnectApi.datacloud.getcontact.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 53
+                },
+                "end": {
+                  "line": 0,
+                  "character": 59
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:53"
+            },
+            "parentId": "ConnectApi.datacloud.getcontact",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of a contact in the Data.com database.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getcontactsfromorder(string,string,string)": {
-      "id": "ConnectApi.datacloud.getcontactsfromorder",
+      "id": "ConnectApi.datacloud.method.getcontactsfromorder(string,string,string)",
       "nodeType": "method",
       "name": "getContactsFromOrder",
       "startToken": {
@@ -456,6 +779,9 @@
         },
         "id": "declaration.entity.name.function_getContactsFromOrder_-1:0"
       },
+      "parentId": "ConnectApi.datacloud",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -463,17 +789,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -482,30 +808,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.DatacloudContacts getContactsFromOrder(String orderId, String page, String pageSize)",
+      "overrideSignature": "public static override ConnectApi.DatacloudContacts getContactsFromOrder(String orderId, String page, String pageSize)",
       "simplifiedSignature": "getContactsFromOrder(String,String,String)",
       "datatype": {
-        "id": "ConnectApi.datacloud.getcontactsfromorder.ConnectApi.DatacloudContacts",
+        "id": "ConnectApi.datacloud.getcontactsfromorder.datatype.ConnectApi.DatacloudContacts",
         "nodeType": "datatype",
-        "name": "ConnectApi.DatacloudContacts"
+        "name": "ConnectApi.DatacloudContacts",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.datacloud.getcontactsfromorder",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.DatacloudContacts"
       },
       "description": "Get a list of purchased contacts for an order.",
+      "parentName": "Datacloud",
+      "variables": {},
       "params": {
-        "orderId": {
-          "id": "ConnectApi.datacloud.getcontactsfromorder.orderid",
-          "type": "var",
+        "orderid": {
+          "id": "ConnectApi.datacloud.method.getcontactsfromorder(string,string,string).varParam.orderid",
+          "nodeType": "variable",
           "name": "orderId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -514,28 +866,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 71
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 78
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_orderId_-1:0"
+            "id": "token.type.identifier_orderId_0:71"
           },
-          "signature": "String orderId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "orderId",
+            "textToLower": "orderid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 71
+              },
+              "end": {
+                "line": 0,
+                "character": 78
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_orderId_0:71"
+          },
+          "parentId": "ConnectApi.datacloud.method.getcontactsfromorder(string,string,string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.datacloud.getcontactsfromorder.string",
+            "id": "ConnectApi.datacloud.getcontactsfromorder.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 64
+                },
+                "end": {
+                  "line": 0,
+                  "character": 70
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:64"
+            },
+            "parentId": "ConnectApi.datacloud.getcontactsfromorder",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
         "page": {
-          "id": "ConnectApi.datacloud.getcontactsfromorder.page",
-          "type": "var",
+          "id": "ConnectApi.datacloud.method.getcontactsfromorder(string,string,string).varParam.page",
+          "nodeType": "variable",
           "name": "page",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -544,28 +941,73 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 87
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 91
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_page_-1:0"
+            "id": "token.type.identifier_page_0:87"
           },
-          "signature": "String page",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "page",
+            "textToLower": "page",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 87
+              },
+              "end": {
+                "line": 0,
+                "character": 91
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_page_0:87"
+          },
+          "parentId": "ConnectApi.datacloud.method.getcontactsfromorder(string,string,string)",
+          "order": 2,
+          "memberOrder": 2,
           "datatype": {
-            "id": "ConnectApi.datacloud.getcontactsfromorder.string",
+            "id": "ConnectApi.datacloud.getcontactsfromorder.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 80
+                },
+                "end": {
+                  "line": 0,
+                  "character": 86
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:80"
+            },
+            "parentId": "ConnectApi.datacloud.getcontactsfromorder",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "scope": null
         },
-        "pageSize": {
-          "id": "ConnectApi.datacloud.getcontactsfromorder.pagesize",
-          "type": "var",
+        "pagesize": {
+          "id": "ConnectApi.datacloud.method.getcontactsfromorder(string,string,string).varParam.pagesize",
+          "nodeType": "variable",
           "name": "pageSize",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -574,29 +1016,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 100
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 108
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_pageSize_-1:0"
+            "id": "token.type.identifier_pageSize_0:100"
           },
-          "signature": "String pageSize",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "pageSize",
+            "textToLower": "pagesize",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 100
+              },
+              "end": {
+                "line": 0,
+                "character": 108
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_pageSize_0:100"
+          },
+          "parentId": "ConnectApi.datacloud.method.getcontactsfromorder(string,string,string)",
+          "order": 3,
+          "memberOrder": 3,
           "datatype": {
-            "id": "ConnectApi.datacloud.getcontactsfromorder.string",
+            "id": "ConnectApi.datacloud.getcontactsfromorder.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 93
+                },
+                "end": {
+                  "line": 0,
+                  "character": 99
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:93"
+            },
+            "parentId": "ConnectApi.datacloud.getcontactsfromorder",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of an order. Number of the page that you want returned. Number of contacts to show on a page. The default pageSize is 25.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getorder(string)": {
-      "id": "ConnectApi.datacloud.getorder",
+      "id": "ConnectApi.datacloud.method.getorder(string)",
       "nodeType": "method",
       "name": "getOrder",
       "startToken": {
@@ -618,6 +1108,9 @@
         },
         "id": "declaration.entity.name.function_getOrder_-1:0"
       },
+      "parentId": "ConnectApi.datacloud",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -625,17 +1118,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -644,30 +1137,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.DatacloudOrder getOrder(String orderId)",
+      "overrideSignature": "public static override ConnectApi.DatacloudOrder getOrder(String orderId)",
       "simplifiedSignature": "getOrder(String)",
       "datatype": {
-        "id": "ConnectApi.datacloud.getorder.ConnectApi.DatacloudOrder",
+        "id": "ConnectApi.datacloud.getorder.datatype.ConnectApi.DatacloudOrder",
         "nodeType": "datatype",
-        "name": "ConnectApi.DatacloudOrder"
+        "name": "ConnectApi.DatacloudOrder",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.datacloud.getorder",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.DatacloudOrder"
       },
       "description": "Get an order.",
+      "parentName": "Datacloud",
+      "variables": {},
       "params": {
-        "orderId": {
-          "id": "ConnectApi.datacloud.getorder.orderid",
-          "type": "var",
+        "orderid": {
+          "id": "ConnectApi.datacloud.method.getorder(string).varParam.orderid",
+          "nodeType": "variable",
           "name": "orderId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -676,29 +1195,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 56
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 63
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_orderId_-1:0"
+            "id": "token.type.identifier_orderId_0:56"
           },
-          "signature": "String orderId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "orderId",
+            "textToLower": "orderid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 56
+              },
+              "end": {
+                "line": 0,
+                "character": 63
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_orderId_0:56"
+          },
+          "parentId": "ConnectApi.datacloud.method.getorder(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.datacloud.getorder.string",
+            "id": "ConnectApi.datacloud.getorder.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 49
+                },
+                "end": {
+                  "line": 0,
+                  "character": 55
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:49"
+            },
+            "parentId": "ConnectApi.datacloud.getorder",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of an order.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "getusage(string)": {
-      "id": "ConnectApi.datacloud.getusage",
+      "id": "ConnectApi.datacloud.method.getusage(string)",
       "nodeType": "method",
       "name": "getUsage",
       "startToken": {
@@ -720,6 +1287,9 @@
         },
         "id": "declaration.entity.name.function_getUsage_-1:0"
       },
+      "parentId": "ConnectApi.datacloud",
+      "order": 6,
+      "memberOrder": 6,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -727,17 +1297,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -746,30 +1316,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.DatacloudPurchaseUsage getUsage(String userId)",
+      "overrideSignature": "public static override ConnectApi.DatacloudPurchaseUsage getUsage(String userId)",
       "simplifiedSignature": "getUsage(String)",
       "datatype": {
-        "id": "ConnectApi.datacloud.getusage.ConnectApi.DatacloudPurchaseUsage",
+        "id": "ConnectApi.datacloud.getusage.datatype.ConnectApi.DatacloudPurchaseUsage",
         "nodeType": "datatype",
-        "name": "ConnectApi.DatacloudPurchaseUsage"
+        "name": "ConnectApi.DatacloudPurchaseUsage",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.datacloud.getusage",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.DatacloudPurchaseUsage"
       },
       "description": "Get purchase usage information for a user.",
+      "parentName": "Datacloud",
+      "variables": {},
       "params": {
-        "userId": {
-          "id": "ConnectApi.datacloud.getusage.userid",
-          "type": "var",
+        "userid": {
+          "id": "ConnectApi.datacloud.method.getusage(string).varParam.userid",
+          "nodeType": "variable",
           "name": "userId",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -778,29 +1374,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 64
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 70
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_userId_-1:0"
+            "id": "token.type.identifier_userId_0:64"
           },
-          "signature": "String userId",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "userId",
+            "textToLower": "userid",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 64
+              },
+              "end": {
+                "line": 0,
+                "character": 70
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_userId_0:64"
+          },
+          "parentId": "ConnectApi.datacloud.method.getusage(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.datacloud.getusage.string",
+            "id": "ConnectApi.datacloud.getusage.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 57
+                },
+                "end": {
+                  "line": 0,
+                  "character": 63
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:57"
+            },
+            "parentId": "ConnectApi.datacloud.getusage",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "ID of a user.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "postorder(connectapi.datacloudorderinput)": {
-      "id": "ConnectApi.datacloud.postorder",
+      "id": "ConnectApi.datacloud.method.postorder(connectapi.datacloudorderinput)",
       "nodeType": "method",
       "name": "postOrder",
       "startToken": {
@@ -822,6 +1466,9 @@
         },
         "id": "declaration.entity.name.function_postOrder_-1:0"
       },
+      "parentId": "ConnectApi.datacloud",
+      "order": 7,
+      "memberOrder": 7,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -829,17 +1476,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -848,30 +1495,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
       "signature": "public static ConnectApi.DatacloudOrder postOrder(ConnectApi.DatacloudOrderInput orderInput)",
+      "overrideSignature": "public static override ConnectApi.DatacloudOrder postOrder(ConnectApi.DatacloudOrderInput orderInput)",
       "simplifiedSignature": "postOrder(ConnectApi.DatacloudOrderInput)",
       "datatype": {
-        "id": "ConnectApi.datacloud.postorder.ConnectApi.DatacloudOrder",
+        "id": "ConnectApi.datacloud.postorder.datatype.ConnectApi.DatacloudOrder",
         "nodeType": "datatype",
-        "name": "ConnectApi.DatacloudOrder"
+        "name": "ConnectApi.DatacloudOrder",
+        "startToken": {
+          "type": "datatype.support.namespace",
+          "text": "ConnectApi",
+          "textToLower": "connectapi",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 24
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_ConnectApi_0:14"
+        },
+        "parentId": "ConnectApi.datacloud.postorder",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "ConnectApi.DatacloudOrder"
       },
       "description": "Purchase records that are listed in an input file.",
+      "parentName": "Datacloud",
+      "variables": {},
       "params": {
-        "orderInput": {
-          "id": "ConnectApi.datacloud.postorder.orderinput",
-          "type": "var",
+        "orderinput": {
+          "id": "ConnectApi.datacloud.method.postorder(connectapi.datacloudorderinput).varParam.orderinput",
+          "nodeType": "variable",
           "name": "orderInput",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -880,30 +1553,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 81
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 91
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_orderInput_-1:0"
+            "id": "token.type.identifier_orderInput_0:81"
           },
-          "signature": "ConnectApi.DatacloudOrderInput orderInput",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "orderInput",
+            "textToLower": "orderinput",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 81
+              },
+              "end": {
+                "line": 0,
+                "character": 91
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_orderInput_0:81"
+          },
+          "parentId": "ConnectApi.datacloud.method.postorder(connectapi.datacloudorderinput)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "ConnectApi.datacloud.postorder.connectapi.datacloudorderinput",
+            "id": "ConnectApi.datacloud.postorder.datatype.ConnectApi.DatacloudOrderInput",
             "nodeType": "datatype",
-            "name": "ConnectApi.DatacloudOrderInput"
-          }
+            "name": "ConnectApi.DatacloudOrderInput",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "ConnectApi",
+              "textToLower": "connectapi",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 50
+                },
+                "end": {
+                  "line": 0,
+                  "character": 60
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_ConnectApi_0:50"
+            },
+            "parentId": "ConnectApi.datacloud.postorder",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "ConnectApi.DatacloudOrderInput"
+          },
+          "description": "A list that contains IDs for the contacts or companies that you want to see.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 7,
+  "queries": []
 }

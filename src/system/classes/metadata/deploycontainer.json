@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_DeployContainer_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -68,7 +70,7 @@
   "variables": {},
   "methods": {
     "addmetadata(metadata.metadata)": {
-      "id": "Metadata.deploycontainer.addmetadata",
+      "id": "Metadata.deploycontainer.method.addmetadata(metadata.metadata)",
       "nodeType": "method",
       "name": "addMetadata",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_addMetadata_-1:0"
       },
+      "parentId": "Metadata.deploycontainer",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,30 +102,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public void addMetadata(Metadata.Metadata md)",
+      "overrideSignature": "public override void addMetadata(Metadata.Metadata md)",
       "simplifiedSignature": "addMetadata(Metadata.Metadata)",
       "datatype": {
-        "id": "Metadata.deploycontainer.addmetadata.void",
+        "id": "Metadata.deploycontainer.addmetadata.datatype.void",
         "nodeType": "datatype",
-        "name": "void"
+        "name": "void",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "void",
+          "textToLower": "void",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_void_0:7"
+        },
+        "parentId": "Metadata.deploycontainer.addmetadata",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "void"
       },
       "description": "Add a custom metadata component to the container.",
+      "parentName": "DeployContainer",
+      "variables": {},
       "params": {
         "md": {
-          "id": "Metadata.deploycontainer.addmetadata.md",
-          "type": "var",
+          "id": "Metadata.deploycontainer.method.addmetadata(metadata.metadata).varParam.md",
+          "nodeType": "variable",
           "name": "md",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -129,29 +160,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 42
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 44
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_md_-1:0"
+            "id": "token.type.identifier_md_0:42"
           },
-          "signature": "Metadata.Metadata md",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "md",
+            "textToLower": "md",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 42
+              },
+              "end": {
+                "line": 0,
+                "character": 44
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_md_0:42"
+          },
+          "parentId": "Metadata.deploycontainer.method.addmetadata(metadata.metadata)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Metadata.deploycontainer.addmetadata.metadata.metadata",
+            "id": "Metadata.deploycontainer.addmetadata.datatype.Metadata.Metadata",
             "nodeType": "datatype",
-            "name": "Metadata.Metadata"
-          }
+            "name": "Metadata.Metadata",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Metadata",
+              "textToLower": "metadata",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 24
+                },
+                "end": {
+                  "line": 0,
+                  "character": 32
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Metadata_0:24"
+            },
+            "parentId": "Metadata.deploycontainer.addmetadata",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Metadata.Metadata"
+          },
+          "description": "A custom metadata component class that derives from Metadata.Metadata. Avoid adding components to a Metadata.DeployContainerthat have the same Metadata.Metadata.fullName because it causes deployment errors.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "clone()": {
-      "id": "Metadata.deploycontainer.clone",
+      "id": "Metadata.deploycontainer.method.clone()",
       "nodeType": "method",
       "name": "clone",
       "startToken": {
@@ -173,6 +252,9 @@
         },
         "id": "declaration.entity.name.function_clone_-1:0"
       },
+      "parentId": "Metadata.deploycontainer",
+      "order": 2,
+      "memberOrder": 2,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -180,30 +262,58 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Object clone()",
+      "overrideSignature": "public override Object clone()",
       "simplifiedSignature": "clone()",
       "datatype": {
-        "id": "Metadata.deploycontainer.clone.Object",
+        "id": "Metadata.deploycontainer.clone.datatype.Object",
         "nodeType": "datatype",
-        "name": "Object"
+        "name": "Object",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Object",
+          "textToLower": "object",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 13
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Object_0:7"
+        },
+        "parentId": "Metadata.deploycontainer.clone",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Object"
       },
       "description": "Makes a duplicate copy of the Metadata.DeployContainer.",
-      "params": {}
+      "parentName": "DeployContainer",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "getmetadata()": {
-      "id": "Metadata.deploycontainer.getmetadata",
+      "id": "Metadata.deploycontainer.method.getmetadata()",
       "nodeType": "method",
       "name": "getMetadata",
       "startToken": {
@@ -225,6 +335,9 @@
         },
         "id": "declaration.entity.name.function_getMetadata_-1:0"
       },
+      "parentId": "Metadata.deploycontainer",
+      "order": 3,
+      "memberOrder": 3,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -232,30 +345,85 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public List<Metadata.Metadata> getMetadata()",
+      "overrideSignature": "public override List<Metadata.Metadata> getMetadata()",
       "simplifiedSignature": "getMetadata()",
       "datatype": {
-        "id": "Metadata.deploycontainer.getmetadata.List<Metadata.Metadata>",
+        "id": "Metadata.deploycontainer.getmetadata.datatype.List<Metadata.Metadata>",
         "nodeType": "datatype",
-        "name": "List<Metadata.Metadata>"
+        "name": "List<Metadata.Metadata>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 11
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:7"
+        },
+        "parentId": "Metadata.deploycontainer.getmetadata",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Metadata.deploycontainer.getmetadata.datatype.List<Metadata.Metadata>.value.Metadata.Metadata",
+          "nodeType": "datatype",
+          "name": "Metadata.Metadata",
+          "startToken": {
+            "type": "datatype.support.namespace",
+            "text": "Metadata",
+            "textToLower": "metadata",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 12
+              },
+              "end": {
+                "line": 0,
+                "character": 20
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_Metadata_0:12"
+          },
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Metadata.Metadata"
+        }
       },
       "description": "Retrieves a list of custom metadata components from the container.",
-      "params": {}
+      "parentName": "DeployContainer",
+      "variables": {},
+      "params": {},
+      "queries": [],
+      "exceptions": []
     },
     "removemetadata(metadata.metadata)": {
-      "id": "Metadata.deploycontainer.removemetadata",
+      "id": "Metadata.deploycontainer.method.removemetadata(metadata.metadata)",
       "nodeType": "method",
       "name": "removeMetadata",
       "startToken": {
@@ -277,6 +445,9 @@
         },
         "id": "declaration.entity.name.function_removeMetadata_-1:0"
       },
+      "parentId": "Metadata.deploycontainer",
+      "order": 4,
+      "memberOrder": 4,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -284,30 +455,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean removeMetadata(Metadata.Metadata md)",
+      "overrideSignature": "public override Boolean removeMetadata(Metadata.Metadata md)",
       "simplifiedSignature": "removeMetadata(Metadata.Metadata)",
       "datatype": {
-        "id": "Metadata.deploycontainer.removemetadata.Boolean",
+        "id": "Metadata.deploycontainer.removemetadata.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Metadata.deploycontainer.removemetadata",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Removes a metadata component from the container.",
+      "parentName": "DeployContainer",
+      "variables": {},
       "params": {
         "md": {
-          "id": "Metadata.deploycontainer.removemetadata.md",
-          "type": "var",
+          "id": "Metadata.deploycontainer.method.removemetadata(metadata.metadata).varParam.md",
+          "nodeType": "variable",
           "name": "md",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -316,29 +513,77 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 48
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 50
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_md_-1:0"
+            "id": "token.type.identifier_md_0:48"
           },
-          "signature": "Metadata.Metadata md",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "md",
+            "textToLower": "md",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 48
+              },
+              "end": {
+                "line": 0,
+                "character": 50
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_md_0:48"
+          },
+          "parentId": "Metadata.deploycontainer.method.removemetadata(metadata.metadata)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Metadata.deploycontainer.removemetadata.metadata.metadata",
+            "id": "Metadata.deploycontainer.removemetadata.datatype.Metadata.Metadata",
             "nodeType": "datatype",
-            "name": "Metadata.Metadata"
-          }
+            "name": "Metadata.Metadata",
+            "startToken": {
+              "type": "datatype.support.namespace",
+              "text": "Metadata",
+              "textToLower": "metadata",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 30
+                },
+                "end": {
+                  "line": 0,
+                  "character": 38
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_Metadata_0:30"
+            },
+            "parentId": "Metadata.deploycontainer.removemetadata",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "Metadata.Metadata"
+          },
+          "description": "Metadata component to remove.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     },
     "removemetadatabyfullname(string)": {
-      "id": "Metadata.deploycontainer.removemetadatabyfullname",
+      "id": "Metadata.deploycontainer.method.removemetadatabyfullname(string)",
       "nodeType": "method",
       "name": "removeMetadataByFullName",
       "startToken": {
@@ -360,6 +605,9 @@
         },
         "id": "declaration.entity.name.function_removeMetadataByFullName_-1:0"
       },
+      "parentId": "Metadata.deploycontainer",
+      "order": 5,
+      "memberOrder": 5,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -367,30 +615,56 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "signature": "public Boolean removeMetadataByFullName(String fullName)",
+      "overrideSignature": "public override Boolean removeMetadataByFullName(String fullName)",
       "simplifiedSignature": "removeMetadataByFullName(String)",
       "datatype": {
-        "id": "Metadata.deploycontainer.removemetadatabyfullname.Boolean",
+        "id": "Metadata.deploycontainer.removemetadatabyfullname.datatype.Boolean",
         "nodeType": "datatype",
-        "name": "Boolean"
+        "name": "Boolean",
+        "startToken": {
+          "type": "datatype.primitive",
+          "text": "Boolean",
+          "textToLower": "boolean",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 7
+            },
+            "end": {
+              "line": 0,
+              "character": 14
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_Boolean_0:7"
+        },
+        "parentId": "Metadata.deploycontainer.removemetadatabyfullname",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "Boolean"
       },
       "description": "Removes a metadata component from the container using the component’s full name.",
+      "parentName": "DeployContainer",
+      "variables": {},
       "params": {
-        "fullName": {
-          "id": "Metadata.deploycontainer.removemetadatabyfullname.fullname",
-          "type": "var",
+        "fullname": {
+          "id": "Metadata.deploycontainer.method.removemetadatabyfullname(string).varParam.fullname",
+          "nodeType": "variable",
           "name": "fullName",
           "startToken": {
             "type": "declaration.entity.name.variable",
@@ -399,30 +673,80 @@
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 47
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 55
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_fullName_-1:0"
+            "id": "token.type.identifier_fullName_0:47"
           },
-          "signature": "String fullName",
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "fullName",
+            "textToLower": "fullname",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 47
+              },
+              "end": {
+                "line": 0,
+                "character": 55
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_fullName_0:47"
+          },
+          "parentId": "Metadata.deploycontainer.method.removemetadatabyfullname(string)",
+          "order": 1,
+          "memberOrder": 1,
           "datatype": {
-            "id": "Metadata.deploycontainer.removemetadatabyfullname.string",
+            "id": "Metadata.deploycontainer.removemetadatabyfullname.datatype.String",
             "nodeType": "datatype",
-            "name": "String"
-          }
+            "name": "String",
+            "startToken": {
+              "type": "datatype.primitive",
+              "text": "String",
+              "textToLower": "string",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 40
+                },
+                "end": {
+                  "line": 0,
+                  "character": 46
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_String_0:40"
+            },
+            "parentId": "Metadata.deploycontainer.removemetadatabyfullname",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "String"
+          },
+          "description": "Full name of the component to remove.",
+          "scope": null
         }
-      }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 5,
+  "queries": []
 }

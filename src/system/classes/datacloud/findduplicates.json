@@ -22,6 +22,8 @@
     },
     "id": "declaration.entity.name.class_FindDuplicates_-1:0"
   },
+  "order": 0,
+  "memberOrder": 0,
   "accessModifier": {
     "type": "keyword.modifier.access",
     "text": "global",
@@ -67,8 +69,8 @@
   "enums": {},
   "variables": {},
   "methods": {
-    "findduplicates(list)": {
-      "id": "Datacloud.findduplicates.findduplicates",
+    "findduplicates(list<sobject>)": {
+      "id": "Datacloud.findduplicates.method.findduplicates(list<sobject>)",
       "nodeType": "method",
       "name": "findDuplicates",
       "startToken": {
@@ -90,6 +92,9 @@
         },
         "id": "declaration.entity.name.function_findDuplicates_-1:0"
       },
+      "parentId": "Datacloud.findduplicates",
+      "order": 1,
+      "memberOrder": 1,
       "accessModifier": {
         "type": "keyword.modifier.access",
         "text": "public",
@@ -97,17 +102,17 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
+            "line": 0,
             "character": 0
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 6
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.access_public_-1:0"
+        "id": "token.type.identifier_public_0:0"
       },
       "static": {
         "type": "keyword.modifier.static",
@@ -116,62 +121,192 @@
         "isAux": false,
         "range": {
           "start": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 7
           },
           "end": {
-            "line": -1,
-            "character": 0
+            "line": 0,
+            "character": 13
           },
-          "isEmpty": true,
+          "isEmpty": false,
           "isSingleLine": true
         },
-        "id": "keyword.modifier.static_static_-1:0"
+        "id": "token.type.identifier_static_0:7"
       },
-      "signature": "public static List<FindDuplicatesResult> findDuplicates(List <SObject>)",
-      "simplifiedSignature": "findDuplicates(List)",
+      "signature": "public static List<Datacloud.FindDuplicatesResult> findDuplicates(List<SObject> sObjects)",
+      "overrideSignature": "public static override List<Datacloud.FindDuplicatesResult> findDuplicates(List<SObject> sObjects)",
+      "simplifiedSignature": "findDuplicates(List<SObject>)",
       "datatype": {
-        "id": "Datacloud.findduplicates.findduplicates.List<FindDuplicatesResult>",
+        "id": "Datacloud.findduplicates.findduplicates.datatype.List<Datacloud.FindDuplicatesResult>",
         "nodeType": "datatype",
-        "name": "List<FindDuplicatesResult>"
-      },
-      "description": "Identifies duplicates for sObjects provided and returns a list of FindDuplicatesResult objects.",
-      "params": {
-        "<SObject>": {
-          "id": "Datacloud.findduplicates.findduplicates.<sobject>",
-          "type": "var",
-          "name": "<SObject>",
+        "name": "List<Datacloud.FindDuplicatesResult>",
+        "startToken": {
+          "type": "datatype.collection",
+          "text": "List",
+          "textToLower": "list",
+          "isAux": false,
+          "range": {
+            "start": {
+              "line": 0,
+              "character": 14
+            },
+            "end": {
+              "line": 0,
+              "character": 18
+            },
+            "isEmpty": false,
+            "isSingleLine": true
+          },
+          "id": "token.type.identifier_List_0:14"
+        },
+        "parentId": "Datacloud.findduplicates.findduplicates",
+        "order": 0,
+        "memberOrder": 0,
+        "type": "List",
+        "value": {
+          "id": "Datacloud.findduplicates.findduplicates.datatype.List<Datacloud.FindDuplicatesResult>.value.Datacloud.FindDuplicatesResult",
+          "nodeType": "datatype",
+          "name": "Datacloud.FindDuplicatesResult",
           "startToken": {
-            "type": "declaration.entity.name.variable",
-            "text": "<SObject>",
-            "textToLower": "<sobject>",
+            "type": "datatype.support.namespace",
+            "text": "Datacloud",
+            "textToLower": "datacloud",
             "isAux": false,
             "range": {
               "start": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 19
               },
               "end": {
-                "line": -1,
-                "character": 0
+                "line": 0,
+                "character": 28
               },
-              "isEmpty": true,
+              "isEmpty": false,
               "isSingleLine": true
             },
-            "id": "declaration.entity.name.variable_<SObject>_-1:0"
+            "id": "token.type.identifier_Datacloud_0:19"
           },
-          "signature": "List <SObject>",
-          "datatype": {
-            "id": "Datacloud.findduplicates.findduplicates.list",
-            "nodeType": "datatype",
-            "name": "List"
-          }
+          "order": 0,
+          "memberOrder": 0,
+          "type": "Datacloud.FindDuplicatesResult"
         }
-      }
+      },
+      "description": "Identifies duplicates for sObjects provided and returns a list of FindDuplicatesResult objects.",
+      "parentName": "FindDuplicates",
+      "variables": {},
+      "params": {
+        "sobjects": {
+          "id": "Datacloud.findduplicates.method.findduplicates(list<sobject>).varParam.sobjects",
+          "nodeType": "variable",
+          "name": "sObjects",
+          "startToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sObjects",
+            "textToLower": "sobjects",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 80
+              },
+              "end": {
+                "line": 0,
+                "character": 88
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sObjects_0:80"
+          },
+          "endToken": {
+            "type": "declaration.entity.name.variable",
+            "text": "sObjects",
+            "textToLower": "sobjects",
+            "isAux": false,
+            "range": {
+              "start": {
+                "line": 0,
+                "character": 80
+              },
+              "end": {
+                "line": 0,
+                "character": 88
+              },
+              "isEmpty": false,
+              "isSingleLine": true
+            },
+            "id": "token.type.identifier_sObjects_0:80"
+          },
+          "parentId": "Datacloud.findduplicates.method.findduplicates(list<sobject>)",
+          "order": 1,
+          "memberOrder": 1,
+          "datatype": {
+            "id": "Datacloud.findduplicates.findduplicates.datatype.List<SObject>",
+            "nodeType": "datatype",
+            "name": "List<SObject>",
+            "startToken": {
+              "type": "datatype.collection",
+              "text": "List",
+              "textToLower": "list",
+              "isAux": false,
+              "range": {
+                "start": {
+                  "line": 0,
+                  "character": 66
+                },
+                "end": {
+                  "line": 0,
+                  "character": 70
+                },
+                "isEmpty": false,
+                "isSingleLine": true
+              },
+              "id": "token.type.identifier_List_0:66"
+            },
+            "parentId": "Datacloud.findduplicates.findduplicates",
+            "order": 0,
+            "memberOrder": 0,
+            "type": "List",
+            "value": {
+              "id": "Datacloud.findduplicates.findduplicates.datatype.List<SObject>.value.SObject",
+              "nodeType": "datatype",
+              "name": "SObject",
+              "startToken": {
+                "type": "datatype.support.class",
+                "text": "SObject",
+                "textToLower": "sobject",
+                "isAux": false,
+                "range": {
+                  "start": {
+                    "line": 0,
+                    "character": 71
+                  },
+                  "end": {
+                    "line": 0,
+                    "character": 78
+                  },
+                  "isEmpty": false,
+                  "isSingleLine": true
+                },
+                "id": "token.type.identifier_SObject_0:71"
+              },
+              "order": 0,
+              "memberOrder": 0,
+              "type": "SObject"
+            }
+          },
+          "description": "An array of sObjects for which you want to find duplicates.",
+          "scope": null
+        }
+      },
+      "queries": [],
+      "exceptions": []
     }
   },
   "constructors": {},
   "extendsType": "",
   "implementTypes": [],
-  "implements": {}
+  "implements": {},
+  "totalMembers": 1,
+  "queries": []
 }
