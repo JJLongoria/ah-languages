@@ -153,7 +153,7 @@ function formatApex(tokens, config) {
             beforeWhitespaces = 1;
         if (lastToken && lastToken.type === TokenType.BRACKET.CURLY_CLOSE && lastToken.parentToken && config && config.punctuation.addNewLineAfterCloseCurlyBracket)
             newLines = 1;
-        else if (lastToken && lastToken.type === TokenType.BRACKET.CURLY_CLOSE && lastToken.parentToken && config && !config.punctuation.addNewLineAfterCloseCurlyBracket && isDependentFlowStructure(token)) {
+        else if (lastToken && lastToken.type === TokenType.BRACKET.CURLY_CLOSE && !lastToken.isAux && lastToken.parentToken && config && !config.punctuation.addNewLineAfterCloseCurlyBracket && isDependentFlowStructure(token)) {
             newLines = 0;
             if (config && config.punctuation.addWhitespaceAfterCloseCurlyBracket)
                 beforeWhitespaces = 1;
