@@ -16,6 +16,7 @@ class BundleAnalyzer {
         this._fileName;
         this._content;
         this._component;
+        this._tabSize = 4;
     }
 
     setFile(file) {
@@ -43,9 +44,14 @@ class BundleAnalyzer {
         return this;
     }
 
+    setTabSize(tabSize){
+        this._tabSize = tabSize;
+        return this;
+    }
+
     analize(position) {
         if (this._file && !this._component) {
-            this._component = new AuraParser(this._file, this._fileName).setContent(this._content).setCursorPosition(position).parse();
+            this._component = new AuraParser(this._file, this._fileName).setTabSize(this._tabSize).setContent(this._content).setCursorPosition(position).parse();
         } else {
             this._file = this._component.file;
         }
@@ -65,8 +71,8 @@ class BundleAnalyzer {
             }
             this._component.attributes.push(newAttribute);
         }
-        const jsController = BundleAnalyzer.getController(this._file, position);
-        const helperController = BundleAnalyzer.getHelper(this._file, position);
+        const jsController = BundleAnalyzer.getController(this._file, (!this._component.positionData) ? position : undefined);
+        const helperController = BundleAnalyzer.getHelper(this._file, (!this._component.positionData) ? position : undefined);
         if (jsController && jsController.positionData)
             this._component.positionData = jsController.positionData;
         if (helperController && helperController.positionData)

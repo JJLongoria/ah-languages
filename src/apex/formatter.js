@@ -16,7 +16,7 @@ class ApexFormatter {
      * 
      * @returns {ApexFormatterConfig} Returns a default formatter config object
      */
-    static config(){
+    static config() {
         return new ApexFormatterConfig();
     }
 
@@ -33,23 +33,23 @@ class ApexFormatter {
      * @throws {FileNotFoundException} If the file not exists or not have access to it
      * @throws {InvalidFilePathException} If the path is not a file
      */
-    static format(tokensOrContent, config, systemData) {
+    static format(tokensOrContent, config, systemData, tabSize, insertSpaces) {
         let tokens;
         if (Utils.isArray(tokensOrContent)) {
             tokens = tokensOrContent;
         } else if (Utils.isString(tokensOrContent)) {
             const content = tokensOrContent;
-            tokens = Lexer.tokenize(content, systemData);
+            tokens = Lexer.tokenize(content, systemData, tabSize);
         } else {
             throw new WrongDatatypeException('You must to select a file path, file content or file tokens');
         }
-        config = new ApexFormatterConfig(config); 
-        return formatApex(tokens, config);
+        config = new ApexFormatterConfig(config);
+        return formatApex(tokens, config, tabSize, insertSpaces);
     }
 }
 module.exports = ApexFormatter;
 
-function formatApex(tokens, config) {
+function formatApex(tokens, config, tabSize, insertSpaces) {
     let indent = 0;
     let indentOffset = 0;
     let strIndex;
@@ -276,6 +276,10 @@ function formatApex(tokens, config) {
             afterWhitespaces = 1;
             beforeWhitespaces = 1;
         }
+        if (token && token.type === TokenType.BRACKET.INIT_VALUES_OPEN)
+            afterWhitespaces = 1;
+        if (token && token.type === TokenType.BRACKET.INIT_VALUES_CLOSE)
+            beforeWhitespaces = 1;
         if (token.type === TokenType.BRACKET.CASTING_OPEN) {
             afterWhitespaces = 0;
         } else if (isDatatype(token) && lastToken && lastToken.type === TokenType.BRACKET.CASTING_OPEN && nextToken && nextToken.type === TokenType.BRACKET.CASTING_CLOSE) {
@@ -351,7 +355,10 @@ function formatApex(tokens, config) {
                 line += StrUtils.getNewLines(newLines - 1);
             lines += line + '\n';
             line = '';
-            line += StrUtils.getTabs(indent + indentOffset);
+            if (!insertSpaces)
+                line += StrUtils.getTabs(indent + indentOffset);
+            else
+                line += StrUtils.getWhitespaces((indent + indentOffset) * tabSize);
 
             if (token.type === TokenType.COMMENT.CONTENT || token.type === TokenType.COMMENT.BLOCK_END)
                 beforeWhitespaces = 1;

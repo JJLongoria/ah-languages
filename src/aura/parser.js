@@ -39,6 +39,7 @@ class AuraParser {
         this.cursorPosition = undefined;
         this.node = undefined;
         this.onlyTagData = false;
+        this._tabSize = 4;
     }
 
     getOnlyTagData(onlyTagData) {
@@ -72,6 +73,11 @@ class AuraParser {
         return this;
     }
 
+    setTabSize(tabSize) {
+        this._tabSize = tabSize;
+        return this;
+    }
+
     parse() {
         if (this.node)
             return this.node;
@@ -80,10 +86,10 @@ class AuraParser {
             this.content = FileReader.readFileSync(this.filePath);
             if (!FileChecker.isAuraFile(this.filePath))
                 throw new InvalidFilePathException('Wrong file to parse. You must to select an Aura file (Component, App or Event)');
-            this.tokens = Lexer.tokenize(this.content);
+            this.tokens = Lexer.tokenize(this.content, this._tabSize);
             this.tokensLength = this.tokens.length;
         } else if (this.content && (!this.tokens || this.tokens.length === 0)) {
-            this.tokens = Lexer.tokenize(this.content);
+            this.tokens = Lexer.tokenize(this.content, this._tabSize);
             this.tokensLength = this.tokens.length;
         }
         let node;
@@ -214,6 +220,8 @@ module.exports = AuraParser;
 function getTagData(tokens, index, position) {
     const tagData = {
         name: undefined,
+        startToken: undefined,
+        endToken: undefined,
         attributes: {}
     };
     const len = tokens.length;
@@ -223,6 +231,9 @@ function getTagData(tokens, index, position) {
         const token = new Token(tokens[index]);
         const nextToken = LangUtils.getNextToken(tokens, index);
         const lastToken = LangUtils.getLastToken(tokens, index);
+        if (!tagData.startToken)
+            tagData.startToken = token;
+        tagData.endToken = token;
         if (position && !positionData) {
             if (LangUtils.isOnPosition(token, lastToken, nextToken, position)) {
                 const startIndex = position.character - token.range.start.character;
@@ -272,6 +283,21 @@ function getTagData(tokens, index, position) {
         }
     }
     index--;
+    if (!positionData && position) {
+        if (tagData.startToken.range.start.line <= position.line && tagData.endToken.range.end.line >= position.line) {
+            if (tagData.startToken.range.start.line == position.line) {
+                if (tagData.startToken.range.start.character <= position.character) {
+                    positionData = new PositionData(undefined, undefined, undefined, undefined, 'Aura');
+                }
+            } else if (tagData.endToken.range.end.line == position.line) {
+                if (tagData.endToken.range.start.character >= position.character) {
+                    positionData = new PositionData(undefined, undefined, undefined, undefined, 'Aura');
+                }
+            } else {
+                positionData = new PositionData(undefined, undefined, undefined, undefined, 'Aura');
+            }
+        }
+    }
     return {
         tagData: tagData,
         positionData: positionData,

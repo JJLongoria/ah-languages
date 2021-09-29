@@ -250,7 +250,9 @@ const predefinedObjects = [
 
 class JSTokenizer {
 
-    static tokenize(filePathOrContent) {
+    static tokenize(filePathOrContent, tabSize) {
+        if (!tabSize)
+            tabSize = 4;
         let content;
         if (Utils.isString(filePathOrContent)) {
             try {
@@ -338,7 +340,7 @@ class JSTokenizer {
                 token = new Token(TokenType.UNKNOWN, char, lineNumber, column);
                 column++;
             } else if (char === "\t") {
-                column += 4;
+                column += tabSize;
             } else {
                 column++;
             }
