@@ -328,9 +328,12 @@ class ApexTokenizer {
      * Method to tokenize an Apex file
      * @param {String} filePathOrContent File path or file content to tokenize
      * @param {Object} [systemData] Object with the system data to identify tokens with more precission 
+     * @param {Number} [tabSize] Integer number with the tab size for the file 
      * @returns {Array<Token>} Returns an array with all file tokens
      */
-    static tokenize(filePathOrContent, systemData) {
+    static tokenize(filePathOrContent, systemData, tabSize) {
+        if (!tabSize)
+            tabSize = 4;
         let content;
         if (Utils.isString(filePathOrContent)) {
             try {
@@ -442,27 +445,39 @@ class ApexTokenizer {
                 token = new Token(TokenType.UNKNOWN, char, lineNumber, column);
                 column++;
             } else if (char === "\t") {
-                column += 4;
+                column += tabSize;
             } else {
                 column++;
             }
 
             if (token !== undefined) {
                 if (!onText && !onCommentBlock && !onCommentLine && token.type === TokenType.PUNCTUATION.QUOTTES && (!lastToken || lastToken.text !== '\\')) {
-                    token.type = TokenType.PUNCTUATION.QUOTTES_START;
+                    if (onAnnotation) {
+                        token.type = TokenType.ANNOTATION.CONTENT;
+                    } else {
+                        token.type = TokenType.PUNCTUATION.QUOTTES_START;
+                        quottesIndex.push(tokens.length);
+                    }
                     onText = true;
                     token.parentToken = tokens.length - 1;
-                    quottesIndex.push(tokens.length);
                 } else if (onText && token.type === TokenType.PUNCTUATION.QUOTTES && (!lastToken || lastToken.text !== '\\')) {
-                    token.type = TokenType.PUNCTUATION.QUOTTES_END;
-                    onText = false;
-                    if (quottesIndex.length > 0) {
-                        const index = quottesIndex.pop();
-                        token.pairToken = index;
-                        tokens[index].pairToken = tokens.length;
-                        token.parentToken = tokens[index].parentToken;
+                    if (onAnnotation) {
+                        token.type = TokenType.ANNOTATION.CONTENT;
+                        const whitespaces = (lastToken.range.start.line !== token.range.start.line) ? 0 : token.range.start.character - lastToken.range.end.character;
+                        token = new Token(TokenType.ANNOTATION.CONTENT, lastToken.text + StrUtils.getWhitespaces(whitespaces) + token.text, lastToken.range.start.line, lastToken.range.start.character);
+                        tokens.pop();
+                        lastToken = tokens[tokens.length - 1];
+                    } else {
+                        token.type = TokenType.PUNCTUATION.QUOTTES_START;
+                        if (quottesIndex.length > 0) {
+                            const index = quottesIndex.pop();
+                            token.pairToken = index;
+                            tokens[index].pairToken = tokens.length;
+                            token.parentToken = tokens[index].parentToken;
+                        }
                     }
-                } else if (!onText && !onCommentBlock && !onCommentLine && token.type === TokenType.COMMENT.BLOCK_START) {
+                    onText = false;
+                } else if (!onAnnotation && !onText && !onCommentBlock && !onCommentLine && token.type === TokenType.COMMENT.BLOCK_START) {
                     onCommentBlock = true;
                     token.parentToken = tokens.length - 1;
                     commentBlockIndex.push(tokens.length);
@@ -474,13 +489,21 @@ class ApexTokenizer {
                         tokens[index].pairToken = tokens.length;
                         token.parentToken = tokens[index].parentToken;
                     }
-                } else if (!onText && !onCommentBlock && !onCommentLine && (token.type === TokenType.COMMENT.LINE || token.type === TokenType.COMMENT.LINE_DOC)) {
+                } else if (!onAnnotation && !onText && !onCommentBlock && !onCommentLine && (token.type === TokenType.COMMENT.LINE || token.type === TokenType.COMMENT.LINE_DOC)) {
                     token.parentToken = tokens.length - 1;
                     onCommentLine = true;
                 } else if (onText) {
-                    token.type = TokenType.LITERAL.STRING;
-                    if (quottesIndex.length > 0) {
-                        token.parentToken = quottesIndex[quottesIndex.length - 1];
+                    if (onAnnotation) {
+                        token.type = TokenType.ANNOTATION.CONTENT;
+                        const whitespaces = (lastToken.range.start.line !== token.range.start.line) ? 0 : token.range.start.character - lastToken.range.end.character;
+                        token = new Token(TokenType.ANNOTATION.CONTENT, lastToken.text + StrUtils.getWhitespaces(whitespaces) + token.text, lastToken.range.start.line, lastToken.range.start.character);
+                        tokens.pop();
+                        lastToken = tokens[tokens.length - 1];
+                    } else {
+                        token.type = TokenType.LITERAL.STRING;
+                        if (quottesIndex.length > 0) {
+                            token.parentToken = quottesIndex[quottesIndex.length - 1];
+                        }
                     }
                 } else if (onCommentBlock || onCommentLine) {
                     if (onCommentBlock && token.text === '/' && lastToken && lastToken.text === '/**') {
@@ -519,7 +542,7 @@ class ApexTokenizer {
                         tokens[index].pairToken = tokens.length;
                     }
                 } else if (token.type === TokenType.BRACKET.CURLY_OPEN && lastToken) {
-                    if ((lastToken.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE || lastToken.type === TokenType.BRACKET.SQUARE_CLOSE) && bracketIndex.length > 1) {
+                    if ((lastToken.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE || lastToken.type === TokenType.BRACKET.SQUARE_CLOSE) && bracketIndex.length > 0 && classDeclarationIndex.length === 0) {
                         token.type = TokenType.BRACKET.INIT_VALUES_OPEN;
                     } else if (lastToken.type === TokenType.KEYWORD.MODIFIER.STATIC) {
                         tokens[tokens.length - 1].type = TokenType.KEYWORD.DECLARATION.STATIC_CONSTRUCTOR;
@@ -987,6 +1010,7 @@ function isBracket(token) {
         case TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN:
         case TokenType.BRACKET.PARENTHESIS_GUARD_CLOSE:
         case TokenType.BRACKET.PARENTHESIS_GUARD_OPEN:
+        case TokenType.BRACKET.PARENTHESIS_PARAM_OPEN:
         case TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE:
         case TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_OPEN:
         case TokenType.BRACKET.CASTING_OPEN:

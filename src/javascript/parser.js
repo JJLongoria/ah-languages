@@ -32,6 +32,12 @@ class JSParser {
         this.content = undefined;
         this.cursorPosition = undefined;
         this.node = undefined;
+        this.tabSize = 4;
+    }
+
+    setTabSize(){
+        this.tabSize = tabSize;
+        return this;
     }
 
     setTokens(tokens) {

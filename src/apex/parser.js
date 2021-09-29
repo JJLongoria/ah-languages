@@ -63,6 +63,12 @@ class ApexParser {
         this.cursorPosition;
         this.declarationOnly = false;
         this.node;
+        this.tabSize = 4;
+    }
+
+    setTabSize(tabSize){
+        this.tabSize = tabSize;
+        return this;
     }
 
     setTokens(tokens) {
@@ -105,10 +111,10 @@ class ApexParser {
             return this.node;
         if (this.filePath && !this.content && (!this.tokens || this.tokens.length === 0)) {
             this.content = FileReader.readFileSync(Validator.validateFilePath(this.filePath));
-            this.tokens = Lexer.tokenize(this.content, this.systemData);
+            this.tokens = Lexer.tokenize(this.content, this.systemData, this.tabSize);
             this.tokensLength = this.tokens.length;
         } else if (this.content && (!this.tokens || this.tokens.length === 0)) {
-            this.tokens = Lexer.tokenize(this.content, this.systemData);
+            this.tokens = Lexer.tokenize(this.content, this.systemData, this.tabSize);
             this.tokensLength = this.tokens.length;
         } else if (!this.tokens) {
             this.tokens = [];
@@ -687,6 +693,8 @@ class ApexParser {
                             paramIndent--;
                         }
                         if (paramIndent === 0 && (auxToken.type === TokenType.DECLARATION.ENTITY.VARIABLE || auxToken.type === TokenType.ENTITY.VARIABLE)) {
+                            if(lastTokenAux.type === TokenType.OPERATOR.ASSIGN.ASSIGN)
+                                continue;
                             let sameLineVar = new ApexVariable(((node) ? node.id : 'InitialNode') + '.variable.' + auxToken.textToLower, auxToken.text, auxToken);
                             sameLineVar.accessModifier = this.accessModifier;
                             sameLineVar.definitionModifier = this.definitionModifier;

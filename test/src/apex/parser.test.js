@@ -744,7 +744,7 @@ describe('Testing ./src/apex/parser.js', () => {
             }
         }
         const oneFile = false;
-        const fileToProcess = 't_AccountTeamMemberTrigger.trigger';
+        const fileToProcess = 'RecordsIterator.cls';
         console.time('nsSummary');
         const nsSummary = System.getAllNamespacesSummary();
         console.timeEnd('nsSummary');
