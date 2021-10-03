@@ -643,7 +643,8 @@ class ApexTokenizer {
                             tokens.pop();
                             lastToken = tokens[tokens.length - 1];
                         }
-                    } else if (!onQuery && !onAnnotation && lastToken && lastToken.type === TokenType.PUNCTUATION.AT && annotations[token.textToLower]) {
+                    } 
+                    if (!onQuery && !onAnnotation && lastToken && lastToken.type === TokenType.PUNCTUATION.AT && annotations[token.textToLower]) {
                         token = new Token(TokenType.ANNOTATION.ENTITY, lastToken.text + token.text, lastToken.range.start.line, lastToken.range.start.character);
                         tokens.pop();
                         lastToken = tokens[tokens.length - 1];
@@ -813,7 +814,7 @@ class ApexTokenizer {
                             }
                         }
                     } else {
-                        if (lastToken && isObjectAccessor(lastToken)) {
+                        if (lastToken && isObjectAccessor(lastToken) && (!lastToken || !reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === TokenType.KEYWORD.FOR_FUTURE)) {
                             token.type = TokenType.ENTITY.VARIABLE;
                         }
                     }
