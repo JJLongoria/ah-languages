@@ -468,7 +468,7 @@ class ApexTokenizer {
                         tokens.pop();
                         lastToken = tokens[tokens.length - 1];
                     } else {
-                        token.type = TokenType.PUNCTUATION.QUOTTES_START;
+                        token.type = TokenType.PUNCTUATION.QUOTTES_END;
                         if (quottesIndex.length > 0) {
                             const index = quottesIndex.pop();
                             token.pairToken = index;

@@ -14,6 +14,7 @@ class BundleAnalyzer {
         this._file = file;
         this._systemData = systemData;
         this._fileName;
+        this._activeFile = this._file;
         this._content;
         this._component;
         this._tabSize = 4;
@@ -34,6 +35,11 @@ class BundleAnalyzer {
         return this;
     }
 
+    setActiveFile(activeFile){
+        this._activeFile = activeFile;
+        return this;
+    }
+
     setFileName(fileName) {
         this._fileName = fileName;
         return this;
@@ -51,7 +57,7 @@ class BundleAnalyzer {
 
     analize(position) {
         if (this._file && !this._component) {
-            this._component = new AuraParser(this._file, this._fileName).setTabSize(this._tabSize).setContent(this._content).setCursorPosition(position).parse();
+            this._component = new AuraParser(this._file, this._fileName).setTabSize(this._tabSize).setContent(this._content).setCursorPosition((FileChecker.isAuraFile(this._activeFile)) ? position : undefined).parse();
         } else {
             this._file = this._component.file;
         }
@@ -71,8 +77,8 @@ class BundleAnalyzer {
             }
             this._component.attributes.push(newAttribute);
         }
-        const jsController = BundleAnalyzer.getController(this._file, (!this._component.positionData) ? position : undefined);
-        const helperController = BundleAnalyzer.getHelper(this._file, (!this._component.positionData) ? position : undefined);
+        const jsController = BundleAnalyzer.getController(this._file, (FileChecker.isAuraControllerJS(this._activeFile)) ? position : undefined);
+        const helperController = BundleAnalyzer.getHelper(this._file, (FileChecker.isAuraHelperJS(this._activeFile)) ? position : undefined);
         if (jsController && jsController.positionData)
             this._component.positionData = jsController.positionData;
         if (helperController && helperController.positionData)

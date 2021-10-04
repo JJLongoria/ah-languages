@@ -66,7 +66,7 @@ class ApexParser {
         this.tabSize = 4;
     }
 
-    setTabSize(tabSize){
+    setTabSize(tabSize) {
         this.tabSize = tabSize;
         return this;
     }
@@ -687,13 +687,13 @@ class ApexParser {
                             index--;
                             break;
                         }
-                        if (auxToken.type === TokenType.BRACKET.PARENTHESIS_PARAM_OPEN){
+                        if (auxToken.type === TokenType.BRACKET.PARENTHESIS_PARAM_OPEN) {
                             paramIndent++;
-                        } else if (auxToken.type === TokenType.BRACKET.PARENTHESIS_PARAM_CLOSE){
+                        } else if (auxToken.type === TokenType.BRACKET.PARENTHESIS_PARAM_CLOSE) {
                             paramIndent--;
                         }
                         if (paramIndent === 0 && (auxToken.type === TokenType.DECLARATION.ENTITY.VARIABLE || auxToken.type === TokenType.ENTITY.VARIABLE)) {
-                            if(lastTokenAux.type === TokenType.OPERATOR.ASSIGN.ASSIGN)
+                            if (lastTokenAux.type === TokenType.OPERATOR.ASSIGN.ASSIGN)
                                 continue;
                             let sameLineVar = new ApexVariable(((node) ? node.id : 'InitialNode') + '.variable.' + auxToken.textToLower, auxToken.text, auxToken);
                             sameLineVar.accessModifier = this.accessModifier;
@@ -1105,12 +1105,13 @@ function processQuery(tokens, index, position, node) {
         nodeId = node.id + '.query.' + node.queries.length, 'query.' + node.queries.length;
         nodeName = 'query.' + node.queries.length;
     }
-    const query = new SOQLQuery(nodeId, nodeName, (isDynamic) ? lastToken : token);
+    let query = new SOQLQuery(nodeId, nodeName, (isDynamic) ? lastToken : token);
     if (!isDynamic)
         index++;
     let onProjection = false;
     let field = '';
     let fieldStartToken;
+    let isQueryNode = false;
     for (; index < len; index++) {
         lastToken = LangUtils.getLastToken(tokens, index);
         token = tokens[index];
@@ -1167,6 +1168,7 @@ function processQuery(tokens, index, position, node) {
             }
         } else {
             if (token.textToLower === 'from') {
+                isQueryNode = true;
                 if (field) {
                     query.projection.push(new SOQLField(query.id + 'field_' + field, field, fieldStartToken));
                     field = '';
@@ -1187,7 +1189,9 @@ function processQuery(tokens, index, position, node) {
                 } else if (isQuery(token, lastToken)) {
                     const data = processQuery(tokens, index, position, query);
                     index = data.index;
-                    query.projection.push(data.query);
+                    if (data.query) {
+                        query.projection.push(data.query);
+                    }
                     if (data.positionData && !positionData) {
                         positionData = data.positionData;
                     }
@@ -1199,6 +1203,8 @@ function processQuery(tokens, index, position, node) {
             }
         }
     }
+    if (isDynamic && !isQueryNode)
+        query = undefined;
     if (positionData)
         positionData.query = query;
     return {
@@ -1648,7 +1654,7 @@ function processDatatypeTokens(node, text, tokens, isKey) {
                     valueText += token.text;
                 }
             } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
-                aBracketIndent--;                if (aBracketIndent > 0) {
+                aBracketIndent--; if (aBracketIndent > 0) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }

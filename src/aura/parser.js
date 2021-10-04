@@ -110,10 +110,12 @@ class AuraParser {
             if (lastToken) {
                 if ((lastToken.type === TokenType.BRACKET.START_TAG_OPEN || lastToken.type === TokenType.BRACKET.TAG_EMPTY_OPEN) && token.type === TokenType.ENTITY.TAG.NAME) {
                     const result = getTagData(this.tokens, index, this.cursorPosition);
-                    if (result.positionData && !positionData) {
-                        positionData = result.positionData;
-                        positionData.nodeType = (node) ? node.nodeType : undefined;
-                        delete result.positionData;
+                    if (result.positionData) {
+                        if (!positionData) {
+                            positionData = result.positionData;
+                            positionData.nodeType = (node) ? node.nodeType : undefined;
+                            delete result.positionData;
+                        }
                         positionData.tagData = result.tagData;
                     }
                     const tagData = result.tagData;

@@ -14,6 +14,8 @@ const AuraJSFunction = Types.AuraJSFunction;
 const AuraJSComment = Types.AuraJSComment;
 const AuraJSCommentBlock = Types.AuraJSCommentBlock;
 const PositionData = Types.PositionData;
+const SOQLQuery = Types.SOQLQuery;
+const SOQLField = Types.SOQLField;
 const Utils = CoreUtils.Utils;
 
 class JSParser {
@@ -35,7 +37,7 @@ class JSParser {
         this.tabSize = 4;
     }
 
-    setTabSize(){
+    setTabSize(tabSize) {
         this.tabSize = tabSize;
         return this;
     }
@@ -128,10 +130,11 @@ class JSParser {
                 index = processCommentBlock(newNode, this.tokens, index);
                 comment = newNode;
             } else if (isQuery(token, lastToken)) {
-                const data = processQuery(this.tokens, index, this.cursorPosition, node);
-                index = data.index;
+                const data = processQuery(this.tokens, index, this.cursorPosition);
                 if (data.positionData && !positionData) {
                     positionData = data.positionData;
+                } else if (positionData) {
+                    positionData.query = data.query;
                 }
             } else if (bracketIndent === 1 && parenthesisIndent === 1) {
                 if (isFunction(lastToken, token, nextToken)) {
@@ -231,43 +234,31 @@ function processCommentLine(node, tokens, index) {
 }
 
 function isQuery(token, lastToken) {
-    if (lastToken && (token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_START) && token.textToLower === 'select')
+    if (lastToken && (lastToken.type === TokenType.PUNCTUATION.QUOTTES_START || lastToken.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_START) && token.textToLower === 'select')
         return true;
     return false;
 }
 
-function processQuery(tokens, index, position, node, startColumn) {
+function processQuery(tokens, index, position) {
     const len = tokens.length;
     let token = tokens[index];
     let lastToken = LangUtils.getLastToken(tokens, index);
-    let isDynamic = (lastToken && lastToken.type === TokenType.PUNCTUATION.QUOTTES_START && token.textToLower === 'select');
-    let nodeId;
-    let nodeName;
     let positionData;
-    if (node.type === AuraNodeTypes.SOQL) {
-        nodeId = node.id + '.subquery.' + node.projection.length;
-        nodeName = 'subquery.' + node.queries.length;
-    } else {
-        nodeId = node.id + '.query.' + node.queries.length;
-        nodeName = 'query.' + node.queries.length;
-    }
-    const query = new SOQLQuery(nodeId, nodeName, (isDynamic) ? lastToken : token);
-    if (!isDynamic)
-        index++;
+    const query = new SOQLQuery('query', 'Query', token);
     let onProjection = false;
     let field = '';
     let fieldStartToken;
     for (; index < len; index++) {
         lastToken = LangUtils.getLastToken(tokens, index);
         token = tokens[index];
-        const nextToken = LangUtils.getNextToken(tokens, index);
+        let nextToken = LangUtils.getNextToken(tokens, index);
         if (position && query && !positionData) {
             if (LangUtils.isOnPosition(token, lastToken, nextToken, position)) {
                 const startIndex = position.character - token.range.start.character;
                 const startPart = token.text.substring(0, startIndex + 1);
                 const endPart = token.text.substring(startIndex + 1);
-                positionData = new PositionData(startPart, endPart, query.nodeType, query.id, 'JS');
-                positionData.onText = token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_START || token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+                positionData = new PositionData(startPart, endPart, query.nodeType, query.id, 'Aura');
+                positionData.onText = token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_END || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING;
             }
         }
         if (token.textToLower === 'from') {
@@ -280,7 +271,7 @@ function processQuery(tokens, index, position, node, startColumn) {
             query.from = nextToken;
         } else if (token.textToLower === 'select') {
             onProjection = true;
-        } else if (token.type === TokenType.PUNCTUATION.QUOTTES_END) {
+        } else if ((token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.PUNCTUATION.DOUBLE_QUOTTES_END)) {
             query.endToken = token;
             break;
         } else if (onProjection) {
@@ -289,7 +280,7 @@ function processQuery(tokens, index, position, node, startColumn) {
                 field = '';
                 fieldStartToken = undefined;
             } else if (isQuery(token, lastToken)) {
-                const data = processQuery(tokens, index, position, query);
+                const data = processQuery(tokens, index, position);
                 index = data.index;
                 query.projection.push(data.query);
                 if (data.positionData && !positionData) {
