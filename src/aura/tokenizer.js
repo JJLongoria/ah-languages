@@ -128,7 +128,7 @@ class AuraTokenizer {
                             const index = startTagIndex[startTagIndex.length - 1];
                             const tagToken = tokens[index];
                             if (tagToken.type === TokenType.BRACKET.START_TAG_OPEN || tagToken.type === TokenType.BRACKET.TAG_EXMARK_OPEN) {
-                                tokens.push(new Token(TokenType.ENTITY.TAG.ATTRIBUTE_VALUE, '', lastToken.range.end.line, lastToken.range.start.character));
+                                tokens.push(new Token(TokenType.ENTITY.TAG.ATTRIBUTE_VALUE, '', lastToken.range.end.line, lastToken.range.end.character));
                             }
                         }
                     }
