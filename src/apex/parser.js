@@ -816,6 +816,10 @@ class ApexParser {
                     absolutePath: true,
                     extensions: ['.cls']
                 });
+                if (!files || files.length === 0) {
+                    resolve();
+                    return;
+                }
                 let increment = calculateIncrement(files);
                 let percentage;
                 const batchesToProcess = getBatches(files, multiThread);
