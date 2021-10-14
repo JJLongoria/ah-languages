@@ -191,6 +191,8 @@ function formatApex(tokens, config, tabSize, insertSpaces) {
         if (isQueryClause(token) && config && config.query.oneClausePerLine && lastToken && lastToken.type !== TokenType.BRACKET.QUERY_START && lastToken.type !== TokenType.BRACKET.INNER_QUERY_START) {
             newLines = 1;
             beforeWhitespaces = queryOpenIndex[queryOpenIndex.length - 1];
+        } else if(isQueryClause(token) && lastToken && lastToken.type !== TokenType.BRACKET.QUERY_START && lastToken.type !== TokenType.BRACKET.INNER_QUERY_START){
+            beforeWhitespaces = 1;
         }
         if (isQueryClause(token)) {
             afterWhitespaces = 1;
