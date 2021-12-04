@@ -630,6 +630,8 @@ class ApexTokenizer {
                 } else if (isObjectAccessor(token)) {
                     if (lastToken && lastToken.type === TokenType.KEYWORD.DECLARATION.TRIGGER)
                         tokens[tokens.length - 1].type = TokenType.DATATYPE.SUPPORT_CLASS;
+                    if (lastToken && lastToken.type === TokenType.KEYWORD.DECLARATION.CLASS)
+                        tokens[tokens.length - 1].type = TokenType.DATATYPE.SUPPORT_CLASS;
                 } else if (token.type === TokenType.IDENTIFIER) {
                     if (token.textToLower != 'constructor' && reservedKeywords[token.textToLower] && reservedKeywords[token.textToLower] !== TokenType.KEYWORD.FOR_FUTURE) {
                         if (!onQuery || (onQuery && lastToken.type !== TokenType.QUERY.VALUE_BIND)) {
@@ -637,6 +639,9 @@ class ApexTokenizer {
                             if (lastToken && isDatatypeToken(lastToken) && token.type !== TokenType.KEYWORD.DECLARATION.IMPLEMENTS) {
                                 token.type = TokenType.DECLARATION.ENTITY.VARIABLE
                             }
+                        }
+                        if(lastToken && isObjectAccessor(lastToken) && token.type === TokenType.KEYWORD.DECLARATION.CLASS){
+                            token.type = TokenType.DATATYPE.SUPPORT_CLASS;
                         }
                         if (token.type === TokenType.KEYWORD.FLOW_CONTROL.IF && lastToken && lastToken.type === TokenType.KEYWORD.FLOW_CONTROL.ELSE) {
                             token = new Token(TokenType.KEYWORD.FLOW_CONTROL.ELSE_IF, lastToken.text + ' ' + token.text, lastToken.range.start.line, lastToken.range.start.character);
