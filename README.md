@@ -1,4 +1,13 @@
 # **Aura Helper Languages Modules**
+
+[![Version](https://img.shields.io/npm/v/@aurahelper/languages?logo=npm)](https://www.npmjs.com/package/@aurahelper/languages)
+[![Total Downloads](https://img.shields.io/npm/dt/@aurahelper/languages?logo=npm)](https://www.npmjs.com/package/@aurahelper/languages)
+[![Downloads/Month](https://img.shields.io/npm/dm/@aurahelper/languages?logo=npm)](https://www.npmjs.com/package/@aurahelper/languages)
+[![Issues](https://img.shields.io/github/issues/jjlongoria/aura-helper-languages)](https://github.com/JJLongoria/aura-helper-languages/issues)
+[![Known Vulnerabilities](https://snyk.io/test/github/JJLongoria/aura-helper-languages/badge.svg)](https://snyk.io/test/github/JJLongoria/aura-helper-languages)
+[![Code Size](https://img.shields.io/github/languages/code-size/jjlongoria/aura-helper-languages)](https://github.com/JJLongoria/aura-helper-languages)
+[![License](https://img.shields.io/github/license/jjlongoria/aura-helper-languages?logo=github)](https://github.com/JJLongoria/aura-helper-languages/blob/master/LICENSE)
+
 Aura Helper Languages Module has usefull inner modules to work with all supported Salesforce languages (Apex, Javascript, Aura...)
 
 You can Tokenize and Parse any apex class to get data from classes like name, variables, methods, constructors... Also you can format your apex classes using the Apex Formatter class
@@ -60,24 +69,25 @@ Method to tokenize an Apex file
 
 ### **Parameters:**
   - **filePathOrContent**: File path or file content to tokenize
-    - String
+    - `String`
   - **systemData**: Object with the system data to identify tokens with more precission 
-    - Object
+    - `Object`
 
 ### **Return:**
 Returns an array with all file tokens
-- String
+- `String`
 
 ### **Examples:**
 **Tokenize an Apex Class**
 
+```javascript
     const { Apex } = require('@aurahelper/languages');
     const ApexTokenizer = Apex.ApexTokenizer;
 
     const tokens = ApexTokenizer.tokenize('./path/to/apex/class.cls');
 
     console.log(tokens);
-
+```
 
 ---
 # [**ApexParser Class**](#apex-module-parser-class)
@@ -107,41 +117,41 @@ Returns a default formatter config object
 
 ### **Examples:**
 **Get default apex formatter config**
-
+```javascript
     const { Apex } = require('@aurahelper/languages');
     const ApexFormatter = Apex.ApexFormatter;
 
     const config = ApexFormatter.config();
 
     console.log(config);
-
+```
 ---
 ## [**format(pathContentOrTokens, config)**](#formatpathcontentortokens-config)
 Method to format an Apex Class with the selected options
 
 ### **Parameters:**
   - **pathContentOrTokens**: Class file path or String file content or Apex Class Tokens (Use ApexTokenizer)
-    - String | Array\<Token\> 
+    - `String` | `Array<Token>` 
   - **config**: Apex formatter config object or VSCode Config JSON object
-    - ApexFormatterConfig | Object
+    - `ApexFormatterConfig` | `Object`
   - **systemData**: System data like System Apex Classes or Namespaces to tokenize apex class if pathContentOrTokens is a class content or file path because is used to tokenize with precission. Can get it with System Class from System Module
-    - Object
+    - `Object`
 
 ### **Return:**
 Returns the Apex Class content formatted
-- String
+- `String`
 
 ### **Throws:**
 This method can throw the next exceptions:
 
-- **WrongDatatypeException**: If pathContentOrTokens datatype is not an String, path or file tokens
-- **WrongFilePathException**: If the file Path is not a String or can't convert to absolute path
-- **FileNotFoundException**: If the file not exists or not have access to it
-- **InvalidFilePathException**: If the path is not a file
+- **`WrongDatatypeException`**: If pathContentOrTokens datatype is not an String, path or file tokens
+- **`WrongFilePathException`**: If the file Path is not a String or can't convert to absolute path
+- **`FileNotFoundException`**: If the file not exists or not have access to it
+- **`InvalidFilePathException`**: If the path is not a file
 - 
 ### **Examples:**
 **Format apex class from file**
-
+```javascript
     const { Apex, System } = require('@aurahelper/languages');
     const ApexFormatter = Apex.ApexFormatter;
 
@@ -149,9 +159,9 @@ This method can throw the next exceptions:
     const formatedClassStr = ApexFormatter.format(filePath);
 
     console.log(formatedClassStr);
-
+```
 **Format apex class from file content**
-
+```javascript
     const { Apex } = require('@aurahelper/languages');
     const ApexFormatter = Apex.ApexFormatter;
 
@@ -167,9 +177,9 @@ This method can throw the next exceptions:
     const formatedClassStr = ApexFormatter.format(fileContent);
 
     console.log(formatedClassStr);
-
+```
 **Format apex class from file tokens**
-
+```javascript
     const { Apex } = require('@aurahelper/languages');
     const ApexFormatter = Apex.ApexFormatter;
     const ApexTokenizer = Apex.ApexTokenizer;
@@ -179,6 +189,8 @@ This method can throw the next exceptions:
     const formatedClassStr = ApexFormatter.format(fileTokens);
 
     console.log(formatedClassStr);
+
+```
 ---
 
 </br>
