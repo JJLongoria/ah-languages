@@ -4,9 +4,12 @@
   "displayName": "Aura Helper Framework Languages Libraries",
   "version": "1.0.14",
   "description": "Language Libraries to work with XML, Aura, Apex... files. tokenizers, parsers, system classes and much more",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "testDebug": "npm jest --coverage --runInBand --watch",
+    "compile": "tsc -p ./ ",
+    "lint": "eslint src --ext ts",
+    "watch": "tsc -watch -p ./",
     "test": "jest --coverage --runInBand"
   },
   "keywords": [
@@ -49,11 +52,17 @@
     "email": "juanjoselongoria@gmail.com"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.20",
-    "jest": "^27.0.0"
+    "@types/jest": "^27.0.3",
+    "@types/node": "^12.12.47",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.3.0",
+    "jest": "^27.4.3",
+    "ts-jest": "^27.0.7",
+    "typescript": "^3.9.6"
   },
   "dependencies": {
-    "@aurahelper/core": "^1.0.0",
+    "@aurahelper/core": "file:../ah-core",
     "fast-xml-parser": "^3.19.0",
     "he": "^1.2.0"
   }
