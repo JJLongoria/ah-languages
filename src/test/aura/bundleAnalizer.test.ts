@@ -1,17 +1,16 @@
-const { Types, FileSystem, CoreUtils } = require('@aurahelper/core');
-const System = require('../../../src/system/system');
-const FileReader = FileSystem.FileReader;
-const FileWriter = FileSystem.FileWriter;
-const FileChecker = FileSystem.FileChecker;
-const BundleAnalyzer = require('../../../src/aura/bundleAnalyzer');
+import { FileChecker, FileReader, ParserData } from "@aurahelper/core";
+import { BundleAnalyzer } from "../../aura/bundleAnalyzer";
+import { System } from "../../system";
 
 describe('Testing ./src/aura/parser.js', () => {
     test('Testing parse()', () => {
-        const metadataTypes = JSON.parse(FileReader.readFileSync('./test/assets/types/metadataTypes.json'));
-        const sObjectsData = JSON.parse(FileReader.readFileSync('./test/assets/types/sObjects.json'));
-        const sObjects = [];
+        const metadataTypes = JSON.parse(FileReader.readFileSync('./src/test/assets/types/metadataTypes.json'));
+        const sObjectsData = JSON.parse(FileReader.readFileSync('./src/test/assets/types/sObjects.json'));
+        const sObjects: string[] = [];
         const userClasses = [];
-        const nsSummary = System.getAllNamespacesData();
+        const nsData = System.getAllNamespacesData();
+        const nsSummary = System.getAllNamespacesSummary();
+        const ns = System.getAllNamespaces();
         for (const metadataTypeName of Object.keys(metadataTypes)) {
             const metadataType = metadataTypes[metadataTypeName];
             for (const metadataObjectName of Object.keys(metadataType.childs)) {
@@ -22,15 +21,17 @@ describe('Testing ./src/aura/parser.js', () => {
                 }
             }
         }
-        const systemData = {
+        const systemData: ParserData = {
             sObjects: sObjects,
             sObjectsData: sObjectsData,
             userClasses: userClasses,
-            namespace: nsSummary
+            namespacesData: nsData,
+            namespaceSummary: nsSummary,
+            namespaces: ns
         };
         const oneFile = false;
         const fileToProcess = 'cmp_HG_PopoverFiltro/cmp_HG_PopoverFiltro.cmp';
-        const folderPath = './test/assets/SFDXProject/force-app/main/default/aura';
+        const folderPath = './src/test/assets/SFDXProject/force-app/main/default/aura';
         console.time('compilationTime');
         const nodes = {};
         if (oneFile) {
