@@ -1,17 +1,17 @@
-const XMLUtils = require('../../../src/xml/utils');
-const { DataTypes } = require('@aurahelper/core').Values;
+import { Datatypes } from "@aurahelper/core";
+import { XMLUtils } from "../../xml/utils";
 
 describe('Testing ./src/utils/utils.js', () => {
     test('Testing createXMLFile()', () => {
         const typeDefinition = {
             field1: {
-                datatype: DataTypes.ARRAY
+                datatype: Datatypes.ARRAY
             },
             field2: {
-                datatype: DataTypes.OBJECT
+                datatype: Datatypes.OBJECT
             },
             field3: {
-                datatype: DataTypes.STRING
+                datatype: Datatypes.STRING
             }
         };
         let fileSchema = XMLUtils.createXMLFile(typeDefinition);
@@ -28,18 +28,27 @@ describe('Testing ./src/utils/utils.js', () => {
         expect(result).toEqual([]);
     });
     test('Testing sort()', () => {
-        let arrayToOrder = ['c', 'b', 'a'];
+        let arrayToOrder: any[] = ['c', 'b', 'a'];
         XMLUtils.sort(arrayToOrder);
         expect(arrayToOrder).toEqual(['a', 'b', 'c']);
+        arrayToOrder = [3, 2, 1];
+        XMLUtils.sort(arrayToOrder);
+        expect(arrayToOrder).toEqual([1, 2, 3]);
         arrayToOrder = [{ name: 'testC', value: 'valueC' }, { name: 'testB', value: 'valueB' }];
         XMLUtils.sort(arrayToOrder, ['name', 'value']);
         expect(arrayToOrder).toEqual([{ name: 'testB', value: 'valueB' }, { name: 'testC', value: 'valueC' }]);
         arrayToOrder = [{ name: 'testC', value: 'valueC' }, { name: 'testB', value: 'valueB' }];
         XMLUtils.sort(arrayToOrder, ['name', 'values']);
         expect(arrayToOrder).toEqual([{ name: 'testB', value: 'valueB' }, { name: 'testC', value: 'valueC' }]);
-        let notArrayToOrder = { name: 'testB', value: 'valueB' };
-        XMLUtils.sort(notArrayToOrder);
-        expect(notArrayToOrder).toEqual({ name: 'testB', value: 'valueB' });
+        arrayToOrder = [{ name: 2, value: 2 }, { name: 1, value: 1 }];
+        XMLUtils.sort(arrayToOrder, ['name']);
+        expect(arrayToOrder).toEqual([{ name: 1, value: 1 }, { name: 2, value: 2 }]);
+        arrayToOrder = [{ name: 1, value: 2 }, { name: 2, value: 2 }];
+        XMLUtils.sort(arrayToOrder, ['name']);
+        expect(arrayToOrder).toEqual([{ name: 1, value: 2 }, { name: 2, value: 2 }]);
+        arrayToOrder = [{ name: 1, value: 1 }, { name: 1, value: 1 }];
+        XMLUtils.sort(arrayToOrder, ['name']);
+        expect(arrayToOrder).toEqual([{ name: 1, value: 1 }, { name: 1, value: 1 }]);
     });
     test('Testing getAttributes()', () => {
         let obj = {
@@ -67,13 +76,13 @@ describe('Testing ./src/utils/utils.js', () => {
     test('Testing cleanXMLFile()', () => {
         const xmlDefinition = {
             field1: {
-                datatype: DataTypes.ARRAY
+                datatype: Datatypes.ARRAY
             },
             field2: {
-                datatype: DataTypes.OBJECT
+                datatype: Datatypes.OBJECT
             },
             field3: {
-                datatype: DataTypes.STRING
+                datatype: Datatypes.STRING
             }
         };
         const xmlData = {
