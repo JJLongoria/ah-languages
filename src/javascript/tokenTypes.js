@@ -1,1 +1,0 @@
-module.exports = require('@aurahelper/core').Values.JSTokenTypes;
