@@ -105,7 +105,7 @@ export class JSParser {
      * Method to parse Aura Javascript file and get file information
      * @returns Return the AuraJSFile node with file data
      */
-    parse() {
+    parse(): AuraJSFile | undefined {
         if (this.node)
             return this.node;
         if (this.filePath && !this.content && (!this.tokens || this.tokens.length === 0)) {
