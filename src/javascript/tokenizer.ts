@@ -249,6 +249,9 @@ const predefinedObjects: string[] = [
     'onsubmit'
 ];
 
+/**
+ * Class to Tokenizer Aura Javascript files
+ */
 export class JSTokenizer {
 
     /**
