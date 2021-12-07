@@ -96,7 +96,7 @@ export class JSParser {
      * @param {Position} position Cursor Position object
      * @returns {JSParser} Return the JSParser instance
      */
-    setCursorPosition(position: Position): JSParser {
+    setCursorPosition(position?: Position): JSParser {
         this.cursorPosition = position;
         return this;
     }

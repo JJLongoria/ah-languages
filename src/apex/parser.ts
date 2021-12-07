@@ -40,13 +40,13 @@ export class ApexParser {
 
     /**
      * Create Apex Parser instance to parse Apex Files
-     * @param {string | Token[]} filePathOrTokens File path or file tokens (tokenized with ApexTokenizer class)
+     * @param {string | Token[]} [filePathOrTokens] File path or file tokens (tokenized with ApexTokenizer class)
      * @param {ParserData} [systemData] Parser Data object with data from Project and Salesforce to identify tokens with more precission 
      */
-    constructor(filePathOrTokens: string | Token[], systemData?: ParserData) {
+    constructor(filePathOrTokens?: string | Token[], systemData?: ParserData) {
         this.systemData = systemData;
         if (typeof filePathOrTokens !== 'string') {
-            this.tokens = filePathOrTokens;
+            this.tokens = filePathOrTokens || [];
         } else {
             this.tokens = [];
             this.filePath = filePathOrTokens;
