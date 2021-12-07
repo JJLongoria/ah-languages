@@ -1,1 +1,0 @@
-exports.LanguageUtils = require('./languageUtils');

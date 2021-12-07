@@ -331,7 +331,7 @@ export class ApexTokenizer {
      * @param {number} [tabSize] Integer number with the tab size for the file 
      * @returns {Token[]} Returns an array with all file tokens
      */
-    static tokenize(filePathOrContent: string, systemData: ParserData, tabSize: number): Token[] {
+    static tokenize(filePathOrContent: string, systemData?: ParserData, tabSize?: number): Token[] {
         if (!tabSize)
             tabSize = 4;
         let content;
