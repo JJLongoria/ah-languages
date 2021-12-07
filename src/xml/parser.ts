@@ -110,8 +110,9 @@ export class XMLParser {
      * @returns {string | undefined} return the tag name or undefined if not exists
      */
     static endTag(text: string, tag: string): string | undefined {
-        if (text.indexOf('</' + tag + '>') !== -1)
+        if (text.indexOf('</' + tag + '>') !== -1) {
             return tag;
+        }
         return undefined;
     }
 
@@ -135,13 +136,13 @@ export class XMLParser {
             empty = true;
         }
         let isJSONValue;
-        if (empty)
+        if (empty) {
             return XMLParser.getStartTag(tag, attributes, empty);
-        else {
+        } else {
             try {
                 let jsonVal = JSON.parse(value);
                 if (jsonVal) {
-                    isJSONValue = true
+                    isJSONValue = true;
                 } else {
                     isJSONValue = false;
                 }
@@ -153,8 +154,9 @@ export class XMLParser {
             }
             if (attributes && attributes.includes('xsi:type="xsd:double"')) {
                 let strVal = '' + value;
-                if (strVal.indexOf('.') === -1)
+                if (strVal.indexOf('.') === -1) {
                     strVal += '.0';
+                }
                 value = strVal;
             }
             return XMLParser.getStartTag(tag, attributes, empty) + value + XMLParser.getEndTag(tag);
@@ -170,15 +172,17 @@ export class XMLParser {
      */
     static getStartTag(tag: string, attributes?: string[], empty?: boolean): string {
         if (!empty) {
-            if (attributes && attributes.length > 0)
+            if (attributes && attributes.length > 0) {
                 return '<' + tag.trim() + ' ' + attributes.join(' ') + '>';
-            else
+            } else {
                 return '<' + tag.trim() + '>';
+            }
         } else {
-            if (attributes && attributes.length > 0)
+            if (attributes && attributes.length > 0) {
                 return '<' + tag.trim() + ' ' + attributes.join(' ') + '/>';
-            else
+            } else {
                 return '<' + tag.trim() + '/>';
+            }
         }
     }
 
@@ -223,10 +227,11 @@ function fixObjValues(jsonObj: any): any {
         } else if (typeof value === 'object') {
             jsonRes[key] = fixObjValues(value);
         } else {
-            if (value !== undefined)
+            if (value !== undefined) {
                 jsonRes[key] = value.toString();
-            else
+            } else {
                 jsonRes[key] = value;
+            }
         }
     });
     return jsonRes;

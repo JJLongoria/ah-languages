@@ -93,7 +93,7 @@ export class LanguageUtils {
      */
     static isOnPosition(token: Token, lastToken?: Token, nextToken?: Token, cursorPosition?: Position): boolean {
         if (cursorPosition) {
-            if (token && token.range.start.line == cursorPosition.line) {
+            if (token && token.range.start.line === cursorPosition.line) {
                 if (token.range.start.character <= cursorPosition.character && cursorPosition.character <= token.range.end.character) {
                     return true;
                 } else if (token.range.start.character <= cursorPosition.character && nextToken && nextToken.range.start.line === token.range.start.line && cursorPosition.character <= nextToken.range.start.character) {

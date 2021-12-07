@@ -55,10 +55,11 @@ export class XMLUtils {
     static forceArray(element: any): any[] {
         let result: any[] = [];
         if (element !== undefined) {
-            if (Array.isArray(element))
+            if (Array.isArray(element)) {
                 result = element;
-            else
+            } else {
                 result.push(element);
+            }
         }
         return result;
     }

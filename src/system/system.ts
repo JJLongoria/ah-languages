@@ -59,7 +59,7 @@ export class System {
         const nsFiles = FileReader.readDirSync(PathUtils.getAbsolutePath(systemClassPath));
         for (const nsFile of nsFiles) {
             const nsName = StrUtils.replace(nsFile, '.json', '');
-            const nsSummary = System.getNamespaceSummary(nsName)
+            const nsSummary = System.getNamespaceSummary(nsName);
             if (nsSummary) {
                 allNsDataSummary[nsName] = nsSummary;
             }

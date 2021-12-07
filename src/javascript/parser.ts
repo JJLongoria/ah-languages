@@ -106,8 +106,9 @@ export class JSParser {
      * @returns Return the AuraJSFile node with file data
      */
     parse(): AuraJSFile | undefined {
-        if (this.node)
+        if (this.node) {
             return this.node;
+        }
         if (this.filePath && !this.content && (!this.tokens || this.tokens.length === 0)) {
             this.filePath = Validator.validateFilePath(this.filePath);
             this.content = FileReader.readFileSync(this.filePath);
@@ -128,7 +129,7 @@ export class JSParser {
         let strQueryStartIndex = -1;
         let strQueryEndIndex = -1;
         let strQueryFrom = false;
-        this.node = new  AuraJSFile(this.fileName);
+        this.node = new AuraJSFile(this.fileName);
         for (let index = 0; index < this.tokensLength; index++) {
             const lastToken = LanguageUtils.getLastToken(this.tokens, index);
             const token = new Token(this.tokens[index]);
@@ -196,8 +197,9 @@ function processFunction(newNode: AuraJSFunction, tokens: Token[], index: number
     let varNames = [];
     for (; index < len; index++) {
         const token = new Token(tokens[index]);
-        if (token.type === JSTokenTypes.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE)
+        if (token.type === JSTokenTypes.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE) {
             break;
+        }
         if (token.type === JSTokenTypes.ENTITY.VARIABLE) {
             varNames.push(token.text);
             newNode.params.push(token);
@@ -324,13 +326,15 @@ function processQuery(tokens: Token[], index: number, position?: Position): any 
                 }
             } else {
                 field += token.text;
-                if (!fieldStartToken)
+                if (!fieldStartToken) {
                     fieldStartToken = token;
+                }
             }
         }
     }
-    if (positionData)
+    if (positionData) {
         positionData.query = query;
+    }
     return {
         query: query,
         positionData: positionData,
