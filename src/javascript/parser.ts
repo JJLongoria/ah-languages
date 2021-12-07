@@ -1,4 +1,4 @@
-import { JSTokenTypes, CoreUtils, FileReader, Token, PathUtils, Position, FileChecker, InvalidFilePathException, PositionData, AuraJSComment, AuraJSCommentBlock, AuraJSFunction, SOQLQuery, SOQLField } from "@aurahelper/core";
+import { JSTokenTypes, CoreUtils, FileReader, Token, PathUtils, Position, FileChecker, InvalidFilePathException, PositionData, AuraJSComment, AuraJSCommentBlock, AuraJSFunction, SOQLQuery, SOQLField, AuraJSFile } from "@aurahelper/core";
 import { LanguageUtils } from "../utils";
 import { JSTokenizer } from "./tokenizer";
 
@@ -15,7 +15,7 @@ export class JSParser {
     filePath?: string;
     content?: string;
     cursorPosition?: Position;
-    node: any;
+    node?: AuraJSFile;
     tabSize: number;
 
     /**
@@ -128,10 +128,7 @@ export class JSParser {
         let strQueryStartIndex = -1;
         let strQueryEndIndex = -1;
         let strQueryFrom = false;
-        this.node = {
-            name: this.fileName,
-            methods: [],
-        }
+        this.node = new  AuraJSFile(this.fileName);
         for (let index = 0; index < this.tokensLength; index++) {
             const lastToken = LanguageUtils.getLastToken(this.tokens, index);
             const token = new Token(this.tokens[index]);
@@ -186,8 +183,9 @@ export class JSParser {
             }
         }
         this.node.methods = methods;
-        if (positionData)
+        if (positionData) {
             this.node.positionData = positionData;
+        }
         return this.node;
     }
 }
