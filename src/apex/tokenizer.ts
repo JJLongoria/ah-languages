@@ -379,7 +379,7 @@ export class ApexTokenizer {
             const threeChars = content.substring(charIndex, charIndex + 3);
             const twoChars = content.substring(charIndex, charIndex + 2);
             let char = content.charAt(charIndex);
-            let token;
+            let token: Token | undefined;
             let lastToken = (tokens.length > 0) ? tokens[tokens.length - 1] : undefined;
             const twoLastToken = (tokens.length > 1) ? tokens[tokens.length - 2] : undefined;
             if (fourChars.length === 4 && symbolTokens[fourChars] && aBracketsIndex.length === 0) {
