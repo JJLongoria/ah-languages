@@ -90,7 +90,7 @@ export class AuraParser {
      * @param {string} content File content value
      * @returns {AuraParser} Returns the AuraParser instance
      */
-    setContent(content: string): AuraParser {
+    setContent(content?: string): AuraParser {
         this.content = content;
         return this;
     }
@@ -100,7 +100,7 @@ export class AuraParser {
      * @param {Position} position Position object
      * @returns {AuraParser} Returns the AuraParser instance
      */
-    setCursorPosition(position: Position): AuraParser {
+    setCursorPosition(position?: Position): AuraParser {
         this.cursorPosition = position;
         return this;
     }
