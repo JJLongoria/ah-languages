@@ -16,7 +16,7 @@ export class AuraParser {
     fileName?: string;
     filePath?: string;
     content?: string;
-    cursorPosition?: Position
+    cursorPosition?: Position;
     node?: AuraComponent | AuraEvent | AuraApplication;
     onlyTagData: boolean;
     _tabSize: number;
@@ -331,11 +331,11 @@ function getTagData(tokens: Token[], index: number, position?: Position): any {
     index--;
     if (!positionData && position) {
         if (tagData.startToken!.range.start.line <= position.line && tagData.endToken!.range.end.line >= position.line) {
-            if (tagData.startToken!.range.start.line == position.line) {
+            if (tagData.startToken!.range.start.line === position.line) {
                 if (tagData.startToken!.range.start.character <= position.character) {
                     positionData = new PositionData(undefined, undefined, undefined, undefined, 'Aura');
                 }
-            } else if (tagData.endToken!.range.end.line == position.line) {
+            } else if (tagData.endToken!.range.end.line === position.line) {
                 if (tagData.endToken!.range.start.character >= position.character) {
                     positionData = new PositionData(undefined, undefined, undefined, undefined, 'Aura');
                 }
@@ -442,13 +442,15 @@ function processQuery(tokens: Token[], index: number, position?: Position, start
                 }
             } else {
                 field += token.text;
-                if (!fieldStartToken)
+                if (!fieldStartToken) {
                     fieldStartToken = token;
+                }
             }
         }
     }
-    if (positionData)
+    if (positionData) {
         positionData.query = query;
+    }
     return {
         query: query,
         positionData: positionData,

@@ -806,8 +806,9 @@ describe('Testing ./src/apex/parser.js', () => {
             //console.timeEnd(fileToProcess + 'compilationTime');
         } else {
             for (const file of FileReader.readDirSync(classesPath)) {
-                if (!file.endsWith('.cls'))
+                if (!file.endsWith('.cls')) {
                     continue;
+                }
                 try {
                     //console.time(file + ' compilationTime');
                     const filPath = classesPath + '/' + file;
@@ -832,8 +833,9 @@ describe('Testing ./src/apex/parser.js', () => {
                 }
             }
             for (const file of FileReader.readDirSync(triggersPath)) {
-                if (!file.endsWith('.trigger'))
+                if (!file.endsWith('.trigger')) {
                     continue;
+                }
                 try {
                     //console.time(file + ' compilationTime');
                     const filPath = triggersPath + '/' + file;
@@ -960,17 +962,21 @@ function validateNode(node: any): void {
 }
 
 function validateVariable(node: any): void {
-    if (!node.name)
+    if (!node.name) {
         throw new Error(node.nodeType + ' => ' + node.id + ' => Missing name');
-    if (!node.datatype)
+    }
+    if (!node.datatype) {
         throw new Error(node.nodeType + ' => ' + node.name + ' => Missing datatype');
+    }
 }
 
 function validateMethod(node: any): void {
-    if (!node.name)
+    if (!node.name) {
         throw new Error(node.nodeType + ' => ' + node.id + ' => Missing name');
-    if (!node.datatype)
+    }
+    if (!node.datatype) {
         throw new Error(node.nodeType + ' => ' + node.name + ' => Missing datatype');
+    }
     try {
         if (node.variables && Utils.hasKeys(node.variables)) {
             for (const key of Object.keys(node.variables)) {
@@ -990,8 +996,9 @@ function validateMethod(node: any): void {
 }
 
 function validateConstructor(node: any): void {
-    if (!node.name)
+    if (!node.name) {
         throw new Error(node.nodeType + ' => ' + node.id + ' => Missing name');
+    }
     try {
         if (node.variables && Utils.hasKeys(node.variables)) {
             for (const key of Object.keys(node.variables)) {

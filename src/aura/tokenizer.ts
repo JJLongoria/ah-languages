@@ -26,7 +26,7 @@ const symbolTokens: { [key: string]: string } = {
     '=': AuraTokenTypes.OPERATOR.ASSIGN.ASSIGN,
     ".": AuraTokenTypes.PUNCTUATION.OBJECT_ACCESSOR,
     "?.": AuraTokenTypes.PUNCTUATION.SAFE_OBJECT_ACCESSOR,
-}
+};
 
 /**
  * Class to tokenize Aura XML files
@@ -40,8 +40,9 @@ export class AuraTokenizer {
      * @returns {Token[]} Return file tokens
      */
     static tokenize(filePathOrContent: string, tabSize?: number) {
-        if (!tabSize)
+        if (!tabSize) {
             tabSize = 4;
+        }
         let content;
         if (Utils.isString(filePathOrContent)) {
             try {
@@ -92,13 +93,13 @@ export class AuraTokenizer {
                     numContent += char;
                     char = content.charAt(++charIndex);
                 }
-                if (numContent.indexOf(':') !== -1 && numContent.indexOf('-') !== -1)
+                if (numContent.indexOf(':') !== -1 && numContent.indexOf('-') !== -1) {
                     token = new Token(AuraTokenTypes.LITERAL.DATETIME, numContent, lineNumber, column);
-                else if (numContent.indexOf('-') !== -1)
+                } else if (numContent.indexOf('-') !== -1) {
                     token = new Token(AuraTokenTypes.LITERAL.DATE, numContent, lineNumber, column);
-                else if (numContent.indexOf(':') !== -1)
+                } else if (numContent.indexOf(':') !== -1) {
                     token = new Token(AuraTokenTypes.LITERAL.TIME, numContent, lineNumber, column);
-                else if (numContent.indexOf('.') !== -1) {
+                } else if (numContent.indexOf('.') !== -1) {
                     token = new Token(AuraTokenTypes.LITERAL.DOUBLE, numContent, lineNumber, column);
                 }
                 else {
@@ -118,7 +119,7 @@ export class AuraTokenizer {
             } else if (char === "\n") {
                 lineNumber++;
                 column = 0;
-            } else if (char !== "\t" && char !== " " && char.trim().length != 0) {
+            } else if (char !== "\t" && char !== " " && char.trim().length !== 0) {
                 token = new Token(AuraTokenTypes.UNKNOWN, char, lineNumber, column);
                 column++;
             } else if (char === "\t") {

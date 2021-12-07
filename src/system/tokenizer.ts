@@ -60,7 +60,7 @@ const symbolTokens: { [key: string]: string } = {
     "\"": TokenTypes.PUNCTUATION.DOUBLE_QUOTTES,
     "@": TokenTypes.PUNCTUATION.AT,
     "?": TokenTypes.PUNCTUATION.EXMARK,
-}
+};
 
 export class Tokenizer {
 
@@ -114,8 +114,9 @@ export class Tokenizer {
                 }
             } else if (symbolTokens[char]) {
                 token = new Token(symbolTokens[char], char, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
-                if (mustResetABracketIndex(token))
+                if (mustResetABracketIndex(token)) {
                     aBracketsIndex = [];
+                }
                 column++;
             } else if (NUM_FORMAT.test(char)) {
                 var numContent = '';
@@ -123,16 +124,15 @@ export class Tokenizer {
                     numContent += char;
                     char = str.charAt(++charIndex);
                 }
-                if (numContent.indexOf(':') !== -1 && numContent.indexOf('-') !== -1)
+                if (numContent.indexOf(':') !== -1 && numContent.indexOf('-') !== -1) {
                     token = new Token(TokenTypes.LITERAL.DATETIME, numContent, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
-                else if (numContent.indexOf('-') !== -1)
+                } else if (numContent.indexOf('-') !== -1) {
                     token = new Token(TokenTypes.LITERAL.DATE, numContent, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
-                else if (numContent.indexOf(':') !== -1)
+                } else if (numContent.indexOf(':') !== -1) {
                     token = new Token(TokenTypes.LITERAL.TIME, numContent, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
-                else if (numContent.indexOf('.') !== -1) {
+                } else if (numContent.indexOf('.') !== -1) {
                     token = new Token(TokenTypes.LITERAL.DOUBLE, numContent, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
-                }
-                else {
+                } else {
                     token = new Token(TokenTypes.LITERAL.INTEGER, numContent, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
                 }
                 charIndex--;
@@ -147,11 +147,12 @@ export class Tokenizer {
                 token = new Token(TokenTypes.IDENTIFIER, idContent, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
                 column += idContent.length;
             } else if (char === "\n") {
-                if (onCommentLine)
+                if (onCommentLine) {
                     onCommentLine = false;
+                }
                 lineNumber++;
                 column = 0;
-            } else if (char !== "\t" && char !== " " && char.trim().length != 0) {
+            } else if (char !== "\t" && char !== " " && char.trim().length !== 0) {
                 token = new Token(TokenTypes.UNKNOWN, char, (virtualLine !== undefined && virtualLine >= 0) ? virtualLine : lineNumber, column);
                 column++;
             } else if (char === "\t") {

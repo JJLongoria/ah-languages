@@ -46,8 +46,9 @@ describe('Testing ./src/apex/formatter.js', () => {
             console.timeEnd(fileToProcess + 'compilationTime');*/
         } else {
             for (const file of FileReader.readDirSync(folderPath)) {
-                if (!file.endsWith('.cls'))
+                if (!file.endsWith('.cls')) {
                     continue;
+                }
                 try {
                     //console.time(file + ' compilationTime');
                     const filPath = folderPath + '/' + file;

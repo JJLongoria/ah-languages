@@ -105,8 +105,9 @@ export class BundleAnalyzer {
         } else {
             this._file = this._component!.file;
         }
-        if (!this._component)
+        if (!this._component) {
             return undefined;
+        }
         const componentName: string | undefined = this._component.fileName || this._fileName;
         if (!componentName || !this._file) {
             return undefined;
@@ -190,8 +191,9 @@ export class BundleAnalyzer {
                                 break;
                             }
                         }
-                        if (!exists)
+                        if (!exists) {
                             this._component.attributes.push(element);
+                        }
                     }
                 }
                 if (parentComponent.implements) {
@@ -212,8 +214,9 @@ export class BundleAnalyzer {
                                 break;
                             }
                         }
-                        if (!existing)
+                        if (!existing) {
                             this._component.events.push(element);
+                        }
                     }
                 }
                 if (parentComponent.handlers) {
@@ -225,8 +228,9 @@ export class BundleAnalyzer {
                                 break;
                             }
                         }
-                        if (!existing)
+                        if (!existing) {
                             this._component.handlers.push(element);
+                        }
                     }
                 }
                 if (parentComponent.controllerFunctions) {
@@ -267,8 +271,9 @@ export class BundleAnalyzer {
             if (this._component.implementsValues && this._component.implementsValues.length > 0) {
                 for (const implement of this._component.implementsValues) {
                     let interfaceToCheck = implement;
-                    if (interfaceToCheck.indexOf('lightning:isUrlAddressable') !== -1)
+                    if (interfaceToCheck.indexOf('lightning:isUrlAddressable') !== -1) {
                         interfaceToCheck = 'lightning:hasPageReference';
+                    }
                     const splits = interfaceToCheck.split(':');
                     const ns = splits[0];
                     const componentName = splits[1];

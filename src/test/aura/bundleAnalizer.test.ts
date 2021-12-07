@@ -47,8 +47,9 @@ describe('Testing ./src/aura/parser.js', () => {
                 for (const file of FileReader.readDirSync(auraCmpFolder)) {
                     try {
                         const filePath = auraCmpFolder + '/' + file;
-                        if (!FileChecker.isAuraFile(filePath))
+                        if (!FileChecker.isAuraFile(filePath)) {
                             continue;
+                        }
                         /*console.time(folder + ' compilationTime');
                         console.time(fileToProcess + ' parser');*/
                         const node = new BundleAnalyzer(filePath, systemData).analize();

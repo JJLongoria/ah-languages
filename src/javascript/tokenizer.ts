@@ -60,7 +60,7 @@ const symbolTokens: { [key: string]: string } = {
     '"': JSTokenTypes.PUNCTUATION.DOUBLE_QUOTTES,
     "@": JSTokenTypes.PUNCTUATION.AT,
     "?": JSTokenTypes.PUNCTUATION.EXMARK,
-}
+};
 
 const reservedKeywords: { [key: string]: string } = {
     "abstract": JSTokenTypes.KEYWORD.FOR_FUTURE,
@@ -319,16 +319,15 @@ export class JSTokenizer {
                     numContent += char;
                     char = content.charAt(++charIndex);
                 }
-                if (numContent.indexOf(':') !== -1 && numContent.indexOf('-') !== -1)
+                if (numContent.indexOf(':') !== -1 && numContent.indexOf('-') !== -1) {
                     token = new Token(JSTokenTypes.LITERAL.DATETIME, numContent, lineNumber, column);
-                else if (numContent.indexOf('-') !== -1)
+                } else if (numContent.indexOf('-') !== -1) {
                     token = new Token(JSTokenTypes.LITERAL.DATE, numContent, lineNumber, column);
-                else if (numContent.indexOf(':') !== -1)
+                } else if (numContent.indexOf(':') !== -1) {
                     token = new Token(JSTokenTypes.LITERAL.TIME, numContent, lineNumber, column);
-                else if (numContent.indexOf('.') !== -1) {
+                } else if (numContent.indexOf('.') !== -1) {
                     token = new Token(JSTokenTypes.LITERAL.DOUBLE, numContent, lineNumber, column);
-                }
-                else {
+                } else {
                     token = new Token(JSTokenTypes.LITERAL.INTEGER, numContent, lineNumber, column);
                 }
                 charIndex--;
@@ -343,11 +342,12 @@ export class JSTokenizer {
                 token = new Token(JSTokenTypes.IDENTIFIER, idContent, lineNumber, column);
                 column += idContent.length;
             } else if (char === "\n") {
-                if (onCommentLine)
+                if (onCommentLine) {
                     onCommentLine = false;
+                }
                 lineNumber++;
                 column = 0;
-            } else if (char !== "\t" && char !== " " && char.trim().length != 0) {
+            } else if (char !== "\t" && char !== " " && char.trim().length !== 0) {
                 token = new Token(JSTokenTypes.UNKNOWN, char, lineNumber, column);
                 column++;
             } else if (char === "\t") {
@@ -416,18 +416,21 @@ export class JSTokenizer {
                         token.parentToken = commentBlockIndex[commentBlockIndex.length - 1];
                     }
                 } else if (token.type === JSTokenTypes.BRACKET.CURLY_OPEN && lastToken) {
-                    if (lastToken.parentToken !== undefined)
+                    if (lastToken.parentToken !== undefined) {
                         token.parentToken = lastToken.parentToken;
-                    else
+                    } else {
                         token.parentToken = tokens.length - 1;
-                    if (lastToken.type === JSTokenTypes.BRACKET.PARENTHESIS_GUARD_CLOSE || lastToken.type === JSTokenTypes.KEYWORD.FLOW_CONTROL.ELSE || lastToken.type === JSTokenTypes.KEYWORD.FLOW_CONTROL.TRY || lastToken.type === JSTokenTypes.KEYWORD.FLOW_CONTROL.FINALLY || lastToken.type === JSTokenTypes.KEYWORD.FLOW_CONTROL.DO) {
-                        if (lastToken.type === JSTokenTypes.BRACKET.PARENTHESIS_GUARD_CLOSE && lastToken.parentToken !== undefined)
-                            token.parentToken = lastToken.parentToken;
-                        else
-                            token.parentToken = tokens.length - 1
                     }
-                    if (classDeclarationIndex.length > 0)
+                    if (lastToken.type === JSTokenTypes.BRACKET.PARENTHESIS_GUARD_CLOSE || lastToken.type === JSTokenTypes.KEYWORD.FLOW_CONTROL.ELSE || lastToken.type === JSTokenTypes.KEYWORD.FLOW_CONTROL.TRY || lastToken.type === JSTokenTypes.KEYWORD.FLOW_CONTROL.FINALLY || lastToken.type === JSTokenTypes.KEYWORD.FLOW_CONTROL.DO) {
+                        if (lastToken.type === JSTokenTypes.BRACKET.PARENTHESIS_GUARD_CLOSE && lastToken.parentToken !== undefined) {
+                            token.parentToken = lastToken.parentToken;
+                        } else {
+                            token.parentToken = tokens.length - 1;
+                        }
+                    }
+                    if (classDeclarationIndex.length > 0) {
                         token.parentToken = classDeclarationIndex.pop();
+                    }
                     bracketIndex.push(tokens.length);
                 } else if (token.type === JSTokenTypes.BRACKET.CURLY_CLOSE) {
                     if (bracketIndex.length > 0) {
@@ -442,8 +445,9 @@ export class JSTokenizer {
                             tokens[index].pairToken = tokens.length;
                         }
                     }
-                    if (enumDeclarationIndex.length > 0)
+                    if (enumDeclarationIndex.length > 0) {
                         enumDeclarationIndex.pop();
+                    }
                 } else if (token.type === JSTokenTypes.BRACKET.SQUARE_OPEN) {
                     sqBracketIndex.push(tokens.length);
                 } else if (token.type === JSTokenTypes.BRACKET.SQUARE_CLOSE) {

@@ -158,8 +158,9 @@ export class ApexParser {
      * @returns {ApexTrigger | ApexClass | ApexInterface | ApexEnum} Return the Apex Node from the parsed file
      */
     parse(): ApexTrigger | ApexClass | ApexInterface | ApexEnum {
-        if (this.node)
+        if (this.node) {
             return this.node;
+        }
         if (this.filePath && !this.content && (!this.tokens || this.tokens.length === 0)) {
             this.content = FileReader.readFileSync(Validator.validateFilePath(this.filePath));
             this.tokens = ApexTokenizer.tokenize(this.content, this.systemData, this.tabSize);
@@ -181,10 +182,11 @@ export class ApexParser {
             const nextToken = LanguageUtils.getNextToken(this.tokens, index);
             const twoNextToken = LanguageUtils.getTwoNextToken(this.tokens, index);
             const twoLastToken = LanguageUtils.getTwoLastToken(this.tokens, index);
-            const parentToken = (token.parentToken !== undefined && token.parentToken != -1) ? new Token(this.tokens[token.parentToken]) : undefined;
+            const parentToken = (token.parentToken !== undefined && token.parentToken !== -1) ? new Token(this.tokens[token.parentToken]) : undefined;
             const pairToken = (token.pairToken !== undefined) ? new Token(this.tokens[token.pairToken]) : undefined;
-            if (token.range.start.line < startLine)
+            if (token.range.start.line < startLine) {
                 continue;
+            }
             if (this.cursorPosition && node && !positionData) {
                 if (LanguageUtils.isOnPosition(token, lastToken, nextToken, this.cursorPosition)) {
                     const startIndex = this.cursorPosition.character - token.range.start.character;
@@ -205,8 +207,9 @@ export class ApexParser {
                 if (this.declarationOnly && node.nodeType !== ApexNodeTypes.PROPERTY) {
                     break;
                 }
-                if (!node.startToken)
+                if (!node.startToken) {
                     node.startToken = token;
+                }
                 bracketIndent++;
                 if (isInitializer(token)) {
                     const newNode: ApexInitializer = new ApexInitializer(((node) ? node.id : 'InitialNode') + '.initializer', 'Initializer', token);
@@ -223,16 +226,18 @@ export class ApexParser {
                         this.comment.id = newNode.id + '.' + this.comment.id;
                         this.nodesMap[this.comment.id] = this.comment;
                         newNode.comment = this.comment;
-                        if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
+                        if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template)) {
                             newNode.comment.processComment(this.systemData.template);
+                        }
                         this.comment = undefined;
                         if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                             positionData.parentName = newNode.name;
                         }
                     }
                     this.nodesMap[newNode.id] = newNode;
-                    if (node)
+                    if (node) {
                         node.addChild(newNode);
+                    }
                     node = newNode;
                     resetModifiers(this);
                 }
@@ -242,8 +247,9 @@ export class ApexParser {
                     break;
                 }
                 if (node) {
-                    if (!token.isAux)
+                    if (!token.isAux) {
                         node.endToken = token;
+                    }
                     if (node.parentId) {
                         let initializer = false;
                         if (pairToken && token.pairToken) {
@@ -261,16 +267,20 @@ export class ApexParser {
             } else if (token.type === ApexTokenTypes.PUNCTUATION.SEMICOLON) {
                 if (node && node.parentId) {
                     if ((node.nodeType === ApexNodeTypes.GETTER || node.nodeType === ApexNodeTypes.SETTER) && lastToken && (lastToken.type === ApexTokenTypes.KEYWORD.DECLARATION.PROPERTY_GETTER || lastToken.type === ApexTokenTypes.KEYWORD.DECLARATION.PROPERTY_SETTER)) {
-                        if (!node.startToken)
+                        if (!node.startToken) {
                             node.startToken = token;
-                        if (!node.endToken)
+                        }
+                        if (!node.endToken) {
                             node.endToken = token;
+                        }
                         node = this.nodesMap[node.parentId];
                     } else if ((node.nodeType === ApexNodeTypes.CONSTRUCTOR || node.nodeType === ApexNodeTypes.METHOD) && lastToken && lastToken.type === ApexTokenTypes.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE) {
-                        if (!node.startToken)
+                        if (!node.startToken) {
                             node.startToken = token;
-                        if (!node.endToken)
+                        }
+                        if (!node.endToken) {
                             node.endToken = token;
+                        }
                         node = this.nodesMap[node.parentId];
                     }
                 }
@@ -336,16 +346,18 @@ export class ApexParser {
                     this.comment.id = newNode.id + '.' + this.comment.id;
                     this.nodesMap[this.comment.id] = this.comment;
                     newNode.comment = this.comment;
-                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
+                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template)) {
                         newNode.comment.processComment(this.systemData.template);
+                    }
                     this.comment = undefined;
                     if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
                 this.nodesMap[newNode.id] = newNode;
-                if (node)
+                if (node) {
                     node.addChild(newNode);
+                }
                 node = newNode;
                 resetModifiers(this);
             } else if (isInterface(token)) {
@@ -367,16 +379,18 @@ export class ApexParser {
                     this.comment.id = newNode.id + '.' + this.comment.id;
                     this.nodesMap[this.comment.id] = this.comment;
                     newNode.comment = this.comment;
-                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
+                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template)) {
                         newNode.comment.processComment(this.systemData.template);
+                    }
                     this.comment = undefined;
                     if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
                 this.nodesMap[newNode.id] = newNode;
-                if (node)
+                if (node) {
                     node.addChild(newNode);
+                }
                 node = newNode;
                 resetModifiers(this);
             } else if (isEnum(token)) {
@@ -398,16 +412,18 @@ export class ApexParser {
                     this.comment.id = newNode.id + '.' + this.comment.id;
                     this.nodesMap[this.comment.id] = this.comment;
                     newNode.comment = this.comment;
-                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
+                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template)) {
                         newNode.comment.processComment(this.systemData.template);
+                    }
                     this.comment = undefined;
                     if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
                 this.nodesMap[newNode.id] = newNode;
-                if (node)
+                if (node) {
                     node.addChild(newNode);
+                }
                 node = newNode;
                 resetModifiers(this);
             } else if (isOnTrigger(token)) {
@@ -418,16 +434,18 @@ export class ApexParser {
                     this.comment.id = newNode.id + '.' + this.comment.id;
                     this.nodesMap[this.comment.id] = this.comment;
                     newNode.comment = this.comment;
-                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
+                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template)) {
                         newNode.comment.processComment(this.systemData.template);
+                    }
                     this.comment = undefined;
                     if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
                 this.nodesMap[newNode.id] = newNode;
-                if (node)
+                if (node) {
                     node.addChild(newNode);
+                }
                 node = newNode;
                 resetModifiers(this);
             } else if (isOnImplements(token)) {
@@ -439,16 +457,18 @@ export class ApexParser {
                 index = data.index;
                 node.extendsType = data.extendsName;
             } else if (isEnumValue(token)) {
-                if (node)
+                if (node) {
                     node.addChild(token);
+                }
             } else if (isQuery(token, lastToken)) {
                 const data = processQuery(this.tokens, index, this.cursorPosition, node);
                 index = data.index;
                 if (data.positionData && !positionData) {
                     positionData = data.positionData;
                 }
-                if (node && data.query)
+                if (node && data.query) {
                     node.addChild(data.query);
+                }
             } else if (isProperty(token)) {
                 const newNode: ApexProperty = new ApexProperty(((node) ? node.id : 'InitialNode') + '.property.' + token.textToLower, token.text);
                 newNode.accessModifier = this.accessModifier;
@@ -469,8 +489,9 @@ export class ApexParser {
                     this.comment.id = newNode.id + '.' + this.comment.id;
                     this.nodesMap[this.comment.id] = this.comment;
                     newNode.comment = this.comment;
-                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
+                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template)) {
                         newNode.comment.processComment(this.systemData.template);
+                    }
                     this.comment = undefined;
                     if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
@@ -487,8 +508,9 @@ export class ApexParser {
                     }
                 }
                 this.nodesMap[newNode.id] = newNode;
-                if (node)
+                if (node) {
                     node.addChild(newNode);
+                }
                 node = newNode;
                 resetModifiers(this);
             } else if (isGetterAccessor(token)) {
@@ -505,9 +527,10 @@ export class ApexParser {
                     }
                 }
                 this.nodesMap[newNode.id] = newNode;
-                if (node)
+                if (node) {
                     node.addChild(newNode);
-                node = newNode
+                }
+                node = newNode;
                 resetModifiers(this);
             } else if (isSetterAccessor(token)) {
                 const newNode: ApexSetter = new ApexSetter(((node) ? node.id : 'InitialNode') + '.setter.' + token.textToLower, token.text);
@@ -523,8 +546,9 @@ export class ApexParser {
                     }
                 }
                 this.nodesMap[newNode.id] = newNode;
-                if (node)
+                if (node) {
                     node.addChild(newNode);
+                }
                 node = newNode;
                 resetModifiers(this);
             } else if (isDatatype(token)) {
@@ -554,16 +578,18 @@ export class ApexParser {
                     this.comment.id = newNode.id + '.' + this.comment.id;
                     this.nodesMap[this.comment.id] = this.comment;
                     newNode.comment = this.comment;
-                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
+                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template)) {
                         newNode.comment.processComment(this.systemData.template);
+                    }
                     this.comment = undefined;
                     if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
                 this.nodesMap[newNode.id] = newNode;
-                if (node)
+                if (node) {
                     node.addChild(newNode);
+                }
                 node = newNode;
                 resetModifiers(this);
             } else if (isConstructorDeclaration(token)) {
@@ -592,8 +618,9 @@ export class ApexParser {
                     this.comment.id = newNode.id + '.' + this.comment.id;
                     this.nodesMap[this.comment.id] = this.comment;
                     newNode.comment = this.comment;
-                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
+                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template)) {
                         newNode.comment.processComment(this.systemData.template);
+                    }
                     this.comment = undefined;
                     if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
@@ -601,8 +628,9 @@ export class ApexParser {
                     }
                 }
                 this.nodesMap[newNode.id] = newNode;
-                if (node)
+                if (node) {
                     node.addChild(newNode);
+                }
                 node = newNode;
                 resetModifiers(this);
             } else if (isMethodDeclaration(token)) {
@@ -639,8 +667,9 @@ export class ApexParser {
                     this.comment.id = newNode.id + '.' + this.comment.id;
                     this.nodesMap[this.comment.id] = this.comment;
                     newNode.comment = this.comment;
-                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
+                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template)) {
                         newNode.comment.processComment(this.systemData.template);
+                    }
                     this.comment = undefined;
                     if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
@@ -648,8 +677,9 @@ export class ApexParser {
                     }
                 }
                 this.nodesMap[newNode.id] = newNode;
-                if (node)
+                if (node) {
                     node.addChild(newNode);
+                }
                 node = newNode;
                 resetModifiers(this);
             } else if (isVariableDeclaration(token)) {
@@ -672,8 +702,9 @@ export class ApexParser {
                     this.comment.id = newNode.id + '.' + this.comment.id;
                     this.nodesMap[this.comment.id] = this.comment;
                     newNode.comment = this.comment;
-                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
+                    if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template)) {
                         newNode.comment.processComment(this.systemData.template);
+                    }
                     if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
@@ -685,8 +716,9 @@ export class ApexParser {
                     newNode.datatype = this.datatype;
                 }
                 this.nodesMap[newNode.id] = newNode;
-                if (node)
+                if (node) {
                     node.addChild(newNode);
+                }
                 else if (this.declarationOnly) {
                     node = newNode;
                     break;
@@ -732,8 +764,9 @@ export class ApexParser {
                                 positionData.twoLastToken = twoLastTokenAux;
                             }
                         }
-                        if (auxToken.type === ApexTokenTypes.PUNCTUATION.SEMICOLON)
+                        if (auxToken.type === ApexTokenTypes.PUNCTUATION.SEMICOLON) {
                             break;
+                        }
                         if (auxToken.type === ApexTokenTypes.BRACKET.QUERY_START) {
                             index--;
                             break;
@@ -770,12 +803,14 @@ export class ApexParser {
                                 this.comment.id = newNode.id + '.' + this.comment.id;
                                 this.nodesMap[this.comment.id] = this.comment;
                                 newNode.comment = this.comment;
-                                if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
+                                if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template)) {
                                     newNode.comment.processComment(this.systemData.template);
+                                }
                             }
                             this.nodesMap[sameLineVar.id] = sameLineVar;
-                            if (node)
+                            if (node) {
                                 node.addChild(sameLineVar);
+                            }
                         }
                     }
                     this.comment = undefined;
@@ -789,8 +824,10 @@ export class ApexParser {
                 resetModifiers(this);
             }
         }
-        if (node)
+        if (node) {
             node.positionData = positionData;
+
+        }
         this.node = node;
         return node;
     }
@@ -852,8 +889,9 @@ export class ApexParser {
     static saveClassData(filePath: string, targetfolder: string, systemData?: ParserData): Promise<ApexClass | ApexInterface | ApexEnum | ApexTrigger> {
         return new Promise<ApexClass | ApexInterface | ApexEnum | ApexTrigger>((resolve, reject) => {
             try {
-                if (!FileChecker.isExists(targetfolder))
+                if (!FileChecker.isExists(targetfolder)) {
                     FileWriter.createFolderSync(targetfolder);
+                }
                 const node = new ApexParser(filePath, systemData).parse();
                 if (node) {
                     FileWriter.createFile(targetfolder + '/' + node.name + '.json', JSON.stringify(node, null, 2), function (err) {
@@ -878,8 +916,9 @@ export class ApexParser {
      * @returns {ApexClass | ApexInterface | ApexEnum | ApexTrigger | undefined} Return a the saved node or undefined if not exists
      */
     static saveClassDataSync(filePath: string, targetfolder: string, systemData?: ParserData): ApexClass | ApexInterface | ApexEnum | ApexTrigger | undefined {
-        if (!FileChecker.isExists(targetfolder))
+        if (!FileChecker.isExists(targetfolder)) {
             FileWriter.createFolderSync(targetfolder);
+        }
         const node = new ApexParser(filePath, systemData).parse();
         if (node) {
             FileWriter.createFileSync(targetfolder + '/' + node.name + '.json', JSON.stringify(node, null, 2));
@@ -898,8 +937,9 @@ export class ApexParser {
         return new Promise<void>(async (resolve, reject) => {
             try {
                 targetfolder = PathUtils.getAbsolutePath(targetfolder);
-                if (!FileChecker.isExists(targetfolder))
+                if (!FileChecker.isExists(targetfolder)) {
                     FileWriter.createFolderSync(targetfolder);
+                }
                 for (const file of filePaths) {
                     ApexParser.saveClassDataSync(file, targetfolder, systemData);
                 }
@@ -939,8 +979,9 @@ export class ApexParser {
                         batch.completed = true;
                         let nCompleted = 0;
                         for (const resultBatch of batchesToProcess) {
-                            if (resultBatch.completed)
+                            if (resultBatch.completed) {
                                 nCompleted++;
+                            }
                         }
                         if (nCompleted === batchesToProcess.length) {
                             resolve();
@@ -1039,10 +1080,11 @@ export class ApexParser {
 }
 
 function cleanDatatype(datatype: string) {
-    if (StrUtils.contains(datatype, '<'))
+    if (StrUtils.contains(datatype, '<')) {
         datatype = datatype.split('<')[0];
-    else if (StrUtils.contains(datatype, '[') && StrUtils.contains(datatype, ']'))
+    } else if (StrUtils.contains(datatype, '[') && StrUtils.contains(datatype, ']')) {
         datatype = "List";
+    }
     return datatype.toLowerCase();
 }
 
@@ -1057,11 +1099,12 @@ function resolveDatatypeReference(datatype: string, classes?: any, namespacesDat
             let parentClassOrNs = splits[0];
             className = splits[1];
             if (classes && classes[parentClassOrNs]) {
-                extendsObject = classes[parentClassOrNs]
+                extendsObject = classes[parentClassOrNs];
             } else if (namespacesData && namespacesData[parentClassOrNs]) {
                 let namespaceData = namespacesData[parentClassOrNs];
-                if (namespaceData[className])
+                if (namespaceData[className]) {
                     extendsObject = namespaceData[className];
+                }
             }
             if (!extendsObject && systemMetadata && systemMetadata[parentClassOrNs]) {
                 extendsObject = systemMetadata[parentClassOrNs];
@@ -1074,8 +1117,9 @@ function resolveDatatypeReference(datatype: string, classes?: any, namespacesDat
                 extendsObject = classes[parentClassName];
             } else if (namespacesData && namespacesData[nsName]) {
                 let namespaceData = namespacesData[nsName];
-                if (namespaceData[parentClassName])
+                if (namespaceData[parentClassName]) {
                     extendsObject = namespaceData[parentClassName];
+                }
             }
             if (!extendsObject && systemMetadata && systemMetadata[className]) {
                 extendsObject = systemMetadata[className];
@@ -1092,10 +1136,12 @@ function resolveDatatypeReference(datatype: string, classes?: any, namespacesDat
         extendsObject = extendsObject.classes[className] || extendsObject.interfaces[className] || extendsObject.enums[className];
     }
     if (extendsObject) {
-        if (extendsObject.extendsType)
+        if (extendsObject.extendsType) {
             extendsObject.extends = resolveDatatypeReference(extendsObject.extendsType, classes, namespacesData);
-        if (extendsObject.implementTypes && extendsObject.implementTypes.length > 0)
+        }
+        if (extendsObject.implementTypes && extendsObject.implementTypes.length > 0) {
             extendsObject.implements = resolveImplements(extendsObject.implementTypes, classes, namespacesData);
+        }
     }
     return extendsObject;
 }
@@ -1247,10 +1293,12 @@ function isOnTrigger(token: Token): boolean {
 }
 
 function isQuery(token: Token, lastToken?: Token): boolean {
-    if (token.type === ApexTokenTypes.BRACKET.QUERY_START)
+    if (token.type === ApexTokenTypes.BRACKET.QUERY_START) {
         return true;
-    if (lastToken && lastToken.type === ApexTokenTypes.PUNCTUATION.QUOTTES_START && token.textToLower === 'select')
+    }
+    if (lastToken && lastToken.type === ApexTokenTypes.PUNCTUATION.QUOTTES_START && token.textToLower === 'select') {
         return true;
+    }
     return false;
 }
 
@@ -1326,8 +1374,9 @@ function processQuery(tokens: Token[], index: number, position: Position | undef
                     }
                 } else {
                     field += token.text;
-                    if (!fieldStartToken)
+                    if (!fieldStartToken) {
                         fieldStartToken = token;
+                    }
                 }
             }
         } else {
@@ -1361,8 +1410,9 @@ function processQuery(tokens: Token[], index: number, position: Position | undef
                     }
                 } else {
                     field += token.text;
-                    if (!fieldStartToken)
+                    if (!fieldStartToken) {
                         fieldStartToken = token;
+                    }
                 }
             }
         }
@@ -1394,20 +1444,23 @@ function getInterfaces(tokens: Token[], index: number): any {
         else if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
             aBracketIndent--;
         }
-        if (token.type === ApexTokenTypes.PUNCTUATION.COMMA && aBracketIndent == 0) {
+        if (token.type === ApexTokenTypes.PUNCTUATION.COMMA && aBracketIndent === 0) {
             interfaces.push(interfaceName);
             interfaceName = "";
         } else if (token.type !== ApexTokenTypes.KEYWORD.DECLARATION.IMPLEMENTS && token.type !== ApexTokenTypes.BRACKET.CURLY_OPEN) {
             interfaceName += token.text;
         }
-        if (token.type === ApexTokenTypes.KEYWORD.DECLARATION.EXTENDS || token.type === ApexTokenTypes.BRACKET.CURLY_OPEN)
+        if (token.type === ApexTokenTypes.KEYWORD.DECLARATION.EXTENDS || token.type === ApexTokenTypes.BRACKET.CURLY_OPEN) {
             break;
+        }
     }
     interfaces.push(interfaceName);
-    if (token.type === ApexTokenTypes.KEYWORD.DECLARATION.EXTENDS)
+    if (token.type === ApexTokenTypes.KEYWORD.DECLARATION.EXTENDS) {
         index = index - 2;
-    if (token.type === ApexTokenTypes.BRACKET.CURLY_OPEN)
+    }
+    if (token.type === ApexTokenTypes.BRACKET.CURLY_OPEN) {
         index = index - 2;
+    }
     return {
         index: index,
         interfaces: interfaces,
@@ -1430,9 +1483,10 @@ function getExtends(tokens: Token[], index: number): any {
         if (token.type !== ApexTokenTypes.KEYWORD.DECLARATION.EXTENDS && token.type !== ApexTokenTypes.KEYWORD.DECLARATION.IMPLEMENTS && token.type !== ApexTokenTypes.BRACKET.CURLY_OPEN) {
             extendsName += token.text;
         }
-        if (token.type === ApexTokenTypes.BRACKET.CURLY_OPEN || token.type === ApexTokenTypes.KEYWORD.DECLARATION.IMPLEMENTS || (token.type === ApexTokenTypes.PUNCTUATION.COMMA && aBracketIndent == 0)) {
-            if (token.type === ApexTokenTypes.BRACKET.CURLY_OPEN || token.type === ApexTokenTypes.KEYWORD.DECLARATION.IMPLEMENTS)
+        if (token.type === ApexTokenTypes.BRACKET.CURLY_OPEN || token.type === ApexTokenTypes.KEYWORD.DECLARATION.IMPLEMENTS || (token.type === ApexTokenTypes.PUNCTUATION.COMMA && aBracketIndent === 0)) {
+            if (token.type === ApexTokenTypes.BRACKET.CURLY_OPEN || token.type === ApexTokenTypes.KEYWORD.DECLARATION.IMPLEMENTS) {
                 index = index - 2;
+            }
             break;
         }
     }
@@ -1459,24 +1513,32 @@ function processTrigger(tokens: Token[], index: number, node: ApexTrigger) {
         }
         if (lastToken && lastToken.type === ApexTokenTypes.DATABASE.TRIGGER_EXEC) {
             if (lastToken.textToLower === 'before') {
-                if (token.textToLower === 'insert')
+                if (token.textToLower === 'insert') {
                     node.beforeInsert = true;
-                if (token.textToLower === 'update')
+                }
+                if (token.textToLower === 'update') {
                     node.beforeUpdate = true;
-                if (token.textToLower === 'delete')
+                }
+                if (token.textToLower === 'delete') {
                     node.beforeDelete = true;
-                if (token.textToLower === 'undelete')
+                }
+                if (token.textToLower === 'undelete') {
                     node.beforeUndelete = true;
+                }
 
             } else if (lastToken.textToLower === 'after') {
-                if (token.textToLower === 'insert')
+                if (token.textToLower === 'insert') {
                     node.afterInsert = true;
-                if (token.textToLower === 'update')
+                }
+                if (token.textToLower === 'update') {
                     node.afterUpdate = true;
-                if (token.textToLower === 'delete')
+                }
+                if (token.textToLower === 'delete') {
                     node.afterDelete = true;
-                if (token.textToLower === 'undelete')
+                }
+                if (token.textToLower === 'undelete') {
                     node.afterUndelete = true;
+                }
             }
         }
     }
@@ -1593,8 +1655,9 @@ function processMethodSignature(node: ApexMethod | ApexConstructor, parser: Apex
         newNode.endToken = param.name;
         newNode.scope = node.scope + 1;
         parser.nodesMap[newNode.id] = newNode;
-        if (node)
+        if (node) {
             node.addParam(newNode);
+        }
     }
     if (node.positionData) {
         node.positionData.signature = node.simplifiedSignature || node.signature;
@@ -1874,7 +1937,7 @@ function getBatches(objects: string[], multiThread?: boolean): BatchData[] {
                 batchId: 'Bacth_' + counter,
                 records: [],
                 completed: false
-            }
+            };
             counter++;
         }
         if (batch) {
@@ -1885,8 +1948,9 @@ function getBatches(objects: string[], multiThread?: boolean): BatchData[] {
             }
         }
     }
-    if (batch)
+    if (batch) {
         batches.push(batch);
+    }
     return batches;
 }
 

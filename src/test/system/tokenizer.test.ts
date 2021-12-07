@@ -21,8 +21,9 @@ describe('Testing ./src/system/tokenizer.js', () => {
                 for (const file of FileReader.readDirSync(auraCmpFolder)) {
                     try {
                         const filePath = auraCmpFolder + '/' + file;
-                        if (!FileChecker.isAuraFile(filePath))
+                        if (!FileChecker.isAuraFile(filePath)) {
                             continue;
+                        }
                         /*console.time(folder + ' compilationTime');
                         console.time(fileToProcess + ' parser');*/
                         Tokenizer.tokenize(FileReader.readFileSync(filePath));
