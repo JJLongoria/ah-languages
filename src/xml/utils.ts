@@ -1,5 +1,6 @@
-const { DataTypes } = require('@aurahelper/core').Values;
-const { Utils } = require('@aurahelper/core').CoreUtils;
+import { Datatypes, CoreUtils } from "@aurahelper/core";
+
+const Utils = CoreUtils.Utils;
 
 /**
  * Class with utils methos to use when analize XML Files
@@ -9,10 +10,10 @@ export class XMLUtils {
     /**
      * Method to Clean an XML file
      * @param {any} xmlDefinition XML File Definition
-     * @param {any} xmlData XML File parsed data
+     * @param {any} [xmlData] XML File parsed data
      * @returns {any} Return the content file cleaned
      */
-    static cleanXMLFile(xmlDefinition: any, xmlData: any): any {
+    static cleanXMLFile(xmlDefinition: any, xmlData?: any): any {
         let result;
         if (xmlDefinition) {
             result = {};
@@ -35,9 +36,9 @@ export class XMLUtils {
         const result: any = {};
         Object.keys(xmlMetadata).forEach(function (xmlField) {
             let elementData = xmlMetadata[xmlField];
-            if (elementData.datatype === DataTypes.ARRAY) {
+            if (elementData.datatype === Datatypes.ARRAY) {
                 result[xmlField] = [];
-            } else if (elementData.datatype === DataTypes.OBJECT) {
+            } else if (elementData.datatype === Datatypes.OBJECT) {
                 result[xmlField] = {};
             } else {
                 result[xmlField] = undefined;
@@ -101,6 +102,8 @@ export class XMLUtils {
                         return nameA.toLowerCase().localeCompare(nameB.toLowerCase());
                     }
                 } else {
+                    a = '' + a;
+                    b = '' + b;
                     return a.toLowerCase().localeCompare(b.toLowerCase());
                 }
             });
@@ -130,7 +133,7 @@ export class XMLUtils {
      */
     static getText(data: any) {
         let text = undefined;
-        if (data['#text'] !== undefined){
+        if (data['#text'] !== undefined) {
             text = data['#text'];
         }
         return text;
@@ -161,16 +164,18 @@ function prepareXML(source: any, target: any, definition: any): any {
             } else if (source[key] !== undefined) {
                 target[key] = source[key];
             }
-            if (definition[key].datatype === DataTypes.OBJECT && !Utils.isObject(target[key])) {
+            if (definition[key].datatype === Datatypes.OBJECT && !Utils.isObject(target[key])) {
                 target[key] = {};
-            } else if (definition[key].datatype === DataTypes.ARRAY && !Utils.isArray(target[key]) && target[key]) {
+            } else if (definition[key].datatype === Datatypes.ARRAY && !Utils.isArray(target[key]) && target[key]) {
                 target[key] = Utils.forceArray(target[key]);
             }
         }
-        if (target[key] === undefined)
+        if (target[key] === undefined) {
             delete target[key];
+        }
     });
-    if (source['@attrs'])
+    if (source['@attrs']) {
         target['@attrs'] = source['@attrs'];
+    }
     return target;
 }
