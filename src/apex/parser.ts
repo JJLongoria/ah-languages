@@ -1,29 +1,7 @@
-const { Types, Values, CoreUtils } = require('@aurahelper/core');
-const { PathUtils, FileReader, FileWriter, FileChecker } = require('@aurahelper/core').FileSystem;
-const ApexGetter = Types.ApexGetter;
-const ApexSetter = Types.ApexSetter;
-const ApexProperty = Types.ApexProperty;
-const ApexMethod = Types.ApexMethod;
-const ApexConstructor = Types.ApexConstructor;
-const ApexInitializer = Types.ApexInitializer;
-const ApexComment = Types.ApexComment;
-const ApexCommentBlock = Types.ApexCommentBlock;
-const ApexClass = Types.ApexClass;
-const ApexTrigger = Types.ApexTrigger;
-const SOQLQuery = Types.SOQLQuery;
-const SOQLField = Types.SOQLField;
-const ApexEnum = Types.ApexEnum;
-const ApexInterface = Types.ApexInterface;
-const ApexDatatype = Types.ApexDatatype;
-const ApexStaticConstructor = Types.ApexStaticConstructor;
-const ApexVariable = Types.ApexVariable;
-const ApexAnnotation = Types.ApexAnnotation;
-const PositionData = Types.PositionData;
-const Token = Types.Token;
-const TokenType = require('./tokenTypes');
-const Lexer = require('./tokenizer');
-const LangUtils = require('../utils/languageUtils');
-const ApexNodeType = Values.ApexNodeTypes;
+import { ApexAnnotation, ApexClass, ApexComment, ApexCommentBlock, ApexConstructor, ApexDatatype, ApexDeclarationNode, ApexEnum, ApexGetter, ApexInitializer, ApexInterface, ApexMethod, ApexNode, ApexNodeTypes, ApexProperty, ApexSetter, ApexStaticConstructor, ApexTokenTypes, ApexTrigger, ApexVariable, CoreUtils, FileChecker, FileReader, FileWriter, ParserData, PathUtils, Position, PositionData, SObject, SOQLField, SOQLQuery, Token } from "@aurahelper/core";
+import { LanguageUtils } from "../utils/languageUtils";
+import { ApexTokenizer } from "./tokenizer";
+
 const Utils = CoreUtils.Utils;
 const Validator = CoreUtils.Validator;
 const StrUtils = CoreUtils.StrUtils;
@@ -33,17 +11,47 @@ const MathUtils = CoreUtils.MathUtils;
 /**
  * Class to parse an Apex Class file, content or tokens to extract the class information like fields, methods, variables, constructors, inner classes... and much more.
  */
-class ApexParser {
+export class ApexParser {
 
-    constructor(filePathOrTokens, systemData) {
+    systemData?: ParserData;
+    tokens: Token[];
+    tokensLength: number;
+    filePath?: string;
+    content: string | undefined;
+    nodesMap: { [key: string]: any };
+    accessModifier?: Token;
+    definitionModifier?: Token;
+    sharingModifier?: Token;
+    staticKeyword?: Token;
+    webservice?: Token;
+    final?: Token;
+    override?: Token;
+    transient?: Token;
+    testMethod?: Token;
+    annotation?: ApexAnnotation;
+    comment?: ApexComment | ApexCommentBlock;
+    datatype?: ApexDatatype;
+    cursorPosition?: Position;
+    declarationOnly: boolean;
+    nComments: number;
+    nAnnotations: number;
+    node?: ApexTrigger | ApexClass | ApexInterface | ApexEnum;
+    tabSize: number;
+
+    /**
+     * Create Apex Parser instance to parse Apex Files
+     * @param {string | Token[]} filePathOrTokens File path or file tokens (tokenized with ApexTokenizer class)
+     * @param {ParserData} [systemData] Parser Data object with data from Project and Salesforce to identify tokens with more precission 
+     */
+    constructor(filePathOrTokens: string | Token[], systemData?: ParserData) {
         this.systemData = systemData;
-        if (Utils.isArray(filePathOrTokens)) {
+        if (typeof filePathOrTokens !== 'string') {
             this.tokens = filePathOrTokens;
-            this.tokensLength = this.tokens.length;
         } else {
             this.tokens = [];
             this.filePath = filePathOrTokens;
         }
+        this.tokensLength = this.tokens.length;
         this.content = undefined;
         this.nodesMap = {};
         this.accessModifier;
@@ -66,55 +74,98 @@ class ApexParser {
         this.tabSize = 4;
     }
 
-    setTabSize(tabSize) {
+    /**
+     * Method to set the tab size
+     * @param {number} tabSize Tab size value
+     * @returns {ApexParser} Returns the ApexParser instance
+     */
+    setTabSize(tabSize: number): ApexParser {
         this.tabSize = tabSize;
         return this;
     }
 
-    setTokens(tokens) {
+    /**
+     * Method to set apex file tokens (tokenized with ApexTokenizer class)
+     * @param {Token[]} tokens Apex file tokens
+     * @returns {ApexParser} Returns the ApexParser instance
+     */
+    setTokens(tokens: Token[]): ApexParser {
         this.tokens = tokens;
         this.tokensLength = this.tokens.length;
         return this;
     }
 
-    setSystemData(systemData) {
+    /**
+     * Method to set Parser Data object with data from Project and Salesforce to identify tokens with more precission
+     * @param {ParserData} systemData Parser data object
+     * @returns {ApexParser} Returns the ApexParser instance
+     */
+    setSystemData(systemData: ParserData): ApexParser {
         this.systemData = systemData;
         return this;
     }
 
-    setFilePath(filePath) {
+    /**
+     * Method to set the file path
+     * @param {string} filePath file path value
+     * @returns {ApexParser} Returns the ApexParser instance
+     */
+    setFilePath(filePath: string): ApexParser {
         this.filePath = filePath;
         return this;
     }
 
-    setContent(content) {
+    /**
+     * Method to set apex file content
+     * @param {string} content file content value
+     * @returns {ApexParser} Returns the ApexParser instance
+     */
+    setContent(content: string): ApexParser {
         this.content = content;
         return this;
     }
 
-    setCursorPosition(position) {
+    /**
+     * Method to set the cursor position to get PositionData with parsed node 
+     * @param {Position} position Position object with cursor position data
+     * @returns {ApexParser} Returns the ApexParser instance
+     */
+    setCursorPosition(position: Position): ApexParser {
         this.cursorPosition = position;
         return this;
     }
 
-    isDeclarationOnly(declarationOnly) {
+    /**
+     * Method to indicate to parser to analize only the next declaration from cursor position
+     * @param {boolean} declarationOnly True to analize declaration only, false to parse entire file 
+     * @returns {ApexParser} Returns the ApexParser instance
+     */
+    isDeclarationOnly(declarationOnly: boolean): ApexParser {
         this.declarationOnly = (declarationOnly !== undefined && Utils.isBoolean(declarationOnly)) ? declarationOnly : false;
         return this;
     }
 
+    /**
+     * Method to get the file tokens
+     * @returns {token[]} Return file tokens
+     */
     getTokens() {
         return this.tokens;
     }
 
-    parse() {
+    /**
+     * Method to parse Apex file and get Node information
+     * @returns {ApexTrigger | ApexClass | ApexInterface | ApexEnum} Return the Apex Node from the parsed file
+     */
+    parse(): ApexTrigger | ApexClass | ApexInterface | ApexEnum {
         if (this.node)
             return this.node;
         if (this.filePath && !this.content && (!this.tokens || this.tokens.length === 0)) {
             this.content = FileReader.readFileSync(Validator.validateFilePath(this.filePath));
-            this.tokens = Lexer.tokenize(this.content, this.systemData, this.tabSize);
+            this.tokens = ApexTokenizer.tokenize(this.content, this.systemData, this.tabSize);
             this.tokensLength = this.tokens.length;
         } else if (this.content && (!this.tokens || this.tokens.length === 0)) {
-            this.tokens = Lexer.tokenize(this.content, this.systemData, this.tabSize);
+            this.tokens = ApexTokenizer.tokenize(this.content, this.systemData, this.tabSize);
             this.tokensLength = this.tokens.length;
         } else if (!this.tokens) {
             this.tokens = [];
@@ -125,22 +176,22 @@ class ApexParser {
         let positionData;
         let startLine = (this.cursorPosition && this.declarationOnly) ? this.cursorPosition.line : 0;
         for (let index = 0; index < this.tokensLength; index++) {
-            const lastToken = LangUtils.getLastToken(this.tokens, index);
+            const lastToken = LanguageUtils.getLastToken(this.tokens, index);
             const token = new Token(this.tokens[index]);
-            const nextToken = LangUtils.getNextToken(this.tokens, index);
-            const twoNextToken = LangUtils.getTwoNextToken(this.tokens, index);
-            const twoLastToken = LangUtils.getTwoLastToken(this.tokens, index);
+            const nextToken = LanguageUtils.getNextToken(this.tokens, index);
+            const twoNextToken = LanguageUtils.getTwoNextToken(this.tokens, index);
+            const twoLastToken = LanguageUtils.getTwoLastToken(this.tokens, index);
             const parentToken = (token.parentToken !== undefined && token.parentToken != -1) ? new Token(this.tokens[token.parentToken]) : undefined;
             const pairToken = (token.pairToken !== undefined) ? new Token(this.tokens[token.pairToken]) : undefined;
             if (token.range.start.line < startLine)
                 continue;
             if (this.cursorPosition && node && !positionData) {
-                if (LangUtils.isOnPosition(token, lastToken, nextToken, this.cursorPosition)) {
+                if (LanguageUtils.isOnPosition(token, lastToken, nextToken, this.cursorPosition)) {
                     const startIndex = this.cursorPosition.character - token.range.start.character;
                     const startPart = token.text.substring(0, startIndex + 1);
                     const endPart = token.text.substring(startIndex + 1);
                     positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
-                    positionData.onText = token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+                    positionData.onText = token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_START || token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_END || token.type === ApexTokenTypes.LITERAL.STRING;
                     positionData.signature = node.simplifiedSignature || node.signature;
                     positionData.parentName = node.parentName;
                     positionData.token = token;
@@ -151,14 +202,14 @@ class ApexParser {
                 }
             }
             if (openBracket(token)) {
-                if (this.declarationOnly && node.nodeType !== ApexNodeType.PROPERTY) {
+                if (this.declarationOnly && node.nodeType !== ApexNodeTypes.PROPERTY) {
                     break;
                 }
                 if (!node.startToken)
                     node.startToken = token;
                 bracketIndent++;
                 if (isInitializer(token)) {
-                    const newNode = new ApexInitializer(((node) ? node.id : 'InitialNode') + '.initializer', 'Initializer', token);
+                    const newNode: ApexInitializer = new ApexInitializer(((node) ? node.id : 'InitialNode') + '.initializer', 'Initializer', token);
                     newNode.parentId = (node) ? node.id : undefined;
                     if (this.annotation) {
                         this.annotation.parentId = newNode.id;
@@ -175,7 +226,7 @@ class ApexParser {
                         if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                             newNode.comment.processComment(this.systemData.template);
                         this.comment = undefined;
-                        if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                        if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                             positionData.parentName = newNode.name;
                         }
                     }
@@ -195,8 +246,8 @@ class ApexParser {
                         node.endToken = token;
                     if (node.parentId) {
                         let initializer = false;
-                        if (pairToken) {
-                            const auxLastPairToken = LangUtils.getLastToken(this.tokens, token.pairToken);
+                        if (pairToken && token.pairToken) {
+                            const auxLastPairToken = LanguageUtils.getLastToken(this.tokens, token.pairToken);
                             if (auxLastPairToken && openBracket(auxLastPairToken) && isInitializer(pairToken)) {
                                 initializer = true;
                                 node = this.nodesMap[node.parentId];
@@ -207,15 +258,15 @@ class ApexParser {
                         }
                     }
                 }
-            } else if (token.type === TokenType.PUNCTUATION.SEMICOLON) {
+            } else if (token.type === ApexTokenTypes.PUNCTUATION.SEMICOLON) {
                 if (node && node.parentId) {
-                    if ((node.nodeType === ApexNodeType.GETTER || node.nodeType === ApexNodeType.SETTER) && lastToken && (lastToken.type === TokenType.KEYWORD.DECLARATION.PROPERTY_GETTER || lastToken.type === TokenType.KEYWORD.DECLARATION.PROPERTY_SETTER)) {
+                    if ((node.nodeType === ApexNodeTypes.GETTER || node.nodeType === ApexNodeTypes.SETTER) && lastToken && (lastToken.type === ApexTokenTypes.KEYWORD.DECLARATION.PROPERTY_GETTER || lastToken.type === ApexTokenTypes.KEYWORD.DECLARATION.PROPERTY_SETTER)) {
                         if (!node.startToken)
                             node.startToken = token;
                         if (!node.endToken)
                             node.endToken = token;
                         node = this.nodesMap[node.parentId];
-                    } else if ((node.nodeType === ApexNodeType.CONSTRUCTOR || node.nodeType === ApexNodeType.METHOD) && lastToken && lastToken.type === TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE) {
+                    } else if ((node.nodeType === ApexNodeTypes.CONSTRUCTOR || node.nodeType === ApexNodeTypes.METHOD) && lastToken && lastToken.type === ApexTokenTypes.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE) {
                         if (!node.startToken)
                             node.startToken = token;
                         if (!node.endToken)
@@ -267,7 +318,7 @@ class ApexParser {
                 this.annotation = newNode;
                 this.nAnnotations++;
             } else if (isClass(token)) {
-                const newNode = new ApexClass(((node) ? node.id : 'InitialNode') + '.class.' + token.textToLower, token.text);
+                const newNode: ApexClass = new ApexClass(((node) ? node.id : 'InitialNode') + '.class.' + token.textToLower, token.text);
                 newNode.accessModifier = this.accessModifier;
                 newNode.definitionModifier = this.definitionModifier;
                 newNode.parentId = (node) ? node.id : undefined;
@@ -288,7 +339,7 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
-                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                    if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
@@ -298,7 +349,7 @@ class ApexParser {
                 node = newNode;
                 resetModifiers(this);
             } else if (isInterface(token)) {
-                const newNode = new ApexInterface(((node) ? node.id : 'InitialNode') + '.interface.' + token.textToLower, token.text);
+                const newNode: ApexInterface = new ApexInterface(((node) ? node.id : 'InitialNode') + '.interface.' + token.textToLower, token.text);
                 newNode.accessModifier = this.accessModifier;
                 newNode.definitionModifier = this.definitionModifier;
                 newNode.parentId = (node) ? node.id : undefined;
@@ -319,7 +370,7 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
-                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                    if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
@@ -329,7 +380,7 @@ class ApexParser {
                 node = newNode;
                 resetModifiers(this);
             } else if (isEnum(token)) {
-                const newNode = new ApexEnum(((node) ? node.id : 'InitialNode') + '.enum.' + token.textToLower, token.text);
+                const newNode: ApexEnum = new ApexEnum(((node) ? node.id : 'InitialNode') + '.enum.' + token.textToLower, token.text);
                 newNode.accessModifier = this.accessModifier;
                 newNode.definitionModifier = this.definitionModifier;
                 newNode.parentId = (node) ? node.id : undefined;
@@ -350,7 +401,7 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
-                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                    if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
@@ -360,7 +411,7 @@ class ApexParser {
                 node = newNode;
                 resetModifiers(this);
             } else if (isOnTrigger(token)) {
-                const newNode = new ApexTrigger(((node) ? node.id : 'InitialNode') + '.trigger.', nextToken.text);
+                const newNode: ApexTrigger = new ApexTrigger(((node) ? node.id : 'InitialNode') + '.trigger.', nextToken!.text);
                 index = processTrigger(this.tokens, index, newNode);
                 if (this.comment) {
                     this.comment.parentId = newNode.id;
@@ -370,7 +421,7 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
-                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                    if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
@@ -399,7 +450,7 @@ class ApexParser {
                 if (node && data.query)
                     node.addChild(data.query);
             } else if (isProperty(token)) {
-                const newNode = new ApexProperty(((node) ? node.id : 'InitialNode') + '.property.' + token.textToLower, token.text);
+                const newNode: ApexProperty = new ApexProperty(((node) ? node.id : 'InitialNode') + '.property.' + token.textToLower, token.text);
                 newNode.accessModifier = this.accessModifier;
                 newNode.definitionModifier = this.definitionModifier;
                 newNode.parentId = (node) ? node.id : undefined;
@@ -421,7 +472,7 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
-                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                    if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
@@ -431,7 +482,7 @@ class ApexParser {
                     this.nodesMap[this.datatype.id] = this.datatype;
                     newNode.datatype = this.datatype;
                     this.datatype = undefined;
-                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                    if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
@@ -441,7 +492,7 @@ class ApexParser {
                 node = newNode;
                 resetModifiers(this);
             } else if (isGetterAccessor(token)) {
-                const newNode = new ApexGetter(((node) ? node.id : 'InitialNode') + '.getter.' + token.textToLower, token.text);
+                const newNode: ApexGetter = new ApexGetter(((node) ? node.id : 'InitialNode') + '.getter.' + token.textToLower, token.text);
                 newNode.parentId = (node) ? node.id : undefined;
                 if (this.comment) {
                     this.comment.parentId = newNode.id;
@@ -449,7 +500,7 @@ class ApexParser {
                     this.nodesMap[this.comment.id] = this.comment;
                     newNode.comment = this.comment;
                     this.comment = undefined;
-                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                    if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
@@ -459,7 +510,7 @@ class ApexParser {
                 node = newNode
                 resetModifiers(this);
             } else if (isSetterAccessor(token)) {
-                const newNode = new ApexSetter(((node) ? node.id : 'InitialNode') + '.setter.' + token.textToLower, token.text);
+                const newNode: ApexSetter = new ApexSetter(((node) ? node.id : 'InitialNode') + '.setter.' + token.textToLower, token.text);
                 newNode.parentId = (node) ? node.id : undefined;
                 if (this.comment) {
                     this.comment.parentId = newNode.id;
@@ -467,7 +518,7 @@ class ApexParser {
                     this.nodesMap[this.comment.id] = this.comment;
                     newNode.comment = this.comment;
                     this.comment = undefined;
-                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                    if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
@@ -477,7 +528,7 @@ class ApexParser {
                 node = newNode;
                 resetModifiers(this);
             } else if (isDatatype(token)) {
-                const newNode = new ApexDatatype('datatype.', '', token);
+                const newNode: ApexDatatype = new ApexDatatype('datatype.', '', token);
                 index = processDatatype(newNode, this, index);
                 if (newNode.positionData) {
                     positionData = newNode.positionData;
@@ -488,7 +539,7 @@ class ApexParser {
                 }
                 this.datatype = newNode;
             } else if (isStaticConstructorDeclaration(token)) {
-                const newNode = new ApexStaticConstructor(((node) ? node.id : 'InitialNode') + '.staticConstructor.' + token.textToLower, token.text);
+                const newNode: ApexStaticConstructor = new ApexStaticConstructor(((node) ? node.id : 'InitialNode') + '.staticConstructor.' + token.textToLower, token.text);
                 newNode.parentId = (node) ? node.id : undefined;
                 newNode.scope = bracketIndent;
                 if (this.annotation) {
@@ -506,7 +557,7 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
-                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                    if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
@@ -516,7 +567,7 @@ class ApexParser {
                 node = newNode;
                 resetModifiers(this);
             } else if (isConstructorDeclaration(token)) {
-                const newNode = new ApexConstructor(((node) ? node.id : 'InitialNode') + '.constructor.' + token.textToLower, token.text);
+                const newNode: ApexConstructor = new ApexConstructor(((node) ? node.id : 'InitialNode') + '.constructor.' + token.textToLower, token.text);
                 newNode.accessModifier = this.accessModifier;
                 newNode.definitionModifier = this.definitionModifier;
                 newNode.parentId = (node) ? node.id : undefined;;
@@ -544,7 +595,7 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
-                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                    if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                         positionData.signature = newNode.simplifiedSignature;
                     }
@@ -555,7 +606,7 @@ class ApexParser {
                 node = newNode;
                 resetModifiers(this);
             } else if (isMethodDeclaration(token)) {
-                const newNode = new ApexMethod(((node) ? node.id : 'InitialNode') + '.method.' + token.textToLower, token.text);
+                const newNode: ApexMethod = new ApexMethod(((node) ? node.id : 'InitialNode') + '.method.' + token.textToLower, token.text);
                 newNode.accessModifier = this.accessModifier;
                 newNode.definitionModifier = this.definitionModifier;
                 newNode.parentId = (node) ? node.id : undefined;;
@@ -591,7 +642,7 @@ class ApexParser {
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
                     this.comment = undefined;
-                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                    if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                         positionData.signature = newNode.simplifiedSignature;
                     }
@@ -623,7 +674,7 @@ class ApexParser {
                     newNode.comment = this.comment;
                     if (!this.declarationOnly && this.systemData && this.systemData.template && Utils.hasKeys(this.systemData.template))
                         newNode.comment.processComment(this.systemData.template);
-                    if (positionData && (positionData.nodeType === ApexNodeType.BLOCK_COMMENT || positionData.nodeType === ApexNodeType.COMMENT)) {
+                    if (positionData && (positionData.nodeType === ApexNodeTypes.BLOCK_COMMENT || positionData.nodeType === ApexNodeTypes.COMMENT)) {
                         positionData.parentName = newNode.name;
                     }
                 }
@@ -641,12 +692,12 @@ class ApexParser {
                     break;
                 }
                 if (this.cursorPosition && node && !positionData) {
-                    if (LangUtils.isOnPosition(token, lastToken, nextToken, this.cursorPosition)) {
+                    if (LanguageUtils.isOnPosition(token, lastToken, nextToken, this.cursorPosition)) {
                         const startIndex = this.cursorPosition.character - token.range.start.character;
                         const startPart = token.text.substring(0, startIndex + 1);
                         const endPart = token.text.substring(startIndex + 1);
                         positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
-                        positionData.onText = token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+                        positionData.onText = token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_START || token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_END || token.type === ApexTokenTypes.LITERAL.STRING;
                         positionData.signature = node.simplifiedSignature || node.signature;
                         positionData.parentName = node.name;
                         positionData.token = token;
@@ -656,22 +707,22 @@ class ApexParser {
                         positionData.twoLastToken = twoLastToken;
                     }
                 }
-                if (nextToken.type === TokenType.PUNCTUATION.COMMA || nextToken.type === TokenType.OPERATOR.ASSIGN.ASSIGN) {
+                if (nextToken && (nextToken.type === ApexTokenTypes.PUNCTUATION.COMMA || nextToken.type === ApexTokenTypes.OPERATOR.ASSIGN.ASSIGN)) {
                     index++;
                     let paramIndent = 0;
                     for (; index < this.tokensLength; index++) {
                         const auxToken = this.tokens[index];
-                        const nextTokenAux = LangUtils.getNextToken(this.tokens, index);
-                        const lastTokenAux = LangUtils.getLastToken(this.tokens, index);
-                        const twoNextTokenAux = LangUtils.getTwoNextToken(this.tokens, index);
-                        const twoLastTokenAux = LangUtils.getTwoLastToken(this.tokens, index);
+                        const nextTokenAux = LanguageUtils.getNextToken(this.tokens, index);
+                        const lastTokenAux = LanguageUtils.getLastToken(this.tokens, index);
+                        const twoNextTokenAux = LanguageUtils.getTwoNextToken(this.tokens, index);
+                        const twoLastTokenAux = LanguageUtils.getTwoLastToken(this.tokens, index);
                         if (this.cursorPosition && node && !positionData) {
-                            if (LangUtils.isOnPosition(token, lastTokenAux, nextTokenAux, this.cursorPosition)) {
+                            if (LanguageUtils.isOnPosition(token, lastTokenAux, nextTokenAux, this.cursorPosition)) {
                                 const startIndex = this.cursorPosition.character - token.range.start.character;
                                 const startPart = token.text.substring(0, startIndex + 1);
                                 const endPart = token.text.substring(startIndex + 1);
                                 positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
-                                positionData.onText = token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+                                positionData.onText = token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_START || token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_END || token.type === ApexTokenTypes.LITERAL.STRING;
                                 positionData.signature = node.simplifiedSignature || node.signature;
                                 positionData.parentName = node.name;
                                 positionData.token = token;
@@ -681,20 +732,21 @@ class ApexParser {
                                 positionData.twoLastToken = twoLastTokenAux;
                             }
                         }
-                        if (auxToken.type === TokenType.PUNCTUATION.SEMICOLON)
+                        if (auxToken.type === ApexTokenTypes.PUNCTUATION.SEMICOLON)
                             break;
-                        if (auxToken.type === TokenType.BRACKET.QUERY_START) {
+                        if (auxToken.type === ApexTokenTypes.BRACKET.QUERY_START) {
                             index--;
                             break;
                         }
-                        if (auxToken.type === TokenType.BRACKET.PARENTHESIS_PARAM_OPEN) {
+                        if (auxToken.type === ApexTokenTypes.BRACKET.PARENTHESIS_PARAM_OPEN) {
                             paramIndent++;
-                        } else if (auxToken.type === TokenType.BRACKET.PARENTHESIS_PARAM_CLOSE) {
+                        } else if (auxToken.type === ApexTokenTypes.BRACKET.PARENTHESIS_PARAM_CLOSE) {
                             paramIndent--;
                         }
-                        if (paramIndent === 0 && (auxToken.type === TokenType.DECLARATION.ENTITY.VARIABLE || auxToken.type === TokenType.ENTITY.VARIABLE)) {
-                            if (lastTokenAux.type === TokenType.OPERATOR.ASSIGN.ASSIGN)
+                        if (paramIndent === 0 && (auxToken.type === ApexTokenTypes.DECLARATION.ENTITY.VARIABLE || auxToken.type === ApexTokenTypes.ENTITY.VARIABLE)) {
+                            if (lastTokenAux && lastTokenAux.type === ApexTokenTypes.OPERATOR.ASSIGN.ASSIGN) {
                                 continue;
+                            }
                             let sameLineVar = new ApexVariable(((node) ? node.id : 'InitialNode') + '.variable.' + auxToken.textToLower, auxToken.text, auxToken);
                             sameLineVar.accessModifier = this.accessModifier;
                             sameLineVar.definitionModifier = this.definitionModifier;
@@ -703,7 +755,7 @@ class ApexParser {
                             sameLineVar.final = this.final;
                             sameLineVar.scope = bracketIndent;
                             sameLineVar.endToken = auxToken;
-                            const dataTypeNode = new ApexDatatype(this.datatype);
+                            const dataTypeNode = (this.datatype) ? new ApexDatatype(this.datatype) : new ApexDatatype('');
                             dataTypeNode.id = sameLineVar.id + '.datatype.' + dataTypeNode.name;
                             this.nodesMap[dataTypeNode.id] = dataTypeNode;
                             sameLineVar.datatype = dataTypeNode;
@@ -743,37 +795,73 @@ class ApexParser {
         return node;
     }
 
-    resolveReferences(node) {
+    /**
+     * Method to resolve resolve extend and implement references from Apex Class or Apex Interface
+     * @param {ApexClass | ApexInterface} node Node to resolve references 
+     * @returns 
+     */
+    resolveReferences(node?: ApexClass | ApexInterface) {
         let nodeToResolve = node || this.node;
         if (!nodeToResolve) {
             nodeToResolve = this.parse();
         }
-        if (nodeToResolve && nodeToResolve.extendsType)
-            nodeToResolve.extends = resolveDatatypeReference(nodeToResolve.extendsType, this.systemData.userClassesData, this.systemData.namespacesData);
-        if (nodeToResolve && nodeToResolve.implementTypes && nodeToResolve.implementTypes.length > 0)
-            nodeToResolve.implements = resolveImplements(nodeToResolve.implementTypes, this.systemData.userClassesData, this.systemData.namespacesData);
+        if (nodeToResolve instanceof ApexClass || nodeToResolve instanceof ApexClass) {
+            if (nodeToResolve && nodeToResolve.extendsType) {
+                const resolved = resolveDatatypeReference(nodeToResolve.extendsType, this.systemData!.userClassesData, this.systemData!.namespacesData);
+                if (resolved instanceof ApexClass || resolved instanceof ApexInterface) {
+                    nodeToResolve.extends = resolved;
+                }
+            }
+            if (nodeToResolve && nodeToResolve.implementTypes && nodeToResolve.implementTypes.length > 0) {
+                const resolved = resolveImplements(nodeToResolve.implementTypes, this.systemData!.userClassesData, this.systemData!.namespacesData);
+                const implementTypes: { [key: string]: ApexInterface } = {};
+                if (resolved) {
+                    for (const key of Object.keys(resolved)) {
+                        const resolvedType = resolved[key];
+                        if (resolvedType instanceof ApexInterface) {
+                            implementTypes[key] = resolvedType;
+                        }
+                    }
+                }
+                nodeToResolve.implements = implementTypes;
+            }
+        }
         return nodeToResolve;
     }
 
-    resolveDatatype(datatype) {
-        let resolved = resolveDatatypeReference(datatype, this.systemData.userClassesData, this.systemData.namespacesData);
-        if (!resolved && this.systemData && this.systemData.sObjectsData)
+    /**
+     * Method to resolve a datatype reference to get the Class, interface, SObject or other datatype
+     * @param {string} datatype Datatype to resolve 
+     * @returns {ApexClass | ApexInterface | ApexEnum | SObject | undefined} Return the resolved datatype or undefined if cant resolve it
+     */
+    resolveDatatype(datatype: string): ApexClass | ApexInterface | ApexEnum | SObject | undefined {
+        let resolved = resolveDatatypeReference(datatype, this.systemData!.userClassesData, this.systemData!.namespacesData);
+        if (!resolved && this.systemData && this.systemData.sObjectsData) {
             resolved = this.systemData.sObjectsData[datatype.toLowerCase()];
+        }
         return resolved;
     }
 
-    static saveClassData(filePath, targetfolder, systemData) {
-        return new Promise((resolve, reject) => {
+    /**
+     * Static method to parse and save the specified class data on async mode
+     * @param {string} filePath Apex file path
+     * @param {string} targetfolder Target folder to save
+     * @param {ParserData} [systemData] Parser Data object with data from Project and Salesforce to identify tokens with more precission 
+     * @returns {Promise<ApexClass | ApexInterface | ApexEnum | ApexTrigger>} Return a promise with the saved node
+     */
+    static saveClassData(filePath: string, targetfolder: string, systemData?: ParserData): Promise<ApexClass | ApexInterface | ApexEnum | ApexTrigger> {
+        return new Promise<ApexClass | ApexInterface | ApexEnum | ApexTrigger>((resolve, reject) => {
             try {
                 if (!FileChecker.isExists(targetfolder))
                     FileWriter.createFolderSync(targetfolder);
                 const node = new ApexParser(filePath, systemData).parse();
                 if (node) {
-                    FileWriter.createFile(targetfolder + '/' + node.name + '.json', JSON.stringify(node, null, 2), function (path, err) {
-                        if (!err)
+                    FileWriter.createFile(targetfolder + '/' + node.name + '.json', JSON.stringify(node, null, 2), function (err) {
+                        if (!err) {
                             resolve(node);
-                        else
+                        } else {
                             reject(err);
+                        }
                     });
                 }
             } catch (error) {
@@ -782,17 +870,32 @@ class ApexParser {
         });
     }
 
-    static saveClassDataSync(filePath, targetfolder, systemData) {
+    /**
+     * Static method to parse and save the specified class data on sync mode
+     * @param {string} filePath Apex file path
+     * @param {string} targetfolder Target folder to save
+     * @param {ParserData} [systemData] Parser Data object with data from Project and Salesforce to identify tokens with more precission 
+     * @returns {ApexClass | ApexInterface | ApexEnum | ApexTrigger | undefined} Return a the saved node or undefined if not exists
+     */
+    static saveClassDataSync(filePath: string, targetfolder: string, systemData?: ParserData): ApexClass | ApexInterface | ApexEnum | ApexTrigger | undefined {
         if (!FileChecker.isExists(targetfolder))
             FileWriter.createFolderSync(targetfolder);
         const node = new ApexParser(filePath, systemData).parse();
-        if (node)
+        if (node) {
             FileWriter.createFileSync(targetfolder + '/' + node.name + '.json', JSON.stringify(node, null, 2));
+        }
         return node;
     }
 
-    static saveClassesData(filePaths, targetfolder, systemData) {
-        return new Promise(async (resolve, reject) => {
+    /**
+     * Static method to parse and save the several classes data on async mode 
+     * @param {string[]} filePaths File paths to parse and save
+     * @param {string} targetfolder Target folder to save
+     * @param {ParserData} [systemData] Parser Data object with data from Project and Salesforce to identify tokens with more precission  
+     * @returns {Promise<void>} Return an empty promise when finish
+     */
+    static saveClassesData(filePaths: string[], targetfolder: string, systemData?: ParserData): Promise<void> {
+        return new Promise<void>(async (resolve, reject) => {
             try {
                 targetfolder = PathUtils.getAbsolutePath(targetfolder);
                 if (!FileChecker.isExists(targetfolder))
@@ -807,8 +910,16 @@ class ApexParser {
         });
     }
 
-    static saveAllClassesData(classesPath, targetfolder, systemData, multiThread) {
-        return new Promise((resolve, reject) => {
+    /**
+     * Method to parse and save all classes from a specified folder on async mode
+     * @param {string} classesPath Classes folder path
+     * @param {string} targetfolder Target folder to save
+     * @param {ParserData} [systemData] Parser Data object with data from Project and Salesforce to identify tokens with more precission
+     * @param {boolean} [multiThread] True to use several threads to analize classes, false to use single thread.
+     * @returns {Promise<void>} Return an empty promise when process finish
+     */
+    static saveAllClassesData(classesPath: string, targetfolder: string, systemData?: ParserData, multiThread?: boolean): Promise<void> {
+        return new Promise<void>((resolve, reject) => {
             try {
                 classesPath = Validator.validateFolderPath(classesPath);
                 const files = FileReader.readDirSync(classesPath, {
@@ -845,42 +956,89 @@ class ApexParser {
         });
     }
 
-    static isMethodExists(classOrInterface, method) {
-        return !Utils.isNull(classOrInterface.methods[method.simplifiedSignature.toLowerCase()]);
+    /**
+     * Method to check if a class or interface has the specified method
+     * @param {ApexClass | ApexInterface} classOrInterface Class or interface to check if method exists
+     * @param {ApexMethod} method Method to check
+     * @returns {boolean} Return true if method exists, false in otherwise
+     */
+    static isMethodExists(classOrInterface: ApexClass | ApexInterface, method: ApexMethod): boolean {
+        return !Utils.isNull(classOrInterface.methods[method.simplifiedSignature!.toLowerCase()]);
     }
 
-    static isConstructorExists(classOrInterface, constructor) {
-        return !Utils.isNull(classOrInterface.constructors[constructor.simplifiedSignature.toLowerCase()]);
+    /**
+     * Method to check if a class or interface has the specified constructor
+     * @param {ApexClass | ApexInterface} classOrInterface Class or interface to check if constructor exists
+     * @param {ApexConstructor} constructor Constructor to check
+     * @returns {boolean} Return true if constructor exists, false in otherwise
+     */
+    static isConstructorExists(classOrInterface: ApexClass | ApexInterface, constructor: ApexConstructor): boolean {
+        return !Utils.isNull(classOrInterface.constructors[constructor.simplifiedSignature!.toLowerCase()]);
     }
 
-    static isFieldExists(classOrInterface, variable) {
+    /**
+     * Method to check if a class or interface has the specified field
+     * @param {ApexClass | ApexInterface} classOrInterface Class or interface to check if field exists
+     * @param {ApexVariable | ApexProperty} variable Field to check
+     * @returns {boolean} Return true if field exists, false in otherwise
+     */
+    static isFieldExists(classOrInterface: ApexClass | ApexInterface, variable: ApexVariable | ApexProperty): boolean {
         return !Utils.isNull(classOrInterface.methods[variable.name.toLowerCase()]);
     }
 
-    static isClassExists(classOrInterface, apexClass) {
+    /**
+     * Method to check if a class or interface has the specified class
+     * @param {ApexClass | ApexInterface} classOrInterface Class or interface to check if class exists
+     * @param {ApexClass} apexClass Class to check
+     * @returns {boolean} Return true if class exists, false in otherwise
+     */
+    static isClassExists(classOrInterface: ApexClass | ApexInterface, apexClass: ApexClass): boolean {
         return !Utils.isNull(classOrInterface.classes[apexClass.name.toLowerCase()]);
     }
 
-    static isInterfaceExists(classOrInterface, apexInterface) {
+    /**
+     * Method to check if a class or interface has the specified interface
+     * @param {ApexClass | ApexInterface} classOrInterface Class or interface to check if interface exists
+     * @param {ApexInterface} apexInterface Interface to check
+     * @returns {boolean} Return true if interface exists, false in otherwise
+     */
+    static isInterfaceExists(classOrInterface: ApexClass | ApexInterface, apexInterface: ApexInterface): boolean {
         return !Utils.isNull(classOrInterface.interfaces[apexInterface.name.toLowerCase()]);
     }
 
-    static isEnumExists(classOrInterface, apexEnum) {
+    /**
+     * Method to check if a class or interface has the specified enum
+     * @param {ApexClass | ApexInterface} classOrInterface Class or interface to check if enum exists
+     * @param {ApexEnum} apexEnum Enum to check
+     * @returns {boolean} Return true if enum exists, false in otherwise
+     */
+    static isEnumExists(classOrInterface: ApexClass | ApexInterface, apexEnum: ApexEnum): boolean {
         return !Utils.isNull(classOrInterface.enums[apexEnum.name.toLowerCase()]);
     }
 
-    static extendsFrom(classOrInterface, extendsType) {
-        return !Utils.isNull(classOrInterface.extends) && classOrInterface.extends.name.toLowerCase() === extendsType.name.toLowerCase();
+    /**
+     * Method to check if a class or interface extends from the specified class
+     * @param {ApexClass | ApexInterface} classOrInterface Class or interface to check if extends from the specified type
+     * @param {ApexClass} extendsType Class to check
+     * @returns {boolean} Return true if extends from class, false in otherwise
+     */
+    static extendsFrom(classOrInterface: ApexClass, extendsType: ApexClass): boolean {
+        return !Utils.isNull(classOrInterface.extends) && classOrInterface.extends!.name.toLowerCase() === extendsType.name.toLowerCase();
     }
 
-    static implementsFrom(classOrInterface, implementsType) {
+    /**
+     * Method to check if a class or interface implments from the specified interface
+     * @param {ApexClass | ApexInterface} classOrInterface Class or interface to check if implements from the specified type
+     * @param {ApexInterface} implementsType Interface to check
+     * @returns {boolean} Return true if implments from interface, false in otherwise
+     */
+    static implementsFrom(classOrInterface: ApexClass | ApexInterface, implementsType: ApexInterface): boolean {
         return !Utils.isNull(classOrInterface.implements[implementsType.name.toLowerCase()]);
     }
 
 }
-module.exports = ApexParser;
 
-function cleanDatatype(datatype) {
+function cleanDatatype(datatype: string) {
     if (StrUtils.contains(datatype, '<'))
         datatype = datatype.split('<')[0];
     else if (StrUtils.contains(datatype, '[') && StrUtils.contains(datatype, ']'))
@@ -888,7 +1046,7 @@ function cleanDatatype(datatype) {
     return datatype.toLowerCase();
 }
 
-function resolveDatatypeReference(datatype, classes, namespacesData) {
+function resolveDatatypeReference(datatype: string, classes?: any, namespacesData?: any): ApexClass | ApexInterface | ApexEnum {
     let extendsObject;
     let className;
     const systemMetadata = namespacesData ? namespacesData['system'] : undefined;
@@ -942,17 +1100,18 @@ function resolveDatatypeReference(datatype, classes, namespacesData) {
     return extendsObject;
 }
 
-function resolveImplements(implementTypes, classes, namespacesData) {
-    const implementObjects = {};
+function resolveImplements(implementTypes: string[], classes: any, namespacesData: any): { [key: string]: ApexClass | ApexInterface | ApexEnum } {
+    const implementObjects: { [key: string]: ApexClass | ApexInterface | ApexEnum } = {};
     for (let impType of implementTypes) {
         const reference = resolveDatatypeReference(impType, classes, namespacesData);
-        if (!Utils.isNull(reference))
+        if (!Utils.isNull(reference)) {
             implementObjects[reference.name.toLowerCase()] = reference;
+        }
     }
     return implementObjects;
 }
 
-function resetModifiers(parser) {
+function resetModifiers(parser: ApexParser): void {
     parser.accessModifier = undefined;
     parser.definitionModifier = undefined;
     parser.sharingModifier = undefined;
@@ -967,170 +1126,171 @@ function resetModifiers(parser) {
     parser.webservice = undefined;
 }
 
-function isDatatype(token) {
-    return token && (token.type === TokenType.DATATYPE.COLLECTION || token.type === TokenType.DATATYPE.CUSTOM_CLASS || token.type === TokenType.DATATYPE.PRIMITIVE || token.type === TokenType.DATATYPE.SOBJECT || token.type === TokenType.DATATYPE.SUPPORT_CLASS || token.type === TokenType.DATATYPE.SUPPORT_NAMESPACE || token.type === TokenType.ENTITY.CLASS_MEMBER || token.type === TokenType.ENTITY.SUPPORT_CLASS_MEMBER);
+function isDatatype(token: Token): boolean {
+    return token && (token.type === ApexTokenTypes.DATATYPE.COLLECTION || token.type === ApexTokenTypes.DATATYPE.CUSTOM_CLASS || token.type === ApexTokenTypes.DATATYPE.PRIMITIVE || token.type === ApexTokenTypes.DATATYPE.SOBJECT || token.type === ApexTokenTypes.DATATYPE.SUPPORT_CLASS || token.type === ApexTokenTypes.DATATYPE.SUPPORT_NAMESPACE || token.type === ApexTokenTypes.ENTITY.CLASS_MEMBER || token.type === ApexTokenTypes.ENTITY.SUPPORT_CLASS_MEMBER);
 }
 
-function isAnnotation(token) {
-    return token && token.type === TokenType.ANNOTATION.ENTITY;
+function isAnnotation(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.ANNOTATION.ENTITY;
 }
 
-function isConstructorDeclaration(token) {
-    return token && token.type === TokenType.DECLARATION.ENTITY.CONSTRUCTOR;
+function isConstructorDeclaration(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.DECLARATION.ENTITY.CONSTRUCTOR;
 }
 
-function isMethodDeclaration(token) {
-    return token && token.type === TokenType.DECLARATION.ENTITY.FUNCTION;
+function isMethodDeclaration(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.DECLARATION.ENTITY.FUNCTION;
 }
 
-function isStaticConstructorDeclaration(token) {
-    return token && token.type === TokenType.KEYWORD.DECLARATION.STATIC_CONSTRUCTOR;
+function isStaticConstructorDeclaration(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.KEYWORD.DECLARATION.STATIC_CONSTRUCTOR;
 }
 
-function isVariableDeclaration(token) {
-    return token && token.type === TokenType.DECLARATION.ENTITY.VARIABLE;
+function isVariableDeclaration(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.DECLARATION.ENTITY.VARIABLE;
 }
 
-function openBracket(token) {
-    return token && (token.type === TokenType.BRACKET.CURLY_OPEN || token.type === TokenType.BRACKET.INITIALIZER_OPEN);
+function openBracket(token: Token): boolean {
+    return token && (token.type === ApexTokenTypes.BRACKET.CURLY_OPEN || token.type === ApexTokenTypes.BRACKET.INITIALIZER_OPEN);
 }
 
-function closeBracket(token) {
-    return token && (token.type === TokenType.BRACKET.CURLY_CLOSE || token.type === TokenType.BRACKET.INITIALIZER_CLOSE);
+function closeBracket(token: Token): boolean {
+    return token && (token.type === ApexTokenTypes.BRACKET.CURLY_CLOSE || token.type === ApexTokenTypes.BRACKET.INITIALIZER_CLOSE);
 }
 
-function isAccessModifier(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.ACCESS;
+function isAccessModifier(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.ACCESS;
 }
 
-function openCommentBlock(token) {
-    return token && token.type === TokenType.COMMENT.BLOCK_START;
+function openCommentBlock(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.COMMENT.BLOCK_START;
 }
 
-function closeCommentBlock(token) {
-    return token && token.type === TokenType.COMMENT.BLOCK_END;
+function closeCommentBlock(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.COMMENT.BLOCK_END;
 }
 
-function isCommentLine(token) {
-    return token && (token.type === TokenType.COMMENT.LINE || token.type === TokenType.COMMENT.LINE_DOC);
+function isCommentLine(token: Token): boolean {
+    return token && (token.type === ApexTokenTypes.COMMENT.LINE || token.type === ApexTokenTypes.COMMENT.LINE_DOC);
 }
 
-function isDefinitionModifier(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.DEFINITION;
+function isDefinitionModifier(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.DEFINITION;
 }
 
-function isSharingModifier(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.SHARING;
+function isSharingModifier(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.SHARING;
 }
 
-function isStatic(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.STATIC;
+function isStatic(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.STATIC;
 }
 
-function isFinal(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.FINAL;
+function isFinal(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.FINAL;
 }
 
-function isWebservice(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.WEB_SERVICE;
+function isWebservice(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.WEB_SERVICE;
 }
 
-function isTestMethod(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.TEST_METHOD;
+function isTestMethod(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.TEST_METHOD;
 }
 
-function isOverride(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.OVERRIDE;
+function isOverride(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.OVERRIDE;
 }
 
-function isTransient(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.TRANSIENT;
+function isTransient(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.TRANSIENT;
 }
 
-function isClass(token) {
-    return token && token.type === TokenType.DECLARATION.ENTITY.CLASS;
+function isClass(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.DECLARATION.ENTITY.CLASS;
 }
 
-function isInterface(token) {
-    return token && token.type === TokenType.DECLARATION.ENTITY.INTERFACE;
+function isInterface(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.DECLARATION.ENTITY.INTERFACE;
 }
 
-function isEnum(token) {
-    return token && token.type === TokenType.DECLARATION.ENTITY.ENUM;
+function isEnum(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.DECLARATION.ENTITY.ENUM;
 }
 
-function isProperty(token) {
-    return token && token.type === TokenType.DECLARATION.ENTITY.PROPERTY;
+function isProperty(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.DECLARATION.ENTITY.PROPERTY;
 }
 
-function isGetterAccessor(token) {
-    return token && token.type === TokenType.KEYWORD.DECLARATION.PROPERTY_GETTER;
+function isGetterAccessor(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.KEYWORD.DECLARATION.PROPERTY_GETTER;
 }
 
-function isSetterAccessor(token) {
-    return token && token.type === TokenType.KEYWORD.DECLARATION.PROPERTY_SETTER;
+function isSetterAccessor(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.KEYWORD.DECLARATION.PROPERTY_SETTER;
 }
 
-function isInitializer(token) {
-    return token && token.type === TokenType.BRACKET.INITIALIZER_OPEN;
+function isInitializer(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.BRACKET.INITIALIZER_OPEN;
 }
 
-function isOnImplements(token) {
-    return token.type === TokenType.KEYWORD.DECLARATION.IMPLEMENTS;
+function isOnImplements(token: Token): boolean {
+    return token.type === ApexTokenTypes.KEYWORD.DECLARATION.IMPLEMENTS;
 }
 
-function isOnExtends(token) {
-    return token.type === TokenType.KEYWORD.DECLARATION.EXTENDS;
+function isOnExtends(token: Token): boolean {
+    return token.type === ApexTokenTypes.KEYWORD.DECLARATION.EXTENDS;
 }
 
-function isOnTrigger(token) {
-    return token.type === TokenType.KEYWORD.DECLARATION.TRIGGER;
+function isOnTrigger(token: Token): boolean {
+    return token.type === ApexTokenTypes.KEYWORD.DECLARATION.TRIGGER;
 }
 
-function isQuery(token, lastToken) {
-    if (token.type === TokenType.BRACKET.QUERY_START)
+function isQuery(token: Token, lastToken?: Token): boolean {
+    if (token.type === ApexTokenTypes.BRACKET.QUERY_START)
         return true;
-    if (lastToken && lastToken.type === TokenType.PUNCTUATION.QUOTTES_START && token.textToLower === 'select')
+    if (lastToken && lastToken.type === ApexTokenTypes.PUNCTUATION.QUOTTES_START && token.textToLower === 'select')
         return true;
     return false;
 }
 
-function processQuery(tokens, index, position, node) {
+function processQuery(tokens: Token[], index: number, position: Position | undefined, node: ApexMethod | ApexConstructor | ApexGetter | ApexSetter | ApexClass | ApexTrigger | SOQLQuery): any {
     const len = tokens.length;
     let token = tokens[index];
-    let lastToken = LangUtils.getLastToken(tokens, index);
-    let isDynamic = (lastToken && lastToken.type === TokenType.PUNCTUATION.QUOTTES_START && token.textToLower === 'select');
-    let nodeId;
+    let lastToken = LanguageUtils.getLastToken(tokens, index);
+    let isDynamic = (lastToken && lastToken.type === ApexTokenTypes.PUNCTUATION.QUOTTES_START && token.textToLower === 'select');
+    let nodeId = '';
     let nodeName;
     let positionData;
-    if (node.type === ApexNodeType.SOQL) {
-
-    } else {
+    if (node instanceof SOQLQuery && node.nodeType === ApexNodeTypes.SOQL) {
+        nodeId = node.id + '.innerquery';
+    } else if (!(node instanceof SOQLQuery)) {
         nodeId = node.id + '.query.' + node.queries.length, 'query.' + node.queries.length;
         nodeName = 'query.' + node.queries.length;
     }
-    let query = new SOQLQuery(nodeId, nodeName, (isDynamic) ? lastToken : token);
-    if (!isDynamic)
+    let query: SOQLQuery | undefined = new SOQLQuery(nodeId, nodeName, (isDynamic) ? lastToken : token);
+    if (!isDynamic) {
         index++;
+    }
     let onProjection = false;
     let field = '';
     let fieldStartToken;
     let isQueryNode = false;
     for (; index < len; index++) {
-        lastToken = LangUtils.getLastToken(tokens, index);
+        lastToken = LanguageUtils.getLastToken(tokens, index);
         token = tokens[index];
-        const nextToken = LangUtils.getNextToken(tokens, index);
-        const twoNextToken = LangUtils.getTwoNextToken(tokens, index);
-        const twoLastToken = LangUtils.getTwoLastToken(tokens, index);
+        const nextToken = LanguageUtils.getNextToken(tokens, index);
+        const twoNextToken = LanguageUtils.getTwoNextToken(tokens, index);
+        const twoLastToken = LanguageUtils.getTwoLastToken(tokens, index);
         if (position && query && !positionData) {
-            if (LangUtils.isOnPosition(token, lastToken, nextToken, position)) {
+            if (LanguageUtils.isOnPosition(token, lastToken, nextToken, position)) {
                 const startIndex = position.character - token.range.start.character;
                 const startPart = token.text.substring(0, startIndex + 1);
                 const endPart = token.text.substring(startIndex + 1);
                 positionData = new PositionData(startPart, endPart, query.nodeType, query.id, 'Apex');
-                positionData.onText = token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+                positionData.onText = token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_START || token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_END || token.type === ApexTokenTypes.LITERAL.STRING;
                 positionData.parentName = node.name;
-                positionData.signature = node.simplifiedSignature || node.signature;
+                positionData.signature = (node instanceof ApexMethod || node instanceof ApexConstructor) ? (node.simplifiedSignature || node.signature) : node.name;
                 positionData.token = token;
                 positionData.nextToken = nextToken;
                 positionData.twoNextToken = twoNextToken;
@@ -1139,28 +1299,28 @@ function processQuery(tokens, index, position, node) {
             }
         }
         if (!isDynamic) {
-            if (token.type === TokenType.QUERY.CLAUSE.FROM) {
+            if (token.type === ApexTokenTypes.QUERY.CLAUSE.FROM) {
                 if (field) {
-                    query.projection.push(new SOQLField(query.id + 'field_' + field, field, fieldStartToken));
+                    query.projection!.push(new SOQLField(query.id + 'field_' + field, field, fieldStartToken));
                     field = '';
                     fieldStartToken = undefined;
                 }
                 onProjection = false;
                 query.from = nextToken;
-            } else if (token.type === TokenType.QUERY.CLAUSE.SELECT) {
+            } else if (token.type === ApexTokenTypes.QUERY.CLAUSE.SELECT) {
                 onProjection = true;
-            } else if (token.type === TokenType.BRACKET.QUERY_END || token.type === TokenType.BRACKET.INNER_QUERY_END) {
+            } else if (token.type === ApexTokenTypes.BRACKET.QUERY_END || token.type === ApexTokenTypes.BRACKET.INNER_QUERY_END) {
                 query.endToken = token;
                 break;
             } else if (onProjection) {
-                if (token.type === TokenType.PUNCTUATION.COMMA) {
-                    query.projection.push(new SOQLField(query.id + 'field_' + field, field, fieldStartToken));
+                if (token.type === ApexTokenTypes.PUNCTUATION.COMMA) {
+                    query.projection!.push(new SOQLField(query.id + 'field_' + field, field, fieldStartToken));
                     field = '';
                     fieldStartToken = undefined;
                 } else if (isQuery(token, lastToken)) {
                     const data = processQuery(tokens, index, position, query);
                     index = data.index;
-                    query.projection.push(data.query);
+                    query.projection!.push(data.query);
                     if (data.positionData && !positionData) {
                         positionData = data.positionData;
                     }
@@ -1174,7 +1334,7 @@ function processQuery(tokens, index, position, node) {
             if (token.textToLower === 'from') {
                 isQueryNode = true;
                 if (field) {
-                    query.projection.push(new SOQLField(query.id + 'field_' + field, field, fieldStartToken));
+                    query.projection!.push(new SOQLField(query.id + 'field_' + field, field, fieldStartToken));
                     field = '';
                     fieldStartToken = undefined;
                 }
@@ -1182,19 +1342,19 @@ function processQuery(tokens, index, position, node) {
                 query.from = nextToken;
             } else if (token.textToLower === 'select') {
                 onProjection = true;
-            } else if (token.type === TokenType.PUNCTUATION.QUOTTES_END) {
+            } else if (token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_END) {
                 query.endToken = token;
                 break;
             } else if (onProjection) {
                 if (token.textToLower === ',') {
-                    query.projection.push(new SOQLField(query.id + 'field_' + field, field, fieldStartToken));
+                    query.projection!.push(new SOQLField(query.id + 'field_' + field, field, fieldStartToken));
                     field = '';
                     fieldStartToken = undefined;
                 } else if (isQuery(token, lastToken)) {
                     const data = processQuery(tokens, index, position, query);
                     index = data.index;
                     if (data.query) {
-                        query.projection.push(data.query);
+                        query.projection!.push(data.query);
                     }
                     if (data.positionData && !positionData) {
                         positionData = data.positionData;
@@ -1207,10 +1367,12 @@ function processQuery(tokens, index, position, node) {
             }
         }
     }
-    if (isDynamic && !isQueryNode)
+    if (isDynamic && !isQueryNode) {
         query = undefined;
-    if (positionData)
+    }
+    if (positionData) {
         positionData.query = query;
+    }
     return {
         query: query,
         positionData: positionData,
@@ -1218,7 +1380,7 @@ function processQuery(tokens, index, position, node) {
     };
 }
 
-function getInterfaces(tokens, index) {
+function getInterfaces(tokens: Token[], index: number): any {
     var interfaceName = "";
     let token = tokens[index];
     let aBracketIndent = 0;
@@ -1226,25 +1388,25 @@ function getInterfaces(tokens, index) {
     const len = tokens.length;
     for (; index < len; index++) {
         token = tokens[index];
-        if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN) {
+        if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_OPEN) {
             aBracketIndent++;
         }
-        else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
+        else if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
             aBracketIndent--;
         }
-        if (token.type === TokenType.PUNCTUATION.COMMA && aBracketIndent == 0) {
+        if (token.type === ApexTokenTypes.PUNCTUATION.COMMA && aBracketIndent == 0) {
             interfaces.push(interfaceName);
             interfaceName = "";
-        } else if (token.type !== TokenType.KEYWORD.DECLARATION.IMPLEMENTS && token.type !== TokenType.BRACKET.CURLY_OPEN) {
+        } else if (token.type !== ApexTokenTypes.KEYWORD.DECLARATION.IMPLEMENTS && token.type !== ApexTokenTypes.BRACKET.CURLY_OPEN) {
             interfaceName += token.text;
         }
-        if (token.type === TokenType.KEYWORD.DECLARATION.EXTENDS || token.type === TokenType.BRACKET.CURLY_OPEN)
+        if (token.type === ApexTokenTypes.KEYWORD.DECLARATION.EXTENDS || token.type === ApexTokenTypes.BRACKET.CURLY_OPEN)
             break;
     }
     interfaces.push(interfaceName);
-    if (token.type === TokenType.KEYWORD.DECLARATION.EXTENDS)
+    if (token.type === ApexTokenTypes.KEYWORD.DECLARATION.EXTENDS)
         index = index - 2;
-    if (token.type === TokenType.BRACKET.CURLY_OPEN)
+    if (token.type === ApexTokenTypes.BRACKET.CURLY_OPEN)
         index = index - 2;
     return {
         index: index,
@@ -1252,24 +1414,24 @@ function getInterfaces(tokens, index) {
     };
 }
 
-function getExtends(tokens, index) {
+function getExtends(tokens: Token[], index: number): any {
     // TODO
     var extendsName = "";
     let aBracketIndent = 0;
     const len = tokens.length;
     for (; index < len; index++) {
         const token = tokens[index];
-        if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN) {
+        if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_OPEN) {
             aBracketIndent++;
         }
-        else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
+        else if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
             aBracketIndent--;
         }
-        if (token.type !== TokenType.KEYWORD.DECLARATION.EXTENDS && token.type !== TokenType.KEYWORD.DECLARATION.IMPLEMENTS && token.type !== TokenType.BRACKET.CURLY_OPEN) {
+        if (token.type !== ApexTokenTypes.KEYWORD.DECLARATION.EXTENDS && token.type !== ApexTokenTypes.KEYWORD.DECLARATION.IMPLEMENTS && token.type !== ApexTokenTypes.BRACKET.CURLY_OPEN) {
             extendsName += token.text;
         }
-        if (token.type === TokenType.BRACKET.CURLY_OPEN || token.type === TokenType.KEYWORD.DECLARATION.IMPLEMENTS || (token.type === TokenType.PUNCTUATION.COMMA && aBracketIndent == 0)) {
-            if (token.type === TokenType.BRACKET.CURLY_OPEN || token.type === TokenType.KEYWORD.DECLARATION.IMPLEMENTS)
+        if (token.type === ApexTokenTypes.BRACKET.CURLY_OPEN || token.type === ApexTokenTypes.KEYWORD.DECLARATION.IMPLEMENTS || (token.type === ApexTokenTypes.PUNCTUATION.COMMA && aBracketIndent == 0)) {
+            if (token.type === ApexTokenTypes.BRACKET.CURLY_OPEN || token.type === ApexTokenTypes.KEYWORD.DECLARATION.IMPLEMENTS)
                 index = index - 2;
             break;
         }
@@ -1280,22 +1442,22 @@ function getExtends(tokens, index) {
     };
 }
 
-function isEnumValue(token) {
-    return token && token.type === TokenType.ENTITY.ENUM_VALUE;
+function isEnumValue(token: Token): boolean {
+    return token && token.type === ApexTokenTypes.ENTITY.ENUM_VALUE;
 }
 
-function processTrigger(tokens, index, node) {
+function processTrigger(tokens: Token[], index: number, node: ApexTrigger) {
     const len = tokens.length;
     for (; index < len; index++) {
-        const lastToken = LangUtils.getLastToken(tokens, index);
+        const lastToken = LanguageUtils.getLastToken(tokens, index);
         const token = tokens[index];
-        if (token.type === TokenType.BRACKET.TRIGGER_GUARD_CLOSE) {
+        if (token.type === ApexTokenTypes.BRACKET.TRIGGER_GUARD_CLOSE) {
             break;
         }
         if (lastToken && lastToken.textToLower === 'on') {
             node.sObject = token.text;
         }
-        if (lastToken && lastToken.type === TokenType.DATABASE.TRIGGER_EXEC) {
+        if (lastToken && lastToken.type === ApexTokenTypes.DATABASE.TRIGGER_EXEC) {
             if (lastToken.textToLower === 'before') {
                 if (token.textToLower === 'insert')
                     node.beforeInsert = true;
@@ -1321,7 +1483,7 @@ function processTrigger(tokens, index, node) {
     return index;
 }
 
-function processMethodSignature(node, parser, index) {
+function processMethodSignature(node: ApexMethod | ApexConstructor, parser: ApexParser, index: number) {
     index++;
     let datatype;
     let paramName;
@@ -1332,17 +1494,17 @@ function processMethodSignature(node, parser, index) {
     let final = undefined;
     for (; index < len; index++) {
         const token = parser.tokens[index];
-        const lastToken = LangUtils.getLastToken(parser.tokens, index);
-        const nextToken = LangUtils.getNextToken(parser.tokens, index);
-        const twoNextToken = LangUtils.getTwoNextToken(parser.tokens, index);
-        const twoLastToken = LangUtils.getTwoLastToken(parser.tokens, index);
+        const lastToken = LanguageUtils.getLastToken(parser.tokens, index);
+        const nextToken = LanguageUtils.getNextToken(parser.tokens, index);
+        const twoNextToken = LanguageUtils.getTwoNextToken(parser.tokens, index);
+        const twoLastToken = LanguageUtils.getTwoLastToken(parser.tokens, index);
         if (parser.cursorPosition && !node.positionData) {
-            if (LangUtils.isOnPosition(token, lastToken, nextToken, parser.cursorPosition)) {
+            if (LanguageUtils.isOnPosition(token, lastToken, nextToken, parser.cursorPosition)) {
                 const startIndex = parser.cursorPosition.character - token.range.start.character;
                 const startPart = token.text.substring(0, startIndex + 1);
                 const endPart = token.text.substring(startIndex + 1);
                 node.positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
-                node.positionData.onText = token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+                node.positionData.onText = token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_START || token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_END || token.type === ApexTokenTypes.LITERAL.STRING;
                 node.positionData.signature = node.simplifiedSignature || node.signature;
                 node.positionData.token = token;
                 node.positionData.nextToken = nextToken;
@@ -1351,7 +1513,7 @@ function processMethodSignature(node, parser, index) {
                 node.positionData.twoLastToken = twoLastToken;
             }
         }
-        if (token.type === TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE) {
+        if (token.type === ApexTokenTypes.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE) {
             if (datatype && paramName) {
                 types.push(datatype.name);
                 params.push(datatype.name + ' ' + paramName.text);
@@ -1377,7 +1539,7 @@ function processMethodSignature(node, parser, index) {
             }
             newNode.parentId = (node) ? node.id : undefined;;
             datatype = newNode;
-        } else if (datatype && paramName && (token.type === TokenType.PUNCTUATION.COMMA || token.type === TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE)) {
+        } else if (datatype && paramName && (token.type === ApexTokenTypes.PUNCTUATION.COMMA || token.type === ApexTokenTypes.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE)) {
             types.push(datatype.name);
             params.push(((final) ? (final.text + ' ') : '') + datatype.name + ' ' + paramName.text);
             methodParams.push({
@@ -1402,14 +1564,14 @@ function processMethodSignature(node, parser, index) {
     if (node.definitionModifier) {
         signature += node.definitionModifier.textToLower + ' ';
     }
-    if (node.nodeType === ApexNodeType.METHOD && node.testMethod) {
+    if (node.nodeType === ApexNodeTypes.METHOD && node.testMethod) {
         signature += node.testMethod.textToLower + ' ';
     }
-    if (node.nodeType === ApexNodeType.METHOD && node.webservice) {
+    if (node.nodeType === ApexNodeTypes.METHOD && node.webservice) {
         signature += node.webservice.textToLower + ' ';
         overrideSignature += node.webservice.textToLower + ' ';
     }
-    if (node.nodeType === ApexNodeType.METHOD && node.static) {
+    if (node.nodeType === ApexNodeTypes.METHOD && node.static) {
         signature += node.static.textToLower + ' ';
         overrideSignature += node.static.textToLower + ' ';
     }
@@ -1441,11 +1603,11 @@ function processMethodSignature(node, parser, index) {
     return index;
 }
 
-function processAnnotation(node, parser, index, position) {
+function processAnnotation(node: ApexAnnotation, parser: ApexParser, index: number, _position?: Position): number {
     const len = parser.tokens.length;
     for (; index < len; index++) {
         const token = parser.tokens[index];
-        if (token.type === TokenType.ANNOTATION.NAME || token.type === TokenType.BRACKET.ANNOTATION_PARAM_OPEN || token.type === TokenType.BRACKET.ANNOTATION_PARAM_CLOSE || token.type === TokenType.ANNOTATION.ENTITY) {
+        if (token.type === ApexTokenTypes.ANNOTATION.NAME || token.type === ApexTokenTypes.BRACKET.ANNOTATION_PARAM_OPEN || token.type === ApexTokenTypes.BRACKET.ANNOTATION_PARAM_CLOSE || token.type === ApexTokenTypes.ANNOTATION.ENTITY) {
             node.addToken(token);
         } else {
             break;
@@ -1454,17 +1616,17 @@ function processAnnotation(node, parser, index, position) {
     return index;
 }
 
-function processCommentBlock(node, parser, index, position) {
+function processCommentBlock(node: ApexCommentBlock, parser: ApexParser, index: number, position?: Position): number {
     const len = parser.tokens.length;
     for (; index < len; index++) {
         const token = parser.tokens[index];
-        const lastToken = LangUtils.getLastToken(parser.tokens, index);
-        const nextToken = LangUtils.getNextToken(parser.tokens, index);
-        const twoNextToken = LangUtils.getTwoNextToken(parser.tokens, index);
-        const twoLastToken = LangUtils.getTwoLastToken(parser.tokens, index);
+        const lastToken = LanguageUtils.getLastToken(parser.tokens, index);
+        const nextToken = LanguageUtils.getNextToken(parser.tokens, index);
+        const twoNextToken = LanguageUtils.getTwoNextToken(parser.tokens, index);
+        const twoLastToken = LanguageUtils.getTwoLastToken(parser.tokens, index);
         if (position && node && !node.positionData) {
-            if (LangUtils.isOnPosition(token, lastToken, nextToken, this.cursorPosition)) {
-                const startIndex = this.cursorPosition.character - token.range.start.character;
+            if (LanguageUtils.isOnPosition(token, lastToken, nextToken, parser.cursorPosition)) {
+                const startIndex = parser.cursorPosition!.character - token.range.start.character;
                 const startPart = token.text.substring(0, startIndex + 1);
                 const endPart = token.text.substring(startIndex + 1);
                 node.positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
@@ -1485,17 +1647,17 @@ function processCommentBlock(node, parser, index, position) {
     return index;
 }
 
-function processCommentLine(node, parser, index, position) {
+function processCommentLine(node: ApexComment, parser: ApexParser, index: number, position?: Position) {
     const len = parser.tokens.length;
     for (; index < len; index++) {
         const token = parser.tokens[index];
-        const lastToken = LangUtils.getLastToken(parser.tokens, index);
-        const nextToken = LangUtils.getNextToken(parser.tokens, index);
-        const twoNextToken = LangUtils.getTwoNextToken(parser.tokens, index);
-        const twoLastToken = LangUtils.getTwoLastToken(parser.tokens, index);
+        const lastToken = LanguageUtils.getLastToken(parser.tokens, index);
+        const nextToken = LanguageUtils.getNextToken(parser.tokens, index);
+        const twoNextToken = LanguageUtils.getTwoNextToken(parser.tokens, index);
+        const twoLastToken = LanguageUtils.getTwoLastToken(parser.tokens, index);
         if (position && node && !node.positionData) {
-            if (LangUtils.isOnPosition(token, lastToken, nextToken, this.cursorPosition)) {
-                const startIndex = this.cursorPosition.character - token.range.start.character;
+            if (LanguageUtils.isOnPosition(token, lastToken, nextToken, parser.cursorPosition)) {
+                const startIndex = parser.cursorPosition!.character - token.range.start.character;
                 const startPart = token.text.substring(0, startIndex + 1);
                 const endPart = token.text.substring(startIndex + 1);
                 node.positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
@@ -1506,7 +1668,7 @@ function processCommentLine(node, parser, index, position) {
                 node.positionData.twoLastToken = twoLastToken;
             }
         }
-        if (token.type === TokenType.COMMENT.LINE || token.type === TokenType.COMMENT.LINE_DOC || token.type === TokenType.COMMENT.CONTENT) {
+        if (token.type === ApexTokenTypes.COMMENT.LINE || token.type === ApexTokenTypes.COMMENT.LINE_DOC || token.type === ApexTokenTypes.COMMENT.CONTENT) {
             node.addToken(token);
         } else {
             break;
@@ -1516,30 +1678,30 @@ function processCommentLine(node, parser, index, position) {
     return index;
 }
 
-function processDatatype(node, parser, index) {
+function processDatatype(node: ApexDatatype, parser: ApexParser, index: number): number {
     let aBracketIndent = 0;
     let sqBracketIndent = 0;
     let datatype = '';
     const len = parser.tokens.length;
     let type = '';
-    let valueTokens = [];
+    let valueTokens: Token[] = [];
     let valueText = '';
-    let keyTokens = [];
+    let keyTokens: Token[] = [];
     let keyText = '';
     for (; index < len; index++) {
         const token = parser.tokens[index];
-        const nextToken = LangUtils.getNextToken(parser.tokens, index);
-        const twoNextToken = LangUtils.getTwoNextToken(parser.tokens, index);
-        const lastToken = LangUtils.getLastToken(parser.tokens, index);
-        const twoLastToken = LangUtils.getTwoLastToken(parser.tokens, index);
+        const nextToken = LanguageUtils.getNextToken(parser.tokens, index);
+        const twoNextToken = LanguageUtils.getTwoNextToken(parser.tokens, index);
+        const lastToken = LanguageUtils.getLastToken(parser.tokens, index);
+        const twoLastToken = LanguageUtils.getTwoLastToken(parser.tokens, index);
         if (token) {
             if (parser.cursorPosition && node && !node.positionData) {
-                if (LangUtils.isOnPosition(token, lastToken, nextToken, parser.cursorPosition)) {
+                if (LanguageUtils.isOnPosition(token, lastToken, nextToken, parser.cursorPosition)) {
                     const startIndex = parser.cursorPosition.character - token.range.start.character;
                     const startPart = token.text.substring(0, startIndex + 1);
                     const endPart = token.text.substring(startIndex + 1);
                     node.positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
-                    node.positionData.onText = token.type === TokenType.PUNCTUATION.QUOTTES_START || token.type === TokenType.PUNCTUATION.QUOTTES_END || token.type === TokenType.LITERAL.STRING;
+                    node.positionData.onText = token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_START || token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_END || token.type === ApexTokenTypes.LITERAL.STRING;
                     node.positionData.token = token;
                     node.positionData.nextToken = nextToken;
                     node.positionData.twoNextToken = twoNextToken;
@@ -1555,14 +1717,14 @@ function processDatatype(node, parser, index) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN) {
+            } else if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_OPEN) {
                 aBracketIndent++;
                 if (aBracketIndent > 1) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
                 datatype += token.text;
-            } else if (token.type === TokenType.BRACKET.SQUARE_OPEN) {
+            } else if (token.type === ApexTokenTypes.BRACKET.SQUARE_OPEN) {
                 sqBracketIndent++;
                 datatype += token.text;
                 if (aBracketIndent === 0) {
@@ -1571,14 +1733,14 @@ function processDatatype(node, parser, index) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
+            } else if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
                 aBracketIndent--;
                 datatype += token.text;
                 if (aBracketIndent > 0) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.SQUARE_CLOSE) {
+            } else if (token.type === ApexTokenTypes.BRACKET.SQUARE_CLOSE) {
                 sqBracketIndent--;
                 datatype += token.text;
                 if (aBracketIndent === 0) {
@@ -1587,7 +1749,7 @@ function processDatatype(node, parser, index) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.PUNCTUATION.COMMA && aBracketIndent > 0) {
+            } else if (token.type === ApexTokenTypes.PUNCTUATION.COMMA && aBracketIndent > 0) {
                 datatype += token.text;
                 if (aBracketIndent > 1) {
                     valueTokens.push(token);
@@ -1599,7 +1761,7 @@ function processDatatype(node, parser, index) {
                     valueText = '';
                     valueTokens = [];
                 }
-            } else if (token.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR) {
+            } else if (token.type === ApexTokenTypes.PUNCTUATION.OBJECT_ACCESSOR) {
                 datatype += token.text;
                 if (aBracketIndent === 0) {
                     type += token.text;
@@ -1621,15 +1783,16 @@ function processDatatype(node, parser, index) {
     return index;
 }
 
-function processDatatypeTokens(node, text, tokens, isKey) {
-    if (!tokens || tokens.length === 0)
+function processDatatypeTokens(node: ApexNode, text: string, tokens: Token[], isKey: boolean): ApexDatatype | undefined {
+    if (!tokens || tokens.length === 0) {
         return undefined;
+    }
     let aBracketIndent = 0;
     let sqBracketIndent = 0;
     let type = '';
-    let valueTokens = [];
+    let valueTokens: Token[] = [];
     let valueText = '';
-    let keyTokens = [];
+    let keyTokens: Token[] = [];
     let keyText = '';
     const datatypeNode = new ApexDatatype(node.id + '.' + (isKey ? 'key.' : 'value.') + text, text, tokens[0]);
     const len = tokens.length;
@@ -1643,13 +1806,13 @@ function processDatatypeTokens(node, text, tokens, isKey) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN) {
+            } else if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_OPEN) {
                 aBracketIndent++;
                 if (aBracketIndent > 1) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.SQUARE_OPEN) {
+            } else if (token.type === ApexTokenTypes.BRACKET.SQUARE_OPEN) {
                 sqBracketIndent++;
                 if (aBracketIndent === 0) {
                     type += token.text;
@@ -1657,12 +1820,12 @@ function processDatatypeTokens(node, text, tokens, isKey) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
+            } else if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
                 aBracketIndent--; if (aBracketIndent > 0) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.SQUARE_CLOSE) {
+            } else if (token.type === ApexTokenTypes.BRACKET.SQUARE_CLOSE) {
                 sqBracketIndent--;
                 if (aBracketIndent === 0) {
                     type += token.text;
@@ -1670,7 +1833,7 @@ function processDatatypeTokens(node, text, tokens, isKey) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.PUNCTUATION.COMMA && aBracketIndent > 0) {
+            } else if (token.type === ApexTokenTypes.PUNCTUATION.COMMA && aBracketIndent > 0) {
                 if (aBracketIndent > 1) {
                     valueTokens.push(token);
                     valueText += token.text;
@@ -1681,7 +1844,7 @@ function processDatatypeTokens(node, text, tokens, isKey) {
                     valueText = '';
                     valueTokens = [];
                 }
-            } else if (token.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR) {
+            } else if (token.type === ApexTokenTypes.PUNCTUATION.OBJECT_ACCESSOR) {
                 if (aBracketIndent === 0) {
                     type += token.text;
                 } else if (aBracketIndent > 0) {
@@ -1699,12 +1862,12 @@ function processDatatypeTokens(node, text, tokens, isKey) {
     return datatypeNode;
 }
 
-function getBatches(objects, multiThread) {
+function getBatches(objects: string[], multiThread?: boolean): BatchData[] {
     const nBatches = (multiThread) ? OSUtils.getAvailableCPUs() : 1;
     const recordsPerBatch = Math.ceil(objects.length / nBatches);
     const batches = [];
     let counter = 0;
-    let batch;
+    let batch: BatchData | undefined;
     for (const object of objects) {
         if (!batch) {
             batch = {
@@ -1727,9 +1890,16 @@ function getBatches(objects, multiThread) {
     return batches;
 }
 
-function calculateIncrement(objects) {
+function calculateIncrement(objects: string[]) {
     return MathUtils.round(100 / objects.length, 2);
 }
+
+interface BatchData {
+    batchId: string;
+    records: string[];
+    completed: boolean;
+}
+
 /*
 function callProgressCalback(progressCallback, stage, file, data) {
     if (progressCallback)
