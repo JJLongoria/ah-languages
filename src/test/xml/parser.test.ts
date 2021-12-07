@@ -1,4 +1,4 @@
-const XMLParser = require('../../../src/xml/parser');
+import { XMLParser } from "../../xml/parser";
 
 describe('Testing ./src/xml/xmlParser.js', () => {
     test('Testing getParserXMLToJSONOptions()', () => {

@@ -54,11 +54,11 @@ export class XMLParser {
 
     /**
      * Method to parse XML file
-     * @param {string} content XML file content 
+     * @param {string} [content] XML file content 
      * @param {boolean} [parseComments] true tu parse comments too. 
      * @returns {any} Return the XML file data
      */
-    static parseXML(content: string, parseComments?: boolean): any {
+    static parseXML(content?: string, parseComments?: boolean): any {
         if (content && content.length > 0) {
             if (parseComments) {
                 content = content.split('<!--').join('«!--');
@@ -140,10 +140,11 @@ export class XMLParser {
         else {
             try {
                 let jsonVal = JSON.parse(value);
-                if (jsonVal)
+                if (jsonVal) {
                     isJSONValue = true
-                else
+                } else {
                     isJSONValue = false;
+                }
             } catch (error) {
                 isJSONValue = false;
             }
