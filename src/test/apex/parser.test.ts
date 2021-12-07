@@ -1,40 +1,21 @@
-const { Types, FileSystem, CoreUtils, Values } = require('@aurahelper/core');
-const FileReader = FileSystem.FileReader;
-const FileWriter = FileSystem.FileWriter;
-const FileChecker = FileSystem.FileChecker;
-const PathUtils = FileSystem.PathUtils;
-const ApexClass = Types.ApexClass;
-const ApexInterface = Types.ApexInterface;
-const ApexEnum = Types.ApexEnum;
-const ApexVariable = Types.ApexVariable;
-const ApexProperty = Types.ApexProperty;
-const ApexGetter = Types.ApexGetter;
-const ApexSetter = Types.ApexSetter;
-const ApexDatatype = Types.ApexDatatype;
-const ApexMethod = Types.ApexMethod;
-const ApexConstructor = Types.ApexConstructor;
-const Token = Types.Token;
+import { ApexClass, ApexConstructor, ApexDatatype, ApexEnum, ApexGetter, ApexInterface, ApexMethod, ApexNodeTypes, ApexProperty, ApexSetter, ApexTokenTypes, ApexVariable, CoreUtils, FileChecker, FileReader, FileWriter, ParserData, PathUtils, Token } from "@aurahelper/core";
+import { ApexParser, ApexTokenizer } from "../../apex";
+import { System } from "../../system";
+
 const StrUtils = CoreUtils.StrUtils;
 const Utils = CoreUtils.Utils;
-const TokenType = require('../../../src/apex/tokenTypes')
-const ApexLexer = require('../../../src/apex/tokenizer');
-const ApexParser = require('../../../src/apex/parser');
-const System = require('../../../src/system/system');
-const ApexTokenizer = require('../../../src/apex/tokenizer');
-const LangUtils = require('../../../src/utils/languageUtils');
-const ApexNodeTypes = Values.ApexNodeTypes;
-
-function createApexClass(JSONData, parent, systemData) {
-    const apexClass = new ApexClass(JSONData.namespace + '.' + ((parent !== undefined) ? parent.name.toLowerCase() + '.' : '') + JSONData.name.toLowerCase(), JSONData.name, new Token(TokenType.DECLARATION.ENTITY.CLASS, JSONData.name, -1));
+/*
+function createApexClass(JSONData: any, parent: any, systemData: ParserData): ApexClass {
+    const apexClass = new ApexClass(JSONData.namespace + '.' + ((parent !== undefined) ? parent.name.toLowerCase() + '.' : '') + JSONData.name.toLowerCase(), JSONData.name, new Token(ApexTokenTypes.DECLARATION.ENTITY.CLASS, JSONData.name, -1));
     apexClass.namespace = JSONData.namespace;
-    apexClass.accessModifier = (JSONData.accessModifier) ? new Token(TokenType.KEYWORD.MODIFIER.ACCESS, JSONData.accessModifier, -1) : undefined;
-    apexClass.definitionModifier = (JSONData.definitionModifier) ? new Token(TokenType.KEYWORD.MODIFIER.DEFINITION, JSONData.definitionModifier, -1) : undefined;
+    apexClass.accessModifier = (JSONData.accessModifier) ? new Token(ApexTokenTypes.KEYWORD.MODIFIER.ACCESS, JSONData.accessModifier, -1) : undefined;
+    apexClass.definitionModifier = (JSONData.definitionModifier) ? new Token(ApexTokenTypes.KEYWORD.MODIFIER.DEFINITION, JSONData.definitionModifier, -1) : undefined;
     if (JSONData.withSharing)
-        apexClass.sharingModifier = new Token(TokenType.KEYWORD.MODIFIER.SHARING, 'with sharing', -1);
+        apexClass.sharingModifier = new Token(ApexTokenTypes.KEYWORD.MODIFIER.SHARING, 'with sharing', -1);
     else if (JSONData.inheritedSharing)
-        apexClass.sharingModifier = new Token(TokenType.KEYWORD.MODIFIER.SHARING, 'inherited sharing', -1);
+        apexClass.sharingModifier = new Token(ApexTokenTypes.KEYWORD.MODIFIER.SHARING, 'inherited sharing', -1);
     else
-        apexClass.sharingModifier = new Token(TokenType.KEYWORD.MODIFIER.SHARING, 'without sharing', -1);
+        apexClass.sharingModifier = new Token(ApexTokenTypes.KEYWORD.MODIFIER.SHARING, 'without sharing', -1);
     apexClass.extendsType = JSONData.extendsType;
     if (JSONData.classes !== undefined) {
         for (const key of Object.keys(JSONData.classes)) {
@@ -69,30 +50,30 @@ function createApexClass(JSONData, parent, systemData) {
     return apexClass;
 }
 
-function createApexEnum(JSONData, parent) {
-    const apexEnum = new ApexEnum(JSONData.namespace + '.' + ((parent !== undefined) ? parent.name.toLowerCase() + '.' : '') + JSONData.name.toLowerCase(), JSONData.name, new Token(TokenType.DECLARATION.ENTITY.CLASS, JSONData.name, -1));
+function createApexEnum(JSONData: any, parent: any): ApexEnum {
+    const apexEnum = new ApexEnum(JSONData.namespace + '.' + ((parent !== undefined) ? parent.name.toLowerCase() + '.' : '') + JSONData.name.toLowerCase(), JSONData.name, new Token(ApexTokenTypes.DECLARATION.ENTITY.CLASS, JSONData.name, -1));
     apexEnum.namespace = JSONData.namespace;
-    apexEnum.accessModifier = (JSONData.accessModifier) ? new Token(TokenType.KEYWORD.MODIFIER.ACCESS, JSONData.accessModifier, -1) : undefined;
-    apexEnum.definitionModifier = (JSONData.definitionModifier) ? new Token(TokenType.KEYWORD.MODIFIER.DEFINITION, JSONData.definitionModifier, -1) : undefined;
+    apexEnum.accessModifier = (JSONData.accessModifier) ? new Token(ApexTokenTypes.KEYWORD.MODIFIER.ACCESS, JSONData.accessModifier, -1) : undefined;
+    apexEnum.definitionModifier = (JSONData.definitionModifier) ? new Token(ApexTokenTypes.KEYWORD.MODIFIER.DEFINITION, JSONData.definitionModifier, -1) : undefined;
     for (const enumValue of JSONData.enumValues) {
-        apexEnum.addChild(new Token(TokenType.ENTITY.ENUM_VALUE, enumValue, -1));
+        apexEnum.addChild(new Token(ApexTokenTypes.ENTITY.ENUM_VALUE, enumValue, -1));
     }
     apexEnum.description = JSONData.description;
     apexEnum.documentation = JSONData.docLink;
     return apexEnum;
 }
 
-function createApexInterface(JSONData, parent, systemData) {
-    const apexInterface = new ApexInterface(JSONData.namespace + '.' + ((parent !== undefined) ? parent.name.toLowerCase() + '.' : '') + JSONData.name.toLowerCase(), JSONData.name, new Token(TokenType.DECLARATION.ENTITY.CLASS, JSONData.name, -1));
+function createApexInterface(JSONData: any, parent: any, systemData: ParserData): ApexInterface {
+    const apexInterface = new ApexInterface(JSONData.namespace + '.' + ((parent !== undefined) ? parent.name.toLowerCase() + '.' : '') + JSONData.name.toLowerCase(), JSONData.name, new Token(ApexTokenTypes.DECLARATION.ENTITY.CLASS, JSONData.name, -1));
     apexInterface.namespace = JSONData.namespace;
-    apexInterface.accessModifier = (JSONData.accessModifier) ? new Token(TokenType.KEYWORD.MODIFIER.ACCESS, JSONData.accessModifier, -1) : undefined;
-    apexInterface.definitionModifier = (JSONData.definitionModifier) ? new Token(TokenType.KEYWORD.MODIFIER.DEFINITION, JSONData.definitionModifier, -1) : undefined;
+    apexInterface.accessModifier = (JSONData.accessModifier) ? new Token(ApexTokenTypes.KEYWORD.MODIFIER.ACCESS, JSONData.accessModifier, -1) : undefined;
+    apexInterface.definitionModifier = (JSONData.definitionModifier) ? new Token(ApexTokenTypes.KEYWORD.MODIFIER.DEFINITION, JSONData.definitionModifier, -1) : undefined;
     if (JSONData.withSharing)
-        apexInterface.sharingModifier = new Token(TokenType.KEYWORD.MODIFIER.SHARING, 'with sharing', -1);
+        apexInterface.sharingModifier = new Token(ApexTokenTypes.KEYWORD.MODIFIER.SHARING, 'with sharing', -1);
     else if (JSONData.inheritedSharing)
-        apexInterface.sharingModifier = new Token(TokenType.KEYWORD.MODIFIER.SHARING, 'inherited sharing', -1);
+        apexInterface.sharingModifier = new Token(ApexTokenTypes.KEYWORD.MODIFIER.SHARING, 'inherited sharing', -1);
     else
-        apexInterface.sharingModifier = new Token(TokenType.KEYWORD.MODIFIER.SHARING, 'without sharing', -1);
+        apexInterface.sharingModifier = new Token(ApexTokenTypes.KEYWORD.MODIFIER.SHARING, 'without sharing', -1);
     apexInterface.extendsType = JSONData.extendsType;
     if (JSONData.classes !== undefined) {
         for (const key of Object.keys(JSONData.classes)) {
@@ -127,17 +108,17 @@ function createApexInterface(JSONData, parent, systemData) {
     return apexInterface;
 }
 
-function createApexField(field, parent, systemData) {
+function createApexField(field: any, parent: any, systemData: ParserData): any {
     try {
         const node = processFieldSignature(parent, field, systemData);
-        return node; 
+        return node;
     } catch (error) {
         console.log(error);
     }
 }
 
-function createApexMethod(method, parent, systemDta) {
-    const apexMethod = new ApexMethod(parent.id + '.' + method.name.toLowerCase(), method.name, new Token(TokenType.DECLARATION.ENTITY.FUNCTION, method.name, -1));
+function createApexMethod(method: any, parent: any, systemDta: ParserData): ApexMethod {
+    const apexMethod = new ApexMethod(parent.id + '.' + method.name.toLowerCase(), method.name, new Token(ApexTokenTypes.DECLARATION.ENTITY.FUNCTION, method.name, -1));
     apexMethod.parentId = parent.id;
     try {
         processMethodSignature(apexMethod, method.signature, systemDta);
@@ -155,8 +136,8 @@ function createApexMethod(method, parent, systemDta) {
     return apexMethod;
 }
 
-function createApexConstructor(construct, parent, systemDta) {
-    const apexConstructor = new ApexConstructor(parent.id + '.' + construct.name.toLowerCase(), construct.name, new Token(TokenType.DECLARATION.ENTITY.FUNCTION, construct.name, -1));
+function createApexConstructor(construct: any, parent: any, systemDta: ParserData): ApexConstructor {
+    const apexConstructor = new ApexConstructor(parent.id + '.' + construct.name.toLowerCase(), construct.name, new Token(ApexTokenTypes.DECLARATION.ENTITY.FUNCTION, construct.name, -1));
     apexConstructor.parentId = parent.id;
     try {
         processMethodSignature(apexConstructor, construct.signature, systemDta);
@@ -174,31 +155,31 @@ function createApexConstructor(construct, parent, systemDta) {
     return apexConstructor;
 }
 
-function processFieldSignature(parent, field, systemData) {
+function processFieldSignature(parent: any, field: any, systemData: ParserData): ApexProperty | ApexVariable {
     let signatureTokens = ApexTokenizer.tokenize(field.signature, systemData);
     const len = signatureTokens.length;
-    if(len === 0)
+    if (len === 0)
         throw new Error('no signature tokens');
     const hasGetter = field.signature.indexOf('get;') !== -1;
     const hasSetter = field.signature.indexOf('set;') !== -1;
     let node;
     if (hasGetter || hasSetter) {
-        node = new ApexProperty('', field.name, new Token(TokenType.DECLARATION.ENTITY.PROPERTY, field.name, -1));
+        node = new ApexProperty('', field.name, new Token(ApexTokenTypes.DECLARATION.ENTITY.PROPERTY, field.name, -1));
     } else {
-        node = new ApexVariable('', field.name, new Token(TokenType.DECLARATION.ENTITY.VARIABLE, field.name, -1));
+        node = new ApexVariable('', field.name, new Token(ApexTokenTypes.DECLARATION.ENTITY.VARIABLE, field.name, -1));
     }
     node.parentId = parent.id;
     for (let index = 0; index < len; index++) {
         const token = signatureTokens[index];
-        if (token.type === TokenType.DECLARATION.ENTITY.VARIABLE || token.type === TokenType.DECLARATION.ENTITY.PROPERTY) {
+        if (token.type === ApexTokenTypes.DECLARATION.ENTITY.VARIABLE || token.type === ApexTokenTypes.DECLARATION.ENTITY.PROPERTY) {
             node.name = token.text;
         }
-        if (token.type === TokenType.KEYWORD.DECLARATION.PROPERTY_GETTER) {
+        if (token.type === ApexTokenTypes.KEYWORD.DECLARATION.PROPERTY_GETTER) {
             const newNode = new ApexGetter(((node) ? node.id : 'InitialNode') + '.getter.' + token.textToLower, token.text);
             newNode.parentId = (node) ? node.id : undefined;
             node.addChild(newNode);
         }
-        if (token.type === TokenType.KEYWORD.DECLARATION.PROPERTY_SETTER) {
+        if (token.type === ApexTokenTypes.KEYWORD.DECLARATION.PROPERTY_SETTER) {
             const newNode = new ApexSetter(((node) ? node.id : 'InitialNode') + '.getter.' + token.textToLower, token.text);
             newNode.parentId = (node) ? node.id : undefined;
             node.addChild(newNode);
@@ -268,7 +249,7 @@ function processFieldSignature(parent, field, systemData) {
     return node;
 }
 
-function processMethodSignature(node, signatureToProcess, systemData) {
+function processMethodSignature(node: ApexMethod | ApexConstructor, signatureToProcess: string, systemData: ParserData) {
     let signatureTokens = ApexTokenizer.tokenize(signatureToProcess, systemData);
     let datatype;
     let paramName;
@@ -278,17 +259,17 @@ function processMethodSignature(node, signatureToProcess, systemData) {
     let onParams = false;
     let final;
     const len = signatureTokens.length;
-    if(len === 0)
+    if (len === 0)
         throw new Error('no signature tokens');
     for (let index = 0; index < len; index++) {
         const token = signatureTokens[index];
-        if (token.type === TokenType.ENTITY.FUNCTION || token.type === TokenType.DECLARATION.ENTITY.FUNCTION) {
+        if (token.type === ApexTokenTypes.ENTITY.FUNCTION || token.type === ApexTokenTypes.DECLARATION.ENTITY.FUNCTION) {
             node.name = token.text;
         }
-        if (token.type === TokenType.BRACKET.PARENTHESIS_PARAM_OPEN || token.type === TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_OPEN) {
+        if (token.type === ApexTokenTypes.BRACKET.PARENTHESIS_PARAM_OPEN || token.type === ApexTokenTypes.BRACKET.PARENTHESIS_DECLARATION_PARAM_OPEN) {
             onParams = true;
         }
-        if (token.type === TokenType.BRACKET.PARENTHESIS_PARAM_CLOSE || token.type === TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE) {
+        if (token.type === ApexTokenTypes.BRACKET.PARENTHESIS_PARAM_CLOSE || token.type === ApexTokenTypes.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE) {
             onParams = false;
             if (datatype && paramName) {
                 types.push(datatype.name);
@@ -333,7 +314,7 @@ function processMethodSignature(node, signatureToProcess, systemData) {
             index = processDatatype(newNode, signatureTokens, index);
             newNode.parentId = (node) ? node.id : undefined;;
             datatype = newNode;
-        } else if (onParams && datatype && paramName && (token.type === TokenType.PUNCTUATION.COMMA || token.type === TokenType.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE)) {
+        } else if (onParams && datatype && paramName && (token.type === ApexTokenTypes.PUNCTUATION.COMMA || token.type === ApexTokenTypes.BRACKET.PARENTHESIS_DECLARATION_PARAM_CLOSE)) {
             types.push(datatype.name);
             params.push(((final) ? (final.text + ' ') : '') + datatype.name + ' ' + paramName.text);
             methodParams.push({
@@ -467,14 +448,14 @@ function processDatatype(node, tokens, index) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN) {
+            } else if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_OPEN) {
                 aBracketIndent++;
                 if (aBracketIndent > 1) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
                 datatype += token.text;
-            } else if (token.type === TokenType.BRACKET.SQUARE_OPEN) {
+            } else if (token.type === ApexTokenTypes.BRACKET.SQUARE_OPEN) {
                 sqBracketIndent++;
                 datatype += token.text;
                 if (aBracketIndent === 0) {
@@ -483,14 +464,14 @@ function processDatatype(node, tokens, index) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
+            } else if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
                 aBracketIndent--;
                 datatype += token.text;
                 if (aBracketIndent > 0) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.SQUARE_CLOSE) {
+            } else if (token.type === ApexTokenTypes.BRACKET.SQUARE_CLOSE) {
                 sqBracketIndent--;
                 datatype += token.text;
                 if (aBracketIndent === 0) {
@@ -499,7 +480,7 @@ function processDatatype(node, tokens, index) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.PUNCTUATION.COMMA && aBracketIndent > 0) {
+            } else if (token.type === ApexTokenTypes.PUNCTUATION.COMMA && aBracketIndent > 0) {
                 datatype += token.text;
                 if (aBracketIndent > 1) {
                     valueTokens.push(token);
@@ -511,7 +492,7 @@ function processDatatype(node, tokens, index) {
                     valueText = '';
                     valueTokens = [];
                 }
-            } else if (token.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR) {
+            } else if (token.type === ApexTokenTypes.PUNCTUATION.OBJECT_ACCESSOR) {
                 datatype += token.text;
                 if (aBracketIndent === 0) {
                     type += token.text;
@@ -552,13 +533,13 @@ function fixDatatype(node, tokens) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN) {
+            } else if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_OPEN) {
                 aBracketIndent++;
                 if (aBracketIndent > 1) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.SQUARE_OPEN) {
+            } else if (token.type === ApexTokenTypes.BRACKET.SQUARE_OPEN) {
                 sqBracketIndent++;
                 if (aBracketIndent === 0) {
                     type += token.text;
@@ -566,13 +547,13 @@ function fixDatatype(node, tokens) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
+            } else if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
                 aBracketIndent--;
                 if (aBracketIndent > 0) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.SQUARE_CLOSE) {
+            } else if (token.type === ApexTokenTypes.BRACKET.SQUARE_CLOSE) {
                 sqBracketIndent--;
                 if (aBracketIndent === 0) {
                     type += token.text;
@@ -580,7 +561,7 @@ function fixDatatype(node, tokens) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.PUNCTUATION.COMMA && aBracketIndent > 0) {
+            } else if (token.type === ApexTokenTypes.PUNCTUATION.COMMA && aBracketIndent > 0) {
                 if (aBracketIndent > 1) {
                     valueTokens.push(token);
                     valueText += token.text;
@@ -591,7 +572,7 @@ function fixDatatype(node, tokens) {
                     valueText = '';
                     valueTokens = [];
                 }
-            } else if (token.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR) {
+            } else if (token.type === ApexTokenTypes.PUNCTUATION.OBJECT_ACCESSOR) {
                 if (aBracketIndent === 0) {
                     type += token.text;
                 } else if (aBracketIndent > 0) {
@@ -631,13 +612,13 @@ function processDatatypeTokens(node, text, tokens, isKey) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_OPEN) {
+            } else if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_OPEN) {
                 aBracketIndent++;
                 if (aBracketIndent > 1) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.SQUARE_OPEN) {
+            } else if (token.type === ApexTokenTypes.BRACKET.SQUARE_OPEN) {
                 sqBracketIndent++;
                 if (aBracketIndent === 0) {
                     type += token.text;
@@ -645,12 +626,12 @@ function processDatatypeTokens(node, text, tokens, isKey) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
+            } else if (token.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_CLOSE) {
                 aBracketIndent--; if (aBracketIndent > 0) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.BRACKET.SQUARE_CLOSE) {
+            } else if (token.type === ApexTokenTypes.BRACKET.SQUARE_CLOSE) {
                 sqBracketIndent--;
                 if (aBracketIndent === 0) {
                     type += token.text;
@@ -658,7 +639,7 @@ function processDatatypeTokens(node, text, tokens, isKey) {
                     valueTokens.push(token);
                     valueText += token.text;
                 }
-            } else if (token.type === TokenType.PUNCTUATION.COMMA && aBracketIndent > 0) {
+            } else if (token.type === ApexTokenTypes.PUNCTUATION.COMMA && aBracketIndent > 0) {
                 if (aBracketIndent > 1) {
                     valueTokens.push(token);
                     valueText += token.text;
@@ -669,7 +650,7 @@ function processDatatypeTokens(node, text, tokens, isKey) {
                     valueText = '';
                     valueTokens = [];
                 }
-            } else if (token.type === TokenType.PUNCTUATION.OBJECT_ACCESSOR) {
+            } else if (token.type === ApexTokenTypes.PUNCTUATION.OBJECT_ACCESSOR) {
                 if (aBracketIndent === 0) {
                     type += token.text;
                 } else if (aBracketIndent > 0) {
@@ -688,51 +669,51 @@ function processDatatypeTokens(node, text, tokens, isKey) {
 }
 
 function isDatatype(token) {
-    return token && (token.type === TokenType.DATATYPE.COLLECTION || token.type === TokenType.DATATYPE.CUSTOM_CLASS || token.type === TokenType.DATATYPE.PRIMITIVE || token.type === TokenType.DATATYPE.SOBJECT || token.type === TokenType.DATATYPE.SUPPORT_CLASS || token.type === TokenType.DATATYPE.SUPPORT_NAMESPACE || token.type === TokenType.ENTITY.CLASS_MEMBER || token.type === TokenType.ENTITY.SUPPORT_CLASS_MEMBER);
+    return token && (token.type === ApexTokenTypes.DATATYPE.COLLECTION || token.type === ApexTokenTypes.DATATYPE.CUSTOM_CLASS || token.type === ApexTokenTypes.DATATYPE.PRIMITIVE || token.type === ApexTokenTypes.DATATYPE.SOBJECT || token.type === ApexTokenTypes.DATATYPE.SUPPORT_CLASS || token.type === ApexTokenTypes.DATATYPE.SUPPORT_NAMESPACE || token.type === ApexTokenTypes.ENTITY.CLASS_MEMBER || token.type === ApexTokenTypes.ENTITY.SUPPORT_CLASS_MEMBER);
 }
 
 function isAccessModifier(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.ACCESS;
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.ACCESS;
 }
 
 function isDefinitionModifier(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.DEFINITION;
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.DEFINITION;
 }
 
 function isSharingModifier(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.SHARING;
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.SHARING;
 }
 
 function isStatic(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.STATIC;
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.STATIC;
 }
 
 function isFinal(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.FINAL;
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.FINAL;
 }
 
 function isWebservice(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.WEB_SERVICE;
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.WEB_SERVICE;
 }
 
 function isTestMethod(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.TEST_METHOD;
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.TEST_METHOD;
 }
 
 function isOverride(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.OVERRIDE;
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.OVERRIDE;
 }
 
 function isTransient(token) {
-    return token && token.type === TokenType.KEYWORD.MODIFIER.TRANSIENT;
+    return token && token.type === ApexTokenTypes.KEYWORD.MODIFIER.TRANSIENT;
 }
-
+*/
 describe('Testing ./src/apex/parser.js', () => {
     test('Testing parse()', () => {
-        const metadataTypes = JSON.parse(FileReader.readFileSync('./test/assets/types/metadataTypes.json'));
-        const sObjectsData = JSON.parse(FileReader.readFileSync('./test/assets/types/sObjects.json'));
-        const sObjects = [];
-        const userClasses = [];
+        const metadataTypes = JSON.parse(FileReader.readFileSync('./src/test/assets/types/metadataTypes.json'));
+        const sObjectsData = JSON.parse(FileReader.readFileSync('./src/test/assets/types/sObjects.json'));
+        const sObjects: string[] = [];
+        const userClasses: string[] = [];
         for (const metadataTypeName of Object.keys(metadataTypes)) {
             const metadataType = metadataTypes[metadataTypeName];
             for (const metadataObjectName of Object.keys(metadataType.childs)) {
@@ -748,10 +729,10 @@ describe('Testing ./src/apex/parser.js', () => {
         console.time('nsSummary');
         const nsSummary = System.getAllNamespacesSummary();
         console.timeEnd('nsSummary');
-        const classesPath = './test/assets/SFDXProject/force-app/main/default/classes';
-        const triggersPath = './test/assets/SFDXProject/force-app/main/default/triggers';
+        const classesPath = './src/test/assets/SFDXProject/force-app/main/default/classes';
+        const triggersPath = './src/test/assets/SFDXProject/force-app/main/default/triggers';
         console.time('compilationTime');
-        const nodes = {};
+        const nodes: any = {};
         const systemData = {
             sObjects: sObjects,
             sObjectsData: sObjectsData,
@@ -818,7 +799,7 @@ describe('Testing ./src/apex/parser.js', () => {
             //console.timeEnd(fileToProcess + ' lexer');
             //console.time(fileToProcess + ' parser');
             const node = new ApexParser(filPath, systemData).parse();
-            if (node.nodeType === ApexNodeTypes.CLASS || node.nodeType === ApexNodeTypes.INTERFACE || node.nodeType === ApexNodeTypes.TRIGGER) {
+            if (node && (node.nodeType === ApexNodeTypes.CLASS || node.nodeType === ApexNodeTypes.INTERFACE || node.nodeType === ApexNodeTypes.TRIGGER)) {
                 validateNode(node);
             }
             //console.timeEnd(fileToProcess + ' parser');
@@ -836,10 +817,12 @@ describe('Testing ./src/apex/parser.js', () => {
                     //console.timeEnd(file + ' lexer');
                     //console.time(file + ' parser');
                     const node = new ApexParser(filPath, systemData).parse();
-                    if (node.nodeType === ApexNodeTypes.CLASS || node.nodeType === ApexNodeTypes.INTERFACE || node.nodeType === ApexNodeTypes.TRIGGER) {
+                    if (node && (node.nodeType === ApexNodeTypes.CLASS || node.nodeType === ApexNodeTypes.INTERFACE || node.nodeType === ApexNodeTypes.TRIGGER)) {
                         validateNode(node);
                     }
-                    nodes[node.name.toLowerCase()] = node;
+                    if (node) {
+                        nodes[node.name.toLowerCase()] = node;
+                    }
                     //console.timeEnd(file + ' parser');
                     //console.timeEnd(file + 'compilationTime');
                 } catch (error) {
@@ -860,7 +843,9 @@ describe('Testing ./src/apex/parser.js', () => {
                     //console.timeEnd(file + ' lexer');
                     //console.time(file + ' parser');
                     const node = new ApexParser(filPath, systemData).parse();
-                    nodes[node.name.toLowerCase()] = node;
+                    if (node) {
+                        nodes[node.name.toLowerCase()] = node;
+                    }
                     //console.timeEnd(file + ' parser');
                     //console.timeEnd(file + 'compilationTime');
                 } catch (error) {
@@ -873,11 +858,11 @@ describe('Testing ./src/apex/parser.js', () => {
         console.timeEnd('compilationTime');
     });
 
-    test('Testing saveAllClasesData()', async (done) => {
-        const metadataTypes = JSON.parse(FileReader.readFileSync('./test/assets/types/metadataTypes.json'));
-        const sObjectsData = JSON.parse(FileReader.readFileSync('./test/assets/types/sObjects.json'));
-        const sObjects = [];
-        const userClasses = [];
+    test('Testing saveAllClasesData()', async () => {
+        const metadataTypes = JSON.parse(FileReader.readFileSync('./src/test/assets/types/metadataTypes.json'));
+        const sObjectsData = JSON.parse(FileReader.readFileSync('./src/test/assets/types/sObjects.json'));
+        const sObjects: string[] = [];
+        const userClasses: string[] = [];
         for (const metadataTypeName of Object.keys(metadataTypes)) {
             const metadataType = metadataTypes[metadataTypeName];
             for (const metadataObjectName of Object.keys(metadataType.childs)) {
@@ -889,21 +874,21 @@ describe('Testing ./src/apex/parser.js', () => {
             }
         }
         const oneFile = false;
-        const fileToProcess = 'a_DML_Utils.cls';
         console.time('nsSummary');
         const nsSummary = System.getAllNamespacesSummary();
         console.timeEnd('nsSummary');
-        const folderPath = './test/assets/SFDXProject/force-app/main/default/classes';
-        const nodes = {};
+        console.time('compilationTime');
         const systemData = {
             sObjects: sObjects,
+            sObjectsData: sObjectsData,
             userClasses: userClasses,
-            namespaceSummary: nsSummary,
-            sObjectsData: sObjectsData
+            namespaceSummary: nsSummary
         };
-        let compiledClassesFolder = PathUtils.getAbsolutePath('./test/assets/compiledClasses');
-        if (FileChecker.isExists(compiledClassesFolder))
+        const folderPath = './src/test/assets/SFDXProject/force-app/main/default/classes';
+        let compiledClassesFolder = PathUtils.getAbsolutePath('./src/test/assets/compiledClasses');
+        if (FileChecker.isExists(compiledClassesFolder)) {
             FileWriter.delete(compiledClassesFolder);
+        }
         FileWriter.createFolderSync(compiledClassesFolder);
         console.time('compilationTime');
         if (oneFile) {
@@ -921,11 +906,11 @@ describe('Testing ./src/apex/parser.js', () => {
             await ApexParser.saveAllClassesData(folderPath, compiledClassesFolder, systemData, true);
         }
         console.timeEnd('compilationTime');
-        done();
+        return;
     }, 3000000);
 });
 
-function validateNode(node) {
+function validateNode(node: any): void {
     try {
         if (node.initializer && !Utils.isNull(node.initializer)) {
             validateInitOrStaticConst(node.initializer);
@@ -974,14 +959,14 @@ function validateNode(node) {
     }
 }
 
-function validateVariable(node) {
+function validateVariable(node: any): void {
     if (!node.name)
         throw new Error(node.nodeType + ' => ' + node.id + ' => Missing name');
     if (!node.datatype)
         throw new Error(node.nodeType + ' => ' + node.name + ' => Missing datatype');
 }
 
-function validateMethod(node) {
+function validateMethod(node: any): void {
     if (!node.name)
         throw new Error(node.nodeType + ' => ' + node.id + ' => Missing name');
     if (!node.datatype)
@@ -1004,7 +989,7 @@ function validateMethod(node) {
     }
 }
 
-function validateConstructor(node) {
+function validateConstructor(node: any): void {
     if (!node.name)
         throw new Error(node.nodeType + ' => ' + node.id + ' => Missing name');
     try {
@@ -1025,7 +1010,7 @@ function validateConstructor(node) {
     }
 }
 
-function validateInitOrStaticConst(node) {
+function validateInitOrStaticConst(node: any): void {
     try {
         if (node.variables && Utils.hasKeys(node.variables)) {
             for (const key of Object.keys(node.variables)) {
