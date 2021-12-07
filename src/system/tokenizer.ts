@@ -1,6 +1,6 @@
 import { Token, TokenTypes } from "@aurahelper/core";
 
-const symbolTokens: any = {
+const symbolTokens: { [key: string]: string } = {
     ">>>=": TokenTypes.OPERATOR.BITWISE.UNSIGNED_RIGHT_ASSIGN,
     '<!--': TokenTypes.COMMENT.XML_START,
     ">>=": TokenTypes.OPERATOR.BITWISE.SIGNED_RIGTH_ASSIGN,
