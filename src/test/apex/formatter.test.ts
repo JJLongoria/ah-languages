@@ -1,15 +1,16 @@
-const { FileSystem, CoreUtils } = require('@aurahelper/core');
-const FileReader = FileSystem.FileReader;
-const ApexLexer = require('../../../src/apex/tokenizer');
-const ApexFormatter = require('../../../src/apex/formatter');
-const System = require('../../../src/system/system');
+import { FileReader, ParserData } from "@aurahelper/core";
+import { ApexFormatter, ApexTokenizer } from "../../apex";
+import { System } from "../../system";
 
 describe('Testing ./src/apex/formatter.js', () => {
     test('Testing format()', () => {
-        const metadataTypes = JSON.parse(FileReader.readFileSync('./test/assets/types/metadataTypes.json'));
-        const sObjectsData = JSON.parse(FileReader.readFileSync('./test/assets/types/sObjects.json'));
-        const sObjects = [];
+        const metadataTypes = JSON.parse(FileReader.readFileSync('./src/test/assets/types/metadataTypes.json'));
+        const sObjectsData = JSON.parse(FileReader.readFileSync('./src/test/assets/types/sObjects.json'));
+        const sObjects: string[] = [];
         const userClasses = [];
+        const nsData = System.getAllNamespacesData();
+        const nsSummary = System.getAllNamespacesSummary();
+        const ns = System.getAllNamespaces();
         for (const metadataTypeName of Object.keys(metadataTypes)) {
             const metadataType = metadataTypes[metadataTypeName];
             for (const metadataObjectName of Object.keys(metadataType.childs)) {
@@ -20,19 +21,24 @@ describe('Testing ./src/apex/formatter.js', () => {
                 }
             }
         }
+        const systemData: ParserData = {
+            sObjects: sObjects,
+            sObjectsData: sObjectsData,
+            userClasses: userClasses,
+            namespacesData: nsData,
+            namespaceSummary: nsSummary,
+            namespaces: ns
+        };
         const oneFile = false;
         const fileToProcess = 'a_AccountTriggerHandler.cls';
-        console.time('nsSummary');
-        const nsSummary = System.getAllNamespacesSummary();
-        console.timeEnd('nsSummary');
-        const folderPath = './test/assets/SFDXProject/force-app/main/default/classes';
+        const folderPath = './src/test/assets/SFDXProject/force-app/main/default/classes';
         console.time('formatTime');
         if (oneFile) {
             //console.time(fileToProcess + ' compilationTime');
             const filPath = folderPath + '/' + fileToProcess;
             const fileContent = FileReader.readFileSync(filPath);
             //console.time(fileToProcess + ' lexer');
-            const tokens = ApexLexer.tokenize(fileContent, sObjects, userClasses, nsSummary);
+            const tokens = ApexTokenizer.tokenize(fileContent, systemData);
             /*console.timeEnd(fileToProcess + ' lexer');
             console.time(fileToProcess + ' parser');*/
             ApexFormatter.format(tokens);
@@ -47,7 +53,7 @@ describe('Testing ./src/apex/formatter.js', () => {
                     const filPath = folderPath + '/' + file;
                     const fileContent = FileReader.readFileSync(filPath);
                     //console.time(file + ' lexer');
-                    const tokens = ApexLexer.tokenize(fileContent, sObjects, userClasses, nsSummary);
+                    const tokens = ApexTokenizer.tokenize(fileContent, systemData);
                     /*console.timeEnd(file + ' lexer');
                     console.time(file + ' parser');*/
                     ApexFormatter.format(tokens);
