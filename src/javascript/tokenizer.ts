@@ -258,9 +258,9 @@ export class JSTokenizer {
      * Method to Tokenize Aura Javscript file
      * @param {string} filePathOrContent File path or file content to tokenize
      * @param {number} [tabSize] Tab size 
-     * @returns 
+     * @returns {Token[]} Return file tokens
      */
-    static tokenize(filePathOrContent: string, tabSize?: number) {
+    static tokenize(filePathOrContent: string, tabSize?: number): Token[] {
         if (!tabSize) {
             tabSize = 4;
         }
@@ -561,4 +561,3 @@ export class JSTokenizer {
         return tokens;
     }
 }
-module.exports = JSTokenizer;
