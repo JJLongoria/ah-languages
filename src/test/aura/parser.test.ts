@@ -1,16 +1,13 @@
-const { Types, FileSystem, CoreUtils } = require('@aurahelper/core');
-const FileReader = FileSystem.FileReader;
-const FileWriter = FileSystem.FileWriter;
-const FileChecker = FileSystem.FileChecker;
-const AuraParser = require('../../../src/aura/parser');
+import { FileChecker, FileReader } from "@aurahelper/core";
+import { AuraParser } from "../../aura/parser";
 
 describe('Testing ./src/aura/parser.js', () => {
     test('Testing parse()', () => {
         const oneFile = false;
         const fileToProcess = 'cmp_HG_PopoverFiltro/cmp_HG_PopoverFiltro.cmp';
-        const folderPath = './test/assets/SFDXProject/force-app/main/default/aura';
+        const folderPath = './src/test/assets/SFDXProject/force-app/main/default/aura';
         console.time('compilationTime');
-        const nodes = {};
+        const nodes: any = {};
         if(oneFile){
             const filePath = folderPath + '/' + fileToProcess;
             /*console.time(fileToProcess + ' compilationTime');
@@ -31,7 +28,9 @@ describe('Testing ./src/aura/parser.js', () => {
                         const node = new AuraParser(filePath).parse();
                         /*console.timeEnd(fileToProcess + ' parser');
                         console.timeEnd(folder + 'compilationTime');*/
-                        nodes[node.fileName.toLowerCase()] = node;
+                        if(node){
+                            nodes[node.fileName!.toLowerCase()] = node;
+                        }
                     } catch(error){
                         console.log('Error en el archivo: ' + folder);
                         console.log(JSON.stringify(error));
