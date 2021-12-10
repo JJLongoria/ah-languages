@@ -21,7 +21,7 @@ export class ApexFormatter {
     /**
      * Method to format an Apex Class with the selected options
      * @param {string | Token[]} tokensOrContent Class file path or string file content or Apex Class Tokens (Use ApexTokenizer)
-     * @param {(ApexFormatterConfig)} [config] Apex formatter config object or VSCode Config JSON object
+     * @param {ApexFormatterConfig | { [key: string]: any }} [config] Apex formatter config object or VSCode Config JSON object
      * @param {ParserData} [systemData] System data like System Apex Classes or Namespaces to tokenize apex class if pathContentOrTokens is a class content or file path. Can get it with System Class from System Module
      * @param {number} [tabSize] Tab size to format
      * @param {boolean} [insertSpaces] True to insert spaces instead tabs
@@ -33,7 +33,7 @@ export class ApexFormatter {
      * @throws {FileNotFoundException} If the file not exists or not have access to it
      * @throws {InvalidFilePathException} If the path is not a file
      */
-    static format(tokensOrContent: string | Token[], config?: ApexFormatterConfig, systemData?: ParserData, tabSize?: number, insertSpaces?: boolean) {
+    static format(tokensOrContent: string | Token[], config?: ApexFormatterConfig | { [key: string]: any }, systemData?: ParserData, tabSize?: number, insertSpaces?: boolean) {
         let tokens: Token[] = [];
         if (typeof tokensOrContent !== 'string') {
             tokens = tokensOrContent;
@@ -43,8 +43,8 @@ export class ApexFormatter {
         } else {
             throw new WrongDatatypeException('You must to select a file path, file content or file tokens');
         }
-        config = new ApexFormatterConfig(config);
-        return formatApex(tokens, config, tabSize, insertSpaces);
+        const conf = new ApexFormatterConfig(config);
+        return formatApex(tokens, conf, tabSize, insertSpaces);
     }
 }
 

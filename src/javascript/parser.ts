@@ -20,12 +20,12 @@ export class JSParser {
 
     /**
      * Create new JSParser instance to analize Aura Javscript file
-     * @param {string | Token[]} filePathOrTokens File path or Tokens (tokens from JSTokenizer class)
+     * @param {string | Token[]} [filePathOrTokens] File path or Tokens (tokens from JSTokenizer class)
      * @param {string} [fileName] File name 
      */
-    constructor(filePathOrTokens: string | Token[], fileName?: string) {
+    constructor(filePathOrTokens?: string | Token[], fileName?: string) {
         if (typeof filePathOrTokens !== 'string') {
-            this.tokens = filePathOrTokens;
+            this.tokens = filePathOrTokens || [];
             this.tokensLength = this.tokens.length;
             this.fileName = fileName;
         } else {

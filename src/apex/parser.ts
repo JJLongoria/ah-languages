@@ -308,7 +308,7 @@ export class ApexParser {
                 if (newNode.positionData) {
                     positionData = newNode.positionData;
                     newNode.positionData = undefined;
-                    positionData.parentName = node.name;
+                    positionData.parentName = (node) ? node.name : undefined;
                 }
                 this.comment = newNode;
                 this.nComments++;
@@ -318,7 +318,7 @@ export class ApexParser {
                 if (newNode.positionData) {
                     positionData = newNode.positionData;
                     newNode.positionData = undefined;
-                    positionData.parentName = node.name;
+                    positionData.parentName = (node) ? node.name : undefined;
                 }
                 this.comment = newNode;
                 this.nComments++;
@@ -604,7 +604,7 @@ export class ApexParser {
                 if (newNode.positionData) {
                     positionData = newNode.positionData;
                     newNode.positionData = undefined;
-                    positionData.parentName = node.name;
+                    positionData.parentName = (node) ? node.name : undefined;
                 }
                 if (this.annotation) {
                     this.annotation.parentId = newNode.id;
@@ -654,7 +654,7 @@ export class ApexParser {
                 if (newNode.positionData) {
                     positionData = newNode.positionData;
                     newNode.positionData = undefined;
-                    positionData.parentName = node.name;
+                    positionData.parentName = (node) ? node.name : undefined;
                 }
                 if (this.annotation) {
                     this.annotation.parentId = newNode.id;
@@ -731,7 +731,7 @@ export class ApexParser {
                         positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
                         positionData.onText = token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_START || token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_END || token.type === ApexTokenTypes.LITERAL.STRING;
                         positionData.signature = node.simplifiedSignature || node.signature;
-                        positionData.parentName = node.name;
+                        positionData.parentName = (node) ? node.name : undefined;
                         positionData.token = token;
                         positionData.nextToken = nextToken;
                         positionData.twoNextToken = twoNextToken;
@@ -756,7 +756,7 @@ export class ApexParser {
                                 positionData = new PositionData(startPart, endPart, node.nodeType, node.id, 'Apex');
                                 positionData.onText = token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_START || token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_END || token.type === ApexTokenTypes.LITERAL.STRING;
                                 positionData.signature = node.simplifiedSignature || node.signature;
-                                positionData.parentName = node.name;
+                                positionData.parentName = (node) ? node.name : undefined;
                                 positionData.token = token;
                                 positionData.nextToken = nextToken;
                                 positionData.twoNextToken = twoNextTokenAux;
@@ -1337,7 +1337,7 @@ function processQuery(tokens: Token[], index: number, position: Position | undef
                 const endPart = token.text.substring(startIndex + 1);
                 positionData = new PositionData(startPart, endPart, query.nodeType, query.id, 'Apex');
                 positionData.onText = token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_START || token.type === ApexTokenTypes.PUNCTUATION.QUOTTES_END || token.type === ApexTokenTypes.LITERAL.STRING;
-                positionData.parentName = node.name;
+                positionData.parentName = (node) ? node.name : undefined;
                 positionData.signature = (node instanceof ApexMethod || node instanceof ApexConstructor) ? (node.simplifiedSignature || node.signature) : node.name;
                 positionData.token = token;
                 positionData.nextToken = nextToken;
