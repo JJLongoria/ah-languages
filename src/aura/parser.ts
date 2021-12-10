@@ -23,12 +23,12 @@ export class AuraParser {
 
     /**
      * Create new Aura Parser instance to parse Aura XML files
-     * @param {string | Token[]} filePathOrTokens 
+     * @param {string | Token[]} [filePathOrTokens] 
      * @param {string} [fileName] 
      */
-    constructor(filePathOrTokens: string | Token[], fileName?: string) {
+    constructor(filePathOrTokens?: string | Token[], fileName?: string) {
         if (typeof filePathOrTokens !== 'string') {
-            this.tokens = filePathOrTokens;
+            this.tokens = filePathOrTokens || [];
             this.tokensLength = this.tokens.length;
             this.fileName = fileName;
         } else {
