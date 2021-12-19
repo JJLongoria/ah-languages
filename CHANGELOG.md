@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.0.1 - 2021-12-19]
+### Added
+- Fixed minor error on Apex formatter with inner queries as projection
+
 ## [2.0.0 - 2021-12-13]
 ### Added
 - Changed to Typescript

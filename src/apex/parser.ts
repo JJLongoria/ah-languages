@@ -934,7 +934,7 @@ export class ApexParser {
      * @returns {Promise<void>} Return an empty promise when finish
      */
     static saveClassesData(filePaths: string[], targetfolder: string, systemData?: ParserData): Promise<void> {
-        return new Promise<void>(async (resolve, reject) => {
+        return new Promise<void>((resolve, reject) => {
             try {
                 targetfolder = PathUtils.getAbsolutePath(targetfolder);
                 if (!FileChecker.isExists(targetfolder)) {

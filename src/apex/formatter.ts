@@ -94,7 +94,7 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
             if (config && config.query.maxProjectionFieldPerLine > 0) {
                 if (projectionFieldsOnLine[projectionFieldsOnLine.length - 1] === config.query.maxProjectionFieldPerLine) {
                     newLines = 1;
-                    beforeWhitespaces = querySelectIndex[querySelectIndex.length - 1];
+                    beforeWhitespaces = querySelectIndex[0];
                     projectionFieldsOnLine[projectionFieldsOnLine.length - 1] = 1;
                 } else {
                     projectionFieldsOnLine[projectionFieldsOnLine.length - 1] = projectionFieldsOnLine[projectionFieldsOnLine.length - 1] + 1;
