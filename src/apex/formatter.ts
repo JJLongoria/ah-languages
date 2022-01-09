@@ -74,6 +74,8 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
         let nextToken = LanguageUtils.getNextToken(tokens, index);
         let newLines = 0;
         let originalNewLines = (lastToken && !token.isAux && !lastToken.isAux) ? token.range.start.line - lastToken.range.start.line : 0;
+        const parentToken = (token.parentToken !== undefined && token.parentToken !== -1) ? new Token(tokens[token.parentToken]) : undefined;
+        const lastParentToken = (lastToken && lastToken.parentToken !== undefined && lastToken.parentToken !== -1) ? new Token(tokens[lastToken.parentToken]) : undefined;
         if (token.type === ApexTokenTypes.BRACKET.CURLY_OPEN || token.type === ApexTokenTypes.BRACKET.INITIALIZER_OPEN) {
             indent++;
         } else if (token.type === ApexTokenTypes.BRACKET.CURLY_CLOSE || token.type === ApexTokenTypes.BRACKET.INITIALIZER_CLOSE) {
@@ -184,13 +186,19 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
         if (token.type === ApexTokenTypes.PUNCTUATION.COMMA && config && config.punctuation.addWhiteSpaceAfterComma) {
             afterWhitespaces = 1;
         }
-        if (mainBodyIndent === indent && lastToken && ((lastToken.type === ApexTokenTypes.BRACKET.CURLY_CLOSE && !lastToken.isAux && !lastToken.parentToken) || (lastToken.type === ApexTokenTypes.PUNCTUATION.SEMICOLON && twoLastToken && twoLastToken.type === ApexTokenTypes.BRACKET.PARENTHESIS_PARAM_CLOSE)) && config && config.classMembers.newLinesBetweenCodeBlockMembers > 0 && token.type !== ApexTokenTypes.BRACKET.CURLY_CLOSE && token.type !== ApexTokenTypes.KEYWORD.DECLARATION.PROPERTY_GETTER && token.type !== ApexTokenTypes.KEYWORD.DECLARATION.PROPERTY_SETTER) {
-            newLines = (config) ? config.classMembers.newLinesBetweenCodeBlockMembers + 1 : 1;
-            if (isFieldInstructionDeclaration(tokens, index)) {
-                if (isNextInstructionFieldDeclaration(tokens, index)) {
-                    newLines = (config) ? config.classMembers.newLinesBetweenClassFields + 1 : 1;
-                } else {
-                    newLines = (config) ? config.classMembers.newLinesBetweenCodeBlockMembers + 1 : 1;
+        if (lastToken && lastToken.type === ApexTokenTypes.BRACKET.CURLY_CLOSE && !lastToken.isAux && config.classMembers.newLinesBetweenCodeBlockMembers > 0) {
+            if (lastParentToken) {
+                console.log(lastParentToken);
+            }
+            if (lastParentToken && (lastParentToken.type === ApexTokenTypes.DECLARATION.ENTITY.FUNCTION || lastParentToken.type === ApexTokenTypes.DECLARATION.ENTITY.CLASS || lastParentToken.type === ApexTokenTypes.DECLARATION.ENTITY.PROPERTY || lastParentToken.type === ApexTokenTypes.DECLARATION.ENTITY.CONSTRUCTOR || lastParentToken.type === ApexTokenTypes.DECLARATION.ENTITY.ENUM || lastParentToken.type === ApexTokenTypes.DECLARATION.ENTITY.INTERFACE)) {
+                console.log(lastParentToken);
+                newLines = (config) ? config.classMembers.newLinesBetweenCodeBlockMembers + 1 : 1;
+                if (isFieldInstructionDeclaration(tokens, index)) {
+                    if (isNextInstructionFieldDeclaration(tokens, index)) {
+                        newLines = (config) ? config.classMembers.newLinesBetweenClassFields + 1 : 1;
+                    } else {
+                        newLines = (config) ? config.classMembers.newLinesBetweenCodeBlockMembers + 1 : 1;
+                    }
                 }
             }
         }
@@ -413,15 +421,15 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
                 line += StrUtils.getWhitespaces((indent + indentOffset) * tabSize);
             }
 
-            if (token.type === ApexTokenTypes.COMMENT.CONTENT || token.type === ApexTokenTypes.COMMENT.BLOCK_END){
+            if (token.type === ApexTokenTypes.COMMENT.CONTENT || token.type === ApexTokenTypes.COMMENT.BLOCK_END) {
                 beforeWhitespaces = 1;
             }
             if (!token.isAux) {
-                if (beforeWhitespaces > 0){
+                if (beforeWhitespaces > 0) {
                     line += StrUtils.getWhitespaces(beforeWhitespaces);
                 }
                 line += token.text;
-                if (afterWhitespaces > 0){
+                if (afterWhitespaces > 0) {
                     line += StrUtils.getWhitespaces(afterWhitespaces);
                 }
             }
@@ -431,11 +439,11 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
             indentOffset = 0;
         } else {
             if (!token.isAux) {
-                if (beforeWhitespaces > 0){
+                if (beforeWhitespaces > 0) {
                     line += StrUtils.getWhitespaces(beforeWhitespaces);
                 }
                 line += token.text;
-                if (afterWhitespaces > 0){
+                if (afterWhitespaces > 0) {
                     line += StrUtils.getWhitespaces(afterWhitespaces);
                 }
             }
@@ -567,10 +575,10 @@ function isFieldInstructionDeclaration(tokens: Token[], index: number): boolean 
     let token = tokens[index];
     for (; index >= 0; index--) {
         token = tokens[index];
-        if (isFieldDeclaration(token)){
+        if (isFieldDeclaration(token)) {
             return true;
         }
-        if (token.type === ApexTokenTypes.BRACKET.CURLY_CLOSE || token.type === ApexTokenTypes.BRACKET.CURLY_OPEN){
+        if (token.type === ApexTokenTypes.BRACKET.CURLY_CLOSE || token.type === ApexTokenTypes.BRACKET.CURLY_OPEN) {
             break;
         }
     }
@@ -581,10 +589,10 @@ function isNextInstructionFieldDeclaration(tokens: Token[], index: number): bool
     let token = tokens[index];
     for (let len = tokens.length; index < len; index++) {
         token = tokens[index];
-        if (isFieldDeclaration(token)){
+        if (isFieldDeclaration(token)) {
             return true;
         }
-        if (token.type === ApexTokenTypes.PUNCTUATION.SEMICOLON){
+        if (token.type === ApexTokenTypes.PUNCTUATION.SEMICOLON) {
             break;
         }
     }
