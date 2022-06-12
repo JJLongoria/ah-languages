@@ -33,7 +33,7 @@ export class ApexFormatter {
      * @throws {FileNotFoundException} If the file not exists or not have access to it
      * @throws {InvalidFilePathException} If the path is not a file
      */
-    static format(tokensOrContent: string | Token[], config?: ApexFormatterConfig | { [key: string]: any }, systemData?: ParserData, tabSize?: number, insertSpaces?: boolean) {
+    static format(tokensOrContent: string | Token[], config?: ApexFormatterConfig | { [key: string]: any }, systemData?: ParserData, tabSize?: number, insertSpaces?: boolean): string {
         let tokens: Token[] = [];
         if (typeof tokensOrContent !== 'string') {
             tokens = tokensOrContent;
@@ -48,7 +48,7 @@ export class ApexFormatter {
     }
 }
 
-function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: number, insertSpaces?: boolean) {
+function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: number, insertSpaces?: boolean): string {
     let indent = 0;
     let indentOffset = 0;
     let strIndex;
@@ -362,6 +362,14 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
                 }
             }
             newLines = 1;
+        }
+        if(isKeyword(token) && token.textToLower === 'on'){
+            if(beforeWhitespaces === 0){
+                beforeWhitespaces = 1;
+            }
+            if( afterWhitespaces === 0){
+                afterWhitespaces = 1;
+            }
         }
         if (lastToken && isStringToken(lastToken) && isOperator(token) && originalNewLines > 0) {
             newLines = 0;

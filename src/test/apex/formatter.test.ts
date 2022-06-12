@@ -29,9 +29,9 @@ describe('Testing ./src/apex/formatter.js', () => {
             namespaceSummary: nsSummary,
             namespaces: ns
         };
-        const oneFile = false;
-        const fileToProcess = 'a_AccountTriggerHandler.cls';
-        const folderPath = './src/test/assets/SFDXProject/force-app/main/default/classes';
+        const oneFile = true;
+        const fileToProcess = 't_LeadTrigger.trigger';
+        const folderPath = './src/test/assets/SFDXProject/force-app/main/default/triggers';
         console.time('formatTime');
         if (oneFile) {
             //console.time(fileToProcess + ' compilationTime');
@@ -41,7 +41,8 @@ describe('Testing ./src/apex/formatter.js', () => {
             const tokens = ApexTokenizer.tokenize(fileContent, systemData);
             /*console.timeEnd(fileToProcess + ' lexer');
             console.time(fileToProcess + ' parser');*/
-            ApexFormatter.format(tokens);
+            const result = ApexFormatter.format(tokens);
+            console.log(result);
             /*console.timeEnd(fileToProcess + ' parser');
             console.timeEnd(fileToProcess + 'compilationTime');*/
         } else {
