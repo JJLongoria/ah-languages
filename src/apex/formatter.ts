@@ -367,8 +367,10 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
             if(beforeWhitespaces === 0){
                 beforeWhitespaces = 1;
             }
-            if( afterWhitespaces === 0){
-                afterWhitespaces = 1;
+        }
+        if(lastToken && isKeyword(lastToken) && lastToken.textToLower === 'on'){
+            if(beforeWhitespaces === 0){
+                beforeWhitespaces = 1;
             }
         }
         if (lastToken && isStringToken(lastToken) && isOperator(token) && originalNewLines > 0) {
