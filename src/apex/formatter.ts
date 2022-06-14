@@ -188,10 +188,8 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
         }
         if (lastToken && lastToken.type === ApexTokenTypes.BRACKET.CURLY_CLOSE && !lastToken.isAux && config.classMembers.newLinesBetweenCodeBlockMembers > 0) {
             if (lastParentToken) {
-                console.log(lastParentToken);
             }
             if (lastParentToken && (lastParentToken.type === ApexTokenTypes.DECLARATION.ENTITY.FUNCTION || lastParentToken.type === ApexTokenTypes.DECLARATION.ENTITY.CLASS || lastParentToken.type === ApexTokenTypes.DECLARATION.ENTITY.PROPERTY || lastParentToken.type === ApexTokenTypes.DECLARATION.ENTITY.CONSTRUCTOR || lastParentToken.type === ApexTokenTypes.DECLARATION.ENTITY.ENUM || lastParentToken.type === ApexTokenTypes.DECLARATION.ENTITY.INTERFACE)) {
-                console.log(lastParentToken);
                 newLines = (config) ? config.classMembers.newLinesBetweenCodeBlockMembers + 1 : 1;
                 if (isFieldInstructionDeclaration(tokens, index)) {
                     if (isNextInstructionFieldDeclaration(tokens, index)) {
@@ -363,13 +361,8 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
             }
             newLines = 1;
         }
-        if(isKeyword(token) && token.textToLower === 'on'){
-            if(beforeWhitespaces === 0){
-                beforeWhitespaces = 1;
-            }
-        }
-        if(lastToken && isKeyword(lastToken) && lastToken.textToLower === 'on'){
-            if(beforeWhitespaces === 0){
+        if (isKeyword(token) && token.textToLower === 'on') {
+            if (beforeWhitespaces === 0) {
                 beforeWhitespaces = 1;
             }
         }

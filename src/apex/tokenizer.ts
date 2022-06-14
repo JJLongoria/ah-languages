@@ -774,6 +774,9 @@ export class ApexTokenizer {
                         if (lastToken && (isDatatypeToken(lastToken) || lastToken.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_CLOSE || lastToken.type === ApexTokenTypes.BRACKET.SQUARE_CLOSE) && (!reservedKeywords[token.textToLower] || reservedKeywords[token.textToLower] === ApexTokenTypes.KEYWORD.FOR_FUTURE)) {
                             token.type = ApexTokenTypes.DECLARATION.ENTITY.VARIABLE;
                         }
+                        if(lastToken && lastToken.type === ApexTokenTypes.KEYWORD.DECLARATION.TRIGGER){
+                            token.type = ApexTokenTypes.DECLARATION.ENTITY.TRIGGER;
+                        }
                     } else if (token.textToLower === 'system') {
                         token.type = ApexTokenTypes.DATATYPE.SUPPORT_CLASS;
                         if (lastToken && isObjectAccessor(lastToken) && twoLastToken && twoLastToken.type === ApexTokenTypes.DATATYPE.SUPPORT_CLASS) {
@@ -842,6 +845,9 @@ export class ApexTokenizer {
                                     }
                                 } else {
                                     token.type = ApexTokenTypes.DATATYPE.CUSTOM_CLASS;
+                                }
+                                if(lastToken && lastToken.type === ApexTokenTypes.KEYWORD.DECLARATION.TRIGGER){
+                                    token.type = ApexTokenTypes.DECLARATION.ENTITY.TRIGGER;
                                 }
                                 if (enumDeclarationIndex.length > 0) {
                                     token.type = ApexTokenTypes.ENTITY.ENUM_VALUE;
