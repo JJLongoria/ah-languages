@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+
+## [2.0.6 - 2023-10-22]
+### Fixed
+- Fixed an unexpected behaviour with "on" keyword when format triggers
+
 ## [2.0.5 - 2022-06-12]
 ### Fixed
 - Fixed an unexpected behaviour with "on" keyword when format triggers
