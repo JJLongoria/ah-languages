@@ -2,12 +2,14 @@
   "name": "@aurahelper/languages",
   "productName": "Aura Helper Languages Libraries",
   "displayName": "Aura Helper Framework Languages Libraries",
-  "version": "2.0.6",
+  "version": "2.1.0",
   "description": "Language Libraries to work with XML, Aura, Apex... files. tokenizers, parsers, system classes and much more",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "compile": "tsc -p ./ ",
+    "pretest": "tsc -p ./ ",
+    "prepack": "tsc -p ./",
     "lint": "eslint src --ext ts",
     "lint-fix": "eslint src --ext ts --fix",
     "watch": "tsc -watch -p ./",
@@ -63,8 +65,8 @@
     "typescript": "^3.9.6"
   },
   "dependencies": {
-    "@aurahelper/core": "^2.2.4",
-    "fast-xml-parser": "^3.19.0",
+    "@aurahelper/core": "^2.6.1",
+    "fast-xml-parser": "^4.3.2",
     "he": "^1.2.0"
   }
 }

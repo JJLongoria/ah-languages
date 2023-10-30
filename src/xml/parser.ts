@@ -1,4 +1,4 @@
-const parser = require('fast-xml-parser');
+import { XMLParser as FastXMLParser, XMLBuilder, XMLValidator } from 'fast-xml-parser';
 const he = require('he');
 
 /**
@@ -13,21 +13,22 @@ export class XMLParser {
     static getParserXMLToJSONOptions() {
         return {
             attributeNamePrefix: "",
-            attrNodeName: "@attrs", //default is 'false'
+            attributesGroupName: "@attrs", //default is 'false'
             textNodeName: "#text",
             ignoreAttributes: false,
-            ignoreNameSpace: false,
+            removeNSPrefix: false,
             allowBooleanAttributes: true,
-            parseNodeValue: true,
+            parseTagValue: true,
             parseAttributeValue: false,
             trimValues: true,
-            cdataTagName: "__cdata", //default is 'false'
+            cdataPropName: "__cdata", //default is 'false'
             cdataPositionChar: "\\c",
             localeRange: "", //To support non english character in tag/attribute values.
             parseTrueNumberOnly: false,
-            arrayMode: false, //"strict"
-            attrValueProcessor: (val: any, _attrName: any) => he.decode(val, { isAttributeValue: true }),//default is a=>a
-            tagValueProcessor: (val: any, _tagName: any) => he.decode(val), //default is a=>a
+            arrayMode: false, //"strict",
+            commentPropName: "#comment",
+            attributeValueProcessor: (_tagName: any, val: any) => he.decode(val, { isAttributeValue: true }),//default is a=>a
+            tagValueProcessor: (_tagName: any, val: any) => he.decode(val), //default is a=>a
             stopNodes: ["parse-me-as-string"]
         };
     }
@@ -39,16 +40,17 @@ export class XMLParser {
     static getParserJSONToXMLOptions() {
         return {
             attributeNamePrefix: "",
-            attrNodeName: "@attrs", //default is false
+            attributesGroupName: "@attrs", //default is false
             textNodeName: "#text",
             ignoreAttributes: false,
-            cdataTagName: "__cdata", //default is false
+            cdataPropName: "__cdata", //default is false
             cdataPositionChar: "\\c",
             format: true,
             indentBy: "\t",
-            supressEmptyNode: false,
+            suppressEmptyNode: false,
+            commentPropName: "#comment",
             tagValueProcessor: (a: any) => he.encode(a, { useNamedReferences: true }),// default is a=>a
-            attrValueProcessor: (a: any) => he.encode(a, { useNamedReferences: true })// default is a=>a
+            attributeValueProcessor: (a: any) => he.encode(a, { useNamedReferences: true })// default is a=>a
         };
     }
 
@@ -64,7 +66,8 @@ export class XMLParser {
                 content = content.split('<!--').join('«!--');
                 content = content.split('-->').join('--»');
             }
-            return parser.parse(content, XMLParser.getParserXMLToJSONOptions());
+            const parser = new FastXMLParser(XMLParser.getParserXMLToJSONOptions());
+            return parser.parse(content);
         }
         return {};
     }
@@ -76,8 +79,8 @@ export class XMLParser {
      */
     static toXML(jsonObj: any): string {
         jsonObj = fixObjValues(jsonObj);
-        let xmlParser = new parser.j2xParser(XMLParser.getParserJSONToXMLOptions());
-        let content = xmlParser.parse(jsonObj);
+        const builder = new XMLBuilder(XMLParser.getParserJSONToXMLOptions());
+        let content = builder.build(jsonObj);
         content = XMLParser.getXMLFirstLine() + '\n' + content;
         return content;
     }

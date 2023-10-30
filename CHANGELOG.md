@@ -1,10 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.1.0 - 2023-10-30]
+### Changed
+- Changed fast-xml-parser dependency from v3 to v4 to fix some vulnerabilities and improve performance
 
 ## [2.0.6 - 2023-10-22]
 ### Fixed
-- Fixed an unexpected behaviour with "on" keyword when format triggers
+- Fixed some vulnerabilities
 
 ## [2.0.5 - 2022-06-12]
 ### Fixed
