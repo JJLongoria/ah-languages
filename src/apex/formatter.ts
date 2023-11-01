@@ -400,7 +400,7 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
                 conditionsOnLine[conditionsOnLine.length - 1] = conditionsOnLine[conditionsOnLine.length - 1] + 1;
             }
         }
-        if (lastToken && isLogicalOperator(lastToken) && conditionsOnLine.length > 0 && priorityIndex.length === 0 && config && config.punctuation.maxConditionsPerLine > 0 && !config.punctuation.conditionLogicOperatorOnNewLine) {
+        if (lastToken && isLogicalOperator(lastToken) && conditionsOnLine.length > 0 && (priorityIndex.length === 0 || (priorityIndex.length === 1 && ApexTokenTypes.OPERATOR.PRIORITY.PARENTHESIS_OPEN)) && config && config.punctuation.maxConditionsPerLine > 0 && !config.punctuation.conditionLogicOperatorOnNewLine) {
             if (conditionsOnLine[conditionsOnLine.length - 1] === config.punctuation.maxConditionsPerLine) {
                 newLines = 1;
                 beforeWhitespaces = conditionOpenIndex[conditionOpenIndex.length - 1];
