@@ -67,6 +67,10 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
         tabSize = 4;
     }
     let projectionFieldsOnLine = [];
+    let objectFieldsOnLine = [];
+    let conditionsOnLine = [];
+    let conditionOpenIndex = [];
+    let priorityIndex = [];
     for (let len = tokens.length, index = 0; index < len; index++) {
         let token = tokens[index];
         let lastToken = LanguageUtils.getLastToken(tokens, index);
@@ -88,9 +92,27 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
         } else if (token.type === ApexTokenTypes.BRACKET.PARENTHESIS_GUARD_CLOSE) {
             guardOpen = false;
         }
-        if (lastToken && lastToken.type === ApexTokenTypes.BRACKET.QUERY_START || lastToken && lastToken.type === ApexTokenTypes.BRACKET.INNER_QUERY_START) {
-            queryOpenIndex.push(StrUtils.replace(line, '\t', '    ').length - (indent * 4));
+        if(token.type === ApexTokenTypes.OPERATOR.PRIORITY.PARENTHESIS_OPEN){
+            priorityIndex.push(StrUtils.replace(line, '\t', StrUtils.getWhitespaces(tabSize)).length - (indent * tabSize));
+        } else if(token.type === ApexTokenTypes.OPERATOR.PRIORITY.PARENTHESIS_CLOSE){
+            priorityIndex.pop();
+        }
+        if (lastToken && (lastToken.type === ApexTokenTypes.BRACKET.QUERY_START || lastToken && lastToken.type === ApexTokenTypes.BRACKET.INNER_QUERY_START)) {
+            queryOpenIndex.push(StrUtils.replace(line, '\t', StrUtils.getWhitespaces(tabSize)).length - (indent * tabSize));
             projectionFieldsOnLine.push(0);
+        }
+        if (lastToken && lastToken.type === ApexTokenTypes.BRACKET.PARENTHESIS_SOBJECT_OPEN) {
+            objectFieldsOnLine.push(0);
+            if (config && config.punctuation.SObjectFieldsPerLine > 0) {
+                indent++;
+            }
+        }
+        if (lastToken && lastToken.type === ApexTokenTypes.BRACKET.PARENTHESIS_GUARD_OPEN) {
+            conditionsOnLine.push(1);
+            conditionOpenIndex.push(StrUtils.replace(line, '\t', StrUtils.getWhitespaces(tabSize)).length - (indent * tabSize));
+            /*if (config && config.punctuation.maxConditionsPerLine > 0) {
+                indent++;
+            }*/
         }
         if (token.type === ApexTokenTypes.BRACKET.INNER_QUERY_START) {
             if (config && config.query.maxProjectionFieldPerLine > 0) {
@@ -104,7 +126,7 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
             }
         }
         if (lastToken && lastToken.type === ApexTokenTypes.QUERY.CLAUSE.SELECT) {
-            querySelectIndex.push(StrUtils.replace(line, '\t', '    ').length - (indent * 4));
+            querySelectIndex.push(StrUtils.replace(line, '\t', StrUtils.getWhitespaces(tabSize)).length - (indent * tabSize));
         }
 
         if (token.type === ApexTokenTypes.KEYWORD.DECLARATION.CLASS || token.type === ApexTokenTypes.KEYWORD.DECLARATION.ENUM || token.type === ApexTokenTypes.KEYWORD.DECLARATION.INTERFACE) {
@@ -112,6 +134,9 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
         }
 
         if (lastToken && isAnnotationToken(lastToken) && !isAnnotationToken(token)) {
+            newLines = 1;
+        }
+        if (lastToken && lastToken.type === ApexTokenTypes.BRACKET.ANNOTATION_PARAM_CLOSE) {
             newLines = 1;
         }
         if (isCommentToken(token) && nextToken && isCommentToken(nextToken) && isOnSameLine(token, nextToken)) {
@@ -293,6 +318,12 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
         if (token.type === ApexTokenTypes.OPERATOR.PRIORITY.PARENTHESIS_OPEN && config && config.operator.addWhitespaceAfterOpenParenthesisOperator) {
             afterWhitespaces = 1;
         }
+        if (token.type === ApexTokenTypes.OPERATOR.PRIORITY.PARENTHESIS_OPEN && config && config.operator.addWhitespaceBeforeOpenParenthesisOperator) {
+            beforeWhitespaces = 1;
+        }
+        if (token.type === ApexTokenTypes.OPERATOR.PRIORITY.PARENTHESIS_CLOSE && config && config.operator.addWhitespaceAfterCloseParenthesisOperator) {
+            afterWhitespaces = 1;
+        }
         if (token.type === ApexTokenTypes.OPERATOR.PRIORITY.PARENTHESIS_CLOSE && config && config.operator.addWhitespaceBeforeCloseParenthesisOperator) {
             beforeWhitespaces = 1;
         }
@@ -349,11 +380,40 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
         if (lastToken && lastToken.type === ApexTokenTypes.PUNCTUATION.COMMA && isCommentToken(token) && originalNewLines > 0) {
             newLines = 1;
         }
+        if (token.type === ApexTokenTypes.ENTITY.SOBJECT_FIELD && objectFieldsOnLine.length > 0 && config && config.punctuation.SObjectFieldsPerLine > 0) {
+            if (lastToken && lastToken.type === ApexTokenTypes.BRACKET.PARENTHESIS_SOBJECT_OPEN) {
+                newLines = 1;
+            }
+            if (objectFieldsOnLine[objectFieldsOnLine.length - 1] === config.punctuation.SObjectFieldsPerLine) {
+                newLines = 1;
+                objectFieldsOnLine[objectFieldsOnLine.length - 1] = 1;
+            } else {
+                objectFieldsOnLine[objectFieldsOnLine.length - 1] = objectFieldsOnLine[objectFieldsOnLine.length - 1] + 1;
+            }
+        }
+        if (isLogicalOperator(token) && conditionsOnLine.length > 0 && priorityIndex.length === 0 && config && config.punctuation.maxConditionsPerLine > 0 && config.punctuation.conditionLogicOperatorOnNewLine) {
+            if (conditionsOnLine[conditionsOnLine.length - 1] === config.punctuation.maxConditionsPerLine) {
+                newLines = 1;
+                beforeWhitespaces = conditionOpenIndex[conditionOpenIndex.length - 1];
+                conditionsOnLine[conditionsOnLine.length - 1] = 1;
+            } else {
+                conditionsOnLine[conditionsOnLine.length - 1] = conditionsOnLine[conditionsOnLine.length - 1] + 1;
+            }
+        }
+        if (lastToken && isLogicalOperator(lastToken) && conditionsOnLine.length > 0 && priorityIndex.length === 0 && config && config.punctuation.maxConditionsPerLine > 0 && !config.punctuation.conditionLogicOperatorOnNewLine) {
+            if (conditionsOnLine[conditionsOnLine.length - 1] === config.punctuation.maxConditionsPerLine) {
+                newLines = 1;
+                beforeWhitespaces = conditionOpenIndex[conditionOpenIndex.length - 1];
+                conditionsOnLine[conditionsOnLine.length - 1] = 1;
+            } else {
+                conditionsOnLine[conditionsOnLine.length - 1] = conditionsOnLine[conditionsOnLine.length - 1] + 1;
+            }
+        }
         if ((lastToken && isOperator(lastToken) && isStringToken(token) && originalNewLines > 0) || complexString) {
             complexString = false;
             if (strIndex) {
                 let rest = strIndex % 4;
-                indentOffset = (strIndex - (indent * 4)) / 4;
+                indentOffset = (strIndex - (indent * tabSize)) / tabSize;
                 if (rest > 0) {
                     indentOffset -= 1;
                     beforeWhitespaces = rest - 1;
@@ -374,6 +434,17 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
             querySelectIndex.pop();
             queryOpenIndex.pop();
             projectionFieldsOnLine.pop();
+        }
+        if (token.type === ApexTokenTypes.BRACKET.PARENTHESIS_GUARD_CLOSE) {
+            conditionOpenIndex.pop();
+            conditionsOnLine.pop();
+        }
+        if (token.type === ApexTokenTypes.BRACKET.PARENTHESIS_SOBJECT_CLOSE) {
+            objectFieldsOnLine.pop();
+            if (config.punctuation.SObjectFieldsPerLine > 0) {
+                newLines = 1;
+                indent--;
+            }
         }
         if (indent > 0 && indent !== mainBodyIndent && token.type !== ApexTokenTypes.KEYWORD.DECLARATION.PROPERTY_GETTER && token.type !== ApexTokenTypes.KEYWORD.DECLARATION.PROPERTY_SETTER) {
             if (newLines > 0 && originalNewLines > 1) {
@@ -473,6 +544,32 @@ function isCommentToken(token: Token): boolean {
 
 function isDependentFlowStructure(token: Token): boolean {
     return token.type === ApexTokenTypes.KEYWORD.FLOW_CONTROL.WHILE_DO || token.type === ApexTokenTypes.KEYWORD.FLOW_CONTROL.ELSE || token.type === ApexTokenTypes.KEYWORD.FLOW_CONTROL.ELSE_IF || token.type === ApexTokenTypes.KEYWORD.FLOW_CONTROL.CATCH || token.type === ApexTokenTypes.KEYWORD.FLOW_CONTROL.FINALLY;
+}
+
+function isLogicalOperator(token: Token) {
+    switch (token.type) {
+        case ApexTokenTypes.OPERATOR.LOGICAL.AND:
+        case ApexTokenTypes.OPERATOR.LOGICAL.OR:
+            return true;
+        default:
+            return false;
+    }
+}
+
+function isCompareOperator(token: Token) {
+    switch (token.type) {
+        case ApexTokenTypes.OPERATOR.LOGICAL.EQUALITY:
+        case ApexTokenTypes.OPERATOR.LOGICAL.EQUALITY_EXACT:
+        case ApexTokenTypes.OPERATOR.LOGICAL.GREATER_THAN:
+        case ApexTokenTypes.OPERATOR.LOGICAL.GREATER_THAN_EQUALS:
+        case ApexTokenTypes.OPERATOR.LOGICAL.INEQUALITY:
+        case ApexTokenTypes.OPERATOR.LOGICAL.INEQUALITY_EXACT:
+        case ApexTokenTypes.OPERATOR.LOGICAL.LESS_THAN:
+        case ApexTokenTypes.OPERATOR.LOGICAL.LESS_THAN_EQUALS:
+            return true;
+        default:
+            return false;
+    }
 }
 
 function isOperator(token: Token): boolean {

@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 ### Changed
 - Changed fast-xml-parser dependency from v3 to v4 to fix some vulnerabilities and improve performance
 
+### Added
+- Added and analyze new apex tokens
+- Added two new options to Apex Formatter
+  - addWhitespaceBeforeOpenParenthesisOperator
+  - addWhitespaceAfterCloseParenthesisOperator
+  - SObjectFieldsPerLine
+  - maxConditionsPerLine
+  - conditionLogicOperatorOnNewLine
+- Added support to tab size on apex formatter
+
+### Fixed
+- Fixed formating error with annotations like @SuppressWarnings
+
 ## [2.0.6 - 2023-10-22]
 ### Fixed
 - Fixed some vulnerabilities

@@ -18,6 +18,7 @@ export class XMLParser {
             ignoreAttributes: false,
             removeNSPrefix: false,
             allowBooleanAttributes: true,
+            ignoreDeclaration: true,
             parseTagValue: true,
             parseAttributeValue: false,
             trimValues: true,
