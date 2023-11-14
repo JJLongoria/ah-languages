@@ -442,7 +442,7 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
         if (token.type === ApexTokenTypes.BRACKET.PARENTHESIS_SOBJECT_CLOSE) {
             objectFieldsOnLine.pop();
             if (config.punctuation.SObjectFieldsPerLine > 0) {
-                newLines = 1;
+                newLines = lastToken && lastToken.type !== ApexTokenTypes.BRACKET.PARENTHESIS_SOBJECT_OPEN ? 1 : 0;
                 indent--;
             }
         }

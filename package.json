@@ -7,9 +7,10 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "compile": "tsc -p ./ ",
-    "pretest": "tsc -p ./ ",
-    "prepack": "tsc -p ./",
+    "build": "tsc -p ./",
+    "prepublish": "npm run build",
+    "pretest": "npm run build",
+    "prepack": "npm run build",
     "lint": "eslint src --ext ts",
     "lint-fix": "eslint src --ext ts --fix",
     "watch": "tsc -watch -p ./",

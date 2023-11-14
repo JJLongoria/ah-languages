@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.1.1 - 2023-11-14]
+### Fixed
+- Fixed a little problem when format sobjects declaration without fields
+
 ## [2.1.0 - 2023-10-30]
 ### Changed
 - Changed fast-xml-parser dependency from v3 to v4 to fix some vulnerabilities and improve performance
