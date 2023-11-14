@@ -1,7 +1,7 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## [2.1.1 - 2023-11-14]
+## [2.1.2 - 2023-11-14]
 ### Fixed
 - Fixed a little problem when format sobjects declaration without fields
 
