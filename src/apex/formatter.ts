@@ -92,9 +92,9 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
         } else if (token.type === ApexTokenTypes.BRACKET.PARENTHESIS_GUARD_CLOSE) {
             guardOpen = false;
         }
-        if(token.type === ApexTokenTypes.OPERATOR.PRIORITY.PARENTHESIS_OPEN){
+        if (token.type === ApexTokenTypes.OPERATOR.PRIORITY.PARENTHESIS_OPEN) {
             priorityIndex.push(StrUtils.replace(line, '\t', StrUtils.getWhitespaces(tabSize)).length - (indent * tabSize));
-        } else if(token.type === ApexTokenTypes.OPERATOR.PRIORITY.PARENTHESIS_CLOSE){
+        } else if (token.type === ApexTokenTypes.OPERATOR.PRIORITY.PARENTHESIS_CLOSE) {
             priorityIndex.pop();
         }
         if (lastToken && (lastToken.type === ApexTokenTypes.BRACKET.QUERY_START || lastToken && lastToken.type === ApexTokenTypes.BRACKET.INNER_QUERY_START)) {
@@ -133,11 +133,15 @@ function formatApex(tokens: Token[], config: ApexFormatterConfig, tabSize?: numb
             mainBodyIndent = indent + 1;
         }
 
-        if (lastToken && isAnnotationToken(lastToken) && !isAnnotationToken(token)) {
+        if (lastToken && isAnnotationToken(lastToken) && !isAnnotationToken(token) && (isCommentToken(token) && !isOnSameLine(token, lastToken) || !isCommentToken(token))) {
             newLines = 1;
+        } else if (lastToken && isAnnotationToken(lastToken) && !isAnnotationToken(token) && isCommentToken(token) && isOnSameLine(token, lastToken)) {
+            beforeWhitespaces = 1;
         }
-        if (lastToken && lastToken.type === ApexTokenTypes.BRACKET.ANNOTATION_PARAM_CLOSE) {
+        if (lastToken && lastToken.type === ApexTokenTypes.BRACKET.ANNOTATION_PARAM_CLOSE && (isCommentToken(token) && !isOnSameLine(token, lastToken) || !isCommentToken(token))) {
             newLines = 1;
+        } else if (lastToken && lastToken.type === ApexTokenTypes.BRACKET.ANNOTATION_PARAM_CLOSE && isCommentToken(token) && isOnSameLine(token, lastToken)) {
+            beforeWhitespaces = 1;
         }
         if (isCommentToken(token) && nextToken && isCommentToken(nextToken) && isOnSameLine(token, nextToken)) {
             afterWhitespaces = nextToken.range.start.character - token.range.end.character;
