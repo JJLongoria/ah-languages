@@ -552,6 +552,12 @@ export class ApexTokenizer {
                             tokens[index].pairToken = tokens.length;
                         }
                     }
+                } else if (lastToken && lastToken.type === ApexTokenTypes.BRACKET.CASTING_CLOSE && token.textToLower === ';') {
+                    const pairIndex = tokens[tokens.length - 1]?.pairToken;
+                    if (pairIndex) {
+                        tokens[tokens.length - 1].type = ApexTokenTypes.BRACKET.PARENTHESIS_PARAM_OPEN;
+                        tokens[pairIndex].type = ApexTokenTypes.BRACKET.PARENTHESIS_PARAM_CLOSE;
+                    }
                 } else if (token.type === ApexTokenTypes.BRACKET.CURLY_OPEN && lastToken) {
                     if ((lastToken.type === ApexTokenTypes.BRACKET.PARAMETRIZED_TYPE_CLOSE || lastToken.type === ApexTokenTypes.BRACKET.SQUARE_CLOSE) && bracketIndex.length > 0 && classDeclarationIndex.length === 0) {
                         token.type = ApexTokenTypes.BRACKET.INIT_VALUES_OPEN;

@@ -958,43 +958,25 @@ export class ApexParser {
      * @param {boolean} [multiThread] True to use several threads to analize classes, false to use single thread.
      * @returns {Promise<void>} Return an empty promise when process finish
      */
-    static saveAllClassesData(classesPath: string, targetfolder: string, systemData?: ParserData, multiThread?: boolean): Promise<void> {
-        return new Promise<void>((resolve, reject) => {
-            try {
-                classesPath = Validator.validateFolderPath(classesPath);
-                const files = FileReader.readDirSync(classesPath, {
-                    onlyFiles: true,
-                    absolutePath: true,
-                    extensions: ['.cls']
-                });
-                if (!files || files.length === 0) {
-                    resolve();
-                    return;
-                }
-                let increment = calculateIncrement(files);
-                let percentage;
-                const batchesToProcess = getBatches(files, multiThread);
-                for (const batch of batchesToProcess) {
-                    ApexParser.saveClassesData(batch.records, targetfolder, systemData).then(() => {
-                        batch.completed = true;
-                        let nCompleted = 0;
-                        for (const resultBatch of batchesToProcess) {
-                            if (resultBatch.completed) {
-                                nCompleted++;
-                            }
-                        }
-                        if (nCompleted === batchesToProcess.length) {
-                            resolve();
-                            return;
-                        }
-                    }).catch((error) => {
-                        reject(error);
-                    });
-                }
-            } catch (error) {
-                reject(error);
+    static async saveAllClassesData(classesPath: string, targetfolder: string, systemData?: ParserData, _multiThread?: boolean): Promise<void> {
+        try {
+            classesPath = Validator.validateFolderPath(classesPath);
+            const files = FileReader.readDirSync(classesPath, {
+                onlyFiles: true,
+                absolutePath: true,
+                extensions: ['.cls']
+            });
+            if (!files || files.length === 0) {
+                return;
             }
-        });
+            const promises = [];
+            for(const file of files){
+                promises.push(ApexParser.saveClassData(file, targetfolder, systemData));
+            }
+            await Promise.all(promises);
+        } catch (error) {
+            throw error;
+        }
     }
 
     /**

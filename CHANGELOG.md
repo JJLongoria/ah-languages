@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.1.5 - 2023-12-07]
+### Changed 
+- Optimized the method to parse and save all apex classes
+
+### Fixed
+- Fixed a little problem with some method parameter parenthesis formatting
+
 ## [2.1.2 - 2023-11-14]
 ### Fixed
 - Fixed a little problem when format sobjects declaration without fields
