@@ -50,8 +50,8 @@ export class XMLParser {
             indentBy: "\t",
             suppressEmptyNode: false,
             commentPropName: "#comment",
-            tagValueProcessor: (a: any) => he.encode(a, { useNamedReferences: true }),// default is a=>a
-            attributeValueProcessor: (a: any) => he.encode(a, { useNamedReferences: true })// default is a=>a
+            //tagValueProcessor: (a: any) => he.encode(a, { useNamedReferences: true }),// default is a=>a
+            //attributeValueProcessor: (a: any) => he.encode(a, { useNamedReferences: true })// default is a=>a
         };
     }
 

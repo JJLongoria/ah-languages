@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.1.6 - 2023-12-27]
+### Fixed
+- Fixed conversion from JSON object to XML in some cases
+
 ## [2.1.5 - 2023-12-07]
 ### Changed 
 - Optimized the method to parse and save all apex classes
